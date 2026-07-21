@@ -1,0 +1,50 @@
+# Auspex -- REAL-WORLD success rates from Real-to-Sim-Policy-Eval (arXiv:2511.04665).
+#
+# STATUS: PROVISIONAL / DIGITIZED (2026-07-19). NOT hash-locked. Do NOT use for a GO/NO-GO verdict.
+# The paper reports per-policy real success ONLY as Figure 3 (scatter) and Figure 4 (curves) --
+# there is NO numeric table in the text, appendix, or the HuggingFace release. These values were
+# read by eye off Figure 3 (x2.png), x-axis = real-world success rate.
+#
+# CHECKPOINT CHOICE (must be preregistered before trusting): "best real checkpoint per policy"
+# -- i.e. the rightmost dot of each color per panel. The paper evaluates MANY checkpoints per
+# policy; there is no single canonical number, so this is an analysis decision, not a fact.
+#
+# ACCURACY: +/- ~0.05 for well-separated points; WORSE for T-block, where real values are
+# near-tied with large (+/-0.15) error bars -- those are the "hard pairs" and are unreliable here.
+# Authors emailed for the exact numbers (2026-07-19); replace these on reply, then blind-transcribe
+# twice, reconcile, and hash-lock per the preregistration protocol.
+#
+# ⚠️ STATUS CHANGE (2026-07-20): this file is NO LONGER a live analysis input.
+# The noise-floor study uses research/noise-floor/checkpoint_data_from_figure3.csv (52 checkpoint
+# rows, vector-extracted, exact integer counts). This file is retained for two reasons only:
+#   1. VALIDATION ARTIFACT -- an independent human transcription of the same figure. Agreement
+#      with the extraction (<=1.3pp on all 12 cells) is the only check produced by a different
+#      method, so it is what would have caught a systematic calibration error.
+#   2. ROBUSTNESS ARM -- rope's sign flip under best-checkpoint selection reproduces here
+#      (-0.19 vs -0.31 extracted), which rules out "artifact of your extraction" as an objection.
+# It remains the harness's ground truth for the GO/NO-GO verdict (PREREG.md §6), which is still
+# blocked on the authors' numbers. Do not use it as an input to the noise-floor analysis.
+#
+# Values are success % (0-100).
+#
+# NOTE (2026-07-20): this file has NO sim column. Any correlation computed from it must pair these
+# real values against a sim source, and THE PAIRING RULE MUST BE STATED. The n=4 best-checkpoint
+# comparison reported in the proposal (A1a cross-check) pairs:
+#     real_success  from THIS file
+#     paper_sim     from harness/fig3_digitized_reference.csv   (same (task,policy) key)
+# Under that pairing, rope gives r = -0.1932. Recorded because an adversarial reviewer could not
+# reproduce the number from this file alone -- correctly, since the rule lived only in a shell
+# command. An unreproducible number in a reproducibility analysis is the worst place to have one.
+task,policy,real_success
+rope,act,95
+rope,dp,85
+rope,svla,88
+rope,pi0,85
+sloth,act,85
+sloth,dp,70
+sloth,svla,35
+sloth,pi0,80
+T,act,44
+T,dp,93
+T,svla,55
+T,pi0,80

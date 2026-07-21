@@ -1,0 +1,42 @@
+# Auspex -- MolmoSpaces (ThorBench) vs real-world scatter, VECTOR-EXTRACTED from
+# arXiv:2602.11337 e-print tarball figures:
+#   figures/benchmark_results/pick_correlation_only.pdf (main Fig, pick task)
+#   figures/benchmark_results/sim2real_correlation_appendix.pdf (appendix Fig, pick/open/close)
+# Both pure vector (no image XObjects). Captions: figs/sim_real.tex, sections/05_experiments.tex.
+# STATUS: EXTRACTED (not eyeballed), 2026-07-20. Reproduces printed figure R values.
+#
+# METHOD: content-stream parse (custom tokenizer, CTM-tracked); markers = 30x30pt filled
+#   circle paths; legend swatches excluded geometrically (legend region); axes calibrated by
+#   least-squares on tick-mark stroke positions (x: 0-80%, y: 0-100; tick resid <=0.06pt).
+#   Policy labels assigned via exact fill-color match to legend swatches.
+# PRINTED (in-figure): pick R=0.96 [0.92,0.98] rho=1.00 [0.95,1.00 main / 0.93,1.00 appx];
+#   open R=0.85 [0.57,0.99] rho=0.40 [0.20,1.00]; close R=0.97 [0.62,1.00] rho=1.00 [0.20,1.00].
+#   NOTE: abstract/text claim rho=0.98 for pick; BOTH figures print rho=1.00.
+# ERROR BARS: none drawn on points or fit (no fit line drawn at all); the "error bars" are
+#   the bracketed 95% CIs printed on R and rho in each panel.
+# x = benchmark (sim) success %, y = real-world success % (RoboArena / CAP).
+task,policy,family,sim_success_pct,real_success_pct,source_panel
+pick,Paligemma-Binning,paligemma,2.840,3.083,main_fig
+pick,CAP-EC1,CAP,8.925,24.083,main_fig
+pick,pi-0,pi,14.328,34.583,main_fig
+pick,CAP-EC2,CAP,16.228,38.883,main_fig
+pick,pi-0-Fast,pi,19.430,46.883,main_fig
+pick,pi-0.5,pi,27.833,54.183,main_fig
+pick,CAP-EC3,CAP,33.736,67.583,main_fig
+pick,CAP,CAP,55.345,83.283,main_fig
+pick,Paligemma-Binning,paligemma,2.843,3.125,appendix_fig
+pick,CAP-EC1,CAP,8.927,24.125,appendix_fig
+pick,pi-0,pi,14.329,34.625,appendix_fig
+pick,CAP-EC2,CAP,16.229,38.925,appendix_fig
+pick,pi-0-Fast,pi,19.430,46.925,appendix_fig
+pick,pi-0.5,pi,27.832,54.225,appendix_fig
+pick,CAP-EC3,CAP,33.733,67.625,appendix_fig
+pick,CAP,CAP,55.339,83.325,appendix_fig
+open,pi-0-Fast,pi,9.027,53.425,appendix_fig
+open,pi-0,pi,10.028,25.725,appendix_fig
+open,pi-0.5,pi,18.230,47.975,appendix_fig
+open,CAP,CAP,41.835,81.125,appendix_fig
+close,pi-0-Fast,pi,67.917,33.325,appendix_fig
+close,pi-0,pi,72.978,46.825,appendix_fig
+close,pi-0.5,pi,79.148,50.625,appendix_fig
+close,CAP,CAP,91.403,96.125,appendix_fig

@@ -1,0 +1,123 @@
+# Auspex -- RoboWorld vs RoboArena scatter, VECTOR-EXTRACTED from Figs. 9 and 10 of
+# arXiv:2607.01060v3.
+#
+# SOURCE: arXiv e-print tarball https://arxiv.org/e-print/2607.01060 ->
+#   appendix_figure/ranking_plot_compare_gpt_gemini_pearson_score.pdf  (Fig 9, panels a/b)
+#   appendix_figure/ranking_plot_compare_gpt_gemini_pearson_sr.pdf     (Fig 10, panels a/b)
+#   Both are original vector figures. Captions at tabs/appendix/vlm_scoring_details.tex:259,266.
+# STATUS: EXTRACTED (not eyeballed), 2026-07-20. Reproduces all four published r values.
+#
+# METHOD: Marker coordinates read from PDF drawing commands (PyMuPDF get_drawings), calibrated
+# against panel gridlines. NO pixel estimation, NO eyeballing.
+#   Filters: square markers only (w/h in [0.95,1.05]) to reject text glyphs; markers restricted
+#   to each panel's own x-range (the two panels share a y-band, so a size-only filter would mix
+#   them); the legend background rect (x0>1550) was used to exclude the 8 legend swatches
+#   GEOMETRICALLY by rect intersection, not by fitting. Exactly 8 markers survived per panel.
+#   Axis calibration: 5 vertical gridlines vs the 800/1000/1200/1400/1600 tick labels; 5-6
+#   horizontal gridlines vs the y tick labels. All 8 linear fits exact (R^2 = 1.000000000).
+#
+# SERIES IDENTIFICATION: policy names come from the legend, mapped by matching each marker's
+# fill colour to the legend swatch colours, with swatches ordered top-to-bottom against the
+# legend label text order (Pi0.5, Pi0 Fast, PaliGemma VQ, PaliGemma Diffusion, PaliGemma Fast
+# Specialist, PaliGemma Fast, Pi0, PaliGemma Binning). Colour->policy is 1:1 and identical in
+# both source PDFs, and each policy's RoboArena x-value is identical across all four panels
+# (see X-AXIS CONSISTENCY below) -- an independent confirmation of the mapping.
+#
+# VERIFICATION -- computed vs published Pearson r (nothing was tuned to match):
+#   panel 9a  (GPT-4o, RoboWorld Score)         n=8  computed 0.9888  published 0.989  MATCH
+#   panel 9b  (Gemini-2.5-Flash, Score)         n=8  computed 0.9438  published 0.944  MATCH
+#   panel 10a (GPT-4o, Success Rate)            n=8  computed 0.9005  published 0.901  MATCH
+#   panel 10b (Gemini-2.5-Flash, Success Rate)  n=8  computed 0.8762  published 0.876  MATCH
+#   Max |computed - published| = 0.0005.
+#
+# INDEPENDENT CALIBRATION CHECK: the y-axis was recalibrated a second time from the tick-LABEL
+# text centroids instead of the gridlines. Max drift between the two calibrations across the
+# full panel height is 0.0097 data units (Fig 10 panels) -- negligible. Gridline calibration
+# governs; the agreement rules out a mis-assigned gridline.
+#
+# X-AXIS CONSISTENCY CHECK: the RoboArena score for each policy must be one fixed number, since
+# all four panels plot the same leaderboard on x. Recovered x agrees across all four panels to
+# <= 0.006 (e.g. Pi0.5 = 1621.00 in every panel). The values are integers to within 0.007
+# (max deviation from integer 0.00688), consistent with an integer leaderboard score.
+#
+# AXIS-ORIENTATION CHECK -- PASSED, NOT transposed. PDF axis label text: x-axis "RoboArena
+# Score" on every panel; y-axis "RoboWorld Score" (Fig 9) / "RoboWorld Success Rate (%)"
+# (Fig 10). Captions agree: "Pearson correlation between RoboArena score and RoboWorld Score /
+# RoboWorld Success Rate". x is the REAL-WORLD reference (RoboArena is a real-robot leaderboard,
+# atreya2025roboarena), y is the simulator/world-model metric. Orientation independently
+# corroborated by the x-consistency check above: the shared axis is x, as it must be.
+#
+# *** IMPORTANT SCHEMA CAVEAT -- x_real IS NOT A SUCCESS RATE IN THIS FILE ***
+#   The requested column name x_real is retained for schema compatibility, but for RoboWorld
+#   x is a RoboArena LEADERBOARD SCORE on a ~797-1621 scale, NOT a percentage. Likewise y_sim
+#   is a 1-5-style RoboWorld rubric SCORE in panels 9a/9b and a PERCENT success rate in 10a/10b.
+#   Units differ BY PANEL. Do not pool these columns across panels or with the Digital Cousins
+#   file without rescaling. Column unit_y below records the unit explicitly.
+#
+# LATTICE CHECK -- the brief flagged trials-per-point as "unclear"; here is what was found:
+#   No small-integer lattice fits. Max deviation from k/n on the y axis, worst panel:
+#     1/20 -> 2.49    1/25 -> 1.84    1/40 -> 1.25    1/50 -> 0.94    1/100 -> 0.49
+#     1/200 -> 0.25   (all in the panels' own y units)
+#   The success-rate panels (10a/10b) DO sit exactly on a 0.01 grid (values like 38.73, 31.83,
+#   15.23), i.e. they are 2-dp rounded percentages, which is a PRINTING precision, not an
+#   episode-count lattice. It is therefore NOT possible to recover n from the figure.
+#   The paper states the evaluation produced 4,188 video rollouts across policies
+#   (tabs/01_introduction.tex, commented draft text); 4188/8 = 523.5 rollouts per policy, which
+#   is not an integer, so rollouts are not evenly split and no per-point n is recoverable.
+#   CONCLUSION: per-point trial count is UNDETERMINED from the published figure and source.
+#   Do not assume a binomial n for these points.
+#
+# COINCIDENT / NEAR-COINCIDENT POINTS (the error mode Pearson r cannot see):
+#   Exact duplicate (x,y) pairs: 0.
+#   Near-coincident pairs (within 2% of the panel range on BOTH axes):
+#     9a : 0
+#     9b : 0
+#     10a: 1  -- PaliGemma Diffusion (1547.0, 28.02) vs PaliGemma Fast (1538.0, 28.39)
+#     10b: 1  -- PaliGemma Fast Specialist (1547.0, 33.39) vs PaliGemma Fast (1538.0, 33.39)
+#   In 10b the two y-values are EXACTLY equal (33.39); the points are distinguishable only by
+#   their 9-unit x separation and by marker colour. Colour was the discriminator, so this pair
+#   is resolved correctly -- but any pixel-based re-extraction would likely merge them.
+#   Additionally PaliGemma Diffusion and PaliGemma Fast Specialist share x=1547.0 in all four
+#   panels (identical RoboArena score, differing y) -- a genuine tie, not an artifact.
+#
+# OTHER CAVEATS:
+#  - n=8 per panel. With 8 points, r is high-variance and one leverage point dominates:
+#    PaliGemma Binning sits far from the other seven (x=797 vs a 1474-1621 cluster). Excluding
+#    it collapses the correlation. The published r values should be read with that in mind.
+#  - Panels 9a/9b and 10a/10b share the same 8 policies and the same x values; the four panels
+#    are NOT independent evidence.
+#  - Fetched 2026-07-20 from the current e-print (tarball dated 2026-07-16), consistent with v3.
+#
+panel,series,x_real,y_sim,unit_x,unit_y
+9a_GPT-4o_score,Pi0.5,1621.002,2.9366,RoboArena score,RoboWorld Score
+9a_GPT-4o_score,Pi0 Fast,1597.002,2.9168,RoboArena score,RoboWorld Score
+9a_GPT-4o_score,PaliGemma VQ,1557.002,2.9091,RoboArena score,RoboWorld Score
+9a_GPT-4o_score,PaliGemma Diffusion,1547.002,2.7985,RoboArena score,RoboWorld Score
+9a_GPT-4o_score,PaliGemma Fast Specialist,1547.002,2.8591,RoboArena score,RoboWorld Score
+9a_GPT-4o_score,PaliGemma Fast,1538.002,2.7790,RoboArena score,RoboWorld Score
+9a_GPT-4o_score,Pi0,1474.002,2.7938,RoboArena score,RoboWorld Score
+9a_GPT-4o_score,PaliGemma Binning,797.001,2.1602,RoboArena score,RoboWorld Score
+9b_Gemini-2.5-Flash_score,Pi0.5,1621.002,2.6831,RoboArena score,RoboWorld Score
+9b_Gemini-2.5-Flash_score,Pi0 Fast,1597.002,2.4892,RoboArena score,RoboWorld Score
+9b_Gemini-2.5-Flash_score,PaliGemma VQ,1557.002,2.5297,RoboArena score,RoboWorld Score
+9b_Gemini-2.5-Flash_score,PaliGemma Diffusion,1547.002,2.2894,RoboArena score,RoboWorld Score
+9b_Gemini-2.5-Flash_score,PaliGemma Fast Specialist,1547.002,2.3842,RoboArena score,RoboWorld Score
+9b_Gemini-2.5-Flash_score,PaliGemma Fast,1538.002,2.4613,RoboArena score,RoboWorld Score
+9b_Gemini-2.5-Flash_score,Pi0,1474.002,2.3173,RoboArena score,RoboWorld Score
+9b_Gemini-2.5-Flash_score,PaliGemma Binning,797.001,1.7109,RoboArena score,RoboWorld Score
+10a_GPT-4o_success_rate,Pi0.5,1621.007,38.7300,RoboArena score,percent
+10a_GPT-4o_success_rate,Pi0 Fast,1597.007,31.8300,RoboArena score,percent
+10a_GPT-4o_success_rate,PaliGemma VQ,1557.007,30.4200,RoboArena score,percent
+10a_GPT-4o_success_rate,PaliGemma Diffusion,1547.007,28.0200,RoboArena score,percent
+10a_GPT-4o_success_rate,PaliGemma Fast Specialist,1547.007,31.3800,RoboArena score,percent
+10a_GPT-4o_success_rate,PaliGemma Fast,1538.007,28.3900,RoboArena score,percent
+10a_GPT-4o_success_rate,Pi0,1474.007,27.2900,RoboArena score,percent
+10a_GPT-4o_success_rate,PaliGemma Binning,797.006,15.2300,RoboArena score,percent
+10b_Gemini-2.5-Flash_success_rate,Pi0.5,1621.007,43.6599,RoboArena score,percent
+10b_Gemini-2.5-Flash_success_rate,Pi0 Fast,1597.007,35.7400,RoboArena score,percent
+10b_Gemini-2.5-Flash_success_rate,PaliGemma VQ,1557.007,36.0100,RoboArena score,percent
+10b_Gemini-2.5-Flash_success_rate,PaliGemma Diffusion,1547.007,32.0500,RoboArena score,percent
+10b_Gemini-2.5-Flash_success_rate,PaliGemma Fast Specialist,1547.007,33.3900,RoboArena score,percent
+10b_Gemini-2.5-Flash_success_rate,PaliGemma Fast,1538.007,33.3900,RoboArena score,percent
+10b_Gemini-2.5-Flash_success_rate,Pi0,1474.007,33.7500,RoboArena score,percent
+10b_Gemini-2.5-Flash_success_rate,PaliGemma Binning,797.006,20.7000,RoboArena score,percent

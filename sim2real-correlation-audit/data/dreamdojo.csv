@@ -1,0 +1,45 @@
+# Auspex -- DreamDojo real vs world-model success-rate scatter, VECTOR-EXTRACTED from
+# arXiv:2602.06949 (DreamDojo), fig:correlation ("Real vs. DreamDojo success rates",
+# panel prints "Pearson r = 0.995", "MMRV = 0.003").
+#
+# SOURCE: arXiv e-print tarball https://arxiv.org/e-print/2602.06949 ->
+#   figs/correlation_compressed.pdf (original vector figure; caption/context at
+#   sec/4_experiment.tex, "Downstream Applications / Policy evaluation").
+# STATUS: EXTRACTED (not eyeballed), 2026-07-20. Reproduces the published r.
+#
+# METHOD: The 6 filled circles (18.7 pt, green) read from PDF drawing commands (PyMuPDF
+#   get_drawings), centers = bbox centers. Axis calibration: 5 gridlines per axis vs the
+#   0.0-0.8 / 0.0-0.4 tick-label centers; linear fits exact (max residual 9e-6 data units).
+#   Point identity from the A-F text labels placed at each point (nearest-label assignment,
+#   1:1, all 6 unique). NO pixel estimation, NO eyeballing.
+#
+# VERIFICATION -- computed vs published Pearson r (nothing was tuned to match):
+#   n=6  computed 0.995346  published 0.995  delta 0.000346  MATCH
+#   Lattice check: all x and y sit exactly on a 1/100 grid (max dev < 1e-5), consistent with the
+#   stated protocol: 20 scenes x 5 fruits = 100 scoreable units per point (fruit packing task).
+#
+# *** UNIT STRUCTURE -- NO INDEPENDENT UNITS ***
+#   Points A-F are 6 checkpoints of ONE training lineage: a single-view state-free GR00T N1.5
+#   variant trained on the AgiBot fruit packing dataset, with "different checkpoints from training"
+#   deployed for closed-loop real rollouts (sec/4_experiment.tex). They are NOT independent
+#   policies; drop-one below is over the 6 checkpoint-points and is labeled NON-INDEPENDENT.
+#   The n=6 correlation is therefore a within-lineage learning-curve correlation.
+#
+# COINCIDENT POINTS: none exact. D (0.59,0.28) and E (0.56,0.29) are close (dx=0.03, dy=0.01) and
+#   rank-discordant (D>E on x, D<E on y) -- they alone account for Spearman rho = 0.943 < 1.
+#   Their A-F identities rest on the label placement (labels sit essentially on the marker
+#   centers; assignment unambiguous at extraction precision).
+#
+# LEVERAGE (drop-one over the 6 checkpoint-points, NON-INDEPENDENT):
+#   r=0.9953, drop-one range [0.9854, 0.9993], max|dr|=0.0099 (point A) -> does NOT fire
+#   rho=0.9429, max|drho|=0.0571 (dropping D or E gives rho=1.0)
+#
+# Fetched 2026-07-20 from the current e-print of arXiv:2602.06949.
+#
+point,x_real,y_sim
+A,0.0600,0.0000
+B,0.3700,0.1900
+C,0.7200,0.4000
+D,0.5900,0.2800
+E,0.5600,0.2900
+F,0.8100,0.4400

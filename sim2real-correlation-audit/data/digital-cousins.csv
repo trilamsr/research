@@ -1,0 +1,79 @@
+# Auspex -- Digital Cousins sim-vs-real scatter, VECTOR-EXTRACTED from Fig. "Sim-Real Evaluation
+# Correlation" of arXiv:2604.15805.
+#
+# SOURCE: arXiv e-print tarball https://arxiv.org/e-print/2604.15805 -> Pic/Correlation_Final.pdf
+#         (original vector figure; referenced from tex/Experiments.tex:233).
+# STATUS: EXTRACTED and CROSS-VALIDATED against the paper's own numeric tables. 2026-07-20.
+#
+# METHOD: Correlation_Final.pdf is vector artwork. Marker coordinates were read from the PDF
+# drawing commands (PyMuPDF get_drawings), calibrated against the panel gridlines, and converted
+# to success percentages. NO pixel estimation, NO eyeballing.
+#   Filters: square markers only (width/height in [0.9,1.1]) to reject text glyphs; the two
+#   legend background rects (drawings #31 "Baselines", #41 "Generalization") were excluded
+#   GEOMETRICALLY by rect intersection, not by fitting. 16 markers survived -- exactly the
+#   expected 4 policies x 4 generalization levels.
+#   Axis calibration: 6 vertical + 6 horizontal gridlines against the 0/20/40/60/80/100% tick
+#   labels. Both linear fits are exact (R^2 = 1.00000000).
+#
+# VERIFICATION:
+#  1. PEARSON r: computed 0.909396 vs published 0.91.  MATCH.
+#  2. TABLE CROSS-CHECK (decisive, and much stronger than r): the supplementary tex prints the
+#     full per-task numbers -- supp.tex tab:Evaluation1..3 (Simulation: Set Tableware / Open
+#     Microwave / Fold Cloth) and tab:Evaluation1_rw..3_rw (Real-World, same three tasks).
+#     Averaging those three tasks per (policy, level) reproduces ALL 16 plotted points to a
+#     MAX ABSOLUTE ERROR OF 0.0007 pp. Every point is identified, not merely correlated.
+#     Pearson r recomputed from the TABLES alone is also 0.909396 -- identical to the figure.
+#  3. SERIES IDENTIFICATION is therefore exact, and not inferred from colour convention:
+#     COLOUR encodes the GENERALIZATION LEVEL, marker SIZE encodes the policy family:
+#       orange (0.957,0.435,0.267) = Train        green   (0.498,0.796,0.643) = Unseen Object
+#       blue   (0.294,0.396,0.686) = Unseen Scene crimson (0.643,0.020,0.271) = Unseen S&O
+#       size 37.42 pt = pi_0 ;  size 26.46 pt = ACT / DP / SmolVLA
+#     (The legend's own swatch colours are grey placeholders and do NOT encode policy.)
+#  4. AXIS ORIENTATION CHECK -- PASSED, and it is NOT transposed. Axis label text in the PDF:
+#     x-axis "Sim Success Rate", y-axis "Real Success Rate". The table cross-check independently
+#     confirms this: the plotted x of each point equals the SIMULATION table value and the
+#     plotted y equals the REAL-WORLD table value. Columns below are named accordingly
+#     (x_real holds the REAL value = the figure's Y axis; see NOTE ON COLUMN NAMES).
+#  5. COINCIDENT POINTS: 0 exact duplicates. 1 near-coincident pair within 3 pp:
+#     (SmolVLA Train, sim 77.333/real 80.0) vs (pi_0 Unseen Scene, sim 77.667/real 81.667),
+#     separation 1.70 pp. Also 2 shared x-values and 2 shared y-values across different points.
+#     These are genuine ties in the data, confirmed by the tables -- not an extraction artifact.
+#
+# LATTICE CHECK -- NOTE, THE OBVIOUS EXPECTATION IS WRONG:
+#   The task brief expected a 1/20 lattice ("20 real trials per point"). It does NOT hold:
+#   max deviation from k/20 is 1.667 pp (real axis) / 2.334 pp (sim axis) -- a real mismatch.
+#   REASON, and it is benign: each plotted point is the MEAN OVER THREE TASKS (caption:
+#   "average success rates across three tasks"), so with 20 real trials per task the real axis
+#   quantises to k/60, not k/20. Confirmed: max deviation from k/60 on the REAL axis is
+#   0.0003 pp (exact). The SIM axis does NOT sit on k/60 (max dev 0.667 pp) because the paper
+#   reports sim numbers rounded to 2 decimal places (100 trials/task -> mean of three 2-dp
+#   values); it sits on k/300 to 0.0007 pp. Both axes are fully explained.
+#   => Effective real-world n per point is 60 trials (3 tasks x 20), NOT 20.
+#
+# NOTE ON COLUMN NAMES: the requested schema is x_real,y_sim. In THIS figure the real value is
+# plotted on Y and the sim value on X, so x_real/y_sim are NOT the figure's x/y. They are the
+# REAL and SIM values respectively; plot_x_sim and plot_y_real are given explicitly to remove
+# any ambiguity. Do not assume x_real is the horizontal axis.
+#
+# CAVEATS:
+#  - Points are averages over 3 tasks; they are not single-condition measurements.
+#  - "Sim" values derive from 100 trials/task, "real" from 20 trials/task. Unequal n.
+#  - arXiv id 2604.15805 and its figure were fetched 2026-07-20; no version suffix was pinned.
+#
+series,policy,generalization_level,x_real,y_sim,plot_x_sim,plot_y_real,marker_color,marker_size_pt
+ACT_Train,ACT,Train,70.000,77.333,77.333,70.000,orange,26.46
+ACT_UnseenScene,ACT,Unseen Scene,28.333,49.333,49.333,28.333,blue,26.46
+ACT_UnseenObject,ACT,Unseen Object,36.667,39.000,39.000,36.667,green,26.46
+ACT_UnseenSO,ACT,Unseen S&O,10.000,18.333,18.333,10.000,crimson,26.46
+DP_Train,DP,Train,60.000,62.000,62.000,60.000,orange,26.46
+DP_UnseenScene,DP,Unseen Scene,35.000,55.000,55.000,35.000,blue,26.46
+DP_UnseenObject,DP,Unseen Object,28.333,30.667,30.667,28.333,green,26.46
+DP_UnseenSO,DP,Unseen S&O,15.000,24.000,24.000,15.000,crimson,26.46
+SmolVLA_Train,SmolVLA,Train,80.000,77.333,77.333,80.000,orange,26.46
+SmolVLA_UnseenScene,SmolVLA,Unseen Scene,71.667,71.667,71.667,71.667,blue,26.46
+SmolVLA_UnseenObject,SmolVLA,Unseen Object,55.000,47.333,47.333,55.000,green,26.46
+SmolVLA_UnseenSO,SmolVLA,Unseen S&O,45.000,40.667,40.667,45.000,crimson,26.46
+pi0_Train,pi_0,Train,86.667,83.667,83.667,86.667,orange,37.42
+pi0_UnseenScene,pi_0,Unseen Scene,81.667,77.667,77.667,81.667,blue,37.42
+pi0_UnseenObject,pi_0,Unseen Object,70.000,55.333,55.333,70.000,green,37.42
+pi0_UnseenSO,pi_0,Unseen S&O,68.333,51.667,51.667,68.333,crimson,37.42

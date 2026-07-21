@@ -1,0 +1,163 @@
+# REALM sim-vs-real task-progression scatter, VECTOR-EXTRACTED from Fig. "Sim-to-real
+# validation of REALM" (fig:real2sim_correlation) of arXiv:2512.19562.
+#
+# SOURCE: arXiv e-print tarball -> figures/corr_plot_perturbations.pdf (original vector
+#   figure, 219 drawing ops). Caption at src/03_benchmark.tex:117. Four panels:
+#   Overall (5 perturbations), Default (no perturbation), VB-POSE (object pose
+#   perturbation), V-VIEW (camera pose perturbation).
+# STATUS: EXTRACTED (not eyeballed), 2026-07-20. Reproduces all four published r values.
+#
+# METHOD: Marker coordinates read from PDF drawing commands (PyMuPDF get_drawings),
+#   calibrated per panel against the 6 vertical + 6 horizontal gray gridlines, each
+#   matched to its nearest tick-label centroid (max match distance 0.8 px; all 8 linear
+#   fits exact, residual <= 1e-13). Marker center = bounding-box center (valid for all
+#   three matplotlib marker paths). NO pixel estimation, NO eyeballing.
+#   Marker filter: fill-and-stroke paths whose fill is one of the 7 task colours and whose
+#   path signature is 1 rect (square), 3 lines (triangle) or 4 lines (diamond); legend
+#   excluded GEOMETRICALLY (task-legend swatches are circles at y>690; policy-legend
+#   markers are black-filled at y~640; plot markers all lie inside the four panel boxes,
+#   y in [85,485]). Exactly 77 markers survived: 21+21+21+14 by panel.
+#
+# SERIES IDENTIFICATION: 7 tasks by fill colour matched to the legend circle swatches
+#   (green=Put block into bowl, yellow=Put banana into box, magenta=Open drawer,
+#   purple=Close drawer, orange=Stack cubes, blue=Rotate marker, salmon=Pick spoon);
+#   3 policies by marker shape matched to the black legend markers
+#   (triangle=GR00T N1.5, square=pi0, diamond=pi0-FAST).
+#
+# VERIFICATION -- computed vs published Pearson r (nothing was tuned to match):
+#   Overall  n=21  computed 0.9187  published 0.92  delta -0.0013  MATCH
+#   Default  n=21  computed 0.8838  published 0.88  delta +0.0038  MATCH
+#   VB-POSE  n=21  computed 0.9335  published 0.93  delta +0.0035  MATCH
+#   V-VIEW   n=14  computed 0.8902  published 0.89  delta +0.0002  MATCH
+#   Max |computed - published| = 0.0038 <= 0.005 (the honest bound for 2-dp printing).
+#
+# MMRV VERIFICATION (SimplerEnv definition: mean over points i of max over j of
+#   |real_i - real_j| * 1[sign(real_i-real_j) != sign(sim_i-sim_j)], all pairs in panel):
+#   Overall  computed 0.1175  published 0.118  MATCH
+#   Default  computed 0.1655  published 0.166  MATCH
+#   VB-POSE  computed 0.1144  published 0.115  MATCH (0.0006 off, within marker-center noise)
+#   V-VIEW   computed 0.1173  published 0.253  *** DOES NOT REPRODUCE ***
+#   For V-VIEW, 26 definition variants were tried on the 14 plotted points (gap = real /
+#   sim / max side; strict / tie-counting; all-pairs / within-task / within-policy;
+#   mean-of-max / mean / global max; policy- and task-aggregated points): NONE gives
+#   0.253. Nearest is the single worst violation max_ij = 0.270 (real-side). The r value
+#   0.89 DOES reproduce on exactly the 14 plotted points (delta 0.0002), so the published
+#   MMRV=0.253 was computed on data not shown in the panel -- most plausibly the full
+#   21-cell V-VIEW table including the 7 cells whose markers are absent (see below).
+#   Treat V-VIEW MMRV as UNVERIFIABLE from the figure.
+#
+# *** V-VIEW MISSING-CELL FINDING (drawn-op count is definitive, not occlusion) ***
+#   Design is 7 tasks x 3 policies = 21 points per panel. Overall/Default/VB-POSE each
+#   draw exactly 21 marker ops. V-VIEW draws exactly 14 ops (12 distinct positions; the
+#   deficit is NOT coincidence -- draw ops were counted in the content stream).
+#   The 7 absent task x policy cells:
+#     GR00T N1.5 (triangle): Put block into bowl, Put banana into box, Open drawer,
+#                            Close drawer
+#     pi0        (square)  : Close drawer
+#     pi0-FAST   (diamond) : Open drawer, Close drawer
+#   i.e. Close drawer is absent for ALL three policies; Open drawer kept only for pi0;
+#   GR00T N1.5 kept only for Stack cubes / Rotate marker / Pick spoon.
+#   The paper text does not flag this reduced design ("on 7 tasks under 5 visual and
+#   behavioral perturbations", p<0.001 "for all settings").
+#
+# COINCIDENT POINTS (the error mode Pearson r cannot see; exact draw-position ties):
+#   Default: 4 ops at (1.0,1.0) [Put block into bowl pi0 & pi0-FAST, Put banana into box
+#            pi0-FAST, Pick spoon pi0-FAST]; 2 ops at (0.0,0.0) [Open drawer & Close
+#            drawer, GR00T N1.5] -> 17 distinct positions for 21 points.
+#   V-VIEW : 3 ops at (1.0,1.0) [Pick spoon pi0, Put block into bowl pi0, Put banana into
+#            box pi0-FAST] -> 12 distinct positions for 14 points.
+#   Overall, VB-POSE: none (21 distinct positions each).
+#
+# DROP-ONE AUDIT over POLICY units (k=3; drop all points of one policy, recompute;
+#   fires if max|dr| > 0.10):
+#   dataset            | k | r     | max|dr|            | fires? | max|drho|
+#   REALM Overall      | 3 | 0.919 | 0.025 (GR00T N1.5) | no     | 0.022
+#   REALM Default      | 3 | 0.884 | 0.135 (GR00T N1.5) | YES    | 0.067
+#   REALM VB-POSE      | 3 | 0.933 | 0.080 (GR00T N1.5) | no     | 0.182
+#   REALM V-VIEW       | 3 | 0.890 | 0.168 (GR00T N1.5) | YES    | 0.099
+#   In every panel the extreme unit is GR00T N1.5, the weakest policy, whose low-progress
+#   points anchor the correlation; dropping it costs up to 0.17 of r.
+#
+# UNITS: both axes are task progression in [0,1] on every panel (axis labels "Task
+#   progression (Real)" / "(Sim)"). Values of exactly -0.0000 from the calibration fit
+#   were clamped to 0.0000. Coordinates below are 4-dp; extraction noise is ~0.001-0.002
+#   in data units (marker-center quantization).
+#
+panel,task,policy,x_real,y_sim,unit_x,unit_y
+Overall,Put block into bowl,GR00T N1.5,0.5400,0.2308,task_progression_0_1,task_progression_0_1
+Overall,Put block into bowl,pi0,0.9800,0.9797,task_progression_0_1,task_progression_0_1
+Overall,Put block into bowl,pi0-FAST,0.9800,0.9457,task_progression_0_1,task_progression_0_1
+Overall,Put banana into box,GR00T N1.5,0.5257,0.6444,task_progression_0_1,task_progression_0_1
+Overall,Put banana into box,pi0,0.9800,0.8609,task_progression_0_1,task_progression_0_1
+Overall,Put banana into box,pi0-FAST,0.9800,0.9714,task_progression_0_1,task_progression_0_1
+Overall,Open drawer,GR00T N1.5,0.0320,0.0000,task_progression_0_1,task_progression_0_1
+Overall,Open drawer,pi0,0.4629,0.4815,task_progression_0_1,task_progression_0_1
+Overall,Open drawer,pi0-FAST,0.4514,0.7111,task_progression_0_1,task_progression_0_1
+Overall,Close drawer,GR00T N1.5,0.0400,0.0000,task_progression_0_1,task_progression_0_1
+Overall,Close drawer,pi0,0.5257,0.7400,task_progression_0_1,task_progression_0_1
+Overall,Close drawer,pi0-FAST,0.3143,0.4444,task_progression_0_1,task_progression_0_1
+Overall,Stack cubes,GR00T N1.5,0.2000,0.1200,task_progression_0_1,task_progression_0_1
+Overall,Stack cubes,pi0,0.6600,0.6575,task_progression_0_1,task_progression_0_1
+Overall,Stack cubes,pi0-FAST,0.9000,0.7550,task_progression_0_1,task_progression_0_1
+Overall,Rotate marker,GR00T N1.5,0.7947,0.8086,task_progression_0_1,task_progression_0_1
+Overall,Rotate marker,pi0,0.6140,0.6696,task_progression_0_1,task_progression_0_1
+Overall,Rotate marker,pi0-FAST,0.8653,0.9063,task_progression_0_1,task_progression_0_1
+Overall,Pick spoon,GR00T N1.5,0.7307,0.6284,task_progression_0_1,task_progression_0_1
+Overall,Pick spoon,pi0,0.8086,0.8143,task_progression_0_1,task_progression_0_1
+Overall,Pick spoon,pi0-FAST,0.9330,0.8649,task_progression_0_1,task_progression_0_1
+Default,Put block into bowl,GR00T N1.5,0.5600,0.2800,task_progression_0_1,task_progression_0_1
+Default,Put block into bowl,pi0,1.0000,1.0000,task_progression_0_1,task_progression_0_1
+Default,Put block into bowl,pi0-FAST,1.0000,1.0000,task_progression_0_1,task_progression_0_1
+Default,Put banana into box,GR00T N1.5,0.7600,0.6667,task_progression_0_1,task_progression_0_1
+Default,Put banana into box,pi0,1.0000,0.9600,task_progression_0_1,task_progression_0_1
+Default,Put banana into box,pi0-FAST,1.0000,1.0000,task_progression_0_1,task_progression_0_1
+Default,Open drawer,GR00T N1.5,0.0000,0.0000,task_progression_0_1,task_progression_0_1
+Default,Open drawer,pi0,0.5200,0.5200,task_progression_0_1,task_progression_0_1
+Default,Open drawer,pi0-FAST,0.5600,0.8667,task_progression_0_1,task_progression_0_1
+Default,Close drawer,GR00T N1.5,0.0000,0.0000,task_progression_0_1,task_progression_0_1
+Default,Close drawer,pi0,0.6000,0.8400,task_progression_0_1,task_progression_0_1
+Default,Close drawer,pi0-FAST,0.4400,0.7333,task_progression_0_1,task_progression_0_1
+Default,Stack cubes,GR00T N1.5,0.4400,0.3200,task_progression_0_1,task_progression_0_1
+Default,Stack cubes,pi0,0.7200,0.5840,task_progression_0_1,task_progression_0_1
+Default,Stack cubes,pi0-FAST,0.9200,0.7040,task_progression_0_1,task_progression_0_1
+Default,Rotate marker,GR00T N1.5,0.8260,0.9320,task_progression_0_1,task_progression_0_1
+Default,Rotate marker,pi0,0.3970,0.3935,task_progression_0_1,task_progression_0_1
+Default,Rotate marker,pi0-FAST,0.7980,0.9056,task_progression_0_1,task_progression_0_1
+Default,Pick spoon,GR00T N1.5,0.7980,0.8640,task_progression_0_1,task_progression_0_1
+Default,Pick spoon,pi0,0.6640,0.8392,task_progression_0_1,task_progression_0_1
+Default,Pick spoon,pi0-FAST,1.0000,1.0000,task_progression_0_1,task_progression_0_1
+VB-POSE,Put block into bowl,GR00T N1.5,0.2667,0.2000,task_progression_0_1,task_progression_0_1
+VB-POSE,Put block into bowl,pi0,0.9067,0.9333,task_progression_0_1,task_progression_0_1
+VB-POSE,Put block into bowl,pi0-FAST,0.9067,1.0000,task_progression_0_1,task_progression_0_1
+VB-POSE,Put banana into box,GR00T N1.5,0.7600,0.6333,task_progression_0_1,task_progression_0_1
+VB-POSE,Put banana into box,pi0,0.9800,0.7200,task_progression_0_1,task_progression_0_1
+VB-POSE,Put banana into box,pi0-FAST,0.9800,0.8400,task_progression_0_1,task_progression_0_1
+VB-POSE,Open drawer,GR00T N1.5,0.0400,0.0000,task_progression_0_1,task_progression_0_1
+VB-POSE,Open drawer,pi0,0.5600,0.5400,task_progression_0_1,task_progression_0_1
+VB-POSE,Open drawer,pi0-FAST,0.4200,0.6333,task_progression_0_1,task_progression_0_1
+VB-POSE,Close drawer,GR00T N1.5,0.0600,0.0000,task_progression_0_1,task_progression_0_1
+VB-POSE,Close drawer,pi0,0.4800,0.6000,task_progression_0_1,task_progression_0_1
+VB-POSE,Close drawer,pi0-FAST,0.2000,0.3000,task_progression_0_1,task_progression_0_1
+VB-POSE,Stack cubes,GR00T N1.5,0.1200,0.0200,task_progression_0_1,task_progression_0_1
+VB-POSE,Stack cubes,pi0,0.5600,0.6880,task_progression_0_1,task_progression_0_1
+VB-POSE,Stack cubes,pi0-FAST,0.8800,0.7720,task_progression_0_1,task_progression_0_1
+VB-POSE,Rotate marker,GR00T N1.5,0.7320,0.7320,task_progression_0_1,task_progression_0_1
+VB-POSE,Rotate marker,pi0,0.9320,0.9215,task_progression_0_1,task_progression_0_1
+VB-POSE,Rotate marker,pi0-FAST,1.0000,0.9056,task_progression_0_1,task_progression_0_1
+VB-POSE,Pick spoon,GR00T N1.5,0.5300,0.3960,task_progression_0_1,task_progression_0_1
+VB-POSE,Pick spoon,pi0,0.8000,0.7596,task_progression_0_1,task_progression_0_1
+VB-POSE,Pick spoon,pi0-FAST,0.9330,0.7164,task_progression_0_1,task_progression_0_1
+V-VIEW,Put block into bowl,pi0,1.0000,1.0000,task_progression_0_1,task_progression_0_1
+V-VIEW,Put block into bowl,pi0-FAST,1.0000,0.9200,task_progression_0_1,task_progression_0_1
+V-VIEW,Put banana into box,pi0,1.0000,0.6667,task_progression_0_1,task_progression_0_1
+V-VIEW,Put banana into box,pi0-FAST,1.0000,1.0000,task_progression_0_1,task_progression_0_1
+V-VIEW,Open drawer,pi0,0.5800,0.4000,task_progression_0_1,task_progression_0_1
+V-VIEW,Stack cubes,GR00T N1.5,0.1200,0.1200,task_progression_0_1,task_progression_0_1
+V-VIEW,Stack cubes,pi0,0.8000,0.7200,task_progression_0_1,task_progression_0_1
+V-VIEW,Stack cubes,pi0-FAST,0.9200,0.8400,task_progression_0_1,task_progression_0_1
+V-VIEW,Rotate marker,GR00T N1.5,0.8260,0.7500,task_progression_0_1,task_progression_0_1
+V-VIEW,Rotate marker,pi0,0.7300,0.7960,task_progression_0_1,task_progression_0_1
+V-VIEW,Rotate marker,pi0-FAST,0.7980,0.9150,task_progression_0_1,task_progression_0_1
+V-VIEW,Pick spoon,GR00T N1.5,0.8640,0.9150,task_progression_0_1,task_progression_0_1
+V-VIEW,Pick spoon,pi0,1.0000,1.0000,task_progression_0_1,task_progression_0_1
+V-VIEW,Pick spoon,pi0-FAST,0.8660,0.9320,task_progression_0_1,task_progression_0_1

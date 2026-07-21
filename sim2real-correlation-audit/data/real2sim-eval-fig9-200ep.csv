@@ -1,0 +1,135 @@
+# Auspex -- Real2Sim (R2S) sim-vs-real scatter, VECTOR-EXTRACTED from appendix Fig. 9
+# ("Sim-and-real correlations from scaled-up simulation evaluations", 200 sim episodes)
+# of arXiv:2511.04665v2.
+#
+# SOURCE: arXiv e-print of 2511.04665v2 -> figures/app-corr-200.pdf (original vector figure).
+#   Caption at sections/06-appendix.tex:262-266 (\label{fig:corr-200}). Axis semantics from the
+#   main-paper twin figure caption (sections/04-experiments.tex:8-9): x = REAL-WORLD success
+#   rate, y = SIMULATION success rate. Three panels: Toy packing, Rope routing, T-block pushing.
+# STATUS: EXTRACTED (not eyeballed), 2026-07-20. Reproduces all three printed r values to
+#   <= 0.00014 and all three printed MMRV values (see VERIFICATION).
+#
+# METHOD: Marker coordinates read from PDF drawing commands (PyMuPDF get_drawings(extended=True)).
+#   NO pixel estimation, NO eyeballing.
+#   Visibility filtering: the PDF contains 84 HIDDEN marker draw-ops (a legend-clipped duplicate
+#   rendering, size-13.5 circles, plus stacked legend swatches, size-11.3) that never paint.
+#   These were excluded GEOMETRICALLY via the content-stream clip stack (scissor rectangles);
+#   exactly 52 visible size-12.0 circle markers survive inside the three panel clip rects
+#   (17 / 20 / 15 per panel). NOTE: degenerate zero-width rects (error-bar lines, gridlines)
+#   never intersect scissor rects in PyMuPDF; visibility was tested on 0.1pt-inflated rects.
+#   Axis calibration: 5 vertical + 5 horizontal gridlines per panel fit against tick values
+#   0.00/0.25/0.50/0.75/1.00; all 6 linear fits have max residual < 3e-7 data units.
+#   Tick labels in this PDF are GLYPH PATHS, not text ops (the embedded label font object,
+#   6 0 R, is missing from the xref -- MuPDF warns but renders); label values 0.00-1.00 were
+#   read from the rendered raster and then confirmed twice independently: (a) three points sit
+#   EXACTLY on (0.00, 0.00); (b) the whisker geometry matches exact Clopper-Pearson intervals
+#   (below), which would fail under any other axis scaling.
+#
+# SERIES IDENTIFICATION: marker fill colours mapped to the legend (matplotlib tab10):
+#   green = ACT, orange = DP, blue = Pi-0, purple = SmolVLA (legend order left-to-right).
+#
+# VERIFICATION -- computed vs printed values (nothing was tuned to match):
+#   Pearson r (affine-invariant, so independent of axis calibration):
+#     Toy packing      n=17  computed 0.896994  printed 0.897  delta -0.000006
+#     Rope routing     n=20  computed 0.918139  printed 0.918  delta +0.000139
+#     T-block pushing  n=15  computed 0.950105  printed 0.950  delta +0.000105
+#   MMRV -- printed values are reproduced EXACTLY (as fractions on the recovered lattice) by
+#   the SimplerEnv formula with the rank-violation weighted by the SIM success-rate gap
+#   (i.e. arguments swapped relative to the li2024evaluating/SimplerEnv convention, which
+#   weights by the REAL gap):
+#     Toy packing      computed 21/200  = 0.105000  printed 0.105  (exact)
+#     Rope routing     computed 307/2000= 0.153500  printed 0.154  (half-ULP rounding)
+#     T-block pushing  computed 209/3000= 0.069667  printed 0.070  (rounds correctly)
+#   The conventional real-gap weighting gives 0.1324/0.1241/0.0750 -- does NOT match, so the
+#   paper's printed MMRV is the sim-gap-weighted variant. Keep this in mind when comparing
+#   MMRV across papers.
+#
+# LATTICE / EPISODE-COUNT RECOVERY -- exact, two independent confirmations:
+#   y_sim  = k/200 for integer k in ALL 52 points (max deviation < 1e-6): 200 sim episodes,
+#            matching the figure name (-200) and caption ("scaled-up simulation evaluations").
+#   x_real = k/20 (toy packing), k/27 (rope routing), k/16 (T-block pushing), all exact:
+#            real episode counts 20 / 27 / 16 per task, consistent with the paper's stated
+#            "16-27 [episodes] per checkpoint" (sections/04-experiments.tex:71).
+#   Independent confirmation: EVERY point carries BOTH an x-whisker and a y-whisker (95%
+#   Clopper-Pearson CI per caption). The extracted whisker endpoints equal exact
+#   Clopper-Pearson 95% bounds for (k_real, n_real) and (k_sim, 200) with max deviation
+#   < 1e-5 across all 208 bounds. CI columns below are the EXTRACTED endpoints (identical to
+#   beta-quantile CP bounds at printed precision). Whisker-to-marker assignment used bijective
+#   linear-sum assignment per panel/orientation (greedy nearest-centre mis-pairs the two
+#   overlapping bars of T-block Pi-0 x=13/16 and DP x=15/16, which share a y-row).
+#
+# CHECKPOINT IDENTITY: each point is one policy checkpoint, but the figure carries NO ordering
+#   information (no training-iteration annotation); checkpoint indices are NOT recoverable.
+#   Cross-reference with main-paper Fig. 4 (figures/exp-curve.pdf, per-policy training curves)
+#   checkpoint counts: rope ACT 6=6, rope Pi-0 3=3, T-block DP 4=4, T-block Pi-0 3=3,
+#   toy DP 5=5 -- but toy SmolVLA has 5 checkpoints in Fig. 4 vs 4 points here, and this
+#   appendix figure also covers task-policy pairs absent from Fig. 4. The appendix eval also
+#   uses modified randomization ranges (06-appendix.tex:275-278), so per-point values here are
+#   NOT the main-paper numbers.
+#
+# COINCIDENT / NEAR-COINCIDENT POINTS (the error mode Pearson r cannot see):
+#   Rope routing: THREE points exactly at (0.000, 0.000) -- DP x2 (exact duplicate draw-ops)
+#     and SmolVLA x1. They render as a single marker; any raster re-extraction would find 18,
+#     not 20, points in this panel.
+#   Toy packing: Pi-0 (0.800, 0.670) vs (0.800, 0.680) -- resolvable only in vector data.
+#   Rope routing: ACT (0.962963, 0.750) vs (0.962963, 0.770) -- 2% of range apart in y.
+#
+# OTHER CAVEATS:
+#  - n_real is small (16-27); x_real is quantized to steps of 0.037-0.0625. The three r values
+#    are computed on 15-20 points each and per-policy clusters are not independent draws.
+#  - The two rope-routing DP points at (0,0) are exact duplicates; de-duplicating changes
+#    n to 19 and r to 0.9023 (printed values require keeping both).
+#
+panel,series,x_real,y_sim,k_real,n_real,k_sim,n_sim,x_ci95_lo,x_ci95_hi,y_ci95_lo,y_ci95_hi
+toy_packing,ACT,0.500000,0.380000,10,20,76,200,0.271958,0.728042,0.312465,0.451149
+toy_packing,ACT,0.600000,0.740000,12,20,148,200,0.360543,0.808810,0.673422,0.799315
+toy_packing,ACT,0.650000,0.745000,13,20,149,200,0.407812,0.846090,0.678725,0.803859
+toy_packing,ACT,0.800000,0.795000,16,20,159,200,0.563386,0.942666,0.732346,0.848689
+toy_packing,ACT,0.850000,0.665000,17,20,133,200,0.621073,0.967929,0.595003,0.730021
+toy_packing,DP,0.000000,0.125000,0,20,25,200,0.000000,0.168434,0.082552,0.178974
+toy_packing,DP,0.350000,0.380000,7,20,76,200,0.153909,0.592189,0.312465,0.451149
+toy_packing,DP,0.400000,0.330000,8,20,66,200,0.191190,0.639457,0.265298,0.399829
+toy_packing,DP,0.500000,0.425000,10,20,85,200,0.271958,0.728042,0.355561,0.496696
+toy_packing,DP,0.700000,0.655000,14,20,131,200,0.457211,0.881068,0.584693,0.720634
+toy_packing,Pi-0,0.500000,0.615000,10,20,123,200,0.271958,0.728042,0.543761,0.682775
+toy_packing,Pi-0,0.800000,0.670000,16,20,134,200,0.563386,0.942666,0.600171,0.734702
+toy_packing,Pi-0,0.800000,0.680000,16,20,136,200,0.563386,0.942666,0.610530,0.744039
+toy_packing,SmolVLA,0.050000,0.060000,1,20,12,200,0.001265,0.248733,0.031384,0.102462
+toy_packing,SmolVLA,0.300000,0.205000,6,20,41,200,0.118932,0.542789,0.151311,0.267654
+toy_packing,SmolVLA,0.350000,0.090000,7,20,18,200,0.153909,0.592189,0.054214,0.138508
+toy_packing,SmolVLA,0.350000,0.230000,7,20,46,200,0.153909,0.592189,0.173581,0.294606
+rope_routing,ACT,0.370370,0.180000,10,27,36,200,0.194007,0.576321,0.129369,0.240381
+rope_routing,ACT,0.444444,0.290000,12,27,58,200,0.254799,0.646736,0.228157,0.358187
+rope_routing,ACT,0.555556,0.575000,15,27,115,200,0.353264,0.745201,0.503304,0.644439
+rope_routing,ACT,0.777778,0.600000,21,27,120,200,0.577417,0.913783,0.528536,0.668454
+rope_routing,ACT,0.962963,0.750000,26,27,150,200,0.810294,0.999062,0.684037,0.808393
+rope_routing,ACT,0.962963,0.770000,26,27,154,200,0.810294,0.999062,0.705394,0.826419
+rope_routing,DP,0.000000,0.000000,0,27,0,200,0.000000,0.127703,0.000000,0.018275
+rope_routing,DP,0.000000,0.000000,0,27,0,200,0.000000,0.127703,0.000000,0.018275
+rope_routing,DP,0.222222,0.145000,6,27,29,200,0.086217,0.422583,0.099309,0.201561
+rope_routing,DP,0.444444,0.545000,12,27,109,200,0.254799,0.646736,0.473259,0.615387
+rope_routing,DP,0.814815,0.930000,22,27,186,200,0.619170,0.937000,0.885340,0.961204
+rope_routing,DP,0.851852,0.725000,23,27,145,200,0.662689,0.958113,0.657575,0.785623
+rope_routing,Pi-0,0.555556,0.580000,15,27,116,200,0.353264,0.745201,0.508336,0.649256
+rope_routing,Pi-0,0.740741,0.915000,20,27,183,200,0.537151,0.888856,0.867395,0.949704
+rope_routing,Pi-0,0.851852,0.880000,23,27,176,200,0.662689,0.958113,0.826728,0.921580
+rope_routing,SmolVLA,0.000000,0.000000,0,27,0,200,0.000000,0.127703,0.000000,0.018275
+rope_routing,SmolVLA,0.740741,0.470000,20,27,94,200,0.537151,0.888856,0.399233,0.541670
+rope_routing,SmolVLA,0.814815,0.790000,22,27,158,200,0.619170,0.937000,0.726931,0.844260
+rope_routing,SmolVLA,0.888889,0.645000,24,27,129,200,0.708413,0.976473,0.574414,0.711216
+rope_routing,SmolVLA,0.888889,0.695000,24,27,139,200,0.708413,0.976473,0.626132,0.757980
+t_block_pushing,ACT,0.250000,0.365000,4,16,73,200,0.072662,0.523771,0.298233,0.435834
+t_block_pushing,ACT,0.312500,0.185000,5,16,37,200,0.110170,0.586621,0.133729,0.245863
+t_block_pushing,ACT,0.437500,0.355000,7,16,71,200,0.197534,0.701223,0.288784,0.425586
+t_block_pushing,ACT,0.437500,0.400000,7,16,80,200,0.197534,0.701223,0.331546,0.471464
+t_block_pushing,DP,0.312500,0.260000,5,16,52,200,0.110170,0.586621,0.200685,0.326578
+t_block_pushing,DP,0.750000,0.750000,12,16,150,200,0.476229,0.927338,0.684037,0.808393
+t_block_pushing,DP,0.812500,0.800000,13,16,160,200,0.543544,0.959526,0.737774,0.853105
+t_block_pushing,DP,0.937500,0.885000,15,16,177,200,0.697679,0.998419,0.832453,0.925686
+t_block_pushing,Pi-0,0.437500,0.565000,7,16,113,200,0.197534,0.701223,0.493261,0.634783
+t_block_pushing,Pi-0,0.687500,0.745000,11,16,149,200,0.413379,0.889830,0.678725,0.803859
+t_block_pushing,Pi-0,0.812500,0.885000,13,16,177,200,0.543544,0.959526,0.832453,0.925686
+t_block_pushing,SmolVLA,0.062500,0.110000,1,16,22,200,0.001581,0.302321,0.070233,0.161796
+t_block_pushing,SmolVLA,0.250000,0.205000,4,16,41,200,0.072662,0.523771,0.151311,0.267654
+t_block_pushing,SmolVLA,0.437500,0.335000,7,16,67,200,0.197534,0.701223,0.269979,0.404997
+t_block_pushing,SmolVLA,0.562500,0.435000,9,16,87,200,0.298777,0.802466,0.365217,0.506739

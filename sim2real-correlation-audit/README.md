@@ -43,7 +43,7 @@ $$h_u = \frac{1}{k} + \frac{(x_u - \bar{x})^2}{\sum_j (x_j - \bar{x})^2}.$$
 
 **2. Fisher-z interval.**
 
-$$\tanh\left(\operatorname{atanh}(r) \pm \frac{1.96}{\sqrt{k-3}}\right)$$
+$$\tanh\left(\mathrm{atanh}(r) \pm \frac{1.96}{\sqrt{k-3}}\right)$$
 
 With one point per unit this is the textbook CI. When points outnumber units, using $n$ = all points
 covers as little as 4–20%; the paper's pooled-center variant is labeled a reference bound, not a

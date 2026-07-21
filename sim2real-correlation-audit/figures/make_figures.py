@@ -84,7 +84,7 @@ def make_fig1_roboworld_leverage():
 
 
 def make_fig3_survey_k_dotplot():
-    """Fig 3: dot plot of k (independent training units) across the 18 surveyed papers.
+    """Fig 3: dot plot of k (independent training units) across the 22 surveyed papers.
 
     Color-codes the permutation floor: k = 1 has no units to permute, k = 2-3
     cannot reach p = 0.05 (min p = 1/k!), k >= 4 can. Flags papers that print
@@ -125,7 +125,7 @@ def make_fig3_survey_k_dotplot():
     ax.legend(handles=handles, frameon=False, fontsize=7.5, loc="lower right")
     save(fig, "fig3_survey_k_dotplot")
     n1 = sum(1 for _, k, _ in recs if k == 1); n23 = sum(1 for _, k, _ in recs if 2 <= k <= 3)
-    print(f"VERIFY survey: n={len(recs)}  k=1: {n1} (paper: 4)  k=2-3: {n23} (paper: 6)")
+    print(f"VERIFY survey: n={len(recs)}  k=1: {n1} (paper: 5)  k=2-3: {n23} (paper: 6)")
 
 
 def make_fig2_dc_bootstrap_comb():

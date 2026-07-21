@@ -145,7 +145,7 @@ def spec_curve(recs, task, rng):
 
 
 # IMPLEMENTS R1
-def comparison_arm(root=Path(__file__).resolve().parents[1]):
+def comparison_arm(root=Path(__file__).resolve().parent):
     """PREREG §3 requirement 1 -- the eyeballed-data comparison arm.
 
     The eyeballed file has no sim column, so a correlation from it REQUIRES a stated pairing

@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this paper, the extracted datasets, or the checks, please cite:"
+title: "What Does a Sim-to-Real Correlation Support? Five One-Line Checks and a Twenty-Two-Paper Audit"
+authors:
+  - family-names: Lam
+    given-names: Tri
+    email: tri@maydow.com
+date-released: 2026-07-21
+version: "1.1"
+url: "https://github.com/trilamsr/research/tree/main/sim2real-correlation-audit"
+repository-code: "https://github.com/trilamsr/research"
+license: MIT
+keywords:
+  - sim-to-real
+  - robot policy evaluation
+  - correlation
+  - reproducibility
+  - meta-research

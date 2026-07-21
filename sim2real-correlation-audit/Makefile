@@ -12,7 +12,7 @@ install:              ## create venv and install pinned dependencies
 	$(PIP) install -q -r requirements.txt pytest matplotlib
 	@echo "OK: environment ready (.venv)"
 
-test:                 ## 18 known-answer tests + byte-for-byte §2.1/--demo parity
+test:                 ## 26 known-answer tests + byte-for-byte §2.1/--demo parity
 	$(PY) -m pytest tests/ -q
 
 demo:                 ## reproduce paper §2.1 (RoboWorld vs Digital Cousins)

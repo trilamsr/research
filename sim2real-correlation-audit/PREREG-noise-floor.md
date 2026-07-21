@@ -119,7 +119,8 @@ uncertainty**, and must be reported as such.
 | `research/noise-floor/measure_noise_floor.py` | `91147e834914b3c998c9a6968cd66fe9dbc18bcafa4bd5b82b78824f0776bef3` | v1.3 — superseded by v1.4, see below |
 | `research/sim2real-correlation-audit/measure_noise_floor.py` | `638a14c56b8aa538f3916cf5d397fc001f0f3ababdae4fe659eb280b97a595a3` | v1.4 — superseded by v1.5 (data-folder flattening) |
 | `research/sim2real-correlation-audit/measure_noise_floor.py` | `ddfd4db0cf9799a8b0a8dde07d0281bccf243850aa0b3285e640bdf9291b26bd` | v1.5 — superseded by v1.6 (repository split) |
-| `sim2real-correlation-audit/measure_noise_floor.py` | `4efb24b81f25a2691ef9e084b0bc17f84d7274493df82bd0d7f8eeb82e356a20` | **v1.6 — current.** Path retargeting only, 2026-07-21: comparison-arm root `parents[2]` → `parents[1]` so `harness/` resolves inside the standalone `research` repository (harness inputs vendored to `harness/`). `results.json` verified identical again. |
+| `sim2real-correlation-audit/measure_noise_floor.py` | `4efb24b81f25a2691ef9e084b0bc17f84d7274493df82bd0d7f8eeb82e356a20` | v1.6 — superseded by v1.7 (harness moved into the package) |
+| `sim2real-correlation-audit/measure_noise_floor.py` | `201e19c2e8df9cfae479699970b7f51cd61acbb16fd028b48ece4b286465bb24` | **v1.7 — current.** Path retargeting only, 2026-07-21: comparison-arm root `parents[1]` → `parent`; `harness/` now lives inside the package beside this script. `results.json` verified identical again. |
 
 ### v1.4 amendment (2026-07-21) — repository restructuring, no analytic change
 

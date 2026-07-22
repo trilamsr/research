@@ -1,0 +1,24 @@
+# EmbodiedSplat (arXiv:2509.17430v2) — sim-vs-real image-navigation success, RECOVERED by
+# pixel-reading the 8 markers in Figure 1 (fig:gsnav_teaser, native raster figs_2/EmbodiedSplat_teaser.png,
+# 1220x1020). The headline SRCC values 0.976 (Poly) and 0.866 (DN) are typeset ONLY inside that
+# figure (a boxed annotation); confirmed ABSENT from the PDF text layer and from every .tex source
+# file. Body text prints only the range "sim-vs-real correlation (0.87-0.97)".
+#
+# STRUCTURE (from Fig 1 legend): each mesh type (Polycam, DN) has its OWN correlation over 4 points:
+#   {HM3D-ZS, HM3D-FT, HSSD-ZS, HSSD-FT}. So 2 base zero-shot lineages (HM3D, HSSD) + their fine-tuned
+#   siblings = the "4 finetunes are sibling finetunes of 2 zero-shot bases" claim. Task = image-goal
+#   navigation. k coded 2 (two 4-point correlations).
+#
+# VALIDATION: computing PEARSON over each mesh's 4 points reproduces the printed "SRCC":
+#   Poly Pearson=0.9757 (printed 0.976); DN Pearson=0.8661 (printed 0.866). SPEARMAN does NOT
+#   (Poly 0.949, DN 0.800), so the paper's "SRCC" is Pearson despite the acronym meaning a rank
+#   correlation (Kadian 2020). Coordinates read to +-0.01 off Fig 1; reproduction is exact to 3 dp.
+mesh,config,base_lineage,ft_status,sim_success,real_success
+Poly,HM3D-ZS-Poly,HM3D,ZS,0.76,0.50
+Poly,HM3D-FT-Poly,HM3D,FT,0.97,0.70
+Poly,HSSD-ZS-Poly,HSSD,ZS,0.14,0.10
+Poly,HSSD-FT-Poly,HSSD,FT,0.87,0.50
+DN,HM3D-ZS-DN,HM3D,ZS,0.50,0.50
+DN,HM3D-FT-DN,HM3D,FT,0.95,0.70
+DN,HSSD-ZS-DN,HSSD,ZS,0.01,0.10
+DN,HSSD-FT-DN,HSSD,FT,0.84,0.40

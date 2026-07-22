@@ -22,6 +22,18 @@ either way. GATE MODE (--gate-only also available) uses the exact reference
 convention instead: m = 1, w = 1.0, FIXED rho (no calibration), checked against
 independently computed 40,000-rep reference values before anything else runs.
 
+FIXED-X CONDITIONAL NULL (--fixed-x): the main table draws x from Gaussian
+latents each replicate, so its percentiles mix "aberrant y-behavior" with
+"unusual x-layout" -- RoboWorld 9a's isolated x-point (hat value 0.978) is
+itself rare under a Gaussian x. The conditional mode holds the OBSERVED x
+design fixed and resamples only y under a healthy linear relation fit to the
+data: y*_i = a + b x_i + eps_i with (a, b) the OLS fit and eps either
+parametric (iid N(0, sigma_hat^2), sigma_hat^2 = SS_res/(n-2)) or a residual
+permutation (exchangeable observed residuals). Drop-one is over the same
+independent units as the paper's table. P = fraction of replicates whose max
+drop-one |delta r| >= the observed swing, computed from the released CSVs, not
+hardcoded. This asks: GIVEN this x-layout, is the y-behavior surprising?
+
 Runnable end-to-end; numpy only; seed fixed (default_rng, per-cell seeds).
 Defaults: 40,000 gate reps, 200,000 reps per table cell, 20,000-rep calibration.
 --quick cuts these to 4,000 / 2,000 / 1,000 (faster, noisier; loosened gate
@@ -115,12 +127,132 @@ def calibrate_rho_unit(target, k, m, w, nsim, seed):
 def molmospaces_open():
     """(n_points, pearson r) of the MolmoSpaces open panel, from the released CSV."""
     xs, ys = [], []
-    with open(ROOT / "data" / "molmospaces.csv") as f:
+    with open(ROOT / "data" / "survey-molmospaces.csv") as f:
         for row in csv.DictReader(line for line in f if not line.startswith("#")):
             if row["task"] == "open":
                 xs.append(float(row["sim_success_pct"]))
                 ys.append(float(row["real_success_pct"]))
     return len(xs), float(np.corrcoef(xs, ys)[0, 1])
+
+
+# --------------------------------------------------------------------------
+# Fixed-x conditional null (--fixed-x): observed x design held fixed, y
+# resampled under a healthy linear relation fit to the released data.
+# (csv, filter column, filter value, x column, y column, unit column) per the
+# unit choices of PAPER.md par.4.2 (RoboWorld/MolmoSpaces: unit = point;
+# Cosmos: unit = training run; REALM: unit = policy).
+FIXED_X_CASES = [
+    ("RoboWorld 9a",        "survey-roboworld.csv", "panel", "9a_GPT-4o_score",
+     "x_real", "y_sim", "series"),
+    ("RoboWorld 9b",        "survey-roboworld.csv", "panel", "9b_Gemini-2.5-Flash_score",
+     "x_real", "y_sim", "series"),
+    ("RoboWorld 10b",       "survey-roboworld.csv", "panel", "10b_Gemini-2.5-Flash_success_rate",
+     "x_real", "y_sim", "series"),
+    ("Cosmos-Surg manual",  "survey-cosmos-surg-dvrk.csv", "panel", "manual_human_vs_dvrk",
+     "x_real", "y_sim", "unit"),
+    ("MolmoSpaces open",    "survey-molmospaces.csv", "task", "open",
+     "sim_success_pct", "real_success_pct", "policy"),
+    ("REALM Default",       "survey-realm.csv", "panel", "Default",
+     "x_real", "y_sim", "policy"),
+    ("REALM V-VIEW",        "survey-realm.csv", "panel", "V-VIEW",
+     "x_real", "y_sim", "policy"),
+    # 2026-07-21 Search-3 additions; unit column None = drop single points (rows).
+    ("VISER OpenVLA",       "survey-viser.csv", "policy", "OpenVLA",
+     "real_sr", "sim_ours_sr", None),
+    ("WM-PolicyEval Cosmos", "survey-wm-policyeval.csv", "world_model", "Cosmos",
+     "actual_success_rate", "predicted_success_rate", None),
+    ("WM-PolicyEval IRASim", "survey-wm-policyeval.csv", "world_model", "IRASim",
+     "actual_success_rate", "predicted_success_rate", None),
+]
+
+
+def load_fixed_x_case(fname, fcol, fval, xcol, ycol, ucol):
+    """Return (x, y, unit index array, unit names) from a released CSV."""
+    xs, ys, us = [], [], []
+    with open(ROOT / "data" / fname) as f:
+        for row in csv.DictReader(line for line in f if not line.startswith("#")):
+            if row[fcol] == fval:
+                xs.append(float(row[xcol]))
+                ys.append(float(row[ycol]))
+                us.append(row[ucol] if ucol is not None else str(len(us)))
+    names = sorted(set(us))
+    idx = np.array([names.index(u) for u in us])
+    return np.array(xs), np.array(ys), idx, names
+
+
+def observed_max_dr(x, y, idx, n_units):
+    """Observed pooled r, max drop-one |delta r| over units, worst unit index."""
+    r = float(np.corrcoef(x, y)[0, 1])
+    dr = np.array([abs(r - np.corrcoef(x[idx != u], y[idx != u])[0, 1])
+                   for u in range(n_units)])
+    return r, float(dr.max()), int(dr.argmax())
+
+
+def fixed_x_null(x, y, idx, nsim, seed, variant):
+    """Max drop-one |delta r| under the conditional null, x held at observed.
+
+    variant 'parametric':  eps ~ iid N(0, sigma_hat^2), sigma_hat^2 = SS_res/(n-2)
+    variant 'permutation': eps = a fresh permutation of the observed residuals
+    Returns max_dr, shape (nsim,).
+    """
+    n, k = len(x), idx.max() + 1
+    xb, yb = x.mean(), y.mean()
+    b = float(((x - xb) * (y - yb)).sum() / ((x - xb) ** 2).sum())
+    a = yb - b * xb
+    resid = y - (a + b * x)
+    rng = np.random.default_rng((BASE_SEED, seed))
+    if variant == "parametric":
+        sigma = np.sqrt((resid ** 2).sum() / (n - 2))
+        eps = rng.standard_normal((nsim, n)) * sigma
+    else:
+        eps = rng.permuted(np.broadcast_to(resid, (nsim, n)), axis=1)
+    ystar = a + b * x + eps                                     # (nsim, n)
+
+    memb = (idx[None, :] == np.arange(k)[:, None]).astype(float).T  # (n, k)
+    sx, sxx = x.sum(), (x * x).sum()
+    ux, uxx = x @ memb, (x * x) @ memb                          # (k,) fixed
+    sy, syy = ystar.sum(axis=1), (ystar ** 2).sum(axis=1)       # (nsim,)
+    sxy = ystar @ x
+    uy, uyy = ystar @ memb, (ystar ** 2) @ memb                 # (nsim, k)
+    uxy = ystar @ (x[:, None] * memb)
+    n2 = n - memb.sum(axis=0)                                   # (k,)
+
+    r_pool = _pearson_from_sums(sx, sy, sxx, syy, sxy, n)
+    r_loo = _pearson_from_sums(sx - ux, sy[:, None] - uy, sxx - uxx,
+                               syy[:, None] - uyy, sxy[:, None] - uxy, n2)
+    return np.abs(r_pool[:, None] - r_loo).max(axis=1)
+
+
+def run_fixed_x(nsim):
+    out = []
+    for ci, (name, fname, fcol, fval, xcol, ycol, ucol) in enumerate(FIXED_X_CASES):
+        x, y, idx, names = load_fixed_x_case(fname, fcol, fval, xcol, ycol, ucol)
+        r, obs, worst = observed_max_dr(x, y, idx, len(names))
+        row = dict(name=name, n=len(x), k=len(names), r=r, obs=obs,
+                   worst=names[worst])
+        for vi, variant in enumerate(("parametric", "permutation")):
+            mx = fixed_x_null(x, y, idx, nsim, seed=5000 + 10 * ci + vi, variant=variant)
+            row["med_" + variant] = float(np.median(mx))
+            row["p_" + variant] = float(np.mean(mx >= obs))
+        out.append(row)
+    return out
+
+
+def print_fixed_x(rows, nsim):
+    print(f"FIXED-X CONDITIONAL NULL  ({nsim:,} reps/cell; observed x design "
+          f"held fixed, y resampled\nfrom the OLS fit; P = fraction of "
+          f"replicates with max drop-one |dr| >= observed)")
+    hdr = (f"{'case':<19} {'n':>3} {'k':>2} {'obs r':>6} {'obs max|dr|':>11} "
+           f"{'worst unit':<18} | {'P param':>8} {'med':>6} | {'P perm':>8} {'med':>6}")
+    print(hdr)
+    print("-" * len(hdr))
+    for r in rows:
+        print(f"{r['name']:<19} {r['n']:>3} {r['k']:>2} {r['r']:>6.3f} "
+              f"{r['obs']:>11.3f} {r['worst']:<18} | "
+              f"{r['p_parametric']:>8.4f} {r['med_parametric']:>6.3f} | "
+              f"{r['p_permutation']:>8.4f} {r['med_permutation']:>6.3f}")
+    print("Units per PAPER.md par.4.2 (RoboWorld/MolmoSpaces: point; Cosmos: "
+          "training run; REALM: policy).\n")
 
 
 def build_cases():
@@ -133,6 +265,10 @@ def build_cases():
         ("MolmoSpaces open",        r_mo,  k_mo, 1, 0.617),
         ("REALM Default",           0.88,  3, 7,    0.135),
         ("REALM V-VIEW",            0.89,  3, 5,    0.168),   # 14 pts / 3 policies -> m ~= 5
+        # 2026-07-21 Search-3 additions (drop-one over single points, m=1)
+        ("VISER OpenVLA",           0.85,  5, 1,    0.135),
+        ("WM-PolicyEval Cosmos",    0.719, 12, 1,   0.260),
+        ("WM-PolicyEval IRASim",    0.277, 12, 1,   0.176),
     ]
 
 
@@ -229,12 +365,21 @@ def main():
                          "paper numbers use the default)")
     ap.add_argument("--gate-only", action="store_true",
                     help="run only the validation gate and exit")
+    ap.add_argument("--fixed-x", action="store_true",
+                    help="run only the fixed-x conditional null (observed x "
+                         "design held fixed, y resampled from the OLS fit; "
+                         "parametric and residual-permutation variants) for "
+                         "the seven par.4.2 firings and exit")
     args = ap.parse_args()
     if args.quick:
         NSIM, GATE_NSIM, CAL_NSIM = 2_000, 4_000, 1_000
         tol_p, tol_med = GATE_TOL_P_Q, GATE_TOL_MED_Q
     else:
         tol_p, tol_med = GATE_TOL_P, GATE_TOL_MED
+
+    if args.fixed_x:
+        print_fixed_x(run_fixed_x(NSIM), NSIM)
+        return
 
     gate_rows, gate_ok = run_gate(GATE_NSIM, tol_p, tol_med)
     print_gate(gate_rows, GATE_NSIM)

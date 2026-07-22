@@ -13,7 +13,7 @@ Sim-side noise is NOT modelled (PREREG §6): the naive Bin(n, p_hat) redraw doub
 noise and attenuates r (measured: toy -0.131, rope -0.044, T -0.124). Every interval here is
 therefore a LOWER BOUND on uncertainty.
 
-  python measure_noise_floor.py --data data/real2sim-eval-fig3-checkpoints.csv --out .
+  python measure_noise_floor.py --data data/survey-real2sim-eval-fig3-checkpoints.csv --out .
 """
 import argparse, csv, json, sys
 from itertools import combinations
@@ -164,7 +164,7 @@ def comparison_arm(root=Path(__file__).resolve().parent):
                for r in csv.DictReader(l for l in open(h / "fig3_digitized_reference.csv")
                                        if not l.startswith("#"))}
         ext = [r for r in csv.DictReader(l for l in open(Path(__file__).parent /
-                                                        "data/real2sim-eval-fig3-checkpoints.csv")
+                                                        "data/survey-real2sim-eval-fig3-checkpoints.csv")
                                          if not l.startswith("#"))]
     except FileNotFoundError as e:
         return {"error": f"comparison arm inputs missing: {e}"}

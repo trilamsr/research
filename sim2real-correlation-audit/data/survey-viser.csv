@@ -1,0 +1,44 @@
+# Auspex -- VISER sim-vs-real per-task success rates, from Table 5 ("Assessment of
+# sim-to-real correlation") of arXiv:2605.06311 (v1, the only version; submitted 2026-05-07).
+#
+# SOURCE: arXiv PDF https://arxiv.org/pdf/2605.06311 (v1), Table 5, page 8. Values sit in the
+#   PDF TEXT LAYER (PyMuPDF get_text) -- this is a table transcription, not a figure
+#   extraction. No scatter plot exists for these data; Table 5 is the complete record.
+#   The paper has NO code/data release: zero non-arXiv URLs anywhere in the PDF.
+# STATUS: TRANSCRIBED + VALIDATED, 2026-07-21. All four printed correlations reproduce
+#   EXACTLY from these 9 rows: Octo ours r=0.9988, Octo Simpler r=0.8860, OpenVLA ours
+#   r=0.8496, OpenVLA Simpler r=-0.2712. Headline "average Pearson 0.92" = mean of the two
+#   per-policy ours-column r values = 0.9242.
+#
+# REAL-SIDE PROVENANCE (recovered here; the paper never states it): every "Real world"
+# value is copied from a PRIOR paper's real-robot evaluation, none newly collected:
+#   - Octo rows spoon/towel 0.417, carrot/plate 0.083, eggplant-basket 0.433 = SIMPLER
+#     (arXiv 2405.05941) Table V "Real Eval" OCTO-SMALL success (0.417/0.083/0.433 exact;
+#     SimplerEnv repo metrics.py rounds eggplant to 0.400 but the paper table says 0.433).
+#   - Octo eggplant-in-pot 0.1 = OpenVLA paper (arXiv 2406.09246) Appendix B.1 BridgeData
+#     table, "Put Eggplant into Pot", Octo column 1/10.
+#   - All five OpenVLA rows = same OpenVLA-paper table, OpenVLA column /10: Put Carrot on
+#     Plate 8/10, Put Eggplant into Pot 10/10, Lift White Tape 1/10, Lift AAA Battery 7/10,
+#     Take Purple Grapes out of Pot 4/10.
+# CONSEQUENCE: the "Octo" real column mixes OCTO-SMALL real numbers (3 tasks, from SIMPLER)
+# with the OpenVLA paper's "Octo" (variant not named in its BridgeData table; its released
+# eval code defaults to octo-base) on the 4th task -- two different training runs in one row. VISER's own text
+# says only "We constructed simulated counterparts for tasks in BridgeDataV2 and performed
+# multiple trials for each task" -- the trials are sim-side; no real-robot protocol, trial
+# counts, or Octo variant are stated anywhere (supplementary A.3 included).
+# Sim-side columns (ours/simpler) are multiples of 0.1 -> the paper's own sim evals
+# (trial count unstated); Simpler column does NOT match SIMPLER-paper published numbers,
+# so it is their own rerun of green-screen SimplerEnv.
+#
+# COLUMNS: success rates as fractions. sim_ours = VISER simulation; sim_simpler = their
+# rerun of SimplerEnv green-screen; real = "Real world" column with recovered source.
+policy,task,sim_ours_sr,sim_simpler_sr,real_sr,real_source
+Octo,put_spoon_on_towel,0.5,0.3,0.417,SIMPLER_2405.05941_TabV_octo-small
+Octo,put_carrot_on_plate,0.2,0.0,0.083,SIMPLER_2405.05941_TabV_octo-small
+Octo,put_eggplant_in_pot,0.2,0.0,0.1,OpenVLA_2406.09246_AppB_octo_1of10
+Octo,put_eggplant_in_basket,0.5,0.7,0.433,SIMPLER_2405.05941_TabV_octo-small
+OpenVLA,put_carrot_on_plate_v2,0.7,0.1,0.8,OpenVLA_2406.09246_AppB_openvla_8of10
+OpenVLA,put_eggplant_in_pot,0.8,0.2,1.0,OpenVLA_2406.09246_AppB_openvla_10of10
+OpenVLA,lift_white_tape,0.1,0.3,0.1,OpenVLA_2406.09246_AppB_openvla_1of10
+OpenVLA,lift_aaa_battery,1.0,0.0,0.7,OpenVLA_2406.09246_AppB_openvla_7of10
+OpenVLA,take_grapes_out_of_pot,0.2,0.0,0.4,OpenVLA_2406.09246_AppB_openvla_4of10

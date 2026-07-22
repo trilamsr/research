@@ -7,19 +7,34 @@ regenerating code in the package:
   (a) The subject paper's (real2sim-eval, arXiv:2511.04665v2) Table I MMRVs
       0.076 / 0.174 / 0.108 (toy packing / rope routing / T-block pushing)
       reproduce to print precision from our Figure-3 extraction
-      (data/real2sim-eval-fig3-checkpoints.csv) under EXACTLY ONE convention in
+      (data/survey-real2sim-eval-fig3-checkpoints.csv) under EXACTLY ONE convention in
       the grid below: a violation whenever the <=-orderings of the pair disagree
       (tie-inclusive XOR), weighted by the SIMULATED-side gap |S_i - S_j|,
-      normalized by N. That is the reverse of SIMPLER's defining equation
-      (strict sign product, REAL-side gap).
+      normalized by N. That violation predicate is logically IDENTICAL to
+      SIMPLER's (see below); the subject paper differs from SIMPLER in exactly
+      one argument: it weights the SIMULATED-side gap where SIMPLER's defining
+      equation weights the REAL side.
   (b) The same convention reproduces the 200-episode appendix figure
-      (data/real2sim-eval-fig9-200ep.csv) EXACTLY, as the rational lattice
+      (data/survey-real2sim-eval-fig9-200ep.csv) EXACTLY, as the rational lattice
       points 21/200, 307/2000, 209/3000 -- an exact-arithmetic match, not a
       tolerance match, computed here with fractions.Fraction.
   (c) REALM's (arXiv:2512.19562) V-VIEW panel prints MMRV = 0.253, and no
       convention in the grid comes within print precision of it on the 14
-      points the panel actually draws (data/realm.csv); SIMPLER's own
+      points the panel actually draws (data/survey-realm.csv); SIMPLER's own
       convention gives 0.117, the value quoted as "ours" in section 7.2.
+      (On these 14 points the tie-exclusive sign<0 reading gives the same
+      0.117 to print precision.)
+
+WHICH CONVENTION IS SIMPLER'S. SIMPLER's released code
+(simpler_env/utils/metrics.py, mean_maximum_rank_violation) and its paper's
+Eq. 1 (arXiv:2405.05941) agree with each other: the violation predicate is the
+strict-inequality XOR  (S_i > S_j) != (R_i > R_j),  and the weight is the
+REAL-side gap |R_i - R_j|.  Since (dR > 0) != (dS > 0) is logically identical
+to (dR <= 0) != (dS <= 0) for every input, SIMPLER's convention IS the grid
+variant leq-xor/real/N: a ONE-SIDED tie (tied on one axis, differing on the
+other) counts as a violation.  Earlier drafts of section 7 mislabeled the
+tie-exclusive sign<0/real/N variant as "SIMPLER's definition"; that variant is
+kept in the grid (as TIE_EXCLUSIVE_CONVENTION) but the label was wrong.
 
 THE METRIC. For N points (R_i, S_i) -- real and simulated success rates --
 
@@ -29,14 +44,18 @@ and the convention grid is the cartesian product of:
 
   violation predicate viol(i,j), on dR = R_i - R_j, dS = S_i - S_j:
     sign<0            dR*dS < 0                (strict; ties never violate --
-                                                SIMPLER's published definition)
-    leq-xor           (dR<=0) != (dS<=0)       (tie-inclusive; a tie on exactly
-                                                one side counts as a violation)
+                                                NOT SIMPLER's definition,
+                                                despite an earlier mislabel)
+    leq-xor           (dR<=0) != (dS<=0)       (== (dR>0)!=(dS>0): SIMPLER's
+                                                published definition; a tie on
+                                                exactly one side violates)
     lt-xor            (dR<0)  != (dS<0)        (tie-inclusive, mirror reading)
-    geq-xor           (dR>=0) != (dS>=0)       (identical pair set to leq-xor
-                                                with i,j swapped; kept because
-                                                the max-over-j makes the two
-                                                aggregate differently)
+    geq-xor           (dR>=0) != (dS>=0)       (pointwise identical to lt-xor,
+                                                since not(dR>=0) == (dR<0) and
+                                                XOR is complement-invariant;
+                                                kept so the grid's advertised
+                                                count stays 60 -- it can never
+                                                produce a value lt-xor does not)
     sign<=0-any-tie   dR*dS <= 0 and not both zero  (most inclusive reading)
 
   gap side gap(i,j):
@@ -101,9 +120,16 @@ NORMS = ("N", "N-1", "pairs")
 
 CONVENTIONS = [(v, g, n) for v, g, n in product(VIOLATIONS, GAPS, NORMS)]
 
-# The two named conventions section 7.2 talks about.
-SIMPLER_CONVENTION = ("sign<0", "real", "N")     # SIMPLER's defining equation
-SUBJECT_CONVENTION = ("leq-xor", "sim", "N")     # recovered for the subject paper
+# The named conventions section 7.2 talks about.
+# SIMPLER's actual convention (code + paper Eq. 1): strict-> XOR == leq-xor,
+# real-side gap, mean-over-items of max-over-j.  One-sided ties violate.
+SIMPLER_CONVENTION = ("leq-xor", "real", "N")
+# Tie-exclusive variant an earlier draft mislabeled as "SIMPLER's definition";
+# it is the convention the section 7 drop-one table was computed under.
+TIE_EXCLUSIVE_CONVENTION = ("sign<0", "real", "N")
+# Recovered for the subject paper: same violation predicate as SIMPLER,
+# simulated-side gap instead of real-side.
+SUBJECT_CONVENTION = ("leq-xor", "sim", "N")
 
 
 def mmrv(points, violation: str, gap: str, norm: str):
@@ -146,7 +172,7 @@ def _rows(name: str):
 def load_fig3():
     """Per-task exact (real, sim) rates from the Figure-3 checkpoint extraction."""
     by_task: dict[str, list] = {}
-    for r in _rows("real2sim-eval-fig3-checkpoints.csv"):
+    for r in _rows("survey-real2sim-eval-fig3-checkpoints.csv"):
         n = int(r["n_episodes"])
         by_task.setdefault(r["task"], []).append(
             (Fraction(int(r["real_successes"]), n),
@@ -157,7 +183,7 @@ def load_fig3():
 def load_fig9():
     """Per-panel exact rates from the 200-episode appendix-figure extraction."""
     by_panel: dict[str, list] = {}
-    for r in _rows("real2sim-eval-fig9-200ep.csv"):
+    for r in _rows("survey-real2sim-eval-fig9-200ep.csv"):
         by_panel.setdefault(r["panel"], []).append(
             (Fraction(int(r["k_real"]), int(r["n_real"])),
              Fraction(int(r["k_sim"]), int(r["n_sim"]))))
@@ -167,7 +193,7 @@ def load_fig9():
 def load_realm_panel(panel: str):
     """Float task-progression points of one REALM panel (as drawn: V-VIEW has 14)."""
     return [(float(r["x_real"]), float(r["y_sim"]))
-            for r in _rows("realm.csv") if r["panel"] == panel]
+            for r in _rows("survey-realm.csv") if r["panel"] == panel]
 
 
 # --------------------------------------------------------------------------- #
@@ -299,6 +325,7 @@ def main() -> int:
     near_c, near_v = min(realm_vals.items(),
                          key=lambda kv: abs(kv[1] - REALM_PRINTED))
     simpler_v = realm_vals[SIMPLER_CONVENTION]
+    tie_excl_v = realm_vals[TIE_EXCLUSIVE_CONVENTION]
     subject_v = realm_vals[SUBJECT_CONVENTION]
     P(f"(c) REALM V-VIEW panel: printed MMRV = {REALM_PRINTED}, "
       f"N = {len(vv)} drawn points (design implies 21)")
@@ -308,6 +335,8 @@ def main() -> int:
       f"(off by {abs(near_v - REALM_PRINTED):.4f})")
     P(f"    SIMPLER convention {conv_name(SIMPLER_CONVENTION)}: {simpler_v:.4f} "
       f"(section 7.2 quotes ours: 0.117)")
+    P(f"    tie-exclusive variant {conv_name(TIE_EXCLUSIVE_CONVENTION)}: "
+      f"{tie_excl_v:.4f} (same to print precision on these 14 points)")
     P(f"    subject-paper convention {conv_name(SUBJECT_CONVENTION)}: {subject_v:.4f}")
     if not reaching and abs(simpler_v - 0.117) <= 0.0005:
         P(f"    VERDICT: no variant of {len(CONVENTIONS)} comes within "

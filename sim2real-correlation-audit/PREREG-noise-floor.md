@@ -2,6 +2,28 @@
 
 **Frozen:** 2026-07-20, v1.0. Written and hash-locked **before** running the analysis.
 
+> ### ⚠️ Provenance status (amendment, 2026-07-21) — what the line above can and cannot prove
+>
+> The "before running the analysis" claim is **internally documented but not externally verifiable**:
+> the released repository's history begins on 2026-07-21 with this file and the results in the same
+> commit, and the forensic commit cited in §8 (`6bc7ced`) is not reachable from any released ref.
+> A reader therefore cannot distinguish plan-then-run from run-then-plan from the released record,
+> and this document must not be cited as if they could. **Read the A1a analysis as an analysis plan
+> with documented deviations — exploratory, not confirmatory.** (This is also the reading §9 of the
+> paper already prescribes for everything beyond the original checkpoint analysis.)
+>
+> External timestamps exist from **2026-07-21** onward: this file and `PAPER.md` are anchored via
+> OpenTimestamps (`PREREG-noise-floor.md.ots`, `PAPER.md.ots`, shipped alongside; verify with
+> `ots verify`). Those stamps bound *existence by* that date; they cannot retroactively establish
+> the 2026-07-20 ordering. Future preregistrations in this project will be externally registered
+> (stamped and deposited) before execution, so this gap does not recur.
+>
+> **External deposits (2026-07-21):** OSF registration `osf.io/6ag3c` (frozen snapshot of this file
+> and its `.ots` proofs, Open-Ended Registration) and Zenodo deposit DOI `10.5281/zenodo.21479936`
+> (concept DOI `10.5281/zenodo.21479935`). This paragraph was added after the OSF registration was
+> created, so the registered snapshot predates it by these two sentences; every substantive
+> statement above is identical in the registered copy.
+
 Scope: **A1a only** — the noise-floor characterisation of the reconstructible sim–real correlation in
 arXiv:2511.04665v2. A1b (ablation deltas) and A1c (IsaacLab arm) are **not** covered here and require
 their own preregistration.
@@ -120,7 +142,10 @@ uncertainty**, and must be reported as such.
 | `research/sim2real-correlation-audit/measure_noise_floor.py` | `638a14c56b8aa538f3916cf5d397fc001f0f3ababdae4fe659eb280b97a595a3` | v1.4 — superseded by v1.5 (data-folder flattening) |
 | `research/sim2real-correlation-audit/measure_noise_floor.py` | `ddfd4db0cf9799a8b0a8dde07d0281bccf243850aa0b3285e640bdf9291b26bd` | v1.5 — superseded by v1.6 (repository split) |
 | `sim2real-correlation-audit/measure_noise_floor.py` | `4efb24b81f25a2691ef9e084b0bc17f84d7274493df82bd0d7f8eeb82e356a20` | v1.6 — superseded by v1.7 (harness moved into the package) |
-| `sim2real-correlation-audit/measure_noise_floor.py` | `201e19c2e8df9cfae479699970b7f51cd61acbb16fd028b48ece4b286465bb24` | **v1.7 — current.** Path retargeting only, 2026-07-21: comparison-arm root `parents[1]` → `parent`; `harness/` now lives inside the package beside this script. `results.json` verified identical again. |
+| `sim2real-correlation-audit/measure_noise_floor.py` | `201e19c2e8df9cfae479699970b7f51cd61acbb16fd028b48ece4b286465bb24` | v1.7 — superseded by v1.8 (lock-row path retargeted to the released package layout; file bytes unchanged) |
+| `measure_noise_floor.py` | `201e19c2e8df9cfae479699970b7f51cd61acbb16fd028b48ece4b286465bb24` | v1.8 — superseded by v1.9 (data CSV renamed; the only byte change is the CSV path string, §5's amendment below). |
+| `measure_noise_floor.py` | `de70a2e93c136dc8cc20af494b270730338d2da3b2bc84799d3633f2cce3a7fb` | **v1.9 — current.** Same analytic bytes as v1.8; the single change is the internal CSV path string `data/real2sim-eval-fig3-checkpoints.csv` → `data/survey-real2sim-eval-fig3-checkpoints.csv` (2026-07-21 data-directory naming pass). `results.json` regenerates identically up to the `source` path string. |
+| `data/survey-real2sim-eval-fig3-checkpoints.csv` | `fd89d11f121d73e7618c2cd74c92a6eb5a9c3676c79cf37fff5beccb5d503150` | **current** — same bytes as the original `fig3_checkpoints_extracted.csv` (SHA-256 unchanged through three renames: `fig3_checkpoints_extracted.csv` → `real2sim-eval-fig3-checkpoints.csv` → `data/survey-real2sim-eval-fig3-checkpoints.csv`, the last a 2026-07-21 data-directory naming pass); released path. |
 
 ### v1.4 amendment (2026-07-21) — repository restructuring, no analytic change
 
@@ -128,7 +153,8 @@ The paper folder was renamed (`research/noise-floor/` → `research/sim2real-cor
 the data files moved under `data/<paper>-data/` for the reproduction package. `measure_noise_floor.py`
 was edited **only** to retarget paths: the comparison-arm repository-root resolution
 (`parents[3]` → `parents[2]` after the folder flattening), the internal reference to
-the checkpoint CSV (now `data/real2sim-eval-fig3-checkpoints.csv`), and the docstring usage example.
+the checkpoint CSV (`data/real2sim-eval-fig3-checkpoints.csv` at this amendment; later renamed to
+`data/survey-real2sim-eval-fig3-checkpoints.csv`, see v1.9 below), and the docstring usage example.
 No analytic statement changed. **Verified before locking:** `results.json` regenerated under v1.4 is
 identical to the v1.3 output up to the `source` path string. The locked data file moved and was renamed
 (`checkpoint_data_from_figure3.csv` → `data/real2sim-eval-fig3-checkpoints.csv`) without content
@@ -169,7 +195,7 @@ the evidence that it was unverifiable. **It confers no reproducibility guarantee
 cited as one.** The analysis it was meant to pin (A1a) is reproducible instead via
 `measure_noise_floor.py` at the corrected hash above, together with the checkpoint CSV — both of
 which do verify.
-| `research/noise-floor/checkpoint_data_from_figure3.csv` | `fd89d11f121d73e7618c2cd74c92a6eb5a9c3676c79cf37fff5beccb5d503150` | renamed from fig3_checkpoints_extracted.csv, contents unchanged |
+| `research/noise-floor/checkpoint_data_from_figure3.csv` | `fd89d11f121d73e7618c2cd74c92a6eb5a9c3676c79cf37fff5beccb5d503150` | superseded by the `data/real2sim-eval-fig3-checkpoints.csv` row above (renamed from fig3_checkpoints_extracted.csv; contents and hash unchanged through both renames) |
 
 **Why two hashes for one file — v1.0 → v1.1 (2026-07-20), after the run.**
 

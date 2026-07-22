@@ -1,6 +1,6 @@
 # What Does a Sim-to-Real Correlation Support?
 
-**Five One-Line Checks and a Twenty-Two-Paper Audit** — paper (`PAPER.md`) and full reproduction
+**Five One-Line Checks and a Twenty-Six-Paper Audit** — paper (`PAPER.md`) and full reproduction
 package. Every quantitative claim in the paper regenerates from a script in this folder run on a CSV
 in `data/`; nothing is hand-copied.
 
@@ -10,25 +10,31 @@ Robot-learning papers increasingly justify evaluating policies in simulation by 
 correlation between simulated and real-world success. This paper asks what such a correlation can
 actually support, given how few independent data points typically sit behind it. It contributes five
 checks — each computable from a published scatter plot in one line — and applies them to every paper
-we could find that reports a quantitative sim-to-real correlation for robot policies: twenty-two
-papers, audited from data recovered out of their own published figures.
+we could find (2024–2026) that reports a quantitative sim-to-real correlation for robot policies:
+twenty-six papers (the census is maintained by logged completeness searches; the last, on
+submission eve, added four). The two unit-count checks run on all twenty-six from each paper's own setup
+description; the data-dependent checks run on the nineteen papers whose data we could recover
+from their published figures and tables.
 
 What the audit finds:
 
-- **21 of 22** papers report their headline correlation over fewer than ten independent units
-  (training runs), and five report it over a single unit, where a correlation across units does not
+- **25 of 26** papers report their headline correlation over fewer than ten independent units
+  (training runs), and six report it over a single unit, where a correlation across units does not
   exist as a quantity.
-- **17 of 22** attach no uncertainty of any kind to the correlation.
-- **6 of 22** report significance below the exact permutation floor — with $k$ units the smallest
+- **21 of 26** attach no uncertainty of any kind to the correlation.
+- **9 of 26** report significance below the exact permutation floor — with $k$ units the smallest
   attainable one-sided $p$ is $1/k!$, so at $k=3$ no permutation test can reach $p=0.05$, yet
   $p<0.001$ appears in print.
+- One printed coefficient (WM-PolicyEval's IRASim baseline) cannot be produced from its own
+  plotted points at all.
 - The good news: when the checks *can* run, they clear more often than they flag. The paper's
   recommendations require no new experiments — releasing the per-unit numbers behind one existing
   figure is enough.
 
 The paper also documents an undocumented metric convention: the ranking metric MMRV is computed
-differently across papers, no paper states its choice, and in one case the convention had to be
-recovered by brute force against two figures at once (§7).
+differently across papers, no adopting paper states its choice (SIMPLER, the metric's source,
+states its convention in Eq. 1 and releases a reference implementation), and in one case the
+convention had to be recovered by brute force against two figures at once (§7).
 
 ## The five checks
 
@@ -36,7 +42,7 @@ For $k$ independent units with paired (real, sim) values and Pearson $r$ over th
 
 **1. Leverage (drop-one).** Recompute $r$ with each unit removed; report
 $\max_u \lvert r - r_{(-u)} \rvert$ and the range of $r_{(-u)}$. Fires at $\max \lvert \Delta r
-\rvert > 0.10$ (any cutoff in $[0.09, 0.12]$ selects the same firings on our 22 datasets). The
+\rvert > 0.10$ (any cutoff in $[0.09, 0.12]$ selects the same firings on our 28 datasets). The
 design-level quantity is the hat value
 
 $$h_u = \frac{1}{k} + \frac{(x_u - \bar{x})^2}{\sum_j (x_j - \bar{x})^2}.$$
@@ -114,12 +120,16 @@ draft claims before publication; the corrections are part of the paper's record 
 
 ## Reproducing headline paper numbers, one command each
 
+Requires Python ≥ 3.12 (the pinned `numpy==2.5.1` / `scipy==1.18.0` wheels do not build on 3.9);
+`pip install -r requirements.txt` then run any command below. `matplotlib`/`pytest` are added by the
+Makefile `install` target.
+
 | paper claim | command |
 |---|---|
 | §2.1 blocks (RoboWorld vs Digital Cousins) | `python correlation_audit.py --demo` |
-| §8 counts (21/22, 17/22, 6/22 + 5/22, …) | `python survey_table.py` |
+| §8 counts (25/26, 21/26, 9/26 + 6/26, …) | `python survey_table.py` |
 | §4/§4.2 leverage values, Fig. 1–3 numbers | `python figures/make_figures.py` |
-| §5 flip, §7.1 granularity, robustness rows | `python measure_noise_floor.py --data data/real2sim-eval-fig3-checkpoints.csv --out .` |
+| §5 flip, §7.1 granularity, robustness rows | `python measure_noise_floor.py --data data/survey-real2sim-eval-fig3-checkpoints.csv --out .` |
 | §6.1 coverage percentages | `python fz_coverage.py` |
 | §7.2 convention grid (60 variants, unique Table I match, V-VIEW unreachable) | `python mmrv_conventions.py` |
 | §4.2 leverage null calibration (RoboWorld P = 0.002; k = 3 firings typical) | `python leverage_null.py` |
@@ -140,9 +150,9 @@ remain their authors'. To cite (`CITATION.cff` carries the same metadata):
 @misc{lam2026sim2real,
   author = {Lam, Tri},
   title  = {What Does a Sim-to-Real Correlation Support?
-            Five One-Line Checks and a Twenty-Two-Paper Audit},
+            Five One-Line Checks and a Twenty-Six-Paper Audit},
   year   = {2026},
   url    = {https://github.com/trilamsr/research/tree/main/sim2real-correlation-audit},
-  note   = {Draft v1.1, 2026-07-21}
+  note   = {Draft v1.2, 2026-07-21}
 }
 ```

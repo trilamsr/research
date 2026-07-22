@@ -14,6 +14,12 @@ Generative model: cluster i: (a_i,b_i) ~ BVN(0, corr=rho_unit, var 1);
 point j: x_ij = a_i + eps_ij, y_ij = b_i + del_ij, (eps,del) ~ BVN(0, corr=rho_within, sd sigma).
 Outlier condition: cluster 4's x-values shifted +3 (3 cluster-sd leverage point).
 
+Binomial condition (the surveyed data are success rates, not Gaussians): the latent
+point values are pushed through a logistic link to probabilities and observed as
+Bin(n_ep, p)/n_ep with n_ep = 20 episodes (the surveyed papers use 16-40); the
+estimand is the latent unit-level rho_unit. This asks whether binomial observation
+noise breaks the intervals' coverage of the unit-level correlation.
+
 Runnable end-to-end; numpy only; seed fixed. Default is 10,000 replications per
 condition; pass --quick for 1,000 replications (faster, noisier -- for impatient
 reviewers; the paper numbers use the default).
@@ -75,6 +81,43 @@ def simulate(rho_u, rho_w, sigma, outlier=False):
     return E2, out
 
 
+def simulate_binomial(rho_u, rho_w, sigma, n_ep=20):
+    """Same clustered latents; rates observed as Bin(n_ep, logistic(latent))/n_ep."""
+    a, b = bvn(NSIM, K, rho_u, 1.0)
+    eps, del_ = bvn(NSIM, K * M, rho_w, sigma)
+    lat_x = np.repeat(a, M, axis=1) + eps
+    lat_y = np.repeat(b, M, axis=1) + del_
+    px = 1.0 / (1.0 + np.exp(-lat_x))
+    py = 1.0 / (1.0 + np.exp(-lat_y))
+    x = rng.binomial(n_ep, px) / n_ep
+    y = rng.binomial(n_ep, py) / n_ep
+    # degenerate rows (zero variance on an axis) are dropped and counted
+    def safe(rr):
+        return rr[np.isfinite(rr)]
+    with np.errstate(invalid="ignore", divide="ignore"):
+        r_pool = corr_rows(x, y)
+        xm = x.reshape(NSIM, K, M).mean(axis=2)
+        ym = y.reshape(NSIM, K, M).mean(axis=2)
+        r_agg = corr_rows(xm, ym)
+    keep = np.isfinite(r_pool) & np.isfinite(r_agg)
+    r_pool, r_agg = r_pool[keep], r_agg[keep]
+    zp, za = np.arctanh(r_pool), np.arctanh(r_agg)
+    ivs = {
+        "I1_hybrid": (np.tanh(zp - Z * 1.0), np.tanh(zp + Z * 1.0)),
+        "I2_agg_z":  (np.tanh(za - Z * 1.0), np.tanh(za + Z * 1.0)),
+        "I3_naive":  (np.tanh(zp - Z / np.sqrt(13)), np.tanh(zp + Z / np.sqrt(13))),
+    }
+    E1 = rho_u
+    out = {}
+    for name, (lo, hi) in ivs.items():
+        out[name] = {
+            "cov_E1": np.mean((lo <= E1) & (E1 <= hi)),
+            "cov_E2": float("nan"),   # pooled estimand not defined on the rate scale
+            "width": np.median(hi - lo),
+        }
+    return keep.mean(), out
+
+
 def main():
     global NSIM
     ap = argparse.ArgumentParser(
@@ -112,6 +155,16 @@ def main():
             cells.append(f"{r['cov_E1']:6.3f} {r['cov_E2']:6.3f} {r['width']:5.3f}")
         print(f"{rho_u:5.2f} {sigma:4.1f} {case:>5} {str(outl):>4} {E2:6.3f} | "
               + " | ".join(cells))
+
+    print("\nBinomial condition (rates = Bin(20, logistic(latent))/20; coverage of latent rho_u):")
+    print(f"{'rho_u':>5} {'sig':>4} {'rho_w':>5} {'kept':>5} | {'I1cE1':>6} {'I1w':>5} | "
+          f"{'I2cE1':>6} {'I2w':>5} | {'I3cE1':>6} {'I3w':>5}")
+    for rho_u in (0.0, 0.5, 0.9, 0.95):
+        for sigma in (0.3, 0.7):
+            kept, res = simulate_binomial(rho_u, rho_u, sigma)
+            cells = [f"{res[k]['cov_E1']:6.3f} {res[k]['width']:5.3f}"
+                     for k in ("I1_hybrid", "I2_agg_z", "I3_naive")]
+            print(f"{rho_u:5.2f} {sigma:4.1f} {rho_u:5.2f} {kept:5.3f} | " + " | ".join(cells))
 
 
 if __name__ == "__main__":

@@ -24,7 +24,7 @@ def _rows(fname):
 
 @pytest.fixture(scope="module")
 def roboworld_9a():
-    rows = [r for r in _rows("data/roboworld.csv") if r["panel"].startswith("9a")]
+    rows = [r for r in _rows("data/survey-roboworld.csv") if r["panel"].startswith("9a")]
     points = [(float(r["x_real"]), float(r["y_sim"])) for r in rows]
     units = [r["series"] for r in rows]
     return audit(points, units)
@@ -32,7 +32,7 @@ def roboworld_9a():
 
 @pytest.fixture(scope="module")
 def digital_cousins():
-    rows = _rows("data/digital-cousins.csv")
+    rows = _rows("data/survey-digital-cousins.csv")
     points = [(float(r["x_real"]), float(r["y_sim"])) for r in rows]
     units = [r["policy"] for r in rows]
     return audit(points, units)

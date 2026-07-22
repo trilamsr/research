@@ -1,15 +1,17 @@
-# What Does a Sim-to-Real Correlation Support? Five One-Line Checks and a Twenty-Two-Paper Audit
+# What Does a Sim-to-Real Correlation Support? Five One-Line Checks and a Twenty-Six-Paper Audit
 
-*Tri Lam (tri@maydow.com) · Draft v1.1 · 2026-07-21*
+*Tri Lam (tri@maydow.com) · Draft v1.2 · 2026-07-21*
 
 ---
 
 ## Abstract
 
 Real-to-sim policy evaluation reports its central claim as a correlation between simulated and
-real-world policy success rates. We survey the twenty-two papers reporting such a correlation and find
-that the field's central number rests on almost no independent data. Twenty-one of twenty-two compute
-their headline correlation over fewer than ten independent training units; five compute it over
+real-world policy success rates. We survey the twenty-six papers reporting such a correlation in the
+current wave of this literature (2024–2026; §8.1 states the window, its one known ancestor, and the
+logged searches behind the count) and
+find that the field's central number rests on almost no independent data. Twenty-five of twenty-six compute
+their headline correlation over fewer than ten independent training units; six compute it over
 checkpoints, finetunes, or test conditions of a single policy (one unit); five report any uncertainty on it. Three print
 *p* < 0.001, parametric values computed over pooled, non-independent points, where their own unit
 counts (*k* = 3, and in one case *k* = 2) cap any permutation test over units at *p* = 0.167 or 0.5.
@@ -27,8 +29,10 @@ removal; §4 reports both); a paper with half the units and no *p*-value (Digita
 every removal. That contrast is the good news: the checks separate results that survive scrutiny from
 results that do not, and they clear more often than they flag. An unstated checkpoint-selection choice
 flips one published correlation from +0.90 to
-−0.31; the ranking metric reported alongside *r* is roughly three to fifteen times less stable than *r*
-itself; one published value of that metric is not attainable at the sample size its own paper states.
+−0.31; the ranking metric reported alongside *r* is roughly three to ten times less stable than *r*
+itself; one published value of that metric sits off the lattice of the only episode count its paper prints for it, a mismatch our extraction resolves as an appendix count stated for a different experiment;
+and one paper's printed baseline coefficient cannot be produced from its own plotted points (its
+figure legend appears to transpose two statistics).
 The same checks, applied to our own pipeline, caught two silently dropped preregistration
 requirements (§9).
 
@@ -56,7 +60,7 @@ This is not a criticism of any author: real-robot episodes are genuinely expensi
 published number carries less information than three decimal places imply. We quantify how much less.
 
 Two findings need stating before any method, because they require no extraction and no judgment
-call, only counting against each paper's own setup description. Five of the twenty-two surveyed
+call, only counting against each paper's own setup description. Six of the twenty-six surveyed
 papers compute their headline correlation over checkpoints or finetunes of a single policy: one
 independent unit. Three papers print *p* < 0.001 for correlations whose unit counts cap any
 permutation test over units at *p* = 0.167 or, at *k* = 2, 0.5. The printed values are parametric tests over pooled,
@@ -72,7 +76,7 @@ policies, weighted by how much the mistake matters):
 | RoboWorld *r* = 0.989, *p* < 0.001 | 0.798 after removing one of eight policies; the *p*-value does not warn (§4) |
 | real2sim-eval rope *r* = +0.90 | **−0.31** under an equally defensible checkpoint-selection rule, which the paper does not state (§5) |
 | real2sim-eval T-block MMRV = 0.108 | misses the lattice at the only printed checkpoint count (an appendix count stated for a different experiment); lands on it at the count our extraction recovers (§7.1) |
-| real2sim-eval Table I MMRVs | reproduce to print precision — but only under the reverse of the metric's defining argument order, identifiable solely by brute-forcing conventions against two figures at once (§7.2) |
+| real2sim-eval Table I MMRVs | reproduce to print precision — but only with the gap side of the metric's defining equation reversed, identifiable solely by brute-forcing conventions against two figures at once (§7.2) |
 | SimFoundry MMRV = 0.018 | our own first verdict against it, withdrawn: the granularity test passes arbitrary values 52.5% of the time there, and is inapplicable to a mean over per-task lattices (§7.1) |
 | MolmoSpaces pick ρ = 0.98 | appears nowhere in its figures, which print 1.00; our extraction confirms perfectly concordant ranks (§8.1) |
 | REALM V-VIEW *r* = 0.89, MMRV = 0.253 | the *r* reproduces from the panel's 14 plotted points to 0.0002; the MMRV cannot — likely computed over the 7 design-implied points the panel leaves undrawn, which no reader can recover (§7.2) |
@@ -109,8 +113,8 @@ It also identifies, independently and in stronger language than we do, the selec
 > the checkpoint that scores best on it is therefore selection on the test set."*
 
 They apply that critique to their own probe and make the practice visible. Our §5 shows the same choice
-flips the sign of a published correlation on one task, and that no surveyed paper states which rule it
-used.
+flips the sign of a published correlation on one task, and that few surveyed papers state which rule they
+used (20 of 26 do not).
 
 **The gap it leaves is the space this paper occupies.** That audit contains no mention of
 *correlation*, *real-to-sim*, *real2sim*, or *sim-to-real*. It asks whether a benchmark *score*
@@ -119,16 +123,24 @@ claim that the simulator can stand in for hardware at all. Two routes reaching t
 stronger evidence than either alone.
 
 **What neither line covers.** Both that audit and `rliable` analyze data the benchmarks publish. The
-papers we examine publish no machine-readable results at all (§3), so the prior question, *can this
-number be checked by anyone?*, has not been asked in this setting.
+papers we examine publish no result data files, with one partial exception embedded in source code
+(§3), so the prior question, *can this number be checked by anyone?*, has not been asked in this
+setting.
 
 **The statistics are a century old, and we claim no novelty in them.** Drop-one is a case-deletion
 influence diagnostic (Cook 1977; Belsley, Kuh & Welsch 1980). The interval is Fisher's small-sample
 *z* (Fisher 1915; 1921). The permutation floor is the discreteness of the randomization test (Fisher
-1935; Pitman 1937), and the bootstrap ceiling is elementary counting over resamples (Efron 1979).
+1935; Pitman 1937), and the bootstrap ceiling is elementary counting over resamples (the bootstrap: Efron 1979; the
+distinct-resample count: Hall 1992, Appendix I).
 Computing significance over pooled dependent points is pseudoreplication (Hurlbert 1984), which
 shrinks the effective sample by the design effect (Kish 1965); §13(b)'s attenuation logic goes back
-to Spearman (1904), with its modern small-sample complication in Loken and Gelman (2017). The
+to Spearman (1904), with its modern small-sample complication in Loken and Gelman (2017). The one
+check without a century-old ancestor is §7.1's granularity test, whose logic — a reported statistic
+must lie on the lattice its stated design permits, and the check's power is the rounding slack over
+the lattice spacing — is the GRIM test (Brown & Heathers 2016) transposed from means of integer data
+to a lattice-valued metric. That names the audit's genre too: psychology's error-detection tradition
+(statcheck's recomputation of published statistics, Nuijten et al. 2016), which to our knowledge has
+not previously been brought to sim-to-real correlations. The
 contribution is the audit: recovering the data these classical tools need from a literature that
 does not release it, and reporting what they show.
 
@@ -144,7 +156,7 @@ catches something the conventional reporting in this literature misses.
 |---|---|---|
 | **Leverage** | Is one unit carrying the correlation? | max drop-one \|Δ*r*\| > 0.10 |
 | **Fisher-z** | What can this many independent units support? | always — report the interval |
-| **Exact permutation** | Is a test at α = 0.05 even possible? | *k* ≤ 3, where min *p* = 1/*k*! > 0.05 |
+| **Exact permutation** | Is a permutation test over units at α = 0.05 even possible? | *k* ≤ 3, where min *p* = 1/*k*! > 0.05 |
 | **Bootstrap support** | Is a percentile CI meaningful? | C(2*k*−1, *k*) < 50 attainable values |
 | **Granularity** | Is your own reported value attainable at your stated design? | value is not a multiple of 1/(*N*·*n*) |
 
@@ -231,30 +243,67 @@ already has and none currently reports.
 
 ## 3. Recovering the data
 
-No paper we surveyed publishes machine-readable evaluation results. (Throughout, the **subject
+No paper we surveyed publishes evaluation results as data files. (Throughout, the **subject
 paper** is real2sim-eval, arXiv:2511.04665, the paper whose data we recover and re-analyze most
-deeply.) We checked paper text, project sites, and repositories: SimplerEnv (1,126★) and PolaRiS (221★, both as of 2026-07-20) ship simulation environments and code
-but no result files; REALM's paper promises *"full non-aggregated results… on the project
-website"*, which links a repository containing 59 YAML files (58 configuration, one CI workflow) and
-no results. Across every source tree there is not one CSV or
-JSON of results.
+deeply.) We checked paper text, project sites, and repositories: across every source tree there is
+not one CSV or JSON of results. One partial exception must be stated, because it is the exception
+that carries §7.2: SimplerEnv (1,126 stars as of 2026-07-20) embeds its per-task, per-policy success
+rates as Python dictionaries inside its metric module (`REAL_PERF` and `SIMPLER_PERF` in
+`simpler_env/utils/metrics.py`, with a comment inviting programmatic extraction) alongside reference
+implementations of its metrics — machine-readable in substance, though shipped as source code rather
+than as a data file, and an earlier draft of this section wrongly counted it as releasing no results
+at all. PolaRiS (221 stars) ships simulation environments and code but no result files; REALM's paper
+promises *"full non-aggregated results… on the project website"*, which links a repository
+containing 59 YAML files (58 configuration, one CI workflow) and no results.
 
 So we recover coordinates from the published figures. Many are vector artwork, so the plotted values
 are exact drawing commands rather than pixel estimates, and the arXiv e-print tarballs often contain
 original vector figures even where the compiled PDF rasterizes them.
 
-**Recoverability: 8 of 12 papers attempted.** The remainder failed for reasons no effort fixes: three
-have raster figures (verified in their e-print sources: two ship PNGs, one wraps a raster inside a PDF
-container), one has no scatter plot. Of the ten papers added to the survey after this pass (six found
-during earlier drafting, four via the completeness searches of §8.1), three (Cosmos-Surg-dVRK, DreamDojo,
-MolmoSpaces) ship vector scatter figures that we extracted and validated against their printed
-statistics (§4.2 reports their leverage results), bringing the recovered set to eleven of
-twenty-two. REALM, one of the original eight, was also re-extracted point-by-point across all four of
-its panels (`data/realm.csv`). EmbodiedSplat and Mem-World ship raster figures only. ⚠️ *Our first five attempts were hand-picked as likely to
+**Recoverability: 8 of the first 12 papers attempted** (the four unrecovered here were later
+re-attempted; see the correction below). Of the eighteen papers added to the survey after this pass (six found
+during earlier drafting, four via the completeness searches of §8.1, four via the logged Search 3),
+eleven were ultimately recovered — including three (Cosmos-Surg-dVRK, DreamDojo,
+MolmoSpaces) whose vector scatter figures we extracted and validated against their printed
+statistics (§4.2), three of the Search-3 four (VISER by table transcription, OSCAR from printed bar
+labels, Hi-WM by raster extraction validated against its printed *r*; WM-PolicyEval's points extract
+exactly but contradict its printed coefficient, §8.0), and five (WEAVER, WorldEval, Gemini/Veo,
+EmbodiedSplat, Colosseum V2) recovered only on a second, harder pass described in the next paragraph.
+REALM, one of the original eight, was also re-extracted point-by-point across all four of
+its panels (`data/survey-realm.csv`). The recovered set now stands at nineteen of twenty-six completely, plus PlayWorld as a partial recovery (17 of its 18 plotted points; §3).
+
+**A correction to our own recoverability verdicts.** An earlier draft of this section marked seven
+of these papers "not recoverable — raster figures." On a dedicated recovery pass we re-fetched every
+one's arXiv e-print source and retried with vector-drawing extraction, high-DPI pixel reads, and
+LaTeX-source and repository searches. Five of the seven verdicts were wrong: WEAVER's right panel is
+vector artwork we had mis-called raster (all three panels' ρ and *r* reproduce to ±0.002); WorldEval,
+Gemini/Veo, EmbodiedSplat, and Colosseum V2 yield their printed coefficients under harder recovery
+(Colosseum's per-condition numbers survive only in its LaTeX-source comments; the others by pixel
+read, each reproducing its published value). Two verdicts held, with sharper reasons than "raster":
+SC3-Eval's markers are recoverable in principle but roughly eighteen of forty-two are fully occluded
+behind overplotted points, and PolaRiS is only partially recoverable — its printed *r* = 0.9 is a
+mean of per-environment five-policy correlations, not the pooled scatter (which gives ≈ 0.68), and
+the per-point environment label needed to reconstruct the reported estimator is encoded in
+color-shades we could not separate under the overlap. That our own "not recoverable" label was wrong
+five times out of seven is the paper's thesis turned on its author: a verdict stated without the work
+to back it does not survive the work. The recoverability rate should be read with that correction in
+front of it. *Our first five figure-extraction attempts were hand-picked as likely to
 succeed and returned 4/5; the unselected remainder returned 3/6; the subject paper's own figure,
 extracted before either pass, is the twelfth attempt and eighth success. We report the pooled 67%
-(8/12), not the selected 80%.* Pooled over all seventeen attempts to date (the original twelve plus
-five papers attempted as the survey grew), recoverability is 11/17 (65%).
+(8/12), not the selected 80%.* Nineteen of the twenty-six surveyed papers are now recovered: sixteen
+by extracting a figure (vector or pixel), and three (VISER, OSCAR, Colosseum V2) by transcribing a
+table, printed bar labels, or numbers left in the LaTeX source; each of the nineteen reproduces the
+statistic its own paper printed. The remaining seven fall short in three ways. Two are caveated
+near-recoveries whose data extracts but whose printed statistic does not follow from it:
+WM-PolicyEval's points extract exactly but fail to reproduce its printed coefficient (a recovery of
+the data, not a validation of the paper), and PolaRiS's point cloud recovers but its per-environment
+estimator does not. PlayWorld is a partial recovery: 17 of its 18 plotted policies digitize
+cleanly and reproduce its printed correlation (recovered *r* = 0.875 on 17 points versus the
+paper's printed 0.877 over 18; `data/survey-playworld-partial.csv`, with the marker-by-marker
+extraction shown in `figures/playworld-extraction-overlay.png`), with one point too heavily
+overplotted to resolve. The four not recovered at all break down as: SC3-Eval too heavily occluded,
+Mem-World and dWorldEval recoverable only in part, and A Practical Recipe ships ranks but not
+absolute rates (its Spearman reproduces exactly, its Pearson cannot).
 
 **Validation.** Every dataset used here reproduces a statistic its authors published (in seven cases
 an *r* printed inside the figure itself) to ≤0.0006 (Digital Cousins' figure prints the rounded 0.91; our
@@ -303,6 +352,11 @@ answer. Removing one independent unit at a time from RoboWorld, one of the surve
 | 10a GPT-4o success rate | 0.901 | [0.836, 0.975] | 0.139 | **0.075** | **Pi0.5** — *not* the isolated point |
 | 10b Gemini success rate | 0.876 | [0.708, 0.971] | 0.263 | **0.169** | PaliGemma Binning |
 
+Panel numbers (9a/9b/10a/10b) follow the arXiv **v3** e-print our data were extracted from, where
+these are appendix figures; RoboWorld's **v4** promotes the GPT-4o *score* panel (*r* = 0.989,
+*p* < 0.001) to main-text Figure 5a, with the success-rate panel (*r* = 0.901, *p* = 0.002) alongside.
+The figures and their coefficients are byte-identical across v1–v4 (full-text diff); only the numbering moved.
+
 The range width and the max |Δ*r*| are two different statistics, and an earlier draft of this table
 conflated them. The *range width* is the gap between two different removals; the max |Δ*r*| is how far
 a single removal moves the published value, and it is the quantity §2.1 reports and the tool computes.
@@ -319,9 +373,9 @@ same holds on 9b (0.165 vs 0.025). That policy sits at *x* = 797 against a clust
 (diamond, hat value 0.978 of a maximum 1.0) moves *r* from 0.989 to 0.798; the other seven removals
 move it by at most 0.005. Nothing conventionally reported, neither *p* < 0.001 nor the Fisher-z
 interval, distinguishes the solid fit from the dashed one. Regenerated by `figures/make_figures.py`
-from `data/roboworld.csv`.
+from `data/survey-roboworld.csv`.
 
-⚠️ **It does not hold on the other two panels, and the exception is instructive.** On 10a the most
+**It does not hold on the other two panels, and the exception is instructive.** On 10a the most
 influential policy is Pi0.5 (0.075), not the isolated point (0.065), so the geometric story in §4.1
 is a tendency, not a law. On 10b Binning leads but only by 1.8×. We report all four rather than the two
 that make the cleanest case.
@@ -346,7 +400,10 @@ estimate is leverage-dominated, and its ranking claim, the claim a simulator is 
 (§7), is not.
 
 It also sharpens what the leverage check is for. It fires on Pearson, an interval-scale statistic,
-computed here over a leaderboard score whose interval scale is not obviously meaningful. **A leverage
+computed here over a leaderboard score whose interval scale is not obviously meaningful — the *x*-axis
+is an integer RoboArena leaderboard score and the *y*-axis is RoboWorld's own predicted score, two
+different scoring procedures, so a linear calibration of the raw scores was never the evaluator's
+target (which is one reason RoboWorld reports Spearman alongside Pearson). **A leverage
 warning is a prompt to check the rank correlation, not a verdict.**
 
 **A reported *p*-value does not surface this:** *p* < 0.001 certifies the correlation is non-zero,
@@ -372,13 +429,16 @@ RoboWorld has an isolated point at the end of a flat range; Digital Cousins span
 So the diagnostic is not *"is k small?"* but **"is the correlation carried by an isolated point?"**
 That is a question any author can answer in one line, and none of the surveyed papers asks it.
 
-### 4.2 The check across the twenty-two released datasets
+### 4.2 The check across the twenty-eight released datasets
 
-Two examples is an anecdote. Here is every unit-labeled dataset in our released CSVs (Digital Cousins
-under both defensible unit choices; the last six extracted from papers added later to the survey),
+Two examples is an anecdote. Below is a broad cross-section of the released datasets (Digital Cousins
+under both defensible unit choices; the later rows extracted from papers added to the survey by the
+documented completeness searches, the last six by the logged Search 3 on submission eve),
 with the drop-one leverage and the same statistic on Spearman (since §4 shows Pearson leverage need
 not affect ranking). Drop-one is over independent units where they exist; rows marked *pts* have no
-independent units (or too few) and drop single points instead:
+independent units (or too few) and drop single points instead. Five further datasets recovered on the
+audit-the-auditor pass (WEAVER, WorldEval, Gemini/Veo, EmbodiedSplat, Colosseum V2) ship as CSVs but
+are not tabulated here; the check runs on them from `correlation_audit.py --csv` like any other:
 
 | dataset | *k* | *r* | max \|Δ*r*\| | fires? | max \|Δρ\| |
 |---|---|---|---|---|---|
@@ -404,10 +464,16 @@ independent units (or too few) and drop single points instead:
 | subject paper toy, 200 episodes | 4 | 0.8970 | 0.011 | no | 0.095 |
 | subject paper rope, 200 episodes | 4 | 0.9181 | 0.043 | no | 0.088 |
 | subject paper T-block, 200 episodes | 4 | 0.9501 | 0.037 | no | 0.071 |
+| VISER Octo | 4 pts | 0.9988 | 0.000 | no | 0.028 |
+| **VISER OpenVLA** | 5 pts | 0.8496 | **0.135** | **yes** | 0.300 |
+| OSCAR | 7 pts | 0.8552 | 0.086 | no | 0.132 |
+| Hi-WM | 12 pts | 0.9540 | 0.014 | no | 0.019 |
+| **WM-PolicyEval Cosmos** | 12 pts | 0.7193 | **0.260** | **yes** | 0.130 |
+| **WM-PolicyEval IRASim** | 12 pts | 0.2772 | **0.176** | **yes** | 0.237 |
 
-Median max \|Δ*r*\| = 0.045; range 0.006–0.617.
+Median max \|Δ*r*\| = 0.061; range 0.000–0.617.
 
-**The check fires on 7 of 22, across four papers and four different evaluator designs.** An earlier
+**The check fires on 10 of 28, across six papers and five different evaluator designs.** An earlier
 draft could report firings only within RoboWorld, and a reader raised the strongest objection to the
 check in that form: it might be separating "this design contains an isolated point" from "it does
 not," rather than fragile from robust, since all three firings shared one geometry. The extension
@@ -417,17 +483,23 @@ answers this. Cosmos-Surg-dVRK's manual panel fires with no isolated point at al
 Pearson, 0.900 on Spearman), an appendix panel that inherits the same checks. And two of REALM's
 four panels fire on a third mechanism: GR00T N1.5's drawer-task scores sit at or near zero on both
 axes, so that one policy anchors each correlation:
-dropping it moves *r* by up to 0.168 in panels that print *p* < 0.001. The subject paper's 200-episode
-rerun, at the bottom of the table, passes everywhere at both episode scales (§13(b)).
+dropping it moves *r* by up to 0.168 in panels that print *p* < 0.001. The six Search-3 rows
+(§8.1, Scope) arrived after the check was frozen and behave like the rest of the table: three pass,
+VISER's OpenVLA panel fires on a five-point design, and both WM-PolicyEval panels fire — the IRASim
+panel being the one whose printed coefficient our extraction could not reproduce in the first place
+(§8.0). The subject paper's 200-episode rerun passes everywhere at both episode scales (§13(b)).
 
 **Calibration against a healthy null.** A firing alone does not establish an aberrant unit, because
 at small *k* even healthy data moves. We simulated designs with no aberrant unit at all, matched to
 each firing panel's printed *r*, unit count, and points per unit (`leverage_null.py`, seed-fixed,
 released). RoboWorld's 0.191 swing at *k* = 8 sits at the 99.8th percentile of its healthy null
-(*P* = 0.002): a genuine anomaly, not smallness. The extension firings read differently:
-Cosmos-Surg-dVRK's 0.124 at *k* = 3 (*P* = 0.69), REALM's swings at *k* = 3 (*P* ≈ 0.54–0.57), and
-MolmoSpaces' 0.617 at *k* = 4 (*P* = 0.28) all sit inside the range that healthy designs of their
-size produce. The mechanisms named above are real as descriptions of where each swing comes from;
+(*P* = 0.002): an anomalous *design*, not smallness — and the conditional null below locates the
+anomaly precisely. The extension firings read differently:
+Cosmos-Surg-dVRK's 0.124 at *k* = 3 (*P* = 0.69), REALM's swings at *k* = 3 (*P* ≈ 0.54–0.57),
+MolmoSpaces' 0.617 at *k* = 4 (*P* = 0.28), VISER's 0.135 at five points (*P* = 0.59), and
+WM-PolicyEval's IRASim swing (*P* = 0.63) all sit inside the range that healthy designs of their
+size produce; WM-PolicyEval's Cosmos panel (0.260 at twelve points, *P* = 0.08) is the only
+extension firing that approaches genuine surprise, at the table's second-largest point count. The mechanisms named above are real as descriptions of where each swing comes from;
 their statistical surprise is low. Read one way this tempers the extension. Read the other it is the
 paper's thesis again: at three units, stability cannot be demonstrated even when present, and the
 0.10 flag partly measures *k* itself — with a true correlation of 0.9 and one point per unit,
@@ -435,22 +507,51 @@ healthy designs exceed it 52% of the time at *k* = 4, 29% at *k* = 8, and 4% at 
 drop-one range remains the report; the percentile against a matched null, now computable for any
 design, is its calibrated reading.
 
+**A conditional reading of the RoboWorld percentile.** The null above resamples the x-design
+itself, so 9a's *P* = 0.002 could reflect the rarity of its isolated x-point (hat value 0.978)
+rather than aberrant y-behavior — and a fixed-x conditional null (`leverage_null.py --fixed-x`:
+observed x held fixed, y resampled as ŷ + ε from the OLS fit, ε parametric or a permutation of the
+observed residuals; 200,000 seed-fixed replicates) confirms it does: given this x-layout, healthy
+data exceed the 0.191 swing in 56% (parametric) to 63% (permutation) of replicates, with a
+conditional median of 0.215. The other nine firings likewise sit inside their conditional nulls
+(*P* ≈ 0.09–0.62 across both variants). The two nulls decompose each firing: the unconditional
+percentile measures how unusual the *design* is; the conditional one, whether any unit's y-value is
+aberrant *given* that design. For RoboWorld the entire surprise lives in the design — consistent
+with this section's conclusion that the durable fact is the hat value, not a defect in any measured
+y, and a sharper statement of it than the unconditional percentile alone. The classical
+range-restriction relation makes the same point analytically: removing the Binning policy shrinks
+the x-standard-deviation to 0.17 of its full-set value, and Thorndike's Case-2 correction then
+predicts the Pearson estimate should fall from 0.989 to ≈0.75 — close to the 0.798 actually
+observed. The collapse is the expected consequence of narrowing the x-range, not evidence of an
+anomalous y; the rank correlation, which does not depend on that spread, is nearly unchanged (ρ
+0.970 → 0.955).
+
 Three things follow.
 
 1. **A dominant unit *is* the failure mode.** RoboWorld's isolated point at the leverage ceiling
-   (hat value 0.978 of a maximum 1.0; null percentile 99.8) is the clean case: one line identifies a
+   (hat value 0.978 of a maximum 1.0; unconditional null percentile 99.8, conditionally unremarkable
+   given that design) is the clean case: one line identifies a
    place where published decimals mislead. The run-level and zero-anchor firings (Cosmos, REALM)
    show the same arithmetic catching a different design property, with the calibration above saying
    how much of each swing is the design and how much is *k*.
-2. **It is cheap and it clears most datasets.** Fifteen of twenty-two pass. A diagnostic that fires
-   on a third and points at a real design property is a filter, not an alarm. The 0.10 threshold is not tuned: any cutoff between 0.09 and 0.12 selects
-   the same seven firings. And 0.10 is roughly the smallest correlation difference the surveyed papers
+2. **It is cheap and it clears most datasets.** Eighteen of twenty-eight pass. A diagnostic that fires
+   on roughly a third and points at a real design property is a filter, not an alarm. The 0.10 threshold is not tuned: any cutoff between 0.09 and 0.12 selects
+   the same ten firings. And 0.10 is roughly the smallest correlation difference the surveyed papers
    themselves interpret: the subject paper's fidelity ablations move *r* by 0.14–0.39, and A Practical
    Recipe reports a 0.875 → 0.970 sensitivity gain as an improvement.
 3. **The rank column shows it is not redundant with ranking stability.** RoboWorld 9a has among the
    largest Pearson leverages in the set (0.191) and the *smallest* rank leverage (0.021); MolmoSpaces
    open moves both; REALM VB-POSE is the converse: Pearson passes (0.080) while Spearman moves 0.187.
    The two answer different questions, and reporting only one hides the other.
+
+**One limitation of drop-one, stated because the classical literature names it: masking.** Two
+co-influential units — say, two points sharing RoboWorld's isolated x-neighborhood — would each show
+a small drop-one |Δ*r*| while jointly carrying the correlation (Belsley, Kuh & Welsch 1980 treat the
+multi-point case). Drop-one is therefore a lower bound on subset sensitivity, and "no single unit
+dominates" does not imply "no small subset dominates." At these *k* the exhaustive pair-deletion
+sweep is as free as drop-one (C(*k*, 2) ≤ 28 recomputations for every design here) and is the
+natural extension for a reader who suspects a pair; we report drop-one because it is the claim the
+parenthetical makes and the convention the influence literature starts from.
 
 We do not claim the check generalizes beyond identifying the design property it measures; the
 extension shows that property is not confined to one paper or one geometry.
@@ -506,9 +607,9 @@ recovery; it is arithmetic on a count the papers state.
 
 | *k* | papers | ceiling | mass of one draw |
 |---|---|---|---|
-| 1 | RoboSnap, SC3-Eval, DreamDojo, dWorldEval | 1 | 100% |
-| 2 | WEAVER, EmbodiedSplat, Mem-World | 3 | 25% |
-| 3 | REALM, WorldGym, Cosmos-Surg-dVRK | 10 | 3.70% |
+| 1 | RoboSnap, SC3-Eval, DreamDojo, dWorldEval, Colosseum V2, VISER | 1 | 100% |
+| 2 | WEAVER, EmbodiedSplat, Mem-World, OSCAR, Hi-WM | 3 | 25% |
+| 3 | REALM, WorldGym, Cosmos-Surg-dVRK, WM-PolicyEval | 10 | 3.70% |
 | 4 | real2sim-eval, PolaRiS, SIMPLER, Digital Cousins, WorldEval, MolmoSpaces | 35 | 0.39% |
 | 5 | A Practical Recipe, SimFoundry† | 126 | 0.032% |
 | 8 | RoboWorld, Gemini/Veo | 6,435 | 0.000006% |
@@ -517,11 +618,11 @@ recovery; it is arithmetic on a count the papers state.
 † SimFoundry's headline is a mean of seven per-task correlations at k = 3 (finetuned tasks) or k = 5
 (zero-shot); we code it at 5, the conservative direction.
 
-⚠️ **The ceiling is attained only for data in general position**: with singleton units it falls to 15
+**The ceiling is attained only for data in general position**: with singleton units it falls to 15
 at *k*=4, because a resample like {a,a,b,b} has two distinct locations and *r* on two points is ±1
 regardless of values. We report ceilings, which is the conservative direction.
 
-⚠️ **This is a small-sample result and it dies at large *k*.** Strong for the eleven papers at *k* ≤ 5;
+**This is a small-sample result and it dies at large *k*.** Strong for the twenty-three papers at *k* ≤ 5;
 no result at all for RoboWorld at *k* = 8.
 
 ### 6.1 What still works at k = 4, and what to use instead
@@ -536,6 +637,10 @@ Bayesian posterior all remain valid. Verified at *k* = 4 on our data:
 | BCa | **unstable** — acceleration from 4 jackknife values, z₀ from a 35-atom distribution |
 | Fisher-z | **works** — toy [+0.431, +1.000], rope [−0.800, +0.993] |
 | Exact permutation | **works** — 4! = 24 labelings, minimum *p* = 0.0417 |
+| Bayesian posterior | **works** — uniform prior on ρ, exact small-sample *r* density (Fisher 1915): toy [−0.163, +0.989], rope [−0.538, +0.901] (`bayes_interval.py`, released) |
+
+The Bayesian intervals are as wide as Fisher-z's, which is the point: every valid method agrees on
+what *k* = 4 supports.
 
 **The recommendation is specific: at *k* ≤ 5, report Fisher-z and an exact permutation *p*, and do
 not report a bootstrap CI.** Fisher-z will often span most of [−1, 1]; that is the correct output,
@@ -551,7 +656,7 @@ resamples do, so a publishable-looking interval rests on two to four resamples.)
 **Figure 2.** The entire cluster-bootstrap distribution on Digital Cousins (*k* = 4 architectures):
 35 attainable values. Four of 256 resamples fall below the 2.5% cutoff, so a percentile interval's
 lower endpoint rests on four draws. The dashed curve is the smooth density such an interval presumes.
-Regenerated by `figures/make_figures.py` from `data/digital-cousins.csv`.
+Regenerated by `figures/make_figures.py` from `data/survey-digital-cousins.csv`.
 
 *A note on how we compute Fisher-z when points outnumber units. Where each unit contributes one point
 (RoboWorld, k = 8), the interval is the standard Fisher-z CI. Where it does not, there are two options
@@ -560,16 +665,25 @@ takes df from k = 4 units, a reference bound on what k units could support rathe
 CI, since no sampling scheme yields exactly that distribution. The intervals above are instead computed
 after aggregating checkpoints to their per-run means (unit-level r: toy 0.984, rope 0.697; these differ
 from the pooled all-checkpoint values in §4.2). Aggregation
-is the cleaner convention; the pooled-center variant is the more cautious one on these data, and either
-must be stated, which no surveyed paper does.*
+is the cleaner convention (and the classical prescription for correlation with repeated observations
+per subject: Bland & Altman 1995); the pooled-center variant is the more cautious one on these data,
+and either must be stated, which no surveyed paper does.*
 
 *How uncalibrated is it? Measured (`fz_coverage.py`, released; 4 clusters × 4 points, cluster effects
 on both axes, 10,000 replicates per condition): the pooled-center bound covered the unit-level
 correlation in 97–100% of replicates across ρ ∈ {0, 0.5, 0.9, 0.95} — conservative rather than
-calibrated, median width 0.95–1.9 on the [−1, 1] scale. The naive pooled Fisher-z with n = 16
+calibrated, median width 0.95–1.9 on the [−1, 1] scale. The aggregated interval this section (and
+§12's box) recommends — Fisher-z over the four unit means — is the best-behaved of the three:
+96.0–97.1% coverage across the same grid, close to calibrated; the script has always computed this
+number and an earlier draft failed to print it. The naive pooled Fisher-z with n = 16
 (df = 13) covered it in only 59–80%, dropping to 4–20% when within-cluster noise carried no signal:
-the false precision pooling non-independent points produces. The bound's one failure mode is leverage
-(displacing one cluster by 3 sd cut its coverage to 87.5% in the worst condition): exactly the regime
+the false precision pooling non-independent points produces. And because the surveyed data are
+binomial success rates, not Gaussians, a binomial condition (rates observed as
+Bin(20, logistic(latent))/20, matching the surveyed papers' 16–40 episodes per point) is included:
+it changes nothing for the aggregated interval (95.9–97.3%) and worsens the naive one (21–30% at
+ρ ≥ 0.9 with tight within-cluster noise). The bound's one failure mode is leverage
+(displacing one cluster by 3 sd cut its coverage to 87.5% in the worst condition, and the aggregated
+interval's to 83%): exactly the regime
 where §4's leverage check fires, and why the parenthetical pairs them.*
 
 ---
@@ -582,34 +696,37 @@ has not been examined.
 
 Drop-one swing as a percentage of each metric's own value:
 
-*Swing = (max − min of drop-one values) / the full-panel value, identically for both metrics; violation pairs are strict sign disagreements, magnitudes are real-side, and RoboWorld's rescale is fixed from the full panel.*
+*Swing = (max − min of drop-one values) / the full-panel value, identically for both metrics; violation pairs follow SIMPLER's released definition (strict >-XOR, one-sided ties included), magnitudes are real-side, and RoboWorld's rescale is fixed from the full panel.*
 
 | dataset | *k* | MMRV | abs swing | *r* swing | MMRV swing | ratio |
 |---|---|---|---|---|---|---|
-| **Digital Cousins, by policy** | 4 | 0.105 | 0.029 | **1.9%** | **27.7%** | **14.6×** |
-| Digital Cousins, by generalization level | 4 | 0.105 | 0.097 | 8.1% | 92.4% | 11.4× |
+| **Digital Cousins, by policy** | 4 | 0.111 | 0.021 | **1.9%** | **18.7%** | **9.8×** |
+| Digital Cousins, by generalization level | 4 | 0.111 | 0.089 | 8.1% | 79.8% | 9.9× |
 | RoboWorld 10a* | 8 | 0.0058 | 0.0035 | 15.4% | 60.2% | 3.9× |
-| RoboWorld 10b* | 8 | 0.055 | 0.046 | 30.0% | 83.4% | 2.8× |
+| RoboWorld 10b* | 8 | 0.055 | 0.044 | 30.0% | 80.6% | 2.7× |
 
 \* RoboWorld's *x*-axis is a leaderboard score, so MMRV's |Rᵢ−Rⱼ| is min-max rescaled, an analogue rather than
 their metric. We print the absolute swings beside the percentages because MMRV values near zero make
 percentage swings large by construction; RoboWorld 10a's 60.2% is 0.0035 in the metric's own units.
-One convention footnote: this table excludes tied pairs from violations (sign product < 0) and uses
-real-side gaps, SIMPLER's definition; under a tie-inclusive reading Digital Cousins' full-panel MMRV
-would be 0.110–0.112 (depending on how ties are read) rather than 0.105, and §7.2 shows the subject
-paper uses simulated-side gaps entirely.
+One convention footnote: this table uses SIMPLER's definition as published and released — its Eq. 1
+and its `metrics.py` implementation agree: a violation whenever the strict >-orderings disagree,
+one-sided ties included, weighted by the real-side gap. An earlier draft mislabeled a tie-*exclusive*
+variant (sign product < 0) as SIMPLER's definition; under that variant Digital Cousins' full panel
+prints 0.105 rather than 0.111 and its swings are modestly larger (27.7% and 92.4%). §7.2 shows the
+subject paper uses simulated-side gaps entirely.
 Recomputing this table under the subject paper's convention changes the Digital Cousins swings to
 42.8% and 52.2%: different values, same conclusion (still 22× and 6× the *r* swings). No convention
-choice affects any swing conclusion, but the conventions are not interchangeable and no paper states
-which it uses.
+choice affects any swing conclusion, but the conventions are not interchangeable and no adopting
+paper states which it uses (SIMPLER itself states one in Eq. 1 and releases a reference
+implementation; §7.2).
 
 **The sharpest case is Digital Cousins, precisely because the leverage check clears it (§4.1).** Its
-correlation is stable while its MMRV moves 28% under the same perturbation. The two metrics come
+correlation is stable while its MMRV moves 19% under the same perturbation. The two metrics come
 apart; a reader checking only *r* would call the result robust.
 
 **Mechanism.** MMRV is a mean with many exactly-zero terms: an item contributes only if some pair
-involving it has a rank violation. Measured, 25–75% of items contribute exactly zero, depending on the
-dataset. Instability is items switching between 0 and a large real-side gap: discontinuous, not drift.
+involving it has a rank violation. Measured, 25–50% of items contribute exactly zero under SIMPLER's
+convention, depending on the dataset. Instability is items switching between 0 and a large real-side gap: discontinuous, not drift.
 
 We initially argued that a max over pairs lets one point dominate. That is wrong. The max is over
 |Rᵢ−Rⱼ|, a real-side quantity anchored by real-side extrema, which is stabilizing; zero-inflation is
@@ -618,7 +735,8 @@ what the data supports.
 ### 7.1 A granularity check — and the one verdict it supports
 
 A published MMRV can be checked with no data at all: it can only take multiples of 1/(*N* · *n*_ep),
-so it must land on that lattice within 3-decimal rounding slack. An earlier draft claimed this test is "discriminating in every case
+so it must land on that lattice within 3-decimal rounding slack (the logic of the GRIM test, Brown &
+Heathers 2016, transposed to a lattice-valued metric; §1.1). An earlier draft claimed this test is "discriminating in every case
 examined." That was wrong, and a reader caught it: the test's power depends entirely on the lattice
 spacing, and we had not computed its false-pass rate.
 
@@ -662,9 +780,10 @@ We could not at first reproduce the subject paper's Table I MMRVs from points th
 to four decimals, and an earlier draft attributed the residual to simulator re-run noise. That
 explanation was wrong, and finding the right one is the finding. The values reproduce **to print
 precision on all three tasks** — but only under a specific undocumented convention: a rank violation
-whenever the ≤-orderings disagree, weighted by the ***simulated*-side** gap, the reverse of SIMPLER's
-defining equation. The same convention reproduces the paper's 200-episode appendix figure exactly, as
-rational lattice points 21/200, 307/2000, 209/3000 (our `data/real2sim-eval-fig9-200ep.csv`, *r* validated
+whenever the ≤-orderings disagree, weighted by the ***simulated*-side** gap. The violation predicate
+is SIMPLER's own; the gap side is the sole difference from SIMPLER's defining equation, a
+minimal-pair divergence in a single argument. The same convention reproduces the paper's 200-episode appendix figure exactly, as
+rational lattice points 21/200, 307/2000, 209/3000 (our `data/survey-real2sim-eval-fig9-200ep.csv`, *r* validated
 to ≤0.00014). The subject paper's metric is internally consistent and fully recoverable.
 
 The catch is what recovery required. The released repository contains rollout and success-scoring code
@@ -674,17 +793,21 @@ released as `mmrv_conventions.py`: 60 variants (five violation readings × four 
 normalizations), of which exactly one matches Table I on all three tasks, and the same one matches
 the appendix figure as exact fractions. Our own first three attempts, each checking a plausible pair
 of conventions, wrongly concluded the values were unreproducible. **The field's ranking metric is
-being computed under at least two argument orders (SIMPLER's definition weights the real-side gap;
-its most transparent adopter weights the simulated side), and no paper states which, or releases the
-code that would settle it.**
+being computed under at least two argument orders: SIMPLER's defining equation and its released
+reference implementation (`mean_maximum_rank_violation` in `simpler_env/utils/metrics.py`), which
+agree with each other, weight the real-side gap, while the metric's most transparent adopter weights
+the simulated side — and no *adopting* paper states which convention it uses or releases the code
+that would settle it.** The reference implementation settles SIMPLER's own convention; what it cannot
+settle is its adopters', and an earlier draft of this section overlooked it entirely.
 
 One panel resists even brute force, most likely because part of its data is not drawn. REALM's
 V-VIEW panel prints *r* = 0.89 and MMRV = 0.253; our extraction reproduces the *r* from the panel's
 plotted points to 0.0002. But the panel plots only 14 of the 21 points its 7-task × 3-policy design
 implies (the close-drawer task is undrawn for every policy), and no MMRV computable from those 14
 points reaches 0.253 under any of the 60 variants in `mmrv_conventions.py`, confirmed across two
-independent attempts (SIMPLER's own convention gives 0.117; the closest variant of all, an
-inclusive-tie reading, prints 0.244). The simplest explanation is benign: the statistics were computed over all 21 points
+independent attempts (SIMPLER's own convention gives 0.117, a value on which the tie-exclusive
+variant coincides for these 14 points; the closest variant of all, an any-tie reading with
+maximum-gap weighting, prints 0.244). The simplest explanation is benign: the statistics were computed over all 21 points
 while the panel omits the close-drawer points (a task the paper elsewhere notes sits at or near zero
 success), so the printed MMRV depends on seven values no reader can recover from the figure. That
 hypothesis is untestable from the outside, which is itself the finding, and it is the question we
@@ -699,31 +822,30 @@ eliminated, and the convention search that resolved it.
 ## 8. Running the checks on the whole survey
 
 Two of §2's five checks need only *k*, the number of independent units, which is recoverable from
-every paper's own setup description. So they can be run on all 22 surveyed papers without recovering any
+every paper's own setup description. So they can be run on all 26 surveyed papers without recovering any
 data:
 
 | result | papers |
 |---|---|
-| **Cannot reach *p* = 0.05 by any permutation test** | **6 / 22** — REALM, WorldGym, Cosmos-Surg-dVRK (*k*=3, min *p* = 0.167), WEAVER, EmbodiedSplat, Mem-World (*k*=2, 0.500) |
-| *(check is category-inapplicable)* | 5 / 22 — RoboSnap, SC3-Eval, DreamDojo, dWorldEval, Colosseum V2 correlate checkpoints, per-task finetunes, or perturbation conditions of a **single** policy or lineage, so there are no units to permute |
-| **Cannot support a percentile bootstrap CI** | **17 / 22** — at *k* ≤ 4 the resampling distribution has ≤ 35 attainable values |
-| **Fisher-z has df ≤ 2** | **19 / 22** |
-| Clears all three comfortably | **3 / 22** — RoboWorld and Gemini/Veo (*k* = 8), PlayWorld (*k* = 18) |
+| **Cannot reach *p* = 0.05 by any permutation test** | **9 / 26** — REALM, WorldGym, Cosmos-Surg-dVRK, WM-PolicyEval (*k*=3, min *p* = 0.167), WEAVER, EmbodiedSplat, Mem-World, OSCAR, Hi-WM (*k*=2, 0.500) |
+| *(check is category-inapplicable)* | 6 / 26 — RoboSnap, SC3-Eval, DreamDojo, dWorldEval, Colosseum V2, VISER correlate checkpoints, per-task finetunes, or test conditions of a **single** policy or lineage, so there are no units to permute |
+| **Too coarse for a percentile bootstrap CI** | **21 / 26** — at *k* ≤ 4 the resampling distribution has ≤ 35 attainable values |
+| **Fisher-z has df ≤ 2** | **23 / 26** |
+| Clears all three comfortably | **3 / 26** — RoboWorld (*k* = 8), Gemini/Veo (*k* = 8†, unit independence unstated; §8.1's flag travels with this verdict — under the stricter reading it drops out), PlayWorld (*k* = 18) |
 
-**Six papers report a correlation for which no permutation test over units could reach *p* = 0.05**,
-because the minimum attainable value, 1/*k*!, exceeds it at their sample size. That permutation
-floor, the best *p*-value you could ever get by shuffling the units, is one-sided; two-sided it is
-at least as large, so the verdict is conservative as stated.
+The permutation floor — the best *p*-value shuffling the units could ever produce, 1/*k*! — is
+one-sided; two-sided it is at least as large, so the six-paper verdict in the table is conservative
+as stated.
 
 Earlier drafts said five, then three, then four; verifying every coding against its source and then
 running the documented completeness search (§8.1) settled it at six. Cosmos-Surg-dVRK joined on
 re-coding: its six scatter points are two checkpoint stages of three training runs, so *k* = 3 under
-§8.1's Rule 1. EmbodiedSplat and Mem-World, both at *k* = 2, entered with the search. Five papers (table above) are
+§8.1's Rule 1. EmbodiedSplat and Mem-World, both at *k* = 2, entered with the search. Six papers (table above) are
 category-inapplicable rather than failed; faulting a paper for failing a test it could not have run,
 and did not claim to run, is a technicality;
 the single-lineage designs are the sharper finding in their own right.
 
-The framing matters here too. Three of the six (REALM, Cosmos-Surg-dVRK, and Mem-World) do print
+The framing matters here too. Three of the nine (REALM, Cosmos-Surg-dVRK, and Mem-World) do print
 *p* < 0.001, obtained from parametric tests over pooled points; no permutation over their own
 independent units could attain a value below 0.167, and for Mem-World, at *k* = 2, below 0.5. (A
 stricter reading of REALM's units, since π0 and π0-FAST share a lineage, gives *k* = 2, which raises
@@ -731,15 +853,22 @@ its floor to 0.5.) The
 finding is not that anyone failed a test. It is that the field routinely computes correlations over
 one to four independent units.
 
+The same distinction, drawn once for the whole section: a paper that prints a *p*-value makes an
+inferential claim, and the floor is a criticism of that claim; a paper that prints only *r* makes a
+descriptive claim about the policies it evaluated, and for it the ceiling is a fact about what its
+design could support, reported because readers routinely treat the printed *r* as if it carried
+inferential weight. Only the three *p*-printing papers below their floor are in the first category;
+the other six of the nine (WorldGym, WEAVER, EmbodiedSplat, OSCAR, Hi-WM, WM-PolicyEval) are in the second.
+
 ![Figure 3](figures/fig3_survey_k_dotplot.png)
 
-**Figure 3.** Independent training units behind the headline correlation, all 22 surveyed papers
+**Figure 3.** Independent training units behind the headline correlation, all 26 surveyed papers
 († = coding flagged in §8.1). Left of the dashed line no permutation test over units can reach
 *p* = 0.05; three of the four papers that print *p* < 0.001 sit there (the fourth, RoboWorld, is at
 *k* = 8). Gray squares are single-lineage designs with no units to permute. Regenerated by `figures/make_figures.py` from `survey_table.py`.
 
 **These limits are not consequences of the data being unavailable.** It would be natural to read this
-section as downstream of §3's finding that no surveyed paper publishes machine-readable results. It is
+section as downstream of §3's finding that no surveyed paper publishes its results as data files. It is
 not: 1/*k*! and C(2*k*−1, *k*) are combinatorial facts about *k*, which follows from every paper's own
 setup description. Publishing the underlying data would not add a 36th attainable value at *k* = 4,
 and would not let *k* = 3 reach *p* = 0.05.
@@ -751,8 +880,8 @@ The distinction matters for reading the rest of this paper:
 | We cannot reproduce one published MMRV (§7.2) | yes |
 | We cannot check the ablation arms (§11) | yes |
 | Our own extraction carries residual ambiguity (§3.1) | yes |
-| **6/22 cannot reach *p* = 0.05** | **no — this needs more policies** |
-| **17/22 cannot support a bootstrap CI** | **no** |
+| **9/26 cannot reach *p* = 0.05** | **no — this needs more policies** |
+| **21/26 too coarse for a bootstrap CI** | **no** |
 
 The first three are limits on *our* verification. The last two are limits on what the *original*
 analyses can conclude.
@@ -761,8 +890,10 @@ analyses can conclude.
 
 **A prevalence claim is only checkable if the papers are named.** Every cell below was re-verified
 against its paper's full text on 2026-07-20 (Colosseum V2, added by the 2026-07-21 rerun, on
-2026-07-21); `survey_table.py` (released) regenerates every count in this section from this table, so
-no number in §8 is hand-copied. The counts carry no confidence intervals by design: the survey is a
+2026-07-21; the four rows added by the logged Search 3 — VISER, OSCAR, Hi-WM, WM-PolicyEval — were
+each deep-audited the same day: full pinned PDF read, data recovered where possible, printed
+correlations recomputed); `survey_table.py` (released) regenerates the base counts in this section from this table, so
+no base count in §8 is hand-copied (the permissive-coding sensitivity figures below — the 21→11 and 3→12 — are a hand recoding, flagged as such, not script output). The counts carry no confidence intervals by design: the survey is a
 census of a defined set, not a sample from a population, so the uncertainties that matter are
 coverage and coding, and both are reported (the completeness caveats and the sensitivity analysis,
 §8.1).
@@ -777,25 +908,47 @@ coverage and coding, and both are reported (the completeness caveats and the sen
 | WorldGym | 3† | 3 policies × 17 tasks | none | no | yes |
 | RoboSnap | 1 | task finetunes of one π0.5 family, 10 tasks | none | **yes** | yes |
 | REALM | 3† | 3 VLAs (*r* = 0.92 overall, printed inside its figure) | ***p* < 0.001** | no | yes |
-| PolaRiS | 4 | 4 policies, pre-specified 1k-step checkpoints | none | **yes** | no — raster |
-| SC3-Eval | 1† | 7 checkpoints of one architecture × 3 criteria | none | no | no — raster |
-| WorldEval | 4 | 4 policies | none | no | no — raster |
+| PolaRiS | 4 | 4 policies, pre-specified 1k-step checkpoints | none | **yes** | partial |
+| SC3-Eval | 1† | 7 checkpoints of one architecture × 3 criteria | none | no | no — occluded |
+| WorldEval | 4 | 4 policies × 5 tasks = 20 pts | none | no | yes |
 | A Practical Recipe | 5 | 5 VLAs; correlations in tables, no scatter | none | no | no |
 | Cosmos-Surg-dVRK | 3 | 3 VLA runs × 2 checkpoint stages | ***p* < 0.001** | partial | yes |
-| Gemini/Veo | 8† | 8 variants of one GROD base | none | no | no |
+| Gemini/Veo | 8† | 8 variants of one GROD base | none | no | yes |
 | DreamDojo | 1 | checkpoints of one GR00T lineage | none | no | yes |
 | dWorldEval | 1† | checkpoints of one π0 (LIBERO headline) | none | no | no |
-| WEAVER | 2 | base π0.5 + one finetune (headline 0.870 is Spearman per its Table 8, though its text labels it Pearson) | none | no | no |
-| PlayWorld | 18 | 18 distinct trained policies | none | no | no |
-| EmbodiedSplat | 2† | two 4-point correlations (Polycam/DN meshes); sibling finetunes of 2 base lineages; navigation | none | **yes** | no |
+| WEAVER | 2 | 2 policies (π0.5, π0.5-FT) × 5 tasks = 10 pts; headline 0.870 is Spearman (its body results sentence mislabels it "Pearson"; true Pearson 0.863) | none | no | yes |
+| PlayWorld | 18 | 18 distinct trained policies | none | no | partial (17/18) |
+| EmbodiedSplat | 2† | two 4-point correlations (Polycam/DN meshes); sibling finetunes of 2 base lineages; navigation | none | **yes** | yes |
 | MolmoSpaces | 4† | 8 policy points from 3–4 lineages (CAP family, π family, Paligemma) | **CIs on R and ρ, printed inside its figure** | no | yes |
 | Mem-World | 2 | two sibling π finetunes × 5 tasks = 10 pooled points | ***p*-values** | no | no |
-| Colosseum V2 | 1 | one ACT multi-task policy; points are 5–6 perturbation conditions × 3 tasks | none | no | no |
+| Colosseum V2 | 1 | one ACT multi-task policy; points are 5–6 perturbation conditions × 3 tasks | none | no | yes |
+| VISER | 1† | mean of 2 per-policy *r* over 4–5 tasks; each *k* = 1; real column reused to the digit from SIMPLER's and OpenVLA's published evaluations, without displayed numerical attribution | none | no | yes |
+| OSCAR | 2† | 7 RoboArena policies = 2 base lineages (2 π0 finetunes + 5 PaliGemma siblings differing only in action representation) | none | **yes** | yes |
+| Hi-WM | 2 | 3 tasks × 4 variants of 2 lineages (π0, DP + their post-trained finetunes); 12 pooled points | none | no | yes |
+| WM-PolicyEval | 3† | 3 policies (2 Octo sizes + OpenVLA) × 4 Bridge tasks; *r* printed only inside its Fig. 6b legend | none | no | no — *r* not reproducible |
 
 † coded with a flag; the deciding ambiguity is recorded in §8.1's cells. "Recovered" marks papers whose
-scatter data we extracted and validated against a published statistic: the original eight plus
-Cosmos-Surg-dVRK, DreamDojo, and MolmoSpaces (all in §4.2); EmbodiedSplat and Mem-World ship raster
-figures only. The last four rows entered via the documented completeness searches (§8.1, Scope).
+data we extracted and validated against a published statistic — nineteen of twenty-six (§3 gives the
+per-paper accounting and the correction to our earlier verdicts). They are the original eight plus
+Cosmos-Surg-dVRK, DreamDojo, and MolmoSpaces (all in §4.2); WEAVER, WorldEval, Gemini/Veo,
+EmbodiedSplat, and Colosseum V2 (recovered on the audit-the-auditor pass that corrected our earlier
+"raster" verdicts — WEAVER's is vector, Colosseum's numbers survive in its LaTeX source, the rest by
+pixel read, each reproducing its printed coefficient); and three of the four Search-3 rows
+(VISER transcribes exactly from its Table 5; OSCAR reproduces from its front-page bar labels;
+Hi-WM's raster extraction returns *r* = 0.954 against its printed 0.953). Mem-World, dWorldEval,
+SC3-Eval, PlayWorld, A Practical Recipe, and PolaRiS remain unrecovered or only partial (§3), and
+WM-PolicyEval's plotted points — recovered exactly, on a
+1/20 lattice, with both drawn regression lines reproducing to within 0.0006 (our extracted points
+regenerate the authors' own plotted regression lines to four decimals, so the extraction is not in
+question) — yield *r* = 0.719
+against its legend's 0.687, while its IRASim baseline legend (Pearson 0.613, "MMRV" 0.611) is
+irreconcilable with its own plotted points (*r* = 0.277). A recovered appendix table
+(found in the project repository, in a directory named `depreciate`) gives IRASim Pearson = 0.610
+and MMRV = 0.213; the legend's "MMRV = 0.611" is the Pearson of the adjacent "Cosmos without
+trajectories" row, so the legend transposes a neighboring cell into the MMRV slot. That appendix
+explains the legend's internal duplication but does not itself reconcile with the plotted points
+either, so the durable, extraction-proof fact is the legend-versus-plot gap. Rows from EmbodiedSplat down entered via the documented completeness
+searches (§8.1, Scope; the last four via the fully logged Search 3).
 
 *Examined and excluded from every count:* **GSWorld** and **Interactive World Simulator** plot a
 sim-vs-real scatter and print no coefficient; **AutoEval** computes and plots SIMPLER-vs-real
@@ -808,12 +961,12 @@ auditable too.
 
 | property | prevalence |
 |---|---|
-| Headline *r* over **fewer than 10 independent training units** | **21 / 22** |
-| **No uncertainty reported on the correlation** | **17 / 22** |
-| Checkpoint-selection rule unstated | **17 / 22** |
+| Headline *r* over **fewer than 10 independent training units** | **25 / 26** |
+| **No uncertainty reported on the correlation** | **21 / 26** |
+| Checkpoint-selection rule unstated | **20 / 26** |
 
-Only PlayWorld (18 policies) clears ten independent units. Three papers compute a correlation over
-two units. Five papers correlate checkpoints, per-task finetunes, or perturbation conditions of a
+Only PlayWorld (18 policies) clears ten independent units. Five papers compute a correlation over
+two units. Six papers correlate checkpoints, per-task finetunes, or perturbation conditions of a
 single policy or lineage: one independent unit, the survey's most extreme design fact, invisible in
 our earlier counts.
 
@@ -822,14 +975,20 @@ never reconciled with the survey. Source verification found that every surveyed 
 a coefficient (REALM's numeric values, and Gemini/Veo's headline values, appear only inside figures;
 Veo's text does print one secondary OOD pair), removed two
 miscredited uncertainty entries (§8.2), and re-coded three unit counts; the completeness searches then
-grew the set from 18 to 22. The corrected prevalences are higher for sample size, lower for the
-selection rule: wrong in both directions, which is why this table exists.
+grew the set from 18 to 22, and the fully logged Search 3 (run on submission eve precisely because
+the earlier searches had not preserved their queries) grew it from 22 to 26. The corrected
+prevalences are higher for sample size, lower for the selection rule: wrong in both directions,
+which is why this table exists — and each expansion has moved the headline fractions by at most a
+few points while adding to the same pattern (all four Search-3 papers: no uncertainty on *r*; three
+of four: no selection rule).
 
 ### 8.1 Coding rules — several cells turn on a definition, not a fact
 
 **Rule 1. A training checkpoint is not an independent unit; the training run is.** Successive
-checkpoints are serially correlated snapshots. This decides six papers at once (real2sim-eval,
-SC3-Eval, Cosmos-Surg-dVRK, Gemini/Veo, dWorldEval, DreamDojo).
+checkpoints are serially correlated snapshots. This decides nine papers at once (real2sim-eval,
+SC3-Eval, Cosmos-Surg-dVRK, Gemini/Veo, dWorldEval, DreamDojo; and, via its sibling-finetune
+corollary, OSCAR's seven leaderboard policies from two base lineages, Hi-WM's four variants from
+two, and WM-PolicyEval's two Octo sizes).
 
 **Rule 2. Uncertainty must be on the *correlation*, not the points.** Several papers report
 Clopper–Pearson intervals or standard errors per success rate and nothing on the correlation computed
@@ -839,6 +998,14 @@ from them. That is one step from a bootstrap, not taken.
 claim a correlation qualitatively (a scatter, no printed coefficient); AutoEval plots per-task
 SIMPLER-vs-real correlations without printing a number for any of them; RoboSimGS and one benchmarking
 audit report no sim-vs-real correlation at all.
+
+**Rule 4. "Selection rule stated" means the checkpoint rule, not the policy roster.** The column is
+coded *yes* only if the paper states which checkpoint of each policy enters the correlation (a
+pre-specified training step, an explicit all-checkpoints statement, a named selection criterion) —
+enumerating *which policies* were evaluated does not count, since the sign-flipping choice §5
+documents is the checkpoint choice, not the roster. This rule exists because an inter-coder pilot
+(below) showed the column is chance-level ambiguous without it: coders reading "rule stated" as
+"policy set enumerated" reach different answers on ten of the twenty-two papers then surveyed.
 
 **Cells these rules decide:**
 
@@ -851,21 +1018,28 @@ audit report no sim-vs-real correlation at all.
 | Cosmos-Surg-dVRK | 6 points, or 3 training runs? | **3 runs** — three VLAs each at two training stages ("one half training and one full training"): two checkpoints per run, and Rule 1 makes the run the unit. |
 | Gemini/Veo | Are its 8 policy variants independent? | **Unstated; we code 8 and flag it.** All eight are variants of one GROD base; the paper never states whether they are separate training runs. |
 | SC3-Eval, DreamDojo, dWorldEval | Any independent units at all? | **One lineage each** — SC3-Eval: 7 checkpoints of one π0.5 architecture × 3 criteria; DreamDojo: checkpoints of one GR00T variant; dWorldEval: checkpoints of one π0 for its LIBERO headline (its real-world *r* spans ~3 architectures, which we flag). |
-| EmbodiedSplat | 6 policies, or 2 lineages? | **2 lineages per correlation** — its four finetuned policies are sibling finetunes of the two zero-shot bases (HM3D, HSSD); each mesh variant's 4-point correlation spans those two lineages. Its exact SRCC values (0.976, 0.866) appear only inside its Figure 1; the text prints the range 0.87–0.97. |
+| EmbodiedSplat | 6 policies, or 2 lineages? | **2 lineages per correlation** — its four finetuned policies are sibling finetunes of the two zero-shot bases (HM3D, HSSD); each mesh variant's 4-point correlation spans those two lineages. Its exact SRCC values (0.976, 0.866) appear only inside its Figure 1; the text prints the range 0.87–0.97. On recovery, both values reproduce as Pearson *r* on the four points to three decimals (Polycam 0.9757, DN 0.8661), and the rank correlation does not (Polycam ρ = 0.949, DN ρ = 0.800) — which is correct usage, not a slip: Kadian et al. (2020) define the Sim-vs-Real Correlation Coefficient as the sample Pearson coefficient, so EmbodiedSplat's SRCC is a Pearson correlation as intended. |
 | MolmoSpaces | How many policies enter the pick correlation? | **8 points, 3–4 lineages, flagged** — CAP plus three CAP-EC variants (defined only in the figure legend), three π-family DROID finetunes, Paligemma Binning. Its text prints pick ρ = 0.98; both its included figures print 1.00, and our extraction confirms perfectly concordant ranks. The e-print ships an *unused draft* of the figure (marked "TBD") that prints ρ = 0.98 — plausibly the source of the stale text value: a leftover draft, not a miscalculation. |
 | Mem-World | Do 10 points mean k = 10? | **No — k = 2.** Two sibling π finetunes, trained on the same 50-episode-per-task data, evaluated on 5 tasks each; tasks are pooled as points without justification. The printed *p* < 0.001 is computed over the pooled points; the permutation floor over its two units is 0.5. |
 | REALM | Are π0 and π0-FAST separate units? | **We code k = 3 and flag it** — the two share a lineage, and the stricter k = 2 reading raises REALM's permutation floor from 0.167 to 0.5 (§8). |
+| RoboWorld | Are its 8 RoboArena policies independent, given that lineage flags fire elsewhere? | **We code 8, and state why the lineage logic lands differently**: the eight are separately trained, separately released open-source policies from RoboArena's public pool — different labs, different training runs — which is the survey's strongest independence case outside PlayWorld. REALM's flag arises from sibling finetunes within one paper; Gemini/Veo's from eight variants of one base. A stricter reading could still group RoboWorld policies sharing a pretrained VLM backbone; we have not verified the eight policies' backbones, so this coding rests on the separate-lab, separate-run reading, recorded here so the asymmetry is auditable. |
 | Colosseum V2 | Do 5–6 perturbation conditions × 3 tasks give *k* > 1? | **No — k = 1.** Its hardware correlation uses one multi-task ACT policy trained from scratch (π0.5 appears in its simulation experiments only); the points are perturbation conditions, not policies. Its Sec. IV-C lists five conditions; its Figs. 7–8 draw six. Its avg R² = 0.798 (predicting the *change* in success under a perturbation) and avg Spearman = 0.916 are averages over three tasks with no per-task values printed — so recovery was not attempted: no printed per-panel statistic exists to validate an extraction against. It states plainly that sim *"results do not reliably predict the absolute success rate"*; the correlation it claims is over condition shifts, and it enters under the same claim-based rule as RoboSnap. |
+| VISER | Is the headline "0.92 across policies" a multi-policy correlation? | **No — k = 1, flagged "1\|2".** It is the arithmetic mean of two per-policy correlations, each computed across *tasks* of a single policy (Octo *r* = 0.9988 over 4 tasks; OpenVLA *r* = 0.8496 over 5): no correlation entering the headline contains any cross-lineage variation. The pooled 9-point *r* (0.874) is never printed. A second issue is provenance, not coding: every value in its "Real world" column is reused to the digit, without displayed numerical attribution, from the SIMPLER paper's Table V (Octo-Small) and the OpenVLA paper's appendix (the source-attribution footnote is present in the e-print but commented out, so it does not render); its Octo row splices Octo-Small real numbers with the OpenVLA paper's Octo on the fourth task — two training runs inside one "policy". |
+| OSCAR | Are its 7 RoboArena policies 7 units? | **k = 2, flagged "2–7"** — per RoboArena's own description the seven are two π0-family DROID finetunes plus five PaliGemma siblings differing only in action representation; Rule 1's sibling-finetune corollary collapses them to two lineages (the maximal reading is 7). Its real side is the external RoboArena leaderboard at an unstated snapshot (the live pool has since grown), and its predicted side is GPT-5-scored on 65 replayed sessions — mismatched episode supports. Its Spearman +0.750 and "MMRV" 0.571 are not *jointly* reproducible from its published success rates: each is individually reachable, but only under a different, mutually incompatible tie-break of the one tied policy pair (the ρ = 0.750 tie-break forces MMRV = 6/7; the MMRV = 0.571 tie-break forces ρ = 0.857), and its Appendix A.10.2 states both are computed on *unpublished* Bradley–Terry rank vectors rather than the plotted rates. Separately, the printed "MMRV" = 0.571 = 4/7 is not any maximum-rank-violation reading (a 60-variant max-violation sweep reaches it under none) and is computed on those unpublished rank vectors — the convention ambiguity of §7.2, surfacing in a fourth paper. |
+| WM-PolicyEval | Are two Octo sizes one unit? | **k = 3, flagged** — Octo-Small and Octo-Base are separately trained runs (k = 3 with OpenVLA); a recipe-level reading collapses them to k = 2. Its real-side trial counts (20 per policy-task) are recoverable only from an appendix absent from the arXiv PDF, found in its project repository under a folder named "depreciate". |
 
 **Scope.** The inclusion criterion is claim-based, not task-based: a paper enters if its validity claim
 is a correlation between simulated and real-world robot policy success with a printed coefficient. The
-set is manipulation- and world-model-dominated (21 of 22); one navigation paper (EmbodiedSplat)
+set is manipulation- and world-model-dominated (25 of 26); one navigation paper (EmbodiedSplat)
 qualifies and is included; task type enters no check. Physics simulators, learned world models, and
 generated-video evaluators are pooled deliberately: the audited object is the printed correlation
 and the design behind it, not the evaluator's mechanism, and every check depends on the papers'
 units and points alone. The original collection was not systematic: six
-papers were found in two web searches. A documented completeness search on 2026-07-20 (seven logged
-arXiv API queries over cs.RO/cs.LG/cs.CV, 2024–2026, 30 unique hits, 20 screened candidates) added
+papers were found in two web searches. A documented completeness search on 2026-07-20 (seven
+arXiv API queries over cs.RO/cs.LG/cs.CV, 2024–2026, 30 unique hits, 20 screened candidates;
+`data/completeness-search.md` releases the record, including the fact that the verbatim query
+strings were not preserved — a gap by this paper's own standard, stated rather than
+reconstructed) added
 EmbodiedSplat, MolmoSpaces, and Mem-World, and confirmed the AutoEval exclusion. Two caveats: the arXiv
 API searches metadata, not full text, so the check has limited recall (it returned only 10 of the 22
 papers known before the search: the eighteen then surveyed plus four exclusions; AutoEval, whose MMRV
@@ -873,16 +1047,76 @@ usage is body-text only, entered separately via a reviewer flag, not the queries
 papers likely exist. A pre-submission rerun on 2026-07-21 (the same query battery plus four web
 searches) demonstrated both caveats at once: it added Colosseum V2 (posted 2026-05-26 and missed by
 the first search) and screened out GigaWorld-1 and RoboDojo under Rule 3 (no printed coefficient);
-SC3-Eval's cell was re-verified against its v3.
+SC3-Eval's cell was re-verified against its v3. A third search the same evening — the first with a
+fully released protocol (verbatim queries in `harness/completeness_search3.py`, complete raw hit
+list in `data/search3-arxiv-log.txt`; nine queries, 47 unique hits, 32 new candidates screened) —
+demonstrated the recall caveat a third time: it added VISER, OSCAR, Hi-WM, and WM-PolicyEval, all
+qualifying under Rule 3 and all missed by the two earlier batteries (which themselves recalled only
+14 of the 22 papers then surveyed). Each addition received the full audit treatment the same day
+(§8.0). The pattern across three searches — every rerun has found qualifying papers the previous
+run missed — is itself a datum: metadata search under-recalls this literature, and the census
+should be read as a lower bound on it.
+
+**The window, stated as a boundary rather than discovered as a gap.** All searches covered 2024–2026,
+so the census is of the current wave of this literature, not of its history. The claim-based
+criterion, applied without the window, admits at least one earlier paper: Kadian et al. (2020,
+arXiv:1912.06321) introduced the Sim-vs-Real Correlation Coefficient (SRCC) over nine agent
+configurations in Habitat point-goal navigation — the metric EmbodiedSplat reports and the direct
+ancestor of the navigation branch of this literature — and reported improving SRCC from 0.18 to 0.844
+by tuning the simulator against real deployments. We have not audited it or its descendants
+(2020–2023 navigation predictivity work), and every census count in this paper should be read as
+scoped to the 2024–2026 set. Its existence is worth a sentence beyond scope-keeping: the field had a
+named, purpose-built statistic for this question five years before the papers we survey.
+
+**An inter-coder pilot, disclosed with its limits.** Two coders blind to this section's cells —
+given only Rules 1–2, the arXiv identifiers, and the field definitions; forbidden from reading this
+repository — independently re-coded all twenty-two rows then in the survey from the source papers
+(2026-07-21; the pilot predates the Search-3 additions, whose four rows have no second coding yet). The
+pilot is not a substitute for an independent human second coder: the coders were language-model
+agents of the same family as the pipeline that produced our own codings, so their blind spots are
+correlated with ours by construction rather than independent of them, and they read the papers'
+latest arXiv versions where we coded specific ones. Its agreement is therefore a same-family
+consistency check, not an independent validation. With that stated:
+*k* agreed exactly on 19 of 22 (the three disagreements — Gemini/Veo coded 1 vs our flagged 8,
+WEAVER 1 vs our 2, SC3-Eval 2 vs our 1 — are lineage judgment calls, and in two of the three the
+blind coding is *stricter* than ours, i.e. our codings err against our own thesis);
+uncertainty-on-*r* agreed on 20 of 22 (κ ≈ 0.70); and the selection-rule column agreed on only 12
+of 22 (κ ≈ 0.09) under the pre-Rule-4 wording — the construct ambiguity Rule 4 now closes. The two
+substantive disagreements the pilot surfaced were re-verified against the sources, and both resolve
+for the original coding — for the same reason, which is itself §3's lesson: the disputed evidence
+is invisible to text-level reading. RoboWorld's *p* < 0.001 is printed in its appendix B.5 body
+text (the main-text mention of *r* = 0.989 beside its Figure 5a carries no *p*, which is all the
+blind coder saw; the appendix figures and their *p*-values are unchanged across v1–v4, re-verified
+by full-text diff). MolmoSpaces' intervals on R and ρ are rendered inside the Figure 11 image
+("R=0.96 [0.92, 0.98]"), invisible to HTML text extraction; the per-point credible intervals the
+blind coder found are a different, coexisting element. A coder who greps the text finds neither —
+which is the paper's recovery argument made a third way. The blind package (codebook,
+version-pinned identifiers, output format; `data/coder-protocol.md`, released) lets any
+independent coder run the real inter-rater check this pilot cannot supply. One such run is now on
+record, a step more independent than the pilot though still not human: a language-model agent of a
+*different* family from our pipeline re-coded all twenty-six rows blind, from `data/coder-protocol.md`
+alone, under the final Rule 4 wording. Against our codings it gives Cohen's κ = 0.68 on uncertainty-on-*r*
+(agreement 88%) and κ = 0.54 on the selection rule (81%) — moderate-to-substantial, and a marked
+recovery of the selection-rule column from the pre-Rule-4 pilot's κ ≈ 0.09, evidence that Rule 4
+closes the construct ambiguity it was written for. The *k* column agreed exactly on 17 of 26; the
+nine differences are all lineage judgment calls of the kind §8.1's sensitivity analysis already
+brackets, not clerical disagreements. Because this coder shares the model substrate of our pipeline,
+even across families its agreement is a cross-model consistency check rather than the human
+inter-rater check the package is built to enable; we report κ per field rather than pooled, because the
+fields differ in difficulty and a pooled number would hide exactly the selection-rule construct
+problem this exercise exists to expose.
 
 **Sensitivity to the coding.** Rule 1 is a judgment call, so we recomputed every count in this section
 under two alternative codings: a permissive coding in which every evaluated checkpoint or variant is
 an independent unit, and a worst-case coding flipping all six contestable cells against us at once.
-Coding-independent: 19–21 of 22 papers report their headline correlation from fewer than ten units; at
-least four (REALM, WEAVER, Mem-World, and WorldGym under two of three codings) cannot reach *p* = 0.05
-by any permutation; and both reporting-practice counts (17/22 no uncertainty, 17/22 no stated rule)
+Coding-independent: 23–25 of 26 papers report their headline correlation from fewer than ten units
+(the four Search-3 additions sit below ten under every coding: their maximal readings are 2, 7, 4,
+and 3 units); at
+least six (REALM, WEAVER, Mem-World, VISER, WM-PolicyEval, and WorldGym under two of three codings)
+cannot reach *p* = 0.05
+by any permutation; and both reporting-practice counts (21/26 no uncertainty, 20/26 no stated rule)
 involve no unit-counting at all. Coding-dependent: under the permissive coding the bootstrap-support
-count falls from 17 to 8 of 22, the number clearing all three procedures rises from 3 to 11, and the
+count falls from 21 to 11 of 26, the number clearing all three procedures rises from 3 to 12, and the
 *k* = 1 category shrinks to one (Colosseum V2's single hardware policy has no checkpoints or variants
 for even the permissive coding to promote), so the strongest quantitative versions of those claims
 rest on Rule 1, and we flag them as such. The below-floor set is nearly coding-independent: REALM and Mem-World print
@@ -933,17 +1167,30 @@ Everything lives in the repository (`github.com/trilamsr/research`, directory
 `sim2real-correlation-audit/`); `README.md` documents the methodology, the equations behind every
 check, per-dataset provenance and validation gates, and one-command reproduction of each headline
 number. `correlation_audit.py` implements the five checks (`--demo` reproduces §2.1);
-`survey_table.py` regenerates every count in §8; `figures/make_figures.py` regenerates Figures 1–3
+`survey_table.py` regenerates the base counts in §8 (the permissive-coding sensitivity figures are hand-recoded and flagged); `figures/make_figures.py` regenerates Figures 1–3
 and prints its verification numbers. The recovered datasets ship as CSVs in `data/`, each opening
 with a provenance header and validated against a published statistic (§3): real2sim-eval
-(`real2sim-eval-fig3-checkpoints.csv` and the 200-episode `real2sim-eval-fig9-200ep.csv`, 52 + 52
+(`survey-real2sim-eval-fig3-checkpoints.csv` and the 200-episode `survey-real2sim-eval-fig9-200ep.csv`, 52 + 52
 points), RoboWorld (4 panels, 32 points), Digital Cousins (16 points), REALM (4 panels, 77 points),
 Cosmos-Surg-dVRK (2 panels, 48 points), DreamDojo (6 points), MolmoSpaces (4 source panels, 24
-rows), and RoboSnap (10 points plus its own table, Appendix A). The preregistered analysis is
+rows), RoboSnap (10 points plus its own table, Appendix A), and the four Search-3 additions
+(`survey-viser.csv`, 9 rows with per-row real-side source attribution; `survey-oscar.csv`, 7 policies;
+`survey-hi-wm.csv`, 12 raster-extracted points with pixel coordinates; `survey-wm-policyeval.csv`, 24
+vector-extracted points). The five datasets recovered on the audit-the-auditor pass ship as
+`survey-weaver.csv` (30 points, 3 vector panels), `survey-worldeval.csv` (20 points, raster-extracted),
+`survey-gemini-veo.csv` (8 points), `survey-embodiedsplat.csv` (8 points), and `survey-colosseum-v2.csv` (per-condition
+arrays from the paper's LaTeX source), plus `survey-recipe-rankings.csv` (A Practical Recipe's rank table,
+Spearman-only). The Search-3 protocol itself ships as `harness/completeness_search3.py`
+(verbatim queries) with its raw hit list in `data/search3-arxiv-log.txt` and the screening record
+in `data/completeness-search.md`. The preregistered analysis is
 `measure_noise_floor.py` with `results.json`; the preregistration itself is `PREREG-noise-floor.md`
-(including its hash-lock break record and v1.4 amendment), and `harness/prereg_lint.py` is §9's
-linter. `fz_coverage.py` is §6.1's Fisher-z coverage simulation (seed-fixed, 10,000 replicates per
-condition); `pixel_reextract.py` is §3.1's extraction-error bound; `requirements.txt` pins numpy and
+(including its hash-lock break record, v1.4 amendment, and 2026-07-21 provenance amendment;
+externally timestamped via the shipped `.ots` OpenTimestamps proofs, registered at OSF
+`osf.io/6ag3c`, and deposited at Zenodo, concept DOI `10.5281/zenodo.21479935`), and `harness/prereg_lint.py`
+is §9's linter, run by `make verify`. `fz_coverage.py` is §6.1's Fisher-z coverage simulation
+(seed-fixed, 10,000 replicates per condition, Gaussian and binomial conditions);
+`bayes_interval.py` is §6.1's Bayesian row; `leverage_null.py --fixed-x` is §4.2's conditional
+null; `pixel_reextract.py` is §3.1's extraction-error bound; `requirements.txt` pins numpy and
 scipy. `tests/` holds 26 known-answer tests plus byte-for-byte §2.1/`--demo` parity
 (`mmrv_conventions.py` regenerates §7.2's convention grid; `leverage_null.py` regenerates §4.2's
 null calibration; both are test-locked), and
@@ -955,20 +1202,27 @@ null calibration; both are test-locked), and
 
 We are careful about what this does and does not establish.
 
-- **No paper here is wrong.** Every *r* we examined reproduces from its own figure. The subject
+- **Almost every headline correlation here reproduces from its own figure or table.** With one
+  exception found on submission eve: WM-PolicyEval's legend coefficients cannot
+  be produced from its own plotted points (§8.0), the census's single case of a printed statistic
+  contradicting its printed data rather than merely lacking support. The subject
   paper is unusually transparent: it publishes episode counts, randomization ranges, per-episode replay
   confusion matrices, and per-point confidence intervals. That transparency is what made this
   analysis possible.
 - **Not that simulation-based evaluation does not work.** We measure what one statistic supports.
-- **Not a claim about every paper in the field.** Twenty-two papers surveyed (six more examined and
-  excluded), eleven recovered from figures; original collection non-systematic, extended by
-  documented completeness searches (§8.1) whose own recall is limited.
+- **Not a claim about every paper in the field.** Twenty-six papers surveyed (six more examined and
+  excluded), nineteen recovered; original collection non-systematic, extended by
+  documented completeness searches (§8.1, the last fully logged) whose own recall is limited, and bounded to 2024–2026 —
+  the earlier navigation-predictivity line (Kadian et al. 2020, SRCC) is out of window and unaudited
+  (§8.1, Scope).
 - **No claim about the ablation deltas.** Their per-checkpoint evaluation numbers are unpublished
   (per-checkpoint *weights* are public on HuggingFace; the results computed from them are not); we verified this
   across seven locations including LaTeX sources, repositories, and 98 model and dataset repos.
 
-**Provenance.** The analyses in this paper were performed with substantial machine assistance
-(agentic language-model pipelines) under the author's direction. Every quantitative claim regenerates
+**Provenance.** The survey codings, the figure-data recovery, and the adversarial validation passes
+were produced with substantial assistance from language-model agents under the author's direction;
+the author is responsible for every claim, and each remains verifiable independently of how it was
+produced. Every quantitative claim in this paper regenerates
 from the released deterministic scripts and data, and the verification protocol is part of the record
 rather than a private process: multiple independent recomputation passes, source-verified survey
 codings, and adversarial validation that overturned two of our own draft claims (§7.2,
@@ -992,11 +1246,26 @@ observed *r* = 0.9, five independent runs already bound the true correlation abo
 [0.09, 0.99]), eight give [0.53, 0.98], and ten give [0.62, 0.98]. A field that wants a tight claim
 can buy one. What it cannot do is print the claim without paying.
 
+**Why the line has not been printed already — the incentive, engaged rather than ignored.** The
+honest parenthetical is not incentive-neutral: at *k* = 4 it frequently vacates the headline it
+sits beside (a Fisher-z spanning most of [−1, 1] under an *r* of 0.9 reads as a retraction to a
+casual reader), so an author printing it unilaterally pays a presentational cost their neighbors
+do not. That is why the ask is addressed to reviewers as much as authors: a checklist question
+costs the reviewer one line and removes the unilateral-disarmament problem, the mechanism that
+moved fields with the same structure (clinical trials did not adopt registration spontaneously;
+editors required it). The unit cost is also asymmetric in a way the price list above hides: for an
+evaluator paper, units are nearly free where public policy pools exist — RoboWorld's *k* = 8 came
+from RoboArena's open pool, and the growing zoos of open VLA checkpoints make *k* ≥ 8 a download,
+not a training run — while an author evaluating their *own* newly trained policies pays k full
+training runs, often the largest cost in the project. The recommendation splits accordingly:
+evaluator papers should draw units from public pools and have little excuse not to; policy papers
+at small *k* should print the wide interval and let it say what it says.
+
 **For reviewers.** Three questions to ask any sim-real correlation paper:
 
 > 1. **How many independent training units (not points) is the correlation computed over, and what
->    rule decided the unit?** Checkpoints of one run are not units. (Twenty-one of twenty-two published
->    answers are below ten; five are one.)
+>    rule decided the unit?** Checkpoints of one run are not units. (Twenty-five of twenty-six published
+>    answers are below ten; six are one.)
 > 2. **What happens to the correlation when the most influential unit is removed?** A *p*-value does
 >    not answer this; a one-line drop-one range does.
 > 3. **Could the stated design support the inference at all?** The minimum permutation *p* is 1/*k*!
@@ -1013,9 +1282,9 @@ can buy one. What it cannot do is print the claim without paying.
 > values at *k* = 4 and 126 at *k* = 5. If you report MMRV, state the violation and weighting
 > convention or release the ten lines that compute it (§7.2).
 
-Nor is the ask specific to physics simulators. Nine of the twenty-two surveyed evaluators are world
+Nor is the ask specific to physics simulators. Twelve of the twenty-six surveyed evaluators are world
 models (WorldGym, WorldEval, dWorldEval, DreamDojo, WEAVER, Gemini/Veo, PlayWorld, Cosmos-Surg-dVRK,
-and Mem-World; a tenth, SC3-Eval, evaluates via generated video), and their validity case is
+Mem-World, OSCAR, Hi-WM, and WM-PolicyEval; a thirteenth, SC3-Eval, evaluates via generated video), and their validity case is
 exactly this correlation at exactly these unit counts. Nothing in the ceilings is robotic, either. Any
 claim of the form *"our cheap evaluator correlates with the expensive ground truth"* (an LLM judge
 against human raters, a learned reward model against preference labels) computed over a handful of
@@ -1050,6 +1319,16 @@ only more units would: episode noise is at most a second-order problem next to t
 independent units, and the correction pinned at its ceiling says the observed correlations are
 already as high as the error budget permits.
 
+**(c) Should *r* be computed on a variance-stabilized scale?** Success rates carry binomial noise
+with variance *p*(1−*p*)/*n* — heteroskedastic, largest mid-scale, vanishing at the boundaries —
+and boundary-anchored points contribute maximal Pearson signal exactly where the data say least
+about tracking: REALM's GR00T drawer scores at or near (0, 0) anchor two of its correlations
+(§4.2). An arcsine or logit transform, or a model-based correlation (a bivariate binomial GLMM),
+would decouple the two; no surveyed paper does either, and neither do our checks, which
+deliberately run on the published scale the papers themselves use. Boundary anchoring is a distinct
+failure mode from leverage — a (0, 0) point can anchor *r* at a modest hat value — and is the
+strongest candidate for a sixth check.
+
 ---
 
 ## Status
@@ -1072,7 +1351,7 @@ Two cases taught us the limit of this check, and both belong in the methods rath
 
 **RoboSnap** is the only surveyed paper printing its full numeric table inline, so it is the one case
 where extraction could be checked against ground truth from the same paper. It failed: extracted
-*r* = 0.9089 against a published 0.887 (`data/robosnap.csv`; both values reproduce exactly). The
+*r* = 0.9089 against a published 0.887 (`data/survey-robosnap.csv`; both values reproduce exactly). The
 cause is that the figure's plotted positions deviate from the paper's own table: the three tasks the
 table ties at real = 0.367 are drawn coincident but at 0.340, and two further points sit 1.4–1.9
 percentage points off their table values. An earlier draft attributed the gap to transposed axis
@@ -1141,12 +1420,25 @@ appear in the results file. Its first version failed its own retrospective test 
 that actually dropped two requirements, it reported "ok") and was rewritten around an explicit
 requirement register.
 
+**Provenance, restated in externally checkable terms (2026-07-21).** The released repository's
+history begins with the preregistration and the results in the same commit, so a reader cannot
+establish the plan-before-run ordering from the released record, and we do not ask them to take it
+on trust: the prereg now opens with a provenance amendment directing readers to treat the A1a
+analysis as an analysis plan with documented deviations — exploratory, not confirmatory. The file
+is externally timestamped from 2026-07-21 (OpenTimestamps proofs ship alongside it; OSF
+registration `osf.io/6ag3c`; Zenodo concept DOI `10.5281/zenodo.21479935`, resolving to the
+latest version), its current
+hash locks verify from the package root, and `make verify` now runs the linter against the shipped
+package — an earlier draft shipped the linter but never ran it in the battery, and the linter
+failed on the package as then shipped. Future preregistrations in this project are externally
+registered before execution.
+
 ---
 
 ## References
 
-*All 30 identifiers below were resolved against arXiv and their titles confirmed to match (28 on
-2026-07-20; Colosseum V2 and GigaWorld-1 on 2026-07-21).*
+*All 35 identifiers below were resolved against arXiv and their titles confirmed to match (29 on
+2026-07-20; Colosseum V2, GigaWorld-1, and the four Search-3 additions on 2026-07-21).*
 
 ### Subject paper
 
@@ -1162,7 +1454,9 @@ requirement register.
 - **RoboWorld** — *RoboWorld: Fast and Reliable Neural Simulators for Generalist Robot Policy Evaluation.* arXiv:**2607.01060** (figures extracted from v3; v4, current as of 2026-07-21, is content-identical in the HTML e-print — figure images pixel-identical, every printed correlation unchanged). §2.1, §4, §7.
 - **Digital Cousins** — *From Seeing to Simulating: Generative High-Fidelity Simulation with Digital Cousins for Generalizable Robot Learning and Evaluation.* arXiv:**2604.15805**. §2.1, §4.1, §7.
 - **SIMPLER** — *Evaluating Real-World Robot Manipulation Policies in Simulation.*
-  arXiv:**2405.05941**. Source of the MMRV metric (Eq. 1). Code: `github.com/simpler-env/SimplerEnv`.
+  arXiv:**2405.05941**. Source of the MMRV metric (Eq. 1). Code: `github.com/simpler-env/SimplerEnv`;
+  its `simpler_env/utils/metrics.py` contains the reference MMRV implementation and the per-task,
+  per-policy result dictionaries §3 discusses (verified against current main, 2026-07-21).
 - **SimFoundry** — *SimFoundry: Modular and Automated Scene Generation for Policy Learning and Evaluation.* arXiv:**2606.28276**. §7.1.
 - **WorldGym** — *WorldGym: World Model as An Environment for Policy Evaluation.* arXiv:**2506.00613**. §6, §8.
 - **RoboSnap** — *RoboSnap: One-Shot Real-to-Sim Scene Generation for Generalizable Robot Learning and Evaluation.* arXiv:**2607.06699**. §3.1, Appendix A (the figure-vs-own-table case).
@@ -1178,7 +1472,7 @@ requirement register.
 - **Gemini Robotics in a Veo world simulator** — *Evaluating Gemini Robotics Policies in a Veo World Simulator.* arXiv:**2512.10675**.
 - **DreamDojo** — *DreamDojo: A Generalist Robot World Model from Large-Scale Human Videos.* arXiv:**2602.06949**.
 - **dWorldEval** — *dWorldEval: Scalable Robotic Policy Evaluation via Discrete Diffusion World Model.* arXiv:**2604.22152**.
-- **WEAVER** — *WEAVER, Better, Faster, Longer: An Effective World Model for Robotic Manipulation.* arXiv:**2606.13672**. Correlation over two policies.
+- **WEAVER** — *WEAVER, Better, Faster, Longer: An Effective World Model for Robotic Manipulation.* arXiv:**2606.13672**. Correlation over two policies (π0.5, π0.5-FT) across five tasks (10-point scatter); headline Spearman ρ = 0.870.
 - **PlayWorld** — *PlayWorld: Learning Robot World Models from Autonomous Play.* arXiv:**2603.09030**. The only surveyed paper with ≥10 independent units.
 
 ### Added by the completeness search (2026-07-20; §8.1, Scope)
@@ -1197,6 +1491,23 @@ requirement register.
 - **Colosseum V2** — *Colosseum V2: Benchmarking Generalization for Vision Language Action Models.*
   arXiv:**2605.27759**. Avg R² = 0.798 and avg Spearman = 0.916 across perturbation conditions of one
   ACT policy on three real tasks; *k* = 1 (§8.1).
+
+### Added by the logged Search 3 (2026-07-21; §8.1, Scope)
+
+- **VISER** — *Toward Visually Realistic Simulation: A Benchmark for Evaluating Robot Manipulation
+  in Simulation.* arXiv:**2605.06311** (v1). Headline "average Pearson 0.92" = mean of two
+  per-policy across-task correlations; real-side values reused from SIMPLER's and OpenVLA's
+  published evaluations (§8.0, §8.1); *k* = 1, flagged.
+- **OSCAR** — *OSCAR: Omni-Embodiment Action-Conditioned World Model for Robotics.*
+  arXiv:**2606.04463** (v2). World-model policy evaluation vs the RoboArena real-robot pool:
+  *r* = +0.852, ρ = +0.750 over 7 policies from 2 base lineages; *k* = 2, flagged (§8.1).
+- **Hi-WM** — *Hi-WM: Human-in-the-World-Model for Scalable Robot Post-Training.*
+  arXiv:**2604.21741** (v2). *r* = 0.953 over 12 points pooling 3 tasks × 4 policy variants of
+  2 lineages; our raster extraction reproduces 0.954 (§8.0); *k* = 2.
+- **WM-PolicyEval** — *Scalable Policy Evaluation with Video World Models.* arXiv:**2511.11520**
+  (v3). Pearson printed only inside its Fig. 6b legend (0.687); our exact vector extraction of its
+  plotted points yields 0.719, and its IRASim baseline legend is irreconcilable with its own plot
+  (§8.0); *k* = 3, flagged.
 
 ### Excluded from the counts (§8.1, Rule 3)
 
@@ -1218,6 +1529,9 @@ requirement register.
 
 - Henderson et al., *Deep Reinforcement Learning that Matters.* arXiv:**1709.06560**.
 - Agarwal et al., *Deep Reinforcement Learning at the Edge of the Statistical Precipice* (`rliable`). arXiv:**2108.13264**.
+- Kadian et al., *Sim2Real Predictivity: Does Evaluation in Simulation Predict Real-World Performance?*
+  arXiv:**1912.06321**. Origin of the SRCC (sim-vs-real correlation over agent configurations);
+  predates the surveyed window and is unaudited here (§8.1, Scope).
 
 ### Statistical lineage (§1.1)
 
@@ -1227,10 +1541,17 @@ requirement register.
 - Fisher, R. A. (1935). *The Design of Experiments.* Oliver & Boyd.
 - Pitman, E. J. G. (1937). *Significance tests which may be applied to samples from any populations.* Supplement to the Journal of the Royal Statistical Society 4, 119–130.
 - Efron, B. (1979). *Bootstrap methods: another look at the jackknife.* Annals of Statistics 7(1), 1–26.
+- Hall, P. (1992). *The Bootstrap and Edgeworth Expansion.* Springer.
 - Cook, R. D. (1977). *Detection of influential observation in linear regression.* Technometrics 19(1), 15–18.
 - Belsley, D. A., Kuh, E., & Welsch, R. E. (1980). *Regression Diagnostics: Identifying Influential Data and Sources of Collinearity.* Wiley.
 - Hurlbert, S. H. (1984). *Pseudoreplication and the design of ecological field experiments.* Ecological Monographs 54(2), 187–211.
 - Kish, L. (1965). *Survey Sampling.* Wiley.
 - Loken, E., & Gelman, A. (2017). *Measurement error and the replication crisis.* Science 355(6325), 584–585.
+- Brown, N. J. L., & Heathers, J. A. J. (2016). *The GRIM test: a simple technique detects numerous
+  anomalies in the reporting of results in psychology.* Social Psychological and Personality Science 8(4), 363–369.
+- Nuijten, M. B., Hartgerink, C. H. J., van Assen, M. A. L. M., Epskamp, S., & Wicherts, J. M. (2016).
+  *The prevalence of statistical reporting errors in psychology (1985–2013).* Behavior Research Methods 48(4), 1205–1226.
+- Bland, J. M., & Altman, D. G. (1995). *Calculating correlation coefficients with repeated
+  observations: Part 2 — correlation between subjects.* BMJ 310, 633.
 
 ---

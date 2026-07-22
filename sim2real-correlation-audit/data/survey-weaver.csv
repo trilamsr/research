@@ -1,0 +1,75 @@
+# Auspex -- WEAVER sim(imagined)-vs-real success-rate scatter, VECTOR-EXTRACTED from the
+# right panel of Fig. "Policy Evaluation" (figures/downstream/policy_eval.pdf) of
+# arXiv:2606.13672v2 ("WEAVER, Better, Faster, Longer").
+#
+# SOURCE: arXiv e-print tarball https://arxiv.org/e-print/2606.13672v2 (gzip dated 2026-06-18) ->
+#   figures/downstream/policy_eval.pdf. The right half is an ORIGINAL VECTOR scatter (3 panels:
+#   Ctrl-World, WEAVER, WEAVER-FT). The 8 embedded JPEGs are only the left qualitative photo
+#   strip (PnP Towel / Pour Beans rollouts). Markers are PDF path fills: squares ('re' rectangles)
+#   = pi_0.5 base policy; circles ('c':8 eight-curve disks) = pi_0.5-FT finetuned policy.
+#   5 marker colors = 5 tasks (legend swatches confirm): Pour Beans, Stack Bowls, PnP Towel,
+#   PnP Bag, PnP Marker. Each panel has exactly 5 squares + 5 circles = 10 points.
+#   Printed rho/r/MMRV live in per-panel text boxes AND in appendix Table
+#   (label tab:reward_prediction_metrics, sections/appendix.tex:492-505).
+# STATUS: EXTRACTED (not eyeballed), 2026-07-21. Reproduces all three panels' printed metrics:
+#   Ctrl-World  printed rho=0.523 r=0.552  ->  extracted Spearman=0.5234 Pearson=0.5519
+#   WEAVER      printed rho=0.594 r=0.563  ->  extracted Spearman=0.5944 Pearson=0.5633
+#   WEAVER-FT   printed rho=0.870 r=0.863  ->  extracted Spearman=0.8677 Pearson=0.8619
+#   All match to <=0.003 (WEAVER-FT rho: extracted 0.8677 vs printed 0.870, |delta|=0.0023; the
+#   other two panels match to <=0.002). This OVERTURNS the audit's prior "k=2" reading: the headline 0.870 is
+#   an n=10 correlation (5 tasks x 2 policies), not 2 points.
+#
+# LABELING NOTE (the Spearman-vs-Pearson accusation, CONFIRMED with softening):
+#   The headline number 0.870 is the SPEARMAN column of tab:reward_prediction_metrics
+#   (RMSE 0.188 | Spearman 0.870 | Pearson 0.863 | MMRV 0.035) and equals the WEAVER-FT
+#   panel's rho label. Abstract/intro/conclusion write it as "strong correlation (rho=0.870)"
+#   using the standard Spearman symbol rho -- internally consistent.
+#   HOWEVER the experiments body text (sections/experiments.tex, \para{Results}) says:
+#     "After finetuning, WEAVER-FT ... increasing PEARSON correlations to rho=0.87"
+#   -- i.e. the body prose mislabels the 0.870 SPEARMAN value as "Pearson". The true Pearson
+#   is 0.863. So the accusation is CONFIRMED for the body text, but note the paper's headline/
+#   abstract use rho correctly; only the one body sentence conflates the two. Metrics section
+#   (\para{Metrics}) also says only "Pearson Correlation" is reported in the main text while the
+#   appendix adds Spearman -- reinforcing that 0.87 in body prose is being called Pearson.
+#
+# METHOD: PyMuPDF get_drawings(). Marker centres = bbox centroids of filled path items inside
+#   each panel's plot rectangle (y in [25,216] pt, excludes legend swatches at y~297).
+#   Axis calibration: per-panel linear fit of the 3 x-tick line stubs (values 0,0.5,1.0) and the
+#   3 shared y-tick stubs (y=211.8->0, 121.2->0.5, 30.7->1.0). Max residual < 0.005 data units.
+#   Task colour keys (RGB float): PourBeans (0.867,0.627,0.651); StackBowls (0.725,0.788,0.553);
+#   PnPTowel (0.553,0.749,0.686); PnPBag (0.847,0.702,0.396); PnPMarker (0.651,0.651,0.847).
+#   Values below are the as-plotted coordinates rounded to plotting grid (SR quantised to 0.05).
+#
+# COLUMNS: panel = world model producing the imagined SR; task; policy (pi05 = base pi_0.5,
+#   pi05FT = finetuned); real_sr (x, Real SR); wm_sr (y, World Model / imagined SR).
+panel,task,policy,real_sr,wm_sr
+CtrlWorld,PourBeans,pi05,0.30,0.00
+CtrlWorld,PourBeans,pi05FT,0.55,0.00
+CtrlWorld,StackBowls,pi05,0.60,0.30
+CtrlWorld,StackBowls,pi05FT,0.75,0.50
+CtrlWorld,PnPTowel,pi05,0.40,0.05
+CtrlWorld,PnPTowel,pi05FT,0.75,0.05
+CtrlWorld,PnPBag,pi05,0.60,0.25
+CtrlWorld,PnPBag,pi05FT,0.80,0.25
+CtrlWorld,PnPMarker,pi05,0.30,0.10
+CtrlWorld,PnPMarker,pi05FT,0.50,0.25
+WEAVER,PourBeans,pi05,0.30,0.00
+WEAVER,PourBeans,pi05FT,0.55,0.00
+WEAVER,StackBowls,pi05,0.60,0.30
+WEAVER,StackBowls,pi05FT,0.75,0.55
+WEAVER,PnPTowel,pi05,0.40,0.20
+WEAVER,PnPTowel,pi05FT,0.75,0.20
+WEAVER,PnPBag,pi05,0.60,0.25
+WEAVER,PnPBag,pi05FT,0.80,0.30
+WEAVER,PnPMarker,pi05,0.30,0.20
+WEAVER,PnPMarker,pi05FT,0.50,0.30
+WEAVER-FT,PourBeans,pi05,0.30,0.15
+WEAVER-FT,PourBeans,pi05FT,0.55,0.45
+WEAVER-FT,StackBowls,pi05,0.618,0.35
+WEAVER-FT,StackBowls,pi05FT,0.75,0.50
+WEAVER-FT,PnPTowel,pi05,0.40,0.30
+WEAVER-FT,PnPTowel,pi05FT,0.75,0.45
+WEAVER-FT,PnPBag,pi05,0.582,0.35
+WEAVER-FT,PnPBag,pi05FT,0.80,0.65
+WEAVER-FT,PnPMarker,pi05,0.30,0.30
+WEAVER-FT,PnPMarker,pi05FT,0.50,0.40

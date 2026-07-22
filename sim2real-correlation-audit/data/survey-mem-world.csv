@@ -1,0 +1,27 @@
+# Mem-World (arXiv:2606.18960v2) — world-model-vs-real success, RECOVERED by pixel-reading the
+# 10 FILLED markers in the correlation figure (fig:policy_eval_regression, raster figs/correlation.png,
+# 888x856). The headline Pearson r and regression line are typeset ONLY inside that figure:
+#   "Mem-World: y = 0.934x - 0.122, Pearson r = 0.9704, p-value = 0.000".
+# Body text prints "r = 0.97, p < 0.001" for Mem-World and "r = 0.85, p < 0.01" for Ctrl-World.
+#
+# STRUCTURE (from figure legend): 2 Policy Models (pi_0 = blue, pi_0.5 = red), 5 Tasks (marker shape),
+#   2 World Models (Mem-World = filled, Ctrl-World = open). The Mem-World headline r=0.9704 is over the
+#   10 filled points = 2 policies x 5 tasks POOLED. Text: "we collect 50 episodes per task for
+#   post-training. We fine-tune pi_0 and pi_0.5 for 20K steps" -> both policies are sibling finetunes
+#   on the same 50-ep/task data. k coded 2 (two policy units behind 10 pooled points).
+#
+# VALIDATION: Pearson over the 10 hand-read points = 0.9509, fit y=0.951x-0.140 (figure: r=0.9704,
+#   y=0.934x-0.122). Coordinates read to +-0.02 off the raster; reproduces the pooled structure and
+#   the near-1 correlation. p<0.001 is over 10 pooled points; if the 2 policies are the independent
+#   units, the permutation floor is 1/2! = 0.5 (auditor's arithmetic confirmed).
+policy,task,real_success,worldmodel_success
+pi_0,Pick&Place,0.70,0.55
+pi_0,Wipe_table,0.65,0.55
+pi_0,Pick_2_to_1,0.40,0.26
+pi_0,Pick_1_to_2,0.40,0.13
+pi_0,Pick_2_to_2,0.20,0.13
+pi_0.5,Pick&Place,0.90,0.70
+pi_0.5,Wipe_table,0.80,0.70
+pi_0.5,Pick_2_to_1,0.70,0.45
+pi_0.5,Pick_1_to_2,0.60,0.39
+pi_0.5,Pick_2_to_2,0.45,0.26

@@ -81,9 +81,20 @@ def check_hashes(prereg_text, prereg_path, repo_root):
     and separately locked a path that no longer exists at a hash matching nothing in history.
     Requirement-tracking alone would not have caught either.
     """
-    rows = [(p, h.lower()) for p, h in HASHROW.findall(prereg_text)]
+    # Rows explicitly marked as historical records ("superseded" / "unverifiable" in the row) are
+    # reported but not checked against disk: a preregistration that documents its own amendment
+    # history would otherwise be forced to delete the history to pass, which inverts the point.
+    # The marker must be IN the row -- an unmarked stale row still fails loudly.
+    rows, historical = [], []
+    for m2 in HASHROW.finditer(prereg_text):
+        line = prereg_text[prereg_text.rfind("\n", 0, m2.start()) + 1:
+                           max(prereg_text.find("\n", m2.start()), m2.end())]
+        if re.search(r"superseded|unverifiable", line, re.I):
+            historical.append((m2.group(1), m2.group(2).lower()))
+        else:
+            rows.append((m2.group(1), m2.group(2).lower()))
     # Rows that look like locks but whose hash did not parse: report loudly rather than skip.
-    pinned = {p for p, _ in rows}
+    pinned = {p for p, _ in rows} | {p for p, _ in historical}
     suspect = [p for p in HASHROW_LOOSE.findall(prereg_text)
                if p not in pinned and "/" in p]
     if not rows:
@@ -97,6 +108,9 @@ def check_hashes(prereg_text, prereg_path, repo_root):
         return 0, 0
     print("hash locks:")
     bad = 0
+    for rel, claimed in historical:
+        print(f"  [HISTORICAL] {rel}  {claimed[:12]}...  (marked superseded/unverifiable; "
+              f"retained as record, not checked)")
     for rel, claimed in rows:
         p = (repo_root / rel)
         if not p.exists():

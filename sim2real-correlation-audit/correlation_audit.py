@@ -12,7 +12,7 @@ Five checks. Each exists because it caught something real in published work:
                        At k=4 the interval spans most of [-1,1]. That is not a failure of
                        the method -- it is the honest answer, and it is worth printing.
 
-  3. EXACT PERMUTATION Is a test at alpha=0.05 even possible?
+  3. EXACT PERMUTATION Is a permutation test over units at alpha=0.05 even possible?
                        With k units there are k! labelings, so the smallest attainable
                        p-value is 1/k!. At k=3 that is 0.167: no result can reach 0.05.
 
@@ -89,8 +89,10 @@ class Audit:
         alpha=0.05 reported only the leverage message."""
         out = []
         if not self.test_possible:
-            out.append(f"With k={self.k_units}, no test can reach alpha=0.05 "
-                       f"(min p = 1/{self.k_units}! = {self.min_p:.3f}). Do not report a p-value.")
+            out.append(f"With k={self.k_units}, no permutation test over units can reach alpha=0.05 "
+                       f"(min p = 1/{self.k_units}! = {self.min_p:.3f}). A parametric p over pooled "
+                       f"points answers a different question; do not report it as if it were a "
+                       f"unit-level test.")
         if self.fisher_z is None:
             out.append(f"Fisher-z is undefined at k={self.k_units}; there is no interval to report. "
                        f"State k and the drop-one range instead.")
@@ -247,17 +249,17 @@ def _demo() -> int:
         return [r for r in csv.DictReader(l for l in open(here / f) if not l.startswith("#"))]
     out = []
     try:
-        rw = [r for r in rows("data/roboworld.csv") if r["panel"].startswith("9a")]
+        rw = [r for r in rows("data/survey-roboworld.csv") if r["panel"].startswith("9a")]
         a = audit([(float(r["x_real"]), float(r["y_sim"])) for r in rw], [r["series"] for r in rw])
         out.append(report(a, "RoboWorld, Fig. 9a (GPT-4o score)", reported_r=0.989))
     except FileNotFoundError:
-        out.append("data/roboworld.csv not found")
+        out.append("data/survey-roboworld.csv not found")
     try:
-        dc = rows("data/digital-cousins.csv")
+        dc = rows("data/survey-digital-cousins.csv")
         a = audit([(float(r["x_real"]), float(r["y_sim"])) for r in dc], [r["policy"] for r in dc])
         out.append(report(a, "Digital Cousins (unit = architecture)", reported_r=0.91))
     except FileNotFoundError:
-        out.append("data/digital-cousins.csv not found")
+        out.append("data/survey-digital-cousins.csv not found")
     print(("\n\n" + "─" * 74 + "\n\n").join(out))
     print("\n" + "─" * 74)
     print("Same field, same kind of claim, opposite verdicts. RoboWorld has the larger k,")

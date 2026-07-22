@@ -1,2 +1,4 @@
+# Requires Python >= 3.12 (these pinned wheels do not build on 3.9).
+# matplotlib and pytest are installed separately by the Makefile `install` target.
 numpy==2.5.1
 scipy==1.18.0

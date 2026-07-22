@@ -1,0 +1,52 @@
+# Auspex -- Hi-WM world-model-vs-real scatter, RASTER-EXTRACTED from Fig. 6(a)
+# ("Correlation, cost savings, and scaling with intervention data") of arXiv:2604.21741v2.
+#
+# SOURCE: arXiv PDF https://arxiv.org/pdf/2604.21741 (v2, last revised 2026-05-05; version
+#   stamp arXiv:2604.21741v2 confirmed in page margins). Fig 6(a) is an embedded 452x432 JPEG
+#   XObject (xref 560, DCTDecode) on page 10 -- NOT a vector figure, so no path-level recovery
+#   was possible. No appendix, no per-point table, no code/data release (project page
+#   https://hi-wm.github.io/ links only to arXiv).
+# STATUS: EXTRACTED (pixel-level, not eyeballed), 2026-07-21. Reproduces the printed
+#   r = 0.953 as 0.9540 (Delta = 0.001, within extraction noise). Spearman rho = 0.937.
+#
+# METHOD: JPEG decoded via PyMuPDF -> numpy. Axis calibration from plot spines + gridlines:
+#   x: col 43 -> 0.0, col 429 -> 1.0; y: row 402 -> 0.0, row 17 -> 1.0 (horizontal gridlines
+#   at rows 17/94/171/248/325/402, exactly 77 px apart; x tick gaps at cols ~120/197/275/352
+#   confirm linear 0-1 range). Markers found by RGB color masks (4 policy colors) and
+#   decomposed into per-task shapes (circle=Push T, triangle=Fold Towel, square=Route Rope)
+#   by greedy occlusion-aware template matching (templates sized from the navy Tasks-legend
+#   markers: circle d~16.6 px, square ~14.6 px, triangle ~15 px). Legend region excluded.
+#   Exactly 12 markers recovered = 3 tasks x 4 policy variants.
+#   One marker (pi0-post-trained / Fold Towel triangle, top-right cluster) is ~2/3 occluded by
+#   the square and circle; its center was refit manually from the visible bottom-right wedge
+#   (ASCII-mask inspection), pixel (418, 32.5), confidence lower than the rest.
+# PRECISION: centers good to ~+-2 px = +-0.005 data units. Monte-Carlo +-2 px jitter on all
+#   12 points: r in [0.9457, 0.9604]. Excluding the occluded point: r = 0.9513.
+# NO SNAPPING applied: the paper states NO per-condition trial counts for this evaluation
+#   (Table 2 percentages imply n~34-38 real trials elsewhere, but Fig 6(a) real-axis values do
+#   NOT match Table 2 -- see DIAGNOSIS), so no denominator grid exists to snap to. Values are
+#   reported at 3 decimals of the calibrated pixel readout.
+# DIAGNOSIS: Fig 6(a) real-world success rates are inconsistent with Table 2's real-world
+#   success rates for the nominally same conditions: DP-base plots at 0.62-0.66 vs Table 2
+#   Base/DP = 42.1/52.9/47.0; pi0-base plots at 0.77-0.88 vs Table 2 Base/Pi0 = 55.3/76.5/64.7;
+#   post-trained points are close to but not equal to the "Ours" rows (e.g. 0.927 vs 92.1).
+#   The correlation evaluation therefore appears to use a different (unstated) protocol or
+#   scene set. r is computed over POOLED tasks x policy variants (unit-of-analysis pooling);
+#   no uncertainty, trial counts, or checkpoint-selection rule is reported anywhere in v2.
+#
+# columns: policy, task, generated_success_rate (x), real_success_rate (y), px_x, px_y, note
+policy,task,generated_success_rate,real_success_rate,px_x,px_y,note
+pi0-base,Push T,0.687,0.881,308,63,
+pi0-base,Fold Towel,0.500,0.766,236,107,
+pi0-base,Route Rope,0.710,0.847,317,76,
+pi0-post-trained,Push T,0.948,0.956,409,34,
+pi0-post-trained,Fold Towel,0.972,0.960,418,32.5,occluded marker; center refit from visible wedge; lower confidence
+pi0-post-trained,Route Rope,0.984,0.979,423,25,marker clipped at right spine
+DP-base,Push T,0.503,0.652,237,151,
+DP-base,Fold Towel,0.433,0.657,210,149,
+DP-base,Route Rope,0.469,0.621,224,163,
+DP-post-trained,Push T,0.873,0.896,380,57,
+DP-post-trained,Fold Towel,0.904,0.927,392,45,
+DP-post-trained,Route Rope,0.907,0.961,393,32,
+# recomputed: Pearson r = 0.9540 (p = 1.5e-06), Spearman rho = 0.9371, n = 12
+# printed:    Pearson r = 0.953 (abstract, Sec 4.2.3, and inside Fig 6(a))

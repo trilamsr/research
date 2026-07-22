@@ -1,0 +1,36 @@
+# Colosseum V2 (arXiv:2605.27759v1) — sim-vs-hardware success rates, RECOVERED from the
+# paper's own LaTeX-source comments (main.tex, figure block for fig:hardware_vs_sim).
+# The per-task arrays sim[6]/hw[6], per-task R^2 and Spearman rho, and "Average spearman: 0.916"
+# are typeset-as-comments (%) in the arXiv e-print source, not printed in the compiled PDF.
+# Headline in PDF text: avg R^2 across 3 tasks = 0.798; avg Spearman = 0.916.
+#
+# VALIDATION: recomputed avg R^2 = 0.79812 (paper 0.798, exact); avg Spearman = 0.91605
+#   (paper 0.916, exact). Per-task R^2/Spearman reproduce the commented values exactly.
+# UNITS: policy = ONE multitask single-arm ACT model trained from scratch (pi0.5 is the other
+#   benchmark baseline but the hardware sim-vs-real test uses ACT single-arm only).
+#   Points = perturbation conditions x task. Marker order per figure caption:
+#   none, background_color, distractor_objects, light_color, mo_size, mo_color = 6 conditions.
+# NOTE: Sec "Experiment Setup" prose names only FIVE conditions
+#   (none, mo_size, mo_color, background_color, light_color); the figure caption + data arrays
+#   have SIX (adds distractor_objects). Discrepancy confirmed.
+# CAVEAT: paper's commented "R^2 of all points equals 0.209" does not reproduce (we get 0.2228
+#   pooling all 18); the headline per-task-averaged values do reproduce exactly.
+task,condition,sim_success,hw_success
+RaiseCube,none,55,100.0
+RaiseCube,background_color,42.5,99.0
+RaiseCube,distractor_objects,10,81.5
+RaiseCube,light_color,35,85.0
+RaiseCube,mo_size,50,100.0
+RaiseCube,mo_color,0,41.5
+RotateArrow,none,65,97.0
+RotateArrow,background_color,57.5,86.0
+RotateArrow,distractor_objects,25,14.5
+RotateArrow,light_color,50,58.5
+RotateArrow,mo_size,50,94.5
+RotateArrow,mo_color,50,45.5
+LiftPegUpright,none,60,53.5
+LiftPegUpright,background_color,15.0,24.0
+LiftPegUpright,distractor_objects,25,28.0
+LiftPegUpright,light_color,50,37.5
+LiftPegUpright,mo_size,30,25.0
+LiftPegUpright,mo_color,45,36.5

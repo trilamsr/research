@@ -1,0 +1,28 @@
+# Gemini/Veo (arXiv:2512.10675v2) — nominal video-model-vs-real success, RECOVERED by pixel-reading
+# the 8 labeled markers (A-H) in the nominal correlation figure (fig:nominal results,
+# src/assets/nominal_correlation.pdf). That figure is a vector wrapper whose SCATTER is a rasterized
+# 880x836 image, but whose HEADLINE ANNOTATION is extractable vector text:
+#   "MMRV = 0.03 / Pearson = 0.88" -- these headline values are typeset ONLY inside the figure and are
+#   CONFIRMED ABSENT from the body text (body says only "strong linear correlation" qualitatively).
+#
+# STRUCTURE: the 8 points are "eight variants of the GROD policy" / "eight generalist policy
+#   checkpoints" (Sec nominal setup) -- all variants/checkpoints of one GROD base model. The paper
+#   NEVER states whether the 8 are independent training runs or checkpoints/variants of one base
+#   ("independence unstated"). k coded 8, flagged "8?". x = real success rate, y = Veo (Robotics)
+#   predicted success rate.
+#
+# VALIDATION: Pearson over the 8 recovered points = 0.8879 -> figure's 0.88 (exact to 2 dp).
+#   Coordinates read to +-0.01 off the raster.
+# NOTE ON OOD: the body text prints exactly ONE secondary OOD Pearson pair ("Pearson = 0.86", MMRV=0.06,
+#   policy-A axis-difficulty). The 4-panel OOD figure (ood_policy_comparison.pdf) prints four more
+#   Pearsons ONLY inside the figure: Object=0.91/MMRV0.0, Background=0.86/MMRV0.10, SmallDistractor=0.56/MMRV0.15,
+#   LargeDistractor=0.77/MMRV0.14 (labels/values via vector text extraction).
+variant,real_success,veo_predicted_success
+A,0.30,0.69
+B,0.225,0.655
+C,0.18,0.54
+D,0.01,0.325
+E,0.01,0.05
+F,0.125,0.425
+G,0.115,0.53
+H,0.025,0.335

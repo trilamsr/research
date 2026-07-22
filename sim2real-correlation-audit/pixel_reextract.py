@@ -21,7 +21,7 @@ PDF_HELP = (
     "https://arxiv.org/e-print/2607.01060 (v3), extract the archive, and use "
     "appendix_figure/ranking_plot_compare_gpt_gemini_pearson_score.pdf"
 )
-CSV_PATH = Path(__file__).resolve().parent / "data" / "roboworld.csv"
+CSV_PATH = Path(__file__).resolve().parent / "data" / "survey-roboworld.csv"
 DPI = 300
 
 X_TICKS = [800, 1000, 1200, 1400, 1600]      # left-to-right, read from figure
@@ -80,7 +80,7 @@ def main() -> int:
     ap = argparse.ArgumentParser(
         description="Re-extract RoboWorld Fig 9a marker coordinates from the rendered "
                     "figure PDF by pixel operations only, then compare against the "
-                    "vector extraction in data/roboworld.csv.")
+                    "vector extraction in data/survey-roboworld.csv.")
     ap.add_argument("--pdf", default=DEFAULT_PDF, help=PDF_HELP)
     args = ap.parse_args()
 

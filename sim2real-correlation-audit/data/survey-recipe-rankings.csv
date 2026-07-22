@@ -1,0 +1,39 @@
+# Auspex -- "A Practical Recipe" (arXiv:2606.10366v1) policy-ranking table, TRANSCRIBED from
+# tab:policy_rankings (example.tex) and the paired correlation table tab:real_to_sim_metrics.
+#
+# SOURCE: arXiv e-print tarball https://arxiv.org/e-print/2606.10366v1 (gzip dated 2026-06-10) ->
+#   example.tex. NO scatter figure exists in this paper (string "scatter" appears 0 times in the
+#   source; the only figures are Visualize.pdf [pure raster, 0 vector drawings], Pert/Perturbations,
+#   zTeaser, Image-1, demos). This CONFIRMS the audit's "no scatter" claim.
+# STUDY SHAPE: 5 VLA policies -- A=pi_0, B=pi_0-FAST, C=pi_0.5, D=GR00T N1.6, E=GR00T N1.7 --
+#   evaluated across 3 simulators (VLA-Arena/Mujoco, SIMPLER/Sapien, REALM/Isaac-Sim) and up to
+#   4 perturbation dimensions (Vision, Layout, Language, Behavior; SIMPLER lacks Behavior).
+#   The paper reports, per (Env, Dim): a 5-policy ORDER string (best->worst) and the resulting
+#   Spearman rho, Pearson r, MMRV vs the real-world order. So each correlation is an n=5
+#   per-dimension correlation, NOT a single 5-VLA scatter.
+#
+# RECOVERABILITY:
+#   * SPEARMAN rho IS RECOVERABLE and validates EXACTLY. Spearman needs only ranks, and the
+#     ranking table gives them directly. All 11 published rho values reproduce to +-0.00 from
+#     the order strings (verified: VLA-Arena V/L/La/B = 0.000/0.800/1.000/0.500; SIMPLER
+#     V/L/La = 0.700/0.300/0.200; REALM V/L/La/B = 0.600/0.900/0.600/0.700).
+#   * PEARSON r is NOT RECOVERABLE. The paper releases orderings, not the underlying absolute
+#     per-policy success rates, so the linear-scale Pearson r (and MMRV's margins) cannot be
+#     recomputed from released data. No code/dataset/project page is linked (abstract has no
+#     Comments field; no GitHub/HF in source).
+#
+# COLUMNS: env; simulator; dim; sim_order (best->worst over A-E as printed);
+#   real_order (real-world best->worst for that dim); printed_rho; printed_r; printed_mmrv;
+#   recomputed_spearman (from the two order strings).
+env,simulator,dim,sim_order,real_order,printed_rho,printed_r,printed_mmrv,recomputed_spearman
+VLA-Arena,Mujoco,Vision,CBAED,ECADB,0.000,0.241,0.188,0.000
+VLA-Arena,Mujoco,Layout,CEADB,CAEBD,0.800,0.858,0.016,0.800
+VLA-Arena,Mujoco,Language,CABED,CABED,1.000,0.987,0.000,1.000
+VLA-Arena,Mujoco,Behavior,CABED,CEADB,0.500,0.814,0.035,0.500
+SIMPLER,Sapien,Vision,EDCAB,ECADB,0.700,0.701,0.102,0.700
+SIMPLER,Sapien,Layout,ECDAB,CAEBD,0.300,0.420,0.056,0.300
+SIMPLER,Sapien,Language,CEDAB,CABED,0.200,0.086,0.226,0.200
+REALM,Isaac-Sim,Vision,CEBAD,ECADB,0.600,0.672,0.046,0.600
+REALM,Isaac-Sim,Layout,CEABD,CAEBD,0.900,0.865,0.008,0.900
+REALM,Isaac-Sim,Language,CEBAD,CABED,0.600,0.722,0.042,0.600
+REALM,Isaac-Sim,Behavior,CEBAD,CEADB,0.700,0.882,0.023,0.700

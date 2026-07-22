@@ -6,3 +6,4 @@ proposals/
 PROPOSAL*
 .venv/
 dynamics-fidelity/
+*.ots

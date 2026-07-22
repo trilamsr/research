@@ -15,7 +15,7 @@ from matplotlib.lines import Line2D
 
 # Portable: works from a checkout (figures/make_figures.py) or a copy elsewhere.
 _here = os.path.dirname(os.path.abspath(__file__))
-PAPER = _here[:-len("/figures")] if _here.endswith("/figures") else "/Users/treedesk/Desktop/auspex/research/sim2real-correlation-audit"
+PAPER = _here[:-len("/figures")] if _here.endswith("/figures") else os.getcwd()
 FIGS = PAPER + "/figures"
 os.makedirs(FIGS, exist_ok=True)
 sys.path.insert(0, PAPER)
@@ -53,7 +53,7 @@ def make_fig1_roboworld_leverage():
     Shows the leverage finding: r = 0.989 over all 8 policies falls to 0.798
     when the single high-leverage unit (hat value 0.978) is removed.
     """
-    p9a = [r for r in load_csv("roboworld.csv") if r["panel"].startswith("9a")]
+    p9a = [r for r in load_csv("survey-roboworld.csv") if r["panel"].startswith("9a")]
     x = np.array([float(r["x_real"]) for r in p9a])
     y = np.array([float(r["y_sim"]) for r in p9a])
     names = [r["series"] for r in p9a]
@@ -125,7 +125,7 @@ def make_fig3_survey_k_dotplot():
     ax.legend(handles=handles, frameon=False, fontsize=7.5, loc="lower right")
     save(fig, "fig3_survey_k_dotplot")
     n1 = sum(1 for _, k, _ in recs if k == 1); n23 = sum(1 for _, k, _ in recs if 2 <= k <= 3)
-    print(f"VERIFY survey: n={len(recs)}  k=1: {n1} (paper: 5)  k=2-3: {n23} (paper: 6)")
+    print(f"VERIFY survey: n={len(recs)}  k=1: {n1} (paper: 6)  k=2-3: {n23} (paper: 9)")
 
 
 def make_fig2_dc_bootstrap_comb():
@@ -135,7 +135,7 @@ def make_fig2_dc_bootstrap_comb():
     r values (atoms), and overlays the smooth density a percentile CI presumes.
     Marks the 2.5% quantile to show how few resamples set the CI endpoint.
     """
-    dc = load_csv("digital-cousins.csv")
+    dc = load_csv("survey-digital-cousins.csv")
     pols = sorted(set(r["policy"] for r in dc))
     cl = {p: ([float(r["x_real"]) for r in dc if r["policy"] == p],
               [float(r["y_sim"]) for r in dc if r["policy"] == p]) for p in pols}

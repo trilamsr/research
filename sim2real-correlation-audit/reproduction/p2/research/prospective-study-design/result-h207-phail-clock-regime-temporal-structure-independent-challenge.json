@@ -1,0 +1,69 @@
+{
+  "schema": "h207-phail-clock-regime-temporal-independent-challenge-v1",
+  "target_producer_result_sha256": "31ef2b4162157769bf9f99ce47f50865076b99e114c7a67592319ce8df2b2252",
+  "input_sha256": {
+    "h202_projection": "44b7cd9729c691a610cc1fbbefffc5668d31030e013b92f2d4550f9869020370",
+    "h206_projection": "7b7af23688e230325ec69070c8e5cd5523224990d7bc44defbe5b30f12c65529"
+  },
+  "implementation": {
+    "language": "Node.js",
+    "node": "v26.5.0",
+    "producer_imported_or_executed": false,
+    "csv_parser": "independent exact-width line parser",
+    "rng": "independent SplitMix64 and Fisher-Yates stream",
+    "seed_text": "H207 independent challenge SplitMix64 v1",
+    "permutations": 49999
+  },
+  "episode_count": 594,
+  "group_sizes": {
+    "1": 250,
+    "2": 344
+  },
+  "pooled_pair_count": 592,
+  "challenge_controls": {
+    "known_distance": true,
+    "deterministic_replay": true,
+    "restricted_membership": true
+  },
+  "analyses": {
+    "pooled_within_regime": {
+      "observed_mean_successive_squared_distance": 14.516041679862193,
+      "permutation_median": 14.08496766761458,
+      "permutation_q025": 13.661241900123674,
+      "permutation_q975": 14.510787033297284,
+      "observed_to_permutation_median_ratio": 1.030605253943094,
+      "lower_tail_p": 0.97634,
+      "upper_tail_p": 0.02368,
+      "two_sided_p": 0.04736,
+      "permutations": 49999
+    },
+    "regime_1": {
+      "observed_mean_successive_squared_distance": 14.345201796132823,
+      "permutation_median": 13.97024728630946,
+      "permutation_q025": 13.315800659124257,
+      "permutation_q975": 14.622646424047943,
+      "observed_to_permutation_median_ratio": 1.0268395041361087,
+      "lower_tail_p": 0.87092,
+      "upper_tail_p": 0.1291,
+      "two_sided_p": 0.2582,
+      "permutations": 49999
+    },
+    "regime_2": {
+      "observed_mean_successive_squared_distance": 14.640062470091387,
+      "permutation_median": 14.170457974984059,
+      "permutation_q025": 13.605479543155026,
+      "permutation_q975": 14.73284378912089,
+      "observed_to_permutation_median_ratio": 1.0331396836952165,
+      "lower_tail_p": 0.94874,
+      "upper_tail_p": 0.05128,
+      "two_sided_p": 0.10256,
+      "permutations": 49999
+    }
+  },
+  "classification": "no_detectable_clock_regime_temporal_structure_at_fixed_resolution",
+  "producer_classification": "no_detectable_clock_regime_temporal_structure_at_fixed_resolution",
+  "later_state_or_performance_opened": false,
+  "clock_regime_treated_as_session": false,
+  "independence_established": false,
+  "unresolved_material_concerns": []
+}

@@ -1,0 +1,21 @@
+{
+  "dataset_role": "eval_session",
+  "derivation_script": "sir.scripts.split_real_eval_policy_episodes",
+  "derived_repo_ids": [
+    "ankile/real01b-marker-d2-r5-baseline-nocf-heval-s2026070704-policy-rollouts",
+    "ankile/real01b-marker-d2-r5-ours-freecf-dp-heval-s2026070704-policy-rollouts",
+    "ankile/real01b-marker-d2-r5-ours-freecf-iql-vpcfinal-n16-heval-s2026070704-policy-rollouts"
+  ],
+  "derived_repos": [
+    "ankile/real01b-marker-d2-r5-baseline-nocf-heval-s2026070704-policy-rollouts",
+    "ankile/real01b-marker-d2-r5-ours-freecf-dp-heval-s2026070704-policy-rollouts",
+    "ankile/real01b-marker-d2-r5-ours-freecf-iql-vpcfinal-n16-heval-s2026070704-policy-rollouts"
+  ],
+  "manifest_path": "experiments/2026-07-09/blind_inputs/marker_d2_r5_eval_heldout_independent_sobol_seed2026070704.json",
+  "repo_id": "ankile/real01b-marker-d2-r5-trio-baseline-dp-iql-cfinal-n16-heval-sobolseed2026070704",
+  "role": "blinded_parent",
+  "schema_version": 1,
+  "source_type": "eval",
+  "task": "marker_d2",
+  "trainable": false
+}

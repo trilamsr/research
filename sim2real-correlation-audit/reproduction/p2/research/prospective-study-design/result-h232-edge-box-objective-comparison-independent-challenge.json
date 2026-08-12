@@ -1,0 +1,70 @@
+{
+  "schema": "h232-edge-box-objective-comparison-independent-challenge-v1",
+  "status": "pass",
+  "classification": "same_uniform_action_different_objectives",
+  "protocol_sha256": "c5c0e7e13381da28fa488e834dc3ff294fd0e1303ff9e0ef93172374d93a9903",
+  "producer_implementation_sha256": "d1f7cf33078868cca5901e0c0e84b65f44fb5af11640cbf42561aeb37b1bfcb1",
+  "producer_result_sha256": "f6ac85f87b9a6383e951892fbe8b1cc937ef7abda35b8265bdeccbf77f370948",
+  "runtime": {
+    "node": "v26.5.0"
+  },
+  "exact_endpoint_grid_cases": 382,
+  "exact_simplex_grid_points": 382,
+  "rows": [
+    {
+      "k": 3,
+      "edge_count": 3,
+      "endpoint_count": 8,
+      "grid_size": 91,
+      "scaled_robust_uniform_margin_numerator": -8,
+      "scaled_robust_margin_denominator": 24,
+      "p2_borda_regret": "2/12",
+      "excluded_action_witness_winners": [
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "k": 4,
+      "edge_count": 6,
+      "endpoint_count": 64,
+      "grid_size": 165,
+      "scaled_robust_uniform_margin_numerator": -6,
+      "scaled_robust_margin_denominator": 16,
+      "p2_borda_regret": "3/16",
+      "excluded_action_witness_winners": [
+        1,
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "k": 5,
+      "edge_count": 10,
+      "endpoint_count": 1024,
+      "grid_size": 126,
+      "scaled_robust_uniform_margin_numerator": -4,
+      "scaled_robust_margin_denominator": 10,
+      "p2_borda_regret": "4/20",
+      "excluded_action_witness_winners": [
+        1,
+        2,
+        3,
+        4,
+        0
+      ]
+    }
+  ],
+  "independently_verified": {
+    "zero_matrix_maximal_set": "entire simplex",
+    "possible_equilibrium_actions": "all",
+    "necessary_equilibrium_actions": "none",
+    "robust_margin_for_p": "-(1-min_i p_i)/2",
+    "robust_unique_lottery": "uniform",
+    "p2_unique_lottery": "uniform",
+    "objectives_and_values_differ": true
+  },
+  "imports_or_executes_producer": false
+}

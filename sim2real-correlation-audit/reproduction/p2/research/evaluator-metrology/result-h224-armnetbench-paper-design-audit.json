@@ -1,0 +1,402 @@
+{
+  "decisions": {
+    "h022_corresponding_video_scoring_reclassified": false,
+    "h022_existing_blockers_all_closed": false,
+    "h022_preexecution_evaluator_present": false,
+    "h022_status": "refused_unchanged",
+    "linked_artifact_followup_authorized": false,
+    "p2_assignment_reset_order_dependence_sufficient": false,
+    "p2_classification": "adverse_mismatch_contrast",
+    "p2_context_committed_before_policy_assignment": false,
+    "p2_evidence_role": "prospective_temporal_out_of_sample_adverse_design_contrast",
+    "p2_positive_design_contrast_eligible": false,
+    "paper_promotion_requires_independent_challenge": true
+  },
+  "dependencies": {
+    "h028_result_sha256": "40578851f962399cf0e6bca4eca95417ed28c419f6fe486b6ac8d08408698482",
+    "h029_result_sha256": "82dd62ad96cdce928774705a214f9161ec694e1a3b7edc57c385d36ced3f272c",
+    "h222_result_sha256": "3bf46af0c4e3bed9b7f05c0553098d1689cd825860638d121c194c7c59fd087b"
+  },
+  "evidence_units": [
+    {
+      "anchors": [
+        {
+          "contains": "We release the core benchmark in LeRobot",
+          "line": 581
+        },
+        {
+          "contains": "huggingface.co/collections/armnet/armnetbench-v01",
+          "line": 583
+        }
+      ],
+      "audit_inference": "The paper/version is immutable, but the collection link supplies no dataset commit, tag, or content hash. H028 separately pins one dataset tag.",
+      "author_statement": "The paper links a named Hub collection and names both release formats.",
+      "name": "immutable_paper_dataset_repository_identity",
+      "source_locations": [
+        "main.tex:581-583",
+        "PDF p.9"
+      ],
+      "status": "partial",
+      "unit_id": 1
+    },
+    {
+      "anchors": [
+        {
+          "contains": "We evaluate two specialist imitation policies",
+          "line": 391
+        },
+        {
+          "contains": "We release every evaluated task--policy checkpoint.",
+          "line": 396
+        }
+      ],
+      "audit_inference": "No evaluated checkpoint revision or content hash is stated; H028 found public checkpoint links but no immutable revision binding.",
+      "author_statement": "Seven policy families are named and every task-policy checkpoint is said to be released.",
+      "name": "versioned_policy_roster_and_immutable_checkpoints",
+      "source_locations": [
+        "main.tex:390-396",
+        "PDF p.5"
+      ],
+      "status": "partial",
+      "unit_id": 2
+    },
+    {
+      "anchors": [
+        {
+          "contains": "A user submits a policy image, embodiment, and task.",
+          "line": 285
+        },
+        {
+          "contains": "image and runs it locally in an isolated container",
+          "line": 286
+        },
+        {
+          "contains": "Each task--policy pair targets 30 rollouts.",
+          "line": 400
+        }
+      ],
+      "audit_inference": "This supports standalone policy execution, while physical carryover between successive rollouts remains a separate unresolved unit.",
+      "author_statement": "A submitted policy runs in an isolated container and each task-policy pair receives its own physical rollouts.",
+      "name": "standalone_per_policy_physical_execution",
+      "source_locations": [
+        "main.tex:284-292",
+        "main.tex:398-406",
+        "PDF pp.4,6"
+      ],
+      "status": "supported",
+      "unit_id": 3
+    },
+    {
+      "anchors": [
+        {
+          "contains": "We partitioned tasks across cells so that all seven",
+          "line": 308
+        },
+        {
+          "contains": "policies for a task ran on the \\emph{same} cell",
+          "line": 309
+        },
+        {
+          "contains": "sampled independently rather than matched across policies.",
+          "line": 404
+        }
+      ],
+      "audit_inference": "The task/cell context is described, but the source does not establish that the allocation rule was committed before policy choice or execution.",
+      "author_statement": "All policies for a task ran on one cell, with independently sampled initial states.",
+      "name": "context_definition_and_allocation_timing",
+      "source_locations": [
+        "main.tex:304-311",
+        "main.tex:398-406",
+        "PDF pp.4,6"
+      ],
+      "status": "partial",
+      "unit_id": 4
+    },
+    {
+      "anchors": [
+        {
+          "contains": "object positions are randomised",
+          "line": 219
+        },
+        {
+          "contains": "randomises object placement within a task-specific range.",
+          "line": 403
+        },
+        {
+          "contains": "sampled independently rather than matched across policies.",
+          "line": 404
+        }
+      ],
+      "audit_inference": "No policy assignment mechanism, policy execution sequence, randomization draw, or order log is reported.",
+      "author_statement": "Operators randomized object placement independently between rollouts.",
+      "name": "assignment_randomization_and_execution_order_law",
+      "source_locations": [
+        "main.tex:219-220",
+        "main.tex:400-406",
+        "PDF pp.3,6"
+      ],
+      "status": "partial",
+      "unit_id": 5
+    },
+    {
+      "anchors": [
+        {
+          "contains": "episode were removed due to incorrect manual resets",
+          "line": 401
+        },
+        {
+          "contains": "Before each rollout, an operator resets the scene",
+          "line": 402
+        },
+        {
+          "contains": "Object deterioration.",
+          "line": 551
+        },
+        {
+          "contains": "Physical cell changes.",
+          "line": 554
+        }
+      ],
+      "audit_inference": "There is no measured reset-acceptance rule, restoration trace, complete intervention log, or adjustment for physical carryover.",
+      "author_statement": "An operator resets before each rollout; two incorrect resets were removed, and object/camera changes are disclosed.",
+      "name": "reset_restoration_acceptance_carryover_and_interventions",
+      "source_locations": [
+        "main.tex:398-419",
+        "main.tex:539-559",
+        "PDF pp.6,8-9"
+      ],
+      "status": "partial",
+      "unit_id": 6
+    },
+    {
+      "anchors": [
+        {
+          "contains": "We collected v0.1 on 3 cells co-located in a single room",
+          "line": 306
+        },
+        {
+          "contains": "Every episode has 3",
+          "line": 424
+        },
+        {
+          "contains": "and episode metadata",
+          "line": 436
+        },
+        {
+          "contains": "\\texttt{policy\\_repo\\_id}).",
+          "line": 438
+        }
+      ],
+      "audit_inference": "It does not publish a session/operator/order identity or declare the dependence unit needed for comparative uncertainty.",
+      "author_statement": "The paper identifies cells and episodes and describes per-episode metadata.",
+      "name": "episode_session_cluster_identity_and_dependence_unit",
+      "source_locations": [
+        "main.tex:304-311",
+        "main.tex:421-440",
+        "PDF pp.4,6"
+      ],
+      "status": "partial",
+      "unit_id": 7
+    },
+    {
+      "anchors": [
+        {
+          "contains": "standardised per-task wall-clock limits",
+          "line": 405
+        },
+        {
+          "contains": "operator judgement.",
+          "line": 406
+        },
+        {
+          "contains": "The on-site operator then scores the rollout",
+          "line": 407
+        },
+        {
+          "contains": "\\emph{three-way quality label}:",
+          "line": 408
+        },
+        {
+          "contains": "corrupted or unlabelled source episodes are excluded.",
+          "line": 419
+        }
+      ],
+      "audit_inference": "Evaluator role and label classes are documented, but the horizon is not standardized and exclusion/missingness handling is not identification-complete.",
+      "author_statement": "An on-site operator assigns a three-way label; the paper identifies excluded episodes and operator-dependent stopping.",
+      "name": "rubric_horizon_missingness_and_evaluator_identity",
+      "source_locations": [
+        "main.tex:398-419",
+        "PDF p.6"
+      ],
+      "status": "partial",
+      "unit_id": 8
+    },
+    {
+      "anchors": [
+        {
+          "contains": "episodes define the \\emph{core benchmark}",
+          "line": 427
+        },
+        {
+          "contains": "We release the core benchmark in two formats.",
+          "line": 434
+        },
+        {
+          "contains": "\\texttt{success}, \\texttt{success\\_class}, \\texttt{policy\\_type}",
+          "line": 437
+        },
+        {
+          "contains": "preserve the operator-assigned outcomes",
+          "line": 441
+        }
+      ],
+      "audit_inference": "Together with H029's immutable non-outcome projection, this supports public per-trial linkage for the core dataset, not H022 timing.",
+      "author_statement": "The released episode formats carry per-episode policy identity, media, and operator-assigned outcome fields.",
+      "name": "public_per_trial_artifact_outcome_linkage",
+      "source_locations": [
+        "main.tex:421-441",
+        "main.tex:581-583",
+        "PDF pp.6,9"
+      ],
+      "status": "supported",
+      "unit_id": 9
+    },
+    {
+      "absent_terms": [
+        "confidence interval",
+        "credible interval",
+        "standard error",
+        "bootstrap"
+      ],
+      "anchors": [
+        {
+          "contains": "all reported",
+          "line": 427
+        },
+        {
+          "contains": "Cross-cell physical reproducibility",
+          "line": 530
+        }
+      ],
+      "audit_inference": "No uncertainty method tied to assignment, order, cell, session, or another declared dependence unit is provided.",
+      "author_statement": "The audited source reports rollout counts and explicitly leaves cross-cell reproducibility unanswered.",
+      "name": "uncertainty_matches_dependence_and_assignment",
+      "source_locations": [
+        "complete main.tex design/methods/discussion audit"
+      ],
+      "status": "absent_from_fixed_scope",
+      "unit_id": 10
+    },
+    {
+      "anchors": [
+        {
+          "contains": "Logs and video stream to the control panel",
+          "line": 288
+        },
+        {
+          "contains": "The on-site operator then scores the rollout",
+          "line": 407
+        },
+        {
+          "contains": "used to train or fine-tune action-conditioned world",
+          "line": 444
+        }
+      ],
+      "audit_inference": "The paper supplies no pre-execution evaluator capable of scoring every candidate without corresponding physical-execution media.",
+      "author_statement": "Operators score completed rollouts; world models are mentioned only as a downstream use of released trajectories.",
+      "name": "preexecution_simulator_or_world_model_evaluator",
+      "source_locations": [
+        "main.tex:284-292",
+        "main.tex:432-445",
+        "PDF pp.4,6"
+      ],
+      "status": "absent_from_fixed_scope",
+      "unit_id": 11
+    },
+    {
+      "anchors": [
+        {
+          "contains": "\\textbf{Cost.}",
+          "line": 256
+        },
+        {
+          "contains": "summarises deployment scale and operator workload.",
+          "line": 314
+        },
+        {
+          "contains": "a retrospective estimate rather than a measurement",
+          "line": 317
+        },
+        {
+          "contains": "Cells supervised concurrently per operator",
+          "line": 331
+        }
+      ],
+      "audit_inference": "This is useful operational capacity evidence; the active-time figure is retrospective and not a measured trial-level cost record.",
+      "author_statement": "The paper reports a component bill of materials, deployment scale, concurrent supervision, and an estimated active operator burden.",
+      "name": "cost_and_capacity",
+      "source_locations": [
+        "main.tex:256-280",
+        "main.tex:313-332",
+        "PDF pp.3-5"
+      ],
+      "status": "supported",
+      "unit_id": 12
+    }
+  ],
+  "interpretation": "ArmnetBench supplies useful same-cell, standalone-execution, public per-trial, and capacity infrastructure. It is not a positive P2 design contrast because context commitment, policy assignment/order, reset acceptance, and dependence-aware uncertainty are not auditable. The new paper does not change H022's refusal.",
+  "observed_utc": "2026-07-28T21:35:38.517758+00:00",
+  "outcome_exposure": {
+    "abstract_aggregate_counts_and_label_schema_visible": true,
+    "performance_values_extracted_or_used": false,
+    "performance_values_incidentally_visible": true,
+    "policy_rankings_compared_or_interpreted": false,
+    "protocol_fixed_before_abstract_pdf_or_source_open": true,
+    "required_page_8_visual_check_exposed_result_tables": true,
+    "results_search_incidentally_displayed_one_performance_sentence": true,
+    "results_section_deliberately_audited": false,
+    "source_selected_before_outcomes": true
+  },
+  "protocol_sha256": "75041dd4b1808915bfea9e08ae90109b81498e055644d1aea2434e0b290638b2",
+  "schema": "h224-armnetbench-paper-design-audit-v1",
+  "scope_limits": {
+    "author_contacted": false,
+    "linked_code_data_or_media_newly_opened": false,
+    "policy_performance_used": false,
+    "protected_p1_outcomes_accessed": false,
+    "sealed_p3_frame_accessed": false
+  },
+  "source": {
+    "arxiv_id": "2607.24481v1",
+    "authors": [
+      "Praveen Selvaraj",
+      "Lorenzo Uttini",
+      "Ville Kuosmanen"
+    ],
+    "main_tex_sha256": "8ceaa0e443e561c90b376a22e5c4d541243685d5cb3d42b04d905118907f6e20",
+    "pdf_bytes": 1989885,
+    "pdf_pages": 11,
+    "pdf_sha256": "c1d0edbd163f6db2597da67c4afe03e8b63deb3c2eefbfca613db3ff5319951e",
+    "pdf_url": "https://arxiv.org/pdf/2607.24481v1",
+    "rendered_pages_legible_and_source_consistent": true,
+    "rendered_pdf_pages_visually_checked": [
+      3,
+      4,
+      5,
+      6,
+      8,
+      9
+    ],
+    "source_bytes": 2354476,
+    "source_sha256": "21e4d8b117878e4d42d810da6e8e2a711c11e146dc389d1fd4ba7da97cf12bf1",
+    "source_url": "https://export.arxiv.org/src/2607.24481v1",
+    "submitted_utc": "2026-07-27T14:16:43Z",
+    "title": "ArmnetBench v0.1: Parallel Real-World Evaluation of Manipulation Policies on a Low-Cost Arm Farm"
+  },
+  "status_counts": {
+    "absent_from_fixed_scope": 2,
+    "not_assessed": 0,
+    "partial": 7,
+    "supported": 3
+  }
+}

@@ -1,0 +1,685 @@
+{
+  "adjudications": [
+    {
+      "anchor_line": 136,
+      "classification": "css_or_visual_structure",
+      "features": {
+        "contains_executable_assignment_operation": false,
+        "identifies_evaluation_unit_and_assigned_object": false,
+        "maps_before_evaluation": false,
+        "specifies_randomization_or_deterministic_selection": false,
+        "supplies_probability_support_seed_permutation_block_stratum_weight_schedule_orientation_or_order_rule": false
+      },
+      "h113_context_hits": [
+        "policy"
+      ],
+      "h113_matched_line_sha256": [
+        "7b22b5f86649e9209f4f2ef06c90a2e2a2172ca09b3a88fc5cccd2a075fce09f",
+        "76099a1657bea5a867a4c0b6215759d6e50fde45730f17ee0e6e5511c02d5a0c",
+        "c4b8b396c2eb1e3c17ae2cdec06d8b8841b74194336a1fe743784414784dc3b1"
+      ],
+      "h113_mechanism_hits": [
+        "block"
+      ],
+      "path": "src/components/EvaluationCard.jsx",
+      "rationale_code": "component_css_class",
+      "window_end": 138,
+      "window_line_sha256": [
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "f384a560ae4d5337eccc7844047383cd9b8afad74c35d65301676e6773de3fe9",
+        "7b22b5f86649e9209f4f2ef06c90a2e2a2172ca09b3a88fc5cccd2a075fce09f",
+        "76099a1657bea5a867a4c0b6215759d6e50fde45730f17ee0e6e5511c02d5a0c",
+        "c4b8b396c2eb1e3c17ae2cdec06d8b8841b74194336a1fe743784414784dc3b1"
+      ],
+      "window_start": 134
+    },
+    {
+      "anchor_line": 168,
+      "classification": "post_evaluation_display_or_filter",
+      "features": {
+        "contains_executable_assignment_operation": false,
+        "identifies_evaluation_unit_and_assigned_object": false,
+        "maps_before_evaluation": false,
+        "specifies_randomization_or_deterministic_selection": false,
+        "supplies_probability_support_seed_permutation_block_stratum_weight_schedule_orientation_or_order_rule": false
+      },
+      "h113_context_hits": [
+        "policy"
+      ],
+      "h113_matched_line_sha256": [
+        "9034cd87c39a1ff61ebc82074d31c8d3ed1d197ad11a9b82121452e9b61207ee",
+        "36c2a86c5c96bbe80fa3499642c6ba777649831b25a58b23681f6c45532cc0f9"
+      ],
+      "h113_mechanism_hits": [
+        "sample"
+      ],
+      "path": "src/components/PolicyInsightPanel.jsx",
+      "rationale_code": "low_evaluation_count_badge",
+      "window_end": 170,
+      "window_line_sha256": [
+        "f3fb81862e6574b675a0ad498664e03e5863b82448066778298a881ee91741ef",
+        "a105ef1f08d65efc9c49678fdbac708793f95f574dde1e649cde68d3bdff40f4",
+        "9034cd87c39a1ff61ebc82074d31c8d3ed1d197ad11a9b82121452e9b61207ee",
+        "36c2a86c5c96bbe80fa3499642c6ba777649831b25a58b23681f6c45532cc0f9",
+        "b624152b1b6c4be505c8cc3400482e86dff3dd8552434bad64d70d75f6434ac1"
+      ],
+      "window_start": 166
+    },
+    {
+      "anchor_line": 171,
+      "classification": "post_evaluation_display_or_filter",
+      "features": {
+        "contains_executable_assignment_operation": false,
+        "identifies_evaluation_unit_and_assigned_object": false,
+        "maps_before_evaluation": false,
+        "specifies_randomization_or_deterministic_selection": false,
+        "supplies_probability_support_seed_permutation_block_stratum_weight_schedule_orientation_or_order_rule": false
+      },
+      "h113_context_hits": [
+        "policy"
+      ],
+      "h113_matched_line_sha256": [
+        "36c2a86c5c96bbe80fa3499642c6ba777649831b25a58b23681f6c45532cc0f9",
+        "44fb5ccdb557999314c9ec09bdc6d101d77f77b4bc4b815e08ffa47d13570a9f"
+      ],
+      "h113_mechanism_hits": [
+        "sample"
+      ],
+      "path": "src/components/PolicyInsightPanel.jsx",
+      "rationale_code": "low_evaluation_count_badge",
+      "window_end": 173,
+      "window_line_sha256": [
+        "36c2a86c5c96bbe80fa3499642c6ba777649831b25a58b23681f6c45532cc0f9",
+        "b624152b1b6c4be505c8cc3400482e86dff3dd8552434bad64d70d75f6434ac1",
+        "44fb5ccdb557999314c9ec09bdc6d101d77f77b4bc4b815e08ffa47d13570a9f",
+        "28049ba7c73c61cbd4a6d0995aac94287cd3c5c3c7df51272dde363149c8a8ed",
+        "c97d3688f4c6542274a59e65b10e3937c471a3b9503dfce247c28599ed94af76"
+      ],
+      "window_start": 169
+    },
+    {
+      "anchor_line": 22,
+      "classification": "css_or_visual_structure",
+      "features": {
+        "contains_executable_assignment_operation": false,
+        "identifies_evaluation_unit_and_assigned_object": false,
+        "maps_before_evaluation": false,
+        "specifies_randomization_or_deterministic_selection": false,
+        "supplies_probability_support_seed_permutation_block_stratum_weight_schedule_orientation_or_order_rule": false
+      },
+      "h113_context_hits": [
+        "policy"
+      ],
+      "h113_matched_line_sha256": [
+        "075ad1ce94f41378d474a7fa6364e30b5e14d0a55d46e6d02eaac37e4d615482",
+        "188b46d7e11c99313e1942c0797f20b9f86b14825dc975e6ac0eee9e162fff7e"
+      ],
+      "h113_mechanism_hits": [
+        "alternate"
+      ],
+      "path": "src/components/policyAnalysis.css",
+      "rationale_code": "alternating_row_visual_style",
+      "window_end": 24,
+      "window_line_sha256": [
+        "d10b36aa74a59bcf4a88185837f658afaf3646eff2bb16c3928d0e9335e945d2",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "075ad1ce94f41378d474a7fa6364e30b5e14d0a55d46e6d02eaac37e4d615482",
+        "188b46d7e11c99313e1942c0797f20b9f86b14825dc975e6ac0eee9e162fff7e",
+        "b43711c8129571706bfd662f9ba54e8f99ac46ba1dfc8b1b5027adbee60fec2b"
+      ],
+      "window_start": 20
+    },
+    {
+      "anchor_line": 41,
+      "classification": "css_or_visual_structure",
+      "features": {
+        "contains_executable_assignment_operation": false,
+        "identifies_evaluation_unit_and_assigned_object": false,
+        "maps_before_evaluation": false,
+        "specifies_randomization_or_deterministic_selection": false,
+        "supplies_probability_support_seed_permutation_block_stratum_weight_schedule_orientation_or_order_rule": false
+      },
+      "h113_context_hits": [
+        "policy"
+      ],
+      "h113_matched_line_sha256": [
+        "30a5f542905372ca4beed7ea8ff13617f86e53f8c7216fe4efcd741b2bccb252",
+        "04afe454342a2d5dd685e5c713e958a42759754c0cf640ab8aed907771e317b5"
+      ],
+      "h113_mechanism_hits": [
+        "block"
+      ],
+      "path": "src/components/transparency.css",
+      "rationale_code": "css_display_property",
+      "window_end": 43,
+      "window_line_sha256": [
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "30a5f542905372ca4beed7ea8ff13617f86e53f8c7216fe4efcd741b2bccb252",
+        "04afe454342a2d5dd685e5c713e958a42759754c0cf640ab8aed907771e317b5",
+        "c85aa470b95afaf1cbfb0748f732ddad64751c5e64fcf9f53ebb7880325b0134",
+        "0ecf133dbc9896adb84f19dc27c12dbadc32ed071aeca23dec3de4ed548853db"
+      ],
+      "window_start": 39
+    },
+    {
+      "anchor_line": 73,
+      "classification": "css_or_visual_structure",
+      "features": {
+        "contains_executable_assignment_operation": false,
+        "identifies_evaluation_unit_and_assigned_object": false,
+        "maps_before_evaluation": false,
+        "specifies_randomization_or_deterministic_selection": false,
+        "supplies_probability_support_seed_permutation_block_stratum_weight_schedule_orientation_or_order_rule": false
+      },
+      "h113_context_hits": [
+        "policy"
+      ],
+      "h113_matched_line_sha256": [
+        "d4fabb77e6d0ad9cc4ee47c23863af46df47750a77a0ff59b698cd08fea20e91"
+      ],
+      "h113_mechanism_hits": [
+        "sample"
+      ],
+      "path": "src/components/transparency.css",
+      "rationale_code": "badge_css_selector",
+      "window_end": 75,
+      "window_line_sha256": [
+        "d10b36aa74a59bcf4a88185837f658afaf3646eff2bb16c3928d0e9335e945d2",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "d4fabb77e6d0ad9cc4ee47c23863af46df47750a77a0ff59b698cd08fea20e91",
+        "68d43ee3c6e2bd2b9f97ad016324677249650703a79c3e55ed75f3fd8b15cead",
+        "a4a728eba2486c4f51198cf2358da2972f31681cfdc78d54cb433203ea9f8a01"
+      ],
+      "window_start": 71
+    },
+    {
+      "anchor_line": 157,
+      "classification": "css_or_visual_structure",
+      "features": {
+        "contains_executable_assignment_operation": false,
+        "identifies_evaluation_unit_and_assigned_object": false,
+        "maps_before_evaluation": false,
+        "specifies_randomization_or_deterministic_selection": false,
+        "supplies_probability_support_seed_permutation_block_stratum_weight_schedule_orientation_or_order_rule": false
+      },
+      "h113_context_hits": [
+        "policy"
+      ],
+      "h113_matched_line_sha256": [
+        "6bd4d16cfd8f5ac678c67ad5da7d143b2092e089757e063ad9fa21a213fcbca7",
+        "04afe454342a2d5dd685e5c713e958a42759754c0cf640ab8aed907771e317b5"
+      ],
+      "h113_mechanism_hits": [
+        "block"
+      ],
+      "path": "src/components/transparency.css",
+      "rationale_code": "css_display_property",
+      "window_end": 159,
+      "window_line_sha256": [
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "6bd4d16cfd8f5ac678c67ad5da7d143b2092e089757e063ad9fa21a213fcbca7",
+        "04afe454342a2d5dd685e5c713e958a42759754c0cf640ab8aed907771e317b5",
+        "c905997f829f7c8d6f756e9c38d31592c650c9d780ebfe2c315349f60a23c6ed",
+        "b48a305b13c05383b173db113440c57e543ce17cba3cc796583bff23ecfe5a9d"
+      ],
+      "window_start": 155
+    },
+    {
+      "anchor_line": 231,
+      "classification": "css_or_visual_structure",
+      "features": {
+        "contains_executable_assignment_operation": false,
+        "identifies_evaluation_unit_and_assigned_object": false,
+        "maps_before_evaluation": false,
+        "specifies_randomization_or_deterministic_selection": false,
+        "supplies_probability_support_seed_permutation_block_stratum_weight_schedule_orientation_or_order_rule": false
+      },
+      "h113_context_hits": [
+        "policy"
+      ],
+      "h113_matched_line_sha256": [
+        "428e40052cbc2203413e6bf353cd3f45ee9efa1b2ac6c31e23fb35f3af81be44",
+        "04afe454342a2d5dd685e5c713e958a42759754c0cf640ab8aed907771e317b5"
+      ],
+      "h113_mechanism_hits": [
+        "block"
+      ],
+      "path": "src/components/transparency.css",
+      "rationale_code": "css_display_property",
+      "window_end": 233,
+      "window_line_sha256": [
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "428e40052cbc2203413e6bf353cd3f45ee9efa1b2ac6c31e23fb35f3af81be44",
+        "04afe454342a2d5dd685e5c713e958a42759754c0cf640ab8aed907771e317b5",
+        "c85aa470b95afaf1cbfb0748f732ddad64751c5e64fcf9f53ebb7880325b0134",
+        "d51b46da8d5201957bb5a064b6a06f06c3ea3dc4d2d2ff7378a7ec456b5b9085"
+      ],
+      "window_start": 229
+    },
+    {
+      "anchor_line": 251,
+      "classification": "css_or_visual_structure",
+      "features": {
+        "contains_executable_assignment_operation": false,
+        "identifies_evaluation_unit_and_assigned_object": false,
+        "maps_before_evaluation": false,
+        "specifies_randomization_or_deterministic_selection": false,
+        "supplies_probability_support_seed_permutation_block_stratum_weight_schedule_orientation_or_order_rule": false
+      },
+      "h113_context_hits": [
+        "policy"
+      ],
+      "h113_matched_line_sha256": [
+        "18218b4e21be21d94fae4a2195137d440847463c0564706dd0d7542a6b649d21",
+        "04afe454342a2d5dd685e5c713e958a42759754c0cf640ab8aed907771e317b5"
+      ],
+      "h113_mechanism_hits": [
+        "block"
+      ],
+      "path": "src/components/transparency.css",
+      "rationale_code": "css_display_property",
+      "window_end": 253,
+      "window_line_sha256": [
+        "18218b4e21be21d94fae4a2195137d440847463c0564706dd0d7542a6b649d21",
+        "454deea6a8145ff0663a12555877db7760c5af2fab2254f4c5e3c72a4e50f9ac",
+        "04afe454342a2d5dd685e5c713e958a42759754c0cf640ab8aed907771e317b5",
+        "c85aa470b95afaf1cbfb0748f732ddad64751c5e64fcf9f53ebb7880325b0134",
+        "78a5801c988d9143e862168af77d3101acf56e069cef56d8743843d009f83e9b"
+      ],
+      "window_start": 249
+    },
+    {
+      "anchor_line": 432,
+      "classification": "css_or_visual_structure",
+      "features": {
+        "contains_executable_assignment_operation": false,
+        "identifies_evaluation_unit_and_assigned_object": false,
+        "maps_before_evaluation": false,
+        "specifies_randomization_or_deterministic_selection": false,
+        "supplies_probability_support_seed_permutation_block_stratum_weight_schedule_orientation_or_order_rule": false
+      },
+      "h113_context_hits": [
+        "pair"
+      ],
+      "h113_matched_line_sha256": [
+        "b5fca32c3a61a5d6e94723ffbc4bd92f91cc9bd3f151408668201fb6450656a2",
+        "04afe454342a2d5dd685e5c713e958a42759754c0cf640ab8aed907771e317b5"
+      ],
+      "h113_mechanism_hits": [
+        "block"
+      ],
+      "path": "src/components/transparency.css",
+      "rationale_code": "css_display_property",
+      "window_end": 434,
+      "window_line_sha256": [
+        "b5fca32c3a61a5d6e94723ffbc4bd92f91cc9bd3f151408668201fb6450656a2",
+        "d7d3b7cfa4ce65575279980f851443817d8e4a3fd5056b467088847878c33b54",
+        "04afe454342a2d5dd685e5c713e958a42759754c0cf640ab8aed907771e317b5",
+        "f50daf7585a548a480aeb0ab3e9ca8d4caabcb536621428dc3862e163aed60c8",
+        "9584379c45154b06b7b19b840f8ae2f7cbcc13af8e253ac739677ae35b29f2c3"
+      ],
+      "window_start": 430
+    },
+    {
+      "anchor_line": 451,
+      "classification": "css_or_visual_structure",
+      "features": {
+        "contains_executable_assignment_operation": false,
+        "identifies_evaluation_unit_and_assigned_object": false,
+        "maps_before_evaluation": false,
+        "specifies_randomization_or_deterministic_selection": false,
+        "supplies_probability_support_seed_permutation_block_stratum_weight_schedule_orientation_or_order_rule": false
+      },
+      "h113_context_hits": [
+        "policy"
+      ],
+      "h113_matched_line_sha256": [
+        "2e38ad2715d54970d78a4076ba9384c833675e7dc7bf54295d12442eab3a6d7e",
+        "04afe454342a2d5dd685e5c713e958a42759754c0cf640ab8aed907771e317b5"
+      ],
+      "h113_mechanism_hits": [
+        "block"
+      ],
+      "path": "src/components/transparency.css",
+      "rationale_code": "css_display_property",
+      "window_end": 453,
+      "window_line_sha256": [
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "2e38ad2715d54970d78a4076ba9384c833675e7dc7bf54295d12442eab3a6d7e",
+        "04afe454342a2d5dd685e5c713e958a42759754c0cf640ab8aed907771e317b5",
+        "c85aa470b95afaf1cbfb0748f732ddad64751c5e64fcf9f53ebb7880325b0134",
+        "31849b10b569da9c01acfdac6712a5bfef4d45e2bbd54c25d25040f0430bb494"
+      ],
+      "window_start": 449
+    },
+    {
+      "anchor_line": 768,
+      "classification": "css_or_visual_structure",
+      "features": {
+        "contains_executable_assignment_operation": false,
+        "identifies_evaluation_unit_and_assigned_object": false,
+        "maps_before_evaluation": false,
+        "specifies_randomization_or_deterministic_selection": false,
+        "supplies_probability_support_seed_permutation_block_stratum_weight_schedule_orientation_or_order_rule": false
+      },
+      "h113_context_hits": [
+        "evaluator"
+      ],
+      "h113_matched_line_sha256": [
+        "5da2e7243067b0f2151c1d62b5b3e7c7f0a2ed4971f8b1510bd737cdd6c55131",
+        "7da1fa7f7418ba1887af4019b52a02470e245d577de499832723d165ef27def3",
+        "04afe454342a2d5dd685e5c713e958a42759754c0cf640ab8aed907771e317b5"
+      ],
+      "h113_mechanism_hits": [
+        "block"
+      ],
+      "path": "src/components/transparency.css",
+      "rationale_code": "css_display_property",
+      "window_end": 770,
+      "window_line_sha256": [
+        "5da2e7243067b0f2151c1d62b5b3e7c7f0a2ed4971f8b1510bd737cdd6c55131",
+        "7da1fa7f7418ba1887af4019b52a02470e245d577de499832723d165ef27def3",
+        "04afe454342a2d5dd685e5c713e958a42759754c0cf640ab8aed907771e317b5",
+        "8cdf706a661fed8769f63529e649bcf5085feb7b9d1d5fd486aff8a8e81b8c99",
+        "58adc5ae9ea8169d82e3f1dea87f2d44885979edfb0a39c9c2746f712e3244e0"
+      ],
+      "window_start": 766
+    },
+    {
+      "anchor_line": 866,
+      "classification": "css_or_visual_structure",
+      "features": {
+        "contains_executable_assignment_operation": false,
+        "identifies_evaluation_unit_and_assigned_object": false,
+        "maps_before_evaluation": false,
+        "specifies_randomization_or_deterministic_selection": false,
+        "supplies_probability_support_seed_permutation_block_stratum_weight_schedule_orientation_or_order_rule": false
+      },
+      "h113_context_hits": [
+        "evaluator"
+      ],
+      "h113_matched_line_sha256": [
+        "11cd0d3cf5b30f0fbbe18b2a7050321cc46ee63758cf2d12572a0d2c712b4e75",
+        "04afe454342a2d5dd685e5c713e958a42759754c0cf640ab8aed907771e317b5"
+      ],
+      "h113_mechanism_hits": [
+        "block"
+      ],
+      "path": "src/components/transparency.css",
+      "rationale_code": "css_display_property",
+      "window_end": 868,
+      "window_line_sha256": [
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "11cd0d3cf5b30f0fbbe18b2a7050321cc46ee63758cf2d12572a0d2c712b4e75",
+        "04afe454342a2d5dd685e5c713e958a42759754c0cf640ab8aed907771e317b5",
+        "1418dba7c1713dc0bd059f8d7dbaf0b6a4f0ab8f5f299047b04bbf3b27b89a21",
+        "a195914e5a14ebb2c177d1f9ab7acf4c54408dbbc1fb572b13c6a83959e5492e"
+      ],
+      "window_start": 864
+    },
+    {
+      "anchor_line": 178,
+      "classification": "css_or_visual_structure",
+      "features": {
+        "contains_executable_assignment_operation": false,
+        "identifies_evaluation_unit_and_assigned_object": false,
+        "maps_before_evaluation": false,
+        "specifies_randomization_or_deterministic_selection": false,
+        "supplies_probability_support_seed_permutation_block_stratum_weight_schedule_orientation_or_order_rule": false
+      },
+      "h113_context_hits": [
+        "policy"
+      ],
+      "h113_matched_line_sha256": [
+        "bf908b166e096bd564282d7d713c8c531ca993d0ad9a809291fe9e129382f105",
+        "d764f548eac6dcb8654e2892aeeff02565958b76f7e3beb16bd774c8982702d5"
+      ],
+      "h113_mechanism_hits": [
+        "block"
+      ],
+      "path": "src/css/theme.css",
+      "rationale_code": "css_component_layout",
+      "window_end": 180,
+      "window_line_sha256": [
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bf908b166e096bd564282d7d713c8c531ca993d0ad9a809291fe9e129382f105",
+        "d764f548eac6dcb8654e2892aeeff02565958b76f7e3beb16bd774c8982702d5",
+        "ca3104311842b26242e56ad0355a38f6fdc71b1dc17ad6ec59b8b0723f850315",
+        "07fd48650f3c2856774fbf6aa2cfdcd35c5659eccee3061400caaaa1ee2241ee"
+      ],
+      "window_start": 176
+    },
+    {
+      "anchor_line": 132,
+      "classification": "post_evaluation_display_or_filter",
+      "features": {
+        "contains_executable_assignment_operation": false,
+        "identifies_evaluation_unit_and_assigned_object": false,
+        "maps_before_evaluation": false,
+        "specifies_randomization_or_deterministic_selection": false,
+        "supplies_probability_support_seed_permutation_block_stratum_weight_schedule_orientation_or_order_rule": false
+      },
+      "h113_context_hits": [
+        "policies"
+      ],
+      "h113_matched_line_sha256": [
+        "701b16c44ab9ac03c2a52153d99bc629ecd5fa5e6c8ceea24cc588d6dc46a5df"
+      ],
+      "h113_mechanism_hits": [
+        "match",
+        "selected"
+      ],
+      "path": "src/pages/Leaderboard.jsx",
+      "rationale_code": "leaderboard_view_filter_message",
+      "window_end": 134,
+      "window_line_sha256": [
+        "f1a8e8c79467f49e3ec1e1f8f274c99c2ff1ced06995ca2b1acb5128bcd169d2",
+        "436b795de6b6daf44a6971f604ddb75b67cbd6c4342f0cecbc06021760a58275",
+        "701b16c44ab9ac03c2a52153d99bc629ecd5fa5e6c8ceea24cc588d6dc46a5df",
+        "05d93deabff2eb7f1711ce5c5f43ecdce4497294806244888246b0b2800a3cd7",
+        "f12c8c14eeb731616d7c480873afed2e4feed56f5d8b9c4d13704b325a15ff97"
+      ],
+      "window_start": 130
+    },
+    {
+      "anchor_line": 196,
+      "classification": "post_evaluation_display_or_filter",
+      "features": {
+        "contains_executable_assignment_operation": false,
+        "identifies_evaluation_unit_and_assigned_object": false,
+        "maps_before_evaluation": false,
+        "specifies_randomization_or_deterministic_selection": false,
+        "supplies_probability_support_seed_permutation_block_stratum_weight_schedule_orientation_or_order_rule": false
+      },
+      "h113_context_hits": [
+        "policy"
+      ],
+      "h113_matched_line_sha256": [
+        "d252712f31e152907c012bb0de3f769187698dd06a2e340455e948fcb4f1a3ab",
+        "1d69bbf55329131ce14b3f924c61391d9519eece1a37f73fb25fdd1351cdde37"
+      ],
+      "h113_mechanism_hits": [
+        "sample"
+      ],
+      "path": "src/pages/Leaderboard.jsx",
+      "rationale_code": "low_evaluation_count_badge",
+      "window_end": 198,
+      "window_line_sha256": [
+        "f51664b0ec7ada65d1fe6717432e2d0ad09f70f4a2449f790d5921dfeaa49676",
+        "36e55f91b3652fd964388b00d609b03946eb97a6bfb2ebb8d3c9d1fa5bf2f672",
+        "d252712f31e152907c012bb0de3f769187698dd06a2e340455e948fcb4f1a3ab",
+        "1d69bbf55329131ce14b3f924c61391d9519eece1a37f73fb25fdd1351cdde37",
+        "2a35ed11aa8323932a5ad917a56c3bfd6fe6c85f9b59446f196855fc13f210e6"
+      ],
+      "window_start": 194
+    },
+    {
+      "anchor_line": 199,
+      "classification": "post_evaluation_display_or_filter",
+      "features": {
+        "contains_executable_assignment_operation": false,
+        "identifies_evaluation_unit_and_assigned_object": false,
+        "maps_before_evaluation": false,
+        "specifies_randomization_or_deterministic_selection": false,
+        "supplies_probability_support_seed_permutation_block_stratum_weight_schedule_orientation_or_order_rule": false
+      },
+      "h113_context_hits": [
+        "policy"
+      ],
+      "h113_matched_line_sha256": [
+        "1d69bbf55329131ce14b3f924c61391d9519eece1a37f73fb25fdd1351cdde37",
+        "430913c671566ad24ba3a43cb7c23df04d928cea844622c2f459ac5cb96c1859"
+      ],
+      "h113_mechanism_hits": [
+        "sample"
+      ],
+      "path": "src/pages/Leaderboard.jsx",
+      "rationale_code": "low_evaluation_count_badge",
+      "window_end": 201,
+      "window_line_sha256": [
+        "1d69bbf55329131ce14b3f924c61391d9519eece1a37f73fb25fdd1351cdde37",
+        "2a35ed11aa8323932a5ad917a56c3bfd6fe6c85f9b59446f196855fc13f210e6",
+        "430913c671566ad24ba3a43cb7c23df04d928cea844622c2f459ac5cb96c1859",
+        "16441b7220927dfd2cbe9e3d7228ce312c4c2437498ae9fe80ed69986821eb35",
+        "0089a613811c657d301f56d1638dba9743997c4142bbe5e150dedfbd61156ddb"
+      ],
+      "window_start": 197
+    },
+    {
+      "anchor_line": 485,
+      "classification": "css_or_visual_structure",
+      "features": {
+        "contains_executable_assignment_operation": false,
+        "identifies_evaluation_unit_and_assigned_object": false,
+        "maps_before_evaluation": false,
+        "specifies_randomization_or_deterministic_selection": false,
+        "supplies_probability_support_seed_permutation_block_stratum_weight_schedule_orientation_or_order_rule": false
+      },
+      "h113_context_hits": [
+        "policy"
+      ],
+      "h113_matched_line_sha256": [
+        "0c7fbe7013fa4b0e728b4ad64f8942eac61d927c4932ddd0c7528fef620c0371",
+        "b133ef24f6d4a8ae4f27847268864de9da7f6f4b988350ed865d710fa735671d"
+      ],
+      "h113_mechanism_hits": [
+        "rotate"
+      ],
+      "path": "src/pages/Leaderboard.jsx",
+      "rationale_code": "svg_label_rotation",
+      "window_end": 487,
+      "window_line_sha256": [
+        "446813d52b097002f5c68eaddd08fe7c2bce851ec4302fba5dc4256891f068f3",
+        "ec7d6426aa0098ef653c108c012525f503e525a610e3f9f5d927c76383050a9b",
+        "0c7fbe7013fa4b0e728b4ad64f8942eac61d927c4932ddd0c7528fef620c0371",
+        "584d7ee9ed5a154ab8c73e435e52f98cb21b83029ce8d42af12f1e3b271ffb9a",
+        "b133ef24f6d4a8ae4f27847268864de9da7f6f4b988350ed865d710fa735671d"
+      ],
+      "window_start": 483
+    },
+    {
+      "anchor_line": 108,
+      "classification": "css_or_visual_structure",
+      "features": {
+        "contains_executable_assignment_operation": false,
+        "identifies_evaluation_unit_and_assigned_object": false,
+        "maps_before_evaluation": false,
+        "specifies_randomization_or_deterministic_selection": false,
+        "supplies_probability_support_seed_permutation_block_stratum_weight_schedule_orientation_or_order_rule": false
+      },
+      "h113_context_hits": [
+        "video"
+      ],
+      "h113_matched_line_sha256": [
+        "b55472d2dd66e3a1993153903eb896291c5a39be2c3bdf0201dc66d977cefd5f",
+        "04afe454342a2d5dd685e5c713e958a42759754c0cf640ab8aed907771e317b5"
+      ],
+      "h113_mechanism_hits": [
+        "block"
+      ],
+      "path": "src/pages/home.css",
+      "rationale_code": "css_display_property",
+      "window_end": 110,
+      "window_line_sha256": [
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "b55472d2dd66e3a1993153903eb896291c5a39be2c3bdf0201dc66d977cefd5f",
+        "04afe454342a2d5dd685e5c713e958a42759754c0cf640ab8aed907771e317b5",
+        "ef8395b5d47aa59e224aab8591b8747ac0f38d67e8abe7faa3f8ab29abd143e7",
+        "688ad3e9c8c58df34cf48e332b59dedf1ea1e0d694ae8dc061895a29ba0d58bf"
+      ],
+      "window_start": 106
+    }
+  ],
+  "assignment_language_lead_count": 0,
+  "authored_text_assignment_language_lead_closed": true,
+  "candidate_window_count": 19,
+  "class_counts": {
+    "assignment_related_but_underspecified": 0,
+    "css_or_visual_structure": 14,
+    "explicit_assignment_rule": 0,
+    "post_evaluation_display_or_filter": 5,
+    "unrelated_context": 0
+  },
+  "future_heldout_p1_outcomes_accessed": false,
+  "h088_h100_api_or_storage_contacted": false,
+  "h111_h112_scope_correction_confirmed": true,
+  "h113_result_sha256": "9a7aeacb15bb783ea610f484e26bfda44de48496f89eb990cfc2e3b8b752e0b5",
+  "identity": "robo-arena/robo-arena.github.io",
+  "immutable_revision": "2ce29abe69424385d0ebc8d3222698d82a3008db",
+  "interpretation": "Fourteen candidates are CSS/component/SVG presentation and five are post-evaluation display/filtering. The declared 42-file authored-text assignment-language lead is closed; server assignment remains unidentified.",
+  "observed_utc": "2026-07-27T19:03:59.917362+00:00",
+  "other_source_lines_or_blobs_inspected": false,
+  "outcome_values_accessed": false,
+  "protocol_sha256": "89e1e4fd22cc6cfb4a67ad4bc915b411f2c1bfbbdcf3e5a0463d2278d7803688",
+  "realized_assignment_probabilities_established": false,
+  "schema": "h114-roboarena-authored-text-assignment-context-v1",
+  "sealed_p3_frame_accessed": false,
+  "server_assignment_law_established": false,
+  "source_executed_or_rendered": false,
+  "source_file_count": 7,
+  "source_records": [
+    {
+      "content_sha256": "fb1a38eb26097e96d1f74a2c4f8e50ed3a3d9a060ed8059b795a50cebfe5d0c1",
+      "git_blob_sha": "2e6bbc8a2e86fbccbd04d1242520247382e68c47",
+      "path": "src/components/EvaluationCard.jsx",
+      "size_bytes": 4538
+    },
+    {
+      "content_sha256": "81ac56210b49f29d74680bd67bd459606d473f7b47c2a37cf8c2d63a266ee96d",
+      "git_blob_sha": "c11d92d3de0479ef5c71f0f79e0ff3b4278f6891",
+      "path": "src/components/PolicyInsightPanel.jsx",
+      "size_bytes": 7789
+    },
+    {
+      "content_sha256": "86e269076f75c294c0a9265324bebbc48705b2a9459614998e49dbfe002cc663",
+      "git_blob_sha": "a463c88c40bc8b668a83406515fbca62ef70478d",
+      "path": "src/components/policyAnalysis.css",
+      "size_bytes": 4507
+    },
+    {
+      "content_sha256": "f4595b50018ae9a42b3d3572afe227e36c51a2e0a4d627f253debacea4494da4",
+      "git_blob_sha": "c55b3c219075a8a8086536817165adc8f183c111",
+      "path": "src/components/transparency.css",
+      "size_bytes": 22383
+    },
+    {
+      "content_sha256": "62aef4ad118e721f2ecd45b308560a1fb3a027b6b413b6122057b52435943944",
+      "git_blob_sha": "9c1f45c219fb624db45f2720064bee44c8c4b44e",
+      "path": "src/css/theme.css",
+      "size_bytes": 7216
+    },
+    {
+      "content_sha256": "781c46692c8f2109c4c582de2634065d1d718ac0b10ba8a432a5fd48a6586029",
+      "git_blob_sha": "c15110c938238fd3c548caa292b8103b16ae3400",
+      "path": "src/pages/Leaderboard.jsx",
+      "size_bytes": 18294
+    },
+    {
+      "content_sha256": "ad61e378995c6b618acd6bb73afb0e25d46e87c8d50d0aca606b54da5e90cc19",
+      "git_blob_sha": "62ec7679d92f57eb102c86cdd85b244e62ea5016",
+      "path": "src/pages/home.css",
+      "size_bytes": 7136
+    }
+  ],
+  "source_text_retained": false
+}

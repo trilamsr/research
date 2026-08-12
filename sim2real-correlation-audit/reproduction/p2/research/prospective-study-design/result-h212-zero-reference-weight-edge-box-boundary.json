@@ -1,0 +1,767 @@
+{
+  "classification": "value_and_optimizer_extend_without_change",
+  "closed_simplex_theorem": {
+    "complete_minimizer_set": "the same closed h-segment as H188",
+    "h_interval": "0 <= h <= (r_(3)-r_(2))/2",
+    "reference_domain": "r_i >= 0, sum_i r_i = 1, K >= 3",
+    "uniqueness_condition": "r_(2)=r_(3)",
+    "value": "(2-r_(1)-r_(2))/8",
+    "zero_support_consequences": {
+      "at_least_three_zero_weights": "h=0 and the unique optimizer is p=r",
+      "exactly_two_zero_weights": "the two zero-reference policies receive equal h mass; 0 <= h <= min_positive_weight/2",
+      "one_zero_weight": "the H188 segment applies without a new face"
+    }
+  },
+  "exact_case_census": {
+    "by_k": {
+      "3": 14,
+      "4": 34,
+      "5": 69,
+      "6": 125
+    },
+    "by_positive_support_size": {
+      "1": 16,
+      "2": 40,
+      "3": 60,
+      "4": 70,
+      "5": 56
+    },
+    "canonical_cases": 242,
+    "distinct_label_permutations": 14056,
+    "largest_l1_endpoint_error_at_raw_epsilon_1_over_1000": {
+      "decimal": 0.009950248756218905,
+      "denominator": 201,
+      "numerator": 2,
+      "text": "2/201"
+    },
+    "positive_limit_checks": 726,
+    "raw_endpoint_oracle_probes_k_le_5": 247,
+    "segment_probes": 484
+  },
+  "exact_proof_ledger": [
+    {
+      "claim": "For indices of the two smallest weights a,b, F_1+F_2 >= 2-p_1-p_2+|p_1+p_2-a-b| >= 2-a-b.",
+      "step": "lower_bound"
+    },
+    {
+      "claim": "Equality makes all tail cross-products r_j p_i-r_i p_j zero. Because the tail contains positive total weight, p_i=lambda r_i for every tail index, including p_i=0 at any zero-weight tail index.",
+      "step": "equality_tail"
+    },
+    {
+      "claim": "F_1=F_2=(2-a-b)/2 gives exactly H188's h-parameterized lottery; all denominators remain positive on the closed simplex for K>=3.",
+      "step": "solve_equalizers"
+    },
+    {
+      "claim": "For each tail j, F_j-(2-a-b)/2=2h-(r_j-b); therefore all winner constraints hold exactly for 0<=h<=(r_(3)-r_(2))/2, with no additional optimizer.",
+      "step": "complete_face"
+    }
+  ],
+  "fixed_h188_hashes": {
+    "protocol-h188-weighted-edge-box-minimax.md": "0391adc2b80152b136bee5b470f2b4f3bfbec64b39b811af54d6ff65a1bd459e",
+    "result-h188-weighted-edge-box-minimax.json": "e5721a0918c8f97f1a076b6d00b9a9f9e323261f71d9e6093b1cec307709800a",
+    "review-h188-weighted-edge-box-minimax.md": "14323db710ef389de390bfee220eb87379468eda1cce14b1545b566687be67eb",
+    "test_weighted_edge_box_minimax.py": "383d16e41cf833822791233ad854d3c03f91459e44d482a3dacb3d9613697ddb",
+    "weighted_edge_box_minimax.py": "4ce70305dcba09d317880bbedd134d762c7018915d7405469953cf8cfb1a766f"
+  },
+  "numerical_face_challenge": {
+    "cases": 242,
+    "directions_per_case": "K coordinate directions plus three fixed contrasts",
+    "maximum_face_support_absolute_error": 5.1800011391378575e-08,
+    "maximum_value_absolute_error": 5.551115123125783e-17,
+    "role": "candidate-face challenge only; exact proof is canonical",
+    "solver": "scipy.optimize.linprog(method='highs')"
+  },
+  "protocol_sha256": "2204934e1e4729a0d1dff29b89e544c0da59b654d01a6270655265eda5b61e7c",
+  "representative_boundary_cases": [
+    {
+      "endpoint_lotteries": [
+        [
+          {
+            "decimal": 0.0,
+            "denominator": 1,
+            "numerator": 0,
+            "text": "0/1"
+          },
+          {
+            "decimal": 0.0,
+            "denominator": 1,
+            "numerator": 0,
+            "text": "0/1"
+          },
+          {
+            "decimal": 1.0,
+            "denominator": 1,
+            "numerator": 1,
+            "text": "1/1"
+          }
+        ],
+        [
+          {
+            "decimal": 0.5,
+            "denominator": 2,
+            "numerator": 1,
+            "text": "1/2"
+          },
+          {
+            "decimal": 0.5,
+            "denominator": 2,
+            "numerator": 1,
+            "text": "1/2"
+          },
+          {
+            "decimal": 0.0,
+            "denominator": 1,
+            "numerator": 0,
+            "text": "0/1"
+          }
+        ]
+      ],
+      "h_interval": [
+        {
+          "decimal": 0.0,
+          "denominator": 1,
+          "numerator": 0,
+          "text": "0/1"
+        },
+        {
+          "decimal": 0.5,
+          "denominator": 2,
+          "numerator": 1,
+          "text": "1/2"
+        }
+      ],
+      "reference": [
+        {
+          "decimal": 0.0,
+          "denominator": 1,
+          "numerator": 0,
+          "text": "0/1"
+        },
+        {
+          "decimal": 0.0,
+          "denominator": 1,
+          "numerator": 0,
+          "text": "0/1"
+        },
+        {
+          "decimal": 1.0,
+          "denominator": 1,
+          "numerator": 1,
+          "text": "1/1"
+        }
+      ],
+      "support_size": 1,
+      "unique": false,
+      "value": {
+        "decimal": 0.25,
+        "denominator": 4,
+        "numerator": 1,
+        "text": "1/4"
+      }
+    },
+    {
+      "endpoint_lotteries": [
+        [
+          {
+            "decimal": 0.0,
+            "denominator": 1,
+            "numerator": 0,
+            "text": "0/1"
+          },
+          {
+            "decimal": 0.0,
+            "denominator": 1,
+            "numerator": 0,
+            "text": "0/1"
+          },
+          {
+            "decimal": 1.0,
+            "denominator": 1,
+            "numerator": 1,
+            "text": "1/1"
+          }
+        ],
+        [
+          {
+            "decimal": 0.5,
+            "denominator": 2,
+            "numerator": 1,
+            "text": "1/2"
+          },
+          {
+            "decimal": 0.5,
+            "denominator": 2,
+            "numerator": 1,
+            "text": "1/2"
+          },
+          {
+            "decimal": 0.0,
+            "denominator": 1,
+            "numerator": 0,
+            "text": "0/1"
+          }
+        ]
+      ],
+      "h_interval": [
+        {
+          "decimal": 0.0,
+          "denominator": 1,
+          "numerator": 0,
+          "text": "0/1"
+        },
+        {
+          "decimal": 0.5,
+          "denominator": 2,
+          "numerator": 1,
+          "text": "1/2"
+        }
+      ],
+      "reference": [
+        {
+          "decimal": 0.0,
+          "denominator": 1,
+          "numerator": 0,
+          "text": "0/1"
+        },
+        {
+          "decimal": 0.0,
+          "denominator": 1,
+          "numerator": 0,
+          "text": "0/1"
+        },
+        {
+          "decimal": 1.0,
+          "denominator": 1,
+          "numerator": 1,
+          "text": "1/1"
+        }
+      ],
+      "support_size": 1,
+      "unique": false,
+      "value": {
+        "decimal": 0.25,
+        "denominator": 4,
+        "numerator": 1,
+        "text": "1/4"
+      }
+    },
+    {
+      "endpoint_lotteries": [
+        [
+          {
+            "decimal": 0.0,
+            "denominator": 1,
+            "numerator": 0,
+            "text": "0/1"
+          },
+          {
+            "decimal": 0.0,
+            "denominator": 1,
+            "numerator": 0,
+            "text": "0/1"
+          },
+          {
+            "decimal": 1.0,
+            "denominator": 1,
+            "numerator": 1,
+            "text": "1/1"
+          }
+        ],
+        [
+          {
+            "decimal": 0.5,
+            "denominator": 2,
+            "numerator": 1,
+            "text": "1/2"
+          },
+          {
+            "decimal": 0.5,
+            "denominator": 2,
+            "numerator": 1,
+            "text": "1/2"
+          },
+          {
+            "decimal": 0.0,
+            "denominator": 1,
+            "numerator": 0,
+            "text": "0/1"
+          }
+        ]
+      ],
+      "h_interval": [
+        {
+          "decimal": 0.0,
+          "denominator": 1,
+          "numerator": 0,
+          "text": "0/1"
+        },
+        {
+          "decimal": 0.5,
+          "denominator": 2,
+          "numerator": 1,
+          "text": "1/2"
+        }
+      ],
+      "reference": [
+        {
+          "decimal": 0.0,
+          "denominator": 1,
+          "numerator": 0,
+          "text": "0/1"
+        },
+        {
+          "decimal": 0.0,
+          "denominator": 1,
+          "numerator": 0,
+          "text": "0/1"
+        },
+        {
+          "decimal": 1.0,
+          "denominator": 1,
+          "numerator": 1,
+          "text": "1/1"
+        }
+      ],
+      "support_size": 1,
+      "unique": false,
+      "value": {
+        "decimal": 0.25,
+        "denominator": 4,
+        "numerator": 1,
+        "text": "1/4"
+      }
+    },
+    {
+      "endpoint_lotteries": [
+        [
+          {
+            "decimal": 0.0,
+            "denominator": 1,
+            "numerator": 0,
+            "text": "0/1"
+          },
+          {
+            "decimal": 0.0,
+            "denominator": 1,
+            "numerator": 0,
+            "text": "0/1"
+          },
+          {
+            "decimal": 1.0,
+            "denominator": 1,
+            "numerator": 1,
+            "text": "1/1"
+          }
+        ],
+        [
+          {
+            "decimal": 0.5,
+            "denominator": 2,
+            "numerator": 1,
+            "text": "1/2"
+          },
+          {
+            "decimal": 0.5,
+            "denominator": 2,
+            "numerator": 1,
+            "text": "1/2"
+          },
+          {
+            "decimal": 0.0,
+            "denominator": 1,
+            "numerator": 0,
+            "text": "0/1"
+          }
+        ]
+      ],
+      "h_interval": [
+        {
+          "decimal": 0.0,
+          "denominator": 1,
+          "numerator": 0,
+          "text": "0/1"
+        },
+        {
+          "decimal": 0.5,
+          "denominator": 2,
+          "numerator": 1,
+          "text": "1/2"
+        }
+      ],
+      "reference": [
+        {
+          "decimal": 0.0,
+          "denominator": 1,
+          "numerator": 0,
+          "text": "0/1"
+        },
+        {
+          "decimal": 0.0,
+          "denominator": 1,
+          "numerator": 0,
+          "text": "0/1"
+        },
+        {
+          "decimal": 1.0,
+          "denominator": 1,
+          "numerator": 1,
+          "text": "1/1"
+        }
+      ],
+      "support_size": 1,
+      "unique": false,
+      "value": {
+        "decimal": 0.25,
+        "denominator": 4,
+        "numerator": 1,
+        "text": "1/4"
+      }
+    },
+    {
+      "endpoint_lotteries": [
+        [
+          {
+            "decimal": 0.25,
+            "denominator": 4,
+            "numerator": 1,
+            "text": "1/4"
+          },
+          {
+            "decimal": 0.375,
+            "denominator": 8,
+            "numerator": 3,
+            "text": "3/8"
+          },
+          {
+            "decimal": 0.375,
+            "denominator": 8,
+            "numerator": 3,
+            "text": "3/8"
+          }
+        ],
+        [
+          {
+            "decimal": 0.25,
+            "denominator": 4,
+            "numerator": 1,
+            "text": "1/4"
+          },
+          {
+            "decimal": 0.375,
+            "denominator": 8,
+            "numerator": 3,
+            "text": "3/8"
+          },
+          {
+            "decimal": 0.375,
+            "denominator": 8,
+            "numerator": 3,
+            "text": "3/8"
+          }
+        ]
+      ],
+      "h_interval": [
+        {
+          "decimal": 0.0,
+          "denominator": 1,
+          "numerator": 0,
+          "text": "0/1"
+        },
+        {
+          "decimal": 0.0,
+          "denominator": 1,
+          "numerator": 0,
+          "text": "0/1"
+        }
+      ],
+      "reference": [
+        {
+          "decimal": 0.0,
+          "denominator": 1,
+          "numerator": 0,
+          "text": "0/1"
+        },
+        {
+          "decimal": 0.5,
+          "denominator": 2,
+          "numerator": 1,
+          "text": "1/2"
+        },
+        {
+          "decimal": 0.5,
+          "denominator": 2,
+          "numerator": 1,
+          "text": "1/2"
+        }
+      ],
+      "support_size": 2,
+      "unique": true,
+      "value": {
+        "decimal": 0.1875,
+        "denominator": 16,
+        "numerator": 3,
+        "text": "3/16"
+      }
+    },
+    {
+      "endpoint_lotteries": [
+        [
+          {
+            "decimal": 0.16666666666666666,
+            "denominator": 6,
+            "numerator": 1,
+            "text": "1/6"
+          },
+          {
+            "decimal": 0.2777777777777778,
+            "denominator": 18,
+            "numerator": 5,
+            "text": "5/18"
+          },
+          {
+            "decimal": 0.5555555555555556,
+            "denominator": 9,
+            "numerator": 5,
+            "text": "5/9"
+          }
+        ],
+        [
+          {
+            "decimal": 0.3333333333333333,
+            "denominator": 3,
+            "numerator": 1,
+            "text": "1/3"
+          },
+          {
+            "decimal": 0.3888888888888889,
+            "denominator": 18,
+            "numerator": 7,
+            "text": "7/18"
+          },
+          {
+            "decimal": 0.2777777777777778,
+            "denominator": 18,
+            "numerator": 5,
+            "text": "5/18"
+          }
+        ]
+      ],
+      "h_interval": [
+        {
+          "decimal": 0.0,
+          "denominator": 1,
+          "numerator": 0,
+          "text": "0/1"
+        },
+        {
+          "decimal": 0.16666666666666666,
+          "denominator": 6,
+          "numerator": 1,
+          "text": "1/6"
+        }
+      ],
+      "reference": [
+        {
+          "decimal": 0.0,
+          "denominator": 1,
+          "numerator": 0,
+          "text": "0/1"
+        },
+        {
+          "decimal": 0.3333333333333333,
+          "denominator": 3,
+          "numerator": 1,
+          "text": "1/3"
+        },
+        {
+          "decimal": 0.6666666666666666,
+          "denominator": 3,
+          "numerator": 2,
+          "text": "2/3"
+        }
+      ],
+      "support_size": 2,
+      "unique": false,
+      "value": {
+        "decimal": 0.20833333333333334,
+        "denominator": 24,
+        "numerator": 5,
+        "text": "5/24"
+      }
+    },
+    {
+      "endpoint_lotteries": [
+        [
+          {
+            "decimal": 0.125,
+            "denominator": 8,
+            "numerator": 1,
+            "text": "1/8"
+          },
+          {
+            "decimal": 0.21875,
+            "denominator": 32,
+            "numerator": 7,
+            "text": "7/32"
+          },
+          {
+            "decimal": 0.65625,
+            "denominator": 32,
+            "numerator": 21,
+            "text": "21/32"
+          }
+        ],
+        [
+          {
+            "decimal": 0.375,
+            "denominator": 8,
+            "numerator": 3,
+            "text": "3/8"
+          },
+          {
+            "decimal": 0.40625,
+            "denominator": 32,
+            "numerator": 13,
+            "text": "13/32"
+          },
+          {
+            "decimal": 0.21875,
+            "denominator": 32,
+            "numerator": 7,
+            "text": "7/32"
+          }
+        ]
+      ],
+      "h_interval": [
+        {
+          "decimal": 0.0,
+          "denominator": 1,
+          "numerator": 0,
+          "text": "0/1"
+        },
+        {
+          "decimal": 0.25,
+          "denominator": 4,
+          "numerator": 1,
+          "text": "1/4"
+        }
+      ],
+      "reference": [
+        {
+          "decimal": 0.0,
+          "denominator": 1,
+          "numerator": 0,
+          "text": "0/1"
+        },
+        {
+          "decimal": 0.25,
+          "denominator": 4,
+          "numerator": 1,
+          "text": "1/4"
+        },
+        {
+          "decimal": 0.75,
+          "denominator": 4,
+          "numerator": 3,
+          "text": "3/4"
+        }
+      ],
+      "support_size": 2,
+      "unique": false,
+      "value": {
+        "decimal": 0.21875,
+        "denominator": 32,
+        "numerator": 7,
+        "text": "7/32"
+      }
+    },
+    {
+      "endpoint_lotteries": [
+        [
+          {
+            "decimal": 0.1,
+            "denominator": 10,
+            "numerator": 1,
+            "text": "1/10"
+          },
+          {
+            "decimal": 0.18,
+            "denominator": 50,
+            "numerator": 9,
+            "text": "9/50"
+          },
+          {
+            "decimal": 0.72,
+            "denominator": 25,
+            "numerator": 18,
+            "text": "18/25"
+          }
+        ],
+        [
+          {
+            "decimal": 0.4,
+            "denominator": 5,
+            "numerator": 2,
+            "text": "2/5"
+          },
+          {
+            "decimal": 0.42,
+            "denominator": 50,
+            "numerator": 21,
+            "text": "21/50"
+          },
+          {
+            "decimal": 0.18,
+            "denominator": 50,
+            "numerator": 9,
+            "text": "9/50"
+          }
+        ]
+      ],
+      "h_interval": [
+        {
+          "decimal": 0.0,
+          "denominator": 1,
+          "numerator": 0,
+          "text": "0/1"
+        },
+        {
+          "decimal": 0.3,
+          "denominator": 10,
+          "numerator": 3,
+          "text": "3/10"
+        }
+      ],
+      "reference": [
+        {
+          "decimal": 0.0,
+          "denominator": 1,
+          "numerator": 0,
+          "text": "0/1"
+        },
+        {
+          "decimal": 0.2,
+          "denominator": 5,
+          "numerator": 1,
+          "text": "1/5"
+        },
+        {
+          "decimal": 0.8,
+          "denominator": 5,
+          "numerator": 4,
+          "text": "4/5"
+        }
+      ],
+      "support_size": 2,
+      "unique": false,
+      "value": {
+        "decimal": 0.225,
+        "denominator": 40,
+        "numerator": 9,
+        "text": "9/40"
+      }
+    }
+  ],
+  "schema": "h212-zero-reference-weight-edge-box-boundary-v1",
+  "scope": "one weighted-Borda full compatible edge box and ex-ante expected regret; no empirical reference choice, outcome use, or extension to other target laws"
+}

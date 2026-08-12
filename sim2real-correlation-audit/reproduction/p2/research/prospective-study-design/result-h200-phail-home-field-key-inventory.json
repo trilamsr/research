@@ -1,0 +1,95 @@
+{
+  "candidate_count": 3,
+  "disposition": "candidate_home_field_key_found",
+  "episode_count": 594,
+  "fixed_tokens": [
+    "home",
+    "homing",
+    "joint",
+    "joints",
+    "initial",
+    "initialize",
+    "initialization",
+    "start",
+    "starting",
+    "pose",
+    "rng",
+    "random",
+    "randomized",
+    "randomization",
+    "variation",
+    "perturbation",
+    "target",
+    "origin"
+  ],
+  "h193_sha256": "3c9eec888c77e425349ffb9997f0eb249c99b73eb9b24bf94278ee8a2e25f429",
+  "h199_sha256": "2571b41e1796e5eb85ac96ac820c73aa0192c1703ffb9bb6abd85f454f0c41a8",
+  "input_sha256": "ad43fca1da065a1cb7fd84dfa9afc5691c72ebe12e7f165c68a0050e51e87ebe",
+  "key_rows": [
+    {
+      "category": "home_field_candidate",
+      "episode_count": 594,
+      "episode_set_sha256": "7b0bccca9b270a516e6f9ebe02dd5fb3ca92dbb34e7104fbacdb28d847fe4b4c",
+      "key_path": "static.joint_names",
+      "node_type_counts": {
+        "array": 594
+      }
+    },
+    {
+      "category": "home_field_candidate",
+      "episode_count": 594,
+      "episode_set_sha256": "7b0bccca9b270a516e6f9ebe02dd5fb3ca92dbb34e7104fbacdb28d847fe4b4c",
+      "key_path": "static.joint_signal",
+      "node_type_counts": {
+        "string": 594
+      }
+    },
+    {
+      "category": "home_field_candidate",
+      "episode_count": 594,
+      "episode_set_sha256": "7b0bccca9b270a516e6f9ebe02dd5fb3ca92dbb34e7104fbacdb28d847fe4b4c",
+      "key_path": "static.pose_signals",
+      "node_type_counts": {
+        "array": 594
+      }
+    }
+  ],
+  "performance_or_trajectory_values_opened": false,
+  "primitive_values_retained": false,
+  "prior_h193_reset_seed_key_count": 0,
+  "prohibited_tokens": [
+    "success",
+    "successful",
+    "outcome",
+    "result",
+    "reward",
+    "score",
+    "rank",
+    "duration",
+    "termination",
+    "terminated",
+    "completion",
+    "completed",
+    "safety",
+    "hrt",
+    "annotation",
+    "event",
+    "note",
+    "media",
+    "video",
+    "telemetry",
+    "item",
+    "items",
+    "action",
+    "actions",
+    "command",
+    "commands",
+    "observation",
+    "observations"
+  ],
+  "protocol_sha256": "415f68158dc3076e6224a7a0d577bc8714c0ca898e3169377fe7143d5c3f88a5",
+  "schema": "h200-phail-home-field-key-inventory-v1",
+  "scope": "key names and node types only over the exact 1,188 H187-hash-bound sidecars; no primitive values, trajectories, media, telemetry, or performance content",
+  "sidecar_object_count": 1188,
+  "source_content_emitted": false
+}

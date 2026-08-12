@@ -1,0 +1,286 @@
+import logging
+import time
+import xml.etree.ElementTree as ET
+from collections.abc import Iterator
+from pathlib import Path
+from typing import Any
+
+import numpy as np
+
+try:
+    import positronic_franka._franka as pf
+except ImportError as e:
+    raise ImportError(
+        'Franka support is not installed. Install the hardware extra:\n'
+        '  pip install "positronic[hardware]"\n'
+        'or install the Franka core directly:\n'
+        '  pip install positronic-franka\n'
+    ) from e
+
+import pimm
+from positronic import geom
+
+from . import RobotStatus, State, command
+
+
+def _recover_if_needed(robot, in_error):
+    if in_error:
+        robot.recover_from_errors()
+
+
+def _check_error(is_error, was_error):
+    return is_error, is_error and not was_error
+
+
+class FrankaState(State, pimm.shared_memory.NumpySMAdapter):
+    Q_OFFSET = 0
+    DQ_OFFSET = Q_OFFSET + 7
+    EE_POSE_OFFSET = DQ_OFFSET + 7
+    EE_WRENCH_OFFSET = EE_POSE_OFFSET + 7
+    STATUS_OFFSET = EE_WRENCH_OFFSET + 6
+    TOTAL = STATUS_OFFSET + 1
+
+    def __init__(self):
+        super().__init__(shape=(FrankaState.TOTAL,), dtype=np.float32)
+
+    def instantiation_params(self) -> tuple[Any, ...]:
+        return ()
+
+    @property
+    def q(self) -> np.ndarray:
+        return self.array[FrankaState.Q_OFFSET : FrankaState.Q_OFFSET + 7].copy()
+
+    @property
+    def dq(self) -> np.ndarray:
+        return self.array[FrankaState.DQ_OFFSET : FrankaState.DQ_OFFSET + 7].copy()
+
+    @property
+    def ee_pose(self) -> geom.Transform3D:
+        ee_pose = self.array[FrankaState.EE_POSE_OFFSET : FrankaState.EE_POSE_OFFSET + 7].copy()
+        return geom.Transform3D(ee_pose[:3], geom.Rotation.from_quat(ee_pose[3:7]))
+
+    @property
+    def ee_wrench(self) -> np.ndarray | None:
+        return self.array[FrankaState.EE_WRENCH_OFFSET : FrankaState.EE_WRENCH_OFFSET + 6].copy()
+
+    @property
+    def status(self) -> RobotStatus:
+        return RobotStatus(int(self.array[FrankaState.STATUS_OFFSET]))
+
+    def _start_reset(self):
+        self.array[FrankaState.STATUS_OFFSET] = RobotStatus.RESETTING.value
+
+    def _finish_reset(self):
+        self.array[FrankaState.STATUS_OFFSET] = RobotStatus.AVAILABLE.value
+
+    def encode(self, state: pf.State):
+        self.array[FrankaState.Q_OFFSET : FrankaState.Q_OFFSET + 7] = state.q
+        self.array[FrankaState.DQ_OFFSET : FrankaState.DQ_OFFSET + 7] = state.dq
+        self.array[FrankaState.EE_POSE_OFFSET : FrankaState.EE_POSE_OFFSET + 7] = state.end_effector_pose
+        self.array[FrankaState.EE_WRENCH_OFFSET : FrankaState.EE_WRENCH_OFFSET + 6] = state.ee_wrench
+        self.array[FrankaState.STATUS_OFFSET] = (
+            RobotStatus.AVAILABLE.value if state.error == 0 else RobotStatus.ERROR.value
+        )
+
+
+def _revolute_joint_names(urdf_xml):
+    root = ET.fromstring(urdf_xml)
+    return [j.get('name') for j in root.findall('joint') if j.get('type') == 'revolute']
+
+
+_MESH_DIR = Path(__file__).resolve().parent.parent.parent / 'assets/fr3_collision'
+
+
+class Robot(pimm.ControlSystem):
+    def __init__(
+        self,
+        ip: str,
+        *,
+        relative_dynamics_factor=0.2,
+        home_joints: list[float] | None = None,
+        home_joints_variation: list[float] | None = None,
+        load: tuple | None = None,
+        collision_coeff: float = 2.0,
+    ) -> None:
+        """
+        :param ip: IP address of the robot.
+        :param relative_dynamics_factor: Relative dynamics factor in [0, 1]. Smaller values are more conservative.
+        :param home_joints: Joints of "reset" position.
+        :param home_joints_variation: Max random deviation per joint in radians. Set to [0]*7 to disable.
+        :param collision_coeff: Multiplier for collision thresholds. Higher = more tolerant.
+            Default 2.0 (data collection). Use 6.0 for inference.
+        """
+        self._ip = ip
+        self._relative_dynamics_factor = relative_dynamics_factor
+        self._home_joints = home_joints if home_joints is not None else [0.0, -0.31, 0.0, -1.65, 0.0, 1.522, 0.0]
+        self._home_joints_variation = (
+            home_joints_variation if home_joints_variation is not None else [0.03, 0.05, 0.08, 0.08, 0.10, 0.10, 0.10]
+        )
+        self.commands: pimm.SignalReceiver = pimm.ControlSystemReceiver(self, default=None)
+        self.state: pimm.SignalEmitter = pimm.ControlSystemEmitter(self)
+        self.robot_meta = pimm.ControlSystemEmitter(self)
+        self._load = load
+        self._collision_coeff = collision_coeff
+        self._robot: pf.Robot | None = None
+
+    @staticmethod
+    def _build_robot_meta(robot) -> dict:
+        urdf_xml = robot.get_robot_model()
+        meshes = {f.name: f.read_bytes() for f in _MESH_DIR.iterdir() if f.suffix == '.stl'}
+        root = ET.fromstring(urdf_xml)
+        # Rewrite mesh references to bare filenames matching the bundled STL meshes.
+        # The libfranka URDF uses package:// URIs (e.g. package://franka_description/.../link0.dae)
+        # and references .dae visual meshes we don't bundle. Strip unresolvable elements and
+        # normalise remaining refs so the URDF is self-contained — matching the style of
+        # fr3.urdf used by cfg.ds.internal for offline dataset transforms.
+        for link in root.findall('link'):
+            for tag in ('visual', 'collision'):
+                for vc_el in list(link.findall(tag)):
+                    mesh_el = vc_el.find('.//mesh')
+                    if mesh_el is None:
+                        continue
+                    basename = Path(mesh_el.get('filename', '')).name
+                    if basename in meshes:
+                        mesh_el.set('filename', basename)
+                    else:
+                        link.remove(vc_el)
+            stl = link.get('name', '') + '.stl'
+            if stl in meshes and link.find('visual') is None:
+                ET.SubElement(ET.SubElement(link, 'visual'), 'geometry').append(ET.Element('mesh', filename=stl))
+        return {
+            'urdf': ET.tostring(root, encoding='unicode'),
+            'joint_names': _revolute_joint_names(urdf_xml),
+            'meshes': meshes,
+            'control_frame': 'end_effector',
+        }
+
+    def _ensure_robot(self) -> pf.Robot:
+        if self._robot is None:
+            self._robot = pf.Robot(
+                self._ip,
+                realtime_config=pf.RealtimeConfig.Ignore,
+                relative_dynamics_factor=self._relative_dynamics_factor,
+            )
+        return self._robot
+
+    def _init_robot(self, robot):
+        coeff = self._collision_coeff
+        torque_threshold_acceleration = np.array([20.0, 20.0, 20.0, 20.0, 20.0, 20.0, 20.0])
+        torque_threshold_nominal = np.array([10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0])
+        force_threshold_acceleration = np.array([10.0, 10.0, 10.0, 10.0, 10.0, 10.0])
+        force_threshold_nominal = np.array([10.0, 10.0, 10.0, 10.0, 10.0, 10.0])
+        robot.set_collision_behavior(
+            lower_torque_threshold_acceleration=(coeff * torque_threshold_acceleration).tolist(),
+            upper_torque_threshold_acceleration=(coeff * torque_threshold_acceleration).tolist(),
+            lower_torque_threshold_nominal=(coeff * torque_threshold_nominal).tolist(),
+            upper_torque_threshold_nominal=(coeff * torque_threshold_nominal * 2).tolist(),
+            lower_force_threshold_acceleration=(coeff * force_threshold_acceleration).tolist(),
+            upper_force_threshold_acceleration=(coeff * force_threshold_acceleration).tolist(),
+            lower_force_threshold_nominal=(coeff * force_threshold_nominal).tolist(),
+            upper_force_threshold_nominal=(coeff * force_threshold_nominal * 2).tolist(),
+        )
+        robot.set_joint_impedance([3000, 3000, 3000, 2500, 2500, 2000, 2000])
+        robot.set_cartesian_impedance([3000, 3000, 3000, 300, 300, 300])
+        if self._load is not None:
+            logging.info(f'Setting load to {self._load}')
+            robot.set_load(*self._load)
+        else:
+            robot.set_load(0.0, [0.0, 0.0, 0.0], [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0])
+
+    def _reset(self, robot, robot_state: FrankaState):
+        robot_state._start_reset()
+        self.state.emit(robot_state)
+
+        target = np.asarray(self._home_joints, dtype=np.float64)
+        if any(v > 0 for v in self._home_joints_variation):
+            variation = np.random.uniform(
+                -np.asarray(self._home_joints_variation), np.asarray(self._home_joints_variation)
+            )
+            target = target + variation
+        robot.set_target_joints(target, asynchronous=False)
+
+        robot_state._finish_reset()
+        self.state.emit(robot_state)
+
+    def run(self, should_stop: pimm.SignalReceiver, clock: pimm.Clock) -> Iterator[pimm.Sleep]:
+        robot = self._ensure_robot()
+        self._init_robot(robot)
+        self.robot_meta.emit(Robot._build_robot_meta(robot))
+        robot.recover_from_errors()
+
+        robot_state = FrankaState()
+        rate_limiter = pimm.RateLimiter(clock, hz=2000)
+
+        self._reset(robot, robot_state)
+
+        in_error = False
+        while not should_stop.value:
+            st = robot.state()
+            robot_state.encode(st)
+            self.state.emit(robot_state)
+
+            in_error, entered_error = _check_error(st.error != 0, in_error)
+            if entered_error:
+                logging.warning(f'Robot error: {st.error_message}')
+
+            cmd_msg = self.commands.read()
+            if cmd_msg.updated:
+                match cmd_msg.data:
+                    case command.Reset():
+                        _recover_if_needed(robot, in_error)
+                        self._reset(robot, robot_state)
+                        continue
+                    case command.Recover():
+                        _recover_if_needed(robot, in_error)
+                    case _ if in_error:
+                        pass
+                    case command.CartesianPosition(pose):
+                        target_pose_wxyz = np.asarray([*pose.translation, *pose.rotation.as_quat])
+                        ik_solution = robot.inverse_kinematics_with_limits(target_pose_wxyz)
+                        robot.set_target_joints(ik_solution)
+                    case command.JointPosition(positions):
+                        robot.set_target_joints(positions)
+                    case command.JointDelta(velocities=joint_delta):
+                        robot.set_target_joints(st.q + joint_delta)
+                    case _:
+                        raise NotImplementedError(f'Unsupported command {cmd_msg.data}')
+
+            yield pimm.Sleep(rate_limiter.wait_time())
+
+
+if __name__ == '__main__':
+    with pimm.World() as world:
+        robot = Robot('172.168.0.2', relative_dynamics_factor=0.2)
+        commands = world.pair(robot.commands)
+        state = world.pair(robot.state)
+        world.start([], background=robot)
+
+        trajectory = [
+            ([0.03, 0.03, 0.03], 0.0),
+            ([-0.03, 0.03, 0.03], 2.0),
+            ([-0.03, -0.03, 0.03], 4.0),
+            ([-0.03, -0.03, -0.03], 6.0),
+            ([0.03, -0.03, -0.03], 8.0),
+            ([0.03, 0.03, -0.03], 10.0),
+            ([0.03, 0.03, 0.03], 12.0),
+        ]
+
+        while not world.should_stop and (state.read() is None or state.value.status == RobotStatus.RESETTING):
+            time.sleep(0.01)
+
+        origin = state.value.ee_pose
+        print(f'Origin: {origin}')
+
+        alpha = 3.0
+        start, i = time.monotonic(), 0
+        while i < len(trajectory) and not world.should_stop:
+            pos, duration = trajectory[i]
+            pos = np.asarray(pos) * alpha
+            if time.monotonic() > start + duration:
+                print(f'Moving to {pos + origin.translation}')
+                commands.emit(command.CartesianPosition(geom.Transform3D(pos + origin.translation, origin.rotation)))
+                i += 1
+            else:
+                time.sleep(0.01)
+
+        print('Finishing')

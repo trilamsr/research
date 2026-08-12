@@ -1,0 +1,66 @@
+{
+  "schema": "h210-phail-within-date-policy-sequence-independent-challenge-v1",
+  "target_producer_result_sha256": "71bf7b49976b936c147cd021776dc3c5a32a401dff5824506a28b1ae5b77d112",
+  "input_sha256": {
+    "cohort": "ad43fca1da065a1cb7fd84dfa9afc5691c72ebe12e7f165c68a0050e51e87ebe",
+    "h206_projection": "7b7af23688e230325ec69070c8e5cd5523224990d7bc44defbe5b30f12c65529"
+  },
+  "implementation": {
+    "language": "Node.js",
+    "node": "v26.5.0",
+    "producer_imported_or_executed": false,
+    "rng": "independent SplitMix64 and Fisher-Yates stream",
+    "seed_text": "H210 independent challenge SplitMix64 v1",
+    "permutations": 49999
+  },
+  "episode_count": 594,
+  "date_count": 13,
+  "challenge_controls": {
+    "constant_one": true,
+    "alternating_zero": true
+  },
+  "analyses": {
+    "pooled_within_date": {
+      "observed_same_policy_adjacency_fraction": 0.3924268502581756,
+      "analytic_exchangeability_expectation": 0.37984021767356435,
+      "permutation_median": 0.3803786574870912,
+      "permutation_q025": 0.3442340791738382,
+      "permutation_q975": 0.41480206540447506,
+      "observed_minus_permutation_median": 0.012048192771084376,
+      "lower_tail_p": 0.76882,
+      "upper_tail_p": 0.2614,
+      "two_sided_p": 0.5228,
+      "permutations": 49999
+    },
+    "regime_1_dates": {
+      "observed_same_policy_adjacency_fraction": 0.48559670781893005,
+      "analytic_exchangeability_expectation": 0.44970267997643204,
+      "permutation_median": 0.448559670781893,
+      "permutation_q025": 0.3950617283950617,
+      "permutation_q975": 0.5061728395061729,
+      "observed_minus_permutation_median": 0.037037037037037035,
+      "lower_tail_p": 0.91178,
+      "upper_tail_p": 0.1137,
+      "two_sided_p": 0.2274,
+      "permutations": 49999
+    },
+    "regime_2_dates": {
+      "observed_same_policy_adjacency_fraction": 0.3254437869822485,
+      "analytic_exchangeability_expectation": 0.3296136545386623,
+      "permutation_median": 0.32840236686390534,
+      "permutation_q025": 0.28402366863905326,
+      "permutation_q975": 0.3757396449704142,
+      "observed_minus_permutation_median": -0.00295857988165682,
+      "lower_tail_p": 0.44986,
+      "upper_tail_p": 0.59898,
+      "two_sided_p": 0.89972,
+      "permutations": 49999
+    }
+  },
+  "classification": "no_detectable_within_date_policy_sequence_structure_at_fixed_resolution",
+  "permutation_reference_treated_as_assignment_law": false,
+  "date_treated_as_physical_session_or_cause": false,
+  "state_or_performance_opened": false,
+  "outcome_analysis_authorized": false,
+  "unresolved_material_concerns": []
+}

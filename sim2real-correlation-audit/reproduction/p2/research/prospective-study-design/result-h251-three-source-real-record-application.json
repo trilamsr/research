@@ -1,0 +1,828 @@
+{
+  "analysis_sha256": "e815cb382ccb405cbaf6afa1fe82b3560b3be8cc7ecb7a1389ee59555c5b2b17",
+  "ankile": {
+    "marker": {
+      "execution_record": {
+        "achieved_reset_acceptance_record_present": false,
+        "all_rounds_submitted": true,
+        "attempt_or_retry_ledger_present": false,
+        "randomized_order_declared": true,
+        "rerun_incomplete_rounds": true,
+        "reset_retry_configuration_present": true,
+        "round_policy_order_counts": {
+          "0-1-2": 9,
+          "0-2-1": 11,
+          "1-0-2": 11,
+          "1-2-0": 10,
+          "2-1-0": 9
+        },
+        "single_arena_session_id_present": true
+      },
+      "interpretation": "exact released 50-state finite panel; no population or deployment inference",
+      "released_finite_panel": {
+        "complete_policy_state_rectangle": true,
+        "pair_results": [
+          {
+            "half_credit_score_left": 0.37,
+            "left": "marker-P0",
+            "left_wins": 6,
+            "right": "marker-P1",
+            "right_wins": 19,
+            "ties": 25
+          },
+          {
+            "half_credit_score_left": 0.38,
+            "left": "marker-P0",
+            "left_wins": 9,
+            "right": "marker-P2",
+            "right_wins": 21,
+            "ties": 20
+          },
+          {
+            "half_credit_score_left": 0.51,
+            "left": "marker-P1",
+            "left_wins": 11,
+            "right": "marker-P2",
+            "right_wins": 10,
+            "ties": 29
+          }
+        ],
+        "physical_task": "marker_d2",
+        "policies": 3,
+        "policy_results": [
+          {
+            "policy": "marker-P0",
+            "source_artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+            "source_policy_name": "baseline_nocf_r5",
+            "success_rate": 0.38,
+            "successes": 19,
+            "trials": 50
+          },
+          {
+            "policy": "marker-P1",
+            "source_artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+            "source_policy_name": "ours_freecf_r5_dp",
+            "success_rate": 0.64,
+            "successes": 32,
+            "trials": 50
+          },
+          {
+            "policy": "marker-P2",
+            "source_artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+            "source_policy_name": "ours_freecf_r5_iql_cfinal_n16",
+            "success_rate": 0.62,
+            "successes": 31,
+            "trials": 50
+          }
+        ],
+        "retention_sensitivity": {
+          "closest_challenger": "marker-P2",
+          "minimum_matched_round_replacements_to_remove_unique_winner": 1,
+          "minimum_matched_round_replacements_to_reverse_winner": 1,
+          "scope": "fixed 50-state panel; an affected retained round may be replaced by any three-policy binary outcome vector",
+          "warning": "worst-case sensitivity only; it is not evidence that any released round was replaced or selected using outcomes"
+        },
+        "rollouts": 150,
+        "states": 50,
+        "success_encoding": {
+          "failure": 0,
+          "success": 1,
+          "timeout": 0
+        },
+        "terminal_label_counts": {
+          "failure": 19,
+          "success": 82,
+          "timeout": 49
+        },
+        "winner_margin_successes_over_second": 1,
+        "winner_set": [
+          "marker-P1"
+        ]
+      },
+      "route_graph": {
+        "components": [
+          [
+            "marker-P0",
+            "marker-P1",
+            "marker-P2"
+          ]
+        ],
+        "connected": true,
+        "edges": 3,
+        "possible_edges": 3
+      },
+      "source": {
+        "license": "Apache-2.0",
+        "repo_id": "ankile/real01b-marker-d2-r5-trio-baseline-dp-iql-cfinal-n16-heval-sobolseed2026070704",
+        "revision": "cd5d0df42a622bcaad2b2a338396d4b6851cab9e"
+      }
+    },
+    "routing": {
+      "execution_record": {
+        "achieved_reset_acceptance_record_present": false,
+        "all_rounds_submitted": true,
+        "attempt_or_retry_ledger_present": false,
+        "randomized_order_declared": true,
+        "rerun_incomplete_rounds": true,
+        "reset_retry_configuration_present": true,
+        "round_policy_order_counts": {
+          "0-1-2": 4,
+          "0-2-1": 8,
+          "1-0-2": 7,
+          "1-2-0": 5,
+          "2-0-1": 14,
+          "2-1-0": 12
+        },
+        "single_arena_session_id_present": true
+      },
+      "interpretation": "exact released 50-state finite panel; no population or deployment inference",
+      "released_finite_panel": {
+        "complete_policy_state_rectangle": true,
+        "pair_results": [
+          {
+            "half_credit_score_left": 0.49,
+            "left": "routing-P0",
+            "left_wins": 5,
+            "right": "routing-P1",
+            "right_wins": 6,
+            "ties": 39
+          },
+          {
+            "half_credit_score_left": 0.46,
+            "left": "routing-P0",
+            "left_wins": 6,
+            "right": "routing-P2",
+            "right_wins": 10,
+            "ties": 34
+          },
+          {
+            "half_credit_score_left": 0.47,
+            "left": "routing-P1",
+            "left_wins": 5,
+            "right": "routing-P2",
+            "right_wins": 8,
+            "ties": 37
+          }
+        ],
+        "physical_task": "routing_d1",
+        "policies": 3,
+        "policy_results": [
+          {
+            "policy": "routing-P0",
+            "source_artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-routing-d1-baseline-uniform-r5-ef20cov30-r0b100-r1n-fb278f66-p2-100k-eval5k-save25k-eval8192-init0-seed-1-bbepb3x4-final:v0",
+            "source_policy_name": "baseline_uniform_r5_checkpoint_100000",
+            "success_rate": 0.16,
+            "successes": 8,
+            "trials": 50
+          },
+          {
+            "policy": "routing-P1",
+            "source_artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-routing-d1-ours-sobol-freecf-r5-ef20cov30-r0o100-r1-e0c590e8-p2-100k-eval5k-save25k-eval8192-init0-seed-1-jxmkz5g2-final:v0",
+            "source_policy_name": "ours_sobol_freecf_r5_checkpoint_100000",
+            "success_rate": 0.18,
+            "successes": 9,
+            "trials": 50
+          },
+          {
+            "policy": "routing-P2",
+            "source_artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-routing-d1-r5-g0997-flatcache-noeval-s1-final:v0",
+            "source_policy_name": "ours_sobol_freecf_r5_iql_g0997_n16",
+            "success_rate": 0.24,
+            "successes": 12,
+            "trials": 50
+          }
+        ],
+        "retention_sensitivity": {
+          "closest_challenger": "routing-P1",
+          "minimum_matched_round_replacements_to_remove_unique_winner": 2,
+          "minimum_matched_round_replacements_to_reverse_winner": 2,
+          "scope": "fixed 50-state panel; an affected retained round may be replaced by any three-policy binary outcome vector",
+          "warning": "worst-case sensitivity only; it is not evidence that any released round was replaced or selected using outcomes"
+        },
+        "rollouts": 150,
+        "states": 50,
+        "success_encoding": {
+          "failure": 0,
+          "success": 1,
+          "timeout": 0
+        },
+        "terminal_label_counts": {
+          "failure": 53,
+          "success": 29,
+          "timeout": 68
+        },
+        "winner_margin_successes_over_second": 3,
+        "winner_set": [
+          "routing-P2"
+        ]
+      },
+      "route_graph": {
+        "components": [
+          [
+            "routing-P0",
+            "routing-P1",
+            "routing-P2"
+          ]
+        ],
+        "connected": true,
+        "edges": 3,
+        "possible_edges": 3
+      },
+      "source": {
+        "license": "Apache-2.0",
+        "repo_id": "ankile/real01b-routing-d1-r5-threearm-checkpoint100000-iql-g0997-n16-heldout-sobol50",
+        "revision": "15d419013006f1e3e8363abbf95650f212eb77f6"
+      }
+    },
+    "square": {
+      "execution_record": {
+        "achieved_reset_acceptance_record_present": false,
+        "all_rounds_submitted": true,
+        "attempt_or_retry_ledger_present": false,
+        "randomized_order_declared": true,
+        "rerun_incomplete_rounds": false,
+        "reset_retry_configuration_present": true,
+        "round_policy_order_counts": {
+          "0-1-2": 12,
+          "0-2-1": 5,
+          "1-0-2": 8,
+          "1-2-0": 4,
+          "2-0-1": 10,
+          "2-1-0": 11
+        },
+        "single_arena_session_id_present": true
+      },
+      "interpretation": "exact released 50-state finite panel; no population or deployment inference",
+      "released_finite_panel": {
+        "complete_policy_state_rectangle": true,
+        "pair_results": [
+          {
+            "half_credit_score_left": 0.42,
+            "left": "square-P0",
+            "left_wins": 4,
+            "right": "square-P1",
+            "right_wins": 12,
+            "ties": 34
+          },
+          {
+            "half_credit_score_left": 0.45,
+            "left": "square-P0",
+            "left_wins": 7,
+            "right": "square-P2",
+            "right_wins": 12,
+            "ties": 31
+          },
+          {
+            "half_credit_score_left": 0.53,
+            "left": "square-P1",
+            "left_wins": 6,
+            "right": "square-P2",
+            "right_wins": 3,
+            "ties": 41
+          }
+        ],
+        "physical_task": "square_d2",
+        "policies": 3,
+        "policy_results": [
+          {
+            "policy": "square-P0",
+            "source_artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+            "source_policy_name": "baseline_nocf_r5_c100k",
+            "success_rate": 0.56,
+            "successes": 28,
+            "trials": 50
+          },
+          {
+            "policy": "square-P1",
+            "source_artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+            "source_policy_name": "ours_freecf_r5_c100k_dp",
+            "success_rate": 0.72,
+            "successes": 36,
+            "trials": 50
+          },
+          {
+            "policy": "square-P2",
+            "source_artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+            "source_policy_name": "ours_freecf_r5_c100k_iql_s3fixfinal_n16",
+            "success_rate": 0.66,
+            "successes": 33,
+            "trials": 50
+          }
+        ],
+        "retention_sensitivity": {
+          "closest_challenger": "square-P2",
+          "minimum_matched_round_replacements_to_remove_unique_winner": 2,
+          "minimum_matched_round_replacements_to_reverse_winner": 2,
+          "scope": "fixed 50-state panel; an affected retained round may be replaced by any three-policy binary outcome vector",
+          "warning": "worst-case sensitivity only; it is not evidence that any released round was replaced or selected using outcomes"
+        },
+        "rollouts": 150,
+        "states": 50,
+        "success_encoding": {
+          "failure": 0,
+          "success": 1,
+          "timeout": 0
+        },
+        "terminal_label_counts": {
+          "failure": 31,
+          "success": 97,
+          "timeout": 22
+        },
+        "winner_margin_successes_over_second": 3,
+        "winner_set": [
+          "square-P1"
+        ]
+      },
+      "route_graph": {
+        "components": [
+          [
+            "square-P0",
+            "square-P1",
+            "square-P2"
+          ]
+        ],
+        "connected": true,
+        "edges": 3,
+        "possible_edges": 3
+      },
+      "source": {
+        "license": "Apache-2.0",
+        "repo_id": "ankile/real01b-square-d2-r5-trio-baseline-dp-iql-s3fixfinal-n16-heval-sobolseed2026070901",
+        "revision": "d2d109029967c27fad4e09637206cfe7614ff3de"
+      }
+    }
+  },
+  "cross_source_conclusion": {
+    "ankile": "positive exact finite-panel common-state comparison",
+    "deployment_or_population_claim": false,
+    "roboarena": "connected policy co-occurrence does not supply a common-context target law",
+    "tri": "strong source-described matched protocol is not reconstructable from released outcome arrays"
+  },
+  "protocol_sha256": "81c3c53baa8cc4663b108d3d333f30ca36e8e875fff4ddb4b01cfd0d59a6520c",
+  "roboarena": {
+    "interpretation": "policy-only graph support under pair-specific sessions; not a common-context route graph or global target ranking",
+    "location_instruction_proxy": {
+      "connected_strata_among_those": 763,
+      "distinct_proxy_strata": 2746,
+      "strata_with_at_least_three_policies": 942,
+      "warning": "location/instruction is not an exact physical context or reset"
+    },
+    "observed_schema": {
+      "missing_for_common_context_or_lifecycle_join": [
+        "assignment_probability_or_pool_epoch",
+        "exact_initial_state_id",
+        "reset_or_accepted_state_id",
+        "robot_instance_id",
+        "retry_parent_or_complete_attempt_ledger"
+      ],
+      "policy_keys": [
+        "binary_success",
+        "duration",
+        "partial_success",
+        "policy_name"
+      ],
+      "top_level_keys": [
+        "evaluation_location",
+        "evaluator_name",
+        "language_instruction",
+        "longform_feedback",
+        "policies",
+        "preference",
+        "session_completion_timestamp",
+        "session_creation_timestamp"
+      ]
+    },
+    "policy_cooccurrence_graph": {
+      "components": [
+        [
+          "Apricot",
+          "Cosmos3-Nano-Policy",
+          "allenai/MolmoAct2-DROID",
+          "dam",
+          "dreaming_zebra",
+          "floppy_bagel_195k_temp1p0",
+          "floppy_bagel_285k_temp1p0",
+          "floppy_bagel_420k",
+          "floppy_bagel_525k_temp1p0",
+          "floppy_bagel_90k_temp1p0",
+          "j2-vla",
+          "paligemma_binning_droid",
+          "paligemma_diffusion_droid",
+          "paligemma_fast_droid",
+          "paligemma_fast_specialist_droid",
+          "paligemma_norm_droid",
+          "paligemma_vq_droid",
+          "pi05_droid",
+          "pi0_droid",
+          "pi0_fast_droid"
+        ],
+        [
+          "UNLABELED_DREAM"
+        ]
+      ],
+      "connected": false,
+      "observed_edges": 104,
+      "pair_eligible_components": [
+        [
+          "Apricot",
+          "Cosmos3-Nano-Policy",
+          "allenai/MolmoAct2-DROID",
+          "dam",
+          "dreaming_zebra",
+          "floppy_bagel_195k_temp1p0",
+          "floppy_bagel_285k_temp1p0",
+          "floppy_bagel_420k",
+          "floppy_bagel_525k_temp1p0",
+          "floppy_bagel_90k_temp1p0",
+          "j2-vla",
+          "paligemma_binning_droid",
+          "paligemma_diffusion_droid",
+          "paligemma_fast_droid",
+          "paligemma_fast_specialist_droid",
+          "paligemma_norm_droid",
+          "paligemma_vq_droid",
+          "pi05_droid",
+          "pi0_droid",
+          "pi0_fast_droid"
+        ]
+      ],
+      "pair_eligible_policies": 20,
+      "pair_eligible_subgraph_connected": true,
+      "policies": 21,
+      "policies_never_observed_with_another_policy": 1,
+      "possible_edges": 210,
+      "session_support": {
+        "edges_with_at_least_10_sessions": 37,
+        "edges_with_at_least_50_sessions": 28,
+        "edges_with_one_session": 27,
+        "maximum": 819,
+        "median": 4.5,
+        "minimum": 1
+      },
+      "unobserved_edges": 106
+    },
+    "preference_records_with_declared_value": 3879,
+    "privacy": {
+      "evaluator_names_output": false,
+      "feedback_output": false,
+      "instructions_output": false,
+      "row_level_output": false,
+      "session_ids_output": false
+    },
+    "sessions": 3883,
+    "sessions_by_distinct_policy_count": {
+      "1": 4,
+      "2": 3267,
+      "4": 13,
+      "7": 599
+    },
+    "source": {
+      "license": "MIT",
+      "repo_id": "RoboArena/DataDump_07-17-2026",
+      "revision": "7931db81f3f6a48a3245427f7213a4c461f92ccc"
+    }
+  },
+  "schema": "h251-three-source-real-record-application-v1",
+  "source_manifest": [
+    {
+      "bytes": 1866,
+      "path": "research/prospective-study-design/sources/h251/README.md",
+      "sha256": "6b70bfa0f1c045781dc8f6c80fc7431bf0a866c7e9481f81ca69bab88b6776b7"
+    },
+    {
+      "bytes": 13891,
+      "path": "research/prospective-study-design/sources/h251/ankile/marker/README.md",
+      "sha256": "746ef67f6e31a30f9c2e8d19ad927987be42c344717f62f35d9e8cd99d644fee"
+    },
+    {
+      "bytes": 1035,
+      "path": "research/prospective-study-design/sources/h251/ankile/marker/meta/dataset_lineage.json",
+      "sha256": "1a4cf63831ebd0c0ac1ffbf860a7399fe8c10f4087e4aa0fb2850a808c20f5d6"
+    },
+    {
+      "bytes": 12952,
+      "path": "research/prospective-study-design/sources/h251/ankile/marker/meta/info.json",
+      "sha256": "546b735a35c592e70f962587745d0ed40d1243988f23373f81c42060c3dad173"
+    },
+    {
+      "bytes": 27927,
+      "path": "research/prospective-study-design/sources/h251/ankile/marker/meta/initial_states_manifest.json",
+      "sha256": "05b73f2544c92b760153f0f3166901f1f9c67265b9b2b35e7df6638e98524e4d"
+    },
+    {
+      "bytes": 173738,
+      "path": "research/prospective-study-design/sources/h251/ankile/marker/results.json",
+      "sha256": "1ac8672a0913d3e3592e94dc84476f41c612c3cd0b87c6bf9758418a5cc874b6"
+    },
+    {
+      "bytes": 14716,
+      "path": "research/prospective-study-design/sources/h251/ankile/routing/README.md",
+      "sha256": "8a38450bc6d86fc30972dfb5b3b03c14512d975aca4b8daaefe0fcd2c442fca1"
+    },
+    {
+      "bytes": 1090,
+      "path": "research/prospective-study-design/sources/h251/ankile/routing/meta/dataset_lineage.json",
+      "sha256": "8cefa5df3e5217d42eebabbab2321417d5f8b8a265c080e86a6f5544243e2b0c"
+    },
+    {
+      "bytes": 13778,
+      "path": "research/prospective-study-design/sources/h251/ankile/routing/meta/info.json",
+      "sha256": "9c202a57c114deb838831829a203bd87115b6f87b75b53ed6cf4db11e2cbca8d"
+    },
+    {
+      "bytes": 35054,
+      "path": "research/prospective-study-design/sources/h251/ankile/routing/meta/initial_states_manifest.json",
+      "sha256": "da427a904032705f639fd61618e601a5258ccfe3d080c6f55dfbd9b946f13deb"
+    },
+    {
+      "bytes": 169102,
+      "path": "research/prospective-study-design/sources/h251/ankile/routing/results.json",
+      "sha256": "febd54a23136b97e0602f842e25b04e42f7ff6800d2230480c46b6fc671451e0"
+    },
+    {
+      "bytes": 13883,
+      "path": "research/prospective-study-design/sources/h251/ankile/square/README.md",
+      "sha256": "755c37fb52a9e78e4b4a7a6c058043c8813bc2bed45a8132d64d0690a50f114b"
+    },
+    {
+      "bytes": 1067,
+      "path": "research/prospective-study-design/sources/h251/ankile/square/meta/dataset_lineage.json",
+      "sha256": "b846119dcc088dfa9d038506c97e2e5b221d14955db46d1f5a37e7a34b9e3932"
+    },
+    {
+      "bytes": 12940,
+      "path": "research/prospective-study-design/sources/h251/ankile/square/meta/info.json",
+      "sha256": "e5ac05e5743a4994a4918975e21acf6127f398487132e9318e31435f87a9a1fb"
+    },
+    {
+      "bytes": 27111,
+      "path": "research/prospective-study-design/sources/h251/ankile/square/meta/initial_states_manifest.json",
+      "sha256": "2e3bf1ffa259ff3cd6785405672c2c97e7c6cb4f467956b2481460c567a83fcf"
+    },
+    {
+      "bytes": 175578,
+      "path": "research/prospective-study-design/sources/h251/ankile/square/results.json",
+      "sha256": "677dcd57062f53e8f0c61c03cca410f7e7813699232f5fbf4434ffccd130c376"
+    },
+    {
+      "bytes": 1384452,
+      "path": "research/prospective-study-design/sources/h251/tri/dryad-v4.zip",
+      "sha256": "5f25ecbc10fbc3401c8378cb64a381b564a8a7c41a40071d2dede12ca6ab7632"
+    },
+    {
+      "bytes": 234598,
+      "path": "research/prospective-study-design/sources/h251/tri/files/Fig2.csv",
+      "sha256": "47727c7c6609356edfd074bd956493403a42d7b14b5ba783e66b61bcceac8afe"
+    },
+    {
+      "bytes": 27795,
+      "path": "research/prospective-study-design/sources/h251/tri/files/Fig3.csv",
+      "sha256": "b72c33b28976b32a661e4625e4a4dfa38f16c9a55e8c79a8eea2dac571b49302"
+    },
+    {
+      "bytes": 31087,
+      "path": "research/prospective-study-design/sources/h251/tri/files/Fig4_AB.csv",
+      "sha256": "2be953a4df6815fa31cf4aef5a520daabf5f993f01c71af21a32d311f2dcd6da"
+    },
+    {
+      "bytes": 42097,
+      "path": "research/prospective-study-design/sources/h251/tri/files/Fig4_C.csv",
+      "sha256": "99dcb8b996e030e0aec0ad3ce4572b321b4843825e2ab6826bd09162346f656d"
+    },
+    {
+      "bytes": 31967,
+      "path": "research/prospective-study-design/sources/h251/tri/files/Fig4_DE.csv",
+      "sha256": "52c19a6cef59e3342454a38b77601efbac9776c753962c72daa12844e84519ce"
+    },
+    {
+      "bytes": 33842,
+      "path": "research/prospective-study-design/sources/h251/tri/files/Fig4_F.csv",
+      "sha256": "591dd973affb4932f6129ffeaa94a84c4bedef247d2572ee6f4f66711a8ca4b9"
+    },
+    {
+      "bytes": 24788,
+      "path": "research/prospective-study-design/sources/h251/tri/files/Fig5_A.csv",
+      "sha256": "d9fc4e762ec2b988a3e7263bb94942624ad351068ea4d94a60ef7820333ce5b7"
+    },
+    {
+      "bytes": 42333,
+      "path": "research/prospective-study-design/sources/h251/tri/files/Fig5_B.csv",
+      "sha256": "454e2be85aad40697ddcc518d028716537c40724f01bfdafc9cd9fa6420c470b"
+    },
+    {
+      "bytes": 21110,
+      "path": "research/prospective-study-design/sources/h251/tri/files/Fig5_C.csv",
+      "sha256": "2f60feb523a2a77b69c0821cf0642b81dedda949da585873be9106366f17f71b"
+    },
+    {
+      "bytes": 34201,
+      "path": "research/prospective-study-design/sources/h251/tri/files/Fig5_D.csv",
+      "sha256": "2e35386ad5ed865fd81837866c143b1a094938c4414ea6b6ceec8f1ea176ab88"
+    },
+    {
+      "bytes": 2571,
+      "path": "research/prospective-study-design/sources/h251/tri/files/Fig6.csv",
+      "sha256": "a1b556dfac0fcbcaaa75d4124d3405f2d5898b7636bbfeff877007180340adb1"
+    },
+    {
+      "bytes": 89743,
+      "path": "research/prospective-study-design/sources/h251/tri/files/Fig7.csv",
+      "sha256": "2f6b45f9eb15f10ba2b50d5df6d598a347b80c3c8c153adc179f114483eddd22"
+    },
+    {
+      "bytes": 2170,
+      "path": "research/prospective-study-design/sources/h251/tri/files/FigS13.csv",
+      "sha256": "82654b1adea1fa02373aa47874ea2cf6d69da1ea7f382249c06246e9df83607f"
+    },
+    {
+      "bytes": 66407,
+      "path": "research/prospective-study-design/sources/h251/tri/files/FigS14.csv",
+      "sha256": "7ed701a3c9baa7581056a4c40d6849cccb8de121d247fecd30ac52f1e8507e44"
+    },
+    {
+      "bytes": 57067,
+      "path": "research/prospective-study-design/sources/h251/tri/files/FigS15.csv",
+      "sha256": "00adfd7cd03280c8a976cd9e967cc1cce6cf36b31b812db166668183065f966e"
+    },
+    {
+      "bytes": 58123,
+      "path": "research/prospective-study-design/sources/h251/tri/files/FigS16.csv",
+      "sha256": "ab968bae064789e59b971a31849839824783de96e3d310404a38175f6073c28a"
+    },
+    {
+      "bytes": 32111,
+      "path": "research/prospective-study-design/sources/h251/tri/files/FigS28.csv",
+      "sha256": "c68b060d5c3973e60442f42aeb9e4552daea936d1e53cfb79f6d40162f0c51f5"
+    },
+    {
+      "bytes": 21170,
+      "path": "research/prospective-study-design/sources/h251/tri/files/FigS29.csv",
+      "sha256": "bac3020be1aab595f9e446da4844f56c95194b621e013c3a678896ad3ab049da"
+    },
+    {
+      "bytes": 216631,
+      "path": "research/prospective-study-design/sources/h251/tri/files/FigS32.csv",
+      "sha256": "a2e8425a36a6f8d44c0f897914354dda3d963f66b37e77984b5b45986aaadd68"
+    },
+    {
+      "bytes": 291909,
+      "path": "research/prospective-study-design/sources/h251/tri/files/FigS33.csv",
+      "sha256": "14d01fb1d7d864eb2be24877ca0ebee503786986b26d63c9fc4e17acbc177f2c"
+    },
+    {
+      "bytes": 20061,
+      "path": "research/prospective-study-design/sources/h251/tri/files/README.md",
+      "sha256": "02c61c5d6f897a9b66b799bdfd6ca960826b39c8600b008d5ee872c626849d28"
+    }
+  ],
+  "status": "exploratory_outcome_exposed",
+  "tri": {
+    "integrity": {
+      "aggregate_only_rate_mismatches": 0,
+      "binary_array_length_mismatches": 0,
+      "binary_success_count_mismatches": 0,
+      "binary_success_rate_mismatches": 2,
+      "observed_columns": [
+        "Avg_Task_Progress",
+        "CLD_Letter",
+        "Fraction",
+        "Method",
+        "Num_Milestones",
+        "Num_Rollouts",
+        "Num_Successes",
+        "Panel",
+        "Success/Failure",
+        "Success_Rate",
+        "Task",
+        "Task_Progress_Bins",
+        "Task_Progress_Results"
+      ],
+      "progress_array_length_mismatches": 0,
+      "progress_bin_count_mismatches": 0,
+      "progress_mean_mismatches": 0,
+      "schema_variants": 5,
+      "total_reconciliation_mismatches": 2,
+      "trailing_apostrophe_cells_repaired": 3
+    },
+    "interpretation": "published outcome arrays with two rate inconsistencies and no public trial-level key for reconstructing matched bundles or route edges",
+    "matched_bundle_join": {
+      "missing_fields": [
+        "bundle_id",
+        "trial_or_rollout_id",
+        "initial_condition_id",
+        "realized_policy_order",
+        "reset_id_or_acceptance",
+        "session_or_robot_id",
+        "operator_id",
+        "retry_or_exclusion_lineage",
+        "immutable_policy_version"
+      ],
+      "paper_url": "https://arxiv.org/html/2507.05331v1#S4.SS1.SSS1",
+      "public_csv_join_reconstructable": false,
+      "source_described_in_paper": true
+    },
+    "narrowing_reason": "structural contrast only: matched-bundle join is absent and two released success rates disagree with their arrays and counts",
+    "performance_analysis_authorized": false,
+    "release_structure": {
+      "aggregate_only_rows": 20,
+      "binary_rows": 519,
+      "csv_files": 20,
+      "files": {
+        "Fig2.csv": {
+          "hardware_rows": 33,
+          "rows": 135
+        },
+        "Fig3.csv": {
+          "hardware_rows": 0,
+          "rows": 16
+        },
+        "Fig4_AB.csv": {
+          "hardware_rows": 12,
+          "rows": 24
+        },
+        "Fig4_C.csv": {
+          "hardware_rows": 0,
+          "rows": 7
+        },
+        "Fig4_DE.csv": {
+          "hardware_rows": 12,
+          "rows": 24
+        },
+        "Fig4_F.csv": {
+          "hardware_rows": 0,
+          "rows": 7
+        },
+        "Fig5_A.csv": {
+          "hardware_rows": 0,
+          "rows": 12
+        },
+        "Fig5_B.csv": {
+          "hardware_rows": 0,
+          "rows": 7
+        },
+        "Fig5_C.csv": {
+          "hardware_rows": 0,
+          "rows": 12
+        },
+        "Fig5_D.csv": {
+          "hardware_rows": 0,
+          "rows": 7
+        },
+        "Fig6.csv": {
+          "hardware_rows": 4,
+          "rows": 4
+        },
+        "Fig7.csv": {
+          "hardware_rows": 0,
+          "rows": 19
+        },
+        "FigS13.csv": {
+          "hardware_rows": 0,
+          "rows": 20
+        },
+        "FigS14.csv": {
+          "hardware_rows": 0,
+          "rows": 32
+        },
+        "FigS15.csv": {
+          "hardware_rows": 0,
+          "rows": 24
+        },
+        "FigS16.csv": {
+          "hardware_rows": 0,
+          "rows": 24
+        },
+        "FigS28.csv": {
+          "hardware_rows": 12,
+          "rows": 24
+        },
+        "FigS29.csv": {
+          "hardware_rows": 0,
+          "rows": 12
+        },
+        "FigS32.csv": {
+          "hardware_rows": 0,
+          "rows": 102
+        },
+        "FigS33.csv": {
+          "hardware_rows": 0,
+          "rows": 136
+        }
+      },
+      "hardware_rows": 73,
+      "progress_rows": 109,
+      "raw_outcome_array_rows": 628,
+      "rows": 648,
+      "sum_for_hardware_rows": 5600,
+      "sum_of_reported_row_rollout_counts": 266389,
+      "warning": "row rollout sums are not unique-rollout counts because figures and metrics can reuse evaluations"
+    },
+    "source": {
+      "doi": "10.5061/dryad.xd2547dxc",
+      "dryad_version": 4,
+      "dryad_version_id": 435338,
+      "license": "CC0-1.0",
+      "publication_date": "2026-04-07"
+    }
+  }
+}

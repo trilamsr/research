@@ -1,0 +1,418 @@
+{
+  "real_trial_posterior": {
+    "Cosmos-Surg-dVRK": {
+      "automated_fig1b": {
+        "displayed_sim_winners": [
+          "GR00T N1 20k"
+        ],
+        "draws": 500000,
+        "model": "Independent Beta(1,1) policy-block success probabilities; equal displayed-block mean within candidate; displayed simulator winner held fixed.",
+        "monte_carlo_se": 0.00070707134,
+        "posterior_expected_real_regret": 0.033078942464,
+        "posterior_probability_positive_real_regret": 0.494994,
+        "posterior_probability_sim_winner_is_real_best": 0.505006,
+        "posterior_real_winner_probabilities": {
+          "GR00T N1 20k": 0.505006,
+          "GR00T N1 39k": 0.13113,
+          "GR00T N1.5 25k": 0.226696,
+          "GR00T N1.5 50k": 0.08802,
+          "pi0 10k": 0.049084,
+          "pi0 4k": 6.4e-05
+        },
+        "seed": 20260723
+      },
+      "manual_human_vs_dvrk": {
+        "displayed_sim_winners": [
+          "GR00T N1.5 50k"
+        ],
+        "draws": 500000,
+        "model": "Independent Beta(1,1) policy-block success probabilities; equal displayed-block mean within candidate; displayed simulator winner held fixed.",
+        "monte_carlo_se": 0.0003996257,
+        "posterior_expected_real_regret": 0.11639990542,
+        "posterior_probability_positive_real_regret": 0.912492,
+        "posterior_probability_sim_winner_is_real_best": 0.087508,
+        "posterior_real_winner_probabilities": {
+          "GR00T N1 20k": 0.505792,
+          "GR00T N1 39k": 0.130698,
+          "GR00T N1.5 25k": 0.22661,
+          "GR00T N1.5 50k": 0.087508,
+          "pi0 10k": 0.049332,
+          "pi0 4k": 6e-05
+        },
+        "seed": 20260723
+      }
+    },
+    "Real2Sim/mean_rule": {
+      "T": {
+        "displayed_sim_winners": [
+          "pi0"
+        ],
+        "draws": 500000,
+        "model": "Independent Beta(1,1) policy-block success probabilities; equal displayed-block mean within candidate; displayed simulator winner held fixed.",
+        "monte_carlo_se": 0.000617634184,
+        "posterior_expected_real_regret": 0.062879032412,
+        "posterior_probability_positive_real_regret": 0.743442,
+        "posterior_probability_sim_winner_is_real_best": 0.256558,
+        "posterior_real_winner_probabilities": {
+          "act": 0.0,
+          "dp": 0.743442,
+          "pi0": 0.256558,
+          "svla": 0.0
+        },
+        "seed": 20260723
+      },
+      "rope": {
+        "displayed_sim_winners": [
+          "pi0"
+        ],
+        "draws": 500000,
+        "model": "Independent Beta(1,1) policy-block success probabilities; equal displayed-block mean within candidate; displayed simulator winner held fixed.",
+        "monte_carlo_se": 0.000664136036,
+        "posterior_expected_real_regret": 0.011866865664,
+        "posterior_probability_positive_real_regret": 0.328356,
+        "posterior_probability_sim_winner_is_real_best": 0.671644,
+        "posterior_real_winner_probabilities": {
+          "act": 0.210116,
+          "dp": 0.0,
+          "pi0": 0.671644,
+          "svla": 0.11824
+        },
+        "seed": 20260723
+      },
+      "sloth": {
+        "displayed_sim_winners": [
+          "act"
+        ],
+        "draws": 500000,
+        "model": "Independent Beta(1,1) policy-block success probabilities; equal displayed-block mean within candidate; displayed simulator winner held fixed.",
+        "monte_carlo_se": 0.000690773381,
+        "posterior_expected_real_regret": 0.037517450043,
+        "posterior_probability_positive_real_regret": 0.606846,
+        "posterior_probability_sim_winner_is_real_best": 0.393154,
+        "posterior_real_winner_probabilities": {
+          "act": 0.393154,
+          "dp": 0.0,
+          "pi0": 0.606846,
+          "svla": 0.0
+        },
+        "seed": 20260723
+      }
+    },
+    "WM-PolicyEval": {
+      "Cosmos": {
+        "displayed_sim_winners": [
+          "OpenVLA"
+        ],
+        "draws": 500000,
+        "model": "Independent Beta(1,1) policy-block success probabilities; equal displayed-block mean within candidate; displayed simulator winner held fixed.",
+        "monte_carlo_se": 1.7203377e-05,
+        "posterior_expected_real_regret": 2.726912e-06,
+        "posterior_probability_positive_real_regret": 0.000148,
+        "posterior_probability_sim_winner_is_real_best": 0.999852,
+        "posterior_real_winner_probabilities": {
+          "Octo-Base": 0.000136,
+          "Octo-Small": 1.2e-05,
+          "OpenVLA": 0.999852
+        },
+        "seed": 20260723
+      },
+      "IRASim": {
+        "displayed_sim_winners": [
+          "Octo-Base"
+        ],
+        "draws": 500000,
+        "model": "Independent Beta(1,1) policy-block success probabilities; equal displayed-block mean within candidate; displayed simulator winner held fixed.",
+        "monte_carlo_se": 1.8328763e-05,
+        "posterior_expected_real_regret": 0.249922335048,
+        "posterior_probability_positive_real_regret": 0.999832,
+        "posterior_probability_sim_winner_is_real_best": 0.000168,
+        "posterior_real_winner_probabilities": {
+          "Octo-Base": 0.000168,
+          "Octo-Small": 2.4e-05,
+          "OpenVLA": 0.999808
+        },
+        "seed": 20260723
+      }
+    }
+  },
+  "scope": {
+    "posterior_analysis": "Model-conditional real-trial measurement uncertainty for cases with documented real denominators; simulator values held fixed where simulator rollout counts are unavailable.",
+    "subset_analysis": "Exact sensitivity over every non-empty subset of complete displayed task/condition blocks; not a sampling probability."
+  },
+  "subset_stability": {
+    "Cosmos-Surg-dVRK/automated_fig1b": {
+      "all_nonempty_subsets_correct": 5,
+      "all_nonempty_subsets_possibly_correct": 5,
+      "all_nonempty_subsets_total": 15,
+      "full_correct": true,
+      "full_possibly_correct": true,
+      "full_real_winners": [
+        "GR00T N1 20k"
+      ],
+      "full_sim_winners": [
+        "GR00T N1 20k"
+      ],
+      "leave_one_block_out_correct": 1,
+      "leave_one_block_out_possibly_correct": 1,
+      "leave_one_block_out_total": 4,
+      "mismatch_types": {
+        "real=GR00T N1 20k/GR00T N1.5 50k|sim=GR00T N1.5 25k": 1,
+        "real=GR00T N1 20k|sim=GR00T N1.5 25k": 4,
+        "real=GR00T N1 39k|sim=GR00T N1 20k": 4,
+        "real=GR00T N1.5 25k|sim=pi0 10k": 1
+      },
+      "n_candidates": 6,
+      "n_complete_blocks": 4
+    },
+    "Cosmos-Surg-dVRK/manual_human_vs_dvrk": {
+      "all_nonempty_subsets_correct": 2,
+      "all_nonempty_subsets_possibly_correct": 3,
+      "all_nonempty_subsets_total": 15,
+      "full_correct": false,
+      "full_possibly_correct": false,
+      "full_real_winners": [
+        "GR00T N1 20k"
+      ],
+      "full_sim_winners": [
+        "GR00T N1.5 50k"
+      ],
+      "leave_one_block_out_correct": 0,
+      "leave_one_block_out_possibly_correct": 0,
+      "leave_one_block_out_total": 4,
+      "mismatch_types": {
+        "real=GR00T N1 20k/GR00T N1.5 25k|sim=GR00T N1.5 50k": 1,
+        "real=GR00T N1 20k|sim=GR00T N1.5 50k": 5,
+        "real=GR00T N1 20k|sim=pi0 10k": 2,
+        "real=GR00T N1 39k|sim=GR00T N1 20k": 4
+      },
+      "n_candidates": 6,
+      "n_complete_blocks": 4
+    },
+    "Digital Cousins": {
+      "all_nonempty_subsets_correct": 15,
+      "all_nonempty_subsets_possibly_correct": 15,
+      "all_nonempty_subsets_total": 15,
+      "full_correct": true,
+      "full_possibly_correct": true,
+      "full_real_winners": [
+        "pi_0"
+      ],
+      "full_sim_winners": [
+        "pi_0"
+      ],
+      "leave_one_block_out_correct": 4,
+      "leave_one_block_out_possibly_correct": 4,
+      "leave_one_block_out_total": 4,
+      "mismatch_types": {},
+      "n_candidates": 4,
+      "n_complete_blocks": 4
+    },
+    "Hi-WM": {
+      "all_nonempty_subsets_correct": 7,
+      "all_nonempty_subsets_possibly_correct": 7,
+      "all_nonempty_subsets_total": 7,
+      "full_correct": true,
+      "full_possibly_correct": true,
+      "full_real_winners": [
+        "pi0-post-trained"
+      ],
+      "full_sim_winners": [
+        "pi0-post-trained"
+      ],
+      "leave_one_block_out_correct": 3,
+      "leave_one_block_out_possibly_correct": 3,
+      "leave_one_block_out_total": 3,
+      "mismatch_types": {},
+      "n_candidates": 4,
+      "n_complete_blocks": 3
+    },
+    "SIMPLER/google_robot": {
+      "all_nonempty_subsets_correct": 24,
+      "all_nonempty_subsets_possibly_correct": 24,
+      "all_nonempty_subsets_total": 31,
+      "full_correct": true,
+      "full_possibly_correct": true,
+      "full_real_winners": [
+        "rt-1-converged"
+      ],
+      "full_sim_winners": [
+        "rt-1-converged"
+      ],
+      "leave_one_block_out_correct": 5,
+      "leave_one_block_out_possibly_correct": 5,
+      "leave_one_block_out_total": 5,
+      "mismatch_types": {
+        "real=rt-1-15pct|sim=rt-1-converged": 3,
+        "real=rt-1-converged|sim=rt-1-x": 2,
+        "real=rt-1-x|sim=rt-1-converged": 1,
+        "real=rt-1-x|sim=rt-2-x": 1
+      },
+      "n_candidates": 6,
+      "n_complete_blocks": 5
+    },
+    "SIMPLER/widowx": {
+      "all_nonempty_subsets_correct": 11,
+      "all_nonempty_subsets_possibly_correct": 11,
+      "all_nonempty_subsets_total": 15,
+      "full_correct": true,
+      "full_possibly_correct": true,
+      "full_real_winners": [
+        "octo-small"
+      ],
+      "full_sim_winners": [
+        "octo-small"
+      ],
+      "leave_one_block_out_correct": 4,
+      "leave_one_block_out_possibly_correct": 4,
+      "leave_one_block_out_total": 4,
+      "mismatch_types": {
+        "real=octo-base|sim=octo-small": 4
+      },
+      "n_candidates": 3,
+      "n_complete_blocks": 4
+    },
+    "WEAVER/CtrlWorld": {
+      "all_nonempty_subsets_correct": 24,
+      "all_nonempty_subsets_possibly_correct": 31,
+      "all_nonempty_subsets_total": 31,
+      "full_correct": true,
+      "full_possibly_correct": true,
+      "full_real_winners": [
+        "pi05FT"
+      ],
+      "full_sim_winners": [
+        "pi05FT"
+      ],
+      "leave_one_block_out_correct": 5,
+      "leave_one_block_out_possibly_correct": 5,
+      "leave_one_block_out_total": 5,
+      "mismatch_types": {},
+      "n_candidates": 2,
+      "n_complete_blocks": 5
+    },
+    "WEAVER/WEAVER": {
+      "all_nonempty_subsets_correct": 28,
+      "all_nonempty_subsets_possibly_correct": 31,
+      "all_nonempty_subsets_total": 31,
+      "full_correct": true,
+      "full_possibly_correct": true,
+      "full_real_winners": [
+        "pi05FT"
+      ],
+      "full_sim_winners": [
+        "pi05FT"
+      ],
+      "leave_one_block_out_correct": 5,
+      "leave_one_block_out_possibly_correct": 5,
+      "leave_one_block_out_total": 5,
+      "mismatch_types": {},
+      "n_candidates": 2,
+      "n_complete_blocks": 5
+    },
+    "WEAVER/WEAVER-FT": {
+      "all_nonempty_subsets_correct": 31,
+      "all_nonempty_subsets_possibly_correct": 31,
+      "all_nonempty_subsets_total": 31,
+      "full_correct": true,
+      "full_possibly_correct": true,
+      "full_real_winners": [
+        "pi05FT"
+      ],
+      "full_sim_winners": [
+        "pi05FT"
+      ],
+      "leave_one_block_out_correct": 5,
+      "leave_one_block_out_possibly_correct": 5,
+      "leave_one_block_out_total": 5,
+      "mismatch_types": {},
+      "n_candidates": 2,
+      "n_complete_blocks": 5
+    },
+    "WM-PolicyEval/Cosmos": {
+      "all_nonempty_subsets_correct": 12,
+      "all_nonempty_subsets_possibly_correct": 12,
+      "all_nonempty_subsets_total": 15,
+      "full_correct": true,
+      "full_possibly_correct": true,
+      "full_real_winners": [
+        "OpenVLA"
+      ],
+      "full_sim_winners": [
+        "OpenVLA"
+      ],
+      "leave_one_block_out_correct": 4,
+      "leave_one_block_out_possibly_correct": 4,
+      "leave_one_block_out_total": 4,
+      "mismatch_types": {
+        "real=OpenVLA|sim=Octo-Base": 3
+      },
+      "n_candidates": 3,
+      "n_complete_blocks": 4
+    },
+    "WM-PolicyEval/IRASim": {
+      "all_nonempty_subsets_correct": 4,
+      "all_nonempty_subsets_possibly_correct": 7,
+      "all_nonempty_subsets_total": 15,
+      "full_correct": false,
+      "full_possibly_correct": false,
+      "full_real_winners": [
+        "OpenVLA"
+      ],
+      "full_sim_winners": [
+        "Octo-Base"
+      ],
+      "leave_one_block_out_correct": 1,
+      "leave_one_block_out_possibly_correct": 2,
+      "leave_one_block_out_total": 4,
+      "mismatch_types": {
+        "real=OpenVLA|sim=Octo-Base": 7,
+        "real=OpenVLA|sim=Octo-Base/Octo-Small": 1
+      },
+      "n_candidates": 3,
+      "n_complete_blocks": 4
+    },
+    "WorldEval": {
+      "all_nonempty_subsets_correct": 28,
+      "all_nonempty_subsets_possibly_correct": 28,
+      "all_nonempty_subsets_total": 31,
+      "full_correct": true,
+      "full_possibly_correct": true,
+      "full_real_winners": [
+        "pi0"
+      ],
+      "full_sim_winners": [
+        "pi0"
+      ],
+      "leave_one_block_out_correct": 5,
+      "leave_one_block_out_possibly_correct": 5,
+      "leave_one_block_out_total": 5,
+      "mismatch_types": {
+        "real=DexVLA|sim=pi0": 1,
+        "real=pi0|sim=DexVLA": 2
+      },
+      "n_candidates": 4,
+      "n_complete_blocks": 5
+    },
+    "WorldGym": {
+      "all_nonempty_subsets_correct": 131068,
+      "all_nonempty_subsets_possibly_correct": 131068,
+      "all_nonempty_subsets_total": 131071,
+      "full_correct": true,
+      "full_possibly_correct": true,
+      "full_real_winners": [
+        "OpenVLA"
+      ],
+      "full_sim_winners": [
+        "OpenVLA"
+      ],
+      "leave_one_block_out_correct": 17,
+      "leave_one_block_out_possibly_correct": 17,
+      "leave_one_block_out_total": 17,
+      "mismatch_types": {
+        "real=RT-1-X|sim=OpenVLA": 3
+      },
+      "n_candidates": 3,
+      "n_complete_blocks": 17
+    }
+  }
+}

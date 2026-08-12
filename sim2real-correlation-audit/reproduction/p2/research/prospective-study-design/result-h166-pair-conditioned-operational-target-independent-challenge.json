@@ -1,0 +1,100 @@
+{
+  "schema": "h166-pair-conditioned-operational-target-independent-challenge-v1",
+  "challenge_runtime": "v26.5.0",
+  "producer_modules_imported": false,
+  "protocol_sha256": "c6e6821d826cb0aff5056e14e9c898d088dddda21e473db83ec743ae420c765a",
+  "upstream_hashes": {
+    "h151_result_sha256": "cce705e152077072cef5ff6b8c313e975cf345f97483b8d6ea00e7c0eaf22a34",
+    "h152_result_sha256": "1119cb2d4885d996c60d589bfe0c62440e6369876e42c66e9ea075fc3225362e",
+    "h165_result_sha256": "a3c8ab98e4779efa0372cf29b4da87537388545d54784189b957b520f9fb6a63"
+  },
+  "independent_known_answer": {
+    "pair_weights": {
+      "12": "1/3",
+      "01": "1/3",
+      "02": "1/3"
+    },
+    "pair_conditioned_edges": {
+      "12": "3/4",
+      "01": "3/4",
+      "02": "1/4"
+    },
+    "cyclic_preferences": [
+      "0>1",
+      "1>2",
+      "2>0"
+    ],
+    "edge_optimal_route": {
+      "12": 1,
+      "01": 0,
+      "02": 2
+    },
+    "edge_optimal_value": "3/4",
+    "lower_index_route": {
+      "12": 1,
+      "01": 0,
+      "02": 0
+    },
+    "lower_index_value": "7/12",
+    "lower_index_regret": "1/6",
+    "tournament_values": [
+      "1/2",
+      "1/2",
+      "1/2"
+    ],
+    "unique_global_policy_identified": false
+  },
+  "upstream_common_context_boundary": {
+    "opposite_unique_winners": [
+      2,
+      0
+    ],
+    "singleton_worst_regret_floor": "1/3",
+    "common_context_target_identified": false
+  },
+  "semantic_attacks": [
+    {
+      "id": "tournament_tie_erases_pair_routing_advantage",
+      "rejected": true,
+      "reason": "a global score tie coexists with exact routing regret 1/6"
+    },
+    {
+      "id": "routing_optimum_identifies_unique_global_policy",
+      "rejected": true,
+      "reason": "all global tournament scores tie"
+    },
+    {
+      "id": "comparative_edge_is_marginal_task_success",
+      "rejected": true,
+      "reason": "comparative outcomes do not identify marginal success without a bridge"
+    },
+    {
+      "id": "future_context_mechanism_may_change_silently",
+      "rejected": true,
+      "reason": "the operational target requires the same declared pair-specific mechanism"
+    },
+    {
+      "id": "outcome_adaptive_pair_weights_preserve_fixed_target",
+      "rejected": true,
+      "reason": "outcome-adaptive weights define a different analysis"
+    },
+    {
+      "id": "positive_weight_missing_edge_still_identifies_route_value",
+      "rejected": true,
+      "reason": "a positive-weight missing edge is rejected"
+    },
+    {
+      "id": "router_may_choose_policy_outside_presented_pair",
+      "rejected": true,
+      "reason": "the routing action is restricted to a member of the presented pair"
+    },
+    {
+      "id": "pair_routing_estimates_evaluator_causal_effect",
+      "rejected": true,
+      "reason": "no randomized evaluator intervention is supplied"
+    }
+  ],
+  "attacks_rejected": 8,
+  "disposition": "pass_with_scope",
+  "scope": "Independent exact and semantic support for same-mechanism pair routing only; not common-context selection, marginal success, causal effect, transport, confidence, real-site qualification, field authorization, or novelty."
+}

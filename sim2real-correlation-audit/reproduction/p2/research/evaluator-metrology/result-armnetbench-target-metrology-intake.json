@@ -1,0 +1,833 @@
+{
+  "checkpoint_links": {
+    "all_current_repositories_publicly_resolved": true,
+    "repositories": [
+      {
+        "current_revision": "3f1c5f42de586fe86173af31f61d103dadfc73d9",
+        "disabled": false,
+        "gated": false,
+        "identity": "lorenzouttini/pi0-so101-armnetbench-block-stack-isambard-v50",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "31d7cee21ff543aec5456922cd816ad52fa503e0",
+        "disabled": false,
+        "gated": false,
+        "identity": "lorenzouttini/pi0-so101-armnetbench-fold-tea-towel-isambard-v50",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "3c8ae09a99afbf2e10dd056846b1f823044aa5c8",
+        "disabled": false,
+        "gated": false,
+        "identity": "lorenzouttini/pi0-so101-armnetbench-insert-candle-isambard-v50",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "5539e7a5ac82c40e8e6eb9c042fca21123f3debd",
+        "disabled": false,
+        "gated": false,
+        "identity": "lorenzouttini/pi0-so101-armnetbench-open-lamp-door-isambard-v50",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "e65d31d2a02e4807d812bb6e90f1b27c5d3b8d04",
+        "disabled": false,
+        "gated": false,
+        "identity": "lorenzouttini/pi0-so101-armnetbench-ring-insert-isambard-v50",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "7e269788e0f65a7b6bce352e37bb3644b72e38d3",
+        "disabled": false,
+        "gated": false,
+        "identity": "lorenzouttini/pi0-so101-armnetbench-tool-insert-isambard-v50",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "2e6b0a10836e01c5860059f91a00258c36c54f07",
+        "disabled": false,
+        "gated": false,
+        "identity": "lorenzouttini/pi0-so101-armnetbench-tool-removal-isambard-v50",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "a68945da79b0a87b60ab49681afe153953f31568",
+        "disabled": false,
+        "gated": false,
+        "identity": "lorenzouttini/pi0-so101-armnetbench-transfer-cube-isambard-v50",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "a7d633a1cc1cbbaee9a3d0baf0e181ab799dc4bd",
+        "disabled": false,
+        "gated": false,
+        "identity": "lorenzouttini/pi0-so101-cable-clip-isambard-v50",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "5dcab06b529bb7353433cc199613bb5c4cb82d6c",
+        "disabled": false,
+        "gated": false,
+        "identity": "lorenzouttini/pi0-so101-cable-unclip-isambard-v50",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "ba1998bf7576245164911e55ee5c783190865044",
+        "disabled": false,
+        "gated": false,
+        "identity": "lorenzouttini/pi0-so101-object-top-shelf-isambard-v50",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "ecfa67fbe1b246ff8de520c860161882cb725aae",
+        "disabled": false,
+        "gated": false,
+        "identity": "lorenzouttini/pi0-so101-object-top-shelf-reset-isambard-v50",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "1ed86a09fb349c06a291ef15d39204bea6159209",
+        "disabled": false,
+        "gated": false,
+        "identity": "lorenzouttini/pi05-so101-armnetbench-block-stack-isambard-v50",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "9c7382f5c3120d920c9fc44383a0c253955d3f1d",
+        "disabled": false,
+        "gated": false,
+        "identity": "lorenzouttini/pi05-so101-armnetbench-fold-tea-towel-isambard-v50",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "a39226d0e2b291480de18848ee5597d735344f32",
+        "disabled": false,
+        "gated": false,
+        "identity": "lorenzouttini/pi05-so101-armnetbench-insert-candle-isambard-v50",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "9d1804e35ea52569e6e418a0a6f9c266ec09ebf8",
+        "disabled": false,
+        "gated": false,
+        "identity": "lorenzouttini/pi05-so101-armnetbench-open-lamp-door-isambard-v50",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "2491deea18609d1518e0cac608468eeef32333ac",
+        "disabled": false,
+        "gated": false,
+        "identity": "lorenzouttini/pi05-so101-armnetbench-ring-insert-isambard-v50",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "99490fc02b3de9f8f9e9a679d21729cb9f8eaf43",
+        "disabled": false,
+        "gated": false,
+        "identity": "lorenzouttini/pi05-so101-armnetbench-tool-insert-isambard-v50",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "87989684075218d2ef0f984aeafbabf39dc47793",
+        "disabled": false,
+        "gated": false,
+        "identity": "lorenzouttini/pi05-so101-armnetbench-tool-removal-isambard-v50",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "37985a3d4f5c3fba2f33253282ac7c72bd064a3d",
+        "disabled": false,
+        "gated": false,
+        "identity": "lorenzouttini/pi05-so101-armnetbench-transfer-cube-isambard-v50",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "dbf9dea5d4b2d6950f716fe00d2bac20a8b2f860",
+        "disabled": false,
+        "gated": false,
+        "identity": "lorenzouttini/pi05-so101-cable-clip-isambard",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "95f81f2bb8db413990830f2a8bfbd3a894b4283a",
+        "disabled": false,
+        "gated": false,
+        "identity": "lorenzouttini/pi05-so101-cable-unclip-isambard",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "47afdb2bb64675bb7885dfdce43b93c560b45292",
+        "disabled": false,
+        "gated": false,
+        "identity": "lorenzouttini/pi05-so101-object-top-shelf-isambard",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "db291a03143386a26f6845fef93c91707082e7f6",
+        "disabled": false,
+        "gated": false,
+        "identity": "lorenzouttini/pi05-so101-object-top-shelf-reset-isambard-v50",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "49de5e14ca41094d10675e709a2ddfc698dea6da",
+        "disabled": false,
+        "gated": false,
+        "identity": "pravsels/act_block_stack_20k",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "f46b89c74e854c79e97c0953b542dcdabb97f881",
+        "disabled": false,
+        "gated": false,
+        "identity": "pravsels/act_cable_clip_20k",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "2ae1037e10a98f86abc2e368c15a0322b346f3e5",
+        "disabled": false,
+        "gated": false,
+        "identity": "pravsels/act_cable_unclip_20k",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "6bc3027dcc0f29fa7f70ef924c99016a98ab19db",
+        "disabled": false,
+        "gated": false,
+        "identity": "pravsels/act_eyedrops_basket_20k",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "ac2db70297936da3768ab49e69e7ffe82b25804d",
+        "disabled": false,
+        "gated": false,
+        "identity": "pravsels/act_eyedrops_shelf",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "4451734ea8ad68b97318d82df3233c96e139aa94",
+        "disabled": false,
+        "gated": false,
+        "identity": "pravsels/act_fold_tea_towel_20k",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "76fc596f10987e866b8992c8fdf229fd8c8f8bab",
+        "disabled": false,
+        "gated": false,
+        "identity": "pravsels/act_insert_candle_20k",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "6ea3ccdd2e03edb8bd3ab0f2238df1e6231408d0",
+        "disabled": false,
+        "gated": false,
+        "identity": "pravsels/act_open_lamp_door_20k",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "16a263ac18f31e9f3308d21c87c4fc263ef541a9",
+        "disabled": false,
+        "gated": false,
+        "identity": "pravsels/act_ring_insert_20k",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "51e43fa7adfce1ead8f5970a6da9e4e83a28f3f4",
+        "disabled": false,
+        "gated": false,
+        "identity": "pravsels/act_tool_insert",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "392b3f627c5e55f0fc57881de3433b752d0c07f9",
+        "disabled": false,
+        "gated": false,
+        "identity": "pravsels/act_tool_removal_20k",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "0a75e712efb52d58587532b5e54a325c26b62135",
+        "disabled": false,
+        "gated": false,
+        "identity": "pravsels/act_transfer_cube_20k",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "33f596e562fe100c321646b79ae842f5d5233d04",
+        "disabled": false,
+        "gated": false,
+        "identity": "pravsels/groot1.7_block_stack_20k",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "b646e6a664b2c6478bb0e02a9df1f267d3b20f5f",
+        "disabled": false,
+        "gated": false,
+        "identity": "pravsels/groot1.7_cable_clip_20k",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "33d516f68301771551763af13c819d2ee897343c",
+        "disabled": false,
+        "gated": false,
+        "identity": "pravsels/groot1.7_cable_unclip_20k",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "a5aa83e2a6ef92d11f8fd6d4ae2888351d7cf848",
+        "disabled": false,
+        "gated": false,
+        "identity": "pravsels/groot1.7_eyedrops_basket_20k",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "6c3e2c02ce2a248082580eb0447badb3ccc7c0fd",
+        "disabled": false,
+        "gated": false,
+        "identity": "pravsels/groot1.7_eyedrops_shelf_20k",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "84c2f936fc30a92fc83bd6549401725b12da6217",
+        "disabled": false,
+        "gated": false,
+        "identity": "pravsels/groot1.7_fold_tea_towel_20k",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "0ca6ed05e087627b3a14ca58c3b5a4a28778a3aa",
+        "disabled": false,
+        "gated": false,
+        "identity": "pravsels/groot1.7_insert_candle_20k",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "ff003d79bdd07f5cfeb30cb14f784465fc1ce3eb",
+        "disabled": false,
+        "gated": false,
+        "identity": "pravsels/groot1.7_open_lamp_door_20k",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "a26876b0a941e15a9afe55aa66c2009e8fe455e9",
+        "disabled": false,
+        "gated": false,
+        "identity": "pravsels/groot1.7_ring_insert_20k",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "b947843d156cb587e3690e551ba2aeef3c387a9c",
+        "disabled": false,
+        "gated": false,
+        "identity": "pravsels/groot1.7_tool_insert_20k",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "cc56f08bf073e6b769ef6bb83030a9002f65c79b",
+        "disabled": false,
+        "gated": false,
+        "identity": "pravsels/groot1.7_tool_removal_20k",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "9df7be31e4bc6508263be652f9276e884a4f59d9",
+        "disabled": false,
+        "gated": false,
+        "identity": "pravsels/groot1.7_transfer_cube_20k",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "75f0033b664e59fe26e5a64fde33efa5afef695b",
+        "disabled": false,
+        "gated": false,
+        "identity": "pravsels/molmoact2_block_stack_20k",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "97d6abab01482597312e494dce1676b910161e73",
+        "disabled": false,
+        "gated": false,
+        "identity": "pravsels/molmoact2_cable_clip_20k",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "6ef3fa1900291da5455e6fe9d382716ec801fb86",
+        "disabled": false,
+        "gated": false,
+        "identity": "pravsels/molmoact2_cable_unclip_20k",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "e74756f11c2ed8b0f73995c75ceab3e9d9a1869c",
+        "disabled": false,
+        "gated": false,
+        "identity": "pravsels/molmoact2_eyedrops_basket_20k",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "0aa76c8049beacc9a8b33253e459f49b340409cb",
+        "disabled": false,
+        "gated": false,
+        "identity": "pravsels/molmoact2_eyedrops_shelf_20k",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "9b2d4cb756ae586f361f23fcff6b72a2b025ab73",
+        "disabled": false,
+        "gated": false,
+        "identity": "pravsels/molmoact2_fold_tea_towel_20k",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "671309429a9c85ab662633c84832c6955daff146",
+        "disabled": false,
+        "gated": false,
+        "identity": "pravsels/molmoact2_insert_candle_20k",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "20aa761e2a1243c85b849ccae694b09bd0b26194",
+        "disabled": false,
+        "gated": false,
+        "identity": "pravsels/molmoact2_open_lamp_door_20k",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "3c54e9b6d5787875462e5f9f9550e7d34c9a889e",
+        "disabled": false,
+        "gated": false,
+        "identity": "pravsels/molmoact2_ring_insert_20k",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "faa5cd3b708b4cd6e8ba0687682c0cb944be2d03",
+        "disabled": false,
+        "gated": false,
+        "identity": "pravsels/molmoact2_tool_insert_20k",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "6bcde2ba1b66c9bf9aee89d6e119163f260f10ad",
+        "disabled": false,
+        "gated": false,
+        "identity": "pravsels/molmoact2_tool_removal_20k",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "2d9534a07cb710706f3e43dce8d8516e8d7c7af7",
+        "disabled": false,
+        "gated": false,
+        "identity": "pravsels/molmoact2_transfer_cube_20k",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "6b57ddd65b8b85c28f89934a126f9c60dd07d9be",
+        "disabled": false,
+        "gated": false,
+        "identity": "pravsels/smolvla_block_stack",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "abe95d1f3fcca489f64aacd5fa5dd5564dcf2dea",
+        "disabled": false,
+        "gated": false,
+        "identity": "pravsels/smolvla_cable_clip",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "518491e47cf6d9f39f8d502ae3831f371e91a1dc",
+        "disabled": false,
+        "gated": false,
+        "identity": "pravsels/smolvla_cable_unclip",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "95ab9810fc826dd73b3d582e6c2dd2d38ac99a38",
+        "disabled": false,
+        "gated": false,
+        "identity": "pravsels/smolvla_eyedrops_basket",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "85e5e45cef6445437d5b75296a48fb907258911a",
+        "disabled": false,
+        "gated": false,
+        "identity": "pravsels/smolvla_eyedrops_shelf",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "621539468ef738c88b88488bfa4abc5d50f77647",
+        "disabled": false,
+        "gated": false,
+        "identity": "pravsels/smolvla_fold_tea_towel",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "44ad434a91fb1b5d0daa31f60acaa5e314437baa",
+        "disabled": false,
+        "gated": false,
+        "identity": "pravsels/smolvla_insert_candle",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "fcffbc2521c2ce8e1db789508f68633a3042a70c",
+        "disabled": false,
+        "gated": false,
+        "identity": "pravsels/smolvla_open_lamp_door",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "a0b6a84896d13ff6363e71af8cdc2dd577b64d9f",
+        "disabled": false,
+        "gated": false,
+        "identity": "pravsels/smolvla_ring_insert",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "f96abef6e79aa82a9d59b7a8ca7f060eeb627943",
+        "disabled": false,
+        "gated": false,
+        "identity": "pravsels/smolvla_tool_insert",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "bba0a908b22469883fab11f763a48b6ef08d3717",
+        "disabled": false,
+        "gated": false,
+        "identity": "pravsels/smolvla_tool_removal",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "0dbbeda4c966bb1b4b5263f0bf07280d27c51f3d",
+        "disabled": false,
+        "gated": false,
+        "identity": "pravsels/smolvla_transfer_cube",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "b761851f07483589cb32e6e282ced2ef508e7eb9",
+        "disabled": false,
+        "gated": false,
+        "identity": "villekuosmanen/armnetbench_block_stack_diffusion",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "1539058853165ac0b9d3586450f9862e34741058",
+        "disabled": false,
+        "gated": false,
+        "identity": "villekuosmanen/armnetbench_fold_tea_towel_diffusion",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "bda554bddfd961e1b4abb6f1feb3ab357078b0ed",
+        "disabled": false,
+        "gated": false,
+        "identity": "villekuosmanen/armnetbench_insert_candle_diffusion",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "f17eb6890045b51680c1df2acce8ef85cd21b42d",
+        "disabled": false,
+        "gated": false,
+        "identity": "villekuosmanen/armnetbench_open_lamp_door_diffusion",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "ed2644ffb9212d07bbcbcf9eafdf61e5d3d978d6",
+        "disabled": false,
+        "gated": false,
+        "identity": "villekuosmanen/armnetbench_ring_insert_diffusion",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "ceb32c7a8d2d2af7053d2d3999c9d2d3f925cf8c",
+        "disabled": false,
+        "gated": false,
+        "identity": "villekuosmanen/armnetbench_tool_insert_diffusion",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "f09da025111a711a7116611db2d48a7759abc5a0",
+        "disabled": false,
+        "gated": false,
+        "identity": "villekuosmanen/armnetbench_tool_removal_diffusion",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "8c46c89723294b728a678337b9e71f490c1c0090",
+        "disabled": false,
+        "gated": false,
+        "identity": "villekuosmanen/armnetbench_transfer_cube_diffusion",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "b761851f07483589cb32e6e282ced2ef508e7eb9",
+        "disabled": false,
+        "gated": false,
+        "identity": "villekuosmanen/cable_clip_remote_v2_diffusion",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "b7a91952dae2bc5f8444056f6296fdaaabfacb4e",
+        "disabled": false,
+        "gated": false,
+        "identity": "villekuosmanen/cable_unclip_remote_diffusion",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "c00f51853964e4260a5c8fbc7776de979baaf897",
+        "disabled": false,
+        "gated": false,
+        "identity": "villekuosmanen/object_top_shelf_remote_diffusion",
+        "private": false,
+        "resolved": true
+      },
+      {
+        "current_revision": "cfd980cfd1f49bc411cb65b98a6e3a568ded4c01",
+        "disabled": false,
+        "gated": false,
+        "identity": "villekuosmanen/object_top_shelf_reset_remote_diffusion",
+        "private": false,
+        "resolved": true
+      }
+    ],
+    "source_links_bind_immutable_revisions": false,
+    "unique_repository_count": 84
+  },
+  "dataset": {
+    "created_at_utc": "2026-06-28T19:43:11+00:00",
+    "declared_row_count": 11154,
+    "declared_row_minus_video_count": -3,
+    "declared_schema_features": [
+      "id",
+      "task",
+      "lang_vector",
+      "data_source",
+      "frames",
+      "is_robot",
+      "quality_label",
+      "partial_success"
+    ],
+    "disabled": false,
+    "gated": false,
+    "identity": "armnet/armnetbench_v01_robometer",
+    "last_modified_utc": "2026-07-09T10:57:20+00:00",
+    "license": "apache-2.0",
+    "main_commit_at_observation": "50ec8a28af28ce1ede476484e428a1789c3df733",
+    "private": false,
+    "readme_sha256": "5619c4e58411119330ba915705c741a1b6f18d154199e622f18c7dfe3307f1b1",
+    "readme_size_bytes": 21214,
+    "sample_tag_commit": "8c162ce867f9b839c2cadb019ef4f081f69fb89c",
+    "tag": "v1.0",
+    "tag_commit": "a5030e049922bd89417b8aa79672c3e89e0bed6d",
+    "tree": {
+      "all_videos_have_blob_lfs_and_xet_identity": true,
+      "camera_video_counts": {
+        "front": 2500,
+        "top": 3719,
+        "wrist": 4938
+      },
+      "earliest_evaluated_policy_declared_capture_date": "2026-06-18",
+      "entry_count": 11273,
+      "evaluated_policy_declared_capture_date_count": 9357,
+      "evaluated_policy_video_count": 9357,
+      "first_five_file_paths": [
+        ".gitattributes",
+        "README.md",
+        "armnet_header.png",
+        "bimanual_so101/train-00000-of-00001.parquet",
+        "so101/train-00000-of-00001.parquet"
+      ],
+      "last_five_file_paths": [
+        "videos/transfer_cube/teleoperated/armnetbench_transfer_cube_ep000048_right_wrist.mp4",
+        "videos/transfer_cube/teleoperated/armnetbench_transfer_cube_ep000048_top.mp4",
+        "videos/transfer_cube/teleoperated/armnetbench_transfer_cube_ep000049_left_wrist.mp4",
+        "videos/transfer_cube/teleoperated/armnetbench_transfer_cube_ep000049_right_wrist.mp4",
+        "videos/transfer_cube/teleoperated/armnetbench_transfer_cube_ep000049_top.mp4"
+      ],
+      "latest_evaluated_policy_declared_capture_date": "2026-07-08",
+      "parquet_file_count": 2,
+      "policy_video_counts": {
+        "act": 1440,
+        "diffusion": 1080,
+        "grootn1.7": 1080,
+        "molmoact2": 2160,
+        "pi0": 1080,
+        "pi0.5": 1077,
+        "smolvla": 1440,
+        "teleoperated": 1800
+      },
+      "quarantined_video_count": 90,
+      "suffix_counts": {
+        ".md": 1,
+        ".mp4": 11157,
+        ".parquet": 2,
+        ".png": 1,
+        "<none>": 1
+      },
+      "task_video_counts": {
+        "block_stack": 915,
+        "cable_clip": 960,
+        "cable_unclip": 870,
+        "eye_drops_to_basket": 870,
+        "eye_drops_to_shelf": 1050,
+        "fold_tea_towel": 1050,
+        "insert_candle": 870,
+        "open_lamp_door": 870,
+        "ring_insert": 915,
+        "tool_insert": 1050,
+        "tool_removal": 870,
+        "transfer_cube": 867
+      },
+      "teleoperated_video_count": 1800,
+      "total_file_bytes": 6815299939,
+      "tree_fingerprint_sha256": "b354d03895b0bbd732129c7b54c1734bf29240195c325116387c6173aac640e4",
+      "type_counts": {
+        "directory": 111,
+        "file": 11162
+      },
+      "video_file_count": 11157
+    }
+  },
+  "evaluator_scoring_performed": false,
+  "evaluators": [
+    {
+      "created_at_utc": "2026-03-02T19:20:24+00:00",
+      "identity": "robometer/Robometer-4B",
+      "last_modified_utc": "2026-03-10T04:39:20+00:00",
+      "revision": "beef63bc914c5c189329d49c6d712d96d632aa34"
+    },
+    {
+      "created_at_utc": "2026-01-08T11:21:24+00:00",
+      "identity": "tanhuajie2001/Robo-Dopamine-GRM-3B",
+      "last_modified_utc": "2026-03-02T16:56:39+00:00",
+      "revision": "b75e1ea8381d384f580b41d04ee80fdff5369b34"
+    }
+  ],
+  "h022_operational_target_gate": {
+    "checks": {
+      "complete_source_native_h022_evidence_route": false,
+      "exact_evaluated_checkpoint_revisions": false,
+      "frozen_pre_execution_evaluator_path": false,
+      "public_ungated_licensed_immutable_source": true,
+      "source_binary_success_rubric_and_horizon": false,
+      "standalone_per_policy_execution_declared": true,
+      "versioned_policy_roster": true
+    },
+    "disposition": "refused: corresponding real-rollout video is post-execution input; source also lacks a binary rubric/horizon and revision-bound evaluated checkpoints",
+    "pass": false
+  },
+  "h025_result_sha256": "fd9ec8f64624ea508713786c3820421de78205a8bad67b695ed0ad64495f4382",
+  "model_weights_downloaded": false,
+  "observed_utc": "2026-07-27T11:42:10.653504+00:00",
+  "outcome_exposure": {
+    "individual_outcomes_opened_in_this_run": false,
+    "policy_performance_aggregates_opened": false,
+    "prior_default_viewer_exposure_recorded": true,
+    "quarantined_source_prefix": "videos/insert_candle/diffusion/eval_debug_task_cell_8_14h18m_25-jun-2026_"
+  },
+  "p4_transformation_fixture_metadata_gate": {
+    "checks": {
+      "at_least_two_tasks_and_policies_outside_quarantine": true,
+      "declared_capture_dates_postdate_evaluator_revisions": true,
+      "declared_row_count_equals_video_file_count": false,
+      "fixed_public_sample_tag_available": true,
+      "local_analysis_license_clear": true,
+      "public_ungated_apache_immutable_source": true,
+      "raw_video_content_identity_complete": true,
+      "task_policy_episode_camera_outcome_linkage_declared": true
+    },
+    "disposition": "metadata_not_ready",
+    "pass": false
+  },
+  "parquet_rows_opened": false,
+  "protected_p1_outcomes_accessed": false,
+  "protocol_sha256": "bed98c2276e55a08cf93bcce67e4591cfeda1c307834dfc5f0392b46967f96fe",
+  "schema": "armnetbench-target-metrology-intake-v1",
+  "sealed_p3_frame_accessed": false,
+  "video_payloads_opened": false
+}

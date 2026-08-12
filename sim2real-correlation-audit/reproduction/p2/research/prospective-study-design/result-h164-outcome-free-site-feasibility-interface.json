@@ -1,0 +1,1667 @@
+{
+  "allowed_statuses": [
+    "absent",
+    "available",
+    "not_applicable",
+    "partial",
+    "target_altering"
+  ],
+  "artifact_count": 64,
+  "claim_boundary": "The result validates deterministic target-preservation and evidence-completeness logic on synthetic dossiers only. It does not establish a real site's feasibility, tolerance adequacy, safety, outcome validity, causal identification, or transport.",
+  "dossier_count": 4,
+  "dossier_unit_row_count": 64,
+  "dossiers": [
+    {
+      "classification": {
+        "decision": "eligible_for_outcome_hidden_rehearsal",
+        "evidence_issues": [],
+        "mechanically_complete": true,
+        "target_changes": []
+      },
+      "dossier": {
+        "acceptance_linked_to_controller_start": true,
+        "artifacts": [
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "target_preserving_complete:target_population_and_decision",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9dGFyZ2V0X3ByZXNlcnZpbmdfY29tcGxldGU7IHVuaXQ9dGFyZ2V0X3BvcHVsYXRpb25fYW5kX2RlY2lzaW9uOyBzdGF0dXM9YXZhaWxhYmxlOyB0YXJnZXRfZWZmZWN0PW5vbmU=",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "2d19fcb094d3cb6b4915726444219d92ab941868c3b7b701a0ff5bdc7b6511ca",
+            "size_bytes": 137
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "target_preserving_complete:policy_observation_interface",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9dGFyZ2V0X3ByZXNlcnZpbmdfY29tcGxldGU7IHVuaXQ9cG9saWN5X29ic2VydmF0aW9uX2ludGVyZmFjZTsgc3RhdHVzPWF2YWlsYWJsZTsgdGFyZ2V0X2VmZmVjdD1ub25l",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "ed618c62e426193516d7608816f3456cc391284667aec6cce1a345daf9245137",
+            "size_bytes": 135
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "target_preserving_complete:policy_action_and_control_interface",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9dGFyZ2V0X3ByZXNlcnZpbmdfY29tcGxldGU7IHVuaXQ9cG9saWN5X2FjdGlvbl9hbmRfY29udHJvbF9pbnRlcmZhY2U7IHN0YXR1cz1hdmFpbGFibGU7IHRhcmdldF9lZmZlY3Q9bm9uZQ==",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "abdd06afa4b8c591f26d9769dfd1b1264b9c54e4b6763e64d18a285e6f49c98a",
+            "size_bytes": 142
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "target_preserving_complete:scene_geometry_and_dynamics",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9dGFyZ2V0X3ByZXNlcnZpbmdfY29tcGxldGU7IHVuaXQ9c2NlbmVfZ2VvbWV0cnlfYW5kX2R5bmFtaWNzOyBzdGF0dXM9YXZhaWxhYmxlOyB0YXJnZXRfZWZmZWN0PW5vbmU=",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "e59ba63d3b316b631a7159f6d21f6c1c44064848ea2e30ed38b5942e762782ac",
+            "size_bytes": 134
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "target_preserving_complete:context_generation_and_assignment_order",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9dGFyZ2V0X3ByZXNlcnZpbmdfY29tcGxldGU7IHVuaXQ9Y29udGV4dF9nZW5lcmF0aW9uX2FuZF9hc3NpZ25tZW50X29yZGVyOyBzdGF0dXM9YXZhaWxhYmxlOyB0YXJnZXRfZWZmZWN0PW5vbmU=",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "c7ccf2c662e42ca5cc4df1602b9db466e09ff6d786a51a3ec92a6888ee6e7abe",
+            "size_bytes": 146
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "target_preserving_complete:object_state_representation",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9dGFyZ2V0X3ByZXNlcnZpbmdfY29tcGxldGU7IHVuaXQ9b2JqZWN0X3N0YXRlX3JlcHJlc2VudGF0aW9uOyBzdGF0dXM9YXZhaWxhYmxlOyB0YXJnZXRfZWZmZWN0PW5vbmU=",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "a48cc3b887d4399c6be82e1b1abc60d5bc58d696f7948bb0dd456f189d6381d8",
+            "size_bytes": 134
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "target_preserving_complete:sensor_identity_and_calibration",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9dGFyZ2V0X3ByZXNlcnZpbmdfY29tcGxldGU7IHVuaXQ9c2Vuc29yX2lkZW50aXR5X2FuZF9jYWxpYnJhdGlvbjsgc3RhdHVzPWF2YWlsYWJsZTsgdGFyZ2V0X2VmZmVjdD1ub25l",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "eb8141f063698e734ac075b167ed2e2cea160f7007c5ece780854b3cd3419e48",
+            "size_bytes": 138
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "target_preserving_complete:measurement_error_bound",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9dGFyZ2V0X3ByZXNlcnZpbmdfY29tcGxldGU7IHVuaXQ9bWVhc3VyZW1lbnRfZXJyb3JfYm91bmQ7IHN0YXR1cz1hdmFpbGFibGU7IHRhcmdldF9lZmZlY3Q9bm9uZQ==",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "57c583ad787a09b38ae925e55ce66c9f13325a197a8258c8c95227e173389109",
+            "size_bytes": 130
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "target_preserving_complete:numeric_reset_tolerance",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9dGFyZ2V0X3ByZXNlcnZpbmdfY29tcGxldGU7IHVuaXQ9bnVtZXJpY19yZXNldF90b2xlcmFuY2U7IHN0YXR1cz1hdmFpbGFibGU7IHRhcmdldF9lZmZlY3Q9bm9uZQ==",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "a1766dd3ffe042a67f49a0434b51bc96bee777a3ab6cb07e8b1730e68da1f93f",
+            "size_bytes": 130
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "target_preserving_complete:tolerance_adequacy_rationale",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9dGFyZ2V0X3ByZXNlcnZpbmdfY29tcGxldGU7IHVuaXQ9dG9sZXJhbmNlX2FkZXF1YWN5X3JhdGlvbmFsZTsgc3RhdHVzPWF2YWlsYWJsZTsgdGFyZ2V0X2VmZmVjdD1ub25l",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "a248579d0e77fbe4a57199b259a2273f58bd9d349952aea102781fd6795594e3",
+            "size_bytes": 135
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "target_preserving_complete:preassignment_baseline_capture",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9dGFyZ2V0X3ByZXNlcnZpbmdfY29tcGxldGU7IHVuaXQ9cHJlYXNzaWdubWVudF9iYXNlbGluZV9jYXB0dXJlOyBzdGF0dXM9YXZhaWxhYmxlOyB0YXJnZXRfZWZmZWN0PW5vbmU=",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "e971756a90b2ce9006809028f92d92fd52fc455f312e5fa057b79b6a65edec40",
+            "size_bytes": 137
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "target_preserving_complete:preexecution_capture_and_comparison",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9dGFyZ2V0X3ByZXNlcnZpbmdfY29tcGxldGU7IHVuaXQ9cHJlZXhlY3V0aW9uX2NhcHR1cmVfYW5kX2NvbXBhcmlzb247IHN0YXR1cz1hdmFpbGFibGU7IHRhcmdldF9lZmZlY3Q9bm9uZQ==",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "fcdfa41fd933541bf0ac0e7835242d7dac7f0211458aba5280421728889534b4",
+            "size_bytes": 142
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "target_preserving_complete:acceptance_to_controller_start_link",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9dGFyZ2V0X3ByZXNlcnZpbmdfY29tcGxldGU7IHVuaXQ9YWNjZXB0YW5jZV90b19jb250cm9sbGVyX3N0YXJ0X2xpbms7IHN0YXR1cz1hdmFpbGFibGU7IHRhcmdldF9lZmZlY3Q9bm9uZQ==",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "1c4af83594dfb2447448eef66ee692ab5602f24233388632a104e50f8e009f59",
+            "size_bytes": 142
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "target_preserving_complete:reset_washout_and_carryover_control",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9dGFyZ2V0X3ByZXNlcnZpbmdfY29tcGxldGU7IHVuaXQ9cmVzZXRfd2FzaG91dF9hbmRfY2FycnlvdmVyX2NvbnRyb2w7IHN0YXR1cz1hdmFpbGFibGU7IHRhcmdldF9lZmZlY3Q9bm9uZQ==",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "842b07f31c9c383b24fb74651ed5f0ebcf10e5cb65ec7fa024b6737164f1f3f8",
+            "size_bytes": 142
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "target_preserving_complete:abort_retry_deviation_and_assignment_lifecycle",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9dGFyZ2V0X3ByZXNlcnZpbmdfY29tcGxldGU7IHVuaXQ9YWJvcnRfcmV0cnlfZGV2aWF0aW9uX2FuZF9hc3NpZ25tZW50X2xpZmVjeWNsZTsgc3RhdHVzPWF2YWlsYWJsZTsgdGFyZ2V0X2VmZmVjdD1ub25l",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "3aa5755f472bba381ff770bd24cb1b4954c424ce0e1bd216750123cd91622d6b",
+            "size_bytes": 153
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "target_preserving_complete:capacity_safety_privacy_and_access",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9dGFyZ2V0X3ByZXNlcnZpbmdfY29tcGxldGU7IHVuaXQ9Y2FwYWNpdHlfc2FmZXR5X3ByaXZhY3lfYW5kX2FjY2Vzczsgc3RhdHVzPWF2YWlsYWJsZTsgdGFyZ2V0X2VmZmVjdD1ub25l",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "7c122b171fccf313282a41c0f9145c15a701e364b40c18d95b7943b340857c3f",
+            "size_bytes": 141
+          }
+        ],
+        "assigned_slots": 2,
+        "capacity_safety_privacy_resolved": true,
+        "closed_slots": 2,
+        "contact_or_dynamics_altering_instrumentation": false,
+        "controller_start_delay_ns": 1000000000,
+        "controller_start_time_ns": 2000000000,
+        "declared_retries": 0,
+        "dossier_name": "target_preserving_complete",
+        "human_override_documented": true,
+        "human_override_used": false,
+        "max_allowed_start_delay_ns": 5000000000,
+        "measurement_error_by_feature": {
+          "red_container_x_um": 1000,
+          "steel_bowl_x_um": 1500
+        },
+        "observed_retries": 0,
+        "outcome_fields_present": false,
+        "policy_visible_instrumentation": false,
+        "preexecution_capture_time_ns": 1000000000,
+        "preexecution_comparison_recorded": true,
+        "prepared_before_outcomes": true,
+        "proposed_rehearsal_mode": "outcome_hidden_synthetic_replay",
+        "schema": "h164-site-feasibility-dossier-v1",
+        "site_id": "synthetic-site-01",
+        "study_spec_hash": "65faf0280011a33f2b92bedfe66f85bd22a289cee09f99f2395e1babaa26ae3e",
+        "target_id": "p2-pair-session-context-v1",
+        "target_version": "1",
+        "tolerance_by_feature": {
+          "red_container_x_um": 3000,
+          "steel_bowl_x_um": 4000
+        },
+        "tolerance_rationale_kind": "site_owned_task_sensitivity_bound",
+        "units": [
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "target_preserving_complete:target_population_and_decision"
+            ],
+            "claim": "Known-answer evidence for target_population_and_decision",
+            "missing_or_changed": "",
+            "owner": "synthetic-site-owner",
+            "status": "available",
+            "target_effect": "none",
+            "unit": "target_population_and_decision",
+            "verification_method": "content hash plus deterministic gate"
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "target_preserving_complete:policy_observation_interface"
+            ],
+            "claim": "Known-answer evidence for policy_observation_interface",
+            "missing_or_changed": "",
+            "owner": "synthetic-site-owner",
+            "status": "available",
+            "target_effect": "none",
+            "unit": "policy_observation_interface",
+            "verification_method": "content hash plus deterministic gate"
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "target_preserving_complete:policy_action_and_control_interface"
+            ],
+            "claim": "Known-answer evidence for policy_action_and_control_interface",
+            "missing_or_changed": "",
+            "owner": "synthetic-site-owner",
+            "status": "available",
+            "target_effect": "none",
+            "unit": "policy_action_and_control_interface",
+            "verification_method": "content hash plus deterministic gate"
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "target_preserving_complete:scene_geometry_and_dynamics"
+            ],
+            "claim": "Known-answer evidence for scene_geometry_and_dynamics",
+            "missing_or_changed": "",
+            "owner": "synthetic-site-owner",
+            "status": "available",
+            "target_effect": "none",
+            "unit": "scene_geometry_and_dynamics",
+            "verification_method": "content hash plus deterministic gate"
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "target_preserving_complete:context_generation_and_assignment_order"
+            ],
+            "claim": "Known-answer evidence for context_generation_and_assignment_order",
+            "missing_or_changed": "",
+            "owner": "synthetic-site-owner",
+            "status": "available",
+            "target_effect": "none",
+            "unit": "context_generation_and_assignment_order",
+            "verification_method": "content hash plus deterministic gate"
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "target_preserving_complete:object_state_representation"
+            ],
+            "claim": "Known-answer evidence for object_state_representation",
+            "missing_or_changed": "",
+            "owner": "synthetic-site-owner",
+            "status": "available",
+            "target_effect": "none",
+            "unit": "object_state_representation",
+            "verification_method": "content hash plus deterministic gate"
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "target_preserving_complete:sensor_identity_and_calibration"
+            ],
+            "claim": "Known-answer evidence for sensor_identity_and_calibration",
+            "missing_or_changed": "",
+            "owner": "synthetic-site-owner",
+            "status": "available",
+            "target_effect": "none",
+            "unit": "sensor_identity_and_calibration",
+            "verification_method": "content hash plus deterministic gate"
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "target_preserving_complete:measurement_error_bound"
+            ],
+            "claim": "Known-answer evidence for measurement_error_bound",
+            "missing_or_changed": "",
+            "owner": "synthetic-site-owner",
+            "status": "available",
+            "target_effect": "none",
+            "unit": "measurement_error_bound",
+            "verification_method": "content hash plus deterministic gate"
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "target_preserving_complete:numeric_reset_tolerance"
+            ],
+            "claim": "Known-answer evidence for numeric_reset_tolerance",
+            "missing_or_changed": "",
+            "owner": "synthetic-site-owner",
+            "status": "available",
+            "target_effect": "none",
+            "unit": "numeric_reset_tolerance",
+            "verification_method": "content hash plus deterministic gate"
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "target_preserving_complete:tolerance_adequacy_rationale"
+            ],
+            "claim": "Known-answer evidence for tolerance_adequacy_rationale",
+            "missing_or_changed": "",
+            "owner": "synthetic-site-owner",
+            "status": "available",
+            "target_effect": "none",
+            "unit": "tolerance_adequacy_rationale",
+            "verification_method": "content hash plus deterministic gate"
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "target_preserving_complete:preassignment_baseline_capture"
+            ],
+            "claim": "Known-answer evidence for preassignment_baseline_capture",
+            "missing_or_changed": "",
+            "owner": "synthetic-site-owner",
+            "status": "available",
+            "target_effect": "none",
+            "unit": "preassignment_baseline_capture",
+            "verification_method": "content hash plus deterministic gate"
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "target_preserving_complete:preexecution_capture_and_comparison"
+            ],
+            "claim": "Known-answer evidence for preexecution_capture_and_comparison",
+            "missing_or_changed": "",
+            "owner": "synthetic-site-owner",
+            "status": "available",
+            "target_effect": "none",
+            "unit": "preexecution_capture_and_comparison",
+            "verification_method": "content hash plus deterministic gate"
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "target_preserving_complete:acceptance_to_controller_start_link"
+            ],
+            "claim": "Known-answer evidence for acceptance_to_controller_start_link",
+            "missing_or_changed": "",
+            "owner": "synthetic-site-owner",
+            "status": "available",
+            "target_effect": "none",
+            "unit": "acceptance_to_controller_start_link",
+            "verification_method": "content hash plus deterministic gate"
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "target_preserving_complete:reset_washout_and_carryover_control"
+            ],
+            "claim": "Known-answer evidence for reset_washout_and_carryover_control",
+            "missing_or_changed": "",
+            "owner": "synthetic-site-owner",
+            "status": "available",
+            "target_effect": "none",
+            "unit": "reset_washout_and_carryover_control",
+            "verification_method": "content hash plus deterministic gate"
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "target_preserving_complete:abort_retry_deviation_and_assignment_lifecycle"
+            ],
+            "claim": "Known-answer evidence for abort_retry_deviation_and_assignment_lifecycle",
+            "missing_or_changed": "",
+            "owner": "synthetic-site-owner",
+            "status": "available",
+            "target_effect": "none",
+            "unit": "abort_retry_deviation_and_assignment_lifecycle",
+            "verification_method": "content hash plus deterministic gate"
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "target_preserving_complete:capacity_safety_privacy_and_access"
+            ],
+            "claim": "Known-answer evidence for capacity_safety_privacy_and_access",
+            "missing_or_changed": "",
+            "owner": "synthetic-site-owner",
+            "status": "available",
+            "target_effect": "none",
+            "unit": "capacity_safety_privacy_and_access",
+            "verification_method": "content hash plus deterministic gate"
+          }
+        ]
+      }
+    },
+    {
+      "classification": {
+        "decision": "target_altering_only",
+        "evidence_issues": [],
+        "mechanically_complete": true,
+        "target_changes": [
+          "policy_observation_interface"
+        ]
+      },
+      "dossier": {
+        "acceptance_linked_to_controller_start": true,
+        "artifacts": [
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "visible_fiducial_complete:target_population_and_decision",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9dmlzaWJsZV9maWR1Y2lhbF9jb21wbGV0ZTsgdW5pdD10YXJnZXRfcG9wdWxhdGlvbl9hbmRfZGVjaXNpb247IHN0YXR1cz1hdmFpbGFibGU7IHRhcmdldF9lZmZlY3Q9bm9uZQ==",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "44d856adb8d826586e27210d8e444fa82fdffbaaf5b73eafc609469bebb754b6",
+            "size_bytes": 136
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "visible_fiducial_complete:policy_observation_interface",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9dmlzaWJsZV9maWR1Y2lhbF9jb21wbGV0ZTsgdW5pdD1wb2xpY3lfb2JzZXJ2YXRpb25faW50ZXJmYWNlOyBzdGF0dXM9dGFyZ2V0X2FsdGVyaW5nOyB0YXJnZXRfZWZmZWN0PWNoYW5nZXMgcG9saWN5IG9ic2VydmF0aW9uIGRpc3RyaWJ1dGlvbg==",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "e12cdfe9d477428a9786a86f20936840bd55a82a0f6ccc54a7da23d53510b51d",
+            "size_bytes": 175
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "visible_fiducial_complete:policy_action_and_control_interface",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9dmlzaWJsZV9maWR1Y2lhbF9jb21wbGV0ZTsgdW5pdD1wb2xpY3lfYWN0aW9uX2FuZF9jb250cm9sX2ludGVyZmFjZTsgc3RhdHVzPWF2YWlsYWJsZTsgdGFyZ2V0X2VmZmVjdD1ub25l",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "fbd09938ab745fa7b6821f53b32fc5646d7a3c5bf4e5e12b9a748235357569ad",
+            "size_bytes": 141
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "visible_fiducial_complete:scene_geometry_and_dynamics",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9dmlzaWJsZV9maWR1Y2lhbF9jb21wbGV0ZTsgdW5pdD1zY2VuZV9nZW9tZXRyeV9hbmRfZHluYW1pY3M7IHN0YXR1cz1hdmFpbGFibGU7IHRhcmdldF9lZmZlY3Q9bm9uZQ==",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "e07d0911ec563652d908ccc233e9efe286e9109c2c653ea23a0935c8409796f3",
+            "size_bytes": 133
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "visible_fiducial_complete:context_generation_and_assignment_order",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9dmlzaWJsZV9maWR1Y2lhbF9jb21wbGV0ZTsgdW5pdD1jb250ZXh0X2dlbmVyYXRpb25fYW5kX2Fzc2lnbm1lbnRfb3JkZXI7IHN0YXR1cz1hdmFpbGFibGU7IHRhcmdldF9lZmZlY3Q9bm9uZQ==",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "b9cfc8aad7dd426aec0242e0e04d5130a0f012219e8efd0bf92166e9a8721f16",
+            "size_bytes": 145
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "visible_fiducial_complete:object_state_representation",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9dmlzaWJsZV9maWR1Y2lhbF9jb21wbGV0ZTsgdW5pdD1vYmplY3Rfc3RhdGVfcmVwcmVzZW50YXRpb247IHN0YXR1cz1hdmFpbGFibGU7IHRhcmdldF9lZmZlY3Q9bm9uZQ==",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "9e887f903d4ff3ea2fa2ceb1e29e102ebf9525ea092c6b574c7396036b586d85",
+            "size_bytes": 133
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "visible_fiducial_complete:sensor_identity_and_calibration",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9dmlzaWJsZV9maWR1Y2lhbF9jb21wbGV0ZTsgdW5pdD1zZW5zb3JfaWRlbnRpdHlfYW5kX2NhbGlicmF0aW9uOyBzdGF0dXM9YXZhaWxhYmxlOyB0YXJnZXRfZWZmZWN0PW5vbmU=",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "4d51403f5f7dd3f4fddb36dfee9bc76b130afdfbd2bf22dd3a3ca02021815a55",
+            "size_bytes": 137
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "visible_fiducial_complete:measurement_error_bound",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9dmlzaWJsZV9maWR1Y2lhbF9jb21wbGV0ZTsgdW5pdD1tZWFzdXJlbWVudF9lcnJvcl9ib3VuZDsgc3RhdHVzPWF2YWlsYWJsZTsgdGFyZ2V0X2VmZmVjdD1ub25l",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "910c8bb3444ea3bf054f09ec6f7a2a884a0cfb059e06c893b730e9cb46a9a705",
+            "size_bytes": 129
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "visible_fiducial_complete:numeric_reset_tolerance",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9dmlzaWJsZV9maWR1Y2lhbF9jb21wbGV0ZTsgdW5pdD1udW1lcmljX3Jlc2V0X3RvbGVyYW5jZTsgc3RhdHVzPWF2YWlsYWJsZTsgdGFyZ2V0X2VmZmVjdD1ub25l",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "0984b11bf47f343eb4b5ab9c2e57d18e8db30ec5c299f964811c1af719f3b336",
+            "size_bytes": 129
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "visible_fiducial_complete:tolerance_adequacy_rationale",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9dmlzaWJsZV9maWR1Y2lhbF9jb21wbGV0ZTsgdW5pdD10b2xlcmFuY2VfYWRlcXVhY3lfcmF0aW9uYWxlOyBzdGF0dXM9YXZhaWxhYmxlOyB0YXJnZXRfZWZmZWN0PW5vbmU=",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "aebdb720be145a905b0db7cb9f59c85a81e88064304f69327db40ee764603172",
+            "size_bytes": 134
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "visible_fiducial_complete:preassignment_baseline_capture",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9dmlzaWJsZV9maWR1Y2lhbF9jb21wbGV0ZTsgdW5pdD1wcmVhc3NpZ25tZW50X2Jhc2VsaW5lX2NhcHR1cmU7IHN0YXR1cz1hdmFpbGFibGU7IHRhcmdldF9lZmZlY3Q9bm9uZQ==",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "2ad1080d02005310ad73225e65c7253cd27c72b5f052cc9cbe6195b0a418c9e6",
+            "size_bytes": 136
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "visible_fiducial_complete:preexecution_capture_and_comparison",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9dmlzaWJsZV9maWR1Y2lhbF9jb21wbGV0ZTsgdW5pdD1wcmVleGVjdXRpb25fY2FwdHVyZV9hbmRfY29tcGFyaXNvbjsgc3RhdHVzPWF2YWlsYWJsZTsgdGFyZ2V0X2VmZmVjdD1ub25l",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "4791b58027f544b0e92bec5be9484acdabd8b0a4b2616f5eae5d2bb440033461",
+            "size_bytes": 141
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "visible_fiducial_complete:acceptance_to_controller_start_link",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9dmlzaWJsZV9maWR1Y2lhbF9jb21wbGV0ZTsgdW5pdD1hY2NlcHRhbmNlX3RvX2NvbnRyb2xsZXJfc3RhcnRfbGluazsgc3RhdHVzPWF2YWlsYWJsZTsgdGFyZ2V0X2VmZmVjdD1ub25l",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "f15c1e50609398554dd83995c8cf60b781cdfe373213d943df680fa1eb3ae237",
+            "size_bytes": 141
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "visible_fiducial_complete:reset_washout_and_carryover_control",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9dmlzaWJsZV9maWR1Y2lhbF9jb21wbGV0ZTsgdW5pdD1yZXNldF93YXNob3V0X2FuZF9jYXJyeW92ZXJfY29udHJvbDsgc3RhdHVzPWF2YWlsYWJsZTsgdGFyZ2V0X2VmZmVjdD1ub25l",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "070d742ffb6d8b7c9ddc9aa46b4a1a0d0762e783b79074caccb5f3f8545a2339",
+            "size_bytes": 141
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "visible_fiducial_complete:abort_retry_deviation_and_assignment_lifecycle",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9dmlzaWJsZV9maWR1Y2lhbF9jb21wbGV0ZTsgdW5pdD1hYm9ydF9yZXRyeV9kZXZpYXRpb25fYW5kX2Fzc2lnbm1lbnRfbGlmZWN5Y2xlOyBzdGF0dXM9YXZhaWxhYmxlOyB0YXJnZXRfZWZmZWN0PW5vbmU=",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "1a94810cf9435fea404ad0fe314aa6b32cf919c554c6feadb94e7ab620e0fda2",
+            "size_bytes": 152
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "visible_fiducial_complete:capacity_safety_privacy_and_access",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9dmlzaWJsZV9maWR1Y2lhbF9jb21wbGV0ZTsgdW5pdD1jYXBhY2l0eV9zYWZldHlfcHJpdmFjeV9hbmRfYWNjZXNzOyBzdGF0dXM9YXZhaWxhYmxlOyB0YXJnZXRfZWZmZWN0PW5vbmU=",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "3899053b58b4a1c9105d036c178033c33e0125238f8e37cce0c9dfa7bbc77745",
+            "size_bytes": 140
+          }
+        ],
+        "assigned_slots": 2,
+        "capacity_safety_privacy_resolved": true,
+        "closed_slots": 2,
+        "contact_or_dynamics_altering_instrumentation": false,
+        "controller_start_delay_ns": 1000000000,
+        "controller_start_time_ns": 2000000000,
+        "declared_retries": 0,
+        "dossier_name": "visible_fiducial_complete",
+        "human_override_documented": true,
+        "human_override_used": false,
+        "max_allowed_start_delay_ns": 5000000000,
+        "measurement_error_by_feature": {
+          "red_container_x_um": 1000,
+          "steel_bowl_x_um": 1500
+        },
+        "observed_retries": 0,
+        "outcome_fields_present": false,
+        "policy_visible_instrumentation": true,
+        "preexecution_capture_time_ns": 1000000000,
+        "preexecution_comparison_recorded": true,
+        "prepared_before_outcomes": true,
+        "proposed_rehearsal_mode": "outcome_hidden_synthetic_replay",
+        "schema": "h164-site-feasibility-dossier-v1",
+        "site_id": "synthetic-site-01",
+        "study_spec_hash": "65faf0280011a33f2b92bedfe66f85bd22a289cee09f99f2395e1babaa26ae3e",
+        "target_id": "p2-pair-session-context-v1",
+        "target_version": "1",
+        "tolerance_by_feature": {
+          "red_container_x_um": 3000,
+          "steel_bowl_x_um": 4000
+        },
+        "tolerance_rationale_kind": "site_owned_task_sensitivity_bound",
+        "units": [
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "visible_fiducial_complete:target_population_and_decision"
+            ],
+            "claim": "Known-answer evidence for target_population_and_decision",
+            "missing_or_changed": "",
+            "owner": "synthetic-site-owner",
+            "status": "available",
+            "target_effect": "none",
+            "unit": "target_population_and_decision",
+            "verification_method": "content hash plus deterministic gate"
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "visible_fiducial_complete:policy_observation_interface"
+            ],
+            "claim": "Known-answer evidence for policy_observation_interface",
+            "missing_or_changed": "new fiducial appears in native policy RGB",
+            "owner": "synthetic-site-owner",
+            "status": "target_altering",
+            "target_effect": "changes policy observation distribution",
+            "unit": "policy_observation_interface",
+            "verification_method": "content hash plus deterministic gate"
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "visible_fiducial_complete:policy_action_and_control_interface"
+            ],
+            "claim": "Known-answer evidence for policy_action_and_control_interface",
+            "missing_or_changed": "",
+            "owner": "synthetic-site-owner",
+            "status": "available",
+            "target_effect": "none",
+            "unit": "policy_action_and_control_interface",
+            "verification_method": "content hash plus deterministic gate"
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "visible_fiducial_complete:scene_geometry_and_dynamics"
+            ],
+            "claim": "Known-answer evidence for scene_geometry_and_dynamics",
+            "missing_or_changed": "",
+            "owner": "synthetic-site-owner",
+            "status": "available",
+            "target_effect": "none",
+            "unit": "scene_geometry_and_dynamics",
+            "verification_method": "content hash plus deterministic gate"
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "visible_fiducial_complete:context_generation_and_assignment_order"
+            ],
+            "claim": "Known-answer evidence for context_generation_and_assignment_order",
+            "missing_or_changed": "",
+            "owner": "synthetic-site-owner",
+            "status": "available",
+            "target_effect": "none",
+            "unit": "context_generation_and_assignment_order",
+            "verification_method": "content hash plus deterministic gate"
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "visible_fiducial_complete:object_state_representation"
+            ],
+            "claim": "Known-answer evidence for object_state_representation",
+            "missing_or_changed": "",
+            "owner": "synthetic-site-owner",
+            "status": "available",
+            "target_effect": "none",
+            "unit": "object_state_representation",
+            "verification_method": "content hash plus deterministic gate"
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "visible_fiducial_complete:sensor_identity_and_calibration"
+            ],
+            "claim": "Known-answer evidence for sensor_identity_and_calibration",
+            "missing_or_changed": "",
+            "owner": "synthetic-site-owner",
+            "status": "available",
+            "target_effect": "none",
+            "unit": "sensor_identity_and_calibration",
+            "verification_method": "content hash plus deterministic gate"
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "visible_fiducial_complete:measurement_error_bound"
+            ],
+            "claim": "Known-answer evidence for measurement_error_bound",
+            "missing_or_changed": "",
+            "owner": "synthetic-site-owner",
+            "status": "available",
+            "target_effect": "none",
+            "unit": "measurement_error_bound",
+            "verification_method": "content hash plus deterministic gate"
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "visible_fiducial_complete:numeric_reset_tolerance"
+            ],
+            "claim": "Known-answer evidence for numeric_reset_tolerance",
+            "missing_or_changed": "",
+            "owner": "synthetic-site-owner",
+            "status": "available",
+            "target_effect": "none",
+            "unit": "numeric_reset_tolerance",
+            "verification_method": "content hash plus deterministic gate"
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "visible_fiducial_complete:tolerance_adequacy_rationale"
+            ],
+            "claim": "Known-answer evidence for tolerance_adequacy_rationale",
+            "missing_or_changed": "",
+            "owner": "synthetic-site-owner",
+            "status": "available",
+            "target_effect": "none",
+            "unit": "tolerance_adequacy_rationale",
+            "verification_method": "content hash plus deterministic gate"
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "visible_fiducial_complete:preassignment_baseline_capture"
+            ],
+            "claim": "Known-answer evidence for preassignment_baseline_capture",
+            "missing_or_changed": "",
+            "owner": "synthetic-site-owner",
+            "status": "available",
+            "target_effect": "none",
+            "unit": "preassignment_baseline_capture",
+            "verification_method": "content hash plus deterministic gate"
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "visible_fiducial_complete:preexecution_capture_and_comparison"
+            ],
+            "claim": "Known-answer evidence for preexecution_capture_and_comparison",
+            "missing_or_changed": "",
+            "owner": "synthetic-site-owner",
+            "status": "available",
+            "target_effect": "none",
+            "unit": "preexecution_capture_and_comparison",
+            "verification_method": "content hash plus deterministic gate"
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "visible_fiducial_complete:acceptance_to_controller_start_link"
+            ],
+            "claim": "Known-answer evidence for acceptance_to_controller_start_link",
+            "missing_or_changed": "",
+            "owner": "synthetic-site-owner",
+            "status": "available",
+            "target_effect": "none",
+            "unit": "acceptance_to_controller_start_link",
+            "verification_method": "content hash plus deterministic gate"
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "visible_fiducial_complete:reset_washout_and_carryover_control"
+            ],
+            "claim": "Known-answer evidence for reset_washout_and_carryover_control",
+            "missing_or_changed": "",
+            "owner": "synthetic-site-owner",
+            "status": "available",
+            "target_effect": "none",
+            "unit": "reset_washout_and_carryover_control",
+            "verification_method": "content hash plus deterministic gate"
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "visible_fiducial_complete:abort_retry_deviation_and_assignment_lifecycle"
+            ],
+            "claim": "Known-answer evidence for abort_retry_deviation_and_assignment_lifecycle",
+            "missing_or_changed": "",
+            "owner": "synthetic-site-owner",
+            "status": "available",
+            "target_effect": "none",
+            "unit": "abort_retry_deviation_and_assignment_lifecycle",
+            "verification_method": "content hash plus deterministic gate"
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "visible_fiducial_complete:capacity_safety_privacy_and_access"
+            ],
+            "claim": "Known-answer evidence for capacity_safety_privacy_and_access",
+            "missing_or_changed": "",
+            "owner": "synthetic-site-owner",
+            "status": "available",
+            "target_effect": "none",
+            "unit": "capacity_safety_privacy_and_access",
+            "verification_method": "content hash plus deterministic gate"
+          }
+        ]
+      }
+    },
+    {
+      "classification": {
+        "decision": "not_evidenced",
+        "evidence_issues": [
+          "tolerance_rationale_not_site_owned",
+          "unit_incomplete:tolerance_adequacy_rationale"
+        ],
+        "mechanically_complete": false,
+        "target_changes": []
+      },
+      "dossier": {
+        "acceptance_linked_to_controller_start": true,
+        "artifacts": [
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "grid_scale_as_tolerance:target_population_and_decision",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9Z3JpZF9zY2FsZV9hc190b2xlcmFuY2U7IHVuaXQ9dGFyZ2V0X3BvcHVsYXRpb25fYW5kX2RlY2lzaW9uOyBzdGF0dXM9YXZhaWxhYmxlOyB0YXJnZXRfZWZmZWN0PW5vbmU=",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "f35bb88120fe98fded91ce9524beb2fef52b6587359c6e825d6a4cfe655fc737",
+            "size_bytes": 134
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "grid_scale_as_tolerance:policy_observation_interface",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9Z3JpZF9zY2FsZV9hc190b2xlcmFuY2U7IHVuaXQ9cG9saWN5X29ic2VydmF0aW9uX2ludGVyZmFjZTsgc3RhdHVzPWF2YWlsYWJsZTsgdGFyZ2V0X2VmZmVjdD1ub25l",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "07b3b8dc1009c92c90234c98bb14df57266154dc99f51b2393d08935fd76391d",
+            "size_bytes": 132
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "grid_scale_as_tolerance:policy_action_and_control_interface",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9Z3JpZF9zY2FsZV9hc190b2xlcmFuY2U7IHVuaXQ9cG9saWN5X2FjdGlvbl9hbmRfY29udHJvbF9pbnRlcmZhY2U7IHN0YXR1cz1hdmFpbGFibGU7IHRhcmdldF9lZmZlY3Q9bm9uZQ==",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "07e480ad776df2485619d9a11397ff4cbe16aac543a9edf0c6ffda2d6e0fe519",
+            "size_bytes": 139
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "grid_scale_as_tolerance:scene_geometry_and_dynamics",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9Z3JpZF9zY2FsZV9hc190b2xlcmFuY2U7IHVuaXQ9c2NlbmVfZ2VvbWV0cnlfYW5kX2R5bmFtaWNzOyBzdGF0dXM9YXZhaWxhYmxlOyB0YXJnZXRfZWZmZWN0PW5vbmU=",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "6a74e164e59562b5c6d2fa88af80feb85a3e1a1e875824fa1f2b199bd2eb8b79",
+            "size_bytes": 131
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "grid_scale_as_tolerance:context_generation_and_assignment_order",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9Z3JpZF9zY2FsZV9hc190b2xlcmFuY2U7IHVuaXQ9Y29udGV4dF9nZW5lcmF0aW9uX2FuZF9hc3NpZ25tZW50X29yZGVyOyBzdGF0dXM9YXZhaWxhYmxlOyB0YXJnZXRfZWZmZWN0PW5vbmU=",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "a8a43a4392c7991302653ae7f87125199590af14ba6ea75af307f3d0215930ca",
+            "size_bytes": 143
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "grid_scale_as_tolerance:object_state_representation",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9Z3JpZF9zY2FsZV9hc190b2xlcmFuY2U7IHVuaXQ9b2JqZWN0X3N0YXRlX3JlcHJlc2VudGF0aW9uOyBzdGF0dXM9YXZhaWxhYmxlOyB0YXJnZXRfZWZmZWN0PW5vbmU=",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "8dc40f814982687dc733239a7073eead973b7f6250dde0e803f9f06e8f6f5865",
+            "size_bytes": 131
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "grid_scale_as_tolerance:sensor_identity_and_calibration",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9Z3JpZF9zY2FsZV9hc190b2xlcmFuY2U7IHVuaXQ9c2Vuc29yX2lkZW50aXR5X2FuZF9jYWxpYnJhdGlvbjsgc3RhdHVzPWF2YWlsYWJsZTsgdGFyZ2V0X2VmZmVjdD1ub25l",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "c3dc49ffa2be2d89474b9c7bbdd6ebf5b5e9f347879fa053e1c08d2f6ece03ff",
+            "size_bytes": 135
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "grid_scale_as_tolerance:measurement_error_bound",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9Z3JpZF9zY2FsZV9hc190b2xlcmFuY2U7IHVuaXQ9bWVhc3VyZW1lbnRfZXJyb3JfYm91bmQ7IHN0YXR1cz1hdmFpbGFibGU7IHRhcmdldF9lZmZlY3Q9bm9uZQ==",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "b311533a017da2070e5976f56a765dfb6747728d6f0219aeee76f3ce47654e30",
+            "size_bytes": 127
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "grid_scale_as_tolerance:numeric_reset_tolerance",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9Z3JpZF9zY2FsZV9hc190b2xlcmFuY2U7IHVuaXQ9bnVtZXJpY19yZXNldF90b2xlcmFuY2U7IHN0YXR1cz1hdmFpbGFibGU7IHRhcmdldF9lZmZlY3Q9bm9uZQ==",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "28b43cfc5b5641e6d2dc1386980e7a792c880db2c70dfa48507a2878d85e79de",
+            "size_bytes": 127
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "grid_scale_as_tolerance:tolerance_adequacy_rationale",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9Z3JpZF9zY2FsZV9hc190b2xlcmFuY2U7IHVuaXQ9dG9sZXJhbmNlX2FkZXF1YWN5X3JhdGlvbmFsZTsgc3RhdHVzPXBhcnRpYWw7IHRhcmdldF9lZmZlY3Q9bm9uZQ==",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "2a16422888cbe2f4e205f746a91da5452d55aba9834c254d391b6bbc173fcb58",
+            "size_bytes": 130
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "grid_scale_as_tolerance:preassignment_baseline_capture",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9Z3JpZF9zY2FsZV9hc190b2xlcmFuY2U7IHVuaXQ9cHJlYXNzaWdubWVudF9iYXNlbGluZV9jYXB0dXJlOyBzdGF0dXM9YXZhaWxhYmxlOyB0YXJnZXRfZWZmZWN0PW5vbmU=",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "5c8d731117503bb5c2aea87cf60c15b3f4655475beb23bcc47c5fc8a028f05f0",
+            "size_bytes": 134
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "grid_scale_as_tolerance:preexecution_capture_and_comparison",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9Z3JpZF9zY2FsZV9hc190b2xlcmFuY2U7IHVuaXQ9cHJlZXhlY3V0aW9uX2NhcHR1cmVfYW5kX2NvbXBhcmlzb247IHN0YXR1cz1hdmFpbGFibGU7IHRhcmdldF9lZmZlY3Q9bm9uZQ==",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "b302f7a773747ba4ffb3c6e0e9bf6aa9bc0073c61d100bcaf71ab64c0ad401d3",
+            "size_bytes": 139
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "grid_scale_as_tolerance:acceptance_to_controller_start_link",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9Z3JpZF9zY2FsZV9hc190b2xlcmFuY2U7IHVuaXQ9YWNjZXB0YW5jZV90b19jb250cm9sbGVyX3N0YXJ0X2xpbms7IHN0YXR1cz1hdmFpbGFibGU7IHRhcmdldF9lZmZlY3Q9bm9uZQ==",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "9e05197e9ebb0da9757b1577df04399f24aac121ad2d314863d537b1c1d34dca",
+            "size_bytes": 139
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "grid_scale_as_tolerance:reset_washout_and_carryover_control",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9Z3JpZF9zY2FsZV9hc190b2xlcmFuY2U7IHVuaXQ9cmVzZXRfd2FzaG91dF9hbmRfY2FycnlvdmVyX2NvbnRyb2w7IHN0YXR1cz1hdmFpbGFibGU7IHRhcmdldF9lZmZlY3Q9bm9uZQ==",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "caec6e139d3ed71d4c839a79dd8258f6a876ab2ac91bb3a744f72246ab65911c",
+            "size_bytes": 139
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "grid_scale_as_tolerance:abort_retry_deviation_and_assignment_lifecycle",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9Z3JpZF9zY2FsZV9hc190b2xlcmFuY2U7IHVuaXQ9YWJvcnRfcmV0cnlfZGV2aWF0aW9uX2FuZF9hc3NpZ25tZW50X2xpZmVjeWNsZTsgc3RhdHVzPWF2YWlsYWJsZTsgdGFyZ2V0X2VmZmVjdD1ub25l",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "25e83704364042de7bbf598951018ebeed259cd082e998e6d39e4f89cd72ca88",
+            "size_bytes": 150
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "grid_scale_as_tolerance:capacity_safety_privacy_and_access",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9Z3JpZF9zY2FsZV9hc190b2xlcmFuY2U7IHVuaXQ9Y2FwYWNpdHlfc2FmZXR5X3ByaXZhY3lfYW5kX2FjY2Vzczsgc3RhdHVzPWF2YWlsYWJsZTsgdGFyZ2V0X2VmZmVjdD1ub25l",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "2ced196e584640b7a15ddb2cc363c6650a99817c1d80991123c0e96feed2a8ac",
+            "size_bytes": 138
+          }
+        ],
+        "assigned_slots": 2,
+        "capacity_safety_privacy_resolved": true,
+        "closed_slots": 2,
+        "contact_or_dynamics_altering_instrumentation": false,
+        "controller_start_delay_ns": 1000000000,
+        "controller_start_time_ns": 2000000000,
+        "declared_retries": 0,
+        "dossier_name": "grid_scale_as_tolerance",
+        "human_override_documented": true,
+        "human_override_used": false,
+        "max_allowed_start_delay_ns": 5000000000,
+        "measurement_error_by_feature": {
+          "red_container_x_um": 1000,
+          "steel_bowl_x_um": 1500
+        },
+        "observed_retries": 0,
+        "outcome_fields_present": false,
+        "policy_visible_instrumentation": false,
+        "preexecution_capture_time_ns": 1000000000,
+        "preexecution_comparison_recorded": true,
+        "prepared_before_outcomes": true,
+        "proposed_rehearsal_mode": "outcome_hidden_synthetic_replay",
+        "schema": "h164-site-feasibility-dossier-v1",
+        "site_id": "synthetic-site-01",
+        "study_spec_hash": "65faf0280011a33f2b92bedfe66f85bd22a289cee09f99f2395e1babaa26ae3e",
+        "target_id": "p2-pair-session-context-v1",
+        "target_version": "1",
+        "tolerance_by_feature": {
+          "red_container_x_um": 50000,
+          "steel_bowl_x_um": 50000
+        },
+        "tolerance_rationale_kind": "borrowed_grid_cell_size",
+        "units": [
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "grid_scale_as_tolerance:target_population_and_decision"
+            ],
+            "claim": "Known-answer evidence for target_population_and_decision",
+            "missing_or_changed": "",
+            "owner": "synthetic-site-owner",
+            "status": "available",
+            "target_effect": "none",
+            "unit": "target_population_and_decision",
+            "verification_method": "content hash plus deterministic gate"
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "grid_scale_as_tolerance:policy_observation_interface"
+            ],
+            "claim": "Known-answer evidence for policy_observation_interface",
+            "missing_or_changed": "",
+            "owner": "synthetic-site-owner",
+            "status": "available",
+            "target_effect": "none",
+            "unit": "policy_observation_interface",
+            "verification_method": "content hash plus deterministic gate"
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "grid_scale_as_tolerance:policy_action_and_control_interface"
+            ],
+            "claim": "Known-answer evidence for policy_action_and_control_interface",
+            "missing_or_changed": "",
+            "owner": "synthetic-site-owner",
+            "status": "available",
+            "target_effect": "none",
+            "unit": "policy_action_and_control_interface",
+            "verification_method": "content hash plus deterministic gate"
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "grid_scale_as_tolerance:scene_geometry_and_dynamics"
+            ],
+            "claim": "Known-answer evidence for scene_geometry_and_dynamics",
+            "missing_or_changed": "",
+            "owner": "synthetic-site-owner",
+            "status": "available",
+            "target_effect": "none",
+            "unit": "scene_geometry_and_dynamics",
+            "verification_method": "content hash plus deterministic gate"
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "grid_scale_as_tolerance:context_generation_and_assignment_order"
+            ],
+            "claim": "Known-answer evidence for context_generation_and_assignment_order",
+            "missing_or_changed": "",
+            "owner": "synthetic-site-owner",
+            "status": "available",
+            "target_effect": "none",
+            "unit": "context_generation_and_assignment_order",
+            "verification_method": "content hash plus deterministic gate"
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "grid_scale_as_tolerance:object_state_representation"
+            ],
+            "claim": "Known-answer evidence for object_state_representation",
+            "missing_or_changed": "",
+            "owner": "synthetic-site-owner",
+            "status": "available",
+            "target_effect": "none",
+            "unit": "object_state_representation",
+            "verification_method": "content hash plus deterministic gate"
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "grid_scale_as_tolerance:sensor_identity_and_calibration"
+            ],
+            "claim": "Known-answer evidence for sensor_identity_and_calibration",
+            "missing_or_changed": "",
+            "owner": "synthetic-site-owner",
+            "status": "available",
+            "target_effect": "none",
+            "unit": "sensor_identity_and_calibration",
+            "verification_method": "content hash plus deterministic gate"
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "grid_scale_as_tolerance:measurement_error_bound"
+            ],
+            "claim": "Known-answer evidence for measurement_error_bound",
+            "missing_or_changed": "",
+            "owner": "synthetic-site-owner",
+            "status": "available",
+            "target_effect": "none",
+            "unit": "measurement_error_bound",
+            "verification_method": "content hash plus deterministic gate"
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "grid_scale_as_tolerance:numeric_reset_tolerance"
+            ],
+            "claim": "Known-answer evidence for numeric_reset_tolerance",
+            "missing_or_changed": "",
+            "owner": "synthetic-site-owner",
+            "status": "available",
+            "target_effect": "none",
+            "unit": "numeric_reset_tolerance",
+            "verification_method": "content hash plus deterministic gate"
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "grid_scale_as_tolerance:tolerance_adequacy_rationale"
+            ],
+            "claim": "Known-answer evidence for tolerance_adequacy_rationale",
+            "missing_or_changed": "grid scale copied without task sensitivity or error rationale",
+            "owner": "synthetic-site-owner",
+            "status": "partial",
+            "target_effect": "none",
+            "unit": "tolerance_adequacy_rationale",
+            "verification_method": "content hash plus deterministic gate"
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "grid_scale_as_tolerance:preassignment_baseline_capture"
+            ],
+            "claim": "Known-answer evidence for preassignment_baseline_capture",
+            "missing_or_changed": "",
+            "owner": "synthetic-site-owner",
+            "status": "available",
+            "target_effect": "none",
+            "unit": "preassignment_baseline_capture",
+            "verification_method": "content hash plus deterministic gate"
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "grid_scale_as_tolerance:preexecution_capture_and_comparison"
+            ],
+            "claim": "Known-answer evidence for preexecution_capture_and_comparison",
+            "missing_or_changed": "",
+            "owner": "synthetic-site-owner",
+            "status": "available",
+            "target_effect": "none",
+            "unit": "preexecution_capture_and_comparison",
+            "verification_method": "content hash plus deterministic gate"
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "grid_scale_as_tolerance:acceptance_to_controller_start_link"
+            ],
+            "claim": "Known-answer evidence for acceptance_to_controller_start_link",
+            "missing_or_changed": "",
+            "owner": "synthetic-site-owner",
+            "status": "available",
+            "target_effect": "none",
+            "unit": "acceptance_to_controller_start_link",
+            "verification_method": "content hash plus deterministic gate"
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "grid_scale_as_tolerance:reset_washout_and_carryover_control"
+            ],
+            "claim": "Known-answer evidence for reset_washout_and_carryover_control",
+            "missing_or_changed": "",
+            "owner": "synthetic-site-owner",
+            "status": "available",
+            "target_effect": "none",
+            "unit": "reset_washout_and_carryover_control",
+            "verification_method": "content hash plus deterministic gate"
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "grid_scale_as_tolerance:abort_retry_deviation_and_assignment_lifecycle"
+            ],
+            "claim": "Known-answer evidence for abort_retry_deviation_and_assignment_lifecycle",
+            "missing_or_changed": "",
+            "owner": "synthetic-site-owner",
+            "status": "available",
+            "target_effect": "none",
+            "unit": "abort_retry_deviation_and_assignment_lifecycle",
+            "verification_method": "content hash plus deterministic gate"
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "grid_scale_as_tolerance:capacity_safety_privacy_and_access"
+            ],
+            "claim": "Known-answer evidence for capacity_safety_privacy_and_access",
+            "missing_or_changed": "",
+            "owner": "synthetic-site-owner",
+            "status": "available",
+            "target_effect": "none",
+            "unit": "capacity_safety_privacy_and_access",
+            "verification_method": "content hash plus deterministic gate"
+          }
+        ]
+      }
+    },
+    {
+      "classification": {
+        "decision": "not_evidenced",
+        "evidence_issues": [
+          "acceptance_not_linked_to_controller_start",
+          "preexecution_comparison_not_recorded",
+          "undocumented_human_override",
+          "unit_incomplete:acceptance_to_controller_start_link",
+          "unit_incomplete:preexecution_capture_and_comparison"
+        ],
+        "mechanically_complete": false,
+        "target_changes": []
+      },
+      "dossier": {
+        "acceptance_linked_to_controller_start": false,
+        "artifacts": [
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "unlinked_human_overlay:target_population_and_decision",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9dW5saW5rZWRfaHVtYW5fb3ZlcmxheTsgdW5pdD10YXJnZXRfcG9wdWxhdGlvbl9hbmRfZGVjaXNpb247IHN0YXR1cz1hdmFpbGFibGU7IHRhcmdldF9lZmZlY3Q9bm9uZQ==",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "323065d71d929d860f1aafb8d69ea644435c8c04b0aa08571fea9521bbe42b5c",
+            "size_bytes": 133
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "unlinked_human_overlay:policy_observation_interface",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9dW5saW5rZWRfaHVtYW5fb3ZlcmxheTsgdW5pdD1wb2xpY3lfb2JzZXJ2YXRpb25faW50ZXJmYWNlOyBzdGF0dXM9YXZhaWxhYmxlOyB0YXJnZXRfZWZmZWN0PW5vbmU=",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "d155e8ddf31a34588719a26f20a6869e5121234c770c44e65cc7a65e48e8bfb4",
+            "size_bytes": 131
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "unlinked_human_overlay:policy_action_and_control_interface",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9dW5saW5rZWRfaHVtYW5fb3ZlcmxheTsgdW5pdD1wb2xpY3lfYWN0aW9uX2FuZF9jb250cm9sX2ludGVyZmFjZTsgc3RhdHVzPWF2YWlsYWJsZTsgdGFyZ2V0X2VmZmVjdD1ub25l",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "29e7df14761c1edb8975534ea373e19c028711f9ce79a709fa46768d144bab99",
+            "size_bytes": 138
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "unlinked_human_overlay:scene_geometry_and_dynamics",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9dW5saW5rZWRfaHVtYW5fb3ZlcmxheTsgdW5pdD1zY2VuZV9nZW9tZXRyeV9hbmRfZHluYW1pY3M7IHN0YXR1cz1hdmFpbGFibGU7IHRhcmdldF9lZmZlY3Q9bm9uZQ==",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "9499cf789e8facfcaea18f970c5971ca9a50f3bf318b7f56cc72875bb5c0cd13",
+            "size_bytes": 130
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "unlinked_human_overlay:context_generation_and_assignment_order",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9dW5saW5rZWRfaHVtYW5fb3ZlcmxheTsgdW5pdD1jb250ZXh0X2dlbmVyYXRpb25fYW5kX2Fzc2lnbm1lbnRfb3JkZXI7IHN0YXR1cz1hdmFpbGFibGU7IHRhcmdldF9lZmZlY3Q9bm9uZQ==",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "85722fd3910d4c3002baa5abc04d3edd6cb46b5d98d88618d0b557d459216ba9",
+            "size_bytes": 142
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "unlinked_human_overlay:object_state_representation",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9dW5saW5rZWRfaHVtYW5fb3ZlcmxheTsgdW5pdD1vYmplY3Rfc3RhdGVfcmVwcmVzZW50YXRpb247IHN0YXR1cz1hdmFpbGFibGU7IHRhcmdldF9lZmZlY3Q9bm9uZQ==",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "781575fc2782bd6c93895cc201ea04e24be9b6bd2b1e9d0b3bec4dff808d2a78",
+            "size_bytes": 130
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "unlinked_human_overlay:sensor_identity_and_calibration",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9dW5saW5rZWRfaHVtYW5fb3ZlcmxheTsgdW5pdD1zZW5zb3JfaWRlbnRpdHlfYW5kX2NhbGlicmF0aW9uOyBzdGF0dXM9YXZhaWxhYmxlOyB0YXJnZXRfZWZmZWN0PW5vbmU=",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "eb59ef664dc59eeb6aa1c2b7508808aae8fd76d317a0b1433718e9de6329685c",
+            "size_bytes": 134
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "unlinked_human_overlay:measurement_error_bound",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9dW5saW5rZWRfaHVtYW5fb3ZlcmxheTsgdW5pdD1tZWFzdXJlbWVudF9lcnJvcl9ib3VuZDsgc3RhdHVzPWF2YWlsYWJsZTsgdGFyZ2V0X2VmZmVjdD1ub25l",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "2f150196909f93530ee382b2ba4975246f415dd2e8483b96fce149fb1d4922d3",
+            "size_bytes": 126
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "unlinked_human_overlay:numeric_reset_tolerance",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9dW5saW5rZWRfaHVtYW5fb3ZlcmxheTsgdW5pdD1udW1lcmljX3Jlc2V0X3RvbGVyYW5jZTsgc3RhdHVzPWF2YWlsYWJsZTsgdGFyZ2V0X2VmZmVjdD1ub25l",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "397cf980663419f73ffad4efde870f381288917a71d04908fd2952f3e2bed7e0",
+            "size_bytes": 126
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "unlinked_human_overlay:tolerance_adequacy_rationale",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9dW5saW5rZWRfaHVtYW5fb3ZlcmxheTsgdW5pdD10b2xlcmFuY2VfYWRlcXVhY3lfcmF0aW9uYWxlOyBzdGF0dXM9YXZhaWxhYmxlOyB0YXJnZXRfZWZmZWN0PW5vbmU=",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "2beec6c36ee0508a890fd48c6de01c4e85f506370159e03b74cc379adcdfb297",
+            "size_bytes": 131
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "unlinked_human_overlay:preassignment_baseline_capture",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9dW5saW5rZWRfaHVtYW5fb3ZlcmxheTsgdW5pdD1wcmVhc3NpZ25tZW50X2Jhc2VsaW5lX2NhcHR1cmU7IHN0YXR1cz1hdmFpbGFibGU7IHRhcmdldF9lZmZlY3Q9bm9uZQ==",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "9362e5ad75065127d2e19df3b7a6eac4010ec695f31d2ea41ecfd4d76e2db773",
+            "size_bytes": 133
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "unlinked_human_overlay:preexecution_capture_and_comparison",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9dW5saW5rZWRfaHVtYW5fb3ZlcmxheTsgdW5pdD1wcmVleGVjdXRpb25fY2FwdHVyZV9hbmRfY29tcGFyaXNvbjsgc3RhdHVzPXBhcnRpYWw7IHRhcmdldF9lZmZlY3Q9bm9uZQ==",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "c5febcb4c36c760ecfbecb896caa2cc32d1469f2a8123be6afc2938d991861eb",
+            "size_bytes": 136
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "unlinked_human_overlay:acceptance_to_controller_start_link",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9dW5saW5rZWRfaHVtYW5fb3ZlcmxheTsgdW5pdD1hY2NlcHRhbmNlX3RvX2NvbnRyb2xsZXJfc3RhcnRfbGluazsgc3RhdHVzPWFic2VudDsgdGFyZ2V0X2VmZmVjdD1ub25l",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "833ecf30b39281dff870c2eb05145312c5f1553ed2ab8b40b5ccbfe9400f7d07",
+            "size_bytes": 135
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "unlinked_human_overlay:reset_washout_and_carryover_control",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9dW5saW5rZWRfaHVtYW5fb3ZlcmxheTsgdW5pdD1yZXNldF93YXNob3V0X2FuZF9jYXJyeW92ZXJfY29udHJvbDsgc3RhdHVzPWF2YWlsYWJsZTsgdGFyZ2V0X2VmZmVjdD1ub25l",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "ec029226442ecd040caea680b3a2ac702fde1d102238bb4fbf38d97d4df47537",
+            "size_bytes": 138
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "unlinked_human_overlay:abort_retry_deviation_and_assignment_lifecycle",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9dW5saW5rZWRfaHVtYW5fb3ZlcmxheTsgdW5pdD1hYm9ydF9yZXRyeV9kZXZpYXRpb25fYW5kX2Fzc2lnbm1lbnRfbGlmZWN5Y2xlOyBzdGF0dXM9YXZhaWxhYmxlOyB0YXJnZXRfZWZmZWN0PW5vbmU=",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "3ea2116e822cf102b4af4b6f0c254232e6f8155ba69b304e47584e89bf605225",
+            "size_bytes": 149
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_id": "unlinked_human_overlay:capacity_safety_privacy_and_access",
+            "content_b64": "SDE2NCBrbm93bi1hbnN3ZXIgZXZpZGVuY2U7IGRvc3NpZXI9dW5saW5rZWRfaHVtYW5fb3ZlcmxheTsgdW5pdD1jYXBhY2l0eV9zYWZldHlfcHJpdmFjeV9hbmRfYWNjZXNzOyBzdGF0dXM9YXZhaWxhYmxlOyB0YXJnZXRfZWZmZWN0PW5vbmU=",
+            "media_type": "application/x-h164-known-answer",
+            "sha256": "24ac55375ebefe10cc9fb65588c7f812c19cd25766ba3d9d97e6f01d3a0cd114",
+            "size_bytes": 137
+          }
+        ],
+        "assigned_slots": 2,
+        "capacity_safety_privacy_resolved": true,
+        "closed_slots": 2,
+        "contact_or_dynamics_altering_instrumentation": false,
+        "controller_start_delay_ns": 1000000000,
+        "controller_start_time_ns": 2000000000,
+        "declared_retries": 0,
+        "dossier_name": "unlinked_human_overlay",
+        "human_override_documented": false,
+        "human_override_used": true,
+        "max_allowed_start_delay_ns": 5000000000,
+        "measurement_error_by_feature": {
+          "red_container_x_um": 1000,
+          "steel_bowl_x_um": 1500
+        },
+        "observed_retries": 0,
+        "outcome_fields_present": false,
+        "policy_visible_instrumentation": false,
+        "preexecution_capture_time_ns": 1000000000,
+        "preexecution_comparison_recorded": false,
+        "prepared_before_outcomes": true,
+        "proposed_rehearsal_mode": "outcome_hidden_synthetic_replay",
+        "schema": "h164-site-feasibility-dossier-v1",
+        "site_id": "synthetic-site-01",
+        "study_spec_hash": "65faf0280011a33f2b92bedfe66f85bd22a289cee09f99f2395e1babaa26ae3e",
+        "target_id": "p2-pair-session-context-v1",
+        "target_version": "1",
+        "tolerance_by_feature": {
+          "red_container_x_um": 3000,
+          "steel_bowl_x_um": 4000
+        },
+        "tolerance_rationale_kind": "site_owned_task_sensitivity_bound",
+        "units": [
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "unlinked_human_overlay:target_population_and_decision"
+            ],
+            "claim": "Known-answer evidence for target_population_and_decision",
+            "missing_or_changed": "",
+            "owner": "synthetic-site-owner",
+            "status": "available",
+            "target_effect": "none",
+            "unit": "target_population_and_decision",
+            "verification_method": "content hash plus deterministic gate"
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "unlinked_human_overlay:policy_observation_interface"
+            ],
+            "claim": "Known-answer evidence for policy_observation_interface",
+            "missing_or_changed": "",
+            "owner": "synthetic-site-owner",
+            "status": "available",
+            "target_effect": "none",
+            "unit": "policy_observation_interface",
+            "verification_method": "content hash plus deterministic gate"
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "unlinked_human_overlay:policy_action_and_control_interface"
+            ],
+            "claim": "Known-answer evidence for policy_action_and_control_interface",
+            "missing_or_changed": "",
+            "owner": "synthetic-site-owner",
+            "status": "available",
+            "target_effect": "none",
+            "unit": "policy_action_and_control_interface",
+            "verification_method": "content hash plus deterministic gate"
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "unlinked_human_overlay:scene_geometry_and_dynamics"
+            ],
+            "claim": "Known-answer evidence for scene_geometry_and_dynamics",
+            "missing_or_changed": "",
+            "owner": "synthetic-site-owner",
+            "status": "available",
+            "target_effect": "none",
+            "unit": "scene_geometry_and_dynamics",
+            "verification_method": "content hash plus deterministic gate"
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "unlinked_human_overlay:context_generation_and_assignment_order"
+            ],
+            "claim": "Known-answer evidence for context_generation_and_assignment_order",
+            "missing_or_changed": "",
+            "owner": "synthetic-site-owner",
+            "status": "available",
+            "target_effect": "none",
+            "unit": "context_generation_and_assignment_order",
+            "verification_method": "content hash plus deterministic gate"
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "unlinked_human_overlay:object_state_representation"
+            ],
+            "claim": "Known-answer evidence for object_state_representation",
+            "missing_or_changed": "",
+            "owner": "synthetic-site-owner",
+            "status": "available",
+            "target_effect": "none",
+            "unit": "object_state_representation",
+            "verification_method": "content hash plus deterministic gate"
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "unlinked_human_overlay:sensor_identity_and_calibration"
+            ],
+            "claim": "Known-answer evidence for sensor_identity_and_calibration",
+            "missing_or_changed": "",
+            "owner": "synthetic-site-owner",
+            "status": "available",
+            "target_effect": "none",
+            "unit": "sensor_identity_and_calibration",
+            "verification_method": "content hash plus deterministic gate"
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "unlinked_human_overlay:measurement_error_bound"
+            ],
+            "claim": "Known-answer evidence for measurement_error_bound",
+            "missing_or_changed": "",
+            "owner": "synthetic-site-owner",
+            "status": "available",
+            "target_effect": "none",
+            "unit": "measurement_error_bound",
+            "verification_method": "content hash plus deterministic gate"
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "unlinked_human_overlay:numeric_reset_tolerance"
+            ],
+            "claim": "Known-answer evidence for numeric_reset_tolerance",
+            "missing_or_changed": "",
+            "owner": "synthetic-site-owner",
+            "status": "available",
+            "target_effect": "none",
+            "unit": "numeric_reset_tolerance",
+            "verification_method": "content hash plus deterministic gate"
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "unlinked_human_overlay:tolerance_adequacy_rationale"
+            ],
+            "claim": "Known-answer evidence for tolerance_adequacy_rationale",
+            "missing_or_changed": "",
+            "owner": "synthetic-site-owner",
+            "status": "available",
+            "target_effect": "none",
+            "unit": "tolerance_adequacy_rationale",
+            "verification_method": "content hash plus deterministic gate"
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "unlinked_human_overlay:preassignment_baseline_capture"
+            ],
+            "claim": "Known-answer evidence for preassignment_baseline_capture",
+            "missing_or_changed": "",
+            "owner": "synthetic-site-owner",
+            "status": "available",
+            "target_effect": "none",
+            "unit": "preassignment_baseline_capture",
+            "verification_method": "content hash plus deterministic gate"
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "unlinked_human_overlay:preexecution_capture_and_comparison"
+            ],
+            "claim": "Known-answer evidence for preexecution_capture_and_comparison",
+            "missing_or_changed": "visual comparison not retained",
+            "owner": "synthetic-site-owner",
+            "status": "partial",
+            "target_effect": "none",
+            "unit": "preexecution_capture_and_comparison",
+            "verification_method": "content hash plus deterministic gate"
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "unlinked_human_overlay:acceptance_to_controller_start_link"
+            ],
+            "claim": "Known-answer evidence for acceptance_to_controller_start_link",
+            "missing_or_changed": "no timestamped acceptance/start link",
+            "owner": "synthetic-site-owner",
+            "status": "absent",
+            "target_effect": "none",
+            "unit": "acceptance_to_controller_start_link",
+            "verification_method": "content hash plus deterministic gate"
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "unlinked_human_overlay:reset_washout_and_carryover_control"
+            ],
+            "claim": "Known-answer evidence for reset_washout_and_carryover_control",
+            "missing_or_changed": "",
+            "owner": "synthetic-site-owner",
+            "status": "available",
+            "target_effect": "none",
+            "unit": "reset_washout_and_carryover_control",
+            "verification_method": "content hash plus deterministic gate"
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "unlinked_human_overlay:abort_retry_deviation_and_assignment_lifecycle"
+            ],
+            "claim": "Known-answer evidence for abort_retry_deviation_and_assignment_lifecycle",
+            "missing_or_changed": "",
+            "owner": "synthetic-site-owner",
+            "status": "available",
+            "target_effect": "none",
+            "unit": "abort_retry_deviation_and_assignment_lifecycle",
+            "verification_method": "content hash plus deterministic gate"
+          },
+          {
+            "access": "synthetic_public_fixture",
+            "artifact_ids": [
+              "unlinked_human_overlay:capacity_safety_privacy_and_access"
+            ],
+            "claim": "Known-answer evidence for capacity_safety_privacy_and_access",
+            "missing_or_changed": "",
+            "owner": "synthetic-site-owner",
+            "status": "available",
+            "target_effect": "none",
+            "unit": "capacity_safety_privacy_and_access",
+            "verification_method": "content hash plus deterministic gate"
+          }
+        ]
+      }
+    }
+  ],
+  "field_collection_authorized": false,
+  "hostile_control_count": 14,
+  "hostile_controls": [
+    {
+      "mutation": "outcome_field_inserted",
+      "observed": "not_evidenced",
+      "rejected": true
+    },
+    {
+      "mutation": "prepared_after_outcomes",
+      "observed": "not_evidenced",
+      "rejected": true
+    },
+    {
+      "mutation": "artifact_missing",
+      "observed": "validation_error:referenced artifact missing",
+      "rejected": true
+    },
+    {
+      "mutation": "artifact_bytes_changed",
+      "observed": "validation_error:artifact size mismatch",
+      "rejected": true
+    },
+    {
+      "mutation": "measurement_error_equals_tolerance",
+      "observed": "not_evidenced",
+      "rejected": true
+    },
+    {
+      "mutation": "tolerance_unexplained",
+      "observed": "not_evidenced",
+      "rejected": true
+    },
+    {
+      "mutation": "visible_marker_relabelled",
+      "observed": "target_altering_only",
+      "rejected": true
+    },
+    {
+      "mutation": "dynamics_change_relabelled",
+      "observed": "target_altering_only",
+      "rejected": true
+    },
+    {
+      "mutation": "capture_after_controller_start",
+      "observed": "not_evidenced",
+      "rejected": true
+    },
+    {
+      "mutation": "capture_to_start_delay_excessive",
+      "observed": "target_altering_only",
+      "rejected": true
+    },
+    {
+      "mutation": "human_override_undocumented",
+      "observed": "not_evidenced",
+      "rejected": true
+    },
+    {
+      "mutation": "assigned_slot_or_retry_omitted",
+      "observed": "not_evidenced",
+      "rejected": true
+    },
+    {
+      "mutation": "safety_privacy_access_unresolved_relabelled",
+      "observed": "not_evidenced",
+      "rejected": true
+    },
+    {
+      "mutation": "invalid_not_applicable",
+      "observed": "validation_error:not_applicable forbidden for numeric_reset_tolerance",
+      "rejected": true
+    }
+  ],
+  "hostile_controls_rejected": 14,
+  "interface_decision": "synthetic_gate_logic_pass",
+  "known_answer_decisions": {
+    "grid_scale_as_tolerance": "not_evidenced",
+    "target_preserving_complete": "eligible_for_outcome_hidden_rehearsal",
+    "unlinked_human_overlay": "not_evidenced",
+    "visible_fiducial_complete": "target_altering_only"
+  },
+  "next_action": "Prepare a public-data-only site request packet and outcome-hidden replay using this interface; in parallel define the explicit pair-conditioned operational estimand.",
+  "protocol_sha256": "3a2f623b24219c23f4f4eec8547028325a5feab5e7385ac5088295ba1bb6e784",
+  "real_site_qualified": false,
+  "schema": "h164-outcome-free-site-feasibility-interface-v1",
+  "unit_order": [
+    "target_population_and_decision",
+    "policy_observation_interface",
+    "policy_action_and_control_interface",
+    "scene_geometry_and_dynamics",
+    "context_generation_and_assignment_order",
+    "object_state_representation",
+    "sensor_identity_and_calibration",
+    "measurement_error_bound",
+    "numeric_reset_tolerance",
+    "tolerance_adequacy_rationale",
+    "preassignment_baseline_capture",
+    "preexecution_capture_and_comparison",
+    "acceptance_to_controller_start_link",
+    "reset_washout_and_carryover_control",
+    "abort_retry_deviation_and_assignment_lifecycle",
+    "capacity_safety_privacy_and_access"
+  ],
+  "upstream_hashes": {
+    "h160_packet": "d7039b57b0aec641efb4366a78f7ded6a692d8d8a2ec36d4219e0101c3c198b9",
+    "h162_source_audit": "b2f2a3e073f14045fcd82ade03f37d2ee679483e11a5614ea8065e64ac76c8c0",
+    "h163_independent_challenge": "361cc9fee2e4e9679947d4d88aee495d969a8ce6e8585cc86e7f839e240e7f61"
+  }
+}

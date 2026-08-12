@@ -1,0 +1,29 @@
+{
+  "context_law": "locked_before_pair_assignment",
+  "max_allowed_start_delay_ns": 5000000000,
+  "not_applicable_authorizations": [],
+  "policy_action_interface": "native_end_effector_delta",
+  "policy_observation_interface": "native_rgb_and_proprio",
+  "required_units": [
+    "target_population_and_decision",
+    "policy_observation_interface",
+    "policy_action_and_control_interface",
+    "scene_geometry_and_dynamics",
+    "context_generation_and_assignment_order",
+    "object_state_representation",
+    "sensor_identity_and_calibration",
+    "measurement_error_bound",
+    "numeric_reset_tolerance",
+    "tolerance_adequacy_rationale",
+    "preassignment_baseline_capture",
+    "preexecution_capture_and_comparison",
+    "acceptance_to_controller_start_link",
+    "reset_washout_and_carryover_control",
+    "abort_retry_deviation_and_assignment_lifecycle",
+    "capacity_safety_privacy_and_access"
+  ],
+  "scene_geometry": "native_site_scene",
+  "schema": "h170-target-spec-v1",
+  "target_id": "p2-pair-session-context-v1",
+  "target_version": "1"
+}

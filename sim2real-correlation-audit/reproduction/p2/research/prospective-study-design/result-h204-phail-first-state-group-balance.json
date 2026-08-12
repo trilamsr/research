@@ -1,0 +1,114 @@
+{
+  "analyses": {
+    "date_conditional_on_policy": {
+      "factor_degrees_of_freedom": 12,
+      "factor_group_count": 13,
+      "full_rank": 16,
+      "nuisance_rank": 4,
+      "observed_partial_r2": 0.01760399396985907,
+      "permutation_median": 0.020189470671414227,
+      "permutation_q025": 0.014707317092088766,
+      "permutation_q975": 0.026920755877649166,
+      "permutations": 49999,
+      "stratum_count": 4,
+      "upper_tail_p": 0.81064
+    },
+    "policy_conditional_on_date": {
+      "factor_degrees_of_freedom": 3,
+      "factor_group_count": 4,
+      "full_rank": 16,
+      "nuisance_rank": 13,
+      "observed_partial_r2": 0.003921502997359035,
+      "permutation_median": 0.005010778802969381,
+      "permutation_q025": 0.002540994375235571,
+      "permutation_q975": 0.00870302814833973,
+      "permutations": 49999,
+      "stratum_count": 13,
+      "upper_tail_p": 0.77674
+    },
+    "policy_unadjusted": {
+      "factor_degrees_of_freedom": 3,
+      "factor_group_count": 4,
+      "full_rank": 4,
+      "nuisance_rank": 1,
+      "observed_partial_r2": 0.004570967878816989,
+      "permutation_median": 0.004893436696803978,
+      "permutation_q025": 0.002491234388351943,
+      "permutation_q975": 0.008488775857695165,
+      "permutations": 49999,
+      "stratum_count": 1,
+      "upper_tail_p": 0.5866
+    }
+  },
+  "causal_or_assignment_effect_established": false,
+  "classification": "no_material_group_mean_association_at_fixed_resolution",
+  "cohort_sha256": "ad43fca1da065a1cb7fd84dfa9afc5691c72ebe12e7f165c68a0050e51e87ebe",
+  "decision_consequence": "The fixed audit can identify material policy-linked initial-arm imbalance or date-linked drift. A null supports only seven-joint mean balance at this resolution and cannot establish assignment, exchangeability, or full physical-context balance.",
+  "diagnostics": {
+    "policy_group_mean_spans": {
+      "group_count": 4,
+      "maximum_group_mean_span_rad": [
+        0.001497984657520733,
+        0.007047332896687181,
+        0.005708445884490579,
+        0.006876808760784424,
+        0.015508455990588737,
+        0.00629938964687344,
+        0.011578758826250308
+      ],
+      "maximum_group_mean_span_standardized": [
+        0.08648618452615245,
+        0.24412677269827493,
+        0.12359147880243927,
+        0.1488872770951674,
+        0.2686143372264561,
+        0.10910862925058165,
+        0.20054998575652108
+      ]
+    },
+    "utc_date_group_mean_spans": {
+      "group_count": 13,
+      "maximum_group_mean_span_rad": [
+        0.009235801203693782,
+        0.013884488229799754,
+        0.018545694983466334,
+        0.043179536344215626,
+        0.023622852773256365,
+        0.03537295389743079,
+        0.02233748847255196
+      ],
+      "maximum_group_mean_span_standardized": [
+        0.5332292311134474,
+        0.48097278102210467,
+        0.40152607466298673,
+        0.9348643849431044,
+        0.40915981222999376,
+        0.6126775336414165,
+        0.386896649479441
+      ]
+    }
+  },
+  "episode_count": 594,
+  "full_physical_balance_established": false,
+  "h202_projection_sha256": "44b7cd9729c691a610cc1fbbefffc5668d31030e013b92f2d4550f9869020370",
+  "h202_result_sha256": "4e60b6c6cbc0eabcaf4ae7761119b5af89bbaf6707e53cce8f0ec3c227a96043",
+  "h203_result_sha256": "5f30b36135feaf85fc32b2f3fe5f2ad2f5c5e8188ca777131b8154d3db111cda",
+  "later_state_or_outcome_opened": false,
+  "pcg64_seed": "298376351165028326237650565089210930629",
+  "protocol_sha256": "1791e3e23891595651a762331f32a7f29c53b9ad5ff912c0cac81b7350fd1090",
+  "rng_stream_order": [
+    "policy_conditional_on_date",
+    "date_conditional_on_policy",
+    "policy_unadjusted"
+  ],
+  "schema": "h204-phail-first-state-group-balance-v1",
+  "seed_text": "H204 PhAIL first-state group balance v1",
+  "synthetic_controls": {
+    "additive_both_detected": true,
+    "balanced_null_small": true,
+    "collinearity_rejected": true,
+    "date_shift_detected": true,
+    "deterministic_replay": true,
+    "policy_shift_detected": true
+  }
+}

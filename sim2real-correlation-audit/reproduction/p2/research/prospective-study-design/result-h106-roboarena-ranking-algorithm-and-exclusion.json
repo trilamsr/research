@@ -1,0 +1,86 @@
+{
+  "algorithm_name": "Bradley-Terry Davidson",
+  "algorithm_name_code_occurrence_count": 0,
+  "algorithm_name_jsx_ui_prose_occurrence_count": 2,
+  "algorithm_name_only_in_ui_prose": true,
+  "algorithm_name_string_occurrence_count": 0,
+  "client_side_exclusion_scope_established": true,
+  "complete": true,
+  "h088_h100_api_or_storage_contacted": false,
+  "h105_result_sha256": "7944708bc57242c5382aa58308b1fbbd5c6f90118d116ccdfe65bc3b68eaa534",
+  "identity": "robo-arena/robo-arena.github.io",
+  "immutable_revision": "2ce29abe69424385d0ebc8d3222698d82a3008db",
+  "implementation_identifier_hits": [],
+  "interpretation": "The pinned UI makes a source-owned Bradley-Terry Davidson method claim and the client-side transparency builder excludes two named policies. No estimator implementation or server-exclusion equivalence is present in the audited source.",
+  "nonselected_human_readable_source_candidates_outside_src": [],
+  "observed_utc": "2026-07-27T18:21:15.533107+00:00",
+  "official_policy_eval_threshold": 100,
+  "outcome_values_accessed": false,
+  "protected_p1_outcomes_accessed": false,
+  "protocol_sha256": "6b1d828b6f48f4a962c78876c7914332bb9000ec83aa84df9639d55c81f7860f",
+  "ranking_excluded_policies": [
+    "pi0",
+    "pi0_fast"
+  ],
+  "ranking_inclusion_function_call_count": 1,
+  "ranking_inclusion_function_call_lines": [
+    488
+  ],
+  "ranking_inclusion_function_declaration_lines": [
+    191
+  ],
+  "schema": "h106-roboarena-ranking-algorithm-and-exclusion-v1",
+  "sealed_p3_frame_accessed": false,
+  "server_side_exclusion_equivalence_established": false,
+  "server_statistic_implementation_present": false,
+  "source_executed_or_rendered": false,
+  "source_records": [
+    {
+      "content_sha256": "1eecadca77b601d9ce28e6940997209605938fc7b7fb8a91f8eb1220e35f3046",
+      "git_blob_sha": "7ce3973959f07583e8a26ac295053ae7aab5b74e",
+      "implementation_identifier_hits": [],
+      "path": "src/api.js",
+      "phrase_occurrence_count_in_strings": 0,
+      "phrase_occurrence_lines_in_code": [],
+      "phrase_occurrence_lines_in_jsx_ui_prose": [],
+      "phrase_occurrence_lines_in_source": []
+    },
+    {
+      "content_sha256": "781c46692c8f2109c4c582de2634065d1d718ac0b10ba8a432a5fd48a6586029",
+      "git_blob_sha": "c15110c938238fd3c548caa292b8103b16ae3400",
+      "implementation_identifier_hits": [],
+      "path": "src/pages/Leaderboard.jsx",
+      "phrase_occurrence_count_in_strings": 0,
+      "phrase_occurrence_lines_in_code": [],
+      "phrase_occurrence_lines_in_jsx_ui_prose": [],
+      "phrase_occurrence_lines_in_source": []
+    },
+    {
+      "content_sha256": "44b4b6e80fe9ce33774a708827e3d8cb9d64e53637407032eee51d532b1cf58f",
+      "git_blob_sha": "5d6dca49db8e00c6901ddda12e23518167c4b445",
+      "implementation_identifier_hits": [],
+      "path": "src/components/TransparencyDashboard.jsx",
+      "phrase_occurrence_count_in_strings": 0,
+      "phrase_occurrence_lines_in_code": [],
+      "phrase_occurrence_lines_in_jsx_ui_prose": [
+        167,
+        180
+      ],
+      "phrase_occurrence_lines_in_source": [
+        167,
+        180
+      ]
+    },
+    {
+      "content_sha256": "a75fe992c0ff083db4de615565c9ee816b521e46d66385e7f809225f5ac5b172",
+      "git_blob_sha": "3f1048b55533364dc83504dd25edb3e61ded2388",
+      "implementation_identifier_hits": [],
+      "path": "src/utils/transparencyStats.js",
+      "phrase_occurrence_count_in_strings": 0,
+      "phrase_occurrence_lines_in_code": [],
+      "phrase_occurrence_lines_in_jsx_ui_prose": [],
+      "phrase_occurrence_lines_in_source": []
+    }
+  ],
+  "source_text_retained": false
+}

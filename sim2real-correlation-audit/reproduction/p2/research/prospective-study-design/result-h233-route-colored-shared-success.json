@@ -1,0 +1,89 @@
+{
+  "classification": "candidate_dependent_routing_can_leave_target_unidentified",
+  "dual_lp_recorded_in_protocol": true,
+  "graph_rank_census": {
+    "deterministic_sampled_graphs_k7_to_k8": 4097,
+    "exhaustive_graphs_k3_to_k6": 33864
+  },
+  "known_answer": {
+    "compatible_b_vertices": [
+      [
+        "1/2",
+        "0",
+        "0"
+      ],
+      [
+        "1/2",
+        "0",
+        "1"
+      ],
+      [
+        "1",
+        "1/2",
+        "0"
+      ],
+      [
+        "1",
+        "1/2",
+        "1"
+      ]
+    ],
+    "dual_lp_minimax_lottery": [
+      0.6666666666666666,
+      0.0,
+      0.3333333333333333
+    ],
+    "dual_lp_minimax_regret": 0.08333333333333334,
+    "exact_minimax_lottery": [
+      "2/3",
+      "0",
+      "1/3"
+    ],
+    "exact_minimax_regret": "1/12",
+    "exact_regret_formula": "max(1-p1, p1+2*p2, 2-2*p1-p2, p2)/8",
+    "identified_differences": {
+      "A": [
+        "0",
+        "0"
+      ],
+      "B": [
+        "1/2"
+      ]
+    },
+    "k": 3,
+    "numerical_minimax_lottery": [
+      0.6666666666666666,
+      0.0,
+      0.3333333333333333
+    ],
+    "numerical_minimax_regret": 0.08333333333333334,
+    "opposite_unique_winners": [
+      1,
+      3
+    ],
+    "routes": {
+      "A": [
+        "1-3",
+        "2-3"
+      ],
+      "B": [
+        "1-2"
+      ]
+    },
+    "target_weights": [
+      "1/2",
+      "1/2"
+    ],
+    "uniqueness_proof": "max(p1+2*p2,2-2*p1-p2) is at least (2+p2)/3; equality requires p1+p2=2/3, and the bound is uniquely minimized at p2=0,p1=2/3"
+  },
+  "outcome_status": "review_triggered_outcome_exposed_exploratory",
+  "protocol_sha256": "37819b39c931330b7fc67e21523e5b669a9b9fdefb39e9b2fe07a16433a29686",
+  "reference_distribution_cancels_from_regret": true,
+  "schema": "h233-route-colored-shared-success-v1",
+  "status": "pass",
+  "theorem_boundary": {
+    "connected_positive_weight_route_graphs": "identify every within-context policy difference",
+    "disconnected_route_graphs": "retain component offsets when compatible bounds leave slack",
+    "exact_test": "all compatible target pair-difference widths equal zero"
+  }
+}

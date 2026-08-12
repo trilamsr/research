@@ -1,0 +1,470 @@
+{
+  "disposition": "infrastructure_configuration_not_session_identity",
+  "episode_count": 594,
+  "field_results": [
+    {
+      "by_policy": {
+        "act": {
+          "string:0.0.0.0": 151
+        },
+        "groot": {
+          "string:0.0.0.0": 164
+        },
+        "openpi": {
+          "string:0.0.0.0": 163
+        },
+        "smolvla": {
+          "string:0.0.0.0": 116
+        }
+      },
+      "by_utc_date": {
+        "2026-03-05": {
+          "string:0.0.0.0": 24
+        },
+        "2026-03-06": {
+          "string:0.0.0.0": 26
+        },
+        "2026-03-10": {
+          "string:0.0.0.0": 35
+        },
+        "2026-03-13": {
+          "string:0.0.0.0": 33
+        },
+        "2026-03-17": {
+          "string:0.0.0.0": 23
+        },
+        "2026-03-19": {
+          "string:0.0.0.0": 39
+        },
+        "2026-03-20": {
+          "string:0.0.0.0": 70
+        },
+        "2026-03-24": {
+          "string:0.0.0.0": 71
+        },
+        "2026-03-25": {
+          "string:0.0.0.0": 82
+        },
+        "2026-03-27": {
+          "string:0.0.0.0": 47
+        },
+        "2026-03-29": {
+          "string:0.0.0.0": 74
+        },
+        "2026-04-03": {
+          "string:0.0.0.0": 52
+        },
+        "2026-04-04": {
+          "string:0.0.0.0": 18
+        }
+      },
+      "chronological_runs": {
+        "string:0.0.0.0": {
+          "maximum_run_length": 594,
+          "minimum_run_length": 594,
+          "run_count": 1,
+          "run_lengths": [
+            594
+          ]
+        }
+      },
+      "episode_set_sha256_by_value": {
+        "string:0.0.0.0": "7b0bccca9b270a516e6f9ebe02dd5fb3ca92dbb34e7104fbacdb28d847fe4b4c"
+      },
+      "field": "inference.policy.server.host",
+      "literal_value_counts": {
+        "string:0.0.0.0": 594
+      },
+      "missing_count": 0,
+      "nonmissing_count": 594,
+      "qualification_conditions": {
+        "at_least_two_nonmissing_values": false,
+        "not_deterministic_function_of_policy": false,
+        "populated_for_every_episode": true,
+        "source_defines_execution_or_physical_instance_identity": false,
+        "source_supports_cluster_equality_semantics": false
+      },
+      "qualifies_as_operational_cluster": false
+    },
+    {
+      "by_policy": {
+        "act": {
+          "string:cuda": 151
+        },
+        "groot": {
+          "<missing>": 164
+        },
+        "openpi": {
+          "<missing>": 163
+        },
+        "smolvla": {
+          "string:cuda": 116
+        }
+      },
+      "by_utc_date": {
+        "2026-03-05": {
+          "<missing>": 14,
+          "string:cuda": 10
+        },
+        "2026-03-06": {
+          "<missing>": 12,
+          "string:cuda": 14
+        },
+        "2026-03-10": {
+          "<missing>": 17,
+          "string:cuda": 18
+        },
+        "2026-03-13": {
+          "<missing>": 22,
+          "string:cuda": 11
+        },
+        "2026-03-17": {
+          "<missing>": 4,
+          "string:cuda": 19
+        },
+        "2026-03-19": {
+          "<missing>": 4,
+          "string:cuda": 35
+        },
+        "2026-03-20": {
+          "<missing>": 26,
+          "string:cuda": 44
+        },
+        "2026-03-24": {
+          "<missing>": 41,
+          "string:cuda": 30
+        },
+        "2026-03-25": {
+          "<missing>": 46,
+          "string:cuda": 36
+        },
+        "2026-03-27": {
+          "<missing>": 30,
+          "string:cuda": 17
+        },
+        "2026-03-29": {
+          "<missing>": 41,
+          "string:cuda": 33
+        },
+        "2026-04-03": {
+          "<missing>": 52
+        },
+        "2026-04-04": {
+          "<missing>": 18
+        }
+      },
+      "chronological_runs": {
+        "<missing>": {
+          "maximum_run_length": 70,
+          "minimum_run_length": 1,
+          "run_count": 120,
+          "run_lengths": [
+            4,
+            1,
+            1,
+            2,
+            2,
+            6,
+            2,
+            1,
+            1,
+            5,
+            1,
+            2,
+            4,
+            3,
+            3,
+            3,
+            1,
+            1,
+            1,
+            2,
+            6,
+            5,
+            2,
+            1,
+            1,
+            4,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            1,
+            2,
+            1,
+            2,
+            1,
+            4,
+            2,
+            1,
+            1,
+            2,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            1,
+            1,
+            1,
+            3,
+            3,
+            2,
+            1,
+            3,
+            2,
+            4,
+            1,
+            5,
+            4,
+            2,
+            1,
+            3,
+            1,
+            4,
+            1,
+            2,
+            1,
+            1,
+            2,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            5,
+            1,
+            2,
+            1,
+            3,
+            1,
+            3,
+            3,
+            1,
+            6,
+            7,
+            6,
+            2,
+            1,
+            2,
+            1,
+            7,
+            1,
+            2,
+            4,
+            4,
+            4,
+            7,
+            2,
+            3,
+            2,
+            1,
+            1,
+            5,
+            1,
+            1,
+            2,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            1,
+            2,
+            70
+          ]
+        },
+        "string:cuda": {
+          "maximum_run_length": 29,
+          "minimum_run_length": 1,
+          "run_count": 119,
+          "run_lengths": [
+            2,
+            2,
+            4,
+            1,
+            1,
+            3,
+            1,
+            3,
+            1,
+            5,
+            3,
+            5,
+            2,
+            1,
+            2,
+            2,
+            4,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            2,
+            1,
+            1,
+            3,
+            3,
+            8,
+            29,
+            3,
+            6,
+            5,
+            2,
+            5,
+            2,
+            1,
+            1,
+            5,
+            2,
+            1,
+            3,
+            5,
+            2,
+            1,
+            8,
+            1,
+            1,
+            1,
+            1,
+            1,
+            4,
+            1,
+            2,
+            2,
+            1,
+            6,
+            2,
+            1,
+            2,
+            2,
+            1,
+            1,
+            1,
+            1,
+            1,
+            4,
+            1,
+            1,
+            1,
+            2,
+            2,
+            1,
+            1,
+            2,
+            1,
+            1,
+            1,
+            1,
+            2,
+            2,
+            4,
+            1,
+            3,
+            1,
+            1,
+            1,
+            2,
+            3,
+            3,
+            2,
+            1,
+            2,
+            1,
+            1,
+            1,
+            2,
+            1,
+            1,
+            3,
+            1,
+            1,
+            3,
+            4,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            2,
+            1,
+            2
+          ]
+        }
+      },
+      "episode_set_sha256_by_value": {
+        "<missing>": "648d7f34135c002d198146208ae9eaad071c5b1219921a4e1ec16ccd029ea788",
+        "string:cuda": "f6891312607762167b7f743519d8fb8b0a0ab2ac2d5178f20fac78840cd5d64a"
+      },
+      "field": "inference.policy.server.device",
+      "literal_value_counts": {
+        "<missing>": 327,
+        "string:cuda": 267
+      },
+      "missing_count": 327,
+      "nonmissing_count": 267,
+      "qualification_conditions": {
+        "at_least_two_nonmissing_values": false,
+        "not_deterministic_function_of_policy": false,
+        "populated_for_every_episode": false,
+        "source_defines_execution_or_physical_instance_identity": false,
+        "source_supports_cluster_equality_semantics": false
+      },
+      "qualifies_as_operational_cluster": false
+    }
+  ],
+  "fixed_fields": [
+    "inference.policy.server.host",
+    "inference.policy.server.device"
+  ],
+  "h187_input_sha256": "ad43fca1da065a1cb7fd84dfa9afc5691c72ebe12e7f165c68a0050e51e87ebe",
+  "h193_result_sha256": "3c9eec888c77e425349ffb9997f0eb249c99b73eb9b24bf94278ee8a2e25f429",
+  "performance_field_opened": false,
+  "protocol_sha256": "b6a85bc370a0e80c66217838b39260008e1741661013c32b71af8fba84df5e28",
+  "result_exposed": true,
+  "schema": "h194-phail-server-field-semantics-v1",
+  "scope": "exhaustive result-exposed census of two fixed nonperformance server configuration fields; no session or exchangeability inference without the fixed qualification rule",
+  "source_commit": "e406176bc526babb06844a48e3627a5c0409eb74",
+  "source_records": [
+    {
+      "lines": "97-99",
+      "path": "positronic/policy/remote.py",
+      "sha256": "787bff2df4b06a26441106ddc78ab73951d0bdd02fb34601f994b531d3809199",
+      "supports": "server metadata is flattened into recorded policy metadata"
+    },
+    {
+      "lines": "116-118, 213",
+      "path": "positronic/offboard/vendor_server.py",
+      "sha256": "82d1d136f7e263b9e7b96f124ff5743ea2bafaacc1f79ae5c9d88a99055d0894",
+      "supports": "host configures the inference server bind address"
+    },
+    {
+      "lines": "32-45",
+      "path": "positronic/vendors/lerobot/server.py",
+      "sha256": "6fe568b46b314f5313b547ef33c93b62631d190ae225275b58a3b4464a70e6a9",
+      "supports": "host and selected device are copied into server metadata"
+    },
+    {
+      "lines": "10-23",
+      "path": "positronic/vendors/lerobot/policy.py",
+      "sha256": "c0e3b02de5f2428d1bdb0256a6d030f51c4305b6241abe12175e3ca108ab6039",
+      "supports": "device is a generic accelerator backend selected by availability"
+    }
+  ]
+}

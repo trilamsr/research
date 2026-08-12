@@ -1,0 +1,761 @@
+{
+  "meta": {
+    "script": "research/decision-validity/evaluate_real2sim_decisions.py",
+    "prototype": true,
+    "canonical_for_paper": false,
+    "superseded_by": "research/claim-evidence-synthesis/result-paper-evidence.json#checkpoint_selection",
+    "representative_tie_warning": "Scalar representative fields select the first stable-order maximizer; use the superseding tie-complete result for scientific reliance.",
+    "confirmatory": false,
+    "preregistered": false,
+    "data_source": "real2sim-eval arXiv:2511.04665v2 Fig.3, vector-extracted (NOT per-trial ground truth)",
+    "scope": "real2sim-eval only",
+    "independent_unit": "policy (n=4 per task)",
+    "pcs_resample": "clustered at policy unit (checkpoints resampled within policy, not pooled)",
+    "seed": 20260722,
+    "n_boot": 20000,
+    "selection_rules": [
+      "best_real",
+      "best_sim",
+      "last",
+      "mean"
+    ],
+    "tie_tolerance": 1e-09,
+    "checkpoint_csv": "research/corpus-reporting-audit/sources/source-real2sim-eval-fig3-checkpoints.csv",
+    "reference_csv": "research/real2sim-noise-floor/input-fig3-digitized-reference.csv",
+    "caveat": "Checkpoints are pseudo-replicated (unknown #seeds). n=4 per task -> low power, ties likely. Do not overclaim."
+  },
+  "tasks": {
+    "sloth": {
+      "n_policies": 4,
+      "checkpoints_per_policy": {
+        "act": 5,
+        "dp": 5,
+        "pi0": 3,
+        "svla": 4
+      },
+      "by_rule": {
+        "best_real": {
+          "top1_regret": {
+            "policies": [
+              "act",
+              "dp",
+              "pi0",
+              "svla"
+            ],
+            "real_pct": {
+              "act": 85.0,
+              "dp": 70.0,
+              "pi0": 80.0,
+              "svla": 35.0
+            },
+            "sim_pct": {
+              "act": 70.0,
+              "dp": 75.0,
+              "pi0": 75.0,
+              "svla": 15.0
+            },
+            "real_best_policy": "act",
+            "real_best_winners": [
+              "act"
+            ],
+            "real_tie": false,
+            "sim_pick_policy": "dp",
+            "sim_pick_winners": [
+              "dp",
+              "pi0"
+            ],
+            "sim_tie": true,
+            "agree": false,
+            "real_best_real_success": 85.0,
+            "sim_pick_real_success": 70.0,
+            "regret": 15.0
+          },
+          "correlation": {
+            "n_policies": 4,
+            "pearson_r": 0.941,
+            "pearson_p": 0.059,
+            "spearman_rho": 0.3162,
+            "spearman_p": 0.6838,
+            "rank_ties_present": true
+          },
+          "pcs": {
+            "pcs": 0.3617,
+            "n_boot": 20000,
+            "fixed_real_best": [
+              "act"
+            ],
+            "fixed_real_tie": false,
+            "sim_pick_distribution": {
+              "act": 0.3617,
+              "dp": 0.316,
+              "pi0": 0.3223,
+              "svla": 0.0001
+            }
+          }
+        },
+        "best_sim": {
+          "top1_regret": {
+            "policies": [
+              "act",
+              "dp",
+              "pi0",
+              "svla"
+            ],
+            "real_pct": {
+              "act": 65.0,
+              "dp": 70.0,
+              "pi0": 80.0,
+              "svla": 35.0
+            },
+            "sim_pct": {
+              "act": 70.0,
+              "dp": 75.0,
+              "pi0": 75.0,
+              "svla": 30.0
+            },
+            "real_best_policy": "pi0",
+            "real_best_winners": [
+              "pi0"
+            ],
+            "real_tie": false,
+            "sim_pick_policy": "dp",
+            "sim_pick_winners": [
+              "dp",
+              "pi0"
+            ],
+            "sim_tie": true,
+            "agree": false,
+            "real_best_real_success": 80.0,
+            "sim_pick_real_success": 70.0,
+            "regret": 10.0
+          },
+          "correlation": {
+            "n_policies": 4,
+            "pearson_r": 0.9675,
+            "pearson_p": 0.0325,
+            "spearman_rho": 0.9487,
+            "spearman_p": 0.0513,
+            "rank_ties_present": true
+          },
+          "pcs": {
+            "pcs": 0.2693,
+            "n_boot": 20000,
+            "fixed_real_best": [
+              "pi0"
+            ],
+            "fixed_real_tie": false,
+            "sim_pick_distribution": {
+              "act": 0.4949,
+              "dp": 0.2358,
+              "pi0": 0.2693,
+              "svla": 0.0
+            }
+          }
+        },
+        "last": {
+          "top1_regret": {
+            "policies": [
+              "act",
+              "dp",
+              "pi0",
+              "svla"
+            ],
+            "real_pct": {
+              "act": 85.0,
+              "dp": 70.0,
+              "pi0": 80.0,
+              "svla": 35.0
+            },
+            "sim_pct": {
+              "act": 70.0,
+              "dp": 75.0,
+              "pi0": 65.0,
+              "svla": 30.0
+            },
+            "real_best_policy": "act",
+            "real_best_winners": [
+              "act"
+            ],
+            "real_tie": false,
+            "sim_pick_policy": "dp",
+            "sim_pick_winners": [
+              "dp"
+            ],
+            "sim_tie": false,
+            "agree": false,
+            "real_best_real_success": 85.0,
+            "sim_pick_real_success": 70.0,
+            "regret": 15.0
+          },
+          "correlation": {
+            "n_policies": 4,
+            "pearson_r": 0.9054,
+            "pearson_p": 0.0946,
+            "spearman_rho": 0.4,
+            "spearman_p": 0.6,
+            "rank_ties_present": false
+          },
+          "pcs": {
+            "pcs": 0.4809,
+            "n_boot": 20000,
+            "fixed_real_best": [
+              "act"
+            ],
+            "fixed_real_tie": false,
+            "sim_pick_distribution": {
+              "act": 0.4809,
+              "dp": 0.1328,
+              "pi0": 0.3858,
+              "svla": 0.0005
+            }
+          }
+        },
+        "mean": {
+          "top1_regret": {
+            "policies": [
+              "act",
+              "dp",
+              "pi0",
+              "svla"
+            ],
+            "real_pct": {
+              "act": 68.0,
+              "dp": 39.0,
+              "pi0": 70.0,
+              "svla": 26.25
+            },
+            "sim_pct": {
+              "act": 64.0,
+              "dp": 40.0,
+              "pi0": 63.3333,
+              "svla": 18.75
+            },
+            "real_best_policy": "pi0",
+            "real_best_winners": [
+              "pi0"
+            ],
+            "real_tie": false,
+            "sim_pick_policy": "act",
+            "sim_pick_winners": [
+              "act"
+            ],
+            "sim_tie": false,
+            "agree": false,
+            "real_best_real_success": 70.0,
+            "sim_pick_real_success": 68.0,
+            "regret": 2.0
+          },
+          "correlation": {
+            "n_policies": 4,
+            "pearson_r": 0.9843,
+            "pearson_p": 0.0157,
+            "spearman_rho": 0.8,
+            "spearman_p": 0.2,
+            "rank_ties_present": false
+          },
+          "pcs": {
+            "pcs": 0.4651,
+            "n_boot": 20000,
+            "fixed_real_best": [
+              "pi0"
+            ],
+            "fixed_real_tie": false,
+            "sim_pick_distribution": {
+              "act": 0.5252,
+              "dp": 0.0097,
+              "pi0": 0.4651,
+              "svla": 0.0
+            }
+          }
+        }
+      }
+    },
+    "rope": {
+      "n_policies": 4,
+      "checkpoints_per_policy": {
+        "act": 6,
+        "dp": 6,
+        "pi0": 3,
+        "svla": 5
+      },
+      "by_rule": {
+        "best_real": {
+          "top1_regret": {
+            "policies": [
+              "act",
+              "dp",
+              "pi0",
+              "svla"
+            ],
+            "real_pct": {
+              "act": 96.2963,
+              "dp": 85.1852,
+              "pi0": 85.1852,
+              "svla": 88.8889
+            },
+            "sim_pct": {
+              "act": 74.0741,
+              "dp": 74.0741,
+              "pi0": 96.2963,
+              "svla": 55.5556
+            },
+            "real_best_policy": "act",
+            "real_best_winners": [
+              "act"
+            ],
+            "real_tie": false,
+            "sim_pick_policy": "pi0",
+            "sim_pick_winners": [
+              "pi0"
+            ],
+            "sim_tie": false,
+            "agree": false,
+            "real_best_real_success": 96.2963,
+            "sim_pick_real_success": 85.1852,
+            "regret": 11.1111
+          },
+          "correlation": {
+            "n_policies": 4,
+            "pearson_r": -0.3143,
+            "pearson_p": 0.6857,
+            "spearman_rho": -0.5,
+            "spearman_p": 0.5,
+            "rank_ties_present": true
+          },
+          "pcs": {
+            "pcs": 0.0858,
+            "n_boot": 20000,
+            "fixed_real_best": [
+              "act"
+            ],
+            "fixed_real_tie": false,
+            "sim_pick_distribution": {
+              "act": 0.0858,
+              "dp": 0.3316,
+              "pi0": 0.5719,
+              "svla": 0.0108
+            }
+          }
+        },
+        "best_sim": {
+          "top1_regret": {
+            "policies": [
+              "act",
+              "dp",
+              "pi0",
+              "svla"
+            ],
+            "real_pct": {
+              "act": 96.2963,
+              "dp": 81.4815,
+              "pi0": 85.1852,
+              "svla": 88.8889
+            },
+            "sim_pct": {
+              "act": 81.4815,
+              "dp": 96.2963,
+              "pi0": 96.2963,
+              "svla": 74.0741
+            },
+            "real_best_policy": "act",
+            "real_best_winners": [
+              "act"
+            ],
+            "real_tie": false,
+            "sim_pick_policy": "dp",
+            "sim_pick_winners": [
+              "dp",
+              "pi0"
+            ],
+            "sim_tie": true,
+            "agree": false,
+            "real_best_real_success": 96.2963,
+            "sim_pick_real_success": 81.4815,
+            "regret": 14.8148
+          },
+          "correlation": {
+            "n_policies": 4,
+            "pearson_r": -0.6831,
+            "pearson_p": 0.3169,
+            "spearman_rho": -0.7379,
+            "spearman_p": 0.2621,
+            "rank_ties_present": true
+          },
+          "pcs": {
+            "pcs": 0.0602,
+            "n_boot": 20000,
+            "fixed_real_best": [
+              "act"
+            ],
+            "fixed_real_tie": false,
+            "sim_pick_distribution": {
+              "act": 0.0602,
+              "dp": 0.5112,
+              "pi0": 0.4221,
+              "svla": 0.0064
+            }
+          }
+        },
+        "last": {
+          "top1_regret": {
+            "policies": [
+              "act",
+              "dp",
+              "pi0",
+              "svla"
+            ],
+            "real_pct": {
+              "act": 96.2963,
+              "dp": 85.1852,
+              "pi0": 85.1852,
+              "svla": 88.8889
+            },
+            "sim_pct": {
+              "act": 81.4815,
+              "dp": 74.0741,
+              "pi0": 96.2963,
+              "svla": 74.0741
+            },
+            "real_best_policy": "act",
+            "real_best_winners": [
+              "act"
+            ],
+            "real_tie": false,
+            "sim_pick_policy": "pi0",
+            "sim_pick_winners": [
+              "pi0"
+            ],
+            "sim_tie": false,
+            "agree": false,
+            "real_best_real_success": 96.2963,
+            "sim_pick_real_success": 85.1852,
+            "regret": 11.1111
+          },
+          "correlation": {
+            "n_policies": 4,
+            "pearson_r": -0.1667,
+            "pearson_p": 0.8333,
+            "spearman_rho": -0.0556,
+            "spearman_p": 0.9444,
+            "rank_ties_present": true
+          },
+          "pcs": {
+            "pcs": 0.1548,
+            "n_boot": 20000,
+            "fixed_real_best": [
+              "act"
+            ],
+            "fixed_real_tie": false,
+            "sim_pick_distribution": {
+              "act": 0.1548,
+              "dp": 0.2153,
+              "pi0": 0.557,
+              "svla": 0.0728
+            }
+          }
+        },
+        "mean": {
+          "top1_regret": {
+            "policies": [
+              "act",
+              "dp",
+              "pi0",
+              "svla"
+            ],
+            "real_pct": {
+              "act": 67.9012,
+              "dp": 38.8889,
+              "pi0": 71.6049,
+              "svla": 66.6667
+            },
+            "sim_pct": {
+              "act": 56.1728,
+              "dp": 42.5926,
+              "pi0": 79.0123,
+              "svla": 48.8889
+            },
+            "real_best_policy": "pi0",
+            "real_best_winners": [
+              "pi0"
+            ],
+            "real_tie": false,
+            "sim_pick_policy": "pi0",
+            "sim_pick_winners": [
+              "pi0"
+            ],
+            "sim_tie": false,
+            "agree": true,
+            "real_best_real_success": 71.6049,
+            "sim_pick_real_success": 71.6049,
+            "regret": 0.0
+          },
+          "correlation": {
+            "n_policies": 4,
+            "pearson_r": 0.6969,
+            "pearson_p": 0.3031,
+            "spearman_rho": 1.0,
+            "spearman_p": 0.0,
+            "rank_ties_present": false
+          },
+          "pcs": {
+            "pcs": 0.8967,
+            "n_boot": 20000,
+            "fixed_real_best": [
+              "pi0"
+            ],
+            "fixed_real_tie": false,
+            "sim_pick_distribution": {
+              "act": 0.0556,
+              "dp": 0.0249,
+              "pi0": 0.8967,
+              "svla": 0.0227
+            }
+          }
+        }
+      }
+    },
+    "T": {
+      "n_policies": 4,
+      "checkpoints_per_policy": {
+        "act": 4,
+        "dp": 4,
+        "pi0": 3,
+        "svla": 4
+      },
+      "by_rule": {
+        "best_real": {
+          "top1_regret": {
+            "policies": [
+              "act",
+              "dp",
+              "pi0",
+              "svla"
+            ],
+            "real_pct": {
+              "act": 43.75,
+              "dp": 93.75,
+              "pi0": 81.25,
+              "svla": 56.25
+            },
+            "sim_pct": {
+              "act": 43.75,
+              "dp": 87.5,
+              "pi0": 93.75,
+              "svla": 31.25
+            },
+            "real_best_policy": "dp",
+            "real_best_winners": [
+              "dp"
+            ],
+            "real_tie": false,
+            "sim_pick_policy": "pi0",
+            "sim_pick_winners": [
+              "pi0"
+            ],
+            "sim_tie": false,
+            "agree": false,
+            "real_best_real_success": 93.75,
+            "sim_pick_real_success": 81.25,
+            "regret": 12.5
+          },
+          "correlation": {
+            "n_policies": 4,
+            "pearson_r": 0.8778,
+            "pearson_p": 0.1222,
+            "spearman_rho": 0.6,
+            "spearman_p": 0.4,
+            "rank_ties_present": false
+          },
+          "pcs": {
+            "pcs": 0.4758,
+            "n_boot": 20000,
+            "fixed_real_best": [
+              "dp"
+            ],
+            "fixed_real_tie": false,
+            "sim_pick_distribution": {
+              "act": 0.0011,
+              "dp": 0.4758,
+              "pi0": 0.5231,
+              "svla": 0.0
+            }
+          }
+        },
+        "best_sim": {
+          "top1_regret": {
+            "policies": [
+              "act",
+              "dp",
+              "pi0",
+              "svla"
+            ],
+            "real_pct": {
+              "act": 43.75,
+              "dp": 93.75,
+              "pi0": 81.25,
+              "svla": 43.75
+            },
+            "sim_pct": {
+              "act": 43.75,
+              "dp": 87.5,
+              "pi0": 93.75,
+              "svla": 31.25
+            },
+            "real_best_policy": "dp",
+            "real_best_winners": [
+              "dp"
+            ],
+            "real_tie": false,
+            "sim_pick_policy": "pi0",
+            "sim_pick_winners": [
+              "pi0"
+            ],
+            "sim_tie": false,
+            "agree": false,
+            "real_best_real_success": 93.75,
+            "sim_pick_real_success": 81.25,
+            "regret": 12.5
+          },
+          "correlation": {
+            "n_policies": 4,
+            "pearson_r": 0.9475,
+            "pearson_p": 0.0525,
+            "spearman_rho": 0.7379,
+            "spearman_p": 0.2621,
+            "rank_ties_present": true
+          },
+          "pcs": {
+            "pcs": 0.503,
+            "n_boot": 20000,
+            "fixed_real_best": [
+              "dp"
+            ],
+            "fixed_real_tie": false,
+            "sim_pick_distribution": {
+              "act": 0.0006,
+              "dp": 0.503,
+              "pi0": 0.4964,
+              "svla": 0.0
+            }
+          }
+        },
+        "last": {
+          "top1_regret": {
+            "policies": [
+              "act",
+              "dp",
+              "pi0",
+              "svla"
+            ],
+            "real_pct": {
+              "act": 43.75,
+              "dp": 93.75,
+              "pi0": 81.25,
+              "svla": 56.25
+            },
+            "sim_pct": {
+              "act": 25.0,
+              "dp": 87.5,
+              "pi0": 93.75,
+              "svla": 31.25
+            },
+            "real_best_policy": "dp",
+            "real_best_winners": [
+              "dp"
+            ],
+            "real_tie": false,
+            "sim_pick_policy": "pi0",
+            "sim_pick_winners": [
+              "pi0"
+            ],
+            "sim_tie": false,
+            "agree": false,
+            "real_best_real_success": 93.75,
+            "sim_pick_real_success": 81.25,
+            "regret": 12.5
+          },
+          "correlation": {
+            "n_policies": 4,
+            "pearson_r": 0.944,
+            "pearson_p": 0.056,
+            "spearman_rho": 0.8,
+            "spearman_p": 0.2,
+            "rank_ties_present": false
+          },
+          "pcs": {
+            "pcs": 0.453,
+            "n_boot": 20000,
+            "fixed_real_best": [
+              "dp"
+            ],
+            "fixed_real_tie": false,
+            "sim_pick_distribution": {
+              "act": 0.0145,
+              "dp": 0.453,
+              "pi0": 0.5309,
+              "svla": 0.0016
+            }
+          }
+        },
+        "mean": {
+          "top1_regret": {
+            "policies": [
+              "act",
+              "dp",
+              "pi0",
+              "svla"
+            ],
+            "real_pct": {
+              "act": 35.9375,
+              "dp": 70.3125,
+              "pi0": 64.5833,
+              "svla": 32.8125
+            },
+            "sim_pct": {
+              "act": 32.8125,
+              "dp": 67.1875,
+              "pi0": 75.0,
+              "svla": 20.3125
+            },
+            "real_best_policy": "dp",
+            "real_best_winners": [
+              "dp"
+            ],
+            "real_tie": false,
+            "sim_pick_policy": "pi0",
+            "sim_pick_winners": [
+              "pi0"
+            ],
+            "sim_tie": false,
+            "agree": false,
+            "real_best_real_success": 70.3125,
+            "sim_pick_real_success": 64.5833,
+            "regret": 5.7292
+          },
+          "correlation": {
+            "n_policies": 4,
+            "pearson_r": 0.9625,
+            "pearson_p": 0.0375,
+            "spearman_rho": 0.8,
+            "spearman_p": 0.2,
+            "rank_ties_present": false
+          },
+          "pcs": {
+            "pcs": 0.3263,
+            "n_boot": 20000,
+            "fixed_real_best": [
+              "dp"
+            ],
+            "fixed_real_tie": false,
+            "sim_pick_distribution": {
+              "act": 0.0,
+              "dp": 0.3263,
+              "pi0": 0.6737,
+              "svla": 0.0
+            }
+          }
+        }
+      }
+    }
+  }
+}

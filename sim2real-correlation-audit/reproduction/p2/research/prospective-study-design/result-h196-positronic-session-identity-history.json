@@ -1,0 +1,1984 @@
+{
+  "classification": "collision_resistant_identifier_recorded",
+  "comparison_endpoint_prospective": true,
+  "dataset_content_opened": false,
+  "decision_consequence": "Retain H195 as the historical v0.2.1 finding, but narrow P2's repair request: pinned current public code already records a UUID episode identity and the configured server-recording locator. The remaining request is to retain these fields in released evaluation artifacts and separately record physical reset/carryover and operator-session identity.",
+  "expansion_history_result_exposed": true,
+  "expansion_paths": [
+    "positronic/policy/recording.py",
+    "positronic/offboard/server.py"
+  ],
+  "expansions": [
+    {
+      "history_status": "result_exposed",
+      "origin_path": "positronic/policy/remote.py",
+      "origin_symbol": "Recorder",
+      "reason": "resolve current recording-locator creation and session metadata exposure",
+      "target_path": "positronic/policy/recording.py",
+      "target_symbol": "Recorder"
+    },
+    {
+      "history_status": "result_exposed",
+      "origin_path": "positronic/vendors/lerobot_0_3_3/server.py; positronic/vendors/lerobot/server.py; positronic/vendors/gr00t/server.py; positronic/vendors/openpi/server.py",
+      "origin_symbol": "serve",
+      "reason": "resolve replacement server ready-metadata and recording-wrapper path",
+      "target_path": "positronic/offboard/server.py",
+      "target_symbol": "serve / PolicyServer"
+    }
+  ],
+  "fixed_paths": [
+    "positronic/policy/remote.py",
+    "positronic/offboard/client.py",
+    "positronic/offboard/vendor_server.py",
+    "positronic/data_collection.py",
+    "positronic/dataset/episode.py",
+    "positronic/dataset/ds_writer_agent.py",
+    "positronic/policy/harness.py",
+    "positronic/inference.py",
+    "positronic/wire.py",
+    "positronic/dataset/local_dataset.py",
+    "positronic/cfg/policy.py",
+    "positronic/policy/base.py",
+    "positronic/policy/codec.py",
+    "positronic/vendors/lerobot_0_3_3/server.py",
+    "positronic/vendors/lerobot/server.py",
+    "positronic/vendors/gr00t/server.py",
+    "positronic/vendors/openpi/server.py"
+  ],
+  "h195_dependency_sha256": "140b9720efd8490869be403734ad0edb218f8c9ed4d006ebae69e3aff52055ab",
+  "history": {
+    "commit_count": 51,
+    "commits": [
+      {
+        "author_date": "2026-04-12T20:53:17+03:00",
+        "changes": [
+          {
+            "path": "positronic/cfg/policy.py",
+            "status": "M"
+          }
+        ],
+        "commit": "a87debc79ab42c69e78c82ea0387e36ffffd4acf",
+        "commit_date": "2026-04-12T20:53:17+03:00",
+        "parent_count": 1,
+        "parents": [
+          "00154c4396fb7a09a34b49f365defc5804e84d9c"
+        ],
+        "patch_sha256": "0d72a760c832236807dedcfe46d039392f9ea7ba9d728ce7b88c93a887fc5f9a",
+        "patch_vocabulary_matches": [],
+        "subject": "Add spoons ablation config and USB-C eval objects (#382)",
+        "subject_vocabulary_matches": []
+      },
+      {
+        "author_date": "2026-04-13T23:49:15+03:00",
+        "changes": [
+          {
+            "path": "positronic/vendors/lerobot_0_3_3/server.py",
+            "status": "M"
+          }
+        ],
+        "commit": "55e505a8a3282b69c8fa4930c6eda44276499125",
+        "commit_date": "2026-04-13T23:49:15+03:00",
+        "parent_count": 1,
+        "parents": [
+          "a87debc79ab42c69e78c82ea0387e36ffffd4acf"
+        ],
+        "patch_sha256": "2c91fb5856e913ac61d0f6be3e8ed70eb5f8f1067614c28f15819d9171719546",
+        "patch_vocabulary_matches": [
+          "recording",
+          "recording_dir"
+        ],
+        "subject": "Add connect-your-model inference guide (#383)",
+        "subject_vocabulary_matches": []
+      },
+      {
+        "author_date": "2026-04-14T00:33:06+03:00",
+        "changes": [
+          {
+            "path": "positronic/inference.py",
+            "status": "M"
+          }
+        ],
+        "commit": "a117795b7b1822d0fc9c142e9d837544dce546ee",
+        "commit_date": "2026-04-14T00:33:06+03:00",
+        "parent_count": 1,
+        "parents": [
+          "55e505a8a3282b69c8fa4930c6eda44276499125"
+        ],
+        "patch_sha256": "76702c839d15210e5b0f6f5578e527890bfc7ebc5159bd5438f2274289101720",
+        "patch_vocabulary_matches": [
+          "meta"
+        ],
+        "subject": "Fix timed driver episode recording and add GUI/review to doc (#385)",
+        "subject_vocabulary_matches": [
+          "recording"
+        ]
+      },
+      {
+        "author_date": "2026-05-05T18:21:31+03:00",
+        "changes": [
+          {
+            "path": "positronic/vendors/gr00t/server.py",
+            "status": "M"
+          }
+        ],
+        "commit": "f05de5d1c7d7baaeeffbd3fe08e7492bee408399",
+        "commit_date": "2026-05-05T18:21:31+03:00",
+        "parent_count": 1,
+        "parents": [
+          "74e6605cc5971ae040db464b1453bdc4d08994b0"
+        ],
+        "patch_sha256": "92aa627be72e7df875a8c5afa24548c888f4ad395778d79093e1077c17292fa2",
+        "patch_vocabulary_matches": [
+          "recording",
+          "recording_dir",
+          "ready"
+        ],
+        "subject": "Add Nebius serverless workflow for vendor training and dataset conversion and serving (#388)",
+        "subject_vocabulary_matches": []
+      },
+      {
+        "author_date": "2026-05-18T16:25:50+03:00",
+        "changes": [
+          {
+            "path": "positronic/offboard/vendor_server.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/vendors/gr00t/server.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/vendors/lerobot/server.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/vendors/lerobot_0_3_3/server.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/vendors/openpi/server.py",
+            "status": "M"
+          }
+        ],
+        "commit": "28887434bc9adbc53c0d8541f1e68b132c3d554b",
+        "commit_date": "2026-05-18T16:25:50+03:00",
+        "parent_count": 1,
+        "parents": [
+          "21aa0f3a63d5bef934b687d6806c61b661f13c6f"
+        ],
+        "patch_sha256": "024db914e21b6878932107cb8ba71d02d8fed18243a001d580f50637ade4a2f0",
+        "patch_vocabulary_matches": [
+          "recording",
+          "recording_dir",
+          "RecordingCodec",
+          "ready",
+          "meta",
+          "reset"
+        ],
+        "subject": "Serverless endpoint auto-shutdown + remote-training skill for Nebius Serverless (#392)",
+        "subject_vocabulary_matches": []
+      },
+      {
+        "author_date": "2026-05-19T12:22:12+03:00",
+        "changes": [
+          {
+            "path": "positronic/inference.py",
+            "status": "M"
+          }
+        ],
+        "commit": "3461dfaf134c9f5fc466d84448b7bae5e94611c5",
+        "commit_date": "2026-05-19T12:22:12+03:00",
+        "parent_count": 1,
+        "parents": [
+          "733bd36197bc0ce277c3e3f6b63e40eecf1b1d5b"
+        ],
+        "patch_sha256": "007a5628d1ebf5be3b30e201d6adf75c19198040f7aa233e817a8e61d9b6ff31",
+        "patch_vocabulary_matches": [],
+        "subject": "Make keyboard `p` finish and write the episode (#397)",
+        "subject_vocabulary_matches": []
+      },
+      {
+        "author_date": "2026-05-19T21:54:39+03:00",
+        "changes": [
+          {
+            "path": "positronic/inference.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/policy/harness.py",
+            "status": "M"
+          }
+        ],
+        "commit": "807be113cc6e037d3e4a3bfd69d79ffc4c6f67fe",
+        "commit_date": "2026-05-19T21:54:39+03:00",
+        "parent_count": 1,
+        "parents": [
+          "ebe6cef29958d476c3ad0a8807b942a6883afe76"
+        ],
+        "patch_sha256": "4af7a278b9a53933b2568ec943cb1efd6edaba952e337fa412117aa7cdf1fa6b",
+        "patch_vocabulary_matches": [
+          "meta",
+          "static"
+        ],
+        "subject": "Add reproducible behavioral golden for the inference pipeline (#400)",
+        "subject_vocabulary_matches": []
+      },
+      {
+        "author_date": "2026-05-20T13:06:09+03:00",
+        "changes": [
+          {
+            "path": "positronic/cfg/policy.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/dataset/ds_writer_agent.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/policy/codec.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/policy/harness.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/policy/remote.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/wire.py",
+            "status": "M"
+          }
+        ],
+        "commit": "93d9d6da8648586791932215d3c4b053cd57bd95",
+        "commit_date": "2026-05-20T13:06:09+03:00",
+        "parent_count": 1,
+        "parents": [
+          "807be113cc6e037d3e4a3bfd69d79ffc4c6f67fe"
+        ],
+        "patch_sha256": "14c06b6a2ab8af930c1ec4446430389308251873a33d8851b96189a4bb34ff9a",
+        "patch_vocabulary_matches": [
+          "recording",
+          "ready",
+          "meta",
+          "static",
+          "reset",
+          "writer"
+        ],
+        "subject": "Trajectory-as-command: policies emit timestamped action chunks (#393)",
+        "subject_vocabulary_matches": []
+      },
+      {
+        "author_date": "2026-05-20T16:30:33+02:00",
+        "changes": [
+          {
+            "path": "positronic/cfg/policy.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/offboard/client.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/policy/remote.py",
+            "status": "M"
+          }
+        ],
+        "commit": "2ddbcfff1db12b1ff5d8afede691fbf1b4af1b41",
+        "commit_date": "2026-05-20T17:30:33+03:00",
+        "parent_count": 1,
+        "parents": [
+          "93d9d6da8648586791932215d3c4b053cd57bd95"
+        ],
+        "patch_sha256": "d20c6c4994c67c6c32ed6936f44ad72f47faeeb17a4fe821fe556eddf5dfee2d",
+        "patch_vocabulary_matches": [
+          "inference session",
+          "ready",
+          "meta"
+        ],
+        "subject": "Add support for authenticating to remote servers (#394)",
+        "subject_vocabulary_matches": []
+      },
+      {
+        "author_date": "2026-05-28T23:10:25+03:00",
+        "changes": [
+          {
+            "path": "positronic/cfg/policy.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/policy/codec.py",
+            "status": "M"
+          }
+        ],
+        "commit": "ec4c28bef91e31b4538c00298d7df160cda72537",
+        "commit_date": "2026-05-28T23:10:25+03:00",
+        "parent_count": 1,
+        "parents": [
+          "5b1b051d3fa8569277f261ce2b8e729b992f6cc3"
+        ],
+        "patch_sha256": "a502fa3f9fa5a97158b9911eb1914c3fca3f08bae778d4718c22a658b32b9a3e",
+        "patch_vocabulary_matches": [
+          "recording",
+          "recording_dir",
+          "RecordingCodec",
+          "meta"
+        ],
+        "subject": "Pin `uv.lock` + add `recording_dir` to remote policies (#408)",
+        "subject_vocabulary_matches": [
+          "recording",
+          "recording_dir"
+        ]
+      },
+      {
+        "author_date": "2026-05-29T13:06:00+03:00",
+        "changes": [
+          {
+            "path": "positronic/dataset/ds_writer_agent.py",
+            "status": "M"
+          }
+        ],
+        "commit": "0e7683e1586528873916bbf87b7de81b5369a141",
+        "commit_date": "2026-05-29T13:06:00+03:00",
+        "parent_count": 1,
+        "parents": [
+          "ec4c28bef91e31b4538c00298d7df160cda72537"
+        ],
+        "patch_sha256": "1104934be42720cd22facd568f3d6afa4c292e51523016e760439b3680225ab5",
+        "patch_vocabulary_matches": [
+          "static",
+          "writer"
+        ],
+        "subject": "Fix observation schema and `ee_pose` quaternion order in inference docs (#409)",
+        "subject_vocabulary_matches": []
+      },
+      {
+        "author_date": "2026-05-31T20:55:43+03:00",
+        "changes": [
+          {
+            "path": "positronic/cfg/policy.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/dataset/ds_writer_agent.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/inference.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/offboard/vendor_server.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/policy/base.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/policy/codec.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/policy/harness.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/policy/recording.py",
+            "status": "A"
+          },
+          {
+            "path": "positronic/policy/remote.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/vendors/gr00t/server.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/vendors/openpi/server.py",
+            "status": "M"
+          }
+        ],
+        "commit": "ab32be1a9371c14a35c486060c7e35db10a029ae",
+        "commit_date": "2026-05-31T20:55:43+03:00",
+        "parent_count": 1,
+        "parents": [
+          "108562615880b6e5ac7c8e511122a31971795e65"
+        ],
+        "patch_sha256": "bd31e6534b072ff0da239beb509f7032521d5defff302b12171e73a34548ec2f",
+        "patch_vocabulary_matches": [
+          "inference session",
+          "recording",
+          "recording_dir",
+          "RecordingCodec",
+          ".rrd",
+          "ready",
+          "meta",
+          "static",
+          "reset",
+          "writer"
+        ],
+        "subject": "Inference API: PolicyWrapper composition, absolute timestamps, Policy/Session split (#381)",
+        "subject_vocabulary_matches": []
+      },
+      {
+        "author_date": "2026-06-01T23:10:04+02:00",
+        "changes": [
+          {
+            "path": "positronic/data_collection.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/dataset/ds_writer_agent.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/inference.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/policy/harness.py",
+            "status": "M"
+          }
+        ],
+        "commit": "7d1ee03ba65264cd998f4c2fed8a84d6d7e34bcd",
+        "commit_date": "2026-06-01T23:10:04+02:00",
+        "parent_count": 1,
+        "parents": [
+          "ab32be1a9371c14a35c486060c7e35db10a029ae"
+        ],
+        "patch_sha256": "8ee75a2637be247b1cb380ad191c3daeb7ab9927fe96bd39a4fc54c5663fab19",
+        "patch_vocabulary_matches": [
+          "recording",
+          "writer"
+        ],
+        "subject": "Make `World` own time via a virtual clock (#413)",
+        "subject_vocabulary_matches": []
+      },
+      {
+        "author_date": "2026-06-03T14:42:23+02:00",
+        "changes": [
+          {
+            "path": "positronic/policy/recording.py",
+            "status": "M"
+          }
+        ],
+        "commit": "380b7bf04c077073f38affefa5dd22c9e43c4f5b",
+        "commit_date": "2026-06-03T15:42:23+03:00",
+        "parent_count": 1,
+        "parents": [
+          "7d1ee03ba65264cd998f4c2fed8a84d6d7e34bcd"
+        ],
+        "patch_sha256": "9266365914606b4b20da960bf347b7c37402ed71caa33bef07eb9ba5e9f468e3",
+        "patch_vocabulary_matches": [
+          "recording",
+          "static"
+        ],
+        "subject": "Visualize inference action chunks as 3D end-effector trajectories (#415)",
+        "subject_vocabulary_matches": []
+      },
+      {
+        "author_date": "2026-06-05T15:32:21+02:00",
+        "changes": [
+          {
+            "path": "positronic/offboard/vendor_server.py",
+            "status": "M"
+          }
+        ],
+        "commit": "3c9e519815362212fc29619de78886914df5d5ed",
+        "commit_date": "2026-06-05T15:32:21+02:00",
+        "parent_count": 1,
+        "parents": [
+          "380b7bf04c077073f38affefa5dd22c9e43c4f5b"
+        ],
+        "patch_sha256": "1839881dab70a824b4c335db18c97356d65bbe4288715e6f76b52c8700b156e9",
+        "patch_vocabulary_matches": [
+          "recording",
+          "recording_dir",
+          "meta",
+          "reset"
+        ],
+        "subject": "Resolve default checkpoint once at server startup (#416)",
+        "subject_vocabulary_matches": []
+      },
+      {
+        "author_date": "2026-06-05T15:59:52+02:00",
+        "changes": [
+          {
+            "path": "positronic/data_collection.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/dataset/ds_writer_agent.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/inference.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/policy/harness.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/wire.py",
+            "status": "M"
+          }
+        ],
+        "commit": "0c48aff545ed9cb6be814f098a3db1837c374505",
+        "commit_date": "2026-06-05T15:59:52+02:00",
+        "parent_count": 1,
+        "parents": [
+          "3c9e519815362212fc29619de78886914df5d5ed"
+        ],
+        "patch_sha256": "8b22f6dc86ec298b5bb1b37e82c582a0274e3fd9852ad550711bc39b8c57429d",
+        "patch_vocabulary_matches": [
+          "ready",
+          "meta",
+          "static",
+          "reset",
+          "writer"
+        ],
+        "subject": "Make Harness observations name-free; record full sim state as privileged signal (#414)",
+        "subject_vocabulary_matches": []
+      },
+      {
+        "author_date": "2026-06-05T17:37:26+02:00",
+        "changes": [
+          {
+            "path": "positronic/policy/recording.py",
+            "status": "M"
+          }
+        ],
+        "commit": "24e268708bc98eb0bd6ef9d179ac61867d1e4d40",
+        "commit_date": "2026-06-05T18:37:26+03:00",
+        "parent_count": 1,
+        "parents": [
+          "0c48aff545ed9cb6be814f098a3db1837c374505"
+        ],
+        "patch_sha256": "78a6d9d8f410fd7525258e90814429fdce1063afa697da3b384ee699672b4edb",
+        "patch_vocabulary_matches": [
+          "recording",
+          "recording_dir",
+          ".rrd"
+        ],
+        "subject": "Add `positronic-probe` debugging tool (#417)",
+        "subject_vocabulary_matches": []
+      },
+      {
+        "author_date": "2026-06-05T20:05:21+02:00",
+        "changes": [
+          {
+            "path": "positronic/vendors/lerobot_0_3_3/server.py",
+            "status": "M"
+          }
+        ],
+        "commit": "799ec785872e126d0d4e1be53b49fa8df3ae19b4",
+        "commit_date": "2026-06-05T20:05:21+02:00",
+        "parent_count": 1,
+        "parents": [
+          "24e268708bc98eb0bd6ef9d179ac61867d1e4d40"
+        ],
+        "patch_sha256": "1017ca0943fe907e1cbe826282832639ea661c2191956b970629b436f375a15d",
+        "patch_vocabulary_matches": [
+          "recording",
+          "recording_dir"
+        ],
+        "subject": "Register `PUBLIC` pos3 profile for anonymous public-bucket access (#419)",
+        "subject_vocabulary_matches": []
+      },
+      {
+        "author_date": "2026-06-09T11:51:55+02:00",
+        "changes": [
+          {
+            "path": "positronic/inference.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/policy/harness.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/wire.py",
+            "status": "M"
+          }
+        ],
+        "commit": "471871c164aa06084a851e1ff47450d45c2d5012",
+        "commit_date": "2026-06-09T12:51:55+03:00",
+        "parent_count": 1,
+        "parents": [
+          "799ec785872e126d0d4e1be53b49fa8df3ae19b4"
+        ],
+        "patch_sha256": "990717f4507eac6a25212ef1ac064fe69170e53567c2fc03720d9ddbd9d07aae",
+        "patch_vocabulary_matches": [
+          "recording",
+          "ready",
+          "meta",
+          "static",
+          "reset",
+          "writer"
+        ],
+        "subject": "Make Harness name-free via `Embodiment` factory (#418)",
+        "subject_vocabulary_matches": []
+      },
+      {
+        "author_date": "2026-06-10T16:58:43+03:00",
+        "changes": [
+          {
+            "path": "positronic/inference.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/policy/harness.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/wire.py",
+            "status": "M"
+          }
+        ],
+        "commit": "cfc2aeb83548783c3960c3035478b49ecbb7ddec",
+        "commit_date": "2026-06-10T16:58:43+03:00",
+        "parent_count": 1,
+        "parents": [
+          "471871c164aa06084a851e1ff47450d45c2d5012"
+        ],
+        "patch_sha256": "9dc335beea12e4c021e2a6cd07ae539767e94dfd61569b3dd0eb8cbef2ce691d",
+        "patch_vocabulary_matches": [
+          "recording",
+          "meta",
+          "static",
+          "writer"
+        ],
+        "subject": "Add `positronic eval run` with first-class `Task` + `Eval` (#420)",
+        "subject_vocabulary_matches": []
+      },
+      {
+        "author_date": "2026-06-11T12:15:14+03:00",
+        "changes": [
+          {
+            "path": "positronic/inference.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/policy/harness.py",
+            "status": "M"
+          }
+        ],
+        "commit": "717624d8e41fbaa6db5d2f636176506e5641f9c7",
+        "commit_date": "2026-06-11T12:15:14+03:00",
+        "parent_count": 1,
+        "parents": [
+          "ac354ebb7e8a683fe9fe55212db92d8cc6bdb0f4"
+        ],
+        "patch_sha256": "9baebad2cbec2beb7a24a4746d0c0e0eb5695cd653ff01642267e5792af47501",
+        "patch_vocabulary_matches": [
+          "recording",
+          "ready",
+          "meta",
+          "static",
+          "writer"
+        ],
+        "subject": "Deliver `timeout` + `inference_latency` on the RUN directive; Harness self-terminates trials (#425)",
+        "subject_vocabulary_matches": []
+      },
+      {
+        "author_date": "2026-06-11T15:03:46+03:00",
+        "changes": [
+          {
+            "path": "positronic/inference.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/policy/harness.py",
+            "status": "M"
+          }
+        ],
+        "commit": "5d3900cf2e5c7d490a4270e2f1caf99f11607c63",
+        "commit_date": "2026-06-11T15:03:46+03:00",
+        "parent_count": 1,
+        "parents": [
+          "f0514e10ca2799eb9da4441230be00db5de77cf2"
+        ],
+        "patch_sha256": "be7e57e64012546a2ef0f3ef07a0cac10bd60209d5b1c2c7bae80c8d1eb90838",
+        "patch_vocabulary_matches": [
+          "recording",
+          "meta",
+          "static",
+          "reset"
+        ],
+        "subject": "Seed sim trials: `--eval.seed` rides the RUN context, `Task` owns the scene reset (#428)",
+        "subject_vocabulary_matches": [
+          "reset"
+        ]
+      },
+      {
+        "author_date": "2026-06-11T17:13:14+03:00",
+        "changes": [
+          {
+            "path": "positronic/data_collection.py",
+            "status": "M"
+          }
+        ],
+        "commit": "cd49ee495b61801c9c710efc3dbe64a330825e0b",
+        "commit_date": "2026-06-11T17:13:14+03:00",
+        "parent_count": 1,
+        "parents": [
+          "5d3900cf2e5c7d490a4270e2f1caf99f11607c63"
+        ],
+        "patch_sha256": "9abae7b96f0591333383c54d4f96f850c51644965904bbeb27ad9e467e22afbb",
+        "patch_vocabulary_matches": [
+          "meta",
+          "static",
+          "writer"
+        ],
+        "subject": "Merge the MuJoCo devices into one `MujocoSim` control system (#429)",
+        "subject_vocabulary_matches": []
+      },
+      {
+        "author_date": "2026-06-12T14:07:01+03:00",
+        "changes": [
+          {
+            "path": "positronic/dataset/episode.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/dataset/local_dataset.py",
+            "status": "M"
+          }
+        ],
+        "commit": "e370cbf1e6e31360fd17cc6d36a9ce74786abd94",
+        "commit_date": "2026-06-12T14:07:01+03:00",
+        "parent_count": 1,
+        "parents": [
+          "cd49ee495b61801c9c710efc3dbe64a330825e0b"
+        ],
+        "patch_sha256": "fc0adc5ee72307be0a24b39d3b63ec2ee0430f8130ac374310833efdfd2df296",
+        "patch_vocabulary_matches": [
+          "uuid",
+          "recording",
+          "meta",
+          "static",
+          "writer"
+        ],
+        "subject": "Add the edit layer: uid-keyed `edits.jsonl` applied as a view over immutable recordings (#430)",
+        "subject_vocabulary_matches": [
+          "recording"
+        ]
+      },
+      {
+        "author_date": "2026-06-15T16:25:29+03:00",
+        "changes": [
+          {
+            "path": "positronic/dataset/ds_writer_agent.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/dataset/local_dataset.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/inference.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/policy/harness.py",
+            "status": "M"
+          }
+        ],
+        "commit": "9e738bda3d7bc1c9eb2dd0d369820c6cc4f2fc01",
+        "commit_date": "2026-06-15T16:25:29+03:00",
+        "parent_count": 1,
+        "parents": [
+          "1c5b64e684c537025d7b61ddce72593706976f04"
+        ],
+        "patch_sha256": "f9295f0de021844b815617fa90aa8a24582fa73dd90840e75b02801f3a18dd0a",
+        "patch_vocabulary_matches": [
+          "uuid",
+          "recording",
+          "ready",
+          "meta",
+          "static",
+          "reset",
+          "writer"
+        ],
+        "subject": "Post-hoc review via the edit log: kill `STOP`/`SUSPEND`, refit `EvalUI` as a non-modal episode editor (#431)",
+        "subject_vocabulary_matches": []
+      },
+      {
+        "author_date": "2026-06-15T21:39:15+03:00",
+        "changes": [
+          {
+            "path": "positronic/inference.py",
+            "status": "M"
+          }
+        ],
+        "commit": "6e43a811aa88d410124ad8c71f042b0744326522",
+        "commit_date": "2026-06-15T21:39:15+03:00",
+        "parent_count": 1,
+        "parents": [
+          "9e738bda3d7bc1c9eb2dd0d369820c6cc4f2fc01"
+        ],
+        "patch_sha256": "d786758b0cc7f641b9efe1bb5d57976cc5b6a4a2e577946ea7f1556e4c11e39a",
+        "patch_vocabulary_matches": [
+          "meta",
+          "reset",
+          "writer"
+        ],
+        "subject": "Add `real.droid.pick_place` eval family + droid hardware-identity meta (#435)",
+        "subject_vocabulary_matches": [
+          "meta"
+        ]
+      },
+      {
+        "author_date": "2026-06-15T22:34:08+03:00",
+        "changes": [
+          {
+            "path": "positronic/data_collection.py",
+            "status": "M"
+          }
+        ],
+        "commit": "23bbfff711e76bd781615884b828f9bfcee9e306",
+        "commit_date": "2026-06-15T22:34:08+03:00",
+        "parent_count": 1,
+        "parents": [
+          "6e43a811aa88d410124ad8c71f042b0744326522"
+        ],
+        "patch_sha256": "5831b9c56bef1a5fdc14b8d3e66dde59a6dbeb6c41cde347e61134ac7eca4ed8",
+        "patch_vocabulary_matches": [
+          "meta",
+          "static",
+          "writer"
+        ],
+        "subject": "Write `run_metadata.yaml` from `data_collection` runs (#434)",
+        "subject_vocabulary_matches": [
+          "meta"
+        ]
+      },
+      {
+        "author_date": "2026-06-16T17:24:43+03:00",
+        "changes": [
+          {
+            "path": "positronic/cfg/policy.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/policy/base.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/policy/codec.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/policy/harness.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/policy/recording.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/policy/remote.py",
+            "status": "M"
+          }
+        ],
+        "commit": "dc5e837d7a6fca3a6bdf5615f8a0b3b594f81d53",
+        "commit_date": "2026-06-16T17:24:43+03:00",
+        "parent_count": 1,
+        "parents": [
+          "23bbfff711e76bd781615884b828f9bfcee9e306"
+        ],
+        "patch_sha256": "1208a2a86d25c2ccfb9827c30f7cd1a2746e7aefcf9a26e37a0b20837af61911",
+        "patch_vocabulary_matches": [
+          "inference session",
+          "recording",
+          "ready",
+          "meta",
+          "static",
+          "reset",
+          "writer"
+        ],
+        "subject": "DreamZero: AR video context at serving + full-finetune warm-start (#432)",
+        "subject_vocabulary_matches": []
+      },
+      {
+        "author_date": "2026-06-16T21:28:32+03:00",
+        "changes": [
+          {
+            "path": "positronic/policy/harness.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/wire.py",
+            "status": "M"
+          }
+        ],
+        "commit": "b41dda5b8075e5a0fccb1acf12eac30297b076e9",
+        "commit_date": "2026-06-16T21:28:32+03:00",
+        "parent_count": 1,
+        "parents": [
+          "dc5e837d7a6fca3a6bdf5615f8a0b3b594f81d53"
+        ],
+        "patch_sha256": "ff3743e09423decc3393dba7840dc0d61a02011787c76236d2358581a028718f",
+        "patch_vocabulary_matches": [
+          "recording",
+          "meta",
+          "static",
+          "writer"
+        ],
+        "subject": "Add privileged `done` stop-signal for early trial termination (#436)",
+        "subject_vocabulary_matches": []
+      },
+      {
+        "author_date": "2026-06-22T15:22:02+03:00",
+        "changes": [
+          {
+            "path": "positronic/offboard/client.py",
+            "status": "M"
+          }
+        ],
+        "commit": "8cc0871e990c818663857fe30cf5f7a389e09b92",
+        "commit_date": "2026-06-22T15:22:02+03:00",
+        "parent_count": 1,
+        "parents": [
+          "d89959106b6b5e986ed07935663d3197655ee0ca"
+        ],
+        "patch_sha256": "bb6b68f4e20bbb8511d882d359f8c0083883c1c8b1a0fe06ebb61a57886e5322",
+        "patch_vocabulary_matches": [
+          "inference session"
+        ],
+        "subject": "Warm up policy endpoints at inference startup (#449)",
+        "subject_vocabulary_matches": []
+      },
+      {
+        "author_date": "2026-06-22T17:17:04+03:00",
+        "changes": [
+          {
+            "path": "positronic/dataset/ds_writer_agent.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/inference.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/policy/harness.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/wire.py",
+            "status": "M"
+          }
+        ],
+        "commit": "ed6c51e232d02dcadb42e283fa77b244a154d3a7",
+        "commit_date": "2026-06-22T17:17:04+03:00",
+        "parent_count": 1,
+        "parents": [
+          "8cc0871e990c818663857fe30cf5f7a389e09b92"
+        ],
+        "patch_sha256": "5e151b05033cb5ac4d4d477663e4ae0a43b5a25b4eb6f65c1b72d2cac88bd5fa",
+        "patch_vocabulary_matches": [
+          "recording",
+          "meta",
+          "static",
+          "reset",
+          "writer"
+        ],
+        "subject": "Refactor the eval harness and sim control loop around per-round cooperation (#448)",
+        "subject_vocabulary_matches": []
+      },
+      {
+        "author_date": "2026-06-22T18:19:01+03:00",
+        "changes": [
+          {
+            "path": "positronic/vendors/openpi/server.py",
+            "status": "M"
+          }
+        ],
+        "commit": "6e17368428b4b674c9fe712d8fb9375b014b90cb",
+        "commit_date": "2026-06-22T18:19:01+03:00",
+        "parent_count": 1,
+        "parents": [
+          "e35344eb817a52b16585bc8273d33c350e17f081"
+        ],
+        "patch_sha256": "da6dea66ef74e3f3b023861fc6e8a2f6e54ab78278a2787080f292a69d20a222",
+        "patch_vocabulary_matches": [
+          "recording",
+          "recording_dir"
+        ],
+        "subject": "Drop `JointDelta` command; add `droid` config for public `pi05_droid` (#443)",
+        "subject_vocabulary_matches": []
+      },
+      {
+        "author_date": "2026-06-25T17:57:52+03:00",
+        "changes": [
+          {
+            "path": "positronic/inference.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/policy/harness.py",
+            "status": "M"
+          }
+        ],
+        "commit": "962629b21d955aca44496ea267c92f7194e253ce",
+        "commit_date": "2026-06-25T17:57:52+03:00",
+        "parent_count": 1,
+        "parents": [
+          "d9c37976e1b7f1802c8bc7dea2473e2654228cc2"
+        ],
+        "patch_sha256": "8516829e086d6a1cee4df61cff3b047381bb878704c0fcb6bfd026310a14a964",
+        "patch_vocabulary_matches": [
+          "ready",
+          "meta",
+          "static",
+          "writer"
+        ],
+        "subject": "Generalize DreamZero eval wrap into `video_context_wrappers` (#454)",
+        "subject_vocabulary_matches": []
+      },
+      {
+        "author_date": "2026-06-25T19:13:52+03:00",
+        "changes": [
+          {
+            "path": "positronic/policy/harness.py",
+            "status": "M"
+          }
+        ],
+        "commit": "68d6144a2a07b469d8f2f614ec7dd01a2aee189d",
+        "commit_date": "2026-06-25T19:13:52+03:00",
+        "parent_count": 1,
+        "parents": [
+          "962629b21d955aca44496ea267c92f7194e253ce"
+        ],
+        "patch_sha256": "4ba2d32ad1502ff942e0fe6ecae47644a6968b4d619dee8ad3b9323c55f6658a",
+        "patch_vocabulary_matches": [
+          "recording",
+          "meta",
+          "reset",
+          "writer"
+        ],
+        "subject": "Add LIBERO as a remote env-server embodiment (#452)",
+        "subject_vocabulary_matches": []
+      },
+      {
+        "author_date": "2026-06-27T13:09:07+03:00",
+        "changes": [
+          {
+            "path": "positronic/cfg/policy.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/offboard/client.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/offboard/vendor_server.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/policy/remote.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/vendors/openpi/server.py",
+            "status": "M"
+          }
+        ],
+        "commit": "479a3b54e508875306708aec183caccb104aafa4",
+        "commit_date": "2026-06-27T13:09:07+03:00",
+        "parent_count": 1,
+        "parents": [
+          "f615ee2d9397014c157297da7bf36f0f26d9931d"
+        ],
+        "patch_sha256": "03019a80758703329fabe2490f02fd3f99f66b10265523586b72b389174be11c",
+        "patch_vocabulary_matches": [
+          "inference session",
+          "recording",
+          "recording_dir",
+          "ready",
+          "meta",
+          "static",
+          "reset"
+        ],
+        "subject": "Serve openpi `pi05_libero` and match its LIBERO success rate (#459)",
+        "subject_vocabulary_matches": []
+      },
+      {
+        "author_date": "2026-06-30T20:22:35+03:00",
+        "changes": [
+          {
+            "path": "positronic/inference.py",
+            "status": "M"
+          }
+        ],
+        "commit": "eab41cd860378277cc63273824bd66fdd9f29536",
+        "commit_date": "2026-06-30T20:22:35+03:00",
+        "parent_count": 1,
+        "parents": [
+          "90e717c71a5ad6f5377d8c9a0c064c0dfc7c4509"
+        ],
+        "patch_sha256": "8257d80af53567ef09a1544175f869977ab0f17ffab2f65484cf33ecd15800a2",
+        "patch_vocabulary_matches": [],
+        "subject": "Add `web` operator console driver for remote evals (#460)",
+        "subject_vocabulary_matches": []
+      },
+      {
+        "author_date": "2026-07-04T21:55:03+03:00",
+        "changes": [
+          {
+            "path": "positronic/policy/harness.py",
+            "status": "M"
+          }
+        ],
+        "commit": "9e95e40fddb67c0af66c7154b232582e881b8f9a",
+        "commit_date": "2026-07-04T21:55:03+03:00",
+        "parent_count": 1,
+        "parents": [
+          "eab41cd860378277cc63273824bd66fdd9f29536"
+        ],
+        "patch_sha256": "8e577226c266dc622fb213e8d976b6dc20ab680970b62c0be2f67c0cbb15c3f7",
+        "patch_vocabulary_matches": [
+          "recording",
+          "reset"
+        ],
+        "subject": "Sweep a full eval suite from one `eval run` (#462)",
+        "subject_vocabulary_matches": []
+      },
+      {
+        "author_date": "2026-07-06T20:42:52+03:00",
+        "changes": [
+          {
+            "path": "positronic/inference.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/policy/harness.py",
+            "status": "M"
+          }
+        ],
+        "commit": "adfae66efe018331b619ce13dcfa3b4e9ab37b9f",
+        "commit_date": "2026-07-06T20:42:52+03:00",
+        "parent_count": 1,
+        "parents": [
+          "9e95e40fddb67c0af66c7154b232582e881b8f9a"
+        ],
+        "patch_sha256": "bcf5c58637df3a8ec3773e78511350d20e12daef3c85d71e75a79ebea59df159",
+        "patch_vocabulary_matches": [
+          "meta",
+          "reset",
+          "writer"
+        ],
+        "subject": "Add between-episode jog teleop to the web eval console (#463)",
+        "subject_vocabulary_matches": []
+      },
+      {
+        "author_date": "2026-07-08T17:50:48+03:00",
+        "changes": [
+          {
+            "path": "positronic/policy/codec.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/vendors/gr00t/server.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/vendors/lerobot_0_3_3/server.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/vendors/openpi/server.py",
+            "status": "M"
+          }
+        ],
+        "commit": "6bf6e5d60411eb2ea00e64908cc21ef6ce1ed2cf",
+        "commit_date": "2026-07-08T17:50:48+03:00",
+        "parent_count": 1,
+        "parents": [
+          "96e64fb4fb4733e3db0e82392eb1f00b301d0dab"
+        ],
+        "patch_sha256": "1f7c84b6edfed2651eb15b3b4d66751bd372b1f88f1917adaa9d46cba75da330",
+        "patch_vocabulary_matches": [
+          "recording",
+          "recording_dir"
+        ],
+        "subject": "Unify gripper convention to 0 = open, 1 = closed (#466)",
+        "subject_vocabulary_matches": []
+      },
+      {
+        "author_date": "2026-07-10T00:53:52+03:00",
+        "changes": [
+          {
+            "path": "positronic/cfg/policy.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/policy/recording.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/policy/remote.py",
+            "status": "M"
+          }
+        ],
+        "commit": "f9b8970f51f277121dd435362388730c3e35477a",
+        "commit_date": "2026-07-10T00:53:52+03:00",
+        "parent_count": 1,
+        "parents": [
+          "6bf6e5d60411eb2ea00e64908cc21ef6ce1ed2cf"
+        ],
+        "patch_sha256": "0bfa6b134dbcb8916861d91cb1857f70be5b628aa06560262570607cf400f509",
+        "patch_vocabulary_matches": [
+          "recording",
+          "recording_dir",
+          "meta"
+        ],
+        "subject": "Add per-frame proprio context and JPEG-compress temporal image stacks (#465)",
+        "subject_vocabulary_matches": []
+      },
+      {
+        "author_date": "2026-07-15T00:07:13+03:00",
+        "changes": [
+          {
+            "path": "positronic/offboard/client.py",
+            "status": "M"
+          }
+        ],
+        "commit": "a5bed3c79498e2711db6e9463afde21c40436a4a",
+        "commit_date": "2026-07-15T00:07:13+03:00",
+        "parent_count": 1,
+        "parents": [
+          "f9b8970f51f277121dd435362388730c3e35477a"
+        ],
+        "patch_sha256": "5fe02b44b9fbf159a9842ef512762f08dc89c2c8ea3e1fff3adffedfb47e2a8a",
+        "patch_vocabulary_matches": [
+          "ready",
+          "meta",
+          "reset"
+        ],
+        "subject": "Retry transient connection drops when opening a remote inference session (#470)",
+        "subject_vocabulary_matches": [
+          "inference session"
+        ]
+      },
+      {
+        "author_date": "2026-07-17T20:59:29+03:00",
+        "changes": [
+          {
+            "path": "positronic/data_collection.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/policy/base.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/policy/harness.py",
+            "status": "M"
+          }
+        ],
+        "commit": "312c4bd3354dd2bcbe8f3eafd2a9a9af92c2cc62",
+        "commit_date": "2026-07-17T20:59:29+03:00",
+        "parent_count": 1,
+        "parents": [
+          "ea570465a22e0a523cc16fc60abd126f36072e06"
+        ],
+        "patch_sha256": "babc4fdc41638324427769fc25ccdd4770a623b72d9c16448d211b0a9bbe6b6e",
+        "patch_vocabulary_matches": [],
+        "subject": "Move error recovery into the arm drivers (#474)",
+        "subject_vocabulary_matches": []
+      },
+      {
+        "author_date": "2026-07-20T17:06:10+03:00",
+        "changes": [
+          {
+            "path": "positronic/policy/codec.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/policy/recording.py",
+            "status": "M"
+          }
+        ],
+        "commit": "4280b18a716efedfe909feb416e2b49f59c71cbc",
+        "commit_date": "2026-07-20T17:06:10+03:00",
+        "parent_count": 1,
+        "parents": [
+          "64cf2d9138164aa2ae03b008fd6f7e11fdb5f92d"
+        ],
+        "patch_sha256": "2a594a5f0b7932d3e892d3a97447325fbd50643442b47ca19c13ce5d4da513c0",
+        "patch_vocabulary_matches": [
+          "recording",
+          "ready",
+          "meta"
+        ],
+        "subject": "Close action chunks with a validity sentinel in codec decode (#488)",
+        "subject_vocabulary_matches": []
+      },
+      {
+        "author_date": "2026-07-20T17:48:24+03:00",
+        "changes": [
+          {
+            "path": "positronic/vendors/openpi/server.py",
+            "status": "M"
+          }
+        ],
+        "commit": "cd9a155fbac89715989b32bcc3f83ed45b5e0346",
+        "commit_date": "2026-07-20T17:48:24+03:00",
+        "parent_count": 1,
+        "parents": [
+          "33a010109dc5d516a18e565e7832ae789e9b2bb6"
+        ],
+        "patch_sha256": "35485a587f83ea59ea14a0ee8a966d7501f0693f4374de1e37a23c39e71d2f09",
+        "patch_vocabulary_matches": [],
+        "subject": "Add `droid_jointpos` OpenPI codec (#486)",
+        "subject_vocabulary_matches": []
+      },
+      {
+        "author_date": "2026-07-22T17:18:56+03:00",
+        "changes": [
+          {
+            "path": "positronic/policy/recording.py",
+            "status": "M"
+          }
+        ],
+        "commit": "91287959a41ee7ebb4b12212dd4dbe99c36efb99",
+        "commit_date": "2026-07-22T17:18:56+03:00",
+        "parent_count": 1,
+        "parents": [
+          "2f11a53623cb28fcf1f95ce96c32caa222e32f8a"
+        ],
+        "patch_sha256": "6f33f5e9ac2c1dd31e2651cc9b2688af6ebe914ae10bac3216d9f55fa603fb7f",
+        "patch_vocabulary_matches": [
+          "recording",
+          ".rrd",
+          "meta"
+        ],
+        "subject": "Record each episode's `.rrd` filename in its dataset meta (#496)",
+        "subject_vocabulary_matches": [
+          ".rrd",
+          "meta"
+        ]
+      },
+      {
+        "author_date": "2026-07-24T21:11:01+03:00",
+        "changes": [
+          {
+            "path": "positronic/data_collection.py",
+            "status": "M"
+          }
+        ],
+        "commit": "2af622c1ca8ff3d8a8adc2a9c600ada218f604ec",
+        "commit_date": "2026-07-24T21:11:01+03:00",
+        "parent_count": 1,
+        "parents": [
+          "7e5ef5353b6a389a8dc1731cc6c944a4d5012d95"
+        ],
+        "patch_sha256": "65af61ce5eb9e1a9df5454b12be978201b02f94fc63d2aa8fa1baa21415439be",
+        "patch_vocabulary_matches": [
+          "writer"
+        ],
+        "subject": "Fail when a control system is listed twice in `World.start` (#513)",
+        "subject_vocabulary_matches": []
+      },
+      {
+        "author_date": "2026-07-26T16:10:59+03:00",
+        "changes": [
+          {
+            "path": "positronic/data_collection.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/inference.py",
+            "status": "M"
+          }
+        ],
+        "commit": "8e13afe88d1a22d71d98a59a9b028e9d5c1eccaf",
+        "commit_date": "2026-07-26T16:10:59+03:00",
+        "parent_count": 1,
+        "parents": [
+          "2af622c1ca8ff3d8a8adc2a9c600ada218f604ec"
+        ],
+        "patch_sha256": "441ff65df4b0ff7841f37606f9eca7da8a073517c489879ed402914d2e8ed60a",
+        "patch_vocabulary_matches": [
+          "meta",
+          "static"
+        ],
+        "subject": "Make `dearpygui` optional so `positronic` imports on ARM Linux (#516)",
+        "subject_vocabulary_matches": []
+      },
+      {
+        "author_date": "2026-07-26T23:58:51+03:00",
+        "changes": [
+          {
+            "path": "positronic/inference.py",
+            "status": "M"
+          }
+        ],
+        "commit": "41907a2ca33e33bd572ad60a2a6c8d4ddfc3e86d",
+        "commit_date": "2026-07-26T23:58:51+03:00",
+        "parent_count": 1,
+        "parents": [
+          "8e13afe88d1a22d71d98a59a9b028e9d5c1eccaf"
+        ],
+        "patch_sha256": "8d5dd4b7c760692aefe46c8b6a5ea5e17b6b85a6083680d3b1a8f9b5dcee8d8c",
+        "patch_vocabulary_matches": [],
+        "subject": "Make three review-enforced conventions machine-checked (#521)",
+        "subject_vocabulary_matches": []
+      },
+      {
+        "author_date": "2026-07-27T01:25:31+03:00",
+        "changes": [
+          {
+            "path": "positronic/data_collection.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/dataset/ds_writer_agent.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/wire.py",
+            "status": "M"
+          }
+        ],
+        "commit": "83d70aa8f44b2715db0c38cda764b16cb70e7263",
+        "commit_date": "2026-07-27T01:25:31+03:00",
+        "parent_count": 1,
+        "parents": [
+          "5e89c17a06cd039950d3a10e2de5bd0d36bae292"
+        ],
+        "patch_sha256": "f82178f168eb4bad28f4ceaa2d0c9eb631fcabbf26e820691471e973347e1e3f",
+        "patch_vocabulary_matches": [
+          "recording",
+          "ready",
+          "reset",
+          "writer"
+        ],
+        "subject": "Make every command channel carry a trajectory (#523)",
+        "subject_vocabulary_matches": []
+      },
+      {
+        "author_date": "2026-07-27T02:14:25+03:00",
+        "changes": [
+          {
+            "path": "positronic/cfg/policy.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/inference.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/offboard/client.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/offboard/server.py",
+            "status": "A"
+          },
+          {
+            "path": "positronic/offboard/vendor_server.py",
+            "status": "D"
+          },
+          {
+            "path": "positronic/policy/base.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/policy/codec.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/policy/harness.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/policy/remote.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/vendors/gr00t/server.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/vendors/lerobot/server.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/vendors/lerobot_0_3_3/server.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/vendors/openpi/server.py",
+            "status": "M"
+          }
+        ],
+        "commit": "29285cf5514bf2bc68a82e81360b0c5b0875142b",
+        "commit_date": "2026-07-27T02:14:25+03:00",
+        "parent_count": 1,
+        "parents": [
+          "83d70aa8f44b2715db0c38cda764b16cb70e7263"
+        ],
+        "patch_sha256": "7dd06d47c4162d8871ba68d83d4381abf47bb41a2265e971a365c447d675fcbe",
+        "patch_vocabulary_matches": [
+          "inference session",
+          "recording",
+          "recording_dir",
+          ".rrd",
+          "ready",
+          "meta",
+          "static",
+          "reset",
+          "writer"
+        ],
+        "subject": "Define a policy as one pipe terminated by a `ModelSource` (#497)",
+        "subject_vocabulary_matches": []
+      },
+      {
+        "author_date": "2026-07-28T00:01:20+03:00",
+        "changes": [
+          {
+            "path": "positronic/cfg/policy.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/data_collection.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/policy/codec.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/policy/harness.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/policy/recording.py",
+            "status": "M"
+          },
+          {
+            "path": "positronic/wire.py",
+            "status": "M"
+          }
+        ],
+        "commit": "5c1537e28b5167d2ea5f8b44edf64f5f3c34fcc8",
+        "commit_date": "2026-07-28T00:01:20+03:00",
+        "parent_count": 1,
+        "parents": [
+          "88b27db4434144c758067fe631be83ea7d465430"
+        ],
+        "patch_sha256": "3928a421203335d2015344038aa5a4c39172144d52c5c810897e0968ad57afeb",
+        "patch_vocabulary_matches": [
+          "recording",
+          "meta",
+          "static",
+          "reset",
+          "writer"
+        ],
+        "subject": "Route raw observation keys through a canonical `positronic.keys` module (#505)",
+        "subject_vocabulary_matches": []
+      }
+    ],
+    "status": "result_exposed_for_expansion_paths"
+  },
+  "incident_sha256": "1173a52425f9d7ba430419b077f45c0d83572579ea81f3ad4f03bb3571cf2466",
+  "interpretation": "At pinned public main, all four public PhAIL server commands still configure a recording directory. The redesigned server creates a per-websocket-session RRD recording; its session metadata now exposes the full path as recording.rrd, the ready handshake carries it to the remote session, and the harness writes it to the finalized episode's static.json as inference.policy.server.recording.rrd. Independently, each normally created stored episode receives a uuid4 uid in meta.json. Thus current public code implements both a collision-resistant episode identifier and an explicit episode-to-server-recording locator join, without establishing reset quality or a valid dependence cluster.",
+  "limitations": [
+    "The endpoint result is bounded to public Positronic commit 01b78e6f62ff5913490c360afdd2712eee070524; main may later change.",
+    "The two expansion-path introduction timings are result-exposed and exploratory; the comparison-endpoint semantic trace was prospectively authorized.",
+    "Current public code does not establish the exact code deployed for the historical PhAIL evaluation or retroactively add fields to its released episodes.",
+    "The episode uid is generated by the dataset writer and is not embedded in or transmitted back to the server recording; the recorded RRD path supplies the join.",
+    "The RRD filename still combines second-resolution wall time with a process-wide counter, so uniqueness across process restarts is not established.",
+    "A finalized inference episode is not automatically a physical reset, operator session, exchangeability cluster, or independence unit.",
+    "No configured recording location or private service was accessed, so recording availability and retention remain unknown."
+  ],
+  "performance_field_opened": false,
+  "private_service_accessed": false,
+  "protocol_sha256": "efba7c9235a1c82b8fa2f25c855c1571109dc10c4294ee1bdb71ce96f211c3e9",
+  "schema": "h196-positronic-session-identity-history-v1",
+  "scope": "Public Positronic v0.2.1-to-pinned-main source history and current PhAIL runtime-to-finalized-episode metadata path only",
+  "server_recording_opened": false,
+  "source_records": [
+    {
+      "baseline": {
+        "git_blob": "97ed4a8dcd68bca11c516a74f87a7f8d2e851d01",
+        "line_count": 147,
+        "present": true,
+        "sha256": "6d6fb174deb25c3a65c630bffb9e71553882786a395b157f2a8c3481aa56b90b"
+      },
+      "comparison": {
+        "git_blob": "4c612e0f4e0ba7dfa1c0778e3e39c96f906a4256",
+        "line_count": 109,
+        "present": true,
+        "sha256": "d4b28a3beb1c6d04d52f4facc308167e4c88c93b29200a238962b311c1d8885b"
+      },
+      "path": "positronic/cfg/policy.py"
+    },
+    {
+      "baseline": {
+        "git_blob": "f3b93f2d2b3c98505c34869e70c9fbeb00cb398a",
+        "line_count": 404,
+        "present": true,
+        "sha256": "c621b874c30eb07887d4a85ad2f32b6de1a0dd82fa80f173525209972da7255f"
+      },
+      "comparison": {
+        "git_blob": "e1a1bb59f4e5e8568a5dddc6e6e40e28fe99b45c",
+        "line_count": 402,
+        "present": true,
+        "sha256": "7bc8e365571efda45777d3b2c9e680c873230d436b33a9ee5c8a516ac23754b4"
+      },
+      "path": "positronic/data_collection.py"
+    },
+    {
+      "baseline": {
+        "git_blob": "8f0f06e31fabecce2d093d7768ede88397affcb2",
+        "line_count": 315,
+        "present": true,
+        "sha256": "40435c6a11cb8f75bb1dc79933da1ea8b47586cffa2988c3bf44756fb1fbe483"
+      },
+      "comparison": {
+        "git_blob": "765b811438d1a0e7db32698e24f9d21488495be0",
+        "line_count": 291,
+        "present": true,
+        "sha256": "81791d99b511723e5d59ff38c9208dc4dc27633917616c6e11cc30bc43da8356"
+      },
+      "path": "positronic/dataset/ds_writer_agent.py"
+    },
+    {
+      "baseline": {
+        "git_blob": "0b38c7bc083510ac70724663d04bea9913df037e",
+        "line_count": 153,
+        "present": true,
+        "sha256": "49bd9837a07b1d0d6a3034674cf78de27bc78b907ecf67e84f1c4df659b035bc"
+      },
+      "comparison": {
+        "git_blob": "d15b7f6b5917b121d9526506039db903ecc390dc",
+        "line_count": 182,
+        "present": true,
+        "sha256": "f989a39b59ec498568947f7e18e2540ed7d3149f883970c5a4f5cdf0997b38ef"
+      },
+      "path": "positronic/dataset/episode.py"
+    },
+    {
+      "baseline": {
+        "git_blob": "8e7d6001ebcbb0a58e39a07b2f58d400f45797fd",
+        "line_count": 595,
+        "present": true,
+        "sha256": "e0308688d7daa43c4c27b00a5f199ed8ffc86caaf3b6b1b2cf9177adec82e493"
+      },
+      "comparison": {
+        "git_blob": "b14883ea6d970a5b9b84fc7c8ee930bc7a889495",
+        "line_count": 605,
+        "present": true,
+        "sha256": "8f19cc494eb6b283c127f92dbfbd818c5293c3b6b214ee2614cd6fadfa8b0b9a"
+      },
+      "path": "positronic/dataset/local_dataset.py"
+    },
+    {
+      "baseline": {
+        "git_blob": "c9bc29b72f15763e17740537f08a73d58675217c",
+        "line_count": 293,
+        "present": true,
+        "sha256": "f0d9565b501b70ea15421d86b0e742a8c57d5c22446f57f36f9bd7cf79d43080"
+      },
+      "comparison": {
+        "git_blob": "57dd5e20829acb606b8faa45b40dde923128b3b7",
+        "line_count": 148,
+        "present": true,
+        "sha256": "26a4e26d68f8ce6d7512d1d231a34e24f9cf3e4245b60e6557e25c94ee137ac6"
+      },
+      "path": "positronic/inference.py"
+    },
+    {
+      "baseline": {
+        "git_blob": "36a4e3d1623932ba7500db11d03b1f2731030e0e",
+        "line_count": 107,
+        "present": true,
+        "sha256": "bd3fcb45f5ef99b62c52b644e41931b943961235a8f4227e97ab63532d892140"
+      },
+      "comparison": {
+        "git_blob": "2c1c1ff7f2f3694a11e399be354d1c45d745dbf3",
+        "line_count": 200,
+        "present": true,
+        "sha256": "15879b694391f21a5cd6b8627eec511b41c429ac02788c567e1a418aa638e9c5"
+      },
+      "path": "positronic/offboard/client.py"
+    },
+    {
+      "baseline": {
+        "present": false
+      },
+      "comparison": {
+        "git_blob": "53abf9904dad7b088f803c5ff2de170617d75a2d",
+        "line_count": 391,
+        "present": true,
+        "sha256": "db1ac1c973e0a2eb7ef3e985e402b99d7f97e3b2f2bca49b799ee8807202afc3"
+      },
+      "path": "positronic/offboard/server.py"
+    },
+    {
+      "baseline": {
+        "git_blob": "a71c4073296e448c015255333625daff3ae58bfa",
+        "line_count": 221,
+        "present": true,
+        "sha256": "82d1d136f7e263b9e7b96f124ff5743ea2bafaacc1f79ae5c9d88a99055d0894"
+      },
+      "comparison": {
+        "present": false
+      },
+      "path": "positronic/offboard/vendor_server.py"
+    },
+    {
+      "baseline": {
+        "git_blob": "29e4efdd3170728f8899c851c5789f00faf90d45",
+        "line_count": 91,
+        "present": true,
+        "sha256": "3119b6a01b223ca71df8e74b0cbd8619d556ab7818c9e5c38bc645687dc58cb6"
+      },
+      "comparison": {
+        "git_blob": "8e0f4012d387cf46591667c1a2dd0ea08599ddd4",
+        "line_count": 281,
+        "present": true,
+        "sha256": "19745a9d36f0636b03e9ae2015a13c1d488961a05d76ea15373e86fb8913b05d"
+      },
+      "path": "positronic/policy/base.py"
+    },
+    {
+      "baseline": {
+        "git_blob": "5573c7a39df7d07f465c232ce55a2deebc34181f",
+        "line_count": 486,
+        "present": true,
+        "sha256": "e164fec194d03d683dda14efe492f3720a12403b0e154568080c46d691da2ef6"
+      },
+      "comparison": {
+        "git_blob": "4482df09a513fb0922a1aa48c17f518c481b1498",
+        "line_count": 452,
+        "present": true,
+        "sha256": "2b79b002f7e37cb4e1a681a0b0d3879f5fc6ae8bcc3b5443ae6a3674ddf05c99"
+      },
+      "path": "positronic/policy/codec.py"
+    },
+    {
+      "baseline": {
+        "git_blob": "857b1fe313d67689345fc5fd5954605464fbca38",
+        "line_count": 206,
+        "present": true,
+        "sha256": "c01bd56bee3b406eefc41d01d9010464c1fed1490fdb18d3a0d2f838ae14c075"
+      },
+      "comparison": {
+        "git_blob": "62dd01974588785000285ef6c8cba4672386690a",
+        "line_count": 406,
+        "present": true,
+        "sha256": "1ba08e3068c32e7b7451caac8359db3e73ca2abceb2261c4ccac8db942362fbd"
+      },
+      "path": "positronic/policy/harness.py"
+    },
+    {
+      "baseline": {
+        "present": false
+      },
+      "comparison": {
+        "git_blob": "8caf45bb3a43b84a6b7c2ead3f1a1765c96e7f83",
+        "line_count": 465,
+        "present": true,
+        "sha256": "5b1a94fd5addeab20c7c2eeb3db60403bc8d0a84a413820ee2ad87d59e73acb9"
+      },
+      "path": "positronic/policy/recording.py"
+    },
+    {
+      "baseline": {
+        "git_blob": "c26e87bf036dee4f91db8e3333b7a8c280593082",
+        "line_count": 106,
+        "present": true,
+        "sha256": "787bff2df4b06a26441106ddc78ab73951d0bdd02fb34601f994b531d3809199"
+      },
+      "comparison": {
+        "git_blob": "4ddc38539ae6698ab73a310fe216814e16b69cd2",
+        "line_count": 221,
+        "present": true,
+        "sha256": "297dc8d04970dc9496062fa2c679710bc354fed587f1904651347ed05d256b0a"
+      },
+      "path": "positronic/policy/remote.py"
+    },
+    {
+      "baseline": {
+        "git_blob": "4ac596e050757d7b753e37673dd8d1d20b31f7a4",
+        "line_count": 420,
+        "present": true,
+        "sha256": "4599a131688471860e783d962ddb5a9dd76f9c28d8d8c553de1ba260e8598fbf"
+      },
+      "comparison": {
+        "git_blob": "f2411d5095f8047c8973f28f97714833bdba339b",
+        "line_count": 365,
+        "present": true,
+        "sha256": "608c75eeb0b6159b0e281cc182d35baa410c23abae92881bd5ff59c63a0a5a43"
+      },
+      "path": "positronic/vendors/gr00t/server.py"
+    },
+    {
+      "baseline": {
+        "git_blob": "857ad1fe991d1fdb41e593a0b15b0e771dcd2341",
+        "line_count": 91,
+        "present": true,
+        "sha256": "6fe568b46b314f5313b547ef33c93b62631d190ae225275b58a3b4464a70e6a9"
+      },
+      "comparison": {
+        "git_blob": "2158442e1491cb2fd18a3297edcd27ac97fe71fc",
+        "line_count": 85,
+        "present": true,
+        "sha256": "2ae5a6889f7f5415b130b20cff665b9b3b80c6f12d60521ae084a6fb62fd0a2d"
+      },
+      "path": "positronic/vendors/lerobot/server.py"
+    },
+    {
+      "baseline": {
+        "git_blob": "1338641d64f26ff4c1469f97182e5a66573b00f0",
+        "line_count": 128,
+        "present": true,
+        "sha256": "78d7956587d8a5db54a088015f59f41a42f6d0cd30d3a2eda76534dcd3815861"
+      },
+      "comparison": {
+        "git_blob": "3d77c9861aecc3c3a07f811cdead4b22ba38c1ca",
+        "line_count": 124,
+        "present": true,
+        "sha256": "b8cd17b3f796360bbde727fc426f15fb2926657270a9969c126eccd2bc39bd7f"
+      },
+      "path": "positronic/vendors/lerobot_0_3_3/server.py"
+    },
+    {
+      "baseline": {
+        "git_blob": "d5f4c5e22cc3e2bb8d6ff7a159f44ee7500f2ee0",
+        "line_count": 336,
+        "present": true,
+        "sha256": "a4f2b5d383044ad6b7436d1d56a0473c2de43f93c5b39bb024c809fa7a83cd6b"
+      },
+      "comparison": {
+        "git_blob": "41b9cd1deedc14bf9dd075ffe7b81dc6ee270cc1",
+        "line_count": 303,
+        "present": true,
+        "sha256": "ed7d37c162911d765a04edb683e1ae8dd473d85688dc174363984047caf9dc53"
+      },
+      "path": "positronic/vendors/openpi/server.py"
+    },
+    {
+      "baseline": {
+        "git_blob": "1c52667d9cf089712c8e45ee90b7ceee9f1f8fa1",
+        "line_count": 55,
+        "present": true,
+        "sha256": "586baf9bd736a623fc4b19027ea05158757f4e7e474a9f73081090a992329763"
+      },
+      "comparison": {
+        "git_blob": "026f94cfd740f80cf8c9d859aaf24a55e8c34214",
+        "line_count": 107,
+        "present": true,
+        "sha256": "8036e68f4807a777ebc3ba2651f69c3407d5c12eed6b8fd3fac76b38b595f9d1"
+      },
+      "path": "positronic/wire.py"
+    }
+  ],
+  "trace": {
+    "client_preserves_ready_metadata": true,
+    "episode_uid_construction": "uuid.uuid4().hex",
+    "episode_uid_embedded_in_server_recording": false,
+    "episode_uid_persisted_key": "uid",
+    "episode_uid_serialized_to_meta_json": true,
+    "final_static_rrd_key": "inference.policy.server.recording.rrd",
+    "final_static_rrd_key_derivation": [
+      "recording.rrd",
+      "server.recording.rrd",
+      "inference.policy.server.recording.rrd"
+    ],
+    "fixed_phail_backend_results": [
+      {
+        "phail_recording_directory": "s3://inference/phail_unified/server_recordings/lerobot/270226-ee/",
+        "policy": "ACT",
+        "recording_enabled": true,
+        "source_path": "positronic/vendors/lerobot_0_3_3/server.py"
+      },
+      {
+        "phail_recording_directory": "s3://inference/phail_unified/server_recordings/smolvla/170316_ee/",
+        "policy": "SmolVLA",
+        "recording_enabled": true,
+        "source_path": "positronic/vendors/lerobot/server.py"
+      },
+      {
+        "phail_recording_directory": "s3://inference/phail_unified/server_recordings/groot/270226-ee_rot6d_rel/",
+        "policy": "GR00T",
+        "recording_enabled": true,
+        "source_path": "positronic/vendors/gr00t/server.py"
+      },
+      {
+        "phail_recording_directory": "s3://inference/phail_unified/server_recordings/openpi/270226-ee/",
+        "policy": "OpenPI",
+        "recording_enabled": true,
+        "source_path": "positronic/vendors/openpi/server.py"
+      }
+    ],
+    "harness_creates_one_policy_session_and_one_writer_episode_per_run": true,
+    "harness_finalizes_session_meta_into_writer_static_data": true,
+    "normal_writer_path_calls_new_episode_without_uid_override": true,
+    "physical_reset_or_operator_session_established": false,
+    "ready_handshake_transports_session_meta": true,
+    "recording_locator_supplies_episode_to_rrd_join": true,
+    "remote_session_nests_server_metadata": true,
+    "sampled_policy_preserves_selected_session_meta": true,
+    "server_recorder_constructed_per_websocket_session": true,
+    "server_recording_locator_exposed_in_session_meta": true,
+    "server_recording_locator_pattern": "{YYMMDD_HHMMSS}_{process_wide_counter:04d}.rrd",
+    "server_recording_locator_uniqueness": "process-wide counter plus second-resolution wall time; cross-restart uniqueness not established",
+    "static_data_serialized_to_static_json": true
+  },
+  "tracked_paths_after_rename_detection": [
+    "positronic/cfg/policy.py",
+    "positronic/data_collection.py",
+    "positronic/dataset/ds_writer_agent.py",
+    "positronic/dataset/episode.py",
+    "positronic/dataset/local_dataset.py",
+    "positronic/inference.py",
+    "positronic/offboard/client.py",
+    "positronic/offboard/server.py",
+    "positronic/offboard/vendor_server.py",
+    "positronic/policy/base.py",
+    "positronic/policy/codec.py",
+    "positronic/policy/harness.py",
+    "positronic/policy/recording.py",
+    "positronic/policy/remote.py",
+    "positronic/vendors/gr00t/server.py",
+    "positronic/vendors/lerobot/server.py",
+    "positronic/vendors/lerobot_0_3_3/server.py",
+    "positronic/vendors/openpi/server.py",
+    "positronic/wire.py"
+  ],
+  "upstream": {
+    "baseline": {
+      "author_date": "2026-04-01T00:44:28+03:00",
+      "commit": "e406176bc526babb06844a48e3627a5c0409eb74",
+      "commit_date": "2026-04-01T00:44:28+03:00",
+      "parent_count": 1,
+      "parents": [
+        "295dac07651bc06edc81bf01414b4157cee59ed9"
+      ],
+      "subject": "Make openpi-client optional to fix PyPI installability (#378)"
+    },
+    "baseline_is_ancestor": true,
+    "comparison": {
+      "author_date": "2026-07-28T01:05:13+03:00",
+      "commit": "01b78e6f62ff5913490c360afdd2712eee070524",
+      "commit_date": "2026-07-28T01:05:13+03:00",
+      "parent_count": 1,
+      "parents": [
+        "5c1537e28b5167d2ea5f8b44edf64f5f3c34fcc8"
+      ],
+      "subject": "Enforce `.basedpyright/baseline.json` as a one-way per-file ratchet (#510)"
+    },
+    "git_version": "git version 2.50.1 (Apple Git-155)",
+    "remote": "https://github.com/Positronic-Robotics/positronic",
+    "resolved_at": "2026-07-28T09:57:28Z"
+  }
+}

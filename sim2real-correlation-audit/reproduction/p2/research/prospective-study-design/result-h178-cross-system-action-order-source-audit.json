@@ -1,0 +1,928 @@
+{
+  "bounded_interpretation": "No second RoboArena-like action/identification mismatch was found in the fixed seven-system frame. UMI-Bench and RoboDojo are source-described positive protocol contrasts: each fixes a common finite evaluation frame, execution rule, reset handling, and episode/trial identity before candidate execution.",
+  "decision": "positive_contrast_found",
+  "evidence_status_counts": {
+    "absent_from_fixed_sources": 7,
+    "available": 27,
+    "paper_described_only": 22,
+    "partial": 14
+  },
+  "limitations": [
+    "The purposive seven-system frame does not estimate field prevalence.",
+    "The positive contrasts are supported by fixed paper descriptions, not independently reproduced execution artifacts.",
+    "No performance direction, magnitude, significance, or leaderboard standing was extracted or used."
+  ],
+  "next_stage": "h179_independent_challenge",
+  "outcome_fields_retained": [],
+  "paper_status_change_authorized_before_independent_challenge": false,
+  "positive_contrast_strength": "source_described",
+  "positive_contrast_systems": [
+    "umi_bench",
+    "robodojo"
+  ],
+  "protocol": "protocol-h178-cross-system-action-order-source-audit.md",
+  "protocol_sha256": "7b52f8754046cbee790925a0ba849a9b1b8fa3e41775bc3e677d08c3c3bdeb53",
+  "roster_expansion_authorized": false,
+  "row_count": 70,
+  "schema": "h178-cross-system-action-order-source-audit-v1",
+  "second_mismatch_systems": [],
+  "semantic_value_counts": {
+    "not_satisfied": 12,
+    "satisfied": 30,
+    "unresolved": 21
+  },
+  "source_bindings": [
+    {
+      "identity": "AutoEval arXiv:2503.24278v2",
+      "path": "sources/h162/autoeval-2503.24278v2.pdf",
+      "sha256": "734840964f233f46ce2c1b8e64427a9cb65ca140b4152a0c4fd339677fd7e45f",
+      "source_key": "autoeval_pdf"
+    },
+    {
+      "identity": "RoboArena CoRL/PMLR paper protocol extraction",
+      "path": "source-h122-roboarena-paper-protocol.json",
+      "sha256": "8193ea6faa06f60ace867dfa4e3cbda1d370cf9c63025e8db92af1debc1b415d",
+      "source_key": "roboarena_protocol"
+    },
+    {
+      "identity": "H168 independently challenged public applicability record",
+      "path": "result-h168-public-pair-routing-applicability-independent-challenge.json",
+      "sha256": "75df6d5ead9ed05402f6109c654bead06faacfd66e34084c4d06c0b3670d6aa5",
+      "source_key": "roboarena_applicability"
+    },
+    {
+      "identity": "GE-Sim 2.0 arXiv:2605.27491v1",
+      "path": "sources/h178/2605.27491v1.pdf",
+      "sha256": "af875445ebe487962e308bbff5e76e19fdcfc57620a50ec6ec9070989cbfe641",
+      "source_key": "gesim_pdf"
+    },
+    {
+      "identity": "A Practical Recipe arXiv:2606.10366v1",
+      "path": "sources/h178/2606.10366v1.pdf",
+      "sha256": "0196e433f9523815aeb0e3151e069a466c614e838bc681883bac52a2d9160ab2",
+      "source_key": "recipe_pdf"
+    },
+    {
+      "identity": "UMI-Bench arXiv:2606.10382v1",
+      "path": "sources/h162/umi-bench-2606.10382v1.pdf",
+      "sha256": "cd279ae9758460c2b1142b721ce2e0184b8adba755b21dc5319d03918ec90e2b",
+      "source_key": "umi_pdf"
+    },
+    {
+      "identity": "H162 fixed-source reset audit",
+      "path": "result-h162-object-level-reset-tolerance-source-audit.json",
+      "sha256": "b2f2a3e073f14045fcd82ade03f37d2ee679483e11a5614ea8065e64ac76c8c0",
+      "source_key": "h162_reset_audit"
+    },
+    {
+      "identity": "GigaWorld-1 arXiv:2607.02642v1",
+      "path": "sources/h178/2607.02642v1.pdf",
+      "sha256": "15c685a1cfcd9b88635328b29d62f5cb7c8c55b7e1d12799a5a7a6c33a092a0f",
+      "source_key": "gigaworld_pdf"
+    },
+    {
+      "identity": "RoboDojo arXiv:2607.04434v3",
+      "path": "sources/h162/robodojo-2607.04434v3.pdf",
+      "sha256": "e07c215f30169dde6a792c34b046b1f54818d09331763988732dcf9ead89a9d4",
+      "source_key": "robodojo_pdf"
+    }
+  ],
+  "system_count": 7,
+  "systems": [
+    {
+      "arxiv_id": "2503.24278",
+      "system": "autoeval",
+      "units": [
+        {
+          "finding": "Users submit a policy and task to a fixed AutoEval cell and receive rollout-level reports and aggregate policy performance for that task.",
+          "limit": "The public action is task/cell-specific, not one universal policy ranking.",
+          "locator": "AutoEval Fig. 1; Sections 3 and 4",
+          "source_keys": [
+            "autoeval_pdf"
+          ],
+          "status": "available",
+          "unit": "declared_operational_action",
+          "value": "fixed_task_policy_score_or_ranking"
+        },
+        {
+          "finding": "Evaluation cells, scenes, tasks, and their initial-state distributions are configured independently of any one submitted policy.",
+          "limit": "A user chooses a task when submitting a policy, so the realized job configuration is not a randomized candidate assignment.",
+          "locator": "AutoEval Algorithm 1; Sections 3--4",
+          "source_keys": [
+            "autoeval_pdf"
+          ],
+          "status": "available",
+          "unit": "candidate_pair_or_roster_fixed_before_context",
+          "value": "not_satisfied"
+        },
+        {
+          "finding": "The task and scene are fixed, but each trial samples an initial state from a reset-induced distribution after the policy job is scheduled.",
+          "limit": "The public record does not establish policy-independent realized initial states or invariant reset distributions across all policies.",
+          "locator": "AutoEval Algorithm 1; Appendix K",
+          "source_keys": [
+            "autoeval_pdf",
+            "h162_reset_audit"
+          ],
+          "status": "partial",
+          "unit": "context_fixed_before_candidate_assignment",
+          "value": "unresolved"
+        },
+        {
+          "finding": "The study reports fixed trial counts for policy-task cells and the service uses a policy queue.",
+          "limit": "Queue scheduling, blocking, order, and current hosted assignment rules are not fixed as a public law.",
+          "locator": "AutoEval Fig. 1; Sections 4--5",
+          "source_keys": [
+            "autoeval_pdf"
+          ],
+          "status": "partial",
+          "unit": "stable_assignment_law_public",
+          "value": "unresolved"
+        },
+        {
+          "finding": "Each evaluation task declares an initial-state distribution and a scene-specific reset process.",
+          "limit": "The deployed learned reset artifacts and complete episode-level context record are not in the fixed public source.",
+          "locator": "AutoEval Algorithm 1; Sections 3--4; Appendix K",
+          "source_keys": [
+            "autoeval_pdf",
+            "h162_reset_audit"
+          ],
+          "status": "paper_described_only",
+          "unit": "stable_context_law_public",
+          "value": "satisfied"
+        },
+        {
+          "finding": "The paper's study reports a finite trial budget for every declared policy-task evaluation cell.",
+          "limit": "This covers the paper's finite cells, not the live service or new policies.",
+          "locator": "AutoEval Section 5 and appendix experiment tables",
+          "source_keys": [
+            "autoeval_pdf"
+          ],
+          "status": "available",
+          "unit": "declared_target_support_complete_or_bounded",
+          "value": "satisfied"
+        },
+        {
+          "finding": "The evaluation loop applies and checks a reset between trials, retries failures, and records intervention paths.",
+          "limit": "The rule does not prove identical reset distributions or absence of residual carryover.",
+          "locator": "AutoEval Algorithm 1; Section 3; Appendices G--H",
+          "source_keys": [
+            "autoeval_pdf",
+            "h162_reset_audit"
+          ],
+          "status": "available",
+          "unit": "reset_carryover_rule_public",
+          "value": "satisfied"
+        },
+        {
+          "finding": "Reports expose episode videos, durations, interventions, and per-run counts.",
+          "limit": "The fixed public source does not expose a complete immutable episode/assignment ledger for the study or live service.",
+          "locator": "AutoEval Figs. 5, 9; Section 4",
+          "source_keys": [
+            "autoeval_pdf",
+            "h162_reset_audit"
+          ],
+          "status": "partial",
+          "unit": "cluster_or_session_identity_public",
+          "value": "unresolved"
+        },
+        {
+          "finding": "A task/cell-specific empirical success score is well-defined for the completed trials.",
+          "limit": "Cross-policy interpretation still depends on invariant initial-state/reset distributions and scheduling that are not fully public.",
+          "locator": "AutoEval Sections 3--5",
+          "source_keys": [
+            "autoeval_pdf"
+          ],
+          "status": "partial",
+          "unit": "public_action_matches_identified_estimand",
+          "value": "unresolved"
+        },
+        {
+          "finding": "AutoEval supplies a fixed-scene, repeated-trial alternative to pair-conditioned free task construction.",
+          "limit": "Assignment, realized-context comparability, and public cluster identity remain incomplete.",
+          "locator": "AutoEval Sections 3--5",
+          "source_keys": [
+            "autoeval_pdf",
+            "h162_reset_audit"
+          ],
+          "status": "partial",
+          "unit": "target_compatible_positive_contrast",
+          "value": "unresolved"
+        }
+      ]
+    },
+    {
+      "arxiv_id": "2506.18123",
+      "system": "roboarena",
+      "units": [
+        {
+          "finding": "Pairwise preference feedback across evaluators is aggregated into a public global policy ranking.",
+          "limit": "The action is not H165's within-presented-pair routing decision.",
+          "locator": "RoboArena abstract; Section 3; official leaderboard",
+          "source_keys": [
+            "roboarena_protocol",
+            "roboarena_applicability"
+          ],
+          "status": "available",
+          "unit": "declared_operational_action",
+          "value": "global_policy_ranking"
+        },
+        {
+          "finding": "The central server samples a policy pair before the evaluator constructs the task and scene.",
+          "limit": "This is the paper-described protocol, not proof of the current deployed server.",
+          "locator": "RoboArena Section 3.1 and Algorithm 1",
+          "source_keys": [
+            "roboarena_protocol"
+          ],
+          "status": "available",
+          "unit": "candidate_pair_or_roster_fixed_before_context",
+          "value": "satisfied"
+        },
+        {
+          "finding": "Evaluators freely choose the task and environment after receiving the policy pair.",
+          "limit": "Within-pair matching does not create cross-pair common contexts.",
+          "locator": "RoboArena abstract; Section 3.1 and Algorithm 1",
+          "source_keys": [
+            "roboarena_protocol",
+            "roboarena_applicability"
+          ],
+          "status": "available",
+          "unit": "context_fixed_before_candidate_assignment",
+          "value": "not_satisfied"
+        },
+        {
+          "finding": "The paper calls pair sampling random.",
+          "limit": "Current pool intervals, pair probabilities, blocking, and session assignment export are not public.",
+          "locator": "RoboArena Section 3.1 and Algorithm 1",
+          "source_keys": [
+            "roboarena_protocol",
+            "roboarena_applicability"
+          ],
+          "status": "partial",
+          "unit": "stable_assignment_law_public",
+          "value": "unresolved"
+        },
+        {
+          "finding": "The public protocol deliberately permits evaluator-chosen tasks and scenes.",
+          "limit": "No stable future pair-specific or common context distribution is published.",
+          "locator": "RoboArena abstract and Section 3.1",
+          "source_keys": [
+            "roboarena_protocol",
+            "roboarena_applicability"
+          ],
+          "status": "absent_from_fixed_sources",
+          "unit": "stable_context_law_public",
+          "value": "unresolved"
+        },
+        {
+          "finding": "Historical cumulative support can be enumerated.",
+          "limit": "Newest-increment support is incomplete and active target weights/roster intervals are unknown.",
+          "locator": "H167--H168 public support audit",
+          "source_keys": [
+            "roboarena_applicability"
+          ],
+          "status": "partial",
+          "unit": "declared_target_support_complete_or_bounded",
+          "value": "unresolved"
+        },
+        {
+          "finding": "Within-comparison initial conditions are described as closely matched.",
+          "limit": "The fixed public sources do not expose a reset/washout/carryover rule tied to the global target.",
+          "locator": "RoboArena Section 3.1",
+          "source_keys": [
+            "roboarena_protocol",
+            "roboarena_applicability"
+          ],
+          "status": "absent_from_fixed_sources",
+          "unit": "reset_carryover_rule_public",
+          "value": "unresolved"
+        },
+        {
+          "finding": "Aggregate public metadata expose sessions and policy pairs.",
+          "limit": "No retained native session-level assignment export establishes the deployed law and cluster structure.",
+          "locator": "H167--H168 public applicability audit",
+          "source_keys": [
+            "roboarena_applicability"
+          ],
+          "status": "partial",
+          "unit": "cluster_or_session_identity_public",
+          "value": "unresolved"
+        },
+        {
+          "finding": "The global leaderboard is not identified by pair-conditioned context edges without a bridge to a common target.",
+          "limit": "This does not invalidate within-pair comparison or the benchmark's own descriptive score.",
+          "locator": "H151--H152 and H167--H168",
+          "source_keys": [
+            "roboarena_applicability"
+          ],
+          "status": "available",
+          "unit": "public_action_matches_identified_estimand",
+          "value": "not_satisfied"
+        },
+        {
+          "finding": "RoboArena is the fixed mismatch control.",
+          "limit": "It cannot satisfy H177's non-RoboArena positive-contrast gate.",
+          "locator": "H167--H168",
+          "source_keys": [
+            "roboarena_applicability"
+          ],
+          "status": "available",
+          "unit": "target_compatible_positive_contrast",
+          "value": "not_satisfied"
+        }
+      ]
+    },
+    {
+      "arxiv_id": "2605.27491",
+      "system": "gesim_2",
+      "units": [
+        {
+          "finding": "The study evaluates world-model replay, closed-loop outcome agreement, reward judgment, and policy improvement.",
+          "limit": "It does not declare a multi-policy real-robot ranking target.",
+          "locator": "GE-Sim 2.0 Sections 1 and 4",
+          "source_keys": [
+            "gesim_pdf"
+          ],
+          "status": "available",
+          "unit": "declared_operational_action",
+          "value": "simulator_or_world_model_evaluation"
+        },
+        {
+          "finding": "The real-robot fidelity study uses one named policy rather than a comparative policy roster.",
+          "limit": "World-model baselines are evaluator candidates, not multiple real-robot policies.",
+          "locator": "GE-Sim 2.0 Section 4.2",
+          "source_keys": [
+            "gesim_pdf"
+          ],
+          "status": "available",
+          "unit": "candidate_pair_or_roster_fixed_before_context",
+          "value": "not_satisfied"
+        },
+        {
+          "finding": "No comparative real-policy assignment occurs in the fixed study.",
+          "limit": "The retained real episodes can support evaluator fidelity, not a P2 policy-order contrast.",
+          "locator": "GE-Sim 2.0 Section 4.2",
+          "source_keys": [
+            "gesim_pdf"
+          ],
+          "status": "available",
+          "unit": "context_fixed_before_candidate_assignment",
+          "value": "not_satisfied"
+        },
+        {
+          "finding": "There is no multi-policy real-robot assignment law in scope.",
+          "limit": "One-policy episode curation is a different estimand.",
+          "locator": "GE-Sim 2.0 Section 4.2",
+          "source_keys": [
+            "gesim_pdf"
+          ],
+          "status": "available",
+          "unit": "stable_assignment_law_public",
+          "value": "not_satisfied"
+        },
+        {
+          "finding": "The fidelity study fixes six task families and a finite curated real-episode set.",
+          "limit": "Episode construction and reset provenance are not fully released in the fixed source.",
+          "locator": "GE-Sim 2.0 Section 4.2",
+          "source_keys": [
+            "gesim_pdf"
+          ],
+          "status": "paper_described_only",
+          "unit": "stable_context_law_public",
+          "value": "satisfied"
+        },
+        {
+          "finding": "The real-robot study has no comparative policy-by-context target.",
+          "limit": "Finite task support exists only for the one-policy evaluator study.",
+          "locator": "GE-Sim 2.0 Section 4.2",
+          "source_keys": [
+            "gesim_pdf"
+          ],
+          "status": "available",
+          "unit": "declared_target_support_complete_or_bounded",
+          "value": "not_satisfied"
+        },
+        {
+          "finding": "The fixed paper describes curated real episodes.",
+          "limit": "No real-robot reset, order, washout, or carryover protocol is specified for those episodes.",
+          "locator": "Complete GE-Sim 2.0 fixed PDF scope",
+          "source_keys": [
+            "gesim_pdf"
+          ],
+          "status": "absent_from_fixed_sources",
+          "unit": "reset_carryover_rule_public",
+          "value": "unresolved"
+        },
+        {
+          "finding": "The real evaluation is explicitly episode-level with a fixed per-task episode count.",
+          "limit": "The exact public episode ledger and dependence structure are not retained in the fixed paper.",
+          "locator": "GE-Sim 2.0 Section 4.2",
+          "source_keys": [
+            "gesim_pdf"
+          ],
+          "status": "paper_described_only",
+          "unit": "cluster_or_session_identity_public",
+          "value": "satisfied"
+        },
+        {
+          "finding": "Replay and same-policy episode-level closed-loop agreement are defined for the curated episodes.",
+          "limit": "This does not identify a multi-policy real-world ranking.",
+          "locator": "GE-Sim 2.0 Section 4.2",
+          "source_keys": [
+            "gesim_pdf"
+          ],
+          "status": "available",
+          "unit": "public_action_matches_identified_estimand",
+          "value": "satisfied"
+        },
+        {
+          "finding": "The study does not instantiate P2's comparative real-policy target.",
+          "limit": "It remains relevant evaluator-metrology evidence.",
+          "locator": "GE-Sim 2.0 Section 4.2",
+          "source_keys": [
+            "gesim_pdf"
+          ],
+          "status": "available",
+          "unit": "target_compatible_positive_contrast",
+          "value": "not_satisfied"
+        }
+      ]
+    },
+    {
+      "arxiv_id": "2606.10366",
+      "system": "practical_recipe",
+      "units": [
+        {
+          "finding": "The study asks whether simulators preserve real-world policy rankings and perturbation conclusions on a fixed study panel.",
+          "limit": "The paper explicitly bounds its conclusions to the evaluated policies and task suite.",
+          "locator": "Practical Recipe Sections 1, 3, and 4",
+          "source_keys": [
+            "recipe_pdf"
+          ],
+          "status": "available",
+          "unit": "declared_operational_action",
+          "value": "fixed_task_policy_score_or_ranking"
+        },
+        {
+          "finding": "The policy roster is crossed with a task and perturbation suite defined independently of any policy pair.",
+          "limit": "Realized physical initial states are not individually cross-replayed.",
+          "locator": "Practical Recipe Sections 3 and 4.1",
+          "source_keys": [
+            "recipe_pdf"
+          ],
+          "status": "available",
+          "unit": "candidate_pair_or_roster_fixed_before_context",
+          "value": "not_satisfied"
+        },
+        {
+          "finding": "The same nine-task suite and four perturbation dimensions are defined for all evaluated policies.",
+          "limit": "The paper fixes condition classes, not a shared episode-level initial-state list.",
+          "locator": "Practical Recipe Section 3 and Fig. 1",
+          "source_keys": [
+            "recipe_pdf"
+          ],
+          "status": "paper_described_only",
+          "unit": "context_fixed_before_candidate_assignment",
+          "value": "satisfied"
+        },
+        {
+          "finding": "Every policy-task-perturbation cell receives the declared simulated and real rollout budget.",
+          "limit": "Within-cell execution order and randomization are not specified.",
+          "locator": "Practical Recipe Section 4.1",
+          "source_keys": [
+            "recipe_pdf"
+          ],
+          "status": "paper_described_only",
+          "unit": "stable_assignment_law_public",
+          "value": "satisfied"
+        },
+        {
+          "finding": "Tasks, matched completion criteria, and perturbation dimensions are fixed across policies.",
+          "limit": "Physical placement/reset distributions and their episode-level realization are not completely specified.",
+          "locator": "Practical Recipe Section 3",
+          "source_keys": [
+            "recipe_pdf"
+          ],
+          "status": "paper_described_only",
+          "unit": "stable_context_law_public",
+          "value": "satisfied"
+        },
+        {
+          "finding": "The finite five-policy study crosses the declared policy roster with the task/perturbation evaluation cells.",
+          "limit": "Two task-simulator cells are explicitly unsupported; the paper bounds rather than hides that support.",
+          "locator": "Practical Recipe Sections 4.1--4.2",
+          "source_keys": [
+            "recipe_pdf"
+          ],
+          "status": "available",
+          "unit": "declared_target_support_complete_or_bounded",
+          "value": "satisfied"
+        },
+        {
+          "finding": "The fixed paper describes controlled real evaluation conditions.",
+          "limit": "No complete physical reset, execution-order, washout, retry, or carryover protocol is stated.",
+          "locator": "Complete Practical Recipe fixed PDF scope",
+          "source_keys": [
+            "recipe_pdf"
+          ],
+          "status": "absent_from_fixed_sources",
+          "unit": "reset_carryover_rule_public",
+          "value": "unresolved"
+        },
+        {
+          "finding": "The paper reports rollout counts for every policy-task-perturbation cell.",
+          "limit": "Counts do not identify episode clusters, order, retries, or a public rollout ledger.",
+          "locator": "Practical Recipe Section 4.1",
+          "source_keys": [
+            "recipe_pdf"
+          ],
+          "status": "partial",
+          "unit": "cluster_or_session_identity_public",
+          "value": "unresolved"
+        },
+        {
+          "finding": "The displayed finite-panel policy ordering is a deterministic function of the reported cell aggregates.",
+          "limit": "Population, threshold, and uncertainty claims remain unsupported without stronger design information.",
+          "locator": "Practical Recipe Section 4.2 and metric appendix",
+          "source_keys": [
+            "recipe_pdf"
+          ],
+          "status": "available",
+          "unit": "public_action_matches_identified_estimand",
+          "value": "satisfied"
+        },
+        {
+          "finding": "The complete finite policy-condition cross is a useful contrast to pair-conditioned free task construction.",
+          "limit": "Reset/carryover and episode-cluster evidence do not meet the full H178 conjunction.",
+          "locator": "Practical Recipe Sections 3--4",
+          "source_keys": [
+            "recipe_pdf"
+          ],
+          "status": "partial",
+          "unit": "target_compatible_positive_contrast",
+          "value": "unresolved"
+        }
+      ]
+    },
+    {
+      "arxiv_id": "2606.10382",
+      "system": "umi_bench",
+      "units": [
+        {
+          "finding": "UMI-Bench reports finite-task policy success/progress scores and comparisons across three fixed methods.",
+          "limit": "The action concerns the declared ten-task finite benchmark, not a population of future tasks.",
+          "locator": "UMI-Bench Sections 3.2 and 4",
+          "source_keys": [
+            "umi_pdf"
+          ],
+          "status": "available",
+          "unit": "declared_operational_action",
+          "value": "fixed_task_policy_score_or_ranking"
+        },
+        {
+          "finding": "The benchmark fixes episode lists and scene metadata, then evaluates all methods on those same lists.",
+          "limit": "This is a complete finite-panel design, not randomized pair sampling.",
+          "locator": "UMI-Bench Section 3.2",
+          "source_keys": [
+            "umi_pdf"
+          ],
+          "status": "available",
+          "unit": "candidate_pair_or_roster_fixed_before_context",
+          "value": "not_satisfied"
+        },
+        {
+          "finding": "All methods use the same episode list; each episode fixes initial state, task goal, scene configuration, and execution budget.",
+          "limit": "The exact evaluation episode files were not present in the fixed linked public dataset record.",
+          "locator": "UMI-Bench Section 3.2, Episode Specification",
+          "source_keys": [
+            "umi_pdf",
+            "h162_reset_audit"
+          ],
+          "status": "paper_described_only",
+          "unit": "context_fixed_before_candidate_assignment",
+          "value": "satisfied"
+        },
+        {
+          "finding": "Every evaluated method is run on the same finite episode list for each task.",
+          "limit": "The linked public artifacts do not reproduce the evaluation runner or complete assignment ledger.",
+          "locator": "UMI-Bench Sections 3.2 and 4",
+          "source_keys": [
+            "umi_pdf",
+            "h162_reset_audit"
+          ],
+          "status": "paper_described_only",
+          "unit": "stable_assignment_law_public",
+          "value": "satisfied"
+        },
+        {
+          "finding": "The finite context frame is specified by episode lists, scene JSON, reset images, factor cells, and task cards.",
+          "limit": "The exact episode-level scene files are absent from the fixed linked artifacts.",
+          "locator": "UMI-Bench Sections 3.1--3.2; Appendices C--D",
+          "source_keys": [
+            "umi_pdf",
+            "h162_reset_audit"
+          ],
+          "status": "paper_described_only",
+          "unit": "stable_context_law_public",
+          "value": "satisfied"
+        },
+        {
+          "finding": "The paper declares ten tasks, a fixed episode budget, and the same episode lists for each of three methods.",
+          "limit": "This is finite-panel support only.",
+          "locator": "UMI-Bench Tables 1 and 3; Sections 3.2 and 4",
+          "source_keys": [
+            "umi_pdf"
+          ],
+          "status": "available",
+          "unit": "declared_target_support_complete_or_bounded",
+          "value": "satisfied"
+        },
+        {
+          "finding": "Before each episode the robot is reset from scene metadata; operator checks match reset image and scene JSON, with invalid/safety-stop paths recorded.",
+          "limit": "No numeric object-state acceptance tolerance or released episode reset package is available.",
+          "locator": "UMI-Bench Section 3.2; Appendices A, C, and G",
+          "source_keys": [
+            "umi_pdf",
+            "h162_reset_audit"
+          ],
+          "status": "paper_described_only",
+          "unit": "reset_carryover_rule_public",
+          "value": "satisfied"
+        },
+        {
+          "finding": "Episodes have IDs, scene JSON, manifests, timestamps, execution status, rollout order, and task/model identity; heatmaps preserve rollout IDs.",
+          "limit": "The exact public rollout packages are not in the fixed linked dataset record.",
+          "locator": "UMI-Bench Section 3.2; Appendix C.1; rollout-level appendices",
+          "source_keys": [
+            "umi_pdf",
+            "h162_reset_audit"
+          ],
+          "status": "paper_described_only",
+          "unit": "cluster_or_session_identity_public",
+          "value": "satisfied"
+        },
+        {
+          "finding": "The finite-panel scores compare all fixed methods on the same declared episode lists.",
+          "limit": "This does not support future-task or deployment-population inference.",
+          "locator": "UMI-Bench Sections 3.2 and 4",
+          "source_keys": [
+            "umi_pdf"
+          ],
+          "status": "paper_described_only",
+          "unit": "public_action_matches_identified_estimand",
+          "value": "satisfied"
+        },
+        {
+          "finding": "UMI-Bench supplies a common finite episode frame, complete method support, reset protocol, and episode identity before candidate execution.",
+          "limit": "The contrast is source-described, not independently reproduced from released evaluation packages.",
+          "locator": "UMI-Bench Sections 3.1--4; Appendices C and G",
+          "source_keys": [
+            "umi_pdf",
+            "h162_reset_audit"
+          ],
+          "status": "paper_described_only",
+          "unit": "target_compatible_positive_contrast",
+          "value": "satisfied"
+        }
+      ]
+    },
+    {
+      "arxiv_id": "2607.02642",
+      "system": "gigaworld_wmbench",
+      "units": [
+        {
+          "finding": "WMBench evaluates whether world-model scores preserve real outcomes and rankings across policies, checkpoints, tasks, or rollout conditions.",
+          "limit": "The central action is evaluator alignment, not a deployed robot-policy leaderboard.",
+          "locator": "GigaWorld-1 Sections 3--4",
+          "source_keys": [
+            "gigaworld_pdf"
+          ],
+          "status": "available",
+          "unit": "declared_operational_action",
+          "value": "simulator_or_world_model_evaluation"
+        },
+        {
+          "finding": "Physical rollouts are collected from multiple named policy checkpoints, with each episode retaining its checkpoint-specific initial observation.",
+          "limit": "The source does not show that contexts were generated because of checkpoint identity.",
+          "locator": "GigaWorld-1 Sections 4.1--4.2",
+          "source_keys": [
+            "gigaworld_pdf"
+          ],
+          "status": "paper_described_only",
+          "unit": "candidate_pair_or_roster_fixed_before_context",
+          "value": "satisfied"
+        },
+        {
+          "finding": "World-model rollout begins from the first frame of each checkpoint's held-out physical episode.",
+          "limit": "No common initial-episode list is crossed across all policy checkpoints.",
+          "locator": "GigaWorld-1 Section 4.2",
+          "source_keys": [
+            "gigaworld_pdf"
+          ],
+          "status": "absent_from_fixed_sources",
+          "unit": "context_fixed_before_candidate_assignment",
+          "value": "unresolved"
+        },
+        {
+          "finding": "The paper identifies multiple checkpoint sources.",
+          "limit": "Checkpoint scheduling, selection, and physical episode allocation are not specified as an assignment law.",
+          "locator": "GigaWorld-1 Sections 4.1--4.2",
+          "source_keys": [
+            "gigaworld_pdf"
+          ],
+          "status": "absent_from_fixed_sources",
+          "unit": "stable_assignment_law_public",
+          "value": "unresolved"
+        },
+        {
+          "finding": "Eight task families and held-out episode-specific initial states are declared.",
+          "limit": "The context distribution by checkpoint and a bridge across checkpoint-specific episode sets are not public.",
+          "locator": "GigaWorld-1 Sections 4.1--4.2",
+          "source_keys": [
+            "gigaworld_pdf"
+          ],
+          "status": "partial",
+          "unit": "stable_context_law_public",
+          "value": "unresolved"
+        },
+        {
+          "finding": "The benchmark reports a bounded trajectory corpus and multiple policy checkpoints.",
+          "limit": "The fixed paper does not expose a complete checkpoint-by-common-context support matrix.",
+          "locator": "GigaWorld-1 Section 4.1",
+          "source_keys": [
+            "gigaworld_pdf"
+          ],
+          "status": "partial",
+          "unit": "declared_target_support_complete_or_bounded",
+          "value": "unresolved"
+        },
+        {
+          "finding": "Episode-specific initial observations and layouts are retained.",
+          "limit": "No physical reset, execution-order, washout, or carryover rule is specified for source rollout collection.",
+          "locator": "GigaWorld-1 Section 4.2",
+          "source_keys": [
+            "gigaworld_pdf"
+          ],
+          "status": "absent_from_fixed_sources",
+          "unit": "reset_carryover_rule_public",
+          "value": "unresolved"
+        },
+        {
+          "finding": "The source defines episode-disjoint splits and records each episode's initial observation, task, rollout, state alignment, and label.",
+          "limit": "This identifies episodes but not a common-context assignment across checkpoints.",
+          "locator": "GigaWorld-1 Sections 4.1--4.2",
+          "source_keys": [
+            "gigaworld_pdf"
+          ],
+          "status": "available",
+          "unit": "cluster_or_session_identity_public",
+          "value": "satisfied"
+        },
+        {
+          "finding": "Same-episode world-model versus physical outcome agreement is well-defined.",
+          "limit": "Cross-checkpoint ranking needs a common-target or bridge that is not supplied by the fixed source.",
+          "locator": "GigaWorld-1 Sections 3--4",
+          "source_keys": [
+            "gigaworld_pdf"
+          ],
+          "status": "partial",
+          "unit": "public_action_matches_identified_estimand",
+          "value": "unresolved"
+        },
+        {
+          "finding": "The episode-bound evaluator design is stronger than aggregate-only reporting.",
+          "limit": "Assignment, common context support, and physical reset/carryover do not meet the full H178 conjunction.",
+          "locator": "GigaWorld-1 Sections 4.1--4.2",
+          "source_keys": [
+            "gigaworld_pdf"
+          ],
+          "status": "partial",
+          "unit": "target_compatible_positive_contrast",
+          "value": "unresolved"
+        }
+      ]
+    },
+    {
+      "arxiv_id": "2607.04434",
+      "system": "robodojo",
+      "units": [
+        {
+          "finding": "RoboDojo declares a public policy leaderboard spanning simulation and standardized real-world evaluation.",
+          "limit": "The real-world component is a compact finite task suite, not a future-task population.",
+          "locator": "RoboDojo abstract; Sections 3.2--3.3 and 5",
+          "source_keys": [
+            "robodojo_pdf"
+          ],
+          "status": "available",
+          "unit": "declared_operational_action",
+          "value": "global_policy_ranking"
+        },
+        {
+          "finding": "Pre-collected evaluation layouts are replayed for each policy rather than constructed after a policy pair is selected.",
+          "limit": "Hidden verification layouts are an auxiliary publication check and remain outside public reproduction.",
+          "locator": "RoboDojo Section 3.2.3",
+          "source_keys": [
+            "robodojo_pdf"
+          ],
+          "status": "available",
+          "unit": "candidate_pair_or_roster_fixed_before_context",
+          "value": "not_satisfied"
+        },
+        {
+          "finding": "The same pre-collected layouts are replayed to ensure consistent initial conditions across policies and sessions.",
+          "limit": "The fixed paper describes but does not independently prove execution fidelity.",
+          "locator": "RoboDojo Section 3.2.3",
+          "source_keys": [
+            "robodojo_pdf"
+          ],
+          "status": "paper_described_only",
+          "unit": "context_fixed_before_candidate_assignment",
+          "value": "satisfied"
+        },
+        {
+          "finding": "For each real task, every evaluated policy receives the same declared trial count under the official RealEval protocol.",
+          "limit": "Live service scheduling and future roster changes are outside this finite protocol.",
+          "locator": "RoboDojo Section 3.2.3",
+          "source_keys": [
+            "robodojo_pdf"
+          ],
+          "status": "paper_described_only",
+          "unit": "stable_assignment_law_public",
+          "value": "satisfied"
+        },
+        {
+          "finding": "Hardware, workspace, lighting, task layouts, and pre-collected initial layouts are standardized for the finite real benchmark.",
+          "limit": "Hidden verification layouts are not public and cannot support a public common-target claim.",
+          "locator": "RoboDojo Sections 3.2 and 4.2",
+          "source_keys": [
+            "robodojo_pdf"
+          ],
+          "status": "paper_described_only",
+          "unit": "stable_context_law_public",
+          "value": "satisfied"
+        },
+        {
+          "finding": "The real benchmark fixes tasks, embodiments, policies, and a per-policy-per-task trial count.",
+          "limit": "The claim is bounded to the declared finite public layouts and evaluated roster.",
+          "locator": "RoboDojo Sections 3.2.1--3.2.3",
+          "source_keys": [
+            "robodojo_pdf"
+          ],
+          "status": "paper_described_only",
+          "unit": "declared_target_support_complete_or_bounded",
+          "value": "satisfied"
+        },
+        {
+          "finding": "RealEval standardizes scene reset and replays a pre-collected layout before every trial.",
+          "limit": "H162 found no public numeric object-state acceptance tolerance or independently reproducible reset package.",
+          "locator": "RoboDojo Sections 3.2.3 and 4.2; Appendix J",
+          "source_keys": [
+            "robodojo_pdf",
+            "h162_reset_audit"
+          ],
+          "status": "paper_described_only",
+          "unit": "reset_carryover_rule_public",
+          "value": "satisfied"
+        },
+        {
+          "finding": "All trials are recorded, independently scored by three evaluators, and evaluation videos and scores are required for verified submissions.",
+          "limit": "The fixed public record does not expose a complete immutable native assignment ledger.",
+          "locator": "RoboDojo Sections 3.2.3 and 3.3",
+          "source_keys": [
+            "robodojo_pdf",
+            "h162_reset_audit"
+          ],
+          "status": "paper_described_only",
+          "unit": "cluster_or_session_identity_public",
+          "value": "satisfied"
+        },
+        {
+          "finding": "The finite public-layout policy comparison uses common tasks and replayed initial layouts across policies.",
+          "limit": "Do not transport this finite-panel interpretation to hidden layouts or future policy/task populations.",
+          "locator": "RoboDojo Sections 3.2.3 and 3.3",
+          "source_keys": [
+            "robodojo_pdf"
+          ],
+          "status": "paper_described_only",
+          "unit": "public_action_matches_identified_estimand",
+          "value": "satisfied"
+        },
+        {
+          "finding": "RoboDojo supplies a common finite physical context frame, complete declared policy-task execution rule, reset protocol, and trial records before candidate execution.",
+          "limit": "The contrast is source-described and bounded to public layouts; execution artifacts do not independently complete H170's stronger site gate.",
+          "locator": "RoboDojo Sections 3.2--3.3 and 4.2",
+          "source_keys": [
+            "robodojo_pdf",
+            "h162_reset_audit"
+          ],
+          "status": "paper_described_only",
+          "unit": "target_compatible_positive_contrast",
+          "value": "satisfied"
+        }
+      ]
+    }
+  ],
+  "upstream_hashes": {
+    "h177_roster_sha256": "77bcbc919ae96157ee81347aec6ce36ccd69d33204414e38e9d51a340757ae09",
+    "h178_source_coding_sha256": "8a142a899a0a662536de854d6c7578c42a79316b375ee8544ba7e1417227de0a"
+  }
+}

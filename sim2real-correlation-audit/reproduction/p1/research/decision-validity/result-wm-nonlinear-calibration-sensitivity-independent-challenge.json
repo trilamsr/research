@@ -1,0 +1,140 @@
+{
+  "schema": "wm-nonlinear-calibration-sensitivity-independent-challenge-v1",
+  "status": "pass",
+  "method": "Node direct CSV grouping, pooled-adjacent-violators, and forecast-level Murphy decomposition; no Python import or execution",
+  "tolerance": 1e-10,
+  "numeric_comparisons": 68,
+  "panels": {
+    "Cosmos": {
+      "isotonic_level_map": [
+        {
+          "predicted_level": 0,
+          "isotonic_fitted_rate": 0.2,
+          "block_index": 0
+        },
+        {
+          "predicted_level": 0.1,
+          "isotonic_fitted_rate": 0.22499999999999998,
+          "block_index": 1
+        },
+        {
+          "predicted_level": 0.2,
+          "isotonic_fitted_rate": 0.25,
+          "block_index": 2
+        },
+        {
+          "predicted_level": 0.25,
+          "isotonic_fitted_rate": 0.28333333333333327,
+          "block_index": 3
+        },
+        {
+          "predicted_level": 0.3,
+          "isotonic_fitted_rate": 0.28333333333333327,
+          "block_index": 3
+        },
+        {
+          "predicted_level": 0.4,
+          "isotonic_fitted_rate": 0.5,
+          "block_index": 4
+        },
+        {
+          "predicted_level": 0.6,
+          "isotonic_fitted_rate": 0.7,
+          "block_index": 5
+        }
+      ],
+      "raw_policy_means": {
+        "Octo-Base": 0.2,
+        "Octo-Small": 0.15000000000000002,
+        "OpenVLA": 0.30000000000000004
+      },
+      "isotonic_policy_means": {
+        "Octo-Base": 0.26041666666666663,
+        "Octo-Small": 0.23958333333333331,
+        "OpenVLA": 0.4125
+      },
+      "original_winner": "OpenVLA",
+      "isotonic_winner": "OpenVLA",
+      "winner_changed": false,
+      "raw_cell_rate_mse": 0.02395833333333333,
+      "isotonic_in_sample_cell_rate_mse": 0.011493055555555555,
+      "murphy_forecast_level_decomposition": {
+        "reliability": 0.013333333333333332,
+        "resolution": 0.020815972222222215,
+        "uncertainty": 0.21164930555555556,
+        "brier": 0.2041666666666667,
+        "brier_skill_vs_empirical_prevalence": 0.03535394963497651
+      }
+    },
+    "IRASim": {
+      "isotonic_level_map": [
+        {
+          "predicted_level": 0,
+          "isotonic_fitted_rate": 0.125,
+          "block_index": 0
+        },
+        {
+          "predicted_level": 0.05,
+          "isotonic_fitted_rate": 0.275,
+          "block_index": 1
+        },
+        {
+          "predicted_level": 0.1,
+          "isotonic_fitted_rate": 0.275,
+          "block_index": 1
+        },
+        {
+          "predicted_level": 0.15,
+          "isotonic_fitted_rate": 0.36,
+          "block_index": 2
+        },
+        {
+          "predicted_level": 0.2,
+          "isotonic_fitted_rate": 0.36,
+          "block_index": 2
+        },
+        {
+          "predicted_level": 0.3,
+          "isotonic_fitted_rate": 0.36,
+          "block_index": 2
+        },
+        {
+          "predicted_level": 0.35,
+          "isotonic_fitted_rate": 0.5,
+          "block_index": 3
+        }
+      ],
+      "raw_policy_means": {
+        "Octo-Base": 0.2,
+        "Octo-Small": 0.0875,
+        "OpenVLA": 0.1875
+      },
+      "isotonic_policy_means": {
+        "Octo-Base": 0.3175,
+        "Octo-Small": 0.22125,
+        "OpenVLA": 0.37375
+      },
+      "original_winner": "Octo-Base",
+      "isotonic_winner": "OpenVLA",
+      "winner_changed": true,
+      "raw_cell_rate_mse": 0.055625,
+      "isotonic_in_sample_cell_rate_mse": 0.021312499999999998,
+      "murphy_forecast_level_decomposition": {
+        "reliability": 0.05218749999999999,
+        "resolution": 0.028003472222222214,
+        "uncertainty": 0.21164930555555556,
+        "brier": 0.23583333333333334,
+        "brier_skill_vs_empirical_prevalence": -0.11426462144204752
+      }
+    }
+  },
+  "protocol_sha256": "d3a1271501a1a2e566e932095d61373f8678f5613bedd442a3c7e413cb55746e",
+  "producer_sha256": "a413ea3be9ec0898e45383a837c597a53800eec0cb784cfaa4f9f6687034785c",
+  "producer_result_sha256": "b2eee259f49c6a85272d91bc6d23468a9bc99103f2e1ab77c0aa181b5d7f9ca2",
+  "input_sha256": "ec4f9b58ba4e1e8ced4adbe90ed8c2696fa86b449f6b2da6054848a9be7c48e5",
+  "runtime": {
+    "node": "v26.5.0",
+    "platform": "darwin",
+    "architecture": "arm64"
+  }
+}

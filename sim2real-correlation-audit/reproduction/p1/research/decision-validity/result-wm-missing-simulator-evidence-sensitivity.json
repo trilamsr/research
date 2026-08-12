@@ -1,0 +1,1524 @@
+{
+  "classification": "common_effective_evidence_changes_latent_winner_concordance",
+  "draws_per_scenario": 300000,
+  "implementation_sha256": "698960771aa0aad6d1d7bb087e7f18026b834ab85512b322df6b3eb44b0c3270",
+  "input_sha256": "ec4f9b58ba4e1e8ced4adbe90ed8c2696fa86b449f6b2da6054848a9be7c48e5",
+  "outcome_status": "review_triggered_outcome_exposed_exploratory",
+  "panels": {
+    "Cosmos": {
+      "candidates": [
+        "Octo-Base",
+        "Octo-Small",
+        "OpenVLA"
+      ],
+      "displayed_real_winner": "OpenVLA",
+      "displayed_sim_winner": "OpenVLA",
+      "model": "Cosmos",
+      "real_successes_of_20": [
+        [
+          2,
+          6,
+          3,
+          7
+        ],
+        [
+          3,
+          4,
+          2,
+          6
+        ],
+        [
+          10,
+          14,
+          6,
+          10
+        ]
+      ],
+      "scenarios": [
+        {
+          "draws": 300000,
+          "expected_real_regret_monte_carlo_se": 0.000262298444,
+          "expected_real_regret_of_sampled_sim_winner": 0.18622836967,
+          "monte_carlo_se": 0.000861408814,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.5,
+            "Octo-Small": 0.5,
+            "OpenVLA": 0.5
+          },
+          "posterior_mean_sim_winner_set": [
+            "Octo-Base",
+            "Octo-Small",
+            "OpenVLA"
+          ],
+          "prior_alpha_beta": 0.5,
+          "probability_displayed_real_winner_remains_real_best": 0.999893333333,
+          "probability_displayed_sim_winner_remains_sim_best": 0.334506666667,
+          "probability_positive_real_regret": 0.665506666667,
+          "probability_sampled_sim_selection_is_displayed_real_winner": 0.334506666667,
+          "probability_sampled_sim_winner_is_sampled_real_best": 0.334493333333,
+          "seed": 20260731,
+          "sim_effective_bernoulli_equivalents_per_policy_task": "0"
+        },
+        {
+          "draws": 300000,
+          "expected_real_regret_monte_carlo_se": 0.000269045106,
+          "expected_real_regret_of_sampled_sim_winner": 0.147856593058,
+          "monte_carlo_se": 0.000910887364,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.35,
+            "Octo-Small": 0.325,
+            "OpenVLA": 0.4
+          },
+          "posterior_mean_sim_winner_set": [
+            "OpenVLA"
+          ],
+          "prior_alpha_beta": 0.5,
+          "probability_displayed_real_winner_remains_real_best": 0.999926666667,
+          "probability_displayed_sim_winner_remains_sim_best": 0.467076666667,
+          "probability_positive_real_regret": 0.532943333333,
+          "probability_sampled_sim_selection_is_displayed_real_winner": 0.467076666667,
+          "probability_sampled_sim_winner_is_sampled_real_best": 0.467056666667,
+          "seed": 20260732,
+          "sim_effective_bernoulli_equivalents_per_policy_task": "1"
+        },
+        {
+          "draws": 300000,
+          "expected_real_regret_monte_carlo_se": 0.000265070444,
+          "expected_real_regret_of_sampled_sim_winner": 0.124208649683,
+          "monte_carlo_se": 0.000908193624,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.3,
+            "Octo-Small": 0.266666666667,
+            "OpenVLA": 0.366666666667
+          },
+          "posterior_mean_sim_winner_set": [
+            "OpenVLA"
+          ],
+          "prior_alpha_beta": 0.5,
+          "probability_displayed_real_winner_remains_real_best": 0.999926666667,
+          "probability_displayed_sim_winner_remains_sim_best": 0.550546666667,
+          "probability_positive_real_regret": 0.44945,
+          "probability_sampled_sim_selection_is_displayed_real_winner": 0.550546666667,
+          "probability_sampled_sim_winner_is_sampled_real_best": 0.55055,
+          "seed": 20260733,
+          "sim_effective_bernoulli_equivalents_per_policy_task": "2"
+        },
+        {
+          "draws": 300000,
+          "expected_real_regret_monte_carlo_se": 0.000237946262,
+          "expected_real_regret_of_sampled_sim_winner": 0.080970144441,
+          "monte_carlo_se": 0.000833871837,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.25,
+            "Octo-Small": 0.208333333333,
+            "OpenVLA": 0.333333333333
+          },
+          "posterior_mean_sim_winner_set": [
+            "OpenVLA"
+          ],
+          "prior_alpha_beta": 0.5,
+          "probability_displayed_real_winner_remains_real_best": 0.999903333333,
+          "probability_displayed_sim_winner_remains_sim_best": 0.703526666667,
+          "probability_positive_real_regret": 0.296536666667,
+          "probability_sampled_sim_selection_is_displayed_real_winner": 0.703526666667,
+          "probability_sampled_sim_winner_is_sampled_real_best": 0.703463333333,
+          "seed": 20260734,
+          "sim_effective_bernoulli_equivalents_per_policy_task": "5"
+        },
+        {
+          "draws": 300000,
+          "expected_real_regret_monte_carlo_se": 0.000192048353,
+          "expected_real_regret_of_sampled_sim_winner": 0.045877606414,
+          "monte_carlo_se": 0.000686187885,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.227272727273,
+            "Octo-Small": 0.181818181818,
+            "OpenVLA": 0.318181818182
+          },
+          "posterior_mean_sim_winner_set": [
+            "OpenVLA"
+          ],
+          "prior_alpha_beta": 0.5,
+          "probability_displayed_real_winner_remains_real_best": 0.99991,
+          "probability_displayed_sim_winner_remains_sim_best": 0.82984,
+          "probability_positive_real_regret": 0.170236666667,
+          "probability_sampled_sim_selection_is_displayed_real_winner": 0.82984,
+          "probability_sampled_sim_winner_is_sampled_real_best": 0.829763333333,
+          "seed": 20260735,
+          "sim_effective_bernoulli_equivalents_per_policy_task": "10"
+        },
+        {
+          "draws": 300000,
+          "expected_real_regret_monte_carlo_se": 0.000125304799,
+          "expected_real_regret_of_sampled_sim_winner": 0.017804933268,
+          "monte_carlo_se": 0.000457927026,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.214285714286,
+            "Octo-Small": 0.166666666667,
+            "OpenVLA": 0.309523809524
+          },
+          "posterior_mean_sim_winner_set": [
+            "OpenVLA"
+          ],
+          "prior_alpha_beta": 0.5,
+          "probability_displayed_real_winner_remains_real_best": 0.99989,
+          "probability_displayed_sim_winner_remains_sim_best": 0.93265,
+          "probability_positive_real_regret": 0.06746,
+          "probability_sampled_sim_selection_is_displayed_real_winner": 0.93265,
+          "probability_sampled_sim_winner_is_sampled_real_best": 0.93254,
+          "seed": 20260736,
+          "sim_effective_bernoulli_equivalents_per_policy_task": "20"
+        },
+        {
+          "draws": 300000,
+          "expected_real_regret_monte_carlo_se": 4.2389591e-05,
+          "expected_real_regret_of_sampled_sim_winner": 0.001942402795,
+          "monte_carlo_se": 0.000157554576,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.205882352941,
+            "Octo-Small": 0.156862745098,
+            "OpenVLA": 0.303921568627
+          },
+          "posterior_mean_sim_winner_set": [
+            "OpenVLA"
+          ],
+          "prior_alpha_beta": 0.5,
+          "probability_displayed_real_winner_remains_real_best": 0.999873333333,
+          "probability_displayed_sim_winner_remains_sim_best": 0.992623333333,
+          "probability_positive_real_regret": 0.007503333333,
+          "probability_sampled_sim_selection_is_displayed_real_winner": 0.992623333333,
+          "probability_sampled_sim_winner_is_sampled_real_best": 0.992496666667,
+          "seed": 20260737,
+          "sim_effective_bernoulli_equivalents_per_policy_task": "50"
+        },
+        {
+          "draws": 300000,
+          "expected_real_regret_monte_carlo_se": 7.66199e-06,
+          "expected_real_regret_of_sampled_sim_winner": 6.3600432e-05,
+          "monte_carlo_se": 3.2312802e-05,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.20297029703,
+            "Octo-Small": 0.153465346535,
+            "OpenVLA": 0.30198019802
+          },
+          "posterior_mean_sim_winner_set": [
+            "OpenVLA"
+          ],
+          "prior_alpha_beta": 0.5,
+          "probability_displayed_real_winner_remains_real_best": 0.99992,
+          "probability_displayed_sim_winner_remains_sim_best": 0.999766666667,
+          "probability_positive_real_regret": 0.000313333333,
+          "probability_sampled_sim_selection_is_displayed_real_winner": 0.999766666667,
+          "probability_sampled_sim_winner_is_sampled_real_best": 0.999686666667,
+          "seed": 20260738,
+          "sim_effective_bernoulli_equivalents_per_policy_task": "100"
+        },
+        {
+          "draws": 300000,
+          "expected_real_regret_monte_carlo_se": 5.73582e-07,
+          "expected_real_regret_of_sampled_sim_winner": 2.438179e-06,
+          "monte_carlo_se": 1.8855175e-05,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.200598802395,
+            "Octo-Small": 0.150698602794,
+            "OpenVLA": 0.300399201597
+          },
+          "posterior_mean_sim_winner_set": [
+            "OpenVLA"
+          ],
+          "prior_alpha_beta": 0.5,
+          "probability_displayed_real_winner_remains_real_best": 0.999893333333,
+          "probability_displayed_sim_winner_remains_sim_best": 1.0,
+          "probability_positive_real_regret": 0.000106666667,
+          "probability_sampled_sim_selection_is_displayed_real_winner": 1.0,
+          "probability_sampled_sim_winner_is_sampled_real_best": 0.999893333333,
+          "seed": 20260739,
+          "sim_effective_bernoulli_equivalents_per_policy_task": "500"
+        },
+        {
+          "draws": 300000,
+          "expected_real_regret_monte_carlo_se": 4.41622e-07,
+          "expected_real_regret_of_sampled_sim_winner": 1.823298e-06,
+          "monte_carlo_se": 1.8256506e-05,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.2,
+            "Octo-Small": 0.15,
+            "OpenVLA": 0.3
+          },
+          "posterior_mean_sim_winner_set": [
+            "OpenVLA"
+          ],
+          "prior_alpha_beta": 0.5,
+          "probability_displayed_real_winner_remains_real_best": 0.9999,
+          "probability_displayed_sim_winner_remains_sim_best": 1.0,
+          "probability_positive_real_regret": 0.0001,
+          "probability_sampled_sim_selection_is_displayed_real_winner": 1.0,
+          "probability_sampled_sim_winner_is_sampled_real_best": 0.9999,
+          "seed": 20260740,
+          "sim_effective_bernoulli_equivalents_per_policy_task": "infinity_fixed_display"
+        },
+        {
+          "draws": 300000,
+          "expected_real_regret_monte_carlo_se": 0.000251236212,
+          "expected_real_regret_of_sampled_sim_winner": 0.177854173099,
+          "monte_carlo_se": 0.000860645751,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.5,
+            "Octo-Small": 0.5,
+            "OpenVLA": 0.5
+          },
+          "posterior_mean_sim_winner_set": [
+            "Octo-Base",
+            "Octo-Small",
+            "OpenVLA"
+          ],
+          "prior_alpha_beta": 1.0,
+          "probability_displayed_real_winner_remains_real_best": 0.999843333333,
+          "probability_displayed_sim_winner_remains_sim_best": 0.333283333333,
+          "probability_positive_real_regret": 0.666693333333,
+          "probability_sampled_sim_selection_is_displayed_real_winner": 0.333283333333,
+          "probability_sampled_sim_winner_is_sampled_real_best": 0.333306666667,
+          "seed": 20260831,
+          "sim_effective_bernoulli_equivalents_per_policy_task": "0"
+        },
+        {
+          "draws": 300000,
+          "expected_real_regret_monte_carlo_se": 0.000258206788,
+          "expected_real_regret_of_sampled_sim_winner": 0.150840802547,
+          "monte_carlo_se": 0.000904475125,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.4,
+            "Octo-Small": 0.383333333333,
+            "OpenVLA": 0.433333333333
+          },
+          "posterior_mean_sim_winner_set": [
+            "OpenVLA"
+          ],
+          "prior_alpha_beta": 1.0,
+          "probability_displayed_real_winner_remains_real_best": 0.999886666667,
+          "probability_displayed_sim_winner_remains_sim_best": 0.432326666667,
+          "probability_positive_real_regret": 0.567656666667,
+          "probability_sampled_sim_selection_is_displayed_real_winner": 0.432326666667,
+          "probability_sampled_sim_winner_is_sampled_real_best": 0.432343333333,
+          "seed": 20260832,
+          "sim_effective_bernoulli_equivalents_per_policy_task": "1"
+        },
+        {
+          "draws": 300000,
+          "expected_real_regret_monte_carlo_se": 0.000256670513,
+          "expected_real_regret_of_sampled_sim_winner": 0.130190259152,
+          "monte_carlo_se": 0.000912775487,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.35,
+            "Octo-Small": 0.325,
+            "OpenVLA": 0.4
+          },
+          "posterior_mean_sim_winner_set": [
+            "OpenVLA"
+          ],
+          "prior_alpha_beta": 1.0,
+          "probability_displayed_real_winner_remains_real_best": 0.99987,
+          "probability_displayed_sim_winner_remains_sim_best": 0.507256666667,
+          "probability_positive_real_regret": 0.49277,
+          "probability_sampled_sim_selection_is_displayed_real_winner": 0.507256666667,
+          "probability_sampled_sim_winner_is_sampled_real_best": 0.50723,
+          "seed": 20260833,
+          "sim_effective_bernoulli_equivalents_per_policy_task": "2"
+        },
+        {
+          "draws": 300000,
+          "expected_real_regret_monte_carlo_se": 0.000237588816,
+          "expected_real_regret_of_sampled_sim_winner": 0.088838492049,
+          "monte_carlo_se": 0.00086468062,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.285714285714,
+            "Octo-Small": 0.25,
+            "OpenVLA": 0.357142857143
+          },
+          "posterior_mean_sim_winner_set": [
+            "OpenVLA"
+          ],
+          "prior_alpha_beta": 1.0,
+          "probability_displayed_real_winner_remains_real_best": 0.999833333333,
+          "probability_displayed_sim_winner_remains_sim_best": 0.660403333333,
+          "probability_positive_real_regret": 0.339693333333,
+          "probability_sampled_sim_selection_is_displayed_real_winner": 0.660403333333,
+          "probability_sampled_sim_winner_is_sampled_real_best": 0.660306666667,
+          "seed": 20260834,
+          "sim_effective_bernoulli_equivalents_per_policy_task": "5"
+        },
+        {
+          "draws": 300000,
+          "expected_real_regret_monte_carlo_se": 0.000194751316,
+          "expected_real_regret_of_sampled_sim_winner": 0.050493337711,
+          "monte_carlo_se": 0.000724682789,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.25,
+            "Octo-Small": 0.208333333333,
+            "OpenVLA": 0.333333333333
+          },
+          "posterior_mean_sim_winner_set": [
+            "OpenVLA"
+          ],
+          "prior_alpha_beta": 1.0,
+          "probability_displayed_real_winner_remains_real_best": 0.99989,
+          "probability_displayed_sim_winner_remains_sim_best": 0.804123333333,
+          "probability_positive_real_regret": 0.195943333333,
+          "probability_sampled_sim_selection_is_displayed_real_winner": 0.804123333333,
+          "probability_sampled_sim_winner_is_sampled_real_best": 0.804056666667,
+          "seed": 20260835,
+          "sim_effective_bernoulli_equivalents_per_policy_task": "10"
+        },
+        {
+          "draws": 300000,
+          "expected_real_regret_monte_carlo_se": 0.000128838429,
+          "expected_real_regret_of_sampled_sim_winner": 0.019767146983,
+          "monte_carlo_se": 0.000490042779,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.227272727273,
+            "Octo-Small": 0.181818181818,
+            "OpenVLA": 0.318181818182
+          },
+          "posterior_mean_sim_winner_set": [
+            "OpenVLA"
+          ],
+          "prior_alpha_beta": 1.0,
+          "probability_displayed_real_winner_remains_real_best": 0.999816666667,
+          "probability_displayed_sim_winner_remains_sim_best": 0.922026666667,
+          "probability_positive_real_regret": 0.07815,
+          "probability_sampled_sim_selection_is_displayed_real_winner": 0.922026666667,
+          "probability_sampled_sim_winner_is_sampled_real_best": 0.92185,
+          "seed": 20260836,
+          "sim_effective_bernoulli_equivalents_per_policy_task": "20"
+        },
+        {
+          "draws": 300000,
+          "expected_real_regret_monte_carlo_se": 4.1405083e-05,
+          "expected_real_regret_of_sampled_sim_winner": 0.001951016331,
+          "monte_carlo_se": 0.000162644807,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.211538461538,
+            "Octo-Small": 0.163461538462,
+            "OpenVLA": 0.307692307692
+          },
+          "posterior_mean_sim_winner_set": [
+            "OpenVLA"
+          ],
+          "prior_alpha_beta": 1.0,
+          "probability_displayed_real_winner_remains_real_best": 0.999856666667,
+          "probability_displayed_sim_winner_remains_sim_best": 0.992143333333,
+          "probability_positive_real_regret": 0.008,
+          "probability_sampled_sim_selection_is_displayed_real_winner": 0.992143333333,
+          "probability_sampled_sim_winner_is_sampled_real_best": 0.992,
+          "seed": 20260837,
+          "sim_effective_bernoulli_equivalents_per_policy_task": "50"
+        },
+        {
+          "draws": 300000,
+          "expected_real_regret_monte_carlo_se": 8.297395e-06,
+          "expected_real_regret_of_sampled_sim_winner": 7.9675533e-05,
+          "monte_carlo_se": 3.9006757e-05,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.205882352941,
+            "Octo-Small": 0.156862745098,
+            "OpenVLA": 0.303921568627
+          },
+          "posterior_mean_sim_winner_set": [
+            "OpenVLA"
+          ],
+          "prior_alpha_beta": 1.0,
+          "probability_displayed_real_winner_remains_real_best": 0.99986,
+          "probability_displayed_sim_winner_remains_sim_best": 0.999683333333,
+          "probability_positive_real_regret": 0.000456666667,
+          "probability_sampled_sim_selection_is_displayed_real_winner": 0.999683333333,
+          "probability_sampled_sim_winner_is_sampled_real_best": 0.999543333333,
+          "seed": 20260838,
+          "sim_effective_bernoulli_equivalents_per_policy_task": "100"
+        },
+        {
+          "draws": 300000,
+          "expected_real_regret_monte_carlo_se": 4.93395e-07,
+          "expected_real_regret_of_sampled_sim_winner": 2.222963e-06,
+          "monte_carlo_se": 2.1080446e-05,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.201195219124,
+            "Octo-Small": 0.151394422311,
+            "OpenVLA": 0.300796812749
+          },
+          "posterior_mean_sim_winner_set": [
+            "OpenVLA"
+          ],
+          "prior_alpha_beta": 1.0,
+          "probability_displayed_real_winner_remains_real_best": 0.999866666667,
+          "probability_displayed_sim_winner_remains_sim_best": 1.0,
+          "probability_positive_real_regret": 0.000133333333,
+          "probability_sampled_sim_selection_is_displayed_real_winner": 1.0,
+          "probability_sampled_sim_winner_is_sampled_real_best": 0.999866666667,
+          "seed": 20260839,
+          "sim_effective_bernoulli_equivalents_per_policy_task": "500"
+        },
+        {
+          "draws": 300000,
+          "expected_real_regret_monte_carlo_se": 6.62203e-07,
+          "expected_real_regret_of_sampled_sim_winner": 3.378949e-06,
+          "monte_carlo_se": 2.210921e-05,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.2,
+            "Octo-Small": 0.15,
+            "OpenVLA": 0.3
+          },
+          "posterior_mean_sim_winner_set": [
+            "OpenVLA"
+          ],
+          "prior_alpha_beta": 1.0,
+          "probability_displayed_real_winner_remains_real_best": 0.999853333333,
+          "probability_displayed_sim_winner_remains_sim_best": 1.0,
+          "probability_positive_real_regret": 0.000146666667,
+          "probability_sampled_sim_selection_is_displayed_real_winner": 1.0,
+          "probability_sampled_sim_winner_is_sampled_real_best": 0.999853333333,
+          "seed": 20260840,
+          "sim_effective_bernoulli_equivalents_per_policy_task": "infinity_fixed_display"
+        },
+        {
+          "draws": 300000,
+          "expected_real_regret_monte_carlo_se": 0.000232994316,
+          "expected_real_regret_of_sampled_sim_winner": 0.162996819184,
+          "monte_carlo_se": 0.000861032335,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.5,
+            "Octo-Small": 0.5,
+            "OpenVLA": 0.5
+          },
+          "posterior_mean_sim_winner_set": [
+            "Octo-Base",
+            "Octo-Small",
+            "OpenVLA"
+          ],
+          "prior_alpha_beta": 2.0,
+          "probability_displayed_real_winner_remains_real_best": 0.99964,
+          "probability_displayed_sim_winner_remains_sim_best": 0.333956666667,
+          "probability_positive_real_regret": 0.666093333333,
+          "probability_sampled_sim_selection_is_displayed_real_winner": 0.333956666667,
+          "probability_sampled_sim_winner_is_sampled_real_best": 0.333906666667,
+          "seed": 20260931,
+          "sim_effective_bernoulli_equivalents_per_policy_task": "0"
+        },
+        {
+          "draws": 300000,
+          "expected_real_regret_monte_carlo_se": 0.000237763422,
+          "expected_real_regret_of_sampled_sim_winner": 0.145101438961,
+          "monte_carlo_se": 0.000896130074,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.44,
+            "Octo-Small": 0.43,
+            "OpenVLA": 0.46
+          },
+          "posterior_mean_sim_winner_set": [
+            "OpenVLA"
+          ],
+          "prior_alpha_beta": 2.0,
+          "probability_displayed_real_winner_remains_real_best": 0.999616666667,
+          "probability_displayed_sim_winner_remains_sim_best": 0.404743333333,
+          "probability_positive_real_regret": 0.595316666667,
+          "probability_sampled_sim_selection_is_displayed_real_winner": 0.404743333333,
+          "probability_sampled_sim_winner_is_sampled_real_best": 0.404683333333,
+          "seed": 20260932,
+          "sim_effective_bernoulli_equivalents_per_policy_task": "1"
+        },
+        {
+          "draws": 300000,
+          "expected_real_regret_monte_carlo_se": 0.000238444376,
+          "expected_real_regret_of_sampled_sim_winner": 0.129935984426,
+          "monte_carlo_se": 0.00091064146,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.4,
+            "Octo-Small": 0.383333333333,
+            "OpenVLA": 0.433333333333
+          },
+          "posterior_mean_sim_winner_set": [
+            "OpenVLA"
+          ],
+          "prior_alpha_beta": 2.0,
+          "probability_displayed_real_winner_remains_real_best": 0.999673333333,
+          "probability_displayed_sim_winner_remains_sim_best": 0.465103333333,
+          "probability_positive_real_regret": 0.534923333333,
+          "probability_sampled_sim_selection_is_displayed_real_winner": 0.465103333333,
+          "probability_sampled_sim_winner_is_sampled_real_best": 0.465076666667,
+          "seed": 20260933,
+          "sim_effective_bernoulli_equivalents_per_policy_task": "2"
+        },
+        {
+          "draws": 300000,
+          "expected_real_regret_monte_carlo_se": 0.000227780347,
+          "expected_real_regret_of_sampled_sim_winner": 0.094564958859,
+          "monte_carlo_se": 0.000891792321,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.333333333333,
+            "Octo-Small": 0.305555555556,
+            "OpenVLA": 0.388888888889
+          },
+          "posterior_mean_sim_winner_set": [
+            "OpenVLA"
+          ],
+          "prior_alpha_beta": 2.0,
+          "probability_displayed_real_winner_remains_real_best": 0.999653333333,
+          "probability_displayed_sim_winner_remains_sim_best": 0.60703,
+          "probability_positive_real_regret": 0.393173333333,
+          "probability_sampled_sim_selection_is_displayed_real_winner": 0.60703,
+          "probability_sampled_sim_winner_is_sampled_real_best": 0.606826666667,
+          "seed": 20260934,
+          "sim_effective_bernoulli_equivalents_per_policy_task": "5"
+        },
+        {
+          "draws": 300000,
+          "expected_real_regret_monte_carlo_se": 0.000194730589,
+          "expected_real_regret_of_sampled_sim_winner": 0.057148984065,
+          "monte_carlo_se": 0.000780309639,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.285714285714,
+            "Octo-Small": 0.25,
+            "OpenVLA": 0.357142857143
+          },
+          "posterior_mean_sim_winner_set": [
+            "OpenVLA"
+          ],
+          "prior_alpha_beta": 2.0,
+          "probability_displayed_real_winner_remains_real_best": 0.999706666667,
+          "probability_displayed_sim_winner_remains_sim_best": 0.75968,
+          "probability_positive_real_regret": 0.24051,
+          "probability_sampled_sim_selection_is_displayed_real_winner": 0.75968,
+          "probability_sampled_sim_winner_is_sampled_real_best": 0.75949,
+          "seed": 20260935,
+          "sim_effective_bernoulli_equivalents_per_policy_task": "10"
+        },
+        {
+          "draws": 300000,
+          "expected_real_regret_monte_carlo_se": 0.000131516665,
+          "expected_real_regret_of_sampled_sim_winner": 0.022648251377,
+          "monte_carlo_se": 0.000541302453,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.25,
+            "Octo-Small": 0.208333333333,
+            "OpenVLA": 0.333333333333
+          },
+          "posterior_mean_sim_winner_set": [
+            "OpenVLA"
+          ],
+          "prior_alpha_beta": 2.0,
+          "probability_displayed_real_winner_remains_real_best": 0.99967,
+          "probability_displayed_sim_winner_remains_sim_best": 0.90288,
+          "probability_positive_real_regret": 0.097386666667,
+          "probability_sampled_sim_selection_is_displayed_real_winner": 0.90288,
+          "probability_sampled_sim_winner_is_sampled_real_best": 0.902613333333,
+          "seed": 20260936,
+          "sim_effective_bernoulli_equivalents_per_policy_task": "20"
+        },
+        {
+          "draws": 300000,
+          "expected_real_regret_monte_carlo_se": 4.3822282e-05,
+          "expected_real_regret_of_sampled_sim_winner": 0.002355822564,
+          "monte_carlo_se": 0.000187524458,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.222222222222,
+            "Octo-Small": 0.175925925926,
+            "OpenVLA": 0.314814814815
+          },
+          "posterior_mean_sim_winner_set": [
+            "OpenVLA"
+          ],
+          "prior_alpha_beta": 2.0,
+          "probability_displayed_real_winner_remains_real_best": 0.99961,
+          "probability_displayed_sim_winner_remains_sim_best": 0.989726666667,
+          "probability_positive_real_regret": 0.010663333333,
+          "probability_sampled_sim_selection_is_displayed_real_winner": 0.989726666667,
+          "probability_sampled_sim_winner_is_sampled_real_best": 0.989336666667,
+          "seed": 20260937,
+          "sim_effective_bernoulli_equivalents_per_policy_task": "50"
+        },
+        {
+          "draws": 300000,
+          "expected_real_regret_monte_carlo_se": 7.910837e-06,
+          "expected_real_regret_of_sampled_sim_winner": 8.4648108e-05,
+          "monte_carlo_se": 4.9198192e-05,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.211538461538,
+            "Octo-Small": 0.163461538462,
+            "OpenVLA": 0.307692307692
+          },
+          "posterior_mean_sim_winner_set": [
+            "OpenVLA"
+          ],
+          "prior_alpha_beta": 2.0,
+          "probability_displayed_real_winner_remains_real_best": 0.999626666667,
+          "probability_displayed_sim_winner_remains_sim_best": 0.999646666667,
+          "probability_positive_real_regret": 0.000726666667,
+          "probability_sampled_sim_selection_is_displayed_real_winner": 0.999646666667,
+          "probability_sampled_sim_winner_is_sampled_real_best": 0.999273333333,
+          "seed": 20260938,
+          "sim_effective_bernoulli_equivalents_per_policy_task": "100"
+        },
+        {
+          "draws": 300000,
+          "expected_real_regret_monte_carlo_se": 5.94317e-07,
+          "expected_real_regret_of_sampled_sim_winner": 4.220025e-06,
+          "monte_carlo_se": 3.1618033e-05,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.202380952381,
+            "Octo-Small": 0.152777777778,
+            "OpenVLA": 0.301587301587
+          },
+          "posterior_mean_sim_winner_set": [
+            "OpenVLA"
+          ],
+          "prior_alpha_beta": 2.0,
+          "probability_displayed_real_winner_remains_real_best": 0.9997,
+          "probability_displayed_sim_winner_remains_sim_best": 1.0,
+          "probability_positive_real_regret": 0.0003,
+          "probability_sampled_sim_selection_is_displayed_real_winner": 1.0,
+          "probability_sampled_sim_winner_is_sampled_real_best": 0.9997,
+          "seed": 20260939,
+          "sim_effective_bernoulli_equivalents_per_policy_task": "500"
+        },
+        {
+          "draws": 300000,
+          "expected_real_regret_monte_carlo_se": 7.61759e-07,
+          "expected_real_regret_of_sampled_sim_winner": 5.492121e-06,
+          "monte_carlo_se": 3.5270099e-05,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.2,
+            "Octo-Small": 0.15,
+            "OpenVLA": 0.3
+          },
+          "posterior_mean_sim_winner_set": [
+            "OpenVLA"
+          ],
+          "prior_alpha_beta": 2.0,
+          "probability_displayed_real_winner_remains_real_best": 0.999626666667,
+          "probability_displayed_sim_winner_remains_sim_best": 1.0,
+          "probability_positive_real_regret": 0.000373333333,
+          "probability_sampled_sim_selection_is_displayed_real_winner": 1.0,
+          "probability_sampled_sim_winner_is_sampled_real_best": 0.999626666667,
+          "seed": 20260940,
+          "sim_effective_bernoulli_equivalents_per_policy_task": "infinity_fixed_display"
+        }
+      ],
+      "sim_displayed_rates": [
+        [
+          0.2,
+          0.25,
+          0.1,
+          0.25
+        ],
+        [
+          0.2,
+          0.3,
+          0.0,
+          0.1
+        ],
+        [
+          0.4,
+          0.6,
+          0.0,
+          0.2
+        ]
+      ],
+      "stress_envelope": {
+        "all_scenarios_above_one_half": false,
+        "all_scenarios_below_one_half": false,
+        "first_listed_evidence_size_above_one_half_by_prior": {
+          "0.5": "2",
+          "1": "2",
+          "2": "5"
+        },
+        "maximum_probability_sampled_winners_match": 0.9999,
+        "minimum_probability_sampled_winners_match": 0.333306666667
+      },
+      "tasks": [
+        "carrot",
+        "cup",
+        "eggplant",
+        "pot"
+      ]
+    },
+    "IRASim": {
+      "candidates": [
+        "Octo-Base",
+        "Octo-Small",
+        "OpenVLA"
+      ],
+      "displayed_real_winner": "OpenVLA",
+      "displayed_sim_winner": "Octo-Base",
+      "model": "IRASim",
+      "real_successes_of_20": [
+        [
+          2,
+          6,
+          3,
+          7
+        ],
+        [
+          3,
+          4,
+          2,
+          6
+        ],
+        [
+          10,
+          14,
+          6,
+          10
+        ]
+      ],
+      "scenarios": [
+        {
+          "draws": 300000,
+          "expected_real_regret_monte_carlo_se": 0.000261874546,
+          "expected_real_regret_of_sampled_sim_winner": 0.186610899567,
+          "monte_carlo_se": 0.000860067263,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.5,
+            "Octo-Small": 0.5,
+            "OpenVLA": 0.5
+          },
+          "posterior_mean_sim_winner_set": [
+            "Octo-Base",
+            "Octo-Small",
+            "OpenVLA"
+          ],
+          "prior_alpha_beta": 0.5,
+          "probability_displayed_real_winner_remains_real_best": 0.999936666667,
+          "probability_displayed_sim_winner_remains_sim_best": 0.33339,
+          "probability_positive_real_regret": 0.667586666667,
+          "probability_sampled_sim_selection_is_displayed_real_winner": 0.33242,
+          "probability_sampled_sim_winner_is_sampled_real_best": 0.332413333333,
+          "seed": 20270731,
+          "sim_effective_bernoulli_equivalents_per_policy_task": "0"
+        },
+        {
+          "draws": 300000,
+          "expected_real_regret_monte_carlo_se": 0.000262488868,
+          "expected_real_regret_of_sampled_sim_winner": 0.17210065276,
+          "monte_carlo_se": 0.000883160699,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.35,
+            "Octo-Small": 0.29375,
+            "OpenVLA": 0.34375
+          },
+          "posterior_mean_sim_winner_set": [
+            "Octo-Base"
+          ],
+          "prior_alpha_beta": 0.5,
+          "probability_displayed_real_winner_remains_real_best": 0.999896666667,
+          "probability_displayed_sim_winner_remains_sim_best": 0.397603333333,
+          "probability_positive_real_regret": 0.626523333333,
+          "probability_sampled_sim_selection_is_displayed_real_winner": 0.37348,
+          "probability_sampled_sim_winner_is_sampled_real_best": 0.373476666667,
+          "seed": 20270732,
+          "sim_effective_bernoulli_equivalents_per_policy_task": "1"
+        },
+        {
+          "draws": 300000,
+          "expected_real_regret_monte_carlo_se": 0.000262412883,
+          "expected_real_regret_of_sampled_sim_winner": 0.164149842367,
+          "monte_carlo_se": 0.000893470603,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.3,
+            "Octo-Small": 0.225,
+            "OpenVLA": 0.291666666667
+          },
+          "posterior_mean_sim_winner_set": [
+            "Octo-Base"
+          ],
+          "prior_alpha_beta": 0.5,
+          "probability_displayed_real_winner_remains_real_best": 0.99988,
+          "probability_displayed_sim_winner_remains_sim_best": 0.430123333333,
+          "probability_positive_real_regret": 0.602533333333,
+          "probability_sampled_sim_selection_is_displayed_real_winner": 0.397443333333,
+          "probability_sampled_sim_winner_is_sampled_real_best": 0.397466666667,
+          "seed": 20270733,
+          "sim_effective_bernoulli_equivalents_per_policy_task": "2"
+        },
+        {
+          "draws": 300000,
+          "expected_real_regret_monte_carlo_se": 0.000259048332,
+          "expected_real_regret_of_sampled_sim_winner": 0.154223601398,
+          "monte_carlo_se": 0.000901904184,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.25,
+            "Octo-Small": 0.15625,
+            "OpenVLA": 0.239583333333
+          },
+          "posterior_mean_sim_winner_set": [
+            "Octo-Base"
+          ],
+          "prior_alpha_beta": 0.5,
+          "probability_displayed_real_winner_remains_real_best": 0.9999,
+          "probability_displayed_sim_winner_remains_sim_best": 0.49361,
+          "probability_positive_real_regret": 0.57727,
+          "probability_sampled_sim_selection_is_displayed_real_winner": 0.4227,
+          "probability_sampled_sim_winner_is_sampled_real_best": 0.42273,
+          "seed": 20270734,
+          "sim_effective_bernoulli_equivalents_per_policy_task": "5"
+        },
+        {
+          "draws": 300000,
+          "expected_real_regret_monte_carlo_se": 0.000256548292,
+          "expected_real_regret_of_sampled_sim_winner": 0.149935602445,
+          "monte_carlo_se": 0.000904399319,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.227272727273,
+            "Octo-Small": 0.125,
+            "OpenVLA": 0.215909090909
+          },
+          "posterior_mean_sim_winner_set": [
+            "Octo-Base"
+          ],
+          "prior_alpha_beta": 0.5,
+          "probability_displayed_real_winner_remains_real_best": 0.99992,
+          "probability_displayed_sim_winner_remains_sim_best": 0.539156666667,
+          "probability_positive_real_regret": 0.56796,
+          "probability_sampled_sim_selection_is_displayed_real_winner": 0.43202,
+          "probability_sampled_sim_winner_is_sampled_real_best": 0.43204,
+          "seed": 20270735,
+          "sim_effective_bernoulli_equivalents_per_policy_task": "10"
+        },
+        {
+          "draws": 300000,
+          "expected_real_regret_monte_carlo_se": 0.000254214732,
+          "expected_real_regret_of_sampled_sim_winner": 0.152278947373,
+          "monte_carlo_se": 0.000900828576,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.214285714286,
+            "Octo-Small": 0.107142857143,
+            "OpenVLA": 0.202380952381
+          },
+          "posterior_mean_sim_winner_set": [
+            "Octo-Base"
+          ],
+          "prior_alpha_beta": 0.5,
+          "probability_displayed_real_winner_remains_real_best": 0.999916666667,
+          "probability_displayed_sim_winner_remains_sim_best": 0.576826666667,
+          "probability_positive_real_regret": 0.580946666667,
+          "probability_sampled_sim_selection_is_displayed_real_winner": 0.419046666667,
+          "probability_sampled_sim_winner_is_sampled_real_best": 0.419053333333,
+          "seed": 20270736,
+          "sim_effective_bernoulli_equivalents_per_policy_task": "20"
+        },
+        {
+          "draws": 300000,
+          "expected_real_regret_monte_carlo_se": 0.00025160761,
+          "expected_real_regret_of_sampled_sim_winner": 0.164180846193,
+          "monte_carlo_se": 0.000883430658,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.205882352941,
+            "Octo-Small": 0.095588235294,
+            "OpenVLA": 0.19362745098
+          },
+          "posterior_mean_sim_winner_set": [
+            "Octo-Base"
+          ],
+          "prior_alpha_beta": 0.5,
+          "probability_displayed_real_winner_remains_real_best": 0.99995,
+          "probability_displayed_sim_winner_remains_sim_best": 0.62596,
+          "probability_positive_real_regret": 0.625956666667,
+          "probability_sampled_sim_selection_is_displayed_real_winner": 0.37402,
+          "probability_sampled_sim_winner_is_sampled_real_best": 0.374043333333,
+          "seed": 20270737,
+          "sim_effective_bernoulli_equivalents_per_policy_task": "50"
+        },
+        {
+          "draws": 300000,
+          "expected_real_regret_monte_carlo_se": 0.000245920764,
+          "expected_real_regret_of_sampled_sim_winner": 0.177330908597,
+          "monte_carlo_se": 0.000854073477,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.20297029703,
+            "Octo-Small": 0.091584158416,
+            "OpenVLA": 0.190594059406
+          },
+          "posterior_mean_sim_winner_set": [
+            "Octo-Base"
+          ],
+          "prior_alpha_beta": 0.5,
+          "probability_displayed_real_winner_remains_real_best": 0.99989,
+          "probability_displayed_sim_winner_remains_sim_best": 0.676533333333,
+          "probability_positive_real_regret": 0.676543333333,
+          "probability_sampled_sim_selection_is_displayed_real_winner": 0.323466666667,
+          "probability_sampled_sim_winner_is_sampled_real_best": 0.323456666667,
+          "seed": 20270738,
+          "sim_effective_bernoulli_equivalents_per_policy_task": "100"
+        },
+        {
+          "draws": 300000,
+          "expected_real_regret_monte_carlo_se": 0.000205280119,
+          "expected_real_regret_of_sampled_sim_winner": 0.222655852532,
+          "monte_carlo_se": 0.000651890413,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.200598802395,
+            "Octo-Small": 0.088323353293,
+            "OpenVLA": 0.188123752495
+          },
+          "posterior_mean_sim_winner_set": [
+            "Octo-Base"
+          ],
+          "prior_alpha_beta": 0.5,
+          "probability_displayed_real_winner_remains_real_best": 0.9999,
+          "probability_displayed_sim_winner_remains_sim_best": 0.850073333333,
+          "probability_positive_real_regret": 0.850016666667,
+          "probability_sampled_sim_selection_is_displayed_real_winner": 0.149926666667,
+          "probability_sampled_sim_winner_is_sampled_real_best": 0.149983333333,
+          "seed": 20270739,
+          "sim_effective_bernoulli_equivalents_per_policy_task": "500"
+        },
+        {
+          "draws": 300000,
+          "expected_real_regret_monte_carlo_se": 0.000123820333,
+          "expected_real_regret_of_sampled_sim_winner": 0.262315535102,
+          "monte_carlo_se": 1.8256506e-05,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.2,
+            "Octo-Small": 0.0875,
+            "OpenVLA": 0.1875
+          },
+          "posterior_mean_sim_winner_set": [
+            "Octo-Base"
+          ],
+          "prior_alpha_beta": 0.5,
+          "probability_displayed_real_winner_remains_real_best": 0.99989,
+          "probability_displayed_sim_winner_remains_sim_best": 1.0,
+          "probability_positive_real_regret": 0.9999,
+          "probability_sampled_sim_selection_is_displayed_real_winner": 0.0,
+          "probability_sampled_sim_winner_is_sampled_real_best": 0.0001,
+          "seed": 20270740,
+          "sim_effective_bernoulli_equivalents_per_policy_task": "infinity_fixed_display"
+        },
+        {
+          "draws": 300000,
+          "expected_real_regret_monte_carlo_se": 0.000251341054,
+          "expected_real_regret_of_sampled_sim_winner": 0.177933492212,
+          "monte_carlo_se": 0.000860365576,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.5,
+            "Octo-Small": 0.5,
+            "OpenVLA": 0.5
+          },
+          "posterior_mean_sim_winner_set": [
+            "Octo-Base",
+            "Octo-Small",
+            "OpenVLA"
+          ],
+          "prior_alpha_beta": 1.0,
+          "probability_displayed_real_winner_remains_real_best": 0.999843333333,
+          "probability_displayed_sim_winner_remains_sim_best": 0.334423333333,
+          "probability_positive_real_regret": 0.667126666667,
+          "probability_sampled_sim_selection_is_displayed_real_winner": 0.332853333333,
+          "probability_sampled_sim_winner_is_sampled_real_best": 0.332873333333,
+          "seed": 20270831,
+          "sim_effective_bernoulli_equivalents_per_policy_task": "0"
+        },
+        {
+          "draws": 300000,
+          "expected_real_regret_monte_carlo_se": 0.000252502405,
+          "expected_real_regret_of_sampled_sim_winner": 0.167581176723,
+          "monte_carlo_se": 0.000878943301,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.4,
+            "Octo-Small": 0.3625,
+            "OpenVLA": 0.395833333333
+          },
+          "posterior_mean_sim_winner_set": [
+            "Octo-Base"
+          ],
+          "prior_alpha_beta": 1.0,
+          "probability_displayed_real_winner_remains_real_best": 0.999843333333,
+          "probability_displayed_sim_winner_remains_sim_best": 0.37967,
+          "probability_positive_real_regret": 0.635046666667,
+          "probability_sampled_sim_selection_is_displayed_real_winner": 0.36496,
+          "probability_sampled_sim_winner_is_sampled_real_best": 0.364953333333,
+          "seed": 20270832,
+          "sim_effective_bernoulli_equivalents_per_policy_task": "1"
+        },
+        {
+          "draws": 300000,
+          "expected_real_regret_monte_carlo_se": 0.000252011406,
+          "expected_real_regret_of_sampled_sim_winner": 0.160960244114,
+          "monte_carlo_se": 0.000887949446,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.35,
+            "Octo-Small": 0.29375,
+            "OpenVLA": 0.34375
+          },
+          "posterior_mean_sim_winner_set": [
+            "Octo-Base"
+          ],
+          "prior_alpha_beta": 1.0,
+          "probability_displayed_real_winner_remains_real_best": 0.999833333333,
+          "probability_displayed_sim_winner_remains_sim_best": 0.413916666667,
+          "probability_positive_real_regret": 0.616033333333,
+          "probability_sampled_sim_selection_is_displayed_real_winner": 0.383943333333,
+          "probability_sampled_sim_winner_is_sampled_real_best": 0.383966666667,
+          "seed": 20270833,
+          "sim_effective_bernoulli_equivalents_per_policy_task": "2"
+        },
+        {
+          "draws": 300000,
+          "expected_real_regret_monte_carlo_se": 0.000249452455,
+          "expected_real_regret_of_sampled_sim_winner": 0.150004828231,
+          "monte_carlo_se": 0.00089956118,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.285714285714,
+            "Octo-Small": 0.205357142857,
+            "OpenVLA": 0.276785714286
+          },
+          "posterior_mean_sim_winner_set": [
+            "Octo-Base"
+          ],
+          "prior_alpha_beta": 1.0,
+          "probability_displayed_real_winner_remains_real_best": 0.999833333333,
+          "probability_displayed_sim_winner_remains_sim_best": 0.47614,
+          "probability_positive_real_regret": 0.58507,
+          "probability_sampled_sim_selection_is_displayed_real_winner": 0.414916666667,
+          "probability_sampled_sim_winner_is_sampled_real_best": 0.41493,
+          "seed": 20270834,
+          "sim_effective_bernoulli_equivalents_per_policy_task": "5"
+        },
+        {
+          "draws": 300000,
+          "expected_real_regret_monte_carlo_se": 0.000246263784,
+          "expected_real_regret_of_sampled_sim_winner": 0.144196144026,
+          "monte_carlo_se": 0.000903532106,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.25,
+            "Octo-Small": 0.15625,
+            "OpenVLA": 0.239583333333
+          },
+          "posterior_mean_sim_winner_set": [
+            "Octo-Base"
+          ],
+          "prior_alpha_beta": 1.0,
+          "probability_displayed_real_winner_remains_real_best": 0.999823333333,
+          "probability_displayed_sim_winner_remains_sim_best": 0.52902,
+          "probability_positive_real_regret": 0.571336666667,
+          "probability_sampled_sim_selection_is_displayed_real_winner": 0.428663333333,
+          "probability_sampled_sim_winner_is_sampled_real_best": 0.428663333333,
+          "seed": 20270835,
+          "sim_effective_bernoulli_equivalents_per_policy_task": "10"
+        },
+        {
+          "draws": 300000,
+          "expected_real_regret_monte_carlo_se": 0.000244276551,
+          "expected_real_regret_of_sampled_sim_winner": 0.144828041562,
+          "monte_carlo_se": 0.000901679317,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.227272727273,
+            "Octo-Small": 0.125,
+            "OpenVLA": 0.215909090909
+          },
+          "posterior_mean_sim_winner_set": [
+            "Octo-Base"
+          ],
+          "prior_alpha_beta": 1.0,
+          "probability_displayed_real_winner_remains_real_best": 0.999806666667,
+          "probability_displayed_sim_winner_remains_sim_best": 0.571053333333,
+          "probability_positive_real_regret": 0.578053333333,
+          "probability_sampled_sim_selection_is_displayed_real_winner": 0.42193,
+          "probability_sampled_sim_winner_is_sampled_real_best": 0.421946666667,
+          "seed": 20270836,
+          "sim_effective_bernoulli_equivalents_per_policy_task": "20"
+        },
+        {
+          "draws": 300000,
+          "expected_real_regret_monte_carlo_se": 0.000241439958,
+          "expected_real_regret_of_sampled_sim_winner": 0.155932415353,
+          "monte_carlo_se": 0.000884671313,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.211538461538,
+            "Octo-Small": 0.103365384615,
+            "OpenVLA": 0.199519230769
+          },
+          "posterior_mean_sim_winner_set": [
+            "Octo-Base"
+          ],
+          "prior_alpha_beta": 1.0,
+          "probability_displayed_real_winner_remains_real_best": 0.999823333333,
+          "probability_displayed_sim_winner_remains_sim_best": 0.623256666667,
+          "probability_positive_real_regret": 0.623316666667,
+          "probability_sampled_sim_selection_is_displayed_real_winner": 0.3767,
+          "probability_sampled_sim_winner_is_sampled_real_best": 0.376683333333,
+          "seed": 20270837,
+          "sim_effective_bernoulli_equivalents_per_policy_task": "50"
+        },
+        {
+          "draws": 300000,
+          "expected_real_regret_monte_carlo_se": 0.000236133037,
+          "expected_real_regret_of_sampled_sim_winner": 0.168983762538,
+          "monte_carlo_se": 0.000854614131,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.205882352941,
+            "Octo-Small": 0.095588235294,
+            "OpenVLA": 0.19362745098
+          },
+          "posterior_mean_sim_winner_set": [
+            "Octo-Base"
+          ],
+          "prior_alpha_beta": 1.0,
+          "probability_displayed_real_winner_remains_real_best": 0.99982,
+          "probability_displayed_sim_winner_remains_sim_best": 0.67581,
+          "probability_positive_real_regret": 0.675756666667,
+          "probability_sampled_sim_selection_is_displayed_real_winner": 0.32419,
+          "probability_sampled_sim_winner_is_sampled_real_best": 0.324243333333,
+          "seed": 20270838,
+          "sim_effective_bernoulli_equivalents_per_policy_task": "100"
+        },
+        {
+          "draws": 300000,
+          "expected_real_regret_monte_carlo_se": 0.000198281307,
+          "expected_real_regret_of_sampled_sim_winner": 0.21270381113,
+          "monte_carlo_se": 0.000652670983,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.201195219124,
+            "Octo-Small": 0.089143426295,
+            "OpenVLA": 0.18874501992
+          },
+          "posterior_mean_sim_winner_set": [
+            "Octo-Base"
+          ],
+          "prior_alpha_beta": 1.0,
+          "probability_displayed_real_winner_remains_real_best": 0.9998,
+          "probability_displayed_sim_winner_remains_sim_best": 0.849706666667,
+          "probability_positive_real_regret": 0.84958,
+          "probability_sampled_sim_selection_is_displayed_real_winner": 0.150293333333,
+          "probability_sampled_sim_winner_is_sampled_real_best": 0.15042,
+          "seed": 20270839,
+          "sim_effective_bernoulli_equivalents_per_policy_task": "500"
+        },
+        {
+          "draws": 300000,
+          "expected_real_regret_monte_carlo_se": 0.000122128216,
+          "expected_real_regret_of_sampled_sim_winner": 0.249839915899,
+          "monte_carlo_se": 2.0815307e-05,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.2,
+            "Octo-Small": 0.0875,
+            "OpenVLA": 0.1875
+          },
+          "posterior_mean_sim_winner_set": [
+            "Octo-Base"
+          ],
+          "prior_alpha_beta": 1.0,
+          "probability_displayed_real_winner_remains_real_best": 0.999856666667,
+          "probability_displayed_sim_winner_remains_sim_best": 1.0,
+          "probability_positive_real_regret": 0.99987,
+          "probability_sampled_sim_selection_is_displayed_real_winner": 0.0,
+          "probability_sampled_sim_winner_is_sampled_real_best": 0.00013,
+          "seed": 20270840,
+          "sim_effective_bernoulli_equivalents_per_policy_task": "infinity_fixed_display"
+        },
+        {
+          "draws": 300000,
+          "expected_real_regret_monte_carlo_se": 0.00023306298,
+          "expected_real_regret_of_sampled_sim_winner": 0.163025198328,
+          "monte_carlo_se": 0.00086117369,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.5,
+            "Octo-Small": 0.5,
+            "OpenVLA": 0.5
+          },
+          "posterior_mean_sim_winner_set": [
+            "Octo-Base",
+            "Octo-Small",
+            "OpenVLA"
+          ],
+          "prior_alpha_beta": 2.0,
+          "probability_displayed_real_winner_remains_real_best": 0.999666666667,
+          "probability_displayed_sim_winner_remains_sim_best": 0.332883333333,
+          "probability_positive_real_regret": 0.665873333333,
+          "probability_sampled_sim_selection_is_displayed_real_winner": 0.334183333333,
+          "probability_sampled_sim_winner_is_sampled_real_best": 0.334126666667,
+          "seed": 20270931,
+          "sim_effective_bernoulli_equivalents_per_policy_task": "0"
+        },
+        {
+          "draws": 300000,
+          "expected_real_regret_monte_carlo_se": 0.000233485451,
+          "expected_real_regret_of_sampled_sim_winner": 0.156373972532,
+          "monte_carlo_se": 0.00087398034,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.44,
+            "Octo-Small": 0.4175,
+            "OpenVLA": 0.4375
+          },
+          "posterior_mean_sim_winner_set": [
+            "Octo-Base"
+          ],
+          "prior_alpha_beta": 2.0,
+          "probability_displayed_real_winner_remains_real_best": 0.999633333333,
+          "probability_displayed_sim_winner_remains_sim_best": 0.36837,
+          "probability_positive_real_regret": 0.644386666667,
+          "probability_sampled_sim_selection_is_displayed_real_winner": 0.355616666667,
+          "probability_sampled_sim_winner_is_sampled_real_best": 0.355613333333,
+          "seed": 20270932,
+          "sim_effective_bernoulli_equivalents_per_policy_task": "1"
+        },
+        {
+          "draws": 300000,
+          "expected_real_regret_monte_carlo_se": 0.000233449045,
+          "expected_real_regret_of_sampled_sim_winner": 0.150676160724,
+          "monte_carlo_se": 0.000883531954,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.4,
+            "Octo-Small": 0.3625,
+            "OpenVLA": 0.395833333333
+          },
+          "posterior_mean_sim_winner_set": [
+            "Octo-Base"
+          ],
+          "prior_alpha_beta": 2.0,
+          "probability_displayed_real_winner_remains_real_best": 0.99962,
+          "probability_displayed_sim_winner_remains_sim_best": 0.394216666667,
+          "probability_positive_real_regret": 0.625743333333,
+          "probability_sampled_sim_selection_is_displayed_real_winner": 0.374246666667,
+          "probability_sampled_sim_winner_is_sampled_real_best": 0.374256666667,
+          "seed": 20270933,
+          "sim_effective_bernoulli_equivalents_per_policy_task": "2"
+        },
+        {
+          "draws": 300000,
+          "expected_real_regret_monte_carlo_se": 0.000231403323,
+          "expected_real_regret_of_sampled_sim_winner": 0.141061941021,
+          "monte_carlo_se": 0.000895572278,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.333333333333,
+            "Octo-Small": 0.270833333333,
+            "OpenVLA": 0.326388888889
+          },
+          "posterior_mean_sim_winner_set": [
+            "Octo-Base"
+          ],
+          "prior_alpha_beta": 2.0,
+          "probability_displayed_real_winner_remains_real_best": 0.99969,
+          "probability_displayed_sim_winner_remains_sim_best": 0.454333333333,
+          "probability_positive_real_regret": 0.596876666667,
+          "probability_sampled_sim_selection_is_displayed_real_winner": 0.403083333333,
+          "probability_sampled_sim_winner_is_sampled_real_best": 0.403123333333,
+          "seed": 20270934,
+          "sim_effective_bernoulli_equivalents_per_policy_task": "5"
+        },
+        {
+          "draws": 300000,
+          "expected_real_regret_monte_carlo_se": 0.00022881881,
+          "expected_real_regret_of_sampled_sim_winner": 0.133402655321,
+          "monte_carlo_se": 0.000902915925,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.285714285714,
+            "Octo-Small": 0.205357142857,
+            "OpenVLA": 0.276785714286
+          },
+          "posterior_mean_sim_winner_set": [
+            "Octo-Base"
+          ],
+          "prior_alpha_beta": 2.0,
+          "probability_displayed_real_winner_remains_real_best": 0.999683333333,
+          "probability_displayed_sim_winner_remains_sim_best": 0.509503333333,
+          "probability_positive_real_regret": 0.57364,
+          "probability_sampled_sim_selection_is_displayed_real_winner": 0.42641,
+          "probability_sampled_sim_winner_is_sampled_real_best": 0.42636,
+          "seed": 20270935,
+          "sim_effective_bernoulli_equivalents_per_policy_task": "10"
+        },
+        {
+          "draws": 300000,
+          "expected_real_regret_monte_carlo_se": 0.000226399341,
+          "expected_real_regret_of_sampled_sim_winner": 0.132219033832,
+          "monte_carlo_se": 0.000902561162,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.25,
+            "Octo-Small": 0.15625,
+            "OpenVLA": 0.239583333333
+          },
+          "posterior_mean_sim_winner_set": [
+            "Octo-Base"
+          ],
+          "prior_alpha_beta": 2.0,
+          "probability_displayed_real_winner_remains_real_best": 0.999673333333,
+          "probability_displayed_sim_winner_remains_sim_best": 0.56185,
+          "probability_positive_real_regret": 0.574933333333,
+          "probability_sampled_sim_selection_is_displayed_real_winner": 0.425026666667,
+          "probability_sampled_sim_winner_is_sampled_real_best": 0.425066666667,
+          "seed": 20270936,
+          "sim_effective_bernoulli_equivalents_per_policy_task": "20"
+        },
+        {
+          "draws": 300000,
+          "expected_real_regret_monte_carlo_se": 0.000223594468,
+          "expected_real_regret_of_sampled_sim_winner": 0.141627803691,
+          "monte_carlo_se": 0.000886895568,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.222222222222,
+            "Octo-Small": 0.118055555556,
+            "OpenVLA": 0.210648148148
+          },
+          "posterior_mean_sim_winner_set": [
+            "Octo-Base"
+          ],
+          "prior_alpha_beta": 2.0,
+          "probability_displayed_real_winner_remains_real_best": 0.999656666667,
+          "probability_displayed_sim_winner_remains_sim_best": 0.618336666667,
+          "probability_positive_real_regret": 0.618426666667,
+          "probability_sampled_sim_selection_is_displayed_real_winner": 0.38155,
+          "probability_sampled_sim_winner_is_sampled_real_best": 0.381573333333,
+          "seed": 20270937,
+          "sim_effective_bernoulli_equivalents_per_policy_task": "50"
+        },
+        {
+          "draws": 300000,
+          "expected_real_regret_monte_carlo_se": 0.000219351715,
+          "expected_real_regret_of_sampled_sim_winner": 0.153926385097,
+          "monte_carlo_se": 0.000857322951,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.211538461538,
+            "Octo-Small": 0.103365384615,
+            "OpenVLA": 0.199519230769
+          },
+          "posterior_mean_sim_winner_set": [
+            "Octo-Base"
+          ],
+          "prior_alpha_beta": 2.0,
+          "probability_displayed_real_winner_remains_real_best": 0.999663333333,
+          "probability_displayed_sim_winner_remains_sim_best": 0.67182,
+          "probability_positive_real_regret": 0.671753333333,
+          "probability_sampled_sim_selection_is_displayed_real_winner": 0.32818,
+          "probability_sampled_sim_winner_is_sampled_real_best": 0.328246666667,
+          "seed": 20270938,
+          "sim_effective_bernoulli_equivalents_per_policy_task": "100"
+        },
+        {
+          "draws": 300000,
+          "expected_real_regret_monte_carlo_se": 0.000185984168,
+          "expected_real_regret_of_sampled_sim_winner": 0.194346024649,
+          "monte_carlo_se": 0.000655797854,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.202380952381,
+            "Octo-Small": 0.090773809524,
+            "OpenVLA": 0.18998015873
+          },
+          "posterior_mean_sim_winner_set": [
+            "Octo-Base"
+          ],
+          "prior_alpha_beta": 2.0,
+          "probability_displayed_real_winner_remains_real_best": 0.999606666667,
+          "probability_displayed_sim_winner_remains_sim_best": 0.84805,
+          "probability_positive_real_regret": 0.84782,
+          "probability_sampled_sim_selection_is_displayed_real_winner": 0.15195,
+          "probability_sampled_sim_winner_is_sampled_real_best": 0.15218,
+          "seed": 20270939,
+          "sim_effective_bernoulli_equivalents_per_policy_task": "500"
+        },
+        {
+          "draws": 300000,
+          "expected_real_regret_monte_carlo_se": 0.000118911827,
+          "expected_real_regret_of_sampled_sim_winner": 0.229300259497,
+          "monte_carlo_se": 2.9623414e-05,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.2,
+            "Octo-Small": 0.0875,
+            "OpenVLA": 0.1875
+          },
+          "posterior_mean_sim_winner_set": [
+            "Octo-Base"
+          ],
+          "prior_alpha_beta": 2.0,
+          "probability_displayed_real_winner_remains_real_best": 0.9997,
+          "probability_displayed_sim_winner_remains_sim_best": 1.0,
+          "probability_positive_real_regret": 0.999736666667,
+          "probability_sampled_sim_selection_is_displayed_real_winner": 0.0,
+          "probability_sampled_sim_winner_is_sampled_real_best": 0.000263333333,
+          "seed": 20270940,
+          "sim_effective_bernoulli_equivalents_per_policy_task": "infinity_fixed_display"
+        }
+      ],
+      "sim_displayed_rates": [
+        [
+          0.3,
+          0.3,
+          0.1,
+          0.1
+        ],
+        [
+          0.0,
+          0.3,
+          0.0,
+          0.05
+        ],
+        [
+          0.35,
+          0.2,
+          0.05,
+          0.15
+        ]
+      ],
+      "stress_envelope": {
+        "all_scenarios_above_one_half": false,
+        "all_scenarios_below_one_half": true,
+        "first_listed_evidence_size_above_one_half_by_prior": {
+          "0.5": null,
+          "1": null,
+          "2": null
+        },
+        "maximum_probability_sampled_winners_match": 0.43204,
+        "minimum_probability_sampled_winners_match": 0.0001
+      },
+      "tasks": [
+        "carrot",
+        "cup",
+        "eggplant",
+        "pot"
+      ]
+    }
+  },
+  "priors": [
+    0.5,
+    1.0,
+    2.0
+  ],
+  "protocol_sha256": "281350fdfedaa004ccf108f9bbc33df9f217095c1b91dbea1697d11260918352",
+  "runtime": {
+    "numpy": "2.0.2",
+    "python": "3.12.13"
+  },
+  "schema": "wm-missing-simulator-evidence-sensitivity-v1",
+  "scope": "Finite retained WM-PolicyEval panels under independent Beta-binomial cell sensitivities with one common effective simulator evidence size for every policy-task cell. The estimand is posterior concordance between independently sampled latent simulator-best and real-best policies, not reliability of an observed-data operational action. With common positive evidence and a symmetric prior, the posterior-mean simulator action is unchanged because every displayed rate receives the same positive affine transform. Evidence sizes are not estimates of the missing simulator denominator and results do not transport.",
+  "sim_effective_evidence_grid": [
+    0.0,
+    1.0,
+    2.0,
+    5.0,
+    10.0,
+    20.0,
+    50.0,
+    100.0,
+    500.0,
+    "infinity_fixed_display"
+  ],
+  "stage_zero": {
+    "draws_per_check": 20000,
+    "fixed_display_checks": 2,
+    "rows": [
+      {
+        "displayed_real_winner": "OpenVLA",
+        "displayed_sim_winner": "OpenVLA",
+        "fixed_prior_1_probability": 0.99985,
+        "model": "Cosmos"
+      },
+      {
+        "displayed_real_winner": "OpenVLA",
+        "displayed_sim_winner": "Octo-Base",
+        "fixed_prior_1_probability": 0.0003,
+        "model": "IRASim"
+      }
+    ],
+    "zero_evidence_analytic_limit": 0.333333333333,
+    "zero_limit_checks": 6
+  },
+  "status": "pass"
+}

@@ -1,0 +1,119 @@
+{
+  "classification": "date_aliased_with_complete_policy_regime_support",
+  "clock_regime_treated_as_session_or_cause": false,
+  "composition_metrics": {
+    "cramers_v": 0.45153956907594217,
+    "pearson_chi_square_descriptive": 121.10946157012481,
+    "policy_distribution_total_variation": 0.3857209302325581
+  },
+  "date_alias": {
+    "date_count": 13,
+    "date_only_design_rank": 13,
+    "date_plus_regime_design_rank": 13,
+    "date_regimes": {
+      "2026-03-05": [
+        1
+      ],
+      "2026-03-06": [
+        1
+      ],
+      "2026-03-10": [
+        1
+      ],
+      "2026-03-13": [
+        1
+      ],
+      "2026-03-17": [
+        1
+      ],
+      "2026-03-19": [
+        1
+      ],
+      "2026-03-20": [
+        1
+      ],
+      "2026-03-24": [
+        2
+      ],
+      "2026-03-25": [
+        2
+      ],
+      "2026-03-27": [
+        2
+      ],
+      "2026-03-29": [
+        2
+      ],
+      "2026-04-03": [
+        2
+      ],
+      "2026-04-04": [
+        2
+      ]
+    },
+    "exact_indicator_reconstruction": true,
+    "exact_single_regime_per_date": true,
+    "rank_increment": 0,
+    "regime_2_alias_dates": [
+      "2026-03-24",
+      "2026-03-25",
+      "2026-03-27",
+      "2026-03-29",
+      "2026-04-03",
+      "2026-04-04"
+    ]
+  },
+  "decision_consequence": "Exact date alias blocks separate clock-regime effect identification after saturated UTC-date adjustment on this release. Complete policy-regime cells establish only coarse structural overlap, not validity or precision.",
+  "episode_count": 594,
+  "input_sha256": {
+    "projection-h206-phail-clock-offset-regimes.csv": "7b7af23688e230325ec69070c8e5cd5523224990d7bc44defbe5b30f12c65529",
+    "result-h187-phail-context-support-sanitized.csv": "ad43fca1da065a1cb7fd84dfa9afc5691c72ebe12e7f165c68a0050e51e87ebe",
+    "result-h206-phail-monotonic-wall-clock-bridge-independent-challenge.json": "6867989afb5a2c9938ee08126defa647b7a20b26f8c48f42a7d13cc5a4787268",
+    "result-h206-phail-monotonic-wall-clock-bridge.json": "1b46e77400b15ecd886d165f13fca06b3f6834a0cc4f70082da4be4a39f51e19",
+    "result-h207-phail-clock-regime-temporal-structure-independent-challenge.json": "39839285b7a84acf2fb3a5b74afe18a3fb32d51e2491358d6b42ad24b80032e2",
+    "result-h207-phail-clock-regime-temporal-structure.json": "31ef2b4162157769bf9f99ce47f50865076b99e114c7a67592319ce8df2b2252"
+  },
+  "outcome_analysis_authorized": false,
+  "performance_or_later_state_opened": false,
+  "policy_regime_support": {
+    "all_policy_regime_cells_positive": true,
+    "counts": {
+      "act": {
+        "1": 107,
+        "2": 44
+      },
+      "groot": {
+        "1": 18,
+        "2": 146
+      },
+      "openpi": {
+        "1": 81,
+        "2": 82
+      },
+      "smolvla": {
+        "1": 44,
+        "2": 72
+      }
+    },
+    "maximum_cell_count": 146,
+    "minimum_cell_count": 18,
+    "policies": [
+      "act",
+      "groot",
+      "openpi",
+      "smolvla"
+    ]
+  },
+  "protocol_sha256": "a53f5b5a5a9bc64adb82640de9dedcc4ad78a77cdb65580a3386ce429ec15b09",
+  "sampling_p_value_reported": false,
+  "schema": "h208-phail-clock-regime-date-identifiability-v1",
+  "status": "result_exposed_exploratory",
+  "synthetic_controls": {
+    "complete_support": true,
+    "crossed_date_not_alias": true,
+    "known_cramers_v": true,
+    "known_total_variation": true,
+    "nested_alias": true,
+    "support_gap": true
+  }
+}

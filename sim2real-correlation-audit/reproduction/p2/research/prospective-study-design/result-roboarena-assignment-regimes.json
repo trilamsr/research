@@ -1,0 +1,662 @@
+{
+  "analysis_protocol": "protocol-roboarena-assignment-regime-diagnostic.md",
+  "bounded_result": "Within this pinned release, the February--July two-policy metadata are incompatible with a stable independent/exchangeable continuation of the exposed July--January empirical policy-0 incidence reference. The current active roster and assignment epoch therefore must be established before cumulative historical pair coverage is used for a fixed-seven-policy decision.",
+  "decision_consequence": "Future public-release intake must segment or explicitly bridge active-roster and assignment epochs before pooling support. A cumulative 21-edge graph is insufficient evidence for a current seven-policy decision.",
+  "epochs": {
+    "policy_0_absent_2026_02_through_2026_04": {
+      "active_policy_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "completion_max": "2026-04-30T06:13:37.165786+00:00",
+      "completion_min": "2026-02-01T05:09:55.538931+00:00",
+      "connected_component_count": 2,
+      "connected_components": [
+        [
+          0
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      ],
+      "fixed_policy_records": 488,
+      "isolated_policy_indices": [
+        0
+      ],
+      "monthly_graphs": [
+        {
+          "active_policy_indices": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "connected_components": [
+            [
+              0
+            ],
+            [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          ],
+          "isolated_policy_indices": [
+            0
+          ],
+          "month": "2026-02",
+          "supported_pair_count": 15,
+          "two_policy_sessions": 95
+        },
+        {
+          "active_policy_indices": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "connected_components": [
+            [
+              0
+            ],
+            [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          ],
+          "isolated_policy_indices": [
+            0
+          ],
+          "month": "2026-03",
+          "supported_pair_count": 15,
+          "two_policy_sessions": 100
+        },
+        {
+          "active_policy_indices": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "connected_components": [
+            [
+              0
+            ],
+            [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          ],
+          "isolated_policy_indices": [
+            0
+          ],
+          "month": "2026-04",
+          "supported_pair_count": 15,
+          "two_policy_sessions": 49
+        }
+      ],
+      "months": [
+        "2026-02",
+        "2026-03",
+        "2026-04"
+      ],
+      "pair_observations": 244,
+      "policy_session_incidence_rates": {
+        "0": 0.0,
+        "1": 0.3770491803278688,
+        "2": 0.3401639344262295,
+        "3": 0.29918032786885246,
+        "4": 0.3442622950819672,
+        "5": 0.30327868852459017,
+        "6": 0.3360655737704918
+      },
+      "policy_session_incidences": {
+        "0": 0,
+        "1": 92,
+        "2": 83,
+        "3": 73,
+        "4": 84,
+        "5": 74,
+        "6": 82
+      },
+      "same_support_graph_in_every_month": true,
+      "supported_pair_count": 15,
+      "supported_pairs": [
+        "1-2",
+        "1-3",
+        "1-4",
+        "1-5",
+        "1-6",
+        "2-3",
+        "2-4",
+        "2-5",
+        "2-6",
+        "3-4",
+        "3-5",
+        "3-6",
+        "4-5",
+        "4-6",
+        "5-6"
+      ],
+      "two_policy_sessions": 244
+    },
+    "reference_2025_07_through_2026_01": {
+      "active_policy_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "completion_max": "2026-01-31T00:50:52.485566+00:00",
+      "completion_min": "2025-07-02T16:53:46.414110+00:00",
+      "connected_component_count": 1,
+      "connected_components": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      ],
+      "fixed_policy_records": 3842,
+      "isolated_policy_indices": [],
+      "monthly_graphs": [
+        {
+          "active_policy_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "connected_components": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          ],
+          "isolated_policy_indices": [],
+          "month": "2025-07",
+          "supported_pair_count": 21,
+          "two_policy_sessions": 97
+        },
+        {
+          "active_policy_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "connected_components": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          ],
+          "isolated_policy_indices": [],
+          "month": "2025-08",
+          "supported_pair_count": 21,
+          "two_policy_sessions": 499
+        },
+        {
+          "active_policy_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "connected_components": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          ],
+          "isolated_policy_indices": [],
+          "month": "2025-09",
+          "supported_pair_count": 21,
+          "two_policy_sessions": 549
+        },
+        {
+          "active_policy_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "connected_components": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          ],
+          "isolated_policy_indices": [],
+          "month": "2025-10",
+          "supported_pair_count": 21,
+          "two_policy_sessions": 304
+        },
+        {
+          "active_policy_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "connected_components": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          ],
+          "isolated_policy_indices": [],
+          "month": "2025-11",
+          "supported_pair_count": 21,
+          "two_policy_sessions": 190
+        },
+        {
+          "active_policy_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "connected_components": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          ],
+          "isolated_policy_indices": [],
+          "month": "2025-12",
+          "supported_pair_count": 21,
+          "two_policy_sessions": 172
+        },
+        {
+          "active_policy_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "connected_components": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          ],
+          "isolated_policy_indices": [],
+          "month": "2026-01",
+          "supported_pair_count": 21,
+          "two_policy_sessions": 110
+        }
+      ],
+      "months": [
+        "2025-07",
+        "2025-08",
+        "2025-09",
+        "2025-10",
+        "2025-11",
+        "2025-12",
+        "2026-01"
+      ],
+      "pair_observations": 1921,
+      "policy_session_incidence_rates": {
+        "0": 0.20145757418011453,
+        "1": 0.23997917751171266,
+        "2": 0.3472149921915669,
+        "3": 0.3524206142634045,
+        "4": 0.2519521082769391,
+        "5": 0.36959916710046853,
+        "6": 0.23737636647579385
+      },
+      "policy_session_incidences": {
+        "0": 387,
+        "1": 461,
+        "2": 667,
+        "3": 677,
+        "4": 484,
+        "5": 710,
+        "6": 456
+      },
+      "same_support_graph_in_every_month": true,
+      "supported_pair_count": 21,
+      "supported_pairs": [
+        "0-1",
+        "0-2",
+        "0-3",
+        "0-4",
+        "0-5",
+        "0-6",
+        "1-2",
+        "1-3",
+        "1-4",
+        "1-5",
+        "1-6",
+        "2-3",
+        "2-4",
+        "2-5",
+        "2-6",
+        "3-4",
+        "3-5",
+        "3-6",
+        "4-5",
+        "4-6",
+        "5-6"
+      ],
+      "two_policy_sessions": 1921
+    },
+    "sparse_late_2026_05_through_2026_07": {
+      "active_policy_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "completion_max": "2026-07-16T08:51:42.617172+00:00",
+      "completion_min": "2026-05-13T08:33:13.111183+00:00",
+      "connected_component_count": 2,
+      "connected_components": [
+        [
+          0
+        ],
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      ],
+      "fixed_policy_records": 100,
+      "isolated_policy_indices": [
+        0
+      ],
+      "monthly_graphs": [
+        {
+          "active_policy_indices": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "connected_components": [
+            [
+              0
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "isolated_policy_indices": [
+            0
+          ],
+          "month": "2026-05",
+          "supported_pair_count": 3,
+          "two_policy_sessions": 3
+        },
+        {
+          "active_policy_indices": [
+            1,
+            4,
+            6
+          ],
+          "connected_components": [
+            [
+              0
+            ],
+            [
+              1,
+              4,
+              6
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ],
+            [
+              5
+            ]
+          ],
+          "isolated_policy_indices": [
+            0,
+            2,
+            3,
+            5
+          ],
+          "month": "2026-06",
+          "supported_pair_count": 3,
+          "two_policy_sessions": 36
+        },
+        {
+          "active_policy_indices": [
+            1,
+            4,
+            6
+          ],
+          "connected_components": [
+            [
+              0
+            ],
+            [
+              1,
+              4,
+              6
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ],
+            [
+              5
+            ]
+          ],
+          "isolated_policy_indices": [
+            0,
+            2,
+            3,
+            5
+          ],
+          "month": "2026-07",
+          "supported_pair_count": 3,
+          "two_policy_sessions": 11
+        }
+      ],
+      "months": [
+        "2026-05",
+        "2026-06",
+        "2026-07"
+      ],
+      "pair_observations": 50,
+      "policy_session_incidence_rates": {
+        "0": 0.0,
+        "1": 0.6,
+        "2": 0.02,
+        "3": 0.02,
+        "4": 0.66,
+        "5": 0.02,
+        "6": 0.68
+      },
+      "policy_session_incidences": {
+        "0": 0,
+        "1": 30,
+        "2": 1,
+        "3": 1,
+        "4": 33,
+        "5": 1,
+        "6": 34
+      },
+      "same_support_graph_in_every_month": false,
+      "supported_pair_count": 6,
+      "supported_pairs": [
+        "1-3",
+        "1-4",
+        "1-6",
+        "2-4",
+        "4-6",
+        "5-6"
+      ],
+      "two_policy_sessions": 50
+    }
+  },
+  "input": {
+    "outcome_fields_referenced_or_used": false,
+    "path": "result-historical-pair-support.json",
+    "sha256": "e302ad091ab25d793b2ce1aac7d830a69daa7c913dbf941726f50b0b5e14e08c",
+    "upstream_source": {
+      "metadata_files": 3883,
+      "repo_id": "RoboArena/DataDump_07-17-2026",
+      "requested_revision": "7931db81f3f6a48a3245427f7213a4c461f92ccc",
+      "resolved_revision": "7931db81f3f6a48a3245427f7213a4c461f92ccc",
+      "retrieved_utc": "2026-07-26T18:30:15.987696+00:00"
+    }
+  },
+  "limitations": [
+    "Epoch boundaries and the focal policy were selected after monthly topology was inspected.",
+    "The plug-in calculation assumes an independent, exchangeable stable reference that is not the identified RoboArena assignment law.",
+    "Partial calendar windows and unequal session counts are descriptive rather than independent populations.",
+    "No outcome, task, site, evaluator, cancellation, retry, or native assignment-probability field is analyzed.",
+    "The result does not identify policy retirement, maintainer intent, outcome-dependent assignment, an OSCAR effect, or general benchmark behavior.",
+    "Historical edge presence does not establish temporal transport or a common scientific estimand."
+  ],
+  "policy_order": [
+    "paligemma_binning_droid",
+    "paligemma_diffusion_droid",
+    "paligemma_fast_droid",
+    "paligemma_fast_specialist_droid",
+    "paligemma_vq_droid",
+    "pi0_droid",
+    "pi0_fast_droid"
+  ],
+  "schema": "roboarena-assignment-regime-diagnostic-v1",
+  "stable_reference_diagnostics": {
+    "all_post_reference": {
+      "focal_policy_index": 0,
+      "interpretation": "Hypothetical plug-in compatibility calculation under independent, exchangeable continuation of the exposed reference-epoch empirical policy-incidence probability. This is not a confirmatory p-value or the platform's identified assignment law.",
+      "later_expected_count_under_reference": 59.228526808953674,
+      "later_observed_incidence_count": 0,
+      "later_sessions": 294,
+      "log10_plug_in_probability_of_zero_under_reference": -28.724389543127067,
+      "plug_in_probability_of_zero_under_reference": 1.8862986628011806e-29,
+      "reference_empirical_incidence_probability": 0.20145757418011453,
+      "reference_incidence_count": 387,
+      "reference_sessions": 1921
+    },
+    "policy_0_absent_epoch": {
+      "focal_policy_index": 0,
+      "interpretation": "Hypothetical plug-in compatibility calculation under independent, exchangeable continuation of the exposed reference-epoch empirical policy-incidence probability. This is not a confirmatory p-value or the platform's identified assignment law.",
+      "later_expected_count_under_reference": 49.155648099947946,
+      "later_observed_incidence_count": 0,
+      "later_sessions": 244,
+      "log10_plug_in_probability_of_zero_under_reference": -23.83928928069049,
+      "plug_in_probability_of_zero_under_reference": 1.447807157491384e-24,
+      "reference_empirical_incidence_probability": 0.20145757418011453,
+      "reference_incidence_count": 387,
+      "reference_sessions": 1921
+    }
+  },
+  "status": "exploratory_topology_exposed"
+}

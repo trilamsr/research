@@ -1,0 +1,66 @@
+{
+  "dataset_content_opened": false,
+  "dataset_inventory": {
+    "manifest_sha256": "8b69b6ad8c14b1f5d920dc7aa8c833c79536a8f3405205e9eb5d4f63e5353982",
+    "object_count": 14361,
+    "root_structured_candidate_count": 0,
+    "root_structured_candidates": [],
+    "token_match_count": 2,
+    "token_matches": [
+      {
+        "etag": "40494a20a101c31a441c9b4eb1a71eec",
+        "key": "phail/v1.0/dataset/teleoperation/000000000000/000000000123/robot_commands.reset.parquet",
+        "last_modified": "2026-05-25T14:45:36.284Z",
+        "matched_tokens": [
+          "reset"
+        ],
+        "size": 803,
+        "target_scope": "non_target_teleoperation_cohort"
+      },
+      {
+        "etag": "0170d98385bde76531d8251fbea430ad",
+        "key": "phail/v1.0/dataset/teleoperation/000000000000/000000000267/robot_commands.reset.parquet",
+        "last_modified": "2026-05-25T14:46:11.523Z",
+        "matched_tokens": [
+          "reset"
+        ],
+        "size": 803,
+        "target_scope": "non_target_teleoperation_cohort"
+      }
+    ]
+  },
+  "disposition": "no_fixed_token_target_rollout_or_root_session_artifact_path_found",
+  "episode_linkable_data_artifact_lead": false,
+  "fixed_tokens": [
+    "session",
+    "run_metadata",
+    "run-metadata",
+    "reset",
+    "sequence",
+    "batch"
+  ],
+  "performance_field_opened": false,
+  "protocol_sha256": "183c11a4d03ce9b5d5bee63dee6feb2909cad09a2bda53cf62c413ff88c9cc76",
+  "schema": "h190-phail-session-artifact-path-audit-v1",
+  "scope": "fixed-token path recall only; no inference about private or differently named records",
+  "source_trees": [
+    {
+      "match_count": 0,
+      "matches": [],
+      "name": "positronic-v0.2.1",
+      "raw_sha256": "f0ce3bbfc84b33e1edd272a3f2c019bced3a80ada0cf180da4335bcff005ddad",
+      "resolved_tree_sha": "e406176bc526babb06844a48e3627a5c0409eb74",
+      "tree_entry_count": 487,
+      "url": "https://api.github.com/repos/Positronic-Robotics/positronic/git/trees/v0.2.1?recursive=1"
+    },
+    {
+      "match_count": 0,
+      "matches": [],
+      "name": "phail-paper-snapshot",
+      "raw_sha256": "8d64f57cf44f83e556e0fc8df2a44574f4b5a9aecab3b40883793057127a048f",
+      "resolved_tree_sha": "18ce72d5703dcbbbb10a980336aa5a1622601fb4",
+      "tree_entry_count": 656,
+      "url": "https://api.github.com/repos/Positronic-Robotics/phail-paper/git/trees/18ce72d5703dcbbbb10a980336aa5a1622601fb4?recursive=1"
+    }
+  ]
+}

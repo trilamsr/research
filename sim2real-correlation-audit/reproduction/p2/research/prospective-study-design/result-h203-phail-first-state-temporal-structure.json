@@ -1,0 +1,80 @@
+{
+  "analyses": {
+    "global": {
+      "adjacent_pair_count": 593,
+      "group_count": 1,
+      "lower_tail_p": 0.97348,
+      "observed_mean_successive_squared_distance": 14.505918803151259,
+      "observed_to_permutation_median_ratio": 1.0298659183525478,
+      "permutation_median": 14.085249880252405,
+      "permutation_q025": 13.650923552614506,
+      "permutation_q975": 14.511212008592683,
+      "permutations": 49999,
+      "two_sided_p": 0.05308,
+      "upper_tail_p": 0.02654
+    },
+    "within_policy": {
+      "adjacent_pair_count": 590,
+      "group_count": 4,
+      "lower_tail_p": 0.51766,
+      "observed_mean_successive_squared_distance": 14.10222998082485,
+      "observed_to_permutation_median_ratio": 1.000724026883352,
+      "permutation_median": 14.092026974454425,
+      "permutation_q025": 13.662662552058276,
+      "permutation_q975": 14.520730834312827,
+      "permutations": 49999,
+      "two_sided_p": 0.96472,
+      "upper_tail_p": 0.48236
+    },
+    "within_utc_date": {
+      "adjacent_pair_count": 581,
+      "group_count": 13,
+      "lower_tail_p": 0.96496,
+      "observed_mean_successive_squared_distance": 14.504690373244076,
+      "observed_to_permutation_median_ratio": 1.0277668553716126,
+      "permutation_median": 14.112821694371117,
+      "permutation_q025": 13.68520639325583,
+      "permutation_q975": 14.536160298945113,
+      "permutations": 49999,
+      "two_sided_p": 0.07012,
+      "upper_tail_p": 0.03506
+    }
+  },
+  "classification": "no_detectable_temporal_structure_at_fixed_resolution",
+  "cohort_sha256": "ad43fca1da065a1cb7fd84dfa9afc5691c72ebe12e7f165c68a0050e51e87ebe",
+  "decision_consequence": "The fixed diagnostic can strengthen the session/carryover evidence request if material structure is detected, or block a positive dependence claim at this resolution if it is not. It cannot prove independence or identify a physical mechanism.",
+  "diagnostics": {
+    "exact_duplicate_vector_count": 0,
+    "primary_adjacent_per_joint_pearson": [
+      -0.012592171972381471,
+      -0.07336683015736058,
+      -0.013456468773499783,
+      -0.04004245453392065,
+      -0.014591266739885056,
+      -0.006303834704767824,
+      -0.061109548953032784
+    ]
+  },
+  "episode_count": 594,
+  "h202_projection_sha256": "44b7cd9729c691a610cc1fbbefffc5668d31030e013b92f2d4550f9869020370",
+  "h202_result_sha256": "4e60b6c6cbc0eabcaf4ae7761119b5af89bbaf6707e53cce8f0ec3c227a96043",
+  "independence_established": false,
+  "later_state_or_outcome_opened": false,
+  "pcg64_seed": "119396627272465885383367578580074081131",
+  "protocol_sha256": "4a55e6640a34c5d988690eec15cae09b583d11b5229cb43bdce615f2c2fa0dd8",
+  "recorded_chronology_treated_as_physical_order": false,
+  "rng_stream_order": [
+    "global",
+    "within_policy",
+    "within_utc_date"
+  ],
+  "schema": "h203-phail-first-state-temporal-structure-v1",
+  "seed_text": "H203 PhAIL first-state temporal structure v1",
+  "synthetic_controls": {
+    "alternating_exceeds_drift": true,
+    "constant_zero": true,
+    "deterministic_replay": true,
+    "iid_near_nominal_14": true,
+    "known_distance": true
+  }
+}

@@ -1,0 +1,232 @@
+{
+  "advance_to_contextual_audit": false,
+  "candidate_window_count": 0,
+  "candidate_windows": [],
+  "card_count": 3,
+  "card_records": [
+    {
+      "candidate_window_count": 0,
+      "candidate_windows": [],
+      "content_sha256": "04e4ece1f578b828836e7f3615cbc09f0eb44790ef2bb5dd7d31201dd8a4ee01",
+      "git_blob_sha": "296f70d6d0e1ddf61f8f46edc8b727605117c6c8",
+      "immutable_revision": "012901aa47d29f34ccfa8c9472587a97e52a3d62",
+      "line_count": 34,
+      "matched_line_records": [
+        {
+          "context_hits": [
+            "policy",
+            "task"
+          ],
+          "line_number": 9,
+          "line_sha256": "d9dc3919c084c26c2cdb2e5554985cb90589545004b7707fb869a09aea36ee7c",
+          "mechanism_hits": []
+        },
+        {
+          "context_hits": [
+            "policies"
+          ],
+          "line_number": 30,
+          "line_sha256": "f19f0017e7a1a195a146a79bb0c9600b397c69cbc40e7b09d0b1f0c0ac53336f",
+          "mechanism_hits": []
+        },
+        {
+          "context_hits": [
+            "policies",
+            "robot",
+            "evaluation"
+          ],
+          "line_number": 34,
+          "line_sha256": "2f24d9dc60b357897705dd471ac30f48cbe6f43272e72bd0c21278e01ebee726",
+          "mechanism_hits": []
+        }
+      ],
+      "media_type": "text/plain",
+      "path": "README.md",
+      "raw_request_final_url": "https://huggingface.co/api/resolve-cache/datasets/RoboArena/DataDump_08-05-2025/012901aa47d29f34ccfa8c9472587a97e52a3d62/README.md?%2Fdatasets%2FRoboArena%2FDataDump_08-05-2025%2Fresolve%2F012901aa47d29f34ccfa8c9472587a97e52a3d62%2FREADME.md=&etag=%22296f70d6d0e1ddf61f8f46edc8b727605117c6c8%22",
+      "repo_id": "RoboArena/DataDump_08-05-2025",
+      "size_bytes": 1146,
+      "tree_request_final_url": "https://huggingface.co/api/datasets/RoboArena/DataDump_08-05-2025/tree/012901aa47d29f34ccfa8c9472587a97e52a3d62?recursive=false&expand=false&limit=1000"
+    },
+    {
+      "candidate_window_count": 0,
+      "candidate_windows": [],
+      "content_sha256": "d591d55dbfe2a5337213099de58ecba2e96a14cbfbe773999f58008f83f509d5",
+      "git_blob_sha": "4878f174a9820bc27daacb8bc5ba65d3c461e453",
+      "immutable_revision": "1e7e7d092bf21eadec5816cc6603476cbe1eee10",
+      "line_count": 34,
+      "matched_line_records": [
+        {
+          "context_hits": [
+            "policy",
+            "task"
+          ],
+          "line_number": 9,
+          "line_sha256": "97e97510a4849cbc57695c11635c0a090a015e6efa3cac9b2ccbc254d87f208d",
+          "mechanism_hits": []
+        },
+        {
+          "context_hits": [
+            "policies"
+          ],
+          "line_number": 30,
+          "line_sha256": "f19f0017e7a1a195a146a79bb0c9600b397c69cbc40e7b09d0b1f0c0ac53336f",
+          "mechanism_hits": []
+        },
+        {
+          "context_hits": [
+            "policies",
+            "robot",
+            "evaluation"
+          ],
+          "line_number": 34,
+          "line_sha256": "2f24d9dc60b357897705dd471ac30f48cbe6f43272e72bd0c21278e01ebee726",
+          "mechanism_hits": []
+        }
+      ],
+      "media_type": "text/plain",
+      "path": "README.md",
+      "raw_request_final_url": "https://huggingface.co/api/resolve-cache/datasets/RoboArena/DataDump_02-03-2026/1e7e7d092bf21eadec5816cc6603476cbe1eee10/README.md?%2Fdatasets%2FRoboArena%2FDataDump_02-03-2026%2Fresolve%2F1e7e7d092bf21eadec5816cc6603476cbe1eee10%2FREADME.md=&etag=%224878f174a9820bc27daacb8bc5ba65d3c461e453%22",
+      "repo_id": "RoboArena/DataDump_02-03-2026",
+      "size_bytes": 1148,
+      "tree_request_final_url": "https://huggingface.co/api/datasets/RoboArena/DataDump_02-03-2026/tree/1e7e7d092bf21eadec5816cc6603476cbe1eee10?recursive=false&expand=false&limit=1000"
+    },
+    {
+      "candidate_window_count": 0,
+      "candidate_windows": [],
+      "content_sha256": "dcb052be353f3703c17b65ab7c211fb5611c1a95e0c5149076ffbeb61f2b41f4",
+      "git_blob_sha": "a3cc2480a91cdf8248010c69a231e6e4d4c91a48",
+      "immutable_revision": "7931db81f3f6a48a3245427f7213a4c461f92ccc",
+      "line_count": 53,
+      "matched_line_records": [
+        {
+          "context_hits": [
+            "robot"
+          ],
+          "line_number": 5,
+          "line_sha256": "5b0568a2ac5b59e8c673277f9b8f85600ba5e5753deadb6605940045685e2413",
+          "mechanism_hits": []
+        },
+        {
+          "context_hits": [
+            "policy",
+            "task"
+          ],
+          "line_number": 12,
+          "line_sha256": "a1f2fed861e3528041ac5324202aed6ca3a028dddfb151512b78fe5212dcf493",
+          "mechanism_hits": []
+        },
+        {
+          "context_hits": [
+            "policy"
+          ],
+          "line_number": 13,
+          "line_sha256": "451b2f0cfe072187b1922773fb179a995689e53372889386ddd53dbaa0aeb887",
+          "mechanism_hits": []
+        },
+        {
+          "context_hits": [
+            "sessions",
+            "evaluation"
+          ],
+          "line_number": 18,
+          "line_sha256": "5c8119183f6353592e1dd10617683c7b1333bab8e2ee33531dc0c6d9ea99c0e3",
+          "mechanism_hits": []
+        },
+        {
+          "context_hits": [
+            "policy"
+          ],
+          "line_number": 19,
+          "line_sha256": "db0f2e5abf3335f438a8b2102370b414d690d173bb9fd96129324d024236f795",
+          "mechanism_hits": []
+        },
+        {
+          "context_hits": [
+            "videos"
+          ],
+          "line_number": 20,
+          "line_sha256": "af5daa3d6f243715f9128182a0c29416be1e9d054a6db75ef57f5c128f9aa38d",
+          "mechanism_hits": []
+        },
+        {
+          "context_hits": [
+            "session"
+          ],
+          "line_number": 22,
+          "line_sha256": "384e1fc38acf1f7cd5bee0b3186bfdb91d2fd28c373dbda13db29bb7b308c71e",
+          "mechanism_hits": []
+        },
+        {
+          "context_hits": [
+            "session",
+            "instruction"
+          ],
+          "line_number": 41,
+          "line_sha256": "c87705c77c709770f86f1041f3c7cfaabfb2995722173ebf7af20a55d7d933f7",
+          "mechanism_hits": []
+        },
+        {
+          "context_hits": [
+            "policy"
+          ],
+          "line_number": 42,
+          "line_sha256": "1781143bd4d6e78b333f4250baef1a32c4e749a3fa9d5d5c1ab5209e24245201",
+          "mechanism_hits": []
+        },
+        {
+          "context_hits": [
+            "policy"
+          ],
+          "line_number": 43,
+          "line_sha256": "51f9675adecd4167f849827ac8c13481e06a9ea4b1aaf9fadd6cf20034f397b0",
+          "mechanism_hits": []
+        },
+        {
+          "context_hits": [
+            "policy"
+          ],
+          "line_number": 46,
+          "line_sha256": "32f0aa57ee5365dda5a33c21d32b716a263f43bc9d601e2d02496bbfe56ef7b2",
+          "mechanism_hits": []
+        },
+        {
+          "context_hits": [
+            "policies",
+            "robot",
+            "evaluation"
+          ],
+          "line_number": 52,
+          "line_sha256": "0dbaf55eedf7b0ad6c92739a3dceb937560c669c529967527250abacca513e63",
+          "mechanism_hits": []
+        }
+      ],
+      "media_type": "text/plain",
+      "path": "README.md",
+      "raw_request_final_url": "https://huggingface.co/api/resolve-cache/datasets/RoboArena/DataDump_07-17-2026/7931db81f3f6a48a3245427f7213a4c461f92ccc/README.md?%2Fdatasets%2FRoboArena%2FDataDump_07-17-2026%2Fresolve%2F7931db81f3f6a48a3245427f7213a4c461f92ccc%2FREADME.md=&etag=%22a3cc2480a91cdf8248010c69a231e6e4d4c91a48%22",
+      "repo_id": "RoboArena/DataDump_07-17-2026",
+      "size_bytes": 1766,
+      "tree_request_final_url": "https://huggingface.co/api/datasets/RoboArena/DataDump_07-17-2026/tree/7931db81f3f6a48a3245427f7213a4c461f92ccc?recursive=false&expand=false&limit=1000"
+    }
+  ],
+  "card_text_retained": false,
+  "complete": true,
+  "future_heldout_p1_outcomes_accessed": false,
+  "h088_h100_api_or_storage_contacted": false,
+  "historical_card_bytes_accessed": true,
+  "interpretation": "Historical immutable-card recall only. Candidate windows require contextual audit and cannot establish current assignment.",
+  "observed_utc": "2026-07-27T19:13:55.858245+00:00",
+  "other_repository_path_or_dataset_row_opened": false,
+  "performance_values_retained_or_interpreted": false,
+  "protocol_sha256": "7860a9b41c407becbaa49c5f6b81f6785bdbac8d187f21cba487fb0702e87944",
+  "release_monitor_sha256": "d98f505d90643092511fb23489f8084e33c20fb2bdbe0aab877f1207c72fc404",
+  "request_urls": [
+    "https://huggingface.co/api/datasets/RoboArena/DataDump_08-05-2025/tree/012901aa47d29f34ccfa8c9472587a97e52a3d62?recursive=false&expand=false&limit=1000",
+    "https://huggingface.co/datasets/RoboArena/DataDump_08-05-2025/resolve/012901aa47d29f34ccfa8c9472587a97e52a3d62/README.md",
+    "https://huggingface.co/api/datasets/RoboArena/DataDump_02-03-2026/tree/1e7e7d092bf21eadec5816cc6603476cbe1eee10?recursive=false&expand=false&limit=1000",
+    "https://huggingface.co/datasets/RoboArena/DataDump_02-03-2026/resolve/1e7e7d092bf21eadec5816cc6603476cbe1eee10/README.md",
+    "https://huggingface.co/api/datasets/RoboArena/DataDump_07-17-2026/tree/7931db81f3f6a48a3245427f7213a4c461f92ccc?recursive=false&expand=false&limit=1000",
+    "https://huggingface.co/datasets/RoboArena/DataDump_07-17-2026/resolve/7931db81f3f6a48a3245427f7213a4c461f92ccc/README.md"
+  ],
+  "schema": "h116-roboarena-dataset-card-assignment-recall-v1",
+  "sealed_p3_frame_accessed": false
+}

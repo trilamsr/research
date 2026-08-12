@@ -1,0 +1,272 @@
+{
+  "classification": "support_constraint_creates_boundary_value_jump",
+  "exact_case_census": {
+    "accepted_exactly_one_zero_limit_rows": 453,
+    "by_positive_support_size": {
+      "1": 16,
+      "2": 40,
+      "3": 60,
+      "4": 70,
+      "5": 56
+    },
+    "by_zero_count": {
+      "1": 121,
+      "2": 69,
+      "3": 34,
+      "4": 14,
+      "5": 4
+    },
+    "canonical_cases": 242,
+    "distinct_label_permutations": 14056,
+    "exactly_one_zero_gap_range": [
+      {
+        "decimal": 0.007352941176470588,
+        "denominator": 136,
+        "numerator": 1,
+        "text": "1/136"
+      },
+      {
+        "decimal": 0.0625,
+        "denominator": 16,
+        "numerator": 1,
+        "text": "1/16"
+      }
+    ],
+    "grid_equalities_at_unique_optimizer": 42,
+    "raw_endpoint_oracle_cases_k_le_5": 117,
+    "support_grid_lotteries_k_le_5_denominator_8": 7857
+  },
+  "exact_proof_ledger": [
+    {
+      "claim": "For any zero-reference index z and support-constrained p, F_z=1+D_r(p)>=1.",
+      "step": "zero_winner"
+    },
+    {
+      "claim": "p=r is support-constrained, has D_r(p)=0, and makes all winner objectives at most one.",
+      "step": "attainment"
+    },
+    {
+      "claim": "Equality forces zero support dispersion; on positive support this gives p_i=lambda r_i, and the simplex gives lambda=1. Support size one is immediate.",
+      "step": "uniqueness"
+    },
+    {
+      "claim": "With exactly one zero, H212 has value (2-r_(2))/8, so hard support exclusion raises value by r_(2)/8.",
+      "step": "one_zero_gap"
+    }
+  ],
+  "fixed_h212_hashes": {
+    "audit_h212_zero_reference_weight_edge_box_boundary.py": "81f29991e0ba2cc343af9fe0c614705eed1d401a6076af2c38b1d1915de2f99a",
+    "protocol-h212-zero-reference-weight-edge-box-boundary.md": "2204934e1e4729a0d1dff29b89e544c0da59b654d01a6270655265eda5b61e7c",
+    "result-h212-zero-reference-weight-edge-box-boundary-independent-challenge.json": "405b0d2fd7805d4d3e6b569635a1e13a5fb942bf4038344feebdc0a42dcd28d1",
+    "result-h212-zero-reference-weight-edge-box-boundary.json": "60197dc7967bdb388d0707299c6652403e289c2fc58a010d7a121a17b78f839e",
+    "review-h212-zero-reference-weight-edge-box-boundary.md": "a41a7193a7c3adede901b9e0b4d135c056072d5ed1fb19453720fff056a0774d",
+    "test_audit_h212_zero_reference_weight_edge_box_boundary.py": "08eb666e761e22285dd1718515e79d52f735c4fc96076dadbd4438b8d93da2b1"
+  },
+  "numerical_face_challenge": {
+    "cases": 242,
+    "maximum_unique_face_coordinate_error": 5.200000444127717e-09,
+    "maximum_value_absolute_error": 0.0,
+    "role": "challenge only; exact zero-winner proof is canonical",
+    "solver": "scipy.optimize.linprog(method='highs')"
+  },
+  "protocol_sha256": "5fec939a816ef97ac8e16587ac0dcddbb0f9298ac0fb311eb804c0a45a7921c7",
+  "representative_cases": {
+    "at_least_three_zeros": {
+      "reference": [
+        {
+          "decimal": 0.0,
+          "denominator": 1,
+          "numerator": 0,
+          "text": "0/1"
+        },
+        {
+          "decimal": 0.0,
+          "denominator": 1,
+          "numerator": 0,
+          "text": "0/1"
+        },
+        {
+          "decimal": 0.0,
+          "denominator": 1,
+          "numerator": 0,
+          "text": "0/1"
+        },
+        {
+          "decimal": 1.0,
+          "denominator": 1,
+          "numerator": 1,
+          "text": "1/1"
+        }
+      ],
+      "support_constrained_optimizer": [
+        {
+          "decimal": 0.0,
+          "denominator": 1,
+          "numerator": 0,
+          "text": "0/1"
+        },
+        {
+          "decimal": 0.0,
+          "denominator": 1,
+          "numerator": 0,
+          "text": "0/1"
+        },
+        {
+          "decimal": 0.0,
+          "denominator": 1,
+          "numerator": 0,
+          "text": "0/1"
+        },
+        {
+          "decimal": 1.0,
+          "denominator": 1,
+          "numerator": 1,
+          "text": "1/1"
+        }
+      ],
+      "value": {
+        "decimal": 0.25,
+        "denominator": 4,
+        "numerator": 1,
+        "text": "1/4"
+      }
+    },
+    "exactly_one_zero": {
+      "h212_unrestricted_value": {
+        "decimal": 0.1875,
+        "denominator": 16,
+        "numerator": 3,
+        "text": "3/16"
+      },
+      "reference": [
+        {
+          "decimal": 0.0,
+          "denominator": 1,
+          "numerator": 0,
+          "text": "0/1"
+        },
+        {
+          "decimal": 0.5,
+          "denominator": 2,
+          "numerator": 1,
+          "text": "1/2"
+        },
+        {
+          "decimal": 0.5,
+          "denominator": 2,
+          "numerator": 1,
+          "text": "1/2"
+        }
+      ],
+      "support_constrained_optimizer": [
+        {
+          "decimal": 0.0,
+          "denominator": 1,
+          "numerator": 0,
+          "text": "0/1"
+        },
+        {
+          "decimal": 0.5,
+          "denominator": 2,
+          "numerator": 1,
+          "text": "1/2"
+        },
+        {
+          "decimal": 0.5,
+          "denominator": 2,
+          "numerator": 1,
+          "text": "1/2"
+        }
+      ],
+      "support_constrained_value": {
+        "decimal": 0.25,
+        "denominator": 4,
+        "numerator": 1,
+        "text": "1/4"
+      },
+      "value_gap": {
+        "decimal": 0.0625,
+        "denominator": 16,
+        "numerator": 1,
+        "text": "1/16"
+      }
+    },
+    "exactly_two_zeros": {
+      "h212_h_interval": [
+        {
+          "decimal": 0.0,
+          "denominator": 1,
+          "numerator": 0,
+          "text": "0/1"
+        },
+        {
+          "decimal": 0.5,
+          "denominator": 2,
+          "numerator": 1,
+          "text": "1/2"
+        }
+      ],
+      "reference": [
+        {
+          "decimal": 0.0,
+          "denominator": 1,
+          "numerator": 0,
+          "text": "0/1"
+        },
+        {
+          "decimal": 0.0,
+          "denominator": 1,
+          "numerator": 0,
+          "text": "0/1"
+        },
+        {
+          "decimal": 1.0,
+          "denominator": 1,
+          "numerator": 1,
+          "text": "1/1"
+        }
+      ],
+      "support_constrained_optimizer": [
+        {
+          "decimal": 0.0,
+          "denominator": 1,
+          "numerator": 0,
+          "text": "0/1"
+        },
+        {
+          "decimal": 0.0,
+          "denominator": 1,
+          "numerator": 0,
+          "text": "0/1"
+        },
+        {
+          "decimal": 1.0,
+          "denominator": 1,
+          "numerator": 1,
+          "text": "1/1"
+        }
+      ],
+      "value": {
+        "decimal": 0.25,
+        "denominator": 4,
+        "numerator": 1,
+        "text": "1/4"
+      }
+    }
+  },
+  "schema": "h213-support-constrained-zero-reference-boundary-v1",
+  "scope": "hard p_i=0 whenever r_i=0 constraint only, for the same weighted-Borda full compatible edge box and ex-ante regret",
+  "theorem": {
+    "any_nonempty_zero_set": {
+      "complete_optimizer": "p=r",
+      "unique": true,
+      "value": "1/4"
+    },
+    "h212_comparison": {
+      "at_least_three_zeros": "no value or optimizer change",
+      "exactly_one_zero": "value increases by r_(2)/8; no H212 optimizer is support-constrained",
+      "exactly_two_zeros": "value remains 1/4; H212 segment collapses to its h=0 endpoint p=r"
+    },
+    "positive_interior": "H188/H212 applies unchanged"
+  }
+}

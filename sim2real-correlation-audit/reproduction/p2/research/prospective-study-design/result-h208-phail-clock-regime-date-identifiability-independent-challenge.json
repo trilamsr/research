@@ -1,0 +1,121 @@
+{
+  "schema": "h208-phail-clock-regime-date-identifiability-independent-challenge-v1",
+  "target_producer_result_sha256": "df6c42066f26c7bbd69be25d01ef0d72517f2546c0a1d02d129b6fdc8b6981db",
+  "input_sha256": {
+    "cohort": "ad43fca1da065a1cb7fd84dfa9afc5691c72ebe12e7f165c68a0050e51e87ebe",
+    "h206_projection": "7b7af23688e230325ec69070c8e5cd5523224990d7bc44defbe5b30f12c65529"
+  },
+  "implementation": {
+    "language": "Ruby",
+    "ruby": "2.6.10",
+    "producer_imported_or_executed": false,
+    "arithmetic": "exact integer/Rational contingency and alias reconstruction"
+  },
+  "episode_count": 594,
+  "challenge_controls": {
+    "nested_alias": true,
+    "crossed_not_alias": true,
+    "complete_support": true
+  },
+  "date_alias": {
+    "date_count": 13,
+    "date_regimes": {
+      "2026-03-05": [
+        1
+      ],
+      "2026-03-06": [
+        1
+      ],
+      "2026-03-10": [
+        1
+      ],
+      "2026-03-13": [
+        1
+      ],
+      "2026-03-17": [
+        1
+      ],
+      "2026-03-19": [
+        1
+      ],
+      "2026-03-20": [
+        1
+      ],
+      "2026-03-24": [
+        2
+      ],
+      "2026-03-25": [
+        2
+      ],
+      "2026-03-27": [
+        2
+      ],
+      "2026-03-29": [
+        2
+      ],
+      "2026-04-03": [
+        2
+      ],
+      "2026-04-04": [
+        2
+      ]
+    },
+    "regime_2_alias_dates": [
+      "2026-03-24",
+      "2026-03-25",
+      "2026-03-27",
+      "2026-03-29",
+      "2026-04-03",
+      "2026-04-04"
+    ],
+    "exact_single_regime_per_date": true,
+    "exact_indicator_reconstruction": true,
+    "date_only_design_rank": 13,
+    "date_plus_regime_design_rank": 13,
+    "rank_increment": 0
+  },
+  "policy_regime_support": {
+    "policies": [
+      "act",
+      "groot",
+      "openpi",
+      "smolvla"
+    ],
+    "counts": {
+      "act": {
+        "1": 107,
+        "2": 44
+      },
+      "groot": {
+        "1": 18,
+        "2": 146
+      },
+      "openpi": {
+        "1": 81,
+        "2": 82
+      },
+      "smolvla": {
+        "1": 44,
+        "2": 72
+      }
+    },
+    "all_policy_regime_cells_positive": true,
+    "minimum_cell_count": 18,
+    "maximum_cell_count": 146
+  },
+  "composition_metrics": {
+    "policy_distribution_total_variation": 0.38572093023255816,
+    "policy_distribution_total_variation_exact": "8293/21500",
+    "pearson_chi_square_descriptive": 121.1094615701248,
+    "pearson_chi_square_exact": "76201398095229/629194425500",
+    "cramers_v": 0.45153956907594217
+  },
+  "classification": "date_aliased_with_complete_policy_regime_support",
+  "sampling_p_value_reported": false,
+  "later_state_or_performance_opened": false,
+  "clock_regime_treated_as_session_or_cause": false,
+  "outcome_analysis_authorized": false,
+  "unresolved_material_concerns": [
+
+  ]
+}

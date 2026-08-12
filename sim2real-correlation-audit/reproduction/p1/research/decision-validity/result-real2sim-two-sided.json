@@ -1,0 +1,130 @@
+{
+  "checkpoint_counts_by_policy": {
+    "act": 4,
+    "dp": 4,
+    "pi0": 3,
+    "svla": 4
+  },
+  "draws_per_scenario": 300000,
+  "scenarios": [
+    {
+      "effective_episode_equivalents_per_checkpoint": 4.0,
+      "expected_real_regret_of_sampled_sim_winner": 0.068913933986,
+      "monte_carlo_se": 0.000908142773,
+      "nominal_evidence_fraction_both_sides": 0.25,
+      "prior_alpha_beta": 0.5,
+      "probability_displayed_mismatch_pair": 0.41722,
+      "probability_displayed_real_winner_remains_real_best": 0.61702,
+      "probability_displayed_sim_winner_remains_sim_best": 0.675046666667,
+      "probability_positive_real_regret": 0.550823333333,
+      "probability_sampled_sim_winner_is_sampled_real_best": 0.449176666667
+    },
+    {
+      "effective_episode_equivalents_per_checkpoint": 8.0,
+      "expected_real_regret_of_sampled_sim_winner": 0.060270629715,
+      "monte_carlo_se": 0.000897378067,
+      "nominal_evidence_fraction_both_sides": 0.5,
+      "prior_alpha_beta": 0.5,
+      "probability_displayed_mismatch_pair": 0.5105,
+      "probability_displayed_real_winner_remains_real_best": 0.679746666667,
+      "probability_displayed_sim_winner_remains_sim_best": 0.749923333333,
+      "probability_positive_real_regret": 0.591726666667,
+      "probability_sampled_sim_winner_is_sampled_real_best": 0.408273333333
+    },
+    {
+      "effective_episode_equivalents_per_checkpoint": 16.0,
+      "expected_real_regret_of_sampled_sim_winner": 0.05641334465,
+      "monte_carlo_se": 0.000858537634,
+      "nominal_evidence_fraction_both_sides": 1.0,
+      "prior_alpha_beta": 0.5,
+      "probability_displayed_mismatch_pair": 0.628483333333,
+      "probability_displayed_real_winner_remains_real_best": 0.754233333333,
+      "probability_displayed_sim_winner_remains_sim_best": 0.83281,
+      "probability_positive_real_regret": 0.669923333333,
+      "probability_sampled_sim_winner_is_sampled_real_best": 0.330076666667
+    },
+    {
+      "effective_episode_equivalents_per_checkpoint": 4.0,
+      "expected_real_regret_of_sampled_sim_winner": 0.064206379226,
+      "monte_carlo_se": 0.000909219437,
+      "nominal_evidence_fraction_both_sides": 0.25,
+      "prior_alpha_beta": 1.0,
+      "probability_displayed_mismatch_pair": 0.387973333333,
+      "probability_displayed_real_winner_remains_real_best": 0.596676666667,
+      "probability_displayed_sim_winner_remains_sim_best": 0.6511,
+      "probability_positive_real_regret": 0.544676666667,
+      "probability_sampled_sim_winner_is_sampled_real_best": 0.455323333333
+    },
+    {
+      "effective_episode_equivalents_per_checkpoint": 8.0,
+      "expected_real_regret_of_sampled_sim_winner": 0.056363428024,
+      "monte_carlo_se": 0.000901727356,
+      "nominal_evidence_fraction_both_sides": 0.5,
+      "prior_alpha_beta": 1.0,
+      "probability_displayed_mismatch_pair": 0.486823333333,
+      "probability_displayed_real_winner_remains_real_best": 0.665746666667,
+      "probability_displayed_sim_winner_remains_sim_best": 0.73086,
+      "probability_positive_real_regret": 0.577886666667,
+      "probability_sampled_sim_winner_is_sampled_real_best": 0.422113333333
+    },
+    {
+      "effective_episode_equivalents_per_checkpoint": 16.0,
+      "expected_real_regret_of_sampled_sim_winner": 0.053695227764,
+      "monte_carlo_se": 0.000867499954,
+      "nominal_evidence_fraction_both_sides": 1.0,
+      "prior_alpha_beta": 1.0,
+      "probability_displayed_mismatch_pair": 0.609756666667,
+      "probability_displayed_real_winner_remains_real_best": 0.743506666667,
+      "probability_displayed_sim_winner_remains_sim_best": 0.82034,
+      "probability_positive_real_regret": 0.65567,
+      "probability_sampled_sim_winner_is_sampled_real_best": 0.34433
+    },
+    {
+      "effective_episode_equivalents_per_checkpoint": 4.0,
+      "expected_real_regret_of_sampled_sim_winner": 0.058151377579,
+      "monte_carlo_se": 0.000908416008,
+      "nominal_evidence_fraction_both_sides": 0.25,
+      "prior_alpha_beta": 2.0,
+      "probability_displayed_mismatch_pair": 0.349346666667,
+      "probability_displayed_real_winner_remains_real_best": 0.564286666667,
+      "probability_displayed_sim_winner_remains_sim_best": 0.619396666667,
+      "probability_positive_real_regret": 0.549336666667,
+      "probability_sampled_sim_winner_is_sampled_real_best": 0.450663333333
+    },
+    {
+      "effective_episode_equivalents_per_checkpoint": 8.0,
+      "expected_real_regret_of_sampled_sim_winner": 0.050492147779,
+      "monte_carlo_se": 0.000905790563,
+      "nominal_evidence_fraction_both_sides": 0.5,
+      "prior_alpha_beta": 2.0,
+      "probability_displayed_mismatch_pair": 0.454193333333,
+      "probability_displayed_real_winner_remains_real_best": 0.644533333333,
+      "probability_displayed_sim_winner_remains_sim_best": 0.704006666667,
+      "probability_positive_real_regret": 0.562153333333,
+      "probability_sampled_sim_winner_is_sampled_real_best": 0.437846666667
+    },
+    {
+      "effective_episode_equivalents_per_checkpoint": 16.0,
+      "expected_real_regret_of_sampled_sim_winner": 0.049439179265,
+      "monte_carlo_se": 0.000878234354,
+      "nominal_evidence_fraction_both_sides": 1.0,
+      "prior_alpha_beta": 2.0,
+      "probability_displayed_mismatch_pair": 0.58173,
+      "probability_displayed_real_winner_remains_real_best": 0.72645,
+      "probability_displayed_sim_winner_remains_sim_best": 0.800606666667,
+      "probability_positive_real_regret": 0.636423333333,
+      "probability_sampled_sim_winner_is_sampled_real_best": 0.363576666667
+    }
+  ],
+  "scope": {
+    "boundary": "Episode pairing, checkpoint dependence, and training-run structure are unreleased. Evidence discounting is a stress device, not an estimated effective sample size.",
+    "model": "Independent binomial checkpoint likelihoods with Beta priors; equal checkpoint mean within policy; both sides sampled.",
+    "source": "Vector-recovered Figure 3 T-block integer real/sim counts, 16 episodes per checkpoint."
+  },
+  "seed": 20260724,
+  "stress_envelope": {
+    "all_scenarios_below_one_half": true,
+    "maximum_probability_sampled_winners_match": 0.455323333333,
+    "minimum_probability_sampled_winners_match": 0.330076666667
+  }
+}

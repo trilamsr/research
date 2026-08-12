@@ -1,0 +1,84 @@
+{
+  "join_coverage": {
+    "extra_policy_records_by_policy": {},
+    "joined_policy_records": 441,
+    "joined_sessions": 63,
+    "missing_policy_records_by_policy": {},
+    "parse_or_download_failures": 0,
+    "policy_records_with_binary_success": 441,
+    "policy_records_with_valid_binary_success": 441,
+    "sessions_with_exact_seven_policy_roster": 63,
+    "sessions_with_task_instruction": 63
+  },
+  "privacy": {
+    "evaluator_names_written": false,
+    "feedback_written": false,
+    "instructions_written": false,
+    "row_level_data_written": false,
+    "session_ids_written": false
+  },
+  "real_outcomes_for_released_sessions": {
+    "paligemma_binning_droid": {
+      "printed_name": "PG-Bin",
+      "real_binary_success_rate_pct": 0.0,
+      "real_binary_successes": 0,
+      "real_binary_trials": 63
+    },
+    "paligemma_diffusion_droid": {
+      "printed_name": "PG-flow",
+      "real_binary_success_rate_pct": 7.936507936507937,
+      "real_binary_successes": 5,
+      "real_binary_trials": 63
+    },
+    "paligemma_fast_droid": {
+      "printed_name": "PG-FAST",
+      "real_binary_success_rate_pct": 7.936507936507937,
+      "real_binary_successes": 5,
+      "real_binary_trials": 63
+    },
+    "paligemma_fast_specialist_droid": {
+      "printed_name": "PG-FAST+",
+      "real_binary_success_rate_pct": 7.936507936507937,
+      "real_binary_successes": 5,
+      "real_binary_trials": 63
+    },
+    "paligemma_vq_droid": {
+      "printed_name": "PG-FSQ",
+      "real_binary_success_rate_pct": 9.523809523809524,
+      "real_binary_successes": 6,
+      "real_binary_trials": 63
+    },
+    "pi0_droid": {
+      "printed_name": "pi0-flow",
+      "real_binary_success_rate_pct": 4.761904761904762,
+      "real_binary_successes": 3,
+      "real_binary_trials": 63
+    },
+    "pi0_fast_droid": {
+      "printed_name": "pi0-FAST",
+      "real_binary_success_rate_pct": 11.11111111111111,
+      "real_binary_successes": 7,
+      "real_binary_trials": 63
+    }
+  },
+  "release_structure": {
+    "duplicate_session_policy_pairs": 0,
+    "expected_session_policy_pairs": 441,
+    "malformed_video_paths": 0,
+    "unique_policies": 7,
+    "unique_session_policy_pairs": 441,
+    "unique_sessions": 63,
+    "video_paths": 441
+  },
+  "scope": "Exact finite-release join. The public OSCAR video paths supply session IDs that resolve to task instructions and real binary outcomes in the pinned RoboArena dump. This does not recover OSCAR/GPT-5 judgments, explain the 63-versus-65 denominator, or establish a probability sample for future-session inference.",
+  "source": {
+    "oscar_repo_id": "zywu2115/OSCAR_policy_rollout",
+    "oscar_requested_revision": "db5edfaef285c15d0a41d5115177a983c08b4f5f",
+    "oscar_resolved_revision": "db5edfaef285c15d0a41d5115177a983c08b4f5f",
+    "retrieved": "2026-07-24",
+    "retrieved_utc": "2026-07-24T09:20:58.170213+00:00",
+    "roboarena_repo_id": "RoboArena/DataDump_08-05-2025",
+    "roboarena_requested_revision": "036d031087b892bd15d99d1d6406eedba4c902f7",
+    "roboarena_resolved_revision": "036d031087b892bd15d99d1d6406eedba4c902f7"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "schema": "wm-heterogeneous-simulator-evidence-independent-challenge-v1",
+  "status": "pass",
+  "method": "Node custom PRNG and Marsaglia-Tsang Gamma/Beta sampler; direct retained-CSV parse; no Python import or execution",
+  "draws_per_scenario": 150000,
+  "prior_alpha_beta": 1,
+  "tolerance": 0.015,
+  "scenarios": [
+    {
+      "evidence": [
+        10,
+        10,
+        10
+      ],
+      "latent_winner_concordance": 0.42916,
+      "monte_carlo_se": 0.0012779715552390044,
+      "name": "common_10",
+      "producer_probability": 0.43024,
+      "absolute_difference": 0.0010800000000000254
+    },
+    {
+      "evidence": [
+        500,
+        500,
+        10
+      ],
+      "latent_winner_concordance": 0.7319333333333333,
+      "monte_carlo_se": 0.001143698471010866,
+      "name": "openvla_10",
+      "producer_probability": 0.733944,
+      "absolute_difference": 0.002010666666666716
+    },
+    {
+      "evidence": [
+        500,
+        500,
+        0
+      ],
+      "latent_winner_concordance": 0.98236,
+      "monte_carlo_se": 0.00033989047647734984,
+      "name": "openvla_0",
+      "producer_probability": 0.98211,
+      "absolute_difference": 0.00024999999999997247
+    }
+  ],
+  "protocol_sha256": "b0c91c0e693f84ae951d85f150015654cac752d69e100f94d9f340d50f27cbe3",
+  "producer_sha256": "aa0d154bac0dbc812efe34c463894de287317e926dda1f6bfc6c74670524056d",
+  "producer_result_sha256": "a7274351df277b838c5f9788cb9649363bf778f128db605b2aa9674b2ba4c50f",
+  "input_sha256": "ec4f9b58ba4e1e8ced4adbe90ed8c2696fa86b449f6b2da6054848a9be7c48e5",
+  "runtime": {
+    "node": "v26.5.0",
+    "platform": "darwin",
+    "architecture": "arm64"
+  }
+}

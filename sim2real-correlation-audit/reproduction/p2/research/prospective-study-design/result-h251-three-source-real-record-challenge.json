@@ -1,0 +1,725 @@
+{
+  "schema": "h251-three-source-real-record-challenge-v1",
+  "runtime": "ruby 2.6.10p210 (2022-04-12 revision 67958) [universal.arm64e-darwin25]",
+  "method": "Ruby reconstruction using JSON, Psych YAML, CSV, regular-expression Boolean counts, and an independent graph traversal",
+  "canonical_result": "research/prospective-study-design/result-h251-three-source-real-record-application.json",
+  "checks": [
+    {
+      "name": "ankile_routing_rectangle",
+      "observed": [
+        150,
+        3,
+        50,
+        150
+      ],
+      "expected": [
+        150,
+        3,
+        50,
+        150
+      ],
+      "pass": true
+    },
+    {
+      "name": "ankile_routing_successes",
+      "observed": [
+        8,
+        9,
+        12
+      ],
+      "expected": [
+        8,
+        9,
+        12
+      ],
+      "pass": true
+    },
+    {
+      "name": "ankile_routing_pairs",
+      "observed": [
+        [
+          "routing-P0",
+          "routing-P1",
+          5,
+          39,
+          6,
+          0.49
+        ],
+        [
+          "routing-P0",
+          "routing-P2",
+          6,
+          34,
+          10,
+          0.46
+        ],
+        [
+          "routing-P1",
+          "routing-P2",
+          5,
+          37,
+          8,
+          0.47
+        ]
+      ],
+      "expected": [
+        [
+          "routing-P0",
+          "routing-P1",
+          5,
+          39,
+          6,
+          0.49
+        ],
+        [
+          "routing-P0",
+          "routing-P2",
+          6,
+          34,
+          10,
+          0.46
+        ],
+        [
+          "routing-P1",
+          "routing-P2",
+          5,
+          37,
+          8,
+          0.47
+        ]
+      ],
+      "pass": true
+    },
+    {
+      "name": "ankile_routing_all_submitted",
+      "observed": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "expected": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "pass": true
+    },
+    {
+      "name": "ankile_marker_rectangle",
+      "observed": [
+        150,
+        3,
+        50,
+        150
+      ],
+      "expected": [
+        150,
+        3,
+        50,
+        150
+      ],
+      "pass": true
+    },
+    {
+      "name": "ankile_marker_successes",
+      "observed": [
+        19,
+        32,
+        31
+      ],
+      "expected": [
+        19,
+        32,
+        31
+      ],
+      "pass": true
+    },
+    {
+      "name": "ankile_marker_pairs",
+      "observed": [
+        [
+          "marker-P0",
+          "marker-P1",
+          6,
+          25,
+          19,
+          0.37
+        ],
+        [
+          "marker-P0",
+          "marker-P2",
+          9,
+          20,
+          21,
+          0.38
+        ],
+        [
+          "marker-P1",
+          "marker-P2",
+          11,
+          29,
+          10,
+          0.51
+        ]
+      ],
+      "expected": [
+        [
+          "marker-P0",
+          "marker-P1",
+          6,
+          25,
+          19,
+          0.37
+        ],
+        [
+          "marker-P0",
+          "marker-P2",
+          9,
+          20,
+          21,
+          0.38
+        ],
+        [
+          "marker-P1",
+          "marker-P2",
+          11,
+          29,
+          10,
+          0.51
+        ]
+      ],
+      "pass": true
+    },
+    {
+      "name": "ankile_marker_all_submitted",
+      "observed": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "expected": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "pass": true
+    },
+    {
+      "name": "ankile_square_rectangle",
+      "observed": [
+        150,
+        3,
+        50,
+        150
+      ],
+      "expected": [
+        150,
+        3,
+        50,
+        150
+      ],
+      "pass": true
+    },
+    {
+      "name": "ankile_square_successes",
+      "observed": [
+        28,
+        36,
+        33
+      ],
+      "expected": [
+        28,
+        36,
+        33
+      ],
+      "pass": true
+    },
+    {
+      "name": "ankile_square_pairs",
+      "observed": [
+        [
+          "square-P0",
+          "square-P1",
+          4,
+          34,
+          12,
+          0.42
+        ],
+        [
+          "square-P0",
+          "square-P2",
+          7,
+          31,
+          12,
+          0.45
+        ],
+        [
+          "square-P1",
+          "square-P2",
+          6,
+          41,
+          3,
+          0.53
+        ]
+      ],
+      "expected": [
+        [
+          "square-P0",
+          "square-P1",
+          4,
+          34,
+          12,
+          0.42
+        ],
+        [
+          "square-P0",
+          "square-P2",
+          7,
+          31,
+          12,
+          0.45
+        ],
+        [
+          "square-P1",
+          "square-P2",
+          6,
+          41,
+          3,
+          0.53
+        ]
+      ],
+      "pass": true
+    },
+    {
+      "name": "ankile_square_all_submitted",
+      "observed": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "expected": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "pass": true
+    },
+    {
+      "name": "roboarena_sessions",
+      "observed": 3883,
+      "expected": 3883,
+      "pass": true
+    },
+    {
+      "name": "roboarena_set_sizes",
+      "observed": {
+        "1": 4,
+        "2": 3267,
+        "4": 13,
+        "7": 599
+      },
+      "expected": {
+        "1": 4,
+        "2": 3267,
+        "4": 13,
+        "7": 599
+      },
+      "pass": true
+    },
+    {
+      "name": "roboarena_nodes_edges",
+      "observed": [
+        21,
+        104,
+        2
+      ],
+      "expected": [
+        21,
+        104,
+        2
+      ],
+      "pass": true
+    },
+    {
+      "name": "roboarena_pair_eligible",
+      "observed": [
+        20,
+        1
+      ],
+      "expected": [
+        20,
+        1
+      ],
+      "pass": true
+    },
+    {
+      "name": "roboarena_support",
+      "observed": [
+        1,
+        4.5,
+        819,
+        27,
+        37,
+        28
+      ],
+      "expected": [
+        1,
+        4.5,
+        819,
+        27,
+        37,
+        28
+      ],
+      "pass": true
+    },
+    {
+      "name": "tri_structure",
+      "observed": [
+        20,
+        648,
+        73,
+        519,
+        109,
+        20
+      ],
+      "expected": [
+        20,
+        648,
+        73,
+        519,
+        109,
+        20
+      ],
+      "pass": true
+    },
+    {
+      "name": "tri_repairs",
+      "observed": 3,
+      "expected": 3,
+      "pass": true
+    },
+    {
+      "name": "tri_binary_integrity",
+      "observed": [
+        0,
+        0,
+        2
+      ],
+      "expected": [
+        0,
+        0,
+        2
+      ],
+      "pass": true
+    },
+    {
+      "name": "tri_progress_integrity",
+      "observed": [
+        0,
+        0,
+        0
+      ],
+      "expected": [
+        0,
+        0,
+        0
+      ],
+      "pass": true
+    },
+    {
+      "name": "tri_aggregate_integrity",
+      "observed": 0,
+      "expected": 0,
+      "pass": true
+    }
+  ],
+  "checks_passed": 22,
+  "checks_total": 22,
+  "status": "pass",
+  "limitations": [
+    "This challenge reconstructs aggregate arithmetic and graph topology, not the external data-generation process.",
+    "It does not validate AnkIle reset execution, RoboArena context equivalence, or TRI bundle identity."
+  ]
+}

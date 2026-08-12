@@ -1,0 +1,4 @@
+task,label,printed_r,printed_mmrv,figure3_checkpoints,episodes_per_checkpoint,source
+sloth,toy packing,0.944,0.076,17,20,"arXiv:2511.04665v2 Fig. 3 and Table I"
+rope,rope routing,0.901,0.174,20,27,"arXiv:2511.04665v2 Fig. 3 and Table I"
+T,T-block pushing,0.915,0.108,15,16,"arXiv:2511.04665v2 Fig. 3 and Table I"

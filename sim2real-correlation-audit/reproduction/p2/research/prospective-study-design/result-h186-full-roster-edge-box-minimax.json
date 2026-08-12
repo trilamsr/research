@@ -1,0 +1,4143 @@
+{
+  "additional_formula_checks": [
+    {
+      "candidate_checks": [
+        {
+          "enumerated_worst_expected_regret": null,
+          "formula_worst_expected_regret": {
+            "decimal": 0.21428571428571427,
+            "denominator": 14,
+            "numerator": 3,
+            "text": "3/14"
+          },
+          "weights": [
+            {
+              "decimal": 0.14285714285714285,
+              "denominator": 7,
+              "numerator": 1,
+              "text": "1/7"
+            },
+            {
+              "decimal": 0.14285714285714285,
+              "denominator": 7,
+              "numerator": 1,
+              "text": "1/7"
+            },
+            {
+              "decimal": 0.14285714285714285,
+              "denominator": 7,
+              "numerator": 1,
+              "text": "1/7"
+            },
+            {
+              "decimal": 0.14285714285714285,
+              "denominator": 7,
+              "numerator": 1,
+              "text": "1/7"
+            },
+            {
+              "decimal": 0.14285714285714285,
+              "denominator": 7,
+              "numerator": 1,
+              "text": "1/7"
+            },
+            {
+              "decimal": 0.14285714285714285,
+              "denominator": 7,
+              "numerator": 1,
+              "text": "1/7"
+            },
+            {
+              "decimal": 0.14285714285714285,
+              "denominator": 7,
+              "numerator": 1,
+              "text": "1/7"
+            }
+          ]
+        },
+        {
+          "enumerated_worst_expected_regret": null,
+          "formula_worst_expected_regret": {
+            "decimal": 0.42857142857142855,
+            "denominator": 7,
+            "numerator": 3,
+            "text": "3/7"
+          },
+          "weights": [
+            {
+              "decimal": 1.0,
+              "denominator": 1,
+              "numerator": 1,
+              "text": "1/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            }
+          ]
+        },
+        {
+          "enumerated_worst_expected_regret": null,
+          "formula_worst_expected_regret": {
+            "decimal": 0.39285714285714285,
+            "denominator": 28,
+            "numerator": 11,
+            "text": "11/28"
+          },
+          "weights": [
+            {
+              "decimal": 0.5,
+              "denominator": 2,
+              "numerator": 1,
+              "text": "1/2"
+            },
+            {
+              "decimal": 0.5,
+              "denominator": 2,
+              "numerator": 1,
+              "text": "1/2"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            }
+          ]
+        },
+        {
+          "enumerated_worst_expected_regret": null,
+          "formula_worst_expected_regret": {
+            "decimal": 0.2857142857142857,
+            "denominator": 7,
+            "numerator": 2,
+            "text": "2/7"
+          },
+          "weights": [
+            {
+              "decimal": 0.03571428571428571,
+              "denominator": 28,
+              "numerator": 1,
+              "text": "1/28"
+            },
+            {
+              "decimal": 0.07142857142857142,
+              "denominator": 14,
+              "numerator": 1,
+              "text": "1/14"
+            },
+            {
+              "decimal": 0.10714285714285714,
+              "denominator": 28,
+              "numerator": 3,
+              "text": "3/28"
+            },
+            {
+              "decimal": 0.14285714285714285,
+              "denominator": 7,
+              "numerator": 1,
+              "text": "1/7"
+            },
+            {
+              "decimal": 0.17857142857142858,
+              "denominator": 28,
+              "numerator": 5,
+              "text": "5/28"
+            },
+            {
+              "decimal": 0.21428571428571427,
+              "denominator": 14,
+              "numerator": 3,
+              "text": "3/14"
+            },
+            {
+              "decimal": 0.25,
+              "denominator": 4,
+              "numerator": 1,
+              "text": "1/4"
+            }
+          ]
+        },
+        {
+          "enumerated_worst_expected_regret": null,
+          "formula_worst_expected_regret": {
+            "decimal": 0.35714285714285715,
+            "denominator": 14,
+            "numerator": 5,
+            "text": "5/14"
+          },
+          "weights": [
+            {
+              "decimal": 0.3333333333333333,
+              "denominator": 3,
+              "numerator": 1,
+              "text": "1/3"
+            },
+            {
+              "decimal": 0.3333333333333333,
+              "denominator": 3,
+              "numerator": 1,
+              "text": "1/3"
+            },
+            {
+              "decimal": 0.3333333333333333,
+              "denominator": 3,
+              "numerator": 1,
+              "text": "1/3"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            }
+          ]
+        }
+      ],
+      "deterministic_singleton_minimax_regret": {
+        "decimal": 0.42857142857142855,
+        "denominator": 7,
+        "numerator": 3,
+        "text": "3/7"
+      },
+      "edge_count": 21,
+      "endpoint_count": 2097152,
+      "endpoints_exhausted": false,
+      "k": 7,
+      "randomized_minimax_expected_regret": {
+        "decimal": 0.21428571428571427,
+        "denominator": 14,
+        "numerator": 3,
+        "text": "3/14"
+      },
+      "same_complete_support_observed_half_win_law": true,
+      "unique_randomized_minimizer": [
+        {
+          "decimal": 0.14285714285714285,
+          "denominator": 7,
+          "numerator": 1,
+          "text": "1/7"
+        },
+        {
+          "decimal": 0.14285714285714285,
+          "denominator": 7,
+          "numerator": 1,
+          "text": "1/7"
+        },
+        {
+          "decimal": 0.14285714285714285,
+          "denominator": 7,
+          "numerator": 1,
+          "text": "1/7"
+        },
+        {
+          "decimal": 0.14285714285714285,
+          "denominator": 7,
+          "numerator": 1,
+          "text": "1/7"
+        },
+        {
+          "decimal": 0.14285714285714285,
+          "denominator": 7,
+          "numerator": 1,
+          "text": "1/7"
+        },
+        {
+          "decimal": 0.14285714285714285,
+          "denominator": 7,
+          "numerator": 1,
+          "text": "1/7"
+        },
+        {
+          "decimal": 0.14285714285714285,
+          "denominator": 7,
+          "numerator": 1,
+          "text": "1/7"
+        }
+      ],
+      "valid_hidden_outcome_range": [
+        {
+          "decimal": 0.0,
+          "denominator": 1,
+          "numerator": 0,
+          "text": "0/1"
+        },
+        {
+          "decimal": 1.0,
+          "denominator": 1,
+          "numerator": 1,
+          "text": "1/1"
+        }
+      ]
+    },
+    {
+      "candidate_checks": [
+        {
+          "enumerated_worst_expected_regret": null,
+          "formula_worst_expected_regret": {
+            "decimal": 0.21875,
+            "denominator": 32,
+            "numerator": 7,
+            "text": "7/32"
+          },
+          "weights": [
+            {
+              "decimal": 0.125,
+              "denominator": 8,
+              "numerator": 1,
+              "text": "1/8"
+            },
+            {
+              "decimal": 0.125,
+              "denominator": 8,
+              "numerator": 1,
+              "text": "1/8"
+            },
+            {
+              "decimal": 0.125,
+              "denominator": 8,
+              "numerator": 1,
+              "text": "1/8"
+            },
+            {
+              "decimal": 0.125,
+              "denominator": 8,
+              "numerator": 1,
+              "text": "1/8"
+            },
+            {
+              "decimal": 0.125,
+              "denominator": 8,
+              "numerator": 1,
+              "text": "1/8"
+            },
+            {
+              "decimal": 0.125,
+              "denominator": 8,
+              "numerator": 1,
+              "text": "1/8"
+            },
+            {
+              "decimal": 0.125,
+              "denominator": 8,
+              "numerator": 1,
+              "text": "1/8"
+            },
+            {
+              "decimal": 0.125,
+              "denominator": 8,
+              "numerator": 1,
+              "text": "1/8"
+            }
+          ]
+        },
+        {
+          "enumerated_worst_expected_regret": null,
+          "formula_worst_expected_regret": {
+            "decimal": 0.4375,
+            "denominator": 16,
+            "numerator": 7,
+            "text": "7/16"
+          },
+          "weights": [
+            {
+              "decimal": 1.0,
+              "denominator": 1,
+              "numerator": 1,
+              "text": "1/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            }
+          ]
+        },
+        {
+          "enumerated_worst_expected_regret": null,
+          "formula_worst_expected_regret": {
+            "decimal": 0.40625,
+            "denominator": 32,
+            "numerator": 13,
+            "text": "13/32"
+          },
+          "weights": [
+            {
+              "decimal": 0.5,
+              "denominator": 2,
+              "numerator": 1,
+              "text": "1/2"
+            },
+            {
+              "decimal": 0.5,
+              "denominator": 2,
+              "numerator": 1,
+              "text": "1/2"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            }
+          ]
+        },
+        {
+          "enumerated_worst_expected_regret": null,
+          "formula_worst_expected_regret": {
+            "decimal": 0.2916666666666667,
+            "denominator": 24,
+            "numerator": 7,
+            "text": "7/24"
+          },
+          "weights": [
+            {
+              "decimal": 0.027777777777777776,
+              "denominator": 36,
+              "numerator": 1,
+              "text": "1/36"
+            },
+            {
+              "decimal": 0.05555555555555555,
+              "denominator": 18,
+              "numerator": 1,
+              "text": "1/18"
+            },
+            {
+              "decimal": 0.08333333333333333,
+              "denominator": 12,
+              "numerator": 1,
+              "text": "1/12"
+            },
+            {
+              "decimal": 0.1111111111111111,
+              "denominator": 9,
+              "numerator": 1,
+              "text": "1/9"
+            },
+            {
+              "decimal": 0.1388888888888889,
+              "denominator": 36,
+              "numerator": 5,
+              "text": "5/36"
+            },
+            {
+              "decimal": 0.16666666666666666,
+              "denominator": 6,
+              "numerator": 1,
+              "text": "1/6"
+            },
+            {
+              "decimal": 0.19444444444444445,
+              "denominator": 36,
+              "numerator": 7,
+              "text": "7/36"
+            },
+            {
+              "decimal": 0.2222222222222222,
+              "denominator": 9,
+              "numerator": 2,
+              "text": "2/9"
+            }
+          ]
+        },
+        {
+          "enumerated_worst_expected_regret": null,
+          "formula_worst_expected_regret": {
+            "decimal": 0.375,
+            "denominator": 8,
+            "numerator": 3,
+            "text": "3/8"
+          },
+          "weights": [
+            {
+              "decimal": 0.3333333333333333,
+              "denominator": 3,
+              "numerator": 1,
+              "text": "1/3"
+            },
+            {
+              "decimal": 0.3333333333333333,
+              "denominator": 3,
+              "numerator": 1,
+              "text": "1/3"
+            },
+            {
+              "decimal": 0.3333333333333333,
+              "denominator": 3,
+              "numerator": 1,
+              "text": "1/3"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            }
+          ]
+        }
+      ],
+      "deterministic_singleton_minimax_regret": {
+        "decimal": 0.4375,
+        "denominator": 16,
+        "numerator": 7,
+        "text": "7/16"
+      },
+      "edge_count": 28,
+      "endpoint_count": 268435456,
+      "endpoints_exhausted": false,
+      "k": 8,
+      "randomized_minimax_expected_regret": {
+        "decimal": 0.21875,
+        "denominator": 32,
+        "numerator": 7,
+        "text": "7/32"
+      },
+      "same_complete_support_observed_half_win_law": true,
+      "unique_randomized_minimizer": [
+        {
+          "decimal": 0.125,
+          "denominator": 8,
+          "numerator": 1,
+          "text": "1/8"
+        },
+        {
+          "decimal": 0.125,
+          "denominator": 8,
+          "numerator": 1,
+          "text": "1/8"
+        },
+        {
+          "decimal": 0.125,
+          "denominator": 8,
+          "numerator": 1,
+          "text": "1/8"
+        },
+        {
+          "decimal": 0.125,
+          "denominator": 8,
+          "numerator": 1,
+          "text": "1/8"
+        },
+        {
+          "decimal": 0.125,
+          "denominator": 8,
+          "numerator": 1,
+          "text": "1/8"
+        },
+        {
+          "decimal": 0.125,
+          "denominator": 8,
+          "numerator": 1,
+          "text": "1/8"
+        },
+        {
+          "decimal": 0.125,
+          "denominator": 8,
+          "numerator": 1,
+          "text": "1/8"
+        },
+        {
+          "decimal": 0.125,
+          "denominator": 8,
+          "numerator": 1,
+          "text": "1/8"
+        }
+      ],
+      "valid_hidden_outcome_range": [
+        {
+          "decimal": 0.0,
+          "denominator": 1,
+          "numerator": 0,
+          "text": "0/1"
+        },
+        {
+          "decimal": 1.0,
+          "denominator": 1,
+          "numerator": 1,
+          "text": "1/1"
+        }
+      ]
+    },
+    {
+      "candidate_checks": [
+        {
+          "enumerated_worst_expected_regret": null,
+          "formula_worst_expected_regret": {
+            "decimal": 0.234375,
+            "denominator": 64,
+            "numerator": 15,
+            "text": "15/64"
+          },
+          "weights": [
+            {
+              "decimal": 0.0625,
+              "denominator": 16,
+              "numerator": 1,
+              "text": "1/16"
+            },
+            {
+              "decimal": 0.0625,
+              "denominator": 16,
+              "numerator": 1,
+              "text": "1/16"
+            },
+            {
+              "decimal": 0.0625,
+              "denominator": 16,
+              "numerator": 1,
+              "text": "1/16"
+            },
+            {
+              "decimal": 0.0625,
+              "denominator": 16,
+              "numerator": 1,
+              "text": "1/16"
+            },
+            {
+              "decimal": 0.0625,
+              "denominator": 16,
+              "numerator": 1,
+              "text": "1/16"
+            },
+            {
+              "decimal": 0.0625,
+              "denominator": 16,
+              "numerator": 1,
+              "text": "1/16"
+            },
+            {
+              "decimal": 0.0625,
+              "denominator": 16,
+              "numerator": 1,
+              "text": "1/16"
+            },
+            {
+              "decimal": 0.0625,
+              "denominator": 16,
+              "numerator": 1,
+              "text": "1/16"
+            },
+            {
+              "decimal": 0.0625,
+              "denominator": 16,
+              "numerator": 1,
+              "text": "1/16"
+            },
+            {
+              "decimal": 0.0625,
+              "denominator": 16,
+              "numerator": 1,
+              "text": "1/16"
+            },
+            {
+              "decimal": 0.0625,
+              "denominator": 16,
+              "numerator": 1,
+              "text": "1/16"
+            },
+            {
+              "decimal": 0.0625,
+              "denominator": 16,
+              "numerator": 1,
+              "text": "1/16"
+            },
+            {
+              "decimal": 0.0625,
+              "denominator": 16,
+              "numerator": 1,
+              "text": "1/16"
+            },
+            {
+              "decimal": 0.0625,
+              "denominator": 16,
+              "numerator": 1,
+              "text": "1/16"
+            },
+            {
+              "decimal": 0.0625,
+              "denominator": 16,
+              "numerator": 1,
+              "text": "1/16"
+            },
+            {
+              "decimal": 0.0625,
+              "denominator": 16,
+              "numerator": 1,
+              "text": "1/16"
+            }
+          ]
+        },
+        {
+          "enumerated_worst_expected_regret": null,
+          "formula_worst_expected_regret": {
+            "decimal": 0.46875,
+            "denominator": 32,
+            "numerator": 15,
+            "text": "15/32"
+          },
+          "weights": [
+            {
+              "decimal": 1.0,
+              "denominator": 1,
+              "numerator": 1,
+              "text": "1/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            }
+          ]
+        },
+        {
+          "enumerated_worst_expected_regret": null,
+          "formula_worst_expected_regret": {
+            "decimal": 0.453125,
+            "denominator": 64,
+            "numerator": 29,
+            "text": "29/64"
+          },
+          "weights": [
+            {
+              "decimal": 0.5,
+              "denominator": 2,
+              "numerator": 1,
+              "text": "1/2"
+            },
+            {
+              "decimal": 0.5,
+              "denominator": 2,
+              "numerator": 1,
+              "text": "1/2"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            }
+          ]
+        },
+        {
+          "enumerated_worst_expected_regret": null,
+          "formula_worst_expected_regret": {
+            "decimal": 0.3125,
+            "denominator": 16,
+            "numerator": 5,
+            "text": "5/16"
+          },
+          "weights": [
+            {
+              "decimal": 0.007352941176470588,
+              "denominator": 136,
+              "numerator": 1,
+              "text": "1/136"
+            },
+            {
+              "decimal": 0.014705882352941176,
+              "denominator": 68,
+              "numerator": 1,
+              "text": "1/68"
+            },
+            {
+              "decimal": 0.022058823529411766,
+              "denominator": 136,
+              "numerator": 3,
+              "text": "3/136"
+            },
+            {
+              "decimal": 0.029411764705882353,
+              "denominator": 34,
+              "numerator": 1,
+              "text": "1/34"
+            },
+            {
+              "decimal": 0.03676470588235294,
+              "denominator": 136,
+              "numerator": 5,
+              "text": "5/136"
+            },
+            {
+              "decimal": 0.04411764705882353,
+              "denominator": 68,
+              "numerator": 3,
+              "text": "3/68"
+            },
+            {
+              "decimal": 0.051470588235294115,
+              "denominator": 136,
+              "numerator": 7,
+              "text": "7/136"
+            },
+            {
+              "decimal": 0.058823529411764705,
+              "denominator": 17,
+              "numerator": 1,
+              "text": "1/17"
+            },
+            {
+              "decimal": 0.0661764705882353,
+              "denominator": 136,
+              "numerator": 9,
+              "text": "9/136"
+            },
+            {
+              "decimal": 0.07352941176470588,
+              "denominator": 68,
+              "numerator": 5,
+              "text": "5/68"
+            },
+            {
+              "decimal": 0.08088235294117647,
+              "denominator": 136,
+              "numerator": 11,
+              "text": "11/136"
+            },
+            {
+              "decimal": 0.08823529411764706,
+              "denominator": 34,
+              "numerator": 3,
+              "text": "3/34"
+            },
+            {
+              "decimal": 0.09558823529411764,
+              "denominator": 136,
+              "numerator": 13,
+              "text": "13/136"
+            },
+            {
+              "decimal": 0.10294117647058823,
+              "denominator": 68,
+              "numerator": 7,
+              "text": "7/68"
+            },
+            {
+              "decimal": 0.11029411764705882,
+              "denominator": 136,
+              "numerator": 15,
+              "text": "15/136"
+            },
+            {
+              "decimal": 0.11764705882352941,
+              "denominator": 17,
+              "numerator": 2,
+              "text": "2/17"
+            }
+          ]
+        },
+        {
+          "enumerated_worst_expected_regret": null,
+          "formula_worst_expected_regret": {
+            "decimal": 0.4375,
+            "denominator": 16,
+            "numerator": 7,
+            "text": "7/16"
+          },
+          "weights": [
+            {
+              "decimal": 0.3333333333333333,
+              "denominator": 3,
+              "numerator": 1,
+              "text": "1/3"
+            },
+            {
+              "decimal": 0.3333333333333333,
+              "denominator": 3,
+              "numerator": 1,
+              "text": "1/3"
+            },
+            {
+              "decimal": 0.3333333333333333,
+              "denominator": 3,
+              "numerator": 1,
+              "text": "1/3"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            }
+          ]
+        }
+      ],
+      "deterministic_singleton_minimax_regret": {
+        "decimal": 0.46875,
+        "denominator": 32,
+        "numerator": 15,
+        "text": "15/32"
+      },
+      "edge_count": 120,
+      "endpoint_count": 1329227995784915872903807060280344576,
+      "endpoints_exhausted": false,
+      "k": 16,
+      "randomized_minimax_expected_regret": {
+        "decimal": 0.234375,
+        "denominator": 64,
+        "numerator": 15,
+        "text": "15/64"
+      },
+      "same_complete_support_observed_half_win_law": true,
+      "unique_randomized_minimizer": [
+        {
+          "decimal": 0.0625,
+          "denominator": 16,
+          "numerator": 1,
+          "text": "1/16"
+        },
+        {
+          "decimal": 0.0625,
+          "denominator": 16,
+          "numerator": 1,
+          "text": "1/16"
+        },
+        {
+          "decimal": 0.0625,
+          "denominator": 16,
+          "numerator": 1,
+          "text": "1/16"
+        },
+        {
+          "decimal": 0.0625,
+          "denominator": 16,
+          "numerator": 1,
+          "text": "1/16"
+        },
+        {
+          "decimal": 0.0625,
+          "denominator": 16,
+          "numerator": 1,
+          "text": "1/16"
+        },
+        {
+          "decimal": 0.0625,
+          "denominator": 16,
+          "numerator": 1,
+          "text": "1/16"
+        },
+        {
+          "decimal": 0.0625,
+          "denominator": 16,
+          "numerator": 1,
+          "text": "1/16"
+        },
+        {
+          "decimal": 0.0625,
+          "denominator": 16,
+          "numerator": 1,
+          "text": "1/16"
+        },
+        {
+          "decimal": 0.0625,
+          "denominator": 16,
+          "numerator": 1,
+          "text": "1/16"
+        },
+        {
+          "decimal": 0.0625,
+          "denominator": 16,
+          "numerator": 1,
+          "text": "1/16"
+        },
+        {
+          "decimal": 0.0625,
+          "denominator": 16,
+          "numerator": 1,
+          "text": "1/16"
+        },
+        {
+          "decimal": 0.0625,
+          "denominator": 16,
+          "numerator": 1,
+          "text": "1/16"
+        },
+        {
+          "decimal": 0.0625,
+          "denominator": 16,
+          "numerator": 1,
+          "text": "1/16"
+        },
+        {
+          "decimal": 0.0625,
+          "denominator": 16,
+          "numerator": 1,
+          "text": "1/16"
+        },
+        {
+          "decimal": 0.0625,
+          "denominator": 16,
+          "numerator": 1,
+          "text": "1/16"
+        },
+        {
+          "decimal": 0.0625,
+          "denominator": 16,
+          "numerator": 1,
+          "text": "1/16"
+        }
+      ],
+      "valid_hidden_outcome_range": [
+        {
+          "decimal": 0.0,
+          "denominator": 1,
+          "numerator": 0,
+          "text": "0/1"
+        },
+        {
+          "decimal": 1.0,
+          "denominator": 1,
+          "numerator": 1,
+          "text": "1/1"
+        }
+      ]
+    },
+    {
+      "candidate_checks": [
+        {
+          "enumerated_worst_expected_regret": null,
+          "formula_worst_expected_regret": {
+            "decimal": 0.2421875,
+            "denominator": 128,
+            "numerator": 31,
+            "text": "31/128"
+          },
+          "weights": [
+            {
+              "decimal": 0.03125,
+              "denominator": 32,
+              "numerator": 1,
+              "text": "1/32"
+            },
+            {
+              "decimal": 0.03125,
+              "denominator": 32,
+              "numerator": 1,
+              "text": "1/32"
+            },
+            {
+              "decimal": 0.03125,
+              "denominator": 32,
+              "numerator": 1,
+              "text": "1/32"
+            },
+            {
+              "decimal": 0.03125,
+              "denominator": 32,
+              "numerator": 1,
+              "text": "1/32"
+            },
+            {
+              "decimal": 0.03125,
+              "denominator": 32,
+              "numerator": 1,
+              "text": "1/32"
+            },
+            {
+              "decimal": 0.03125,
+              "denominator": 32,
+              "numerator": 1,
+              "text": "1/32"
+            },
+            {
+              "decimal": 0.03125,
+              "denominator": 32,
+              "numerator": 1,
+              "text": "1/32"
+            },
+            {
+              "decimal": 0.03125,
+              "denominator": 32,
+              "numerator": 1,
+              "text": "1/32"
+            },
+            {
+              "decimal": 0.03125,
+              "denominator": 32,
+              "numerator": 1,
+              "text": "1/32"
+            },
+            {
+              "decimal": 0.03125,
+              "denominator": 32,
+              "numerator": 1,
+              "text": "1/32"
+            },
+            {
+              "decimal": 0.03125,
+              "denominator": 32,
+              "numerator": 1,
+              "text": "1/32"
+            },
+            {
+              "decimal": 0.03125,
+              "denominator": 32,
+              "numerator": 1,
+              "text": "1/32"
+            },
+            {
+              "decimal": 0.03125,
+              "denominator": 32,
+              "numerator": 1,
+              "text": "1/32"
+            },
+            {
+              "decimal": 0.03125,
+              "denominator": 32,
+              "numerator": 1,
+              "text": "1/32"
+            },
+            {
+              "decimal": 0.03125,
+              "denominator": 32,
+              "numerator": 1,
+              "text": "1/32"
+            },
+            {
+              "decimal": 0.03125,
+              "denominator": 32,
+              "numerator": 1,
+              "text": "1/32"
+            },
+            {
+              "decimal": 0.03125,
+              "denominator": 32,
+              "numerator": 1,
+              "text": "1/32"
+            },
+            {
+              "decimal": 0.03125,
+              "denominator": 32,
+              "numerator": 1,
+              "text": "1/32"
+            },
+            {
+              "decimal": 0.03125,
+              "denominator": 32,
+              "numerator": 1,
+              "text": "1/32"
+            },
+            {
+              "decimal": 0.03125,
+              "denominator": 32,
+              "numerator": 1,
+              "text": "1/32"
+            },
+            {
+              "decimal": 0.03125,
+              "denominator": 32,
+              "numerator": 1,
+              "text": "1/32"
+            },
+            {
+              "decimal": 0.03125,
+              "denominator": 32,
+              "numerator": 1,
+              "text": "1/32"
+            },
+            {
+              "decimal": 0.03125,
+              "denominator": 32,
+              "numerator": 1,
+              "text": "1/32"
+            },
+            {
+              "decimal": 0.03125,
+              "denominator": 32,
+              "numerator": 1,
+              "text": "1/32"
+            },
+            {
+              "decimal": 0.03125,
+              "denominator": 32,
+              "numerator": 1,
+              "text": "1/32"
+            },
+            {
+              "decimal": 0.03125,
+              "denominator": 32,
+              "numerator": 1,
+              "text": "1/32"
+            },
+            {
+              "decimal": 0.03125,
+              "denominator": 32,
+              "numerator": 1,
+              "text": "1/32"
+            },
+            {
+              "decimal": 0.03125,
+              "denominator": 32,
+              "numerator": 1,
+              "text": "1/32"
+            },
+            {
+              "decimal": 0.03125,
+              "denominator": 32,
+              "numerator": 1,
+              "text": "1/32"
+            },
+            {
+              "decimal": 0.03125,
+              "denominator": 32,
+              "numerator": 1,
+              "text": "1/32"
+            },
+            {
+              "decimal": 0.03125,
+              "denominator": 32,
+              "numerator": 1,
+              "text": "1/32"
+            },
+            {
+              "decimal": 0.03125,
+              "denominator": 32,
+              "numerator": 1,
+              "text": "1/32"
+            }
+          ]
+        },
+        {
+          "enumerated_worst_expected_regret": null,
+          "formula_worst_expected_regret": {
+            "decimal": 0.484375,
+            "denominator": 64,
+            "numerator": 31,
+            "text": "31/64"
+          },
+          "weights": [
+            {
+              "decimal": 1.0,
+              "denominator": 1,
+              "numerator": 1,
+              "text": "1/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            }
+          ]
+        },
+        {
+          "enumerated_worst_expected_regret": null,
+          "formula_worst_expected_regret": {
+            "decimal": 0.4765625,
+            "denominator": 128,
+            "numerator": 61,
+            "text": "61/128"
+          },
+          "weights": [
+            {
+              "decimal": 0.5,
+              "denominator": 2,
+              "numerator": 1,
+              "text": "1/2"
+            },
+            {
+              "decimal": 0.5,
+              "denominator": 2,
+              "numerator": 1,
+              "text": "1/2"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            }
+          ]
+        },
+        {
+          "enumerated_worst_expected_regret": null,
+          "formula_worst_expected_regret": {
+            "decimal": 0.3229166666666667,
+            "denominator": 96,
+            "numerator": 31,
+            "text": "31/96"
+          },
+          "weights": [
+            {
+              "decimal": 0.001893939393939394,
+              "denominator": 528,
+              "numerator": 1,
+              "text": "1/528"
+            },
+            {
+              "decimal": 0.003787878787878788,
+              "denominator": 264,
+              "numerator": 1,
+              "text": "1/264"
+            },
+            {
+              "decimal": 0.005681818181818182,
+              "denominator": 176,
+              "numerator": 1,
+              "text": "1/176"
+            },
+            {
+              "decimal": 0.007575757575757576,
+              "denominator": 132,
+              "numerator": 1,
+              "text": "1/132"
+            },
+            {
+              "decimal": 0.00946969696969697,
+              "denominator": 528,
+              "numerator": 5,
+              "text": "5/528"
+            },
+            {
+              "decimal": 0.011363636363636364,
+              "denominator": 88,
+              "numerator": 1,
+              "text": "1/88"
+            },
+            {
+              "decimal": 0.013257575757575758,
+              "denominator": 528,
+              "numerator": 7,
+              "text": "7/528"
+            },
+            {
+              "decimal": 0.015151515151515152,
+              "denominator": 66,
+              "numerator": 1,
+              "text": "1/66"
+            },
+            {
+              "decimal": 0.017045454545454544,
+              "denominator": 176,
+              "numerator": 3,
+              "text": "3/176"
+            },
+            {
+              "decimal": 0.01893939393939394,
+              "denominator": 264,
+              "numerator": 5,
+              "text": "5/264"
+            },
+            {
+              "decimal": 0.020833333333333332,
+              "denominator": 48,
+              "numerator": 1,
+              "text": "1/48"
+            },
+            {
+              "decimal": 0.022727272727272728,
+              "denominator": 44,
+              "numerator": 1,
+              "text": "1/44"
+            },
+            {
+              "decimal": 0.02462121212121212,
+              "denominator": 528,
+              "numerator": 13,
+              "text": "13/528"
+            },
+            {
+              "decimal": 0.026515151515151516,
+              "denominator": 264,
+              "numerator": 7,
+              "text": "7/264"
+            },
+            {
+              "decimal": 0.028409090909090908,
+              "denominator": 176,
+              "numerator": 5,
+              "text": "5/176"
+            },
+            {
+              "decimal": 0.030303030303030304,
+              "denominator": 33,
+              "numerator": 1,
+              "text": "1/33"
+            },
+            {
+              "decimal": 0.032196969696969696,
+              "denominator": 528,
+              "numerator": 17,
+              "text": "17/528"
+            },
+            {
+              "decimal": 0.03409090909090909,
+              "denominator": 88,
+              "numerator": 3,
+              "text": "3/88"
+            },
+            {
+              "decimal": 0.03598484848484849,
+              "denominator": 528,
+              "numerator": 19,
+              "text": "19/528"
+            },
+            {
+              "decimal": 0.03787878787878788,
+              "denominator": 132,
+              "numerator": 5,
+              "text": "5/132"
+            },
+            {
+              "decimal": 0.03977272727272727,
+              "denominator": 176,
+              "numerator": 7,
+              "text": "7/176"
+            },
+            {
+              "decimal": 0.041666666666666664,
+              "denominator": 24,
+              "numerator": 1,
+              "text": "1/24"
+            },
+            {
+              "decimal": 0.043560606060606064,
+              "denominator": 528,
+              "numerator": 23,
+              "text": "23/528"
+            },
+            {
+              "decimal": 0.045454545454545456,
+              "denominator": 22,
+              "numerator": 1,
+              "text": "1/22"
+            },
+            {
+              "decimal": 0.04734848484848485,
+              "denominator": 528,
+              "numerator": 25,
+              "text": "25/528"
+            },
+            {
+              "decimal": 0.04924242424242424,
+              "denominator": 264,
+              "numerator": 13,
+              "text": "13/264"
+            },
+            {
+              "decimal": 0.05113636363636364,
+              "denominator": 176,
+              "numerator": 9,
+              "text": "9/176"
+            },
+            {
+              "decimal": 0.05303030303030303,
+              "denominator": 132,
+              "numerator": 7,
+              "text": "7/132"
+            },
+            {
+              "decimal": 0.054924242424242424,
+              "denominator": 528,
+              "numerator": 29,
+              "text": "29/528"
+            },
+            {
+              "decimal": 0.056818181818181816,
+              "denominator": 88,
+              "numerator": 5,
+              "text": "5/88"
+            },
+            {
+              "decimal": 0.058712121212121215,
+              "denominator": 528,
+              "numerator": 31,
+              "text": "31/528"
+            },
+            {
+              "decimal": 0.06060606060606061,
+              "denominator": 33,
+              "numerator": 2,
+              "text": "2/33"
+            }
+          ]
+        },
+        {
+          "enumerated_worst_expected_regret": null,
+          "formula_worst_expected_regret": {
+            "decimal": 0.46875,
+            "denominator": 32,
+            "numerator": 15,
+            "text": "15/32"
+          },
+          "weights": [
+            {
+              "decimal": 0.3333333333333333,
+              "denominator": 3,
+              "numerator": 1,
+              "text": "1/3"
+            },
+            {
+              "decimal": 0.3333333333333333,
+              "denominator": 3,
+              "numerator": 1,
+              "text": "1/3"
+            },
+            {
+              "decimal": 0.3333333333333333,
+              "denominator": 3,
+              "numerator": 1,
+              "text": "1/3"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            }
+          ]
+        }
+      ],
+      "deterministic_singleton_minimax_regret": {
+        "decimal": 0.484375,
+        "denominator": 64,
+        "numerator": 31,
+        "text": "31/64"
+      },
+      "edge_count": 496,
+      "endpoint_count": 204586912993508866875824356051724947013540127877691549342705710506008362275292159680204380770369009821930417757972504438076078534117837065833032974336,
+      "endpoints_exhausted": false,
+      "k": 32,
+      "randomized_minimax_expected_regret": {
+        "decimal": 0.2421875,
+        "denominator": 128,
+        "numerator": 31,
+        "text": "31/128"
+      },
+      "same_complete_support_observed_half_win_law": true,
+      "unique_randomized_minimizer": [
+        {
+          "decimal": 0.03125,
+          "denominator": 32,
+          "numerator": 1,
+          "text": "1/32"
+        },
+        {
+          "decimal": 0.03125,
+          "denominator": 32,
+          "numerator": 1,
+          "text": "1/32"
+        },
+        {
+          "decimal": 0.03125,
+          "denominator": 32,
+          "numerator": 1,
+          "text": "1/32"
+        },
+        {
+          "decimal": 0.03125,
+          "denominator": 32,
+          "numerator": 1,
+          "text": "1/32"
+        },
+        {
+          "decimal": 0.03125,
+          "denominator": 32,
+          "numerator": 1,
+          "text": "1/32"
+        },
+        {
+          "decimal": 0.03125,
+          "denominator": 32,
+          "numerator": 1,
+          "text": "1/32"
+        },
+        {
+          "decimal": 0.03125,
+          "denominator": 32,
+          "numerator": 1,
+          "text": "1/32"
+        },
+        {
+          "decimal": 0.03125,
+          "denominator": 32,
+          "numerator": 1,
+          "text": "1/32"
+        },
+        {
+          "decimal": 0.03125,
+          "denominator": 32,
+          "numerator": 1,
+          "text": "1/32"
+        },
+        {
+          "decimal": 0.03125,
+          "denominator": 32,
+          "numerator": 1,
+          "text": "1/32"
+        },
+        {
+          "decimal": 0.03125,
+          "denominator": 32,
+          "numerator": 1,
+          "text": "1/32"
+        },
+        {
+          "decimal": 0.03125,
+          "denominator": 32,
+          "numerator": 1,
+          "text": "1/32"
+        },
+        {
+          "decimal": 0.03125,
+          "denominator": 32,
+          "numerator": 1,
+          "text": "1/32"
+        },
+        {
+          "decimal": 0.03125,
+          "denominator": 32,
+          "numerator": 1,
+          "text": "1/32"
+        },
+        {
+          "decimal": 0.03125,
+          "denominator": 32,
+          "numerator": 1,
+          "text": "1/32"
+        },
+        {
+          "decimal": 0.03125,
+          "denominator": 32,
+          "numerator": 1,
+          "text": "1/32"
+        },
+        {
+          "decimal": 0.03125,
+          "denominator": 32,
+          "numerator": 1,
+          "text": "1/32"
+        },
+        {
+          "decimal": 0.03125,
+          "denominator": 32,
+          "numerator": 1,
+          "text": "1/32"
+        },
+        {
+          "decimal": 0.03125,
+          "denominator": 32,
+          "numerator": 1,
+          "text": "1/32"
+        },
+        {
+          "decimal": 0.03125,
+          "denominator": 32,
+          "numerator": 1,
+          "text": "1/32"
+        },
+        {
+          "decimal": 0.03125,
+          "denominator": 32,
+          "numerator": 1,
+          "text": "1/32"
+        },
+        {
+          "decimal": 0.03125,
+          "denominator": 32,
+          "numerator": 1,
+          "text": "1/32"
+        },
+        {
+          "decimal": 0.03125,
+          "denominator": 32,
+          "numerator": 1,
+          "text": "1/32"
+        },
+        {
+          "decimal": 0.03125,
+          "denominator": 32,
+          "numerator": 1,
+          "text": "1/32"
+        },
+        {
+          "decimal": 0.03125,
+          "denominator": 32,
+          "numerator": 1,
+          "text": "1/32"
+        },
+        {
+          "decimal": 0.03125,
+          "denominator": 32,
+          "numerator": 1,
+          "text": "1/32"
+        },
+        {
+          "decimal": 0.03125,
+          "denominator": 32,
+          "numerator": 1,
+          "text": "1/32"
+        },
+        {
+          "decimal": 0.03125,
+          "denominator": 32,
+          "numerator": 1,
+          "text": "1/32"
+        },
+        {
+          "decimal": 0.03125,
+          "denominator": 32,
+          "numerator": 1,
+          "text": "1/32"
+        },
+        {
+          "decimal": 0.03125,
+          "denominator": 32,
+          "numerator": 1,
+          "text": "1/32"
+        },
+        {
+          "decimal": 0.03125,
+          "denominator": 32,
+          "numerator": 1,
+          "text": "1/32"
+        },
+        {
+          "decimal": 0.03125,
+          "denominator": 32,
+          "numerator": 1,
+          "text": "1/32"
+        }
+      ],
+      "valid_hidden_outcome_range": [
+        {
+          "decimal": 0.0,
+          "denominator": 1,
+          "numerator": 0,
+          "text": "0/1"
+        },
+        {
+          "decimal": 1.0,
+          "denominator": 1,
+          "numerator": 1,
+          "text": "1/1"
+        }
+      ]
+    }
+  ],
+  "closed_forms": {
+    "arbitrary_weight_worst_expected_regret": "max_w sum_{i<j}|(1{i=w}-p_i)-(1{j=w}-p_j)|/(4K)",
+    "deterministic_singleton_minimax_regret": "(K-1)/(2K)",
+    "randomized_minimax_expected_regret": "(K-1)/(4K)",
+    "unique_randomized_minimizer": "uniform over all K policies"
+  },
+  "compatibility_witnesses": [
+    {
+      "all_edges_projected": true,
+      "all_observed_routed_outcomes": [
+        {
+          "decimal": 0.5,
+          "denominator": 2,
+          "numerator": 1,
+          "text": "1/2"
+        }
+      ],
+      "edge_count": 3,
+      "edge_rows": [
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "hidden_outcome": {
+            "decimal": 0.0,
+            "denominator": 1,
+            "numerator": 0,
+            "text": "0/1"
+          },
+          "projected_target": {
+            "decimal": 0.25,
+            "denominator": 4,
+            "numerator": 1,
+            "text": "1/4"
+          },
+          "routed_context": "B",
+          "routed_outcome": {
+            "decimal": 0.5,
+            "denominator": 2,
+            "numerator": 1,
+            "text": "1/2"
+          }
+        },
+        {
+          "edge": [
+            0,
+            2
+          ],
+          "hidden_outcome": {
+            "decimal": 0.0,
+            "denominator": 1,
+            "numerator": 0,
+            "text": "0/1"
+          },
+          "projected_target": {
+            "decimal": 0.25,
+            "denominator": 4,
+            "numerator": 1,
+            "text": "1/4"
+          },
+          "routed_context": "A",
+          "routed_outcome": {
+            "decimal": 0.5,
+            "denominator": 2,
+            "numerator": 1,
+            "text": "1/2"
+          }
+        },
+        {
+          "edge": [
+            1,
+            2
+          ],
+          "hidden_outcome": {
+            "decimal": 0.0,
+            "denominator": 1,
+            "numerator": 0,
+            "text": "0/1"
+          },
+          "projected_target": {
+            "decimal": 0.25,
+            "denominator": 4,
+            "numerator": 1,
+            "text": "1/4"
+          },
+          "routed_context": "B",
+          "routed_outcome": {
+            "decimal": 0.5,
+            "denominator": 2,
+            "numerator": 1,
+            "text": "1/2"
+          }
+        }
+      ],
+      "k": 3,
+      "label": "all-low",
+      "schedule_sha256": "70ab2d286fdaa49efbaa84fe3159e6557a664337e0cfc25fd342ec945f222d15"
+    },
+    {
+      "all_edges_projected": true,
+      "all_observed_routed_outcomes": [
+        {
+          "decimal": 0.5,
+          "denominator": 2,
+          "numerator": 1,
+          "text": "1/2"
+        }
+      ],
+      "edge_count": 3,
+      "edge_rows": [
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "hidden_outcome": {
+            "decimal": 1.0,
+            "denominator": 1,
+            "numerator": 1,
+            "text": "1/1"
+          },
+          "projected_target": {
+            "decimal": 0.75,
+            "denominator": 4,
+            "numerator": 3,
+            "text": "3/4"
+          },
+          "routed_context": "B",
+          "routed_outcome": {
+            "decimal": 0.5,
+            "denominator": 2,
+            "numerator": 1,
+            "text": "1/2"
+          }
+        },
+        {
+          "edge": [
+            0,
+            2
+          ],
+          "hidden_outcome": {
+            "decimal": 1.0,
+            "denominator": 1,
+            "numerator": 1,
+            "text": "1/1"
+          },
+          "projected_target": {
+            "decimal": 0.75,
+            "denominator": 4,
+            "numerator": 3,
+            "text": "3/4"
+          },
+          "routed_context": "A",
+          "routed_outcome": {
+            "decimal": 0.5,
+            "denominator": 2,
+            "numerator": 1,
+            "text": "1/2"
+          }
+        },
+        {
+          "edge": [
+            1,
+            2
+          ],
+          "hidden_outcome": {
+            "decimal": 1.0,
+            "denominator": 1,
+            "numerator": 1,
+            "text": "1/1"
+          },
+          "projected_target": {
+            "decimal": 0.75,
+            "denominator": 4,
+            "numerator": 3,
+            "text": "3/4"
+          },
+          "routed_context": "B",
+          "routed_outcome": {
+            "decimal": 0.5,
+            "denominator": 2,
+            "numerator": 1,
+            "text": "1/2"
+          }
+        }
+      ],
+      "k": 3,
+      "label": "all-high",
+      "schedule_sha256": "93d52c572adc9918787204036a453c7fea3dd42c22bf1dd255389a0d92504d02"
+    },
+    {
+      "all_edges_projected": true,
+      "all_observed_routed_outcomes": [
+        {
+          "decimal": 0.5,
+          "denominator": 2,
+          "numerator": 1,
+          "text": "1/2"
+        }
+      ],
+      "edge_count": 6,
+      "edge_rows": [
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "hidden_outcome": {
+            "decimal": 0.0,
+            "denominator": 1,
+            "numerator": 0,
+            "text": "0/1"
+          },
+          "projected_target": {
+            "decimal": 0.25,
+            "denominator": 4,
+            "numerator": 1,
+            "text": "1/4"
+          },
+          "routed_context": "B",
+          "routed_outcome": {
+            "decimal": 0.5,
+            "denominator": 2,
+            "numerator": 1,
+            "text": "1/2"
+          }
+        },
+        {
+          "edge": [
+            0,
+            2
+          ],
+          "hidden_outcome": {
+            "decimal": 1.0,
+            "denominator": 1,
+            "numerator": 1,
+            "text": "1/1"
+          },
+          "projected_target": {
+            "decimal": 0.75,
+            "denominator": 4,
+            "numerator": 3,
+            "text": "3/4"
+          },
+          "routed_context": "A",
+          "routed_outcome": {
+            "decimal": 0.5,
+            "denominator": 2,
+            "numerator": 1,
+            "text": "1/2"
+          }
+        },
+        {
+          "edge": [
+            0,
+            3
+          ],
+          "hidden_outcome": {
+            "decimal": 0.0,
+            "denominator": 1,
+            "numerator": 0,
+            "text": "0/1"
+          },
+          "projected_target": {
+            "decimal": 0.25,
+            "denominator": 4,
+            "numerator": 1,
+            "text": "1/4"
+          },
+          "routed_context": "B",
+          "routed_outcome": {
+            "decimal": 0.5,
+            "denominator": 2,
+            "numerator": 1,
+            "text": "1/2"
+          }
+        },
+        {
+          "edge": [
+            1,
+            2
+          ],
+          "hidden_outcome": {
+            "decimal": 1.0,
+            "denominator": 1,
+            "numerator": 1,
+            "text": "1/1"
+          },
+          "projected_target": {
+            "decimal": 0.75,
+            "denominator": 4,
+            "numerator": 3,
+            "text": "3/4"
+          },
+          "routed_context": "B",
+          "routed_outcome": {
+            "decimal": 0.5,
+            "denominator": 2,
+            "numerator": 1,
+            "text": "1/2"
+          }
+        },
+        {
+          "edge": [
+            1,
+            3
+          ],
+          "hidden_outcome": {
+            "decimal": 0.0,
+            "denominator": 1,
+            "numerator": 0,
+            "text": "0/1"
+          },
+          "projected_target": {
+            "decimal": 0.25,
+            "denominator": 4,
+            "numerator": 1,
+            "text": "1/4"
+          },
+          "routed_context": "A",
+          "routed_outcome": {
+            "decimal": 0.5,
+            "denominator": 2,
+            "numerator": 1,
+            "text": "1/2"
+          }
+        },
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "hidden_outcome": {
+            "decimal": 1.0,
+            "denominator": 1,
+            "numerator": 1,
+            "text": "1/1"
+          },
+          "projected_target": {
+            "decimal": 0.75,
+            "denominator": 4,
+            "numerator": 3,
+            "text": "3/4"
+          },
+          "routed_context": "B",
+          "routed_outcome": {
+            "decimal": 0.5,
+            "denominator": 2,
+            "numerator": 1,
+            "text": "1/2"
+          }
+        }
+      ],
+      "k": 4,
+      "label": "mixed-endpoint",
+      "schedule_sha256": "b359b6ecccbffa0fb3b06faaa91c7438431d5c63637a198b487c0f45562df315"
+    },
+    {
+      "all_edges_projected": true,
+      "all_observed_routed_outcomes": [
+        {
+          "decimal": 0.5,
+          "denominator": 2,
+          "numerator": 1,
+          "text": "1/2"
+        }
+      ],
+      "edge_count": 21,
+      "edge_rows": null,
+      "k": 7,
+      "label": "mixed-interior",
+      "schedule_sha256": "97391f328134fe93db1f25c64310c5d8af814fd512d56ea712baf29966756982"
+    },
+    {
+      "all_edges_projected": true,
+      "all_observed_routed_outcomes": [
+        {
+          "decimal": 0.5,
+          "denominator": 2,
+          "numerator": 1,
+          "text": "1/2"
+        }
+      ],
+      "edge_count": 120,
+      "edge_rows": null,
+      "k": 16,
+      "label": "alternating-endpoint",
+      "schedule_sha256": "1186319fddd2c83d391eb446c7f7f52197ca0a07082b4810a36a09b19ce44abb"
+    },
+    {
+      "all_edges_projected": true,
+      "all_observed_routed_outcomes": [
+        {
+          "decimal": 0.5,
+          "denominator": 2,
+          "numerator": 1,
+          "text": "1/2"
+        }
+      ],
+      "edge_count": 496,
+      "edge_rows": null,
+      "k": 32,
+      "label": "mixed-endpoint-interior",
+      "schedule_sha256": "4c5f1bbac27607048725e002304404e44903f954f2001c10748acfd5f6d5919e"
+    }
+  ],
+  "endpoint_exhaustion_k_max": 6,
+  "endpoint_exhaustion_k_min": 3,
+  "exact_endpoint_checks": [
+    {
+      "candidate_checks": [
+        {
+          "enumerated_worst_expected_regret": {
+            "decimal": 0.16666666666666666,
+            "denominator": 6,
+            "numerator": 1,
+            "text": "1/6"
+          },
+          "formula_worst_expected_regret": {
+            "decimal": 0.16666666666666666,
+            "denominator": 6,
+            "numerator": 1,
+            "text": "1/6"
+          },
+          "weights": [
+            {
+              "decimal": 0.3333333333333333,
+              "denominator": 3,
+              "numerator": 1,
+              "text": "1/3"
+            },
+            {
+              "decimal": 0.3333333333333333,
+              "denominator": 3,
+              "numerator": 1,
+              "text": "1/3"
+            },
+            {
+              "decimal": 0.3333333333333333,
+              "denominator": 3,
+              "numerator": 1,
+              "text": "1/3"
+            }
+          ]
+        },
+        {
+          "enumerated_worst_expected_regret": {
+            "decimal": 0.3333333333333333,
+            "denominator": 3,
+            "numerator": 1,
+            "text": "1/3"
+          },
+          "formula_worst_expected_regret": {
+            "decimal": 0.3333333333333333,
+            "denominator": 3,
+            "numerator": 1,
+            "text": "1/3"
+          },
+          "weights": [
+            {
+              "decimal": 1.0,
+              "denominator": 1,
+              "numerator": 1,
+              "text": "1/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            }
+          ]
+        },
+        {
+          "enumerated_worst_expected_regret": {
+            "decimal": 0.25,
+            "denominator": 4,
+            "numerator": 1,
+            "text": "1/4"
+          },
+          "formula_worst_expected_regret": {
+            "decimal": 0.25,
+            "denominator": 4,
+            "numerator": 1,
+            "text": "1/4"
+          },
+          "weights": [
+            {
+              "decimal": 0.5,
+              "denominator": 2,
+              "numerator": 1,
+              "text": "1/2"
+            },
+            {
+              "decimal": 0.5,
+              "denominator": 2,
+              "numerator": 1,
+              "text": "1/2"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            }
+          ]
+        },
+        {
+          "enumerated_worst_expected_regret": {
+            "decimal": 0.2222222222222222,
+            "denominator": 9,
+            "numerator": 2,
+            "text": "2/9"
+          },
+          "formula_worst_expected_regret": {
+            "decimal": 0.2222222222222222,
+            "denominator": 9,
+            "numerator": 2,
+            "text": "2/9"
+          },
+          "weights": [
+            {
+              "decimal": 0.16666666666666666,
+              "denominator": 6,
+              "numerator": 1,
+              "text": "1/6"
+            },
+            {
+              "decimal": 0.3333333333333333,
+              "denominator": 3,
+              "numerator": 1,
+              "text": "1/3"
+            },
+            {
+              "decimal": 0.5,
+              "denominator": 2,
+              "numerator": 1,
+              "text": "1/2"
+            }
+          ]
+        }
+      ],
+      "deterministic_singleton_minimax_regret": {
+        "decimal": 0.3333333333333333,
+        "denominator": 3,
+        "numerator": 1,
+        "text": "1/3"
+      },
+      "edge_count": 3,
+      "endpoint_count": 8,
+      "endpoints_exhausted": true,
+      "k": 3,
+      "randomized_minimax_expected_regret": {
+        "decimal": 0.16666666666666666,
+        "denominator": 6,
+        "numerator": 1,
+        "text": "1/6"
+      },
+      "same_complete_support_observed_half_win_law": true,
+      "unique_randomized_minimizer": [
+        {
+          "decimal": 0.3333333333333333,
+          "denominator": 3,
+          "numerator": 1,
+          "text": "1/3"
+        },
+        {
+          "decimal": 0.3333333333333333,
+          "denominator": 3,
+          "numerator": 1,
+          "text": "1/3"
+        },
+        {
+          "decimal": 0.3333333333333333,
+          "denominator": 3,
+          "numerator": 1,
+          "text": "1/3"
+        }
+      ],
+      "valid_hidden_outcome_range": [
+        {
+          "decimal": 0.0,
+          "denominator": 1,
+          "numerator": 0,
+          "text": "0/1"
+        },
+        {
+          "decimal": 1.0,
+          "denominator": 1,
+          "numerator": 1,
+          "text": "1/1"
+        }
+      ]
+    },
+    {
+      "candidate_checks": [
+        {
+          "enumerated_worst_expected_regret": {
+            "decimal": 0.1875,
+            "denominator": 16,
+            "numerator": 3,
+            "text": "3/16"
+          },
+          "formula_worst_expected_regret": {
+            "decimal": 0.1875,
+            "denominator": 16,
+            "numerator": 3,
+            "text": "3/16"
+          },
+          "weights": [
+            {
+              "decimal": 0.25,
+              "denominator": 4,
+              "numerator": 1,
+              "text": "1/4"
+            },
+            {
+              "decimal": 0.25,
+              "denominator": 4,
+              "numerator": 1,
+              "text": "1/4"
+            },
+            {
+              "decimal": 0.25,
+              "denominator": 4,
+              "numerator": 1,
+              "text": "1/4"
+            },
+            {
+              "decimal": 0.25,
+              "denominator": 4,
+              "numerator": 1,
+              "text": "1/4"
+            }
+          ]
+        },
+        {
+          "enumerated_worst_expected_regret": {
+            "decimal": 0.375,
+            "denominator": 8,
+            "numerator": 3,
+            "text": "3/8"
+          },
+          "formula_worst_expected_regret": {
+            "decimal": 0.375,
+            "denominator": 8,
+            "numerator": 3,
+            "text": "3/8"
+          },
+          "weights": [
+            {
+              "decimal": 1.0,
+              "denominator": 1,
+              "numerator": 1,
+              "text": "1/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            }
+          ]
+        },
+        {
+          "enumerated_worst_expected_regret": {
+            "decimal": 0.3125,
+            "denominator": 16,
+            "numerator": 5,
+            "text": "5/16"
+          },
+          "formula_worst_expected_regret": {
+            "decimal": 0.3125,
+            "denominator": 16,
+            "numerator": 5,
+            "text": "5/16"
+          },
+          "weights": [
+            {
+              "decimal": 0.5,
+              "denominator": 2,
+              "numerator": 1,
+              "text": "1/2"
+            },
+            {
+              "decimal": 0.5,
+              "denominator": 2,
+              "numerator": 1,
+              "text": "1/2"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            }
+          ]
+        },
+        {
+          "enumerated_worst_expected_regret": {
+            "decimal": 0.25,
+            "denominator": 4,
+            "numerator": 1,
+            "text": "1/4"
+          },
+          "formula_worst_expected_regret": {
+            "decimal": 0.25,
+            "denominator": 4,
+            "numerator": 1,
+            "text": "1/4"
+          },
+          "weights": [
+            {
+              "decimal": 0.1,
+              "denominator": 10,
+              "numerator": 1,
+              "text": "1/10"
+            },
+            {
+              "decimal": 0.2,
+              "denominator": 5,
+              "numerator": 1,
+              "text": "1/5"
+            },
+            {
+              "decimal": 0.3,
+              "denominator": 10,
+              "numerator": 3,
+              "text": "3/10"
+            },
+            {
+              "decimal": 0.4,
+              "denominator": 5,
+              "numerator": 2,
+              "text": "2/5"
+            }
+          ]
+        },
+        {
+          "enumerated_worst_expected_regret": {
+            "decimal": 0.25,
+            "denominator": 4,
+            "numerator": 1,
+            "text": "1/4"
+          },
+          "formula_worst_expected_regret": {
+            "decimal": 0.25,
+            "denominator": 4,
+            "numerator": 1,
+            "text": "1/4"
+          },
+          "weights": [
+            {
+              "decimal": 0.3333333333333333,
+              "denominator": 3,
+              "numerator": 1,
+              "text": "1/3"
+            },
+            {
+              "decimal": 0.3333333333333333,
+              "denominator": 3,
+              "numerator": 1,
+              "text": "1/3"
+            },
+            {
+              "decimal": 0.3333333333333333,
+              "denominator": 3,
+              "numerator": 1,
+              "text": "1/3"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            }
+          ]
+        }
+      ],
+      "deterministic_singleton_minimax_regret": {
+        "decimal": 0.375,
+        "denominator": 8,
+        "numerator": 3,
+        "text": "3/8"
+      },
+      "edge_count": 6,
+      "endpoint_count": 64,
+      "endpoints_exhausted": true,
+      "k": 4,
+      "randomized_minimax_expected_regret": {
+        "decimal": 0.1875,
+        "denominator": 16,
+        "numerator": 3,
+        "text": "3/16"
+      },
+      "same_complete_support_observed_half_win_law": true,
+      "unique_randomized_minimizer": [
+        {
+          "decimal": 0.25,
+          "denominator": 4,
+          "numerator": 1,
+          "text": "1/4"
+        },
+        {
+          "decimal": 0.25,
+          "denominator": 4,
+          "numerator": 1,
+          "text": "1/4"
+        },
+        {
+          "decimal": 0.25,
+          "denominator": 4,
+          "numerator": 1,
+          "text": "1/4"
+        },
+        {
+          "decimal": 0.25,
+          "denominator": 4,
+          "numerator": 1,
+          "text": "1/4"
+        }
+      ],
+      "valid_hidden_outcome_range": [
+        {
+          "decimal": 0.0,
+          "denominator": 1,
+          "numerator": 0,
+          "text": "0/1"
+        },
+        {
+          "decimal": 1.0,
+          "denominator": 1,
+          "numerator": 1,
+          "text": "1/1"
+        }
+      ]
+    },
+    {
+      "candidate_checks": [
+        {
+          "enumerated_worst_expected_regret": {
+            "decimal": 0.2,
+            "denominator": 5,
+            "numerator": 1,
+            "text": "1/5"
+          },
+          "formula_worst_expected_regret": {
+            "decimal": 0.2,
+            "denominator": 5,
+            "numerator": 1,
+            "text": "1/5"
+          },
+          "weights": [
+            {
+              "decimal": 0.2,
+              "denominator": 5,
+              "numerator": 1,
+              "text": "1/5"
+            },
+            {
+              "decimal": 0.2,
+              "denominator": 5,
+              "numerator": 1,
+              "text": "1/5"
+            },
+            {
+              "decimal": 0.2,
+              "denominator": 5,
+              "numerator": 1,
+              "text": "1/5"
+            },
+            {
+              "decimal": 0.2,
+              "denominator": 5,
+              "numerator": 1,
+              "text": "1/5"
+            },
+            {
+              "decimal": 0.2,
+              "denominator": 5,
+              "numerator": 1,
+              "text": "1/5"
+            }
+          ]
+        },
+        {
+          "enumerated_worst_expected_regret": {
+            "decimal": 0.4,
+            "denominator": 5,
+            "numerator": 2,
+            "text": "2/5"
+          },
+          "formula_worst_expected_regret": {
+            "decimal": 0.4,
+            "denominator": 5,
+            "numerator": 2,
+            "text": "2/5"
+          },
+          "weights": [
+            {
+              "decimal": 1.0,
+              "denominator": 1,
+              "numerator": 1,
+              "text": "1/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            }
+          ]
+        },
+        {
+          "enumerated_worst_expected_regret": {
+            "decimal": 0.35,
+            "denominator": 20,
+            "numerator": 7,
+            "text": "7/20"
+          },
+          "formula_worst_expected_regret": {
+            "decimal": 0.35,
+            "denominator": 20,
+            "numerator": 7,
+            "text": "7/20"
+          },
+          "weights": [
+            {
+              "decimal": 0.5,
+              "denominator": 2,
+              "numerator": 1,
+              "text": "1/2"
+            },
+            {
+              "decimal": 0.5,
+              "denominator": 2,
+              "numerator": 1,
+              "text": "1/2"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            }
+          ]
+        },
+        {
+          "enumerated_worst_expected_regret": {
+            "decimal": 0.26666666666666666,
+            "denominator": 15,
+            "numerator": 4,
+            "text": "4/15"
+          },
+          "formula_worst_expected_regret": {
+            "decimal": 0.26666666666666666,
+            "denominator": 15,
+            "numerator": 4,
+            "text": "4/15"
+          },
+          "weights": [
+            {
+              "decimal": 0.06666666666666667,
+              "denominator": 15,
+              "numerator": 1,
+              "text": "1/15"
+            },
+            {
+              "decimal": 0.13333333333333333,
+              "denominator": 15,
+              "numerator": 2,
+              "text": "2/15"
+            },
+            {
+              "decimal": 0.2,
+              "denominator": 5,
+              "numerator": 1,
+              "text": "1/5"
+            },
+            {
+              "decimal": 0.26666666666666666,
+              "denominator": 15,
+              "numerator": 4,
+              "text": "4/15"
+            },
+            {
+              "decimal": 0.3333333333333333,
+              "denominator": 3,
+              "numerator": 1,
+              "text": "1/3"
+            }
+          ]
+        },
+        {
+          "enumerated_worst_expected_regret": {
+            "decimal": 0.3,
+            "denominator": 10,
+            "numerator": 3,
+            "text": "3/10"
+          },
+          "formula_worst_expected_regret": {
+            "decimal": 0.3,
+            "denominator": 10,
+            "numerator": 3,
+            "text": "3/10"
+          },
+          "weights": [
+            {
+              "decimal": 0.3333333333333333,
+              "denominator": 3,
+              "numerator": 1,
+              "text": "1/3"
+            },
+            {
+              "decimal": 0.3333333333333333,
+              "denominator": 3,
+              "numerator": 1,
+              "text": "1/3"
+            },
+            {
+              "decimal": 0.3333333333333333,
+              "denominator": 3,
+              "numerator": 1,
+              "text": "1/3"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            }
+          ]
+        }
+      ],
+      "deterministic_singleton_minimax_regret": {
+        "decimal": 0.4,
+        "denominator": 5,
+        "numerator": 2,
+        "text": "2/5"
+      },
+      "edge_count": 10,
+      "endpoint_count": 1024,
+      "endpoints_exhausted": true,
+      "k": 5,
+      "randomized_minimax_expected_regret": {
+        "decimal": 0.2,
+        "denominator": 5,
+        "numerator": 1,
+        "text": "1/5"
+      },
+      "same_complete_support_observed_half_win_law": true,
+      "unique_randomized_minimizer": [
+        {
+          "decimal": 0.2,
+          "denominator": 5,
+          "numerator": 1,
+          "text": "1/5"
+        },
+        {
+          "decimal": 0.2,
+          "denominator": 5,
+          "numerator": 1,
+          "text": "1/5"
+        },
+        {
+          "decimal": 0.2,
+          "denominator": 5,
+          "numerator": 1,
+          "text": "1/5"
+        },
+        {
+          "decimal": 0.2,
+          "denominator": 5,
+          "numerator": 1,
+          "text": "1/5"
+        },
+        {
+          "decimal": 0.2,
+          "denominator": 5,
+          "numerator": 1,
+          "text": "1/5"
+        }
+      ],
+      "valid_hidden_outcome_range": [
+        {
+          "decimal": 0.0,
+          "denominator": 1,
+          "numerator": 0,
+          "text": "0/1"
+        },
+        {
+          "decimal": 1.0,
+          "denominator": 1,
+          "numerator": 1,
+          "text": "1/1"
+        }
+      ]
+    },
+    {
+      "candidate_checks": [
+        {
+          "enumerated_worst_expected_regret": {
+            "decimal": 0.20833333333333334,
+            "denominator": 24,
+            "numerator": 5,
+            "text": "5/24"
+          },
+          "formula_worst_expected_regret": {
+            "decimal": 0.20833333333333334,
+            "denominator": 24,
+            "numerator": 5,
+            "text": "5/24"
+          },
+          "weights": [
+            {
+              "decimal": 0.16666666666666666,
+              "denominator": 6,
+              "numerator": 1,
+              "text": "1/6"
+            },
+            {
+              "decimal": 0.16666666666666666,
+              "denominator": 6,
+              "numerator": 1,
+              "text": "1/6"
+            },
+            {
+              "decimal": 0.16666666666666666,
+              "denominator": 6,
+              "numerator": 1,
+              "text": "1/6"
+            },
+            {
+              "decimal": 0.16666666666666666,
+              "denominator": 6,
+              "numerator": 1,
+              "text": "1/6"
+            },
+            {
+              "decimal": 0.16666666666666666,
+              "denominator": 6,
+              "numerator": 1,
+              "text": "1/6"
+            },
+            {
+              "decimal": 0.16666666666666666,
+              "denominator": 6,
+              "numerator": 1,
+              "text": "1/6"
+            }
+          ]
+        },
+        {
+          "enumerated_worst_expected_regret": {
+            "decimal": 0.4166666666666667,
+            "denominator": 12,
+            "numerator": 5,
+            "text": "5/12"
+          },
+          "formula_worst_expected_regret": {
+            "decimal": 0.4166666666666667,
+            "denominator": 12,
+            "numerator": 5,
+            "text": "5/12"
+          },
+          "weights": [
+            {
+              "decimal": 1.0,
+              "denominator": 1,
+              "numerator": 1,
+              "text": "1/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            }
+          ]
+        },
+        {
+          "enumerated_worst_expected_regret": {
+            "decimal": 0.375,
+            "denominator": 8,
+            "numerator": 3,
+            "text": "3/8"
+          },
+          "formula_worst_expected_regret": {
+            "decimal": 0.375,
+            "denominator": 8,
+            "numerator": 3,
+            "text": "3/8"
+          },
+          "weights": [
+            {
+              "decimal": 0.5,
+              "denominator": 2,
+              "numerator": 1,
+              "text": "1/2"
+            },
+            {
+              "decimal": 0.5,
+              "denominator": 2,
+              "numerator": 1,
+              "text": "1/2"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            }
+          ]
+        },
+        {
+          "enumerated_worst_expected_regret": {
+            "decimal": 0.2777777777777778,
+            "denominator": 18,
+            "numerator": 5,
+            "text": "5/18"
+          },
+          "formula_worst_expected_regret": {
+            "decimal": 0.2777777777777778,
+            "denominator": 18,
+            "numerator": 5,
+            "text": "5/18"
+          },
+          "weights": [
+            {
+              "decimal": 0.047619047619047616,
+              "denominator": 21,
+              "numerator": 1,
+              "text": "1/21"
+            },
+            {
+              "decimal": 0.09523809523809523,
+              "denominator": 21,
+              "numerator": 2,
+              "text": "2/21"
+            },
+            {
+              "decimal": 0.14285714285714285,
+              "denominator": 7,
+              "numerator": 1,
+              "text": "1/7"
+            },
+            {
+              "decimal": 0.19047619047619047,
+              "denominator": 21,
+              "numerator": 4,
+              "text": "4/21"
+            },
+            {
+              "decimal": 0.23809523809523808,
+              "denominator": 21,
+              "numerator": 5,
+              "text": "5/21"
+            },
+            {
+              "decimal": 0.2857142857142857,
+              "denominator": 7,
+              "numerator": 2,
+              "text": "2/7"
+            }
+          ]
+        },
+        {
+          "enumerated_worst_expected_regret": {
+            "decimal": 0.3333333333333333,
+            "denominator": 3,
+            "numerator": 1,
+            "text": "1/3"
+          },
+          "formula_worst_expected_regret": {
+            "decimal": 0.3333333333333333,
+            "denominator": 3,
+            "numerator": 1,
+            "text": "1/3"
+          },
+          "weights": [
+            {
+              "decimal": 0.3333333333333333,
+              "denominator": 3,
+              "numerator": 1,
+              "text": "1/3"
+            },
+            {
+              "decimal": 0.3333333333333333,
+              "denominator": 3,
+              "numerator": 1,
+              "text": "1/3"
+            },
+            {
+              "decimal": 0.3333333333333333,
+              "denominator": 3,
+              "numerator": 1,
+              "text": "1/3"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            },
+            {
+              "decimal": 0.0,
+              "denominator": 1,
+              "numerator": 0,
+              "text": "0/1"
+            }
+          ]
+        }
+      ],
+      "deterministic_singleton_minimax_regret": {
+        "decimal": 0.4166666666666667,
+        "denominator": 12,
+        "numerator": 5,
+        "text": "5/12"
+      },
+      "edge_count": 15,
+      "endpoint_count": 32768,
+      "endpoints_exhausted": true,
+      "k": 6,
+      "randomized_minimax_expected_regret": {
+        "decimal": 0.20833333333333334,
+        "denominator": 24,
+        "numerator": 5,
+        "text": "5/24"
+      },
+      "same_complete_support_observed_half_win_law": true,
+      "unique_randomized_minimizer": [
+        {
+          "decimal": 0.16666666666666666,
+          "denominator": 6,
+          "numerator": 1,
+          "text": "1/6"
+        },
+        {
+          "decimal": 0.16666666666666666,
+          "denominator": 6,
+          "numerator": 1,
+          "text": "1/6"
+        },
+        {
+          "decimal": 0.16666666666666666,
+          "denominator": 6,
+          "numerator": 1,
+          "text": "1/6"
+        },
+        {
+          "decimal": 0.16666666666666666,
+          "denominator": 6,
+          "numerator": 1,
+          "text": "1/6"
+        },
+        {
+          "decimal": 0.16666666666666666,
+          "denominator": 6,
+          "numerator": 1,
+          "text": "1/6"
+        },
+        {
+          "decimal": 0.16666666666666666,
+          "denominator": 6,
+          "numerator": 1,
+          "text": "1/6"
+        }
+      ],
+      "valid_hidden_outcome_range": [
+        {
+          "decimal": 0.0,
+          "denominator": 1,
+          "numerator": 0,
+          "text": "0/1"
+        },
+        {
+          "decimal": 1.0,
+          "denominator": 1,
+          "numerator": 1,
+          "text": "1/1"
+        }
+      ]
+    }
+  ],
+  "formula_check_k": [
+    7,
+    8,
+    16,
+    32
+  ],
+  "protocol_sha256": "7d2c073235f274d81c47c6f3acfffa278f0ac11c80dde1ba3725ba7bda1ece43",
+  "schema": "h186-full-roster-edge-box-minimax-v1",
+  "scope": "Exact minimax result for the full independent [1/4,3/4] target edge box compatible with one constructed complete-support pair-first observed half-win law. No dominated padding or fixed noncore target edges. Not every observed law, empirical roster, protocol, realized-policy guarantee, prevalence, or field claim.",
+  "status": "pass"
+}

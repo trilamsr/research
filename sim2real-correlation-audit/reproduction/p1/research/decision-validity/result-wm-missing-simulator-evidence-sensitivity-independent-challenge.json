@@ -1,0 +1,69 @@
+{
+  "schema": "wm-missing-simulator-evidence-independent-challenge-v1",
+  "status": "pass",
+  "method": "Node custom PRNG and Marsaglia-Tsang gamma/Beta sampler; no Python import or execution",
+  "draws_per_scenario": 120000,
+  "prior_alpha_beta": 1,
+  "comparisons_within_0_015": 6,
+  "zero_evidence_analytic_checks": 2,
+  "panels": {
+    "Cosmos": {
+      "displayed_real_winner": "OpenVLA",
+      "displayed_sim_winner": "OpenVLA",
+      "scenarios": [
+        {
+          "evidence": "0",
+          "probability_sampled_winners_match": 0.3349083333333333,
+          "monte_carlo_se": 0.0013624265778297382,
+          "producer_probability": 0.333306666667,
+          "absolute_difference": 0.0016016666663333234
+        },
+        {
+          "evidence": "10",
+          "probability_sampled_winners_match": 0.8032833333333333,
+          "monte_carlo_se": 0.0011475307538443222,
+          "producer_probability": 0.804056666667,
+          "absolute_difference": 0.0007733333336666925
+        },
+        {
+          "evidence": "infinity_fixed_display",
+          "probability_sampled_winners_match": 0.9998333333333334,
+          "monte_carlo_se": 0.00003726469384561282,
+          "producer_probability": 0.999853333333,
+          "absolute_difference": 0.000019999999666620027
+        }
+      ]
+    },
+    "IRASim": {
+      "displayed_real_winner": "OpenVLA",
+      "displayed_sim_winner": "Octo-Base",
+      "scenarios": [
+        {
+          "evidence": "0",
+          "probability_sampled_winners_match": 0.33329166666666665,
+          "monte_carlo_se": 0.0013607851030355668,
+          "producer_probability": 0.332873333333,
+          "absolute_difference": 0.0004183333336666428
+        },
+        {
+          "evidence": "10",
+          "probability_sampled_winners_match": 0.4305,
+          "monte_carlo_se": 0.0014293639319641446,
+          "producer_probability": 0.428663333333,
+          "absolute_difference": 0.0018366666669999976
+        },
+        {
+          "evidence": "infinity_fixed_display",
+          "probability_sampled_winners_match": 0.00020833333333333335,
+          "monte_carlo_se": 0.000041662326162809206,
+          "producer_probability": 0.00013,
+          "absolute_difference": 0.00007833333333333336
+        }
+      ]
+    }
+  },
+  "protocol_sha256": "281350fdfedaa004ccf108f9bbc33df9f217095c1b91dbea1697d11260918352",
+  "producer_sha256": "698960771aa0aad6d1d7bb087e7f18026b834ab85512b322df6b3eb44b0c3270",
+  "producer_result_sha256": "996e25161ee74b10cad6c0bc1ff1d93caa7517ec18d79a5a3fcb5528dca6bc7b",
+  "input_sha256": "ec4f9b58ba4e1e8ced4adbe90ed8c2696fa86b449f6b2da6054848a9be7c48e5"
+}

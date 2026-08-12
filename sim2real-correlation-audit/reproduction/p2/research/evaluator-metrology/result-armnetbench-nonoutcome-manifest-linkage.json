@@ -1,0 +1,121 @@
+{
+  "dataset_identity": "armnet/armnetbench_v01_robometer",
+  "dataset_revision": "a5030e049922bd89417b8aa79672c3e89e0bed6d",
+  "decoded_columns": [
+    "id",
+    "frames",
+    "data_source",
+    "is_robot"
+  ],
+  "h028_result_sha256": "40578851f962399cf0e6bca4eca95417ed28c419f6fe486b6ac8d08408698482",
+  "linkage": {
+    "checks": {
+      "all_referenced_media_exist": true,
+      "exact_unreferenced_media_count": true,
+      "frame_paths_normalized_relative_mp4": true,
+      "frame_references_unique": true,
+      "ids_unique": true,
+      "projected_fields_nonmissing": true,
+      "robot_flag_true": true,
+      "row_count": true,
+      "source_constant": true,
+      "tree_video_count": true,
+      "tree_video_paths_unique": true
+    },
+    "duplicate_frame_reference_count": 0,
+    "duplicate_id_count": 0,
+    "duplicate_tree_video_path_count": 0,
+    "missing_referenced_media": [],
+    "pass": true,
+    "projected_null_counts": {
+      "data_source": 0,
+      "frames": 0,
+      "id": 0,
+      "is_robot": 0
+    },
+    "projected_row_fingerprint_sha256": "52f4dcb2eb22470234432117ea534051b1ba3bcbf0490c9d312fc1e763ba8610",
+    "row_count": 11154,
+    "tree_video_count": 11157,
+    "unreferenced_media": [
+      "videos/eye_drops_to_shelf/pi0/eval_debug_task_cell_3_13h52m_29-jun-2026_ep000011_front.mp4",
+      "videos/eye_drops_to_shelf/pi0/eval_debug_task_cell_3_13h52m_29-jun-2026_ep000011_top.mp4",
+      "videos/eye_drops_to_shelf/pi0/eval_debug_task_cell_3_13h52m_29-jun-2026_ep000011_wrist.mp4"
+    ],
+    "unsafe_frame_path_count": 0
+  },
+  "outcome_columns_decoded": false,
+  "parquet_files": [
+    {
+      "blob_id": "3d3509d1c84de6bd6d86f60ee5121262e40bc4db",
+      "decoded_columns": [
+        "id",
+        "frames",
+        "data_source",
+        "is_robot"
+      ],
+      "decoded_null_counts": {
+        "data_source": 0,
+        "frames": 0,
+        "id": 0,
+        "is_robot": 0
+      },
+      "projected_row_fingerprint_sha256": "a32208a603af393f01dc95d40bc3869c45d05576f2ff72d4243b9f93174caa4b",
+      "row_count": 3657,
+      "row_group_count": 1,
+      "schema_fields": [
+        "id",
+        "task",
+        "lang_vector",
+        "data_source",
+        "frames",
+        "is_robot",
+        "quality_label",
+        "partial_success"
+      ],
+      "sha256": "e147be28c0b6a06ffe54ff3f4bbe37135f749c545cbb26516d4702da3c0fd6b0",
+      "size_bytes": 5714574,
+      "source_path": "bimanual_so101/train-00000-of-00001.parquet",
+      "xet_hash": "d10824bd851993a2ef9d05ecaefb323f96beecd1e7282bf87072f3fc5aaeca86"
+    },
+    {
+      "blob_id": "58d2f175213a04a7887a0e2b8bce5f581b688550",
+      "decoded_columns": [
+        "id",
+        "frames",
+        "data_source",
+        "is_robot"
+      ],
+      "decoded_null_counts": {
+        "data_source": 0,
+        "frames": 0,
+        "id": 0,
+        "is_robot": 0
+      },
+      "projected_row_fingerprint_sha256": "19a77e1e2c37f3fd8eb415940cf4a23895c80a814e8fe8dfd0ac7df46917d417",
+      "row_count": 7497,
+      "row_group_count": 1,
+      "schema_fields": [
+        "id",
+        "task",
+        "lang_vector",
+        "data_source",
+        "frames",
+        "is_robot",
+        "quality_label",
+        "partial_success"
+      ],
+      "sha256": "0c249334caef8506ee4d15b5ea4d7b52ecc6afa7662010eadeff5d88d0dfc320",
+      "size_bytes": 11706583,
+      "source_path": "so101/train-00000-of-00001.parquet",
+      "xet_hash": "de57a85d1905c337cb621bd15cbd74c387f9a46b78f565375ad6afbed3149700"
+    }
+  ],
+  "policy_performance_computed": false,
+  "protected_p1_outcomes_accessed": false,
+  "protocol_sha256": "d18d78d7f71ab29580b88bb64751e89d4aad59b01da1458accda53b162acc782",
+  "retention": "Exact Parquet containers are retained only under gitignored work/evaluator-metrology/h029; only the four fixed non-outcome column chunks were decoded.",
+  "schema": "armnetbench-nonoutcome-manifest-linkage-v1",
+  "sealed_p3_frame_accessed": false,
+  "task_or_embedding_columns_decoded": false,
+  "video_payloads_opened": false
+}

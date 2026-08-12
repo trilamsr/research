@@ -1,0 +1,117 @@
+{
+  "schema": "h122-release-sequence-independent-challenge-v1",
+  "observed_utc": "2026-07-27T20:16:50+00:00",
+  "upstream_result_sha256": {
+    "h117": "06f6d8649519787e8940719b5ae149be5a08dfd72fb8c5de97b2c58ace823c38",
+    "h118": "54226c26708c16666fdd404cb6fcb2b756a31a8d0b1be2c007f5096ba4fe8cc5",
+    "h119": "94f9388fad3a4e1bbe05ecd645e3e9ace367a13e8abefadd5d043f9f0a58fa07",
+    "h120": "0842ee86ec6a8d303c29571e03b85eb03c0e53cbc9664116fd28dff883c906ac",
+    "h121": "fc2acf89e5feb1218edc9f0370f8d7419f715e7bd0ef1ef42d3ec13784f713df"
+  },
+  "paper_source_record_sha256": "8193ea6faa06f60ace867dfa4e3cbda1d370cf9c63025e8db92af1debc1b415d",
+  "independent_methods": [
+    "direct Hugging Face provider tree enumeration",
+    "anchored raw-text timestamp and policy-name projection",
+    "SQLite aggregation",
+    "Ruby Psych old/new YAML mapping comparison"
+  ],
+  "tree_primary_counts": [
+    796,
+    3284,
+    3883
+  ],
+  "increment_counts": [
+    796,
+    2488,
+    599
+  ],
+  "february_to_july_changed_object_count": 43,
+  "ruby_psych_revision_check": {
+    "pair_count": 43,
+    "semantic_equal_count": 43,
+    "semantic_changed_count": 0,
+    "parse_failure_count": 0
+  },
+  "fixed_panel_support": [
+    {
+      "exact_two_session_count": 125,
+      "supported_pair_count": 21,
+      "isolated_policies": []
+    },
+    {
+      "exact_two_session_count": 1816,
+      "supported_pair_count": 21,
+      "isolated_policies": []
+    },
+    {
+      "exact_two_session_count": 278,
+      "supported_pair_count": 15,
+      "isolated_policies": [
+        "paligemma_binning_droid"
+      ]
+    }
+  ],
+  "vocabulary_sizes": [
+    8,
+    15,
+    14
+  ],
+  "increment_3_added_names": [
+    "Apricot",
+    "Cosmos3-Nano-Policy",
+    "UNLABELED_DREAM",
+    "allenai/MolmoAct2-DROID",
+    "j2-vla",
+    "paligemma_norm_droid"
+  ],
+  "increment_3_absent_names": [
+    "dam",
+    "floppy_bagel_195k_temp1p0",
+    "floppy_bagel_285k_temp1p0",
+    "floppy_bagel_420k",
+    "floppy_bagel_525k_temp1p0",
+    "floppy_bagel_90k_temp1p0",
+    "paligemma_binning_droid"
+  ],
+  "focal_last_completion": "2026-01-27T08:22:21.149581+00:00",
+  "post_focal_newcomer_count": 7,
+  "post_focal_exact_partner_match_count": 0,
+  "post_focal_partner_jaccard_range": [
+    0.0,
+    0.7
+  ],
+  "repository_gap_days": [
+    182.21002314814814,
+    163.84401620370372
+  ],
+  "lag_profiles": [
+    {
+      "median_days": 99.14664433394675,
+      "p95_days": 110.04570144890046,
+      "over_90_day_count": 612,
+      "negative_lag_count": 0
+    },
+    {
+      "median_days": 127.89358010486112,
+      "p95_days": 176.10890542516205,
+      "over_90_day_count": 1753,
+      "negative_lag_count": 0
+    },
+    {
+      "median_days": 121.71023387457176,
+      "p95_days": 163.07510097850695,
+      "over_90_day_count": 427,
+      "negative_lag_count": 0
+    }
+  ],
+  "canonical_material_quantity_mismatch_count": 0,
+  "h115_no_public_support_claim_reproduced": false,
+  "h115_correction_required": true,
+  "standalone_paper_promotion": false,
+  "paper_disposition": "retain as a strong P2 section or broader multi-benchmark governance seed; broad dynamic-benchmark and graph-topology novelty is occupied",
+  "historical_outcome_bearing_metadata_parsed": true,
+  "outcome_or_judgment_fields_referenced_or_used": false,
+  "session_identifiers_or_rows_retained": false,
+  "future_heldout_p1_outcomes_accessed": false,
+  "sealed_p3_frame_accessed": false
+}

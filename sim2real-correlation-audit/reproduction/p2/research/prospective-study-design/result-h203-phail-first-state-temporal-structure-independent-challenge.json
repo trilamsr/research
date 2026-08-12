@@ -1,0 +1,60 @@
+{
+  "schema": "h203-node-independent-challenge-v1",
+  "node_version": "v26.5.0",
+  "producer_result_sha256": "5f30b36135feaf85fc32b2f3fe5f2ad2f5c5e8188ca777131b8154d3db111cda",
+  "cohort_sha256": "ad43fca1da065a1cb7fd84dfa9afc5691c72ebe12e7f165c68a0050e51e87ebe",
+  "projection_sha256": "44b7cd9729c691a610cc1fbbefffc5668d31030e013b92f2d4550f9869020370",
+  "method": "independent CSV join, standardized squared-distance matrix, SplitMix64 Fisher-Yates permutations",
+  "seed_text": "H203 independent Node challenge v1",
+  "synthetic_controls": {
+    "known_distance": true,
+    "deterministic_rng_replay": true
+  },
+  "analyses": {
+    "global": {
+      "group_count": 1,
+      "adjacent_pair_count": 593,
+      "observed_mean_successive_squared_distance": 14.505918803151259,
+      "permutation_median": 14.083847739016338,
+      "permutation_q025": 13.653168194939711,
+      "permutation_q975": 14.509608037218275,
+      "observed_to_permutation_median_ratio": 1.029968448392527,
+      "lower_tail_p": 0.9736,
+      "upper_tail_p": 0.02642,
+      "two_sided_p": 0.05284,
+      "permutations": 49999
+    },
+    "within_policy": {
+      "group_count": 4,
+      "adjacent_pair_count": 590,
+      "observed_mean_successive_squared_distance": 14.10222998082485,
+      "permutation_median": 14.0885897771887,
+      "permutation_q025": 13.662308242054563,
+      "permutation_q975": 14.519492358937027,
+      "observed_to_permutation_median_ratio": 1.000968173809577,
+      "lower_tail_p": 0.5239,
+      "upper_tail_p": 0.47612,
+      "two_sided_p": 0.95224,
+      "permutations": 49999
+    },
+    "within_utc_date": {
+      "group_count": 13,
+      "adjacent_pair_count": 581,
+      "observed_mean_successive_squared_distance": 14.504690373244076,
+      "permutation_median": 14.115302083948245,
+      "permutation_q025": 13.687328783684084,
+      "permutation_q975": 14.540670692272867,
+      "observed_to_permutation_median_ratio": 1.0275862526341988,
+      "lower_tail_p": 0.96348,
+      "upper_tail_p": 0.03654,
+      "two_sided_p": 0.07308,
+      "permutations": 49999
+    }
+  },
+  "maximum_observed_statistic_difference": 0,
+  "producer_classification": "no_detectable_temporal_structure_at_fixed_resolution",
+  "independent_classification": "no_detectable_temporal_structure_at_fixed_resolution",
+  "later_state_or_outcome_opened": false,
+  "independence_established": false,
+  "result": "pass"
+}

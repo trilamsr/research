@@ -1,0 +1,81 @@
+{
+  "disposition": "candidate_lifecycle_key_found",
+  "episode_count": 594,
+  "fixed_lifecycle_tokens": [
+    "session",
+    "run",
+    "batch",
+    "block",
+    "sequence",
+    "seq",
+    "trial",
+    "shift",
+    "operator",
+    "worker",
+    "user",
+    "robot",
+    "device",
+    "host",
+    "machine",
+    "reset",
+    "restart",
+    "sampler",
+    "seed",
+    "assignment",
+    "availability",
+    "candidate",
+    "roster",
+    "pool",
+    "retry",
+    "abort",
+    "deviation",
+    "carryover",
+    "parent",
+    "previous",
+    "group",
+    "cluster"
+  ],
+  "identity_time_controls": [
+    "episode_id",
+    "created_ts_ns",
+    "id"
+  ],
+  "input_sha256": "ad43fca1da065a1cb7fd84dfa9afc5691c72ebe12e7f165c68a0050e51e87ebe",
+  "key_rows": [
+    {
+      "category": "identity_time_control",
+      "episode_count": 594,
+      "episode_set_sha256": "7b0bccca9b270a516e6f9ebe02dd5fb3ca92dbb34e7104fbacdb28d847fe4b4c",
+      "key_path": "meta.created_ts_ns",
+      "node_type_counts": {
+        "number": 594
+      }
+    },
+    {
+      "category": "lifecycle_candidate",
+      "episode_count": 267,
+      "episode_set_sha256": "f6891312607762167b7f743519d8fb8b0a0ab2ac2d5178f20fac78840cd5d64a",
+      "key_path": "static.inference.policy.server.device",
+      "node_type_counts": {
+        "string": 267
+      }
+    },
+    {
+      "category": "lifecycle_candidate",
+      "episode_count": 594,
+      "episode_set_sha256": "7b0bccca9b270a516e6f9ebe02dd5fb3ca92dbb34e7104fbacdb28d847fe4b4c",
+      "key_path": "static.inference.policy.server.host",
+      "node_type_counts": {
+        "string": 594
+      }
+    }
+  ],
+  "lifecycle_candidate_count": 2,
+  "performance_field_values_opened": false,
+  "primitive_values_retained": false,
+  "protocol_sha256": "d5e819677ef9fa422c110f4fb897d4184f132561fbd9932f35f1b9a6e0048b34",
+  "schema": "h193-phail-lifecycle-key-inventory-v1",
+  "scope": "key names and node types only over the exact hash-bound H187 sidecars; candidates require separate semantics and safe-value review",
+  "sidecar_object_count": 1188,
+  "source_content_emitted": false
+}

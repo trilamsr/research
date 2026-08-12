@@ -1,0 +1,9 @@
+{
+  "commit": "e406176bc526babb06844a48e3627a5c0409eb74",
+  "file_count_excluding_license_and_revision": 33,
+  "license": "Apache-2.0",
+  "reason": "Pinned source snapshot needed to reproduce H194 server-field semantics, H195 runtime-to-writer recording-locator trace, H199 randomized-home endpoint, H201 key-semantics trace, and H202 first-state recording-semantics trace, and H206 dual-clock chronology trace.",
+  "retrieved": "2026-07-28",
+  "tag": "v0.2.1",
+  "upstream": "https://github.com/Positronic-Robotics/positronic"
+}

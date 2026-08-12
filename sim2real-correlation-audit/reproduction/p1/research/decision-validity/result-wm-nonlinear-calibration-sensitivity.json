@@ -1,0 +1,138 @@
+{
+  "classification": "affine_selection_invariance_does_not_extend_to_nonlinear_monotone_maps",
+  "implementation_sha256": "a413ea3be9ec0898e45383a837c597a53800eec0cb784cfaa4f9f6687034785c",
+  "input_sha256": "ec4f9b58ba4e1e8ced4adbe90ed8c2696fa86b449f6b2da6054848a9be7c48e5",
+  "outcome_status": "domain_review_triggered_outcome_exposed_exploratory",
+  "panels": {
+    "Cosmos": {
+      "isotonic_in_sample_cell_rate_mse": 0.011493055556,
+      "isotonic_level_map": [
+        {
+          "block_index": 0,
+          "isotonic_fitted_rate": 0.2,
+          "predicted_level": 0.0
+        },
+        {
+          "block_index": 1,
+          "isotonic_fitted_rate": 0.225,
+          "predicted_level": 0.1
+        },
+        {
+          "block_index": 2,
+          "isotonic_fitted_rate": 0.25,
+          "predicted_level": 0.2
+        },
+        {
+          "block_index": 3,
+          "isotonic_fitted_rate": 0.283333333333,
+          "predicted_level": 0.25
+        },
+        {
+          "block_index": 3,
+          "isotonic_fitted_rate": 0.283333333333,
+          "predicted_level": 0.3
+        },
+        {
+          "block_index": 4,
+          "isotonic_fitted_rate": 0.5,
+          "predicted_level": 0.4
+        },
+        {
+          "block_index": 5,
+          "isotonic_fitted_rate": 0.7,
+          "predicted_level": 0.6
+        }
+      ],
+      "isotonic_policy_means": {
+        "Octo-Base": 0.260416666667,
+        "Octo-Small": 0.239583333333,
+        "OpenVLA": 0.4125
+      },
+      "isotonic_winner": "OpenVLA",
+      "murphy_forecast_level_decomposition": {
+        "brier": 0.204166666667,
+        "brier_skill_vs_empirical_prevalence": 0.035353949635,
+        "reliability": 0.013333333333,
+        "resolution": 0.020815972222,
+        "uncertainty": 0.211649305556
+      },
+      "original_winner": "OpenVLA",
+      "raw_cell_rate_mse": 0.023958333333,
+      "raw_policy_means": {
+        "Octo-Base": 0.2,
+        "Octo-Small": 0.15,
+        "OpenVLA": 0.3
+      },
+      "winner_changed": false
+    },
+    "IRASim": {
+      "isotonic_in_sample_cell_rate_mse": 0.0213125,
+      "isotonic_level_map": [
+        {
+          "block_index": 0,
+          "isotonic_fitted_rate": 0.125,
+          "predicted_level": 0.0
+        },
+        {
+          "block_index": 1,
+          "isotonic_fitted_rate": 0.275,
+          "predicted_level": 0.05
+        },
+        {
+          "block_index": 1,
+          "isotonic_fitted_rate": 0.275,
+          "predicted_level": 0.1
+        },
+        {
+          "block_index": 2,
+          "isotonic_fitted_rate": 0.36,
+          "predicted_level": 0.15
+        },
+        {
+          "block_index": 2,
+          "isotonic_fitted_rate": 0.36,
+          "predicted_level": 0.2
+        },
+        {
+          "block_index": 2,
+          "isotonic_fitted_rate": 0.36,
+          "predicted_level": 0.3
+        },
+        {
+          "block_index": 3,
+          "isotonic_fitted_rate": 0.5,
+          "predicted_level": 0.35
+        }
+      ],
+      "isotonic_policy_means": {
+        "Octo-Base": 0.3175,
+        "Octo-Small": 0.22125,
+        "OpenVLA": 0.37375
+      },
+      "isotonic_winner": "OpenVLA",
+      "murphy_forecast_level_decomposition": {
+        "brier": 0.235833333333,
+        "brier_skill_vs_empirical_prevalence": -0.114264621442,
+        "reliability": 0.0521875,
+        "resolution": 0.028003472222,
+        "uncertainty": 0.211649305556
+      },
+      "original_winner": "Octo-Base",
+      "raw_cell_rate_mse": 0.055625,
+      "raw_policy_means": {
+        "Octo-Base": 0.2,
+        "Octo-Small": 0.0875,
+        "OpenVLA": 0.1875
+      },
+      "winner_changed": true
+    }
+  },
+  "protocol_sha256": "d3a1271501a1a2e566e932095d61373f8678f5613bedd442a3c7e413cb55746e",
+  "runtime": {
+    "numpy": "2.0.2",
+    "python": "3.12.13"
+  },
+  "schema": "wm-nonlinear-calibration-sensitivity-v1",
+  "scope": "Full-panel in-sample equal-cell isotonic shape sensitivity and finite forecast-level Murphy decomposition; not prospective calibration, selection repair, or transport evidence.",
+  "status": "pass"
+}

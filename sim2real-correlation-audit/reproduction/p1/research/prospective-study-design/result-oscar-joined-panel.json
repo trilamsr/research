@@ -1,0 +1,30 @@
+{
+  "comparison": {
+    "maximum_absolute_joined_vs_printed_real_difference_pp": 4.163492063492063,
+    "pearson_joined_real_vs_printed_real": 0.9549870676214645,
+    "pearson_joined_real_vs_printed_wm": 0.7484896165262881,
+    "policy_with_maximum_absolute_difference": [
+      "PG-FAST"
+    ],
+    "spearman_joined_real_vs_printed_wm": 0.5796671338052435
+  },
+  "decision": {
+    "joined_release_real_regret_of_printed_wm_winner_pp": 3.174603174603174,
+    "joined_release_real_winners": [
+      "pi0-FAST"
+    ],
+    "printed_real_winners": [
+      "pi0-FAST"
+    ],
+    "printed_wm_winners": [
+      "PG-FAST+"
+    ]
+  },
+  "inputs": {
+    "joined_panel": "research/prospective-study-design/result-oscar-roboarena-join.json",
+    "joined_real_denominator_per_policy": 63,
+    "printed_bars": "research/corpus-reporting-audit/sources/source-oscar.csv",
+    "printed_wm_inferred_denominator_per_policy": 65
+  },
+  "scope": "Source-discrepancy diagnostic only. The joined real outcomes cover the 63 released session IDs, while the printed world-model bars imply 65 sessions and the printed real bars use another unstated RoboArena aggregation. The cross-vector correlation and regret are not an exact matched-session evaluator estimate."
+}

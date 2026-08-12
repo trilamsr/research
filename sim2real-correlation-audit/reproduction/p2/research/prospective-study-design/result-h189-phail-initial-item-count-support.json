@@ -1,0 +1,2645 @@
+{
+  "audit": {
+    "chronology_gate_status": "unresolved_inherited_from_h187",
+    "comparison_to_h187": {
+      "cell_count_change": 0,
+      "episode_count_change": 0,
+      "h187_retained_cell_count": 18,
+      "h187_retained_episode_count": 194,
+      "retained_episode_fraction_of_h187": {
+        "denominator": 1,
+        "numerator": 1
+      }
+    },
+    "conditional_outcome_phase_authorized": false,
+    "dated_cell_count": 126,
+    "dated_cells": [
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Batteries",
+        "policy_counts": {
+          "act": 0,
+          "groot": 0,
+          "openpi": 1,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-03-05"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Batteries",
+        "policy_counts": {
+          "act": 0,
+          "groot": 0,
+          "openpi": 3,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-03-05"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Batteries",
+        "policy_counts": {
+          "act": 0,
+          "groot": 0,
+          "openpi": 2,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right",
+        "utc_date": "2026-03-05"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Batteries",
+        "policy_counts": {
+          "act": 1,
+          "groot": 0,
+          "openpi": 0,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right",
+        "utc_date": "2026-03-05"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Wooden spoons",
+        "policy_counts": {
+          "act": 3,
+          "groot": 0,
+          "openpi": 1,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-03-05"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Wooden spoons",
+        "policy_counts": {
+          "act": 0,
+          "groot": 0,
+          "openpi": 2,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-03-05"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Wooden spoons",
+        "policy_counts": {
+          "act": 2,
+          "groot": 0,
+          "openpi": 1,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right",
+        "utc_date": "2026-03-05"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Wooden spoons",
+        "policy_counts": {
+          "act": 2,
+          "groot": 0,
+          "openpi": 4,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right",
+        "utc_date": "2026-03-05"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Wooden spoons",
+        "policy_counts": {
+          "act": 1,
+          "groot": 0,
+          "openpi": 0,
+          "smolvla": 0
+        },
+        "task": "Pick all the towels one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-03-05"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Wooden spoons",
+        "policy_counts": {
+          "act": 1,
+          "groot": 0,
+          "openpi": 0,
+          "smolvla": 0
+        },
+        "task": "Pick all the wooden spoons one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-03-05"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Batteries",
+        "policy_counts": {
+          "act": 2,
+          "groot": 0,
+          "openpi": 3,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-03-06"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Batteries",
+        "policy_counts": {
+          "act": 0,
+          "groot": 0,
+          "openpi": 1,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-03-06"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Batteries",
+        "policy_counts": {
+          "act": 3,
+          "groot": 0,
+          "openpi": 2,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right",
+        "utc_date": "2026-03-06"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Batteries",
+        "policy_counts": {
+          "act": 2,
+          "groot": 0,
+          "openpi": 0,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right",
+        "utc_date": "2026-03-06"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Scissors",
+        "policy_counts": {
+          "act": 0,
+          "groot": 0,
+          "openpi": 1,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-03-06"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Scissors",
+        "policy_counts": {
+          "act": 1,
+          "groot": 0,
+          "openpi": 2,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-03-06"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Scissors",
+        "policy_counts": {
+          "act": 0,
+          "groot": 0,
+          "openpi": 1,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right",
+        "utc_date": "2026-03-06"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Towels",
+        "policy_counts": {
+          "act": 2,
+          "groot": 0,
+          "openpi": 2,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-03-06"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Towels",
+        "policy_counts": {
+          "act": 3,
+          "groot": 0,
+          "openpi": 0,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right",
+        "utc_date": "2026-03-06"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Towels",
+        "policy_counts": {
+          "act": 1,
+          "groot": 0,
+          "openpi": 0,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right",
+        "utc_date": "2026-03-06"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Scissors",
+        "policy_counts": {
+          "act": 4,
+          "groot": 0,
+          "openpi": 4,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-03-10"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Scissors",
+        "policy_counts": {
+          "act": 2,
+          "groot": 0,
+          "openpi": 6,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-03-10"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Scissors",
+        "policy_counts": {
+          "act": 4,
+          "groot": 0,
+          "openpi": 2,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right",
+        "utc_date": "2026-03-10"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Scissors",
+        "policy_counts": {
+          "act": 2,
+          "groot": 0,
+          "openpi": 3,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right",
+        "utc_date": "2026-03-10"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Towels",
+        "policy_counts": {
+          "act": 2,
+          "groot": 0,
+          "openpi": 2,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-03-10"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Towels",
+        "policy_counts": {
+          "act": 4,
+          "groot": 0,
+          "openpi": 0,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right",
+        "utc_date": "2026-03-10"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Batteries",
+        "policy_counts": {
+          "act": 0,
+          "groot": 0,
+          "openpi": 2,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-03-13"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Batteries",
+        "policy_counts": {
+          "act": 0,
+          "groot": 0,
+          "openpi": 1,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-03-13"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Batteries",
+        "policy_counts": {
+          "act": 1,
+          "groot": 0,
+          "openpi": 1,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right",
+        "utc_date": "2026-03-13"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Batteries",
+        "policy_counts": {
+          "act": 1,
+          "groot": 0,
+          "openpi": 1,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right",
+        "utc_date": "2026-03-13"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Towels",
+        "policy_counts": {
+          "act": 0,
+          "groot": 0,
+          "openpi": 2,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-03-13"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Towels",
+        "policy_counts": {
+          "act": 2,
+          "groot": 0,
+          "openpi": 1,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-03-13"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Towels",
+        "policy_counts": {
+          "act": 0,
+          "groot": 0,
+          "openpi": 2,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right",
+        "utc_date": "2026-03-13"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Towels",
+        "policy_counts": {
+          "act": 1,
+          "groot": 0,
+          "openpi": 2,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right",
+        "utc_date": "2026-03-13"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Wooden spoons",
+        "policy_counts": {
+          "act": 2,
+          "groot": 0,
+          "openpi": 1,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-03-13"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Wooden spoons",
+        "policy_counts": {
+          "act": 1,
+          "groot": 0,
+          "openpi": 4,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-03-13"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Wooden spoons",
+        "policy_counts": {
+          "act": 1,
+          "groot": 0,
+          "openpi": 3,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right",
+        "utc_date": "2026-03-13"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Wooden spoons",
+        "policy_counts": {
+          "act": 2,
+          "groot": 0,
+          "openpi": 2,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right",
+        "utc_date": "2026-03-13"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Batteries",
+        "policy_counts": {
+          "act": 1,
+          "groot": 0,
+          "openpi": 0,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-03-17"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Batteries",
+        "policy_counts": {
+          "act": 1,
+          "groot": 0,
+          "openpi": 1,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-03-17"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Batteries",
+        "policy_counts": {
+          "act": 2,
+          "groot": 0,
+          "openpi": 1,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right",
+        "utc_date": "2026-03-17"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Batteries",
+        "policy_counts": {
+          "act": 2,
+          "groot": 0,
+          "openpi": 1,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right",
+        "utc_date": "2026-03-17"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Scissors",
+        "policy_counts": {
+          "act": 2,
+          "groot": 0,
+          "openpi": 0,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-03-17"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Scissors",
+        "policy_counts": {
+          "act": 2,
+          "groot": 0,
+          "openpi": 0,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right",
+        "utc_date": "2026-03-17"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "4",
+        "minimum_policy_count": 0,
+        "object": "Towels",
+        "policy_counts": {
+          "act": 2,
+          "groot": 0,
+          "openpi": 1,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-03-17"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "4",
+        "minimum_policy_count": 0,
+        "object": "Towels",
+        "policy_counts": {
+          "act": 2,
+          "groot": 0,
+          "openpi": 0,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-03-17"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "4",
+        "minimum_policy_count": 0,
+        "object": "Towels",
+        "policy_counts": {
+          "act": 4,
+          "groot": 0,
+          "openpi": 0,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right",
+        "utc_date": "2026-03-17"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "4",
+        "minimum_policy_count": 0,
+        "object": "Towels",
+        "policy_counts": {
+          "act": 1,
+          "groot": 0,
+          "openpi": 0,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right",
+        "utc_date": "2026-03-17"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Batteries",
+        "policy_counts": {
+          "act": 2,
+          "groot": 0,
+          "openpi": 0,
+          "smolvla": 2
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-03-19"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Batteries",
+        "policy_counts": {
+          "act": 1,
+          "groot": 0,
+          "openpi": 1,
+          "smolvla": 1
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-03-19"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Batteries",
+        "policy_counts": {
+          "act": 1,
+          "groot": 0,
+          "openpi": 1,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right",
+        "utc_date": "2026-03-19"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Batteries",
+        "policy_counts": {
+          "act": 1,
+          "groot": 0,
+          "openpi": 0,
+          "smolvla": 2
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right",
+        "utc_date": "2026-03-19"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Scissors",
+        "policy_counts": {
+          "act": 1,
+          "groot": 0,
+          "openpi": 0,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-03-19"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Scissors",
+        "policy_counts": {
+          "act": 1,
+          "groot": 0,
+          "openpi": 1,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-03-19"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Scissors",
+        "policy_counts": {
+          "act": 1,
+          "groot": 0,
+          "openpi": 0,
+          "smolvla": 2
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right",
+        "utc_date": "2026-03-19"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Scissors",
+        "policy_counts": {
+          "act": 1,
+          "groot": 0,
+          "openpi": 1,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right",
+        "utc_date": "2026-03-19"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Wooden spoons",
+        "policy_counts": {
+          "act": 1,
+          "groot": 0,
+          "openpi": 0,
+          "smolvla": 4
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-03-19"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Wooden spoons",
+        "policy_counts": {
+          "act": 0,
+          "groot": 0,
+          "openpi": 0,
+          "smolvla": 4
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-03-19"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Wooden spoons",
+        "policy_counts": {
+          "act": 0,
+          "groot": 0,
+          "openpi": 0,
+          "smolvla": 5
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right",
+        "utc_date": "2026-03-19"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Wooden spoons",
+        "policy_counts": {
+          "act": 0,
+          "groot": 0,
+          "openpi": 0,
+          "smolvla": 5
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right",
+        "utc_date": "2026-03-19"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "4",
+        "minimum_policy_count": 0,
+        "object": "Scissors",
+        "policy_counts": {
+          "act": 0,
+          "groot": 1,
+          "openpi": 1,
+          "smolvla": 2
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-03-20"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "4",
+        "minimum_policy_count": 0,
+        "object": "Scissors",
+        "policy_counts": {
+          "act": 3,
+          "groot": 2,
+          "openpi": 0,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-03-20"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "4",
+        "minimum_policy_count": 0,
+        "object": "Scissors",
+        "policy_counts": {
+          "act": 4,
+          "groot": 2,
+          "openpi": 0,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right",
+        "utc_date": "2026-03-20"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "4",
+        "minimum_policy_count": 0,
+        "object": "Scissors",
+        "policy_counts": {
+          "act": 1,
+          "groot": 1,
+          "openpi": 0,
+          "smolvla": 2
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right",
+        "utc_date": "2026-03-20"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "4",
+        "minimum_policy_count": 0,
+        "object": "Towels",
+        "policy_counts": {
+          "act": 2,
+          "groot": 5,
+          "openpi": 0,
+          "smolvla": 4
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-03-20"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "4",
+        "minimum_policy_count": 2,
+        "object": "Towels",
+        "policy_counts": {
+          "act": 5,
+          "groot": 2,
+          "openpi": 2,
+          "smolvla": 6
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-03-20"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "4",
+        "minimum_policy_count": 1,
+        "object": "Towels",
+        "policy_counts": {
+          "act": 4,
+          "groot": 2,
+          "openpi": 1,
+          "smolvla": 3
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right",
+        "utc_date": "2026-03-20"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "4",
+        "minimum_policy_count": 2,
+        "object": "Towels",
+        "policy_counts": {
+          "act": 6,
+          "groot": 3,
+          "openpi": 4,
+          "smolvla": 2
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right",
+        "utc_date": "2026-03-20"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 1,
+        "object": "Batteries",
+        "policy_counts": {
+          "act": 2,
+          "groot": 5,
+          "openpi": 1,
+          "smolvla": 5
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-03-24"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 2,
+        "object": "Batteries",
+        "policy_counts": {
+          "act": 2,
+          "groot": 4,
+          "openpi": 4,
+          "smolvla": 6
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right",
+        "utc_date": "2026-03-24"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 2,
+        "object": "Scissors",
+        "policy_counts": {
+          "act": 2,
+          "groot": 5,
+          "openpi": 2,
+          "smolvla": 5
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right",
+        "utc_date": "2026-03-24"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 1,
+        "object": "Wooden spoons",
+        "policy_counts": {
+          "act": 2,
+          "groot": 6,
+          "openpi": 4,
+          "smolvla": 1
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-03-24"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Wooden spoons",
+        "policy_counts": {
+          "act": 0,
+          "groot": 1,
+          "openpi": 0,
+          "smolvla": 1
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-03-24"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 1,
+        "object": "Wooden spoons",
+        "policy_counts": {
+          "act": 3,
+          "groot": 5,
+          "openpi": 4,
+          "smolvla": 1
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right",
+        "utc_date": "2026-03-24"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Batteries",
+        "policy_counts": {
+          "act": 5,
+          "groot": 3,
+          "openpi": 0,
+          "smolvla": 2
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-03-25"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Batteries",
+        "policy_counts": {
+          "act": 2,
+          "groot": 7,
+          "openpi": 0,
+          "smolvla": 7
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right",
+        "utc_date": "2026-03-25"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Scissors",
+        "policy_counts": {
+          "act": 0,
+          "groot": 5,
+          "openpi": 0,
+          "smolvla": 1
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-03-25"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Scissors",
+        "policy_counts": {
+          "act": 1,
+          "groot": 5,
+          "openpi": 0,
+          "smolvla": 3
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-03-25"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Towels",
+        "policy_counts": {
+          "act": 0,
+          "groot": 4,
+          "openpi": 2,
+          "smolvla": 1
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right",
+        "utc_date": "2026-03-25"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Wooden spoons",
+        "policy_counts": {
+          "act": 0,
+          "groot": 1,
+          "openpi": 0,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-03-25"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Wooden spoons",
+        "policy_counts": {
+          "act": 4,
+          "groot": 4,
+          "openpi": 0,
+          "smolvla": 1
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-03-25"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 1,
+        "object": "Wooden spoons",
+        "policy_counts": {
+          "act": 3,
+          "groot": 8,
+          "openpi": 1,
+          "smolvla": 3
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right",
+        "utc_date": "2026-03-25"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 1,
+        "object": "Wooden spoons",
+        "policy_counts": {
+          "act": 2,
+          "groot": 4,
+          "openpi": 2,
+          "smolvla": 1
+        },
+        "task": "Pick all the wooden spoons one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-03-25"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Batteries",
+        "policy_counts": {
+          "act": 0,
+          "groot": 1,
+          "openpi": 0,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-03-27"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Batteries",
+        "policy_counts": {
+          "act": 0,
+          "groot": 4,
+          "openpi": 1,
+          "smolvla": 2
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-03-27"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 1,
+        "object": "Batteries",
+        "policy_counts": {
+          "act": 1,
+          "groot": 3,
+          "openpi": 1,
+          "smolvla": 1
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right",
+        "utc_date": "2026-03-27"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 2,
+        "object": "Towels",
+        "policy_counts": {
+          "act": 2,
+          "groot": 2,
+          "openpi": 2,
+          "smolvla": 2
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-03-27"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 2,
+        "object": "Towels",
+        "policy_counts": {
+          "act": 2,
+          "groot": 2,
+          "openpi": 2,
+          "smolvla": 3
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-03-27"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Towels",
+        "policy_counts": {
+          "act": 0,
+          "groot": 2,
+          "openpi": 3,
+          "smolvla": 3
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right",
+        "utc_date": "2026-03-27"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Towels",
+        "policy_counts": {
+          "act": 0,
+          "groot": 5,
+          "openpi": 2,
+          "smolvla": 1
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right",
+        "utc_date": "2026-03-27"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 2,
+        "object": "Batteries",
+        "policy_counts": {
+          "act": 2,
+          "groot": 4,
+          "openpi": 2,
+          "smolvla": 2
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-03-29"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Batteries",
+        "policy_counts": {
+          "act": 0,
+          "groot": 0,
+          "openpi": 0,
+          "smolvla": 2
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-03-29"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 1,
+        "object": "Batteries",
+        "policy_counts": {
+          "act": 1,
+          "groot": 3,
+          "openpi": 3,
+          "smolvla": 2
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right",
+        "utc_date": "2026-03-29"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Batteries",
+        "policy_counts": {
+          "act": 0,
+          "groot": 1,
+          "openpi": 1,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right",
+        "utc_date": "2026-03-29"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 1,
+        "object": "Scissors",
+        "policy_counts": {
+          "act": 2,
+          "groot": 1,
+          "openpi": 2,
+          "smolvla": 2
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-03-29"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Scissors",
+        "policy_counts": {
+          "act": 0,
+          "groot": 2,
+          "openpi": 0,
+          "smolvla": 6
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-03-29"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Scissors",
+        "policy_counts": {
+          "act": 0,
+          "groot": 3,
+          "openpi": 3,
+          "smolvla": 1
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right",
+        "utc_date": "2026-03-29"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 1,
+        "object": "Scissors",
+        "policy_counts": {
+          "act": 3,
+          "groot": 2,
+          "openpi": 1,
+          "smolvla": 2
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right",
+        "utc_date": "2026-03-29"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Towels",
+        "policy_counts": {
+          "act": 0,
+          "groot": 2,
+          "openpi": 1,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-03-29"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Towels",
+        "policy_counts": {
+          "act": 0,
+          "groot": 3,
+          "openpi": 0,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-03-29"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Towels",
+        "policy_counts": {
+          "act": 1,
+          "groot": 1,
+          "openpi": 1,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right",
+        "utc_date": "2026-03-29"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Towels",
+        "policy_counts": {
+          "act": 0,
+          "groot": 0,
+          "openpi": 0,
+          "smolvla": 2
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right",
+        "utc_date": "2026-03-29"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Wooden spoons",
+        "policy_counts": {
+          "act": 0,
+          "groot": 0,
+          "openpi": 1,
+          "smolvla": 1
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-03-29"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 1,
+        "object": "Wooden spoons",
+        "policy_counts": {
+          "act": 1,
+          "groot": 1,
+          "openpi": 1,
+          "smolvla": 1
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-03-29"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Wooden spoons",
+        "policy_counts": {
+          "act": 0,
+          "groot": 1,
+          "openpi": 0,
+          "smolvla": 1
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right",
+        "utc_date": "2026-03-29"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Wooden spoons",
+        "policy_counts": {
+          "act": 1,
+          "groot": 0,
+          "openpi": 1,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right",
+        "utc_date": "2026-03-29"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Batteries",
+        "policy_counts": {
+          "act": 0,
+          "groot": 3,
+          "openpi": 1,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-04-03"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Batteries",
+        "policy_counts": {
+          "act": 0,
+          "groot": 2,
+          "openpi": 3,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-04-03"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Batteries",
+        "policy_counts": {
+          "act": 0,
+          "groot": 2,
+          "openpi": 1,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right",
+        "utc_date": "2026-04-03"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Batteries",
+        "policy_counts": {
+          "act": 0,
+          "groot": 3,
+          "openpi": 3,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right",
+        "utc_date": "2026-04-03"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Scissors",
+        "policy_counts": {
+          "act": 0,
+          "groot": 0,
+          "openpi": 1,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-04-03"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Scissors",
+        "policy_counts": {
+          "act": 0,
+          "groot": 1,
+          "openpi": 2,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-04-03"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Scissors",
+        "policy_counts": {
+          "act": 0,
+          "groot": 1,
+          "openpi": 2,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right",
+        "utc_date": "2026-04-03"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Scissors",
+        "policy_counts": {
+          "act": 0,
+          "groot": 3,
+          "openpi": 0,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right",
+        "utc_date": "2026-04-03"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Towels",
+        "policy_counts": {
+          "act": 0,
+          "groot": 1,
+          "openpi": 2,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-04-03"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Towels",
+        "policy_counts": {
+          "act": 0,
+          "groot": 1,
+          "openpi": 2,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right",
+        "utc_date": "2026-04-03"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Wooden spoons",
+        "policy_counts": {
+          "act": 0,
+          "groot": 2,
+          "openpi": 3,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-04-03"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Wooden spoons",
+        "policy_counts": {
+          "act": 0,
+          "groot": 3,
+          "openpi": 2,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-04-03"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Wooden spoons",
+        "policy_counts": {
+          "act": 0,
+          "groot": 2,
+          "openpi": 2,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right",
+        "utc_date": "2026-04-03"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Wooden spoons",
+        "policy_counts": {
+          "act": 0,
+          "groot": 1,
+          "openpi": 3,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right",
+        "utc_date": "2026-04-03"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Towels",
+        "policy_counts": {
+          "act": 0,
+          "groot": 2,
+          "openpi": 0,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-04-04"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Towels",
+        "policy_counts": {
+          "act": 0,
+          "groot": 2,
+          "openpi": 2,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-04-04"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Towels",
+        "policy_counts": {
+          "act": 0,
+          "groot": 2,
+          "openpi": 1,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right",
+        "utc_date": "2026-04-04"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Towels",
+        "policy_counts": {
+          "act": 0,
+          "groot": 2,
+          "openpi": 3,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right",
+        "utc_date": "2026-04-04"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Wooden spoons",
+        "policy_counts": {
+          "act": 0,
+          "groot": 1,
+          "openpi": 1,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left",
+        "utc_date": "2026-04-04"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Wooden spoons",
+        "policy_counts": {
+          "act": 0,
+          "groot": 2,
+          "openpi": 0,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right",
+        "utc_date": "2026-04-04"
+      }
+    ],
+    "dated_supported_cell_count": 18,
+    "disposition": "item_count_preserves_h187_target",
+    "episode_count": 594,
+    "four_item_share_by_policy": {
+      "act": {
+        "denominator": 151,
+        "numerator": 34
+      },
+      "groot": {
+        "denominator": 164,
+        "numerator": 18
+      },
+      "openpi": {
+        "denominator": 163,
+        "numerator": 9
+      },
+      "smolvla": {
+        "denominator": 116,
+        "numerator": 19
+      }
+    },
+    "full_release_support_pass": false,
+    "full_window_cell_count": 27,
+    "full_window_cells": [
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 9,
+        "object": "Batteries",
+        "policy_counts": {
+          "act": 9,
+          "groot": 13,
+          "openpi": 10,
+          "smolvla": 9
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 7,
+        "object": "Batteries",
+        "policy_counts": {
+          "act": 7,
+          "groot": 9,
+          "openpi": 11,
+          "smolvla": 7
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 9,
+        "object": "Batteries",
+        "policy_counts": {
+          "act": 10,
+          "groot": 12,
+          "openpi": 11,
+          "smolvla": 9
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 9,
+        "object": "Batteries",
+        "policy_counts": {
+          "act": 10,
+          "groot": 11,
+          "openpi": 11,
+          "smolvla": 9
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "4",
+        "minimum_policy_count": 0,
+        "object": "Scissors",
+        "policy_counts": {
+          "act": 0,
+          "groot": 1,
+          "openpi": 1,
+          "smolvla": 2
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 3,
+        "object": "Scissors",
+        "policy_counts": {
+          "act": 9,
+          "groot": 6,
+          "openpi": 8,
+          "smolvla": 3
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "4",
+        "minimum_policy_count": 0,
+        "object": "Scissors",
+        "policy_counts": {
+          "act": 3,
+          "groot": 2,
+          "openpi": 0,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 5,
+        "object": "Scissors",
+        "policy_counts": {
+          "act": 5,
+          "groot": 8,
+          "openpi": 11,
+          "smolvla": 9
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "4",
+        "minimum_policy_count": 0,
+        "object": "Scissors",
+        "policy_counts": {
+          "act": 4,
+          "groot": 2,
+          "openpi": 0,
+          "smolvla": 0
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 3,
+        "object": "Scissors",
+        "policy_counts": {
+          "act": 7,
+          "groot": 4,
+          "openpi": 7,
+          "smolvla": 3
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "4",
+        "minimum_policy_count": 0,
+        "object": "Scissors",
+        "policy_counts": {
+          "act": 1,
+          "groot": 1,
+          "openpi": 0,
+          "smolvla": 2
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 7,
+        "object": "Scissors",
+        "policy_counts": {
+          "act": 8,
+          "groot": 10,
+          "openpi": 8,
+          "smolvla": 7
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "4",
+        "minimum_policy_count": 1,
+        "object": "Towels",
+        "policy_counts": {
+          "act": 4,
+          "groot": 5,
+          "openpi": 1,
+          "smolvla": 4
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 2,
+        "object": "Towels",
+        "policy_counts": {
+          "act": 4,
+          "groot": 7,
+          "openpi": 9,
+          "smolvla": 2
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "4",
+        "minimum_policy_count": 2,
+        "object": "Towels",
+        "policy_counts": {
+          "act": 7,
+          "groot": 2,
+          "openpi": 2,
+          "smolvla": 6
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 3,
+        "object": "Towels",
+        "policy_counts": {
+          "act": 6,
+          "groot": 7,
+          "openpi": 7,
+          "smolvla": 3
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "4",
+        "minimum_policy_count": 1,
+        "object": "Towels",
+        "policy_counts": {
+          "act": 8,
+          "groot": 2,
+          "openpi": 1,
+          "smolvla": 3
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 4,
+        "object": "Towels",
+        "policy_counts": {
+          "act": 4,
+          "groot": 10,
+          "openpi": 11,
+          "smolvla": 4
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "4",
+        "minimum_policy_count": 2,
+        "object": "Towels",
+        "policy_counts": {
+          "act": 7,
+          "groot": 3,
+          "openpi": 4,
+          "smolvla": 2
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 3,
+        "object": "Towels",
+        "policy_counts": {
+          "act": 6,
+          "groot": 7,
+          "openpi": 7,
+          "smolvla": 3
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 6,
+        "object": "Wooden spoons",
+        "policy_counts": {
+          "act": 8,
+          "groot": 9,
+          "openpi": 10,
+          "smolvla": 6
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 6,
+        "object": "Wooden spoons",
+        "policy_counts": {
+          "act": 6,
+          "groot": 10,
+          "openpi": 10,
+          "smolvla": 7
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 6,
+        "object": "Wooden spoons",
+        "policy_counts": {
+          "act": 6,
+          "groot": 8,
+          "openpi": 10,
+          "smolvla": 7
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 8,
+        "object": "Wooden spoons",
+        "policy_counts": {
+          "act": 8,
+          "groot": 11,
+          "openpi": 11,
+          "smolvla": 8
+        },
+        "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "right"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Wooden spoons",
+        "policy_counts": {
+          "act": 1,
+          "groot": 0,
+          "openpi": 0,
+          "smolvla": 0
+        },
+        "task": "Pick all the towels one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left"
+      },
+      {
+        "external_camera": "left",
+        "initial_item_count": "8",
+        "minimum_policy_count": 1,
+        "object": "Wooden spoons",
+        "policy_counts": {
+          "act": 2,
+          "groot": 4,
+          "openpi": 2,
+          "smolvla": 1
+        },
+        "task": "Pick all the wooden spoons one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left"
+      },
+      {
+        "external_camera": "right",
+        "initial_item_count": "8",
+        "minimum_policy_count": 0,
+        "object": "Wooden spoons",
+        "policy_counts": {
+          "act": 1,
+          "groot": 0,
+          "openpi": 0,
+          "smolvla": 0
+        },
+        "task": "Pick all the wooden spoons one by one from transparent tote and place them into the large grey tote.",
+        "tote_placement": "left"
+      }
+    ],
+    "full_window_supported_cell_count": 21,
+    "h187_dated_cells_with_multiple_item_counts": [],
+    "h189_target": {
+      "cells": [
+        {
+          "external_camera": "right",
+          "initial_item_count": "4",
+          "minimum_policy_count": 2,
+          "object": "Towels",
+          "policy_counts": {
+            "act": 5,
+            "groot": 2,
+            "openpi": 2,
+            "smolvla": 6
+          },
+          "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+          "tote_placement": "left",
+          "utc_date": "2026-03-20"
+        },
+        {
+          "external_camera": "left",
+          "initial_item_count": "4",
+          "minimum_policy_count": 1,
+          "object": "Towels",
+          "policy_counts": {
+            "act": 4,
+            "groot": 2,
+            "openpi": 1,
+            "smolvla": 3
+          },
+          "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+          "tote_placement": "right",
+          "utc_date": "2026-03-20"
+        },
+        {
+          "external_camera": "right",
+          "initial_item_count": "4",
+          "minimum_policy_count": 2,
+          "object": "Towels",
+          "policy_counts": {
+            "act": 6,
+            "groot": 3,
+            "openpi": 4,
+            "smolvla": 2
+          },
+          "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+          "tote_placement": "right",
+          "utc_date": "2026-03-20"
+        },
+        {
+          "external_camera": "left",
+          "initial_item_count": "8",
+          "minimum_policy_count": 1,
+          "object": "Batteries",
+          "policy_counts": {
+            "act": 2,
+            "groot": 5,
+            "openpi": 1,
+            "smolvla": 5
+          },
+          "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+          "tote_placement": "left",
+          "utc_date": "2026-03-24"
+        },
+        {
+          "external_camera": "right",
+          "initial_item_count": "8",
+          "minimum_policy_count": 2,
+          "object": "Batteries",
+          "policy_counts": {
+            "act": 2,
+            "groot": 4,
+            "openpi": 4,
+            "smolvla": 6
+          },
+          "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+          "tote_placement": "right",
+          "utc_date": "2026-03-24"
+        },
+        {
+          "external_camera": "right",
+          "initial_item_count": "8",
+          "minimum_policy_count": 2,
+          "object": "Scissors",
+          "policy_counts": {
+            "act": 2,
+            "groot": 5,
+            "openpi": 2,
+            "smolvla": 5
+          },
+          "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+          "tote_placement": "right",
+          "utc_date": "2026-03-24"
+        },
+        {
+          "external_camera": "left",
+          "initial_item_count": "8",
+          "minimum_policy_count": 1,
+          "object": "Wooden spoons",
+          "policy_counts": {
+            "act": 2,
+            "groot": 6,
+            "openpi": 4,
+            "smolvla": 1
+          },
+          "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+          "tote_placement": "left",
+          "utc_date": "2026-03-24"
+        },
+        {
+          "external_camera": "left",
+          "initial_item_count": "8",
+          "minimum_policy_count": 1,
+          "object": "Wooden spoons",
+          "policy_counts": {
+            "act": 3,
+            "groot": 5,
+            "openpi": 4,
+            "smolvla": 1
+          },
+          "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+          "tote_placement": "right",
+          "utc_date": "2026-03-24"
+        },
+        {
+          "external_camera": "right",
+          "initial_item_count": "8",
+          "minimum_policy_count": 1,
+          "object": "Wooden spoons",
+          "policy_counts": {
+            "act": 3,
+            "groot": 8,
+            "openpi": 1,
+            "smolvla": 3
+          },
+          "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+          "tote_placement": "right",
+          "utc_date": "2026-03-25"
+        },
+        {
+          "external_camera": "left",
+          "initial_item_count": "8",
+          "minimum_policy_count": 1,
+          "object": "Wooden spoons",
+          "policy_counts": {
+            "act": 2,
+            "groot": 4,
+            "openpi": 2,
+            "smolvla": 1
+          },
+          "task": "Pick all the wooden spoons one by one from transparent tote and place them into the large grey tote.",
+          "tote_placement": "left",
+          "utc_date": "2026-03-25"
+        },
+        {
+          "external_camera": "right",
+          "initial_item_count": "8",
+          "minimum_policy_count": 1,
+          "object": "Batteries",
+          "policy_counts": {
+            "act": 1,
+            "groot": 3,
+            "openpi": 1,
+            "smolvla": 1
+          },
+          "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+          "tote_placement": "right",
+          "utc_date": "2026-03-27"
+        },
+        {
+          "external_camera": "left",
+          "initial_item_count": "8",
+          "minimum_policy_count": 2,
+          "object": "Towels",
+          "policy_counts": {
+            "act": 2,
+            "groot": 2,
+            "openpi": 2,
+            "smolvla": 2
+          },
+          "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+          "tote_placement": "left",
+          "utc_date": "2026-03-27"
+        },
+        {
+          "external_camera": "right",
+          "initial_item_count": "8",
+          "minimum_policy_count": 2,
+          "object": "Towels",
+          "policy_counts": {
+            "act": 2,
+            "groot": 2,
+            "openpi": 2,
+            "smolvla": 3
+          },
+          "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+          "tote_placement": "left",
+          "utc_date": "2026-03-27"
+        },
+        {
+          "external_camera": "left",
+          "initial_item_count": "8",
+          "minimum_policy_count": 2,
+          "object": "Batteries",
+          "policy_counts": {
+            "act": 2,
+            "groot": 4,
+            "openpi": 2,
+            "smolvla": 2
+          },
+          "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+          "tote_placement": "left",
+          "utc_date": "2026-03-29"
+        },
+        {
+          "external_camera": "left",
+          "initial_item_count": "8",
+          "minimum_policy_count": 1,
+          "object": "Batteries",
+          "policy_counts": {
+            "act": 1,
+            "groot": 3,
+            "openpi": 3,
+            "smolvla": 2
+          },
+          "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+          "tote_placement": "right",
+          "utc_date": "2026-03-29"
+        },
+        {
+          "external_camera": "left",
+          "initial_item_count": "8",
+          "minimum_policy_count": 1,
+          "object": "Scissors",
+          "policy_counts": {
+            "act": 2,
+            "groot": 1,
+            "openpi": 2,
+            "smolvla": 2
+          },
+          "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+          "tote_placement": "left",
+          "utc_date": "2026-03-29"
+        },
+        {
+          "external_camera": "right",
+          "initial_item_count": "8",
+          "minimum_policy_count": 1,
+          "object": "Scissors",
+          "policy_counts": {
+            "act": 3,
+            "groot": 2,
+            "openpi": 1,
+            "smolvla": 2
+          },
+          "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+          "tote_placement": "right",
+          "utc_date": "2026-03-29"
+        },
+        {
+          "external_camera": "right",
+          "initial_item_count": "8",
+          "minimum_policy_count": 1,
+          "object": "Wooden spoons",
+          "policy_counts": {
+            "act": 1,
+            "groot": 1,
+            "openpi": 1,
+            "smolvla": 1
+          },
+          "task": "Pick all the items one by one from transparent tote and place them into the large grey tote.",
+          "tote_placement": "left",
+          "utc_date": "2026-03-29"
+        }
+      ],
+      "equal_cell_weight": {
+        "denominator": 18,
+        "numerator": 1
+      },
+      "excluded_episode_count": 400,
+      "identified": true,
+      "policy_counts": {
+        "act": 45,
+        "groot": 62,
+        "openpi": 39,
+        "smolvla": 48
+      },
+      "retained_cell_count": 18,
+      "retained_episode_count": 194,
+      "rule": "retain every UTC-date \u00d7 task \u00d7 object \u00d7 tote \u00d7 camera \u00d7 initial-item-count cell with all four policies; equal cell weights"
+    },
+    "initial_item_count_deterministic_within_h187_dated_cell": true,
+    "item_count_by_policy": {
+      "act": {
+        "4": 34,
+        "8": 117
+      },
+      "groot": {
+        "4": 18,
+        "8": 146
+      },
+      "openpi": {
+        "4": 9,
+        "8": 154
+      },
+      "smolvla": {
+        "4": 19,
+        "8": 97
+      }
+    },
+    "item_count_distribution": {
+      "4": 80,
+      "8": 514
+    },
+    "metadata_gate_pass": false
+  },
+  "field_policy": {
+    "interpretation": "pre-assignment initial item count",
+    "new_allowed_source_field": "eval.total_items",
+    "performance_fields_emitted": []
+  },
+  "protocol_sha256": "c8fa442994ce40ab660b619e2ed0933edff5ddccbdb0273f82676b5974a580e9",
+  "schema": "h189-phail-item-count-support-v1",
+  "source": {
+    "cohort": "official v1.0 594-rollout release cohort",
+    "endpoint": "https://storage.eu-north1.nebius.cloud/positronic-public",
+    "fresh_inventory_manifest_sha256": "8b69b6ad8c14b1f5d920dc7aa8c833c79536a8f3405205e9eb5d4f63e5353982",
+    "h187_inventory_manifest_sha256": "8b69b6ad8c14b1f5d920dc7aa8c833c79536a8f3405205e9eb5d4f63e5353982",
+    "h187_sanitized_csv_sha256": "ad43fca1da065a1cb7fd84dfa9afc5691c72ebe12e7f165c68a0050e51e87ebe",
+    "prefix": "phail/v1.0/dataset/",
+    "raw_sidecars_persisted": false,
+    "retained_sidecar_count": 1188,
+    "sanitized_csv_sha256": "396638ee45cca43f2461714c4a17d06500b03117a15aeeeb61d8f95d102cef8f"
+  }
+}

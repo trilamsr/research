@@ -1,0 +1,4121 @@
+{
+  "_outcome_edit_reconciliation": {
+    "episodes_reviewed": 150,
+    "num_steps_patches": 114,
+    "outcome_class_changes": 7,
+    "overrides_file": ".outcome_edit_progress.json",
+    "success_flips": [
+      {
+        "episode_index": 148,
+        "new": "success",
+        "old": "timeout"
+      }
+    ]
+  },
+  "arena_session_id": "jh74188qb3v184zv2nh1jx127d8ad8b3",
+  "arena_session_url": "https://policy-eval.ankile.com/?tab=sessions&session=jh74188qb3v184zv2nh1jx127d8ad8b3",
+  "arena_submitted_round_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49
+  ],
+  "args": {
+    "arena_url": "https://grandiose-rook-292.convex.cloud",
+    "camera_filter": "_left",
+    "camera_height": 480,
+    "camera_keys": "18650758_left,18650758_right,25916956_left,33409691_left",
+    "camera_width": 640,
+    "checkpoint_interval_rounds": 5,
+    "dataset_name": "real01b-square-d2-r5-trio-baseline-dp-iql-s3fixfinal-n16-heval-sobolseed2026070901",
+    "dataset_path": "./data",
+    "device": null,
+    "drop_fixed_policy": [],
+    "environment": "square_d2",
+    "fixed_policy": [
+      "baseline_nocf_r5_c100k=wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "ours_freecf_r5_c100k_dp=wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "ours_freecf_r5_c100k_iql_s3fixfinal_n16=wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0"
+    ],
+    "fixed_policy_dp_override": [
+      "ours_freecf_r5_c100k_iql_s3fixfinal_n16=wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0"
+    ],
+    "fixed_policy_num_action_samples": [
+      "ours_freecf_r5_c100k_iql_s3fixfinal_n16=16"
+    ],
+    "freq": 15,
+    "hf_repo_id": "ankile/real01b-square-d2-r5-trio-baseline-dp-iql-s3fixfinal-n16-heval-sobolseed2026070901",
+    "inference_backend": "local",
+    "initial_state_visualization_dir": "/tmp/real01b-square-d2-r5-trio-baseline-dp-iql-s3fixfinal-n16-heval-sobolseed2026070901_initial_state_targets",
+    "initial_states_manifest": "experiments/2026-07-09/blind_inputs/square_d2_r5_eval_heldout_independent_sobol_seed2026070901.json",
+    "max_recoverable_rollout_errors_per_slot": 6,
+    "max_steps": 600,
+    "n_action_steps": 6,
+    "no_auto_timeout": false,
+    "no_push": false,
+    "no_show_initial_state_window": false,
+    "noise_scheduler": "DDIM",
+    "num_action_samples": null,
+    "num_inference_steps": 8,
+    "openpi_camera_roles": null,
+    "random_arena_selection": "uniform",
+    "random_arena_slots": 0,
+    "random_seed": 2026071203,
+    "recoverable_rollout_max_retry_delay_s": 30.0,
+    "recoverable_rollout_retry_backoff": 2.0,
+    "recoverable_rollout_retry_delay_s": 2.0,
+    "remote_inference_device": "cuda",
+    "remote_inference_gpu": "1",
+    "remote_inference_host": "robot-john",
+    "remote_inference_port": 0,
+    "remote_inference_python_cmd": "uv run --no-sync python",
+    "remote_inference_remote_port": 48881,
+    "remote_inference_start_timeout_s": 180.0,
+    "remote_inference_token": null,
+    "remote_inference_url": null,
+    "remote_inference_workdir": null,
+    "rerun_incomplete_rounds": false,
+    "reset_max_retries": 6,
+    "reset_max_retry_delay_s": 5.0,
+    "reset_retry_backoff": 1.5,
+    "reset_retry_delay_s": 1.0,
+    "results_path": null,
+    "robot_state_refresh_max_wait_s": 1.5,
+    "robot_state_refresh_poll_interval_s": 0.01,
+    "task_description": "place the square nut onto the peg"
+  },
+  "dataset_name": "real01b-square-d2-r5-trio-baseline-dp-iql-s3fixfinal-n16-heval-sobolseed2026070901",
+  "rollouts": [
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "episode_index": 0,
+      "manifest_idx": 0,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "num_steps": 140,
+      "outcome": "success",
+      "pen_x": 0.05758688867278397,
+      "pen_y": -0.13491319236382843,
+      "pen_yaw": 1.402372797816021,
+      "policy_id": 0,
+      "round": 1
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "episode_index": 1,
+      "manifest_idx": 0,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "num_steps": 146,
+      "outcome": "success",
+      "pen_x": 0.05758688867278397,
+      "pen_y": -0.13491319236382843,
+      "pen_yaw": 1.402372797816021,
+      "policy_id": 1,
+      "round": 1
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "episode_index": 2,
+      "manifest_idx": 0,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "num_steps": 113,
+      "outcome": "success",
+      "pen_x": 0.05758688867278397,
+      "pen_y": -0.13491319236382843,
+      "pen_yaw": 1.402372797816021,
+      "policy_id": 2,
+      "round": 1
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "episode_index": 3,
+      "manifest_idx": 1,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "num_steps": 346,
+      "outcome": "failure",
+      "pen_x": 0.1134836698845029,
+      "pen_y": -0.14404895206466317,
+      "pen_yaw": -3.015704860463622,
+      "policy_id": 1,
+      "round": 2
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "episode_index": 4,
+      "manifest_idx": 1,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "num_steps": 600,
+      "outcome": "timeout",
+      "pen_x": 0.1134836698845029,
+      "pen_y": -0.14404895206466317,
+      "pen_yaw": -3.015704860463622,
+      "policy_id": 0,
+      "round": 2
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "episode_index": 5,
+      "manifest_idx": 1,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "num_steps": 176,
+      "outcome": "success",
+      "pen_x": 0.1134836698845029,
+      "pen_y": -0.14404895206466317,
+      "pen_yaw": -3.015704860463622,
+      "policy_id": 2,
+      "round": 2
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "episode_index": 6,
+      "manifest_idx": 2,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "num_steps": 146,
+      "outcome": "success",
+      "pen_x": 0.07785501457750799,
+      "pen_y": 0.14364183168523012,
+      "pen_yaw": -0.28841094046761073,
+      "policy_id": 1,
+      "round": 3
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "episode_index": 7,
+      "manifest_idx": 2,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "num_steps": 566,
+      "outcome": "timeout",
+      "pen_x": 0.07785501457750799,
+      "pen_y": 0.14364183168523012,
+      "pen_yaw": -0.28841094046761073,
+      "policy_id": 0,
+      "round": 3
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "episode_index": 8,
+      "manifest_idx": 2,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "num_steps": 136,
+      "outcome": "success",
+      "pen_x": 0.07785501457750799,
+      "pen_y": 0.14364183168523012,
+      "pen_yaw": -0.28841094046761073,
+      "policy_id": 2,
+      "round": 3
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "episode_index": 9,
+      "manifest_idx": 3,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "num_steps": 600,
+      "outcome": "timeout",
+      "pen_x": -0.05199138254672289,
+      "pen_y": 0.19262638359591364,
+      "pen_yaw": -2.4311850168202125,
+      "policy_id": 0,
+      "round": 4
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "episode_index": 10,
+      "manifest_idx": 3,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "num_steps": 600,
+      "outcome": "timeout",
+      "pen_x": -0.05199138254672289,
+      "pen_y": 0.19262638359591364,
+      "pen_yaw": -2.4311850168202125,
+      "policy_id": 1,
+      "round": 4
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "episode_index": 11,
+      "manifest_idx": 3,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "num_steps": 600,
+      "outcome": "timeout",
+      "pen_x": -0.05199138254672289,
+      "pen_y": 0.19262638359591364,
+      "pen_yaw": -2.4311850168202125,
+      "policy_id": 2,
+      "round": 4
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "episode_index": 12,
+      "manifest_idx": 4,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "num_steps": 145,
+      "outcome": "success",
+      "pen_x": 0.006065792569890621,
+      "pen_y": 0.13449691556654872,
+      "pen_yaw": 1.7730458513679768,
+      "policy_id": 1,
+      "round": 5
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "episode_index": 13,
+      "manifest_idx": 4,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "num_steps": 350,
+      "outcome": "failure",
+      "pen_x": 0.006065792569890621,
+      "pen_y": 0.13449691556654872,
+      "pen_yaw": 1.7730458513679768,
+      "policy_id": 2,
+      "round": 5
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "episode_index": 14,
+      "manifest_idx": 4,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "num_steps": 291,
+      "outcome": "failure",
+      "pen_x": 0.006065792569890621,
+      "pen_y": 0.13449691556654872,
+      "pen_yaw": 1.7730458513679768,
+      "policy_id": 0,
+      "round": 5
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "episode_index": 15,
+      "manifest_idx": 5,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "num_steps": 600,
+      "outcome": "timeout",
+      "pen_x": -0.004936072396114474,
+      "pen_y": -0.08342157117761673,
+      "pen_yaw": 1.0632141478911867,
+      "policy_id": 0,
+      "round": 6
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "episode_index": 16,
+      "manifest_idx": 5,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "num_steps": 138,
+      "outcome": "success",
+      "pen_x": -0.004936072396114474,
+      "pen_y": -0.08342157117761673,
+      "pen_yaw": 1.0632141478911867,
+      "policy_id": 1,
+      "round": 6
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "episode_index": 17,
+      "manifest_idx": 5,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "num_steps": 129,
+      "outcome": "success",
+      "pen_x": -0.004936072396114474,
+      "pen_y": -0.08342157117761673,
+      "pen_yaw": 1.0632141478911867,
+      "policy_id": 2,
+      "round": 6
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "episode_index": 18,
+      "manifest_idx": 6,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "num_steps": 108,
+      "outcome": "failure",
+      "pen_x": -0.11163693779334426,
+      "pen_y": 0.0952303947173059,
+      "pen_yaw": -0.6307306988881596,
+      "policy_id": 2,
+      "round": 7
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "episode_index": 19,
+      "manifest_idx": 6,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "num_steps": 226,
+      "outcome": "failure",
+      "pen_x": -0.11163693779334426,
+      "pen_y": 0.0952303947173059,
+      "pen_yaw": -0.6307306988881596,
+      "policy_id": 0,
+      "round": 7
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "episode_index": 20,
+      "manifest_idx": 6,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "num_steps": 133,
+      "outcome": "success",
+      "pen_x": -0.11163693779334426,
+      "pen_y": 0.0952303947173059,
+      "pen_yaw": -0.6307306988881596,
+      "policy_id": 1,
+      "round": 7
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "episode_index": 21,
+      "manifest_idx": 7,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "num_steps": 600,
+      "outcome": "timeout",
+      "pen_x": -0.07597727851942182,
+      "pen_y": -0.09570921311862768,
+      "pen_yaw": -2.5690402815138964,
+      "policy_id": 0,
+      "round": 8
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "episode_index": 22,
+      "manifest_idx": 7,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "num_steps": 176,
+      "outcome": "success",
+      "pen_x": -0.07597727851942182,
+      "pen_y": -0.09570921311862768,
+      "pen_yaw": -2.5690402815138964,
+      "policy_id": 1,
+      "round": 8
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "episode_index": 23,
+      "manifest_idx": 7,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "num_steps": 181,
+      "outcome": "success",
+      "pen_x": -0.07597727851942182,
+      "pen_y": -0.09570921311862768,
+      "pen_yaw": -2.5690402815138964,
+      "policy_id": 2,
+      "round": 8
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "episode_index": 24,
+      "manifest_idx": 8,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "num_steps": 169,
+      "outcome": "success",
+      "pen_x": 0.010500797864049671,
+      "pen_y": 0.026594412402436124,
+      "pen_yaw": -2.785404736064752,
+      "policy_id": 2,
+      "round": 9
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "episode_index": 25,
+      "manifest_idx": 8,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "num_steps": 237,
+      "outcome": "success",
+      "pen_x": 0.010500797864049671,
+      "pen_y": 0.026594412402436124,
+      "pen_yaw": -2.785404736064752,
+      "policy_id": 1,
+      "round": 9
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "episode_index": 26,
+      "manifest_idx": 8,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "num_steps": 342,
+      "outcome": "failure",
+      "pen_x": 0.010500797864049671,
+      "pen_y": 0.026594412402436124,
+      "pen_yaw": -2.785404736064752,
+      "policy_id": 0,
+      "round": 9
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "episode_index": 27,
+      "manifest_idx": 9,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "num_steps": 133,
+      "outcome": "success",
+      "pen_x": 0.05408239554241301,
+      "pen_y": -0.025238268316537138,
+      "pen_yaw": -0.009406926053371567,
+      "policy_id": 1,
+      "round": 10
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "episode_index": 28,
+      "manifest_idx": 9,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "num_steps": 131,
+      "outcome": "success",
+      "pen_x": 0.05408239554241301,
+      "pen_y": -0.025238268316537138,
+      "pen_yaw": -0.009406926053371567,
+      "policy_id": 2,
+      "round": 10
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "episode_index": 29,
+      "manifest_idx": 9,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "num_steps": 189,
+      "outcome": "success",
+      "pen_x": 0.05408239554241301,
+      "pen_y": -0.025238268316537138,
+      "pen_yaw": -0.009406926053371567,
+      "policy_id": 0,
+      "round": 10
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "episode_index": 30,
+      "manifest_idx": 10,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "num_steps": 172,
+      "outcome": "success",
+      "pen_x": 0.08994177922792732,
+      "pen_y": 0.10714887513220309,
+      "pen_yaw": -2.5087768575632543,
+      "policy_id": 2,
+      "round": 11
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "episode_index": 31,
+      "manifest_idx": 10,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "num_steps": 361,
+      "outcome": "failure",
+      "pen_x": 0.08994177922792732,
+      "pen_y": 0.10714887513220309,
+      "pen_yaw": -2.5087768575632543,
+      "policy_id": 0,
+      "round": 11
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "episode_index": 32,
+      "manifest_idx": 10,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "num_steps": 153,
+      "outcome": "success",
+      "pen_x": 0.08994177922792732,
+      "pen_y": 0.10714887513220309,
+      "pen_yaw": -2.5087768575632543,
+      "policy_id": 1,
+      "round": 11
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "episode_index": 33,
+      "manifest_idx": 11,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "num_steps": 600,
+      "outcome": "failure",
+      "pen_x": 0.04649289439618587,
+      "pen_y": -0.05732895423285664,
+      "pen_yaw": 2.0819979347252104,
+      "policy_id": 2,
+      "round": 12
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "episode_index": 34,
+      "manifest_idx": 11,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "num_steps": 128,
+      "outcome": "success",
+      "pen_x": 0.04649289439618587,
+      "pen_y": -0.05732895423285664,
+      "pen_yaw": 2.0819979347252104,
+      "policy_id": 1,
+      "round": 12
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "episode_index": 35,
+      "manifest_idx": 11,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "num_steps": 125,
+      "outcome": "success",
+      "pen_x": 0.04649289439618587,
+      "pen_y": -0.05732895423285664,
+      "pen_yaw": 2.0819979347252104,
+      "policy_id": 0,
+      "round": 12
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "episode_index": 36,
+      "manifest_idx": 12,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "num_steps": 150,
+      "outcome": "success",
+      "pen_x": -0.10404762116074562,
+      "pen_y": 0.04896393208689989,
+      "pen_yaw": 1.8903294918109381,
+      "policy_id": 2,
+      "round": 13
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "episode_index": 37,
+      "manifest_idx": 12,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "num_steps": 167,
+      "outcome": "success",
+      "pen_x": -0.10404762116074562,
+      "pen_y": 0.04896393208689989,
+      "pen_yaw": 1.8903294918109381,
+      "policy_id": 1,
+      "round": 13
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "episode_index": 38,
+      "manifest_idx": 12,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "num_steps": 134,
+      "outcome": "success",
+      "pen_x": -0.10404762116074562,
+      "pen_y": 0.04896393208689989,
+      "pen_yaw": 1.8903294918109381,
+      "policy_id": 0,
+      "round": 13
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "episode_index": 39,
+      "manifest_idx": 13,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "num_steps": 600,
+      "outcome": "timeout",
+      "pen_x": 0.10188970754481852,
+      "pen_y": -0.10578444666825235,
+      "pen_yaw": -0.5685018620530387,
+      "policy_id": 2,
+      "round": 14
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "episode_index": 40,
+      "manifest_idx": 13,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "num_steps": 600,
+      "outcome": "timeout",
+      "pen_x": 0.10188970754481852,
+      "pen_y": -0.10578444666825235,
+      "pen_yaw": -0.5685018620530387,
+      "policy_id": 0,
+      "round": 14
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "episode_index": 41,
+      "manifest_idx": 13,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "num_steps": 261,
+      "outcome": "success",
+      "pen_x": 0.10188970754481852,
+      "pen_y": -0.10578444666825235,
+      "pen_yaw": -0.5685018620530387,
+      "policy_id": 1,
+      "round": 14
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "episode_index": 42,
+      "manifest_idx": 14,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "num_steps": 383,
+      "outcome": "success",
+      "pen_x": -0.08757170923985541,
+      "pen_y": -0.16790740305483343,
+      "pen_yaw": -0.13147227223356994,
+      "policy_id": 1,
+      "round": 15
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "episode_index": 43,
+      "manifest_idx": 14,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "num_steps": 321,
+      "outcome": "success",
+      "pen_x": -0.08757170923985541,
+      "pen_y": -0.16790740305483343,
+      "pen_yaw": -0.13147227223356994,
+      "policy_id": 0,
+      "round": 15
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "episode_index": 44,
+      "manifest_idx": 14,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "num_steps": 271,
+      "outcome": "success",
+      "pen_x": -0.08757170923985541,
+      "pen_y": -0.16790740305483343,
+      "pen_yaw": -0.13147227223356994,
+      "policy_id": 2,
+      "round": 15
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "episode_index": 45,
+      "manifest_idx": 15,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "num_steps": 231,
+      "outcome": "success",
+      "pen_x": -0.05648817246593535,
+      "pen_y": 0.08293795655742289,
+      "pen_yaw": 2.2165500708360444,
+      "policy_id": 0,
+      "round": 16
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "episode_index": 46,
+      "manifest_idx": 15,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "num_steps": 507,
+      "outcome": "success",
+      "pen_x": -0.05648817246593535,
+      "pen_y": 0.08293795655742289,
+      "pen_yaw": 2.2165500708360444,
+      "policy_id": 1,
+      "round": 16
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "episode_index": 47,
+      "manifest_idx": 15,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "num_steps": 251,
+      "outcome": "success",
+      "pen_x": -0.05648817246593535,
+      "pen_y": 0.08293795655742289,
+      "pen_yaw": 2.2165500708360444,
+      "policy_id": 2,
+      "round": 16
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "episode_index": 48,
+      "manifest_idx": 16,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "num_steps": 161,
+      "outcome": "success",
+      "pen_x": -0.04390191002562642,
+      "pen_y": 0.12481608926542101,
+      "pen_yaw": 1.3675638675643569,
+      "policy_id": 2,
+      "round": 17
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "episode_index": 49,
+      "manifest_idx": 16,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "num_steps": 314,
+      "outcome": "success",
+      "pen_x": -0.04390191002562642,
+      "pen_y": 0.12481608926542101,
+      "pen_yaw": 1.3675638675643569,
+      "policy_id": 1,
+      "round": 17
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "episode_index": 50,
+      "manifest_idx": 16,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "num_steps": 168,
+      "outcome": "success",
+      "pen_x": -0.04390191002562642,
+      "pen_y": 0.12481608926542101,
+      "pen_yaw": 1.3675638675643569,
+      "policy_id": 0,
+      "round": 17
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "episode_index": 51,
+      "manifest_idx": 17,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "num_steps": 247,
+      "outcome": "success",
+      "pen_x": 0.10539437809213997,
+      "pen_y": -0.2260350231092423,
+      "pen_yaw": 1.139068276022952,
+      "policy_id": 2,
+      "round": 18
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "episode_index": 52,
+      "manifest_idx": 17,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "num_steps": 256,
+      "outcome": "success",
+      "pen_x": 0.10539437809213997,
+      "pen_y": -0.2260350231092423,
+      "pen_yaw": 1.139068276022952,
+      "policy_id": 0,
+      "round": 18
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "episode_index": 53,
+      "manifest_idx": 17,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "num_steps": 202,
+      "outcome": "success",
+      "pen_x": 0.10539437809213997,
+      "pen_y": -0.2260350231092423,
+      "pen_yaw": 1.139068276022952,
+      "policy_id": 1,
+      "round": 18
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "episode_index": 54,
+      "manifest_idx": 18,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "num_steps": 600,
+      "outcome": "failure",
+      "pen_x": 0.08550707246735692,
+      "pen_y": 0.2256279027298093,
+      "pen_yaw": 2.3429776280684145,
+      "policy_id": 2,
+      "round": 19
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "episode_index": 55,
+      "manifest_idx": 18,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "num_steps": 600,
+      "outcome": "timeout",
+      "pen_x": 0.08550707246735692,
+      "pen_y": 0.2256279027298093,
+      "pen_yaw": 2.3429776280684145,
+      "policy_id": 1,
+      "round": 19
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "episode_index": 56,
+      "manifest_idx": 18,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "num_steps": 241,
+      "outcome": "success",
+      "pen_x": 0.08550707246735692,
+      "pen_y": 0.2256279027298093,
+      "pen_yaw": 2.3429776280684145,
+      "policy_id": 0,
+      "round": 19
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "episode_index": 57,
+      "manifest_idx": 19,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "num_steps": 180,
+      "outcome": "failure",
+      "pen_x": -0.008378780901432042,
+      "pen_y": -0.1913105440992862,
+      "pen_yaw": -0.44340455378516364,
+      "policy_id": 0,
+      "round": 20
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "episode_index": 58,
+      "manifest_idx": 19,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "num_steps": 263,
+      "outcome": "failure",
+      "pen_x": -0.008378780901432042,
+      "pen_y": -0.1913105440992862,
+      "pen_yaw": -0.44340455378516364,
+      "policy_id": 1,
+      "round": 20
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "episode_index": 59,
+      "manifest_idx": 19,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "num_steps": 133,
+      "outcome": "success",
+      "pen_x": -0.008378780901432042,
+      "pen_y": -0.1913105440992862,
+      "pen_yaw": -0.44340455378516364,
+      "policy_id": 2,
+      "round": 20
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "episode_index": 60,
+      "manifest_idx": 20,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "num_steps": 140,
+      "outcome": "success",
+      "pen_x": 0.030032745143398654,
+      "pen_y": 0.1812099511384964,
+      "pen_yaw": -0.70060474560553,
+      "policy_id": 1,
+      "round": 21
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "episode_index": 61,
+      "manifest_idx": 20,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "num_steps": 176,
+      "outcome": "success",
+      "pen_x": 0.030032745143398654,
+      "pen_y": 0.1812099511384964,
+      "pen_yaw": -0.70060474560553,
+      "policy_id": 0,
+      "round": 21
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "episode_index": 62,
+      "manifest_idx": 20,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "num_steps": 124,
+      "outcome": "success",
+      "pen_x": 0.030032745143398654,
+      "pen_y": 0.1812099511384964,
+      "pen_yaw": -0.70060474560553,
+      "policy_id": 2,
+      "round": 21
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "episode_index": 63,
+      "manifest_idx": 21,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "num_steps": 600,
+      "outcome": "failure",
+      "pen_x": -0.09955064530856908,
+      "pen_y": 0.16922891081012784,
+      "pen_yaw": -2.8537328177693317,
+      "policy_id": 0,
+      "round": 22
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "episode_index": 64,
+      "manifest_idx": 21,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "num_steps": 451,
+      "outcome": "failure",
+      "pen_x": -0.09955064530856908,
+      "pen_y": 0.16922891081012784,
+      "pen_yaw": -2.8537328177693317,
+      "policy_id": 1,
+      "round": 22
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "episode_index": 65,
+      "manifest_idx": 21,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "num_steps": 392,
+      "outcome": "success",
+      "pen_x": -0.09955064530856908,
+      "pen_y": 0.16922891081012784,
+      "pen_yaw": -2.8537328177693317,
+      "policy_id": 2,
+      "round": 22
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "episode_index": 66,
+      "manifest_idx": 22,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "num_steps": 121,
+      "outcome": "success",
+      "pen_x": -0.016030533161014313,
+      "pen_y": -0.12350024976879358,
+      "pen_yaw": 1.7340664108492483,
+      "policy_id": 2,
+      "round": 23
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "episode_index": 67,
+      "manifest_idx": 22,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "num_steps": 414,
+      "outcome": "success",
+      "pen_x": -0.016030533161014313,
+      "pen_y": -0.12350024976879358,
+      "pen_yaw": 1.7340664108492483,
+      "policy_id": 1,
+      "round": 23
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "episode_index": 68,
+      "manifest_idx": 22,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "num_steps": 143,
+      "outcome": "success",
+      "pen_x": -0.016030533161014313,
+      "pen_y": -0.12350024976879358,
+      "pen_yaw": 1.7340664108492483,
+      "policy_id": 0,
+      "round": 23
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "episode_index": 69,
+      "manifest_idx": 23,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "num_steps": 281,
+      "outcome": "success",
+      "pen_x": 0.10825276883877813,
+      "pen_y": 0.008943031667545426,
+      "pen_yaw": 2.812545629060458,
+      "policy_id": 0,
+      "round": 24
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "episode_index": 70,
+      "manifest_idx": 23,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "num_steps": 153,
+      "outcome": "success",
+      "pen_x": 0.10825276883877813,
+      "pen_y": 0.008943031667545426,
+      "pen_yaw": 2.812545629060458,
+      "policy_id": 2,
+      "round": 24
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "episode_index": 71,
+      "manifest_idx": 23,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "num_steps": 164,
+      "outcome": "success",
+      "pen_x": 0.10825276883877813,
+      "pen_y": 0.008943031667545426,
+      "pen_yaw": 2.812545629060458,
+      "policy_id": 1,
+      "round": 24
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "episode_index": 72,
+      "manifest_idx": 24,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "num_steps": 529,
+      "outcome": "success",
+      "pen_x": -0.11111893257685006,
+      "pen_y": -0.17320221621505916,
+      "pen_yaw": 0.44138857660019326,
+      "policy_id": 1,
+      "round": 25
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "episode_index": 73,
+      "manifest_idx": 24,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "num_steps": 600,
+      "outcome": "timeout",
+      "pen_x": -0.11111893257685006,
+      "pen_y": -0.17320221621505916,
+      "pen_yaw": 0.44138857660019326,
+      "policy_id": 0,
+      "round": 25
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "episode_index": 74,
+      "manifest_idx": 24,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "num_steps": 102,
+      "outcome": "success",
+      "pen_x": -0.11111893257685006,
+      "pen_y": -0.17320221621505916,
+      "pen_yaw": 0.44138857660019326,
+      "policy_id": 2,
+      "round": 25
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "episode_index": 75,
+      "manifest_idx": 25,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "num_steps": 173,
+      "outcome": "failure",
+      "pen_x": -0.04277600195072591,
+      "pen_y": -0.11152933753542602,
+      "pen_yaw": 2.63300270553131,
+      "policy_id": 1,
+      "round": 26
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "episode_index": 76,
+      "manifest_idx": 25,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "num_steps": 478,
+      "outcome": "timeout",
+      "pen_x": -0.04277600195072591,
+      "pen_y": -0.11152933753542602,
+      "pen_yaw": 2.63300270553131,
+      "policy_id": 2,
+      "round": 26
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "episode_index": 77,
+      "manifest_idx": 25,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "num_steps": 598,
+      "outcome": "timeout",
+      "pen_x": -0.04277600195072591,
+      "pen_y": -0.11152933753542602,
+      "pen_yaw": 2.63300270553131,
+      "policy_id": 0,
+      "round": 26
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "episode_index": 78,
+      "manifest_idx": 26,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "num_steps": 225,
+      "outcome": "success",
+      "pen_x": 0.04164240793697535,
+      "pen_y": 0.1634698492962867,
+      "pen_yaw": 0.20047406282368652,
+      "policy_id": 0,
+      "round": 27
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "episode_index": 79,
+      "manifest_idx": 26,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "num_steps": 375,
+      "outcome": "failure",
+      "pen_x": 0.04164240793697535,
+      "pen_y": 0.1634698492962867,
+      "pen_yaw": 0.20047406282368652,
+      "policy_id": 1,
+      "round": 27
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "episode_index": 80,
+      "manifest_idx": 26,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "num_steps": 600,
+      "outcome": "timeout",
+      "pen_x": 0.04164240793697535,
+      "pen_y": 0.1634698492962867,
+      "pen_yaw": 0.20047406282368652,
+      "policy_id": 2,
+      "round": 27
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "episode_index": 81,
+      "manifest_idx": 27,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "num_steps": 389,
+      "outcome": "failure",
+      "pen_x": -0.027300358753651374,
+      "pen_y": 0.21986905922591685,
+      "pen_yaw": -0.8613911692683143,
+      "policy_id": 0,
+      "round": 28
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "episode_index": 82,
+      "manifest_idx": 27,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "num_steps": 134,
+      "outcome": "success",
+      "pen_x": -0.027300358753651374,
+      "pen_y": 0.21986905922591685,
+      "pen_yaw": -0.8613911692683143,
+      "policy_id": 2,
+      "round": 28
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "episode_index": 83,
+      "manifest_idx": 27,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "num_steps": 136,
+      "outcome": "success",
+      "pen_x": -0.027300358753651374,
+      "pen_y": 0.21986905922591685,
+      "pen_yaw": -0.8613911692683143,
+      "policy_id": 1,
+      "round": 28
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "episode_index": 84,
+      "manifest_idx": 28,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "num_steps": 127,
+      "outcome": "success",
+      "pen_x": 0.018652525283396254,
+      "pen_y": 0.05868509831875565,
+      "pen_yaw": 0.92755946308906,
+      "policy_id": 0,
+      "round": 29
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "episode_index": 85,
+      "manifest_idx": 28,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "num_steps": 128,
+      "outcome": "success",
+      "pen_x": 0.018652525283396254,
+      "pen_y": 0.05868509831875565,
+      "pen_yaw": 0.92755946308906,
+      "policy_id": 2,
+      "round": 29
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "episode_index": 86,
+      "manifest_idx": 28,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "num_steps": 142,
+      "outcome": "success",
+      "pen_x": 0.018652525283396254,
+      "pen_y": 0.05868509831875565,
+      "pen_yaw": 0.92755946308906,
+      "policy_id": 1,
+      "round": 29
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "episode_index": 87,
+      "manifest_idx": 29,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "num_steps": 409,
+      "outcome": "success",
+      "pen_x": -0.08412930778414011,
+      "pen_y": -0.04944275048822164,
+      "pen_yaw": 1.475123058510678,
+      "policy_id": 0,
+      "round": 30
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "episode_index": 88,
+      "manifest_idx": 29,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "num_steps": 139,
+      "outcome": "success",
+      "pen_x": -0.08412930778414011,
+      "pen_y": -0.04944275048822164,
+      "pen_yaw": 1.475123058510678,
+      "policy_id": 1,
+      "round": 30
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "episode_index": 89,
+      "manifest_idx": 29,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "num_steps": 117,
+      "outcome": "failure",
+      "pen_x": -0.08412930778414011,
+      "pen_y": -0.04944275048822164,
+      "pen_yaw": 1.475123058510678,
+      "policy_id": 2,
+      "round": 30
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "episode_index": 90,
+      "manifest_idx": 30,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "num_steps": 304,
+      "outcome": "success",
+      "pen_x": -0.03927157363668084,
+      "pen_y": -0.2211898593004793,
+      "pen_yaw": -2.013199852551796,
+      "policy_id": 2,
+      "round": 31
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "episode_index": 91,
+      "manifest_idx": 30,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "num_steps": 527,
+      "outcome": "timeout",
+      "pen_x": -0.03927157363668084,
+      "pen_y": -0.2211898593004793,
+      "pen_yaw": -2.013199852551796,
+      "policy_id": 0,
+      "round": 31
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "episode_index": 92,
+      "manifest_idx": 30,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "num_steps": 154,
+      "outcome": "success",
+      "pen_x": -0.03927157363668084,
+      "pen_y": -0.2211898593004793,
+      "pen_yaw": -2.013199852551796,
+      "policy_id": 1,
+      "round": 31
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "episode_index": 93,
+      "manifest_idx": 31,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "num_steps": 183,
+      "outcome": "success",
+      "pen_x": -0.08325527689792216,
+      "pen_y": 0.17188621235936882,
+      "pen_yaw": 2.3781574373115353,
+      "policy_id": 2,
+      "round": 32
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "episode_index": 94,
+      "manifest_idx": 31,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "num_steps": 163,
+      "outcome": "success",
+      "pen_x": -0.08325527689792216,
+      "pen_y": 0.17188621235936882,
+      "pen_yaw": 2.3781574373115353,
+      "policy_id": 1,
+      "round": 32
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "episode_index": 95,
+      "manifest_idx": 31,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "num_steps": 327,
+      "outcome": "success",
+      "pen_x": -0.08325527689792216,
+      "pen_y": 0.17188621235936882,
+      "pen_yaw": 2.3781574373115353,
+      "policy_id": 0,
+      "round": 32
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "episode_index": 96,
+      "manifest_idx": 32,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "num_steps": 481,
+      "outcome": "success",
+      "pen_x": -0.11871981584839524,
+      "pen_y": -0.14066505954936148,
+      "pen_yaw": -1.7009693580755803,
+      "policy_id": 0,
+      "round": 33
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "episode_index": 97,
+      "manifest_idx": 32,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "num_steps": 277,
+      "outcome": "success",
+      "pen_x": -0.11871981584839524,
+      "pen_y": -0.14066505954936148,
+      "pen_yaw": -1.7009693580755803,
+      "policy_id": 2,
+      "round": 33
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "episode_index": 98,
+      "manifest_idx": 32,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "num_steps": 133,
+      "outcome": "success",
+      "pen_x": -0.11871981584839524,
+      "pen_y": -0.14066505954936148,
+      "pen_yaw": -1.7009693580755803,
+      "policy_id": 1,
+      "round": 33
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "episode_index": 99,
+      "manifest_idx": 33,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "num_steps": 110,
+      "outcome": "success",
+      "pen_x": 0.08042012091167272,
+      "pen_y": -0.01029890409260989,
+      "pen_yaw": 0.0867804467539357,
+      "policy_id": 2,
+      "round": 34
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "episode_index": 100,
+      "manifest_idx": 33,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "num_steps": 167,
+      "outcome": "success",
+      "pen_x": 0.08042012091167272,
+      "pen_y": -0.01029890409260989,
+      "pen_yaw": 0.0867804467539357,
+      "policy_id": 1,
+      "round": 34
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "episode_index": 101,
+      "manifest_idx": 33,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "num_steps": 196,
+      "outcome": "success",
+      "pen_x": 0.08042012091167272,
+      "pen_y": -0.01029890409260989,
+      "pen_yaw": 0.0867804467539357,
+      "policy_id": 0,
+      "round": 34
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "episode_index": 102,
+      "manifest_idx": 34,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "num_steps": 124,
+      "outcome": "success",
+      "pen_x": -0.02286540975980461,
+      "pen_y": 0.1120079915776849,
+      "pen_yaw": 0.6467629644106561,
+      "policy_id": 1,
+      "round": 35
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "episode_index": 103,
+      "manifest_idx": 34,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "num_steps": 152,
+      "outcome": "success",
+      "pen_x": -0.02286540975980461,
+      "pen_y": 0.1120079915776849,
+      "pen_yaw": 0.6467629644106561,
+      "policy_id": 0,
+      "round": 35
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "episode_index": 104,
+      "manifest_idx": 34,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "num_steps": 122,
+      "outcome": "success",
+      "pen_x": -0.02286540975980461,
+      "pen_y": 0.1120079915776849,
+      "pen_yaw": 0.6467629644106561,
+      "policy_id": 2,
+      "round": 35
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "episode_index": 105,
+      "manifest_idx": 35,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "num_steps": 600,
+      "outcome": "failure",
+      "pen_x": 0.021762823497876532,
+      "pen_y": -0.16306245725601912,
+      "pen_yaw": 2.974943135145577,
+      "policy_id": 0,
+      "round": 36
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "episode_index": 106,
+      "manifest_idx": 35,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "num_steps": 325,
+      "outcome": "failure",
+      "pen_x": 0.021762823497876532,
+      "pen_y": -0.16306245725601912,
+      "pen_yaw": 2.974943135145577,
+      "policy_id": 1,
+      "round": 36
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "episode_index": 107,
+      "manifest_idx": 35,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "num_steps": 269,
+      "outcome": "failure",
+      "pen_x": 0.021762823497876532,
+      "pen_y": -0.16306245725601912,
+      "pen_yaw": 2.974943135145577,
+      "policy_id": 2,
+      "round": 36
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "episode_index": 108,
+      "manifest_idx": 36,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "num_steps": 158,
+      "outcome": "success",
+      "pen_x": -0.07066466939821839,
+      "pen_y": 0.02085649785362184,
+      "pen_yaw": 0.3208256180290405,
+      "policy_id": 0,
+      "round": 37
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "episode_index": 109,
+      "manifest_idx": 36,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "num_steps": 142,
+      "outcome": "success",
+      "pen_x": -0.07066466939821839,
+      "pen_y": 0.02085649785362184,
+      "pen_yaw": 0.3208256180290405,
+      "policy_id": 1,
+      "round": 37
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "episode_index": 110,
+      "manifest_idx": 36,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "num_steps": 201,
+      "outcome": "success",
+      "pen_x": -0.07066466939821839,
+      "pen_y": 0.02085649785362184,
+      "pen_yaw": 0.3208256180290405,
+      "policy_id": 2,
+      "round": 37
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "episode_index": 111,
+      "manifest_idx": 37,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "num_steps": 141,
+      "outcome": "success",
+      "pen_x": 0.03714567431807517,
+      "pen_y": 0.053822830522432946,
+      "pen_yaw": -1.2128381906188574,
+      "policy_id": 0,
+      "round": 38
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "episode_index": 112,
+      "manifest_idx": 37,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "num_steps": 245,
+      "outcome": "success",
+      "pen_x": 0.03714567431807517,
+      "pen_y": 0.053822830522432946,
+      "pen_yaw": -1.2128381906188574,
+      "policy_id": 1,
+      "round": 38
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "episode_index": 113,
+      "manifest_idx": 37,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "num_steps": 135,
+      "outcome": "success",
+      "pen_x": 0.03714567431807517,
+      "pen_y": 0.053822830522432946,
+      "pen_yaw": -1.2128381906188574,
+      "policy_id": 2,
+      "round": 38
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "episode_index": 114,
+      "manifest_idx": 38,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "num_steps": 118,
+      "outcome": "success",
+      "pen_x": 0.025205467186868197,
+      "pen_y": -0.05518785936534404,
+      "pen_yaw": -1.5819720202845315,
+      "policy_id": 2,
+      "round": 39
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "episode_index": 115,
+      "manifest_idx": 38,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "num_steps": 116,
+      "outcome": "success",
+      "pen_x": 0.025205467186868197,
+      "pen_y": -0.05518785936534404,
+      "pen_yaw": -1.5819720202845315,
+      "policy_id": 1,
+      "round": 39
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "episode_index": 116,
+      "manifest_idx": 38,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "num_steps": 156,
+      "outcome": "success",
+      "pen_x": 0.025205467186868197,
+      "pen_y": -0.05518785936534404,
+      "pen_yaw": -1.5819720202845315,
+      "policy_id": 0,
+      "round": 39
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "episode_index": 117,
+      "manifest_idx": 39,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "num_steps": 331,
+      "outcome": "failure",
+      "pen_x": -0.12222455121204256,
+      "pen_y": -0.020372175552695992,
+      "pen_yaw": 3.0446253874510836,
+      "policy_id": 1,
+      "round": 40
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "episode_index": 118,
+      "manifest_idx": 39,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "num_steps": 468,
+      "outcome": "failure",
+      "pen_x": -0.12222455121204256,
+      "pen_y": -0.020372175552695992,
+      "pen_yaw": 3.0446253874510836,
+      "policy_id": 2,
+      "round": 40
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "episode_index": 119,
+      "manifest_idx": 39,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "num_steps": 214,
+      "outcome": "success",
+      "pen_x": -0.12222455121204256,
+      "pen_y": -0.020372175552695992,
+      "pen_yaw": 3.0446253874510836,
+      "policy_id": 0,
+      "round": 40
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "episode_index": 120,
+      "manifest_idx": 40,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "num_steps": 305,
+      "outcome": "failure",
+      "pen_x": 0.07275649638287723,
+      "pen_y": -0.07855569642372429,
+      "pen_yaw": -2.141365169208821,
+      "policy_id": 2,
+      "round": 41
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "episode_index": 121,
+      "manifest_idx": 40,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "num_steps": 137,
+      "outcome": "success",
+      "pen_x": 0.07275649638287723,
+      "pen_y": -0.07855569642372429,
+      "pen_yaw": -2.141365169208821,
+      "policy_id": 0,
+      "round": 41
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "episode_index": 122,
+      "manifest_idx": 40,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "num_steps": 108,
+      "outcome": "failure",
+      "pen_x": 0.07275649638287723,
+      "pen_y": -0.07855569642372429,
+      "pen_yaw": -2.141365169208821,
+      "policy_id": 1,
+      "round": 41
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "episode_index": 123,
+      "manifest_idx": 41,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "num_steps": 161,
+      "outcome": "success",
+      "pen_x": -0.05086941076256335,
+      "pen_y": -0.029096768490225078,
+      "pen_yaw": -1.5693756226797246,
+      "policy_id": 0,
+      "round": 42
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "episode_index": 124,
+      "manifest_idx": 41,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "num_steps": 122,
+      "outcome": "success",
+      "pen_x": -0.05086941076256335,
+      "pen_y": -0.029096768490225078,
+      "pen_yaw": -1.5693756226797246,
+      "policy_id": 2,
+      "round": 42
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "episode_index": 125,
+      "manifest_idx": 41,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "num_steps": 120,
+      "outcome": "success",
+      "pen_x": -0.05086941076256335,
+      "pen_y": -0.029096768490225078,
+      "pen_yaw": -1.5693756226797246,
+      "policy_id": 1,
+      "round": 42
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "episode_index": 126,
+      "manifest_idx": 42,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "num_steps": 147,
+      "outcome": "success",
+      "pen_x": -0.015201969744637611,
+      "pen_y": 0.029575422532483936,
+      "pen_yaw": -1.937406903654106,
+      "policy_id": 2,
+      "round": 43
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "episode_index": 127,
+      "manifest_idx": 42,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "num_steps": 124,
+      "outcome": "success",
+      "pen_x": -0.015201969744637611,
+      "pen_y": 0.029575422532483936,
+      "pen_yaw": -1.937406903654106,
+      "policy_id": 0,
+      "round": 43
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "episode_index": 128,
+      "manifest_idx": 42,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "num_steps": 114,
+      "outcome": "success",
+      "pen_x": -0.015201969744637611,
+      "pen_y": 0.029575422532483936,
+      "pen_yaw": -1.937406903654106,
+      "policy_id": 1,
+      "round": 43
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "episode_index": 129,
+      "manifest_idx": 43,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "num_steps": 600,
+      "outcome": "timeout",
+      "pen_x": 0.04924359683878721,
+      "pen_y": 0.2101827826760709,
+      "pen_yaw": -2.273083012722849,
+      "policy_id": 2,
+      "round": 44
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "episode_index": 130,
+      "manifest_idx": 43,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "num_steps": 600,
+      "outcome": "timeout",
+      "pen_x": 0.04924359683878721,
+      "pen_y": 0.2101827826760709,
+      "pen_yaw": -2.273083012722849,
+      "policy_id": 1,
+      "round": 44
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "episode_index": 131,
+      "manifest_idx": 43,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "num_steps": 600,
+      "outcome": "timeout",
+      "pen_x": 0.04924359683878721,
+      "pen_y": 0.2101827826760709,
+      "pen_yaw": -2.273083012722849,
+      "policy_id": 0,
+      "round": 44
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "episode_index": 132,
+      "manifest_idx": 44,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "num_steps": 600,
+      "outcome": "timeout",
+      "pen_x": 0.01360715978778898,
+      "pen_y": -0.20977539063580333,
+      "pen_yaw": -1.1171038191723035,
+      "policy_id": 2,
+      "round": 45
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "episode_index": 133,
+      "manifest_idx": 44,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "num_steps": 431,
+      "outcome": "timeout",
+      "pen_x": 0.01360715978778898,
+      "pen_y": -0.20977539063580333,
+      "pen_yaw": -1.1171038191723035,
+      "policy_id": 0,
+      "round": 45
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "episode_index": 134,
+      "manifest_idx": 44,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "num_steps": 600,
+      "outcome": "timeout",
+      "pen_x": 0.01360715978778898,
+      "pen_y": -0.20977539063580333,
+      "pen_yaw": -1.1171038191723035,
+      "policy_id": 1,
+      "round": 45
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "episode_index": 135,
+      "manifest_idx": 45,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "num_steps": 114,
+      "outcome": "success",
+      "pen_x": -0.07509943245910108,
+      "pen_y": 0.1393490556936711,
+      "pen_yaw": -1.28423418708583,
+      "policy_id": 2,
+      "round": 46
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "episode_index": 136,
+      "manifest_idx": 45,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "num_steps": 111,
+      "outcome": "success",
+      "pen_x": -0.07509943245910108,
+      "pen_y": 0.1393490556936711,
+      "pen_yaw": -1.28423418708583,
+      "policy_id": 0,
+      "round": 46
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "episode_index": 137,
+      "manifest_idx": 45,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "num_steps": 131,
+      "outcome": "success",
+      "pen_x": -0.07509943245910108,
+      "pen_y": 0.1393490556936711,
+      "pen_yaw": -1.28423418708583,
+      "policy_id": 1,
+      "round": 46
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "episode_index": 138,
+      "manifest_idx": 46,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "num_steps": 172,
+      "outcome": "success",
+      "pen_x": 0.11634587580524386,
+      "pen_y": 0.07719982399865985,
+      "pen_yaw": -0.9359150952489634,
+      "policy_id": 2,
+      "round": 47
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "episode_index": 139,
+      "manifest_idx": 46,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "num_steps": 262,
+      "outcome": "failure",
+      "pen_x": 0.11634587580524386,
+      "pen_y": 0.07719982399865985,
+      "pen_yaw": -0.9359150952489634,
+      "policy_id": 0,
+      "round": 47
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "episode_index": 140,
+      "manifest_idx": 46,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "num_steps": 240,
+      "outcome": "success",
+      "pen_x": 0.11634587580524386,
+      "pen_y": 0.07719982399865985,
+      "pen_yaw": -0.9359150952489634,
+      "policy_id": 1,
+      "round": 47
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "episode_index": 141,
+      "manifest_idx": 47,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "num_steps": 200,
+      "outcome": "failure",
+      "pen_x": 0.06931403011083603,
+      "pen_y": -0.19706262929476798,
+      "pen_yaw": 2.711924842052225,
+      "policy_id": 1,
+      "round": 48
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "episode_index": 142,
+      "manifest_idx": 47,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "num_steps": 332,
+      "outcome": "failure",
+      "pen_x": 0.06931403011083603,
+      "pen_y": -0.19706262929476798,
+      "pen_yaw": 2.711924842052225,
+      "policy_id": 0,
+      "round": 48
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "episode_index": 143,
+      "manifest_idx": 47,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "num_steps": 251,
+      "outcome": "failure",
+      "pen_x": 0.06931403011083603,
+      "pen_y": -0.19706262929476798,
+      "pen_yaw": 2.711924842052225,
+      "policy_id": 2,
+      "round": 48
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "episode_index": 144,
+      "manifest_idx": 48,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "num_steps": 514,
+      "outcome": "failure",
+      "pen_x": 0.12084290795773267,
+      "pen_y": 0.1974783057130873,
+      "pen_yaw": 0.7701226068806335,
+      "policy_id": 1,
+      "round": 49
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "episode_index": 145,
+      "manifest_idx": 48,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "num_steps": 600,
+      "outcome": "failure",
+      "pen_x": 0.12084290795773267,
+      "pen_y": 0.1974783057130873,
+      "pen_yaw": 0.7701226068806335,
+      "policy_id": 0,
+      "round": 49
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "episode_index": 146,
+      "manifest_idx": 48,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "num_steps": 524,
+      "outcome": "timeout",
+      "pen_x": 0.12084290795773267,
+      "pen_y": 0.1974783057130873,
+      "pen_yaw": 0.7701226068806335,
+      "policy_id": 2,
+      "round": 49
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "episode_index": 147,
+      "manifest_idx": 49,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "num_steps": 339,
+      "outcome": "failure",
+      "pen_x": -0.06330362545698881,
+      "pen_y": -0.15337966716215012,
+      "pen_yaw": 0.16418058671187064,
+      "policy_id": 2,
+      "round": 50
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "episode_index": 148,
+      "manifest_idx": 49,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "num_steps": 600,
+      "outcome": "success",
+      "pen_x": -0.06330362545698881,
+      "pen_y": -0.15337966716215012,
+      "pen_yaw": 0.16418058671187064,
+      "policy_id": 1,
+      "round": 50
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "episode_index": 149,
+      "manifest_idx": 49,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "num_steps": 150,
+      "outcome": "success",
+      "pen_x": -0.06330362545698881,
+      "pen_y": -0.15337966716215012,
+      "pen_yaw": 0.16418058671187064,
+      "policy_id": 0,
+      "round": 50
+    }
+  ],
+  "round_plans": [
+    {
+      "manifest_idx": 0,
+      "pen_x": 0.05758688867278397,
+      "pen_y": -0.13491319236382843,
+      "pen_yaw": 1.402372797816021,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+          "name": "baseline_nocf_r5_c100k",
+          "policy_id": 0,
+          "slot_idx": 0,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+          "name": "ours_freecf_r5_c100k_dp",
+          "policy_id": 1,
+          "slot_idx": 1,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+          "name": "ours_freecf_r5_c100k_iql_s3fixfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 2,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 1
+    },
+    {
+      "manifest_idx": 1,
+      "pen_x": 0.1134836698845029,
+      "pen_y": -0.14404895206466317,
+      "pen_yaw": -3.015704860463622,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+          "name": "ours_freecf_r5_c100k_dp",
+          "policy_id": 1,
+          "slot_idx": 0,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+          "name": "baseline_nocf_r5_c100k",
+          "policy_id": 0,
+          "slot_idx": 1,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+          "name": "ours_freecf_r5_c100k_iql_s3fixfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 2,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 2
+    },
+    {
+      "manifest_idx": 2,
+      "pen_x": 0.07785501457750799,
+      "pen_y": 0.14364183168523012,
+      "pen_yaw": -0.28841094046761073,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+          "name": "ours_freecf_r5_c100k_dp",
+          "policy_id": 1,
+          "slot_idx": 0,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+          "name": "baseline_nocf_r5_c100k",
+          "policy_id": 0,
+          "slot_idx": 1,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+          "name": "ours_freecf_r5_c100k_iql_s3fixfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 2,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 3
+    },
+    {
+      "manifest_idx": 3,
+      "pen_x": -0.05199138254672289,
+      "pen_y": 0.19262638359591364,
+      "pen_yaw": -2.4311850168202125,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+          "name": "baseline_nocf_r5_c100k",
+          "policy_id": 0,
+          "slot_idx": 0,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+          "name": "ours_freecf_r5_c100k_dp",
+          "policy_id": 1,
+          "slot_idx": 1,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+          "name": "ours_freecf_r5_c100k_iql_s3fixfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 2,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 4
+    },
+    {
+      "manifest_idx": 4,
+      "pen_x": 0.006065792569890621,
+      "pen_y": 0.13449691556654872,
+      "pen_yaw": 1.7730458513679768,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+          "name": "ours_freecf_r5_c100k_dp",
+          "policy_id": 1,
+          "slot_idx": 0,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+          "name": "ours_freecf_r5_c100k_iql_s3fixfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 1,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+          "name": "baseline_nocf_r5_c100k",
+          "policy_id": 0,
+          "slot_idx": 2,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 5
+    },
+    {
+      "manifest_idx": 5,
+      "pen_x": -0.004936072396114474,
+      "pen_y": -0.08342157117761673,
+      "pen_yaw": 1.0632141478911867,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+          "name": "baseline_nocf_r5_c100k",
+          "policy_id": 0,
+          "slot_idx": 0,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+          "name": "ours_freecf_r5_c100k_dp",
+          "policy_id": 1,
+          "slot_idx": 1,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+          "name": "ours_freecf_r5_c100k_iql_s3fixfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 2,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 6
+    },
+    {
+      "manifest_idx": 6,
+      "pen_x": -0.11163693779334426,
+      "pen_y": 0.0952303947173059,
+      "pen_yaw": -0.6307306988881596,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+          "name": "ours_freecf_r5_c100k_iql_s3fixfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 0,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+          "name": "baseline_nocf_r5_c100k",
+          "policy_id": 0,
+          "slot_idx": 1,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+          "name": "ours_freecf_r5_c100k_dp",
+          "policy_id": 1,
+          "slot_idx": 2,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 7
+    },
+    {
+      "manifest_idx": 7,
+      "pen_x": -0.07597727851942182,
+      "pen_y": -0.09570921311862768,
+      "pen_yaw": -2.5690402815138964,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+          "name": "baseline_nocf_r5_c100k",
+          "policy_id": 0,
+          "slot_idx": 0,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+          "name": "ours_freecf_r5_c100k_dp",
+          "policy_id": 1,
+          "slot_idx": 1,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+          "name": "ours_freecf_r5_c100k_iql_s3fixfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 2,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 8
+    },
+    {
+      "manifest_idx": 8,
+      "pen_x": 0.010500797864049671,
+      "pen_y": 0.026594412402436124,
+      "pen_yaw": -2.785404736064752,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+          "name": "ours_freecf_r5_c100k_iql_s3fixfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 0,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+          "name": "ours_freecf_r5_c100k_dp",
+          "policy_id": 1,
+          "slot_idx": 1,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+          "name": "baseline_nocf_r5_c100k",
+          "policy_id": 0,
+          "slot_idx": 2,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 9
+    },
+    {
+      "manifest_idx": 9,
+      "pen_x": 0.05408239554241301,
+      "pen_y": -0.025238268316537138,
+      "pen_yaw": -0.009406926053371567,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+          "name": "ours_freecf_r5_c100k_dp",
+          "policy_id": 1,
+          "slot_idx": 0,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+          "name": "ours_freecf_r5_c100k_iql_s3fixfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 1,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+          "name": "baseline_nocf_r5_c100k",
+          "policy_id": 0,
+          "slot_idx": 2,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 10
+    },
+    {
+      "manifest_idx": 10,
+      "pen_x": 0.08994177922792732,
+      "pen_y": 0.10714887513220309,
+      "pen_yaw": -2.5087768575632543,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+          "name": "ours_freecf_r5_c100k_iql_s3fixfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 0,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+          "name": "baseline_nocf_r5_c100k",
+          "policy_id": 0,
+          "slot_idx": 1,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+          "name": "ours_freecf_r5_c100k_dp",
+          "policy_id": 1,
+          "slot_idx": 2,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 11
+    },
+    {
+      "manifest_idx": 11,
+      "pen_x": 0.04649289439618587,
+      "pen_y": -0.05732895423285664,
+      "pen_yaw": 2.0819979347252104,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+          "name": "ours_freecf_r5_c100k_iql_s3fixfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 0,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+          "name": "ours_freecf_r5_c100k_dp",
+          "policy_id": 1,
+          "slot_idx": 1,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+          "name": "baseline_nocf_r5_c100k",
+          "policy_id": 0,
+          "slot_idx": 2,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 12
+    },
+    {
+      "manifest_idx": 12,
+      "pen_x": -0.10404762116074562,
+      "pen_y": 0.04896393208689989,
+      "pen_yaw": 1.8903294918109381,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+          "name": "ours_freecf_r5_c100k_iql_s3fixfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 0,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+          "name": "ours_freecf_r5_c100k_dp",
+          "policy_id": 1,
+          "slot_idx": 1,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+          "name": "baseline_nocf_r5_c100k",
+          "policy_id": 0,
+          "slot_idx": 2,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 13
+    },
+    {
+      "manifest_idx": 13,
+      "pen_x": 0.10188970754481852,
+      "pen_y": -0.10578444666825235,
+      "pen_yaw": -0.5685018620530387,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+          "name": "ours_freecf_r5_c100k_iql_s3fixfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 0,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+          "name": "baseline_nocf_r5_c100k",
+          "policy_id": 0,
+          "slot_idx": 1,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+          "name": "ours_freecf_r5_c100k_dp",
+          "policy_id": 1,
+          "slot_idx": 2,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 14
+    },
+    {
+      "manifest_idx": 14,
+      "pen_x": -0.08757170923985541,
+      "pen_y": -0.16790740305483343,
+      "pen_yaw": -0.13147227223356994,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+          "name": "ours_freecf_r5_c100k_dp",
+          "policy_id": 1,
+          "slot_idx": 0,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+          "name": "baseline_nocf_r5_c100k",
+          "policy_id": 0,
+          "slot_idx": 1,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+          "name": "ours_freecf_r5_c100k_iql_s3fixfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 2,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 15
+    },
+    {
+      "manifest_idx": 15,
+      "pen_x": -0.05648817246593535,
+      "pen_y": 0.08293795655742289,
+      "pen_yaw": 2.2165500708360444,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+          "name": "baseline_nocf_r5_c100k",
+          "policy_id": 0,
+          "slot_idx": 0,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+          "name": "ours_freecf_r5_c100k_dp",
+          "policy_id": 1,
+          "slot_idx": 1,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+          "name": "ours_freecf_r5_c100k_iql_s3fixfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 2,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 16
+    },
+    {
+      "manifest_idx": 16,
+      "pen_x": -0.04390191002562642,
+      "pen_y": 0.12481608926542101,
+      "pen_yaw": 1.3675638675643569,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+          "name": "ours_freecf_r5_c100k_iql_s3fixfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 0,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+          "name": "ours_freecf_r5_c100k_dp",
+          "policy_id": 1,
+          "slot_idx": 1,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+          "name": "baseline_nocf_r5_c100k",
+          "policy_id": 0,
+          "slot_idx": 2,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 17
+    },
+    {
+      "manifest_idx": 17,
+      "pen_x": 0.10539437809213997,
+      "pen_y": -0.2260350231092423,
+      "pen_yaw": 1.139068276022952,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+          "name": "ours_freecf_r5_c100k_iql_s3fixfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 0,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+          "name": "baseline_nocf_r5_c100k",
+          "policy_id": 0,
+          "slot_idx": 1,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+          "name": "ours_freecf_r5_c100k_dp",
+          "policy_id": 1,
+          "slot_idx": 2,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 18
+    },
+    {
+      "manifest_idx": 18,
+      "pen_x": 0.08550707246735692,
+      "pen_y": 0.2256279027298093,
+      "pen_yaw": 2.3429776280684145,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+          "name": "ours_freecf_r5_c100k_iql_s3fixfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 0,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+          "name": "ours_freecf_r5_c100k_dp",
+          "policy_id": 1,
+          "slot_idx": 1,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+          "name": "baseline_nocf_r5_c100k",
+          "policy_id": 0,
+          "slot_idx": 2,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 19
+    },
+    {
+      "manifest_idx": 19,
+      "pen_x": -0.008378780901432042,
+      "pen_y": -0.1913105440992862,
+      "pen_yaw": -0.44340455378516364,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+          "name": "baseline_nocf_r5_c100k",
+          "policy_id": 0,
+          "slot_idx": 0,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+          "name": "ours_freecf_r5_c100k_dp",
+          "policy_id": 1,
+          "slot_idx": 1,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+          "name": "ours_freecf_r5_c100k_iql_s3fixfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 2,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 20
+    },
+    {
+      "manifest_idx": 20,
+      "pen_x": 0.030032745143398654,
+      "pen_y": 0.1812099511384964,
+      "pen_yaw": -0.70060474560553,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+          "name": "ours_freecf_r5_c100k_dp",
+          "policy_id": 1,
+          "slot_idx": 0,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+          "name": "baseline_nocf_r5_c100k",
+          "policy_id": 0,
+          "slot_idx": 1,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+          "name": "ours_freecf_r5_c100k_iql_s3fixfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 2,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 21
+    },
+    {
+      "manifest_idx": 21,
+      "pen_x": -0.09955064530856908,
+      "pen_y": 0.16922891081012784,
+      "pen_yaw": -2.8537328177693317,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+          "name": "baseline_nocf_r5_c100k",
+          "policy_id": 0,
+          "slot_idx": 0,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+          "name": "ours_freecf_r5_c100k_dp",
+          "policy_id": 1,
+          "slot_idx": 1,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+          "name": "ours_freecf_r5_c100k_iql_s3fixfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 2,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 22
+    },
+    {
+      "manifest_idx": 22,
+      "pen_x": -0.016030533161014313,
+      "pen_y": -0.12350024976879358,
+      "pen_yaw": 1.7340664108492483,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+          "name": "ours_freecf_r5_c100k_iql_s3fixfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 0,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+          "name": "ours_freecf_r5_c100k_dp",
+          "policy_id": 1,
+          "slot_idx": 1,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+          "name": "baseline_nocf_r5_c100k",
+          "policy_id": 0,
+          "slot_idx": 2,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 23
+    },
+    {
+      "manifest_idx": 23,
+      "pen_x": 0.10825276883877813,
+      "pen_y": 0.008943031667545426,
+      "pen_yaw": 2.812545629060458,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+          "name": "baseline_nocf_r5_c100k",
+          "policy_id": 0,
+          "slot_idx": 0,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+          "name": "ours_freecf_r5_c100k_iql_s3fixfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 1,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+          "name": "ours_freecf_r5_c100k_dp",
+          "policy_id": 1,
+          "slot_idx": 2,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 24
+    },
+    {
+      "manifest_idx": 24,
+      "pen_x": -0.11111893257685006,
+      "pen_y": -0.17320221621505916,
+      "pen_yaw": 0.44138857660019326,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+          "name": "ours_freecf_r5_c100k_dp",
+          "policy_id": 1,
+          "slot_idx": 0,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+          "name": "baseline_nocf_r5_c100k",
+          "policy_id": 0,
+          "slot_idx": 1,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+          "name": "ours_freecf_r5_c100k_iql_s3fixfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 2,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 25
+    },
+    {
+      "manifest_idx": 25,
+      "pen_x": -0.04277600195072591,
+      "pen_y": -0.11152933753542602,
+      "pen_yaw": 2.63300270553131,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+          "name": "ours_freecf_r5_c100k_dp",
+          "policy_id": 1,
+          "slot_idx": 0,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+          "name": "ours_freecf_r5_c100k_iql_s3fixfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 1,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+          "name": "baseline_nocf_r5_c100k",
+          "policy_id": 0,
+          "slot_idx": 2,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 26
+    },
+    {
+      "manifest_idx": 26,
+      "pen_x": 0.04164240793697535,
+      "pen_y": 0.1634698492962867,
+      "pen_yaw": 0.20047406282368652,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+          "name": "baseline_nocf_r5_c100k",
+          "policy_id": 0,
+          "slot_idx": 0,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+          "name": "ours_freecf_r5_c100k_dp",
+          "policy_id": 1,
+          "slot_idx": 1,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+          "name": "ours_freecf_r5_c100k_iql_s3fixfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 2,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 27
+    },
+    {
+      "manifest_idx": 27,
+      "pen_x": -0.027300358753651374,
+      "pen_y": 0.21986905922591685,
+      "pen_yaw": -0.8613911692683143,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+          "name": "baseline_nocf_r5_c100k",
+          "policy_id": 0,
+          "slot_idx": 0,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+          "name": "ours_freecf_r5_c100k_iql_s3fixfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 1,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+          "name": "ours_freecf_r5_c100k_dp",
+          "policy_id": 1,
+          "slot_idx": 2,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 28
+    },
+    {
+      "manifest_idx": 28,
+      "pen_x": 0.018652525283396254,
+      "pen_y": 0.05868509831875565,
+      "pen_yaw": 0.92755946308906,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+          "name": "baseline_nocf_r5_c100k",
+          "policy_id": 0,
+          "slot_idx": 0,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+          "name": "ours_freecf_r5_c100k_iql_s3fixfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 1,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+          "name": "ours_freecf_r5_c100k_dp",
+          "policy_id": 1,
+          "slot_idx": 2,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 29
+    },
+    {
+      "manifest_idx": 29,
+      "pen_x": -0.08412930778414011,
+      "pen_y": -0.04944275048822164,
+      "pen_yaw": 1.475123058510678,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+          "name": "baseline_nocf_r5_c100k",
+          "policy_id": 0,
+          "slot_idx": 0,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+          "name": "ours_freecf_r5_c100k_dp",
+          "policy_id": 1,
+          "slot_idx": 1,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+          "name": "ours_freecf_r5_c100k_iql_s3fixfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 2,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 30
+    },
+    {
+      "manifest_idx": 30,
+      "pen_x": -0.03927157363668084,
+      "pen_y": -0.2211898593004793,
+      "pen_yaw": -2.013199852551796,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+          "name": "ours_freecf_r5_c100k_iql_s3fixfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 0,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+          "name": "baseline_nocf_r5_c100k",
+          "policy_id": 0,
+          "slot_idx": 1,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+          "name": "ours_freecf_r5_c100k_dp",
+          "policy_id": 1,
+          "slot_idx": 2,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 31
+    },
+    {
+      "manifest_idx": 31,
+      "pen_x": -0.08325527689792216,
+      "pen_y": 0.17188621235936882,
+      "pen_yaw": 2.3781574373115353,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+          "name": "ours_freecf_r5_c100k_iql_s3fixfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 0,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+          "name": "ours_freecf_r5_c100k_dp",
+          "policy_id": 1,
+          "slot_idx": 1,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+          "name": "baseline_nocf_r5_c100k",
+          "policy_id": 0,
+          "slot_idx": 2,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 32
+    },
+    {
+      "manifest_idx": 32,
+      "pen_x": -0.11871981584839524,
+      "pen_y": -0.14066505954936148,
+      "pen_yaw": -1.7009693580755803,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+          "name": "baseline_nocf_r5_c100k",
+          "policy_id": 0,
+          "slot_idx": 0,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+          "name": "ours_freecf_r5_c100k_iql_s3fixfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 1,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+          "name": "ours_freecf_r5_c100k_dp",
+          "policy_id": 1,
+          "slot_idx": 2,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 33
+    },
+    {
+      "manifest_idx": 33,
+      "pen_x": 0.08042012091167272,
+      "pen_y": -0.01029890409260989,
+      "pen_yaw": 0.0867804467539357,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+          "name": "ours_freecf_r5_c100k_iql_s3fixfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 0,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+          "name": "ours_freecf_r5_c100k_dp",
+          "policy_id": 1,
+          "slot_idx": 1,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+          "name": "baseline_nocf_r5_c100k",
+          "policy_id": 0,
+          "slot_idx": 2,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 34
+    },
+    {
+      "manifest_idx": 34,
+      "pen_x": -0.02286540975980461,
+      "pen_y": 0.1120079915776849,
+      "pen_yaw": 0.6467629644106561,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+          "name": "ours_freecf_r5_c100k_dp",
+          "policy_id": 1,
+          "slot_idx": 0,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+          "name": "baseline_nocf_r5_c100k",
+          "policy_id": 0,
+          "slot_idx": 1,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+          "name": "ours_freecf_r5_c100k_iql_s3fixfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 2,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 35
+    },
+    {
+      "manifest_idx": 35,
+      "pen_x": 0.021762823497876532,
+      "pen_y": -0.16306245725601912,
+      "pen_yaw": 2.974943135145577,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+          "name": "baseline_nocf_r5_c100k",
+          "policy_id": 0,
+          "slot_idx": 0,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+          "name": "ours_freecf_r5_c100k_dp",
+          "policy_id": 1,
+          "slot_idx": 1,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+          "name": "ours_freecf_r5_c100k_iql_s3fixfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 2,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 36
+    },
+    {
+      "manifest_idx": 36,
+      "pen_x": -0.07066466939821839,
+      "pen_y": 0.02085649785362184,
+      "pen_yaw": 0.3208256180290405,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+          "name": "baseline_nocf_r5_c100k",
+          "policy_id": 0,
+          "slot_idx": 0,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+          "name": "ours_freecf_r5_c100k_dp",
+          "policy_id": 1,
+          "slot_idx": 1,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+          "name": "ours_freecf_r5_c100k_iql_s3fixfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 2,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 37
+    },
+    {
+      "manifest_idx": 37,
+      "pen_x": 0.03714567431807517,
+      "pen_y": 0.053822830522432946,
+      "pen_yaw": -1.2128381906188574,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+          "name": "baseline_nocf_r5_c100k",
+          "policy_id": 0,
+          "slot_idx": 0,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+          "name": "ours_freecf_r5_c100k_dp",
+          "policy_id": 1,
+          "slot_idx": 1,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+          "name": "ours_freecf_r5_c100k_iql_s3fixfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 2,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 38
+    },
+    {
+      "manifest_idx": 38,
+      "pen_x": 0.025205467186868197,
+      "pen_y": -0.05518785936534404,
+      "pen_yaw": -1.5819720202845315,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+          "name": "ours_freecf_r5_c100k_iql_s3fixfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 0,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+          "name": "ours_freecf_r5_c100k_dp",
+          "policy_id": 1,
+          "slot_idx": 1,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+          "name": "baseline_nocf_r5_c100k",
+          "policy_id": 0,
+          "slot_idx": 2,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 39
+    },
+    {
+      "manifest_idx": 39,
+      "pen_x": -0.12222455121204256,
+      "pen_y": -0.020372175552695992,
+      "pen_yaw": 3.0446253874510836,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+          "name": "ours_freecf_r5_c100k_dp",
+          "policy_id": 1,
+          "slot_idx": 0,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+          "name": "ours_freecf_r5_c100k_iql_s3fixfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 1,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+          "name": "baseline_nocf_r5_c100k",
+          "policy_id": 0,
+          "slot_idx": 2,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 40
+    },
+    {
+      "manifest_idx": 40,
+      "pen_x": 0.07275649638287723,
+      "pen_y": -0.07855569642372429,
+      "pen_yaw": -2.141365169208821,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+          "name": "ours_freecf_r5_c100k_iql_s3fixfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 0,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+          "name": "baseline_nocf_r5_c100k",
+          "policy_id": 0,
+          "slot_idx": 1,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+          "name": "ours_freecf_r5_c100k_dp",
+          "policy_id": 1,
+          "slot_idx": 2,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 41
+    },
+    {
+      "manifest_idx": 41,
+      "pen_x": -0.05086941076256335,
+      "pen_y": -0.029096768490225078,
+      "pen_yaw": -1.5693756226797246,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+          "name": "baseline_nocf_r5_c100k",
+          "policy_id": 0,
+          "slot_idx": 0,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+          "name": "ours_freecf_r5_c100k_iql_s3fixfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 1,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+          "name": "ours_freecf_r5_c100k_dp",
+          "policy_id": 1,
+          "slot_idx": 2,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 42
+    },
+    {
+      "manifest_idx": 42,
+      "pen_x": -0.015201969744637611,
+      "pen_y": 0.029575422532483936,
+      "pen_yaw": -1.937406903654106,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+          "name": "ours_freecf_r5_c100k_iql_s3fixfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 0,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+          "name": "baseline_nocf_r5_c100k",
+          "policy_id": 0,
+          "slot_idx": 1,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+          "name": "ours_freecf_r5_c100k_dp",
+          "policy_id": 1,
+          "slot_idx": 2,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 43
+    },
+    {
+      "manifest_idx": 43,
+      "pen_x": 0.04924359683878721,
+      "pen_y": 0.2101827826760709,
+      "pen_yaw": -2.273083012722849,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+          "name": "ours_freecf_r5_c100k_iql_s3fixfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 0,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+          "name": "ours_freecf_r5_c100k_dp",
+          "policy_id": 1,
+          "slot_idx": 1,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+          "name": "baseline_nocf_r5_c100k",
+          "policy_id": 0,
+          "slot_idx": 2,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 44
+    },
+    {
+      "manifest_idx": 44,
+      "pen_x": 0.01360715978778898,
+      "pen_y": -0.20977539063580333,
+      "pen_yaw": -1.1171038191723035,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+          "name": "ours_freecf_r5_c100k_iql_s3fixfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 0,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+          "name": "baseline_nocf_r5_c100k",
+          "policy_id": 0,
+          "slot_idx": 1,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+          "name": "ours_freecf_r5_c100k_dp",
+          "policy_id": 1,
+          "slot_idx": 2,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 45
+    },
+    {
+      "manifest_idx": 45,
+      "pen_x": -0.07509943245910108,
+      "pen_y": 0.1393490556936711,
+      "pen_yaw": -1.28423418708583,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+          "name": "ours_freecf_r5_c100k_iql_s3fixfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 0,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+          "name": "baseline_nocf_r5_c100k",
+          "policy_id": 0,
+          "slot_idx": 1,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+          "name": "ours_freecf_r5_c100k_dp",
+          "policy_id": 1,
+          "slot_idx": 2,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 46
+    },
+    {
+      "manifest_idx": 46,
+      "pen_x": 0.11634587580524386,
+      "pen_y": 0.07719982399865985,
+      "pen_yaw": -0.9359150952489634,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+          "name": "ours_freecf_r5_c100k_iql_s3fixfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 0,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+          "name": "baseline_nocf_r5_c100k",
+          "policy_id": 0,
+          "slot_idx": 1,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+          "name": "ours_freecf_r5_c100k_dp",
+          "policy_id": 1,
+          "slot_idx": 2,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 47
+    },
+    {
+      "manifest_idx": 47,
+      "pen_x": 0.06931403011083603,
+      "pen_y": -0.19706262929476798,
+      "pen_yaw": 2.711924842052225,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+          "name": "ours_freecf_r5_c100k_dp",
+          "policy_id": 1,
+          "slot_idx": 0,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+          "name": "baseline_nocf_r5_c100k",
+          "policy_id": 0,
+          "slot_idx": 1,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+          "name": "ours_freecf_r5_c100k_iql_s3fixfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 2,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 48
+    },
+    {
+      "manifest_idx": 48,
+      "pen_x": 0.12084290795773267,
+      "pen_y": 0.1974783057130873,
+      "pen_yaw": 0.7701226068806335,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+          "name": "ours_freecf_r5_c100k_dp",
+          "policy_id": 1,
+          "slot_idx": 0,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+          "name": "baseline_nocf_r5_c100k",
+          "policy_id": 0,
+          "slot_idx": 1,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+          "name": "ours_freecf_r5_c100k_iql_s3fixfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 2,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 49
+    },
+    {
+      "manifest_idx": 49,
+      "pen_x": -0.06330362545698881,
+      "pen_y": -0.15337966716215012,
+      "pen_yaw": 0.16418058671187064,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+          "name": "ours_freecf_r5_c100k_iql_s3fixfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 0,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+          "name": "ours_freecf_r5_c100k_dp",
+          "policy_id": 1,
+          "slot_idx": 1,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+          "name": "baseline_nocf_r5_c100k",
+          "policy_id": 0,
+          "slot_idx": 2,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 50
+    }
+  ],
+  "summary": [
+    {
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "failures": 22,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-4a0e65fc-p2-100k-eval5k-save25k-eval8192-init0-seed-1-qrlav1ef-final:v0",
+      "name": "baseline_nocf_r5_c100k",
+      "num_rounds": 50,
+      "policy_id": 0,
+      "success_rate": 0.56,
+      "successes": 28
+    },
+    {
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "failures": 14,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-square-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-abbcdffd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-wko0uw59-final:v0",
+      "name": "ours_freecf_r5_c100k_dp",
+      "num_rounds": 50,
+      "policy_id": 1,
+      "success_rate": 0.72,
+      "successes": 36
+    },
+    {
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "failures": 17,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-sd2-r5-g099p0-fixnorm-p013fix-s1-final:v0",
+      "name": "ours_freecf_r5_c100k_iql_s3fixfinal_n16",
+      "num_rounds": 50,
+      "policy_id": 2,
+      "success_rate": 0.66,
+      "successes": 33
+    }
+  ],
+  "timestamp": "2026-07-12T14:13:37.901320"
+}

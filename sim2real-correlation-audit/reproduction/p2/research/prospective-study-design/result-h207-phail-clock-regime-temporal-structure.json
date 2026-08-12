@@ -1,0 +1,94 @@
+{
+  "analyses": {
+    "pooled_within_regime": {
+      "adjacent_pair_count": 592,
+      "group_count": 2,
+      "lower_tail_p": 0.9751,
+      "observed_mean_successive_squared_distance": 14.51604167986224,
+      "observed_to_permutation_median_ratio": 1.0306040414144055,
+      "permutation_median": 14.084984238893883,
+      "permutation_q025": 13.656601045383225,
+      "permutation_q975": 14.515631287179076,
+      "permutations": 49999,
+      "two_sided_p": 0.04984,
+      "upper_tail_p": 0.02492
+    },
+    "regime_1": {
+      "adjacent_pair_count": 249,
+      "episode_count": 250,
+      "group_count": 1,
+      "lower_tail_p": 0.866,
+      "observed_mean_successive_squared_distance": 14.345201796132894,
+      "observed_to_permutation_median_ratio": 1.0269011043693945,
+      "permutation_median": 13.969409259659994,
+      "permutation_q025": 13.319251334214824,
+      "permutation_q975": 14.626556914100851,
+      "permutations": 49999,
+      "two_sided_p": 0.26804,
+      "upper_tail_p": 0.13402
+    },
+    "regime_2": {
+      "adjacent_pair_count": 343,
+      "episode_count": 344,
+      "group_count": 1,
+      "lower_tail_p": 0.94904,
+      "observed_mean_successive_squared_distance": 14.640062470091419,
+      "observed_to_permutation_median_ratio": 1.0334618400584523,
+      "permutation_median": 14.166040682511685,
+      "permutation_q025": 13.60629500961284,
+      "permutation_q975": 14.735239015808098,
+      "permutations": 49999,
+      "two_sided_p": 0.10196,
+      "upper_tail_p": 0.05098
+    }
+  },
+  "classification": "no_detectable_clock_regime_temporal_structure_at_fixed_resolution",
+  "clock_regime_treated_as_session": false,
+  "confirmatory_claim_authorized": false,
+  "decision_consequence": "This exploratory diagnostic can strengthen the request for authenticated execution-session and carryover units if temporal structure is detected, or close this clock-regime refinement if it is not. It cannot establish independence or a mechanism.",
+  "episode_count": 594,
+  "group_pair_counts": {
+    "1": 249,
+    "2": 343
+  },
+  "group_sizes": {
+    "1": 250,
+    "2": 344
+  },
+  "independence_established": false,
+  "input_sha256": {
+    "h202_projection": "44b7cd9729c691a610cc1fbbefffc5668d31030e013b92f2d4550f9869020370",
+    "h203_result": "5f30b36135feaf85fc32b2f3fe5f2ad2f5c5e8188ca777131b8154d3db111cda",
+    "h203_script": "2a93bd3188681c5fc06312395f06fc3e899b405ed55547018b0e82ca3f271873",
+    "h206_independent_challenge": "6867989afb5a2c9938ee08126defa647b7a20b26f8c48f42a7d13cc5a4787268",
+    "h206_projection": "7b7af23688e230325ec69070c8e5cd5523224990d7bc44defbe5b30f12c65529",
+    "h206_result": "1b46e77400b15ecd886d165f13fca06b3f6834a0cc4f70082da4be4a39f51e19"
+  },
+  "known_prior_h203": {
+    "classification": "no_detectable_temporal_structure_at_fixed_resolution",
+    "global_ratio": 1.0298659183525478,
+    "global_two_sided_p": 0.05308
+  },
+  "performance_or_later_state_opened": false,
+  "pooled_pair_count": 592,
+  "protocol_sha256": "55d6ef8d59e80af9f781f3bb8fd312db57ca1e081a4e4addbbf81c34d72c77ba",
+  "run_identity": {
+    "numpy": "2.0.2",
+    "pcg64_seed": "198749041137177845022964269702818763976",
+    "permutations": 49999,
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "python": "3.12.13",
+    "rng_stream_scope": "one stream; each repetition independently permutes regime 1 then regime 2 and derives all three statistics",
+    "seed_text": "H207 PhAIL clock-regime temporal structure v1"
+  },
+  "schema": "h207-phail-clock-regime-temporal-structure-v1",
+  "status": "result_exposed_exploratory",
+  "synthetic_controls": {
+    "alternating_exceeds_drift": true,
+    "constant_zero": true,
+    "deterministic_replay": true,
+    "iid_near_nominal_14": true,
+    "known_distance": true,
+    "restricted_membership": true
+  }
+}

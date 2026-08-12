@@ -1,0 +1,377 @@
+{
+  "cases": {
+    "Cosmos-Surg manual": {
+      "displayed_real_regret_pp": 9.999999999999998,
+      "meets_displayed_real_regret_tolerance": {
+        "10_pp": true,
+        "1_pp": false,
+        "5_pp": false
+      },
+      "minimum_sim_top_k_covering_a_real_winner": 2,
+      "n_blocks": 4,
+      "n_candidates": 6,
+      "pearson_r": 0.8831365590679635,
+      "real_regret_max": 0.09999999999999998,
+      "real_regret_min": 0.09999999999999998,
+      "real_scores": {
+        "GR00T N1 20k": 0.6,
+        "GR00T N1 39k": 0.525,
+        "GR00T N1.5 25k": 0.55,
+        "GR00T N1.5 50k": 0.5,
+        "pi0 10k": 0.475,
+        "pi0 4k": 0.275
+      },
+      "real_winners": [
+        "GR00T N1 20k"
+      ],
+      "robustly_correct": false,
+      "sim_scores": {
+        "GR00T N1 20k": 0.675,
+        "GR00T N1 39k": 0.6125,
+        "GR00T N1.5 25k": 0.654175,
+        "GR00T N1.5 50k": 0.68335,
+        "pi0 10k": 0.6625,
+        "pi0 4k": 0.479175
+      },
+      "sim_top_to_runner_up_margin": 0.008349999999999969,
+      "sim_top_to_runner_up_margin_pp": 0.8349999999999969,
+      "sim_winners": [
+        "GR00T N1.5 50k"
+      ],
+      "subset_stability": {
+        "all_nonempty_subsets_correct": 2,
+        "all_nonempty_subsets_possibly_correct": 3,
+        "all_nonempty_subsets_total": 15,
+        "leave_one_block_out_correct": 0,
+        "leave_one_block_out_possibly_correct": 0,
+        "leave_one_block_out_total": 4
+      },
+      "symmetric_per_score_perturbation_for_real_winner_to_tie_sim_top": 0.004174999999999984,
+      "symmetric_per_score_perturbation_for_real_winner_to_tie_sim_top_pp": 0.41749999999999843,
+      "symmetric_per_score_perturbation_to_change_sim_winner": 0.004174999999999984,
+      "symmetric_per_score_perturbation_to_change_sim_winner_pp": 0.41749999999999843
+    },
+    "Digital Cousins": {
+      "displayed_real_regret_pp": 0.0,
+      "meets_displayed_real_regret_tolerance": {
+        "10_pp": true,
+        "1_pp": true,
+        "5_pp": true
+      },
+      "minimum_sim_top_k_covering_a_real_winner": 1,
+      "n_blocks": 4,
+      "n_candidates": 4,
+      "pearson_r": 0.996862862658738,
+      "real_regret_max": 0.0,
+      "real_regret_min": 0.0,
+      "real_scores": {
+        "ACT": 36.25,
+        "DP": 34.58325,
+        "SmolVLA": 62.91675,
+        "pi_0": 76.66675000000001
+      },
+      "real_winners": [
+        "pi_0"
+      ],
+      "robustly_correct": true,
+      "sim_scores": {
+        "ACT": 45.99975,
+        "DP": 42.91675,
+        "SmolVLA": 59.25,
+        "pi_0": 67.0835
+      },
+      "sim_top_to_runner_up_margin": 7.833500000000001,
+      "sim_top_to_runner_up_margin_pp": 7.833500000000001,
+      "sim_winners": [
+        "pi_0"
+      ],
+      "subset_stability": {
+        "all_nonempty_subsets_correct": 15,
+        "all_nonempty_subsets_possibly_correct": 15,
+        "all_nonempty_subsets_total": 15,
+        "leave_one_block_out_correct": 4,
+        "leave_one_block_out_possibly_correct": 4,
+        "leave_one_block_out_total": 4
+      },
+      "symmetric_per_score_perturbation_for_real_winner_to_tie_sim_top": 0.0,
+      "symmetric_per_score_perturbation_for_real_winner_to_tie_sim_top_pp": 0.0,
+      "symmetric_per_score_perturbation_to_change_sim_winner": 3.9167500000000004,
+      "symmetric_per_score_perturbation_to_change_sim_winner_pp": 3.9167500000000004
+    },
+    "OSCAR Skeleton": {
+      "displayed_real_regret_pp": 1.0999999999999996,
+      "meets_displayed_real_regret_tolerance": {
+        "10_pp": true,
+        "1_pp": false,
+        "5_pp": true
+      },
+      "minimum_sim_top_k_covering_a_real_winner": 4,
+      "n_blocks": 1,
+      "n_candidates": 7,
+      "pearson_r": 0.8551668286307184,
+      "real_regret_max": 1.0999999999999996,
+      "real_regret_min": 1.0999999999999996,
+      "real_scores": {
+        "PG-Bin": 0.3,
+        "PG-FAST": 12.1,
+        "PG-FAST+": 11.5,
+        "PG-FSQ": 10.9,
+        "PG-flow": 9.6,
+        "pi0-FAST": 12.6,
+        "pi0-flow": 7.4
+      },
+      "real_winners": [
+        "pi0-FAST"
+      ],
+      "robustly_correct": false,
+      "sim_scores": {
+        "PG-Bin": 3.1,
+        "PG-FAST": 12.3,
+        "PG-FAST+": 15.4,
+        "PG-FSQ": 10.8,
+        "PG-flow": 7.7,
+        "pi0-FAST": 10.8,
+        "pi0-flow": 6.2
+      },
+      "sim_top_to_runner_up_margin": 3.0999999999999996,
+      "sim_top_to_runner_up_margin_pp": 3.0999999999999996,
+      "sim_winners": [
+        "PG-FAST+"
+      ],
+      "symmetric_per_score_perturbation_for_real_winner_to_tie_sim_top": 2.3,
+      "symmetric_per_score_perturbation_for_real_winner_to_tie_sim_top_pp": 2.3,
+      "symmetric_per_score_perturbation_to_change_sim_winner": 1.5499999999999998,
+      "symmetric_per_score_perturbation_to_change_sim_winner_pp": 1.5499999999999998
+    },
+    "Real2Sim T best-sim checkpoint": {
+      "checkpoint_tie_combinations": 2,
+      "displayed_real_regret_pp": 12.5,
+      "meets_displayed_real_regret_tolerance": {
+        "10_pp": false,
+        "1_pp": false,
+        "5_pp": false
+      },
+      "minimum_sim_top_k_covering_a_real_winner": 2,
+      "n_blocks": 1,
+      "n_candidates": 4,
+      "pearson_r": 0.9474693713881575,
+      "pearson_r_max": 0.9474693713881575,
+      "pearson_r_min": 0.877820347151346,
+      "real_regret_max": 12.5,
+      "real_regret_min": 12.5,
+      "real_scores": {
+        "act": 43.75,
+        "dp": 93.75,
+        "pi0": 81.25,
+        "svla": 43.75
+      },
+      "real_winners": [
+        "dp"
+      ],
+      "robustly_correct": false,
+      "sim_scores": {
+        "act": 43.75,
+        "dp": 87.5,
+        "pi0": 93.75,
+        "svla": 31.25
+      },
+      "sim_top_to_runner_up_margin": 6.25,
+      "sim_top_to_runner_up_margin_pp": 6.25,
+      "sim_winners": [
+        "pi0"
+      ],
+      "symmetric_per_score_perturbation_for_real_winner_to_tie_sim_top": 3.125,
+      "symmetric_per_score_perturbation_for_real_winner_to_tie_sim_top_pp": 3.125,
+      "symmetric_per_score_perturbation_to_change_sim_winner": 3.125,
+      "symmetric_per_score_perturbation_to_change_sim_winner_pp": 3.125
+    },
+    "SIMPLER Google": {
+      "displayed_real_regret_pp": 0.0,
+      "meets_displayed_real_regret_tolerance": {
+        "10_pp": true,
+        "1_pp": true,
+        "5_pp": true
+      },
+      "minimum_sim_top_k_covering_a_real_winner": 1,
+      "n_blocks": 5,
+      "n_candidates": 6,
+      "pearson_r": 0.9736271622403363,
+      "real_regret_max": 0.0,
+      "real_regret_min": 0.0,
+      "real_scores": {
+        "octo-base": 0.262,
+        "rt-1-15pct": 0.6562,
+        "rt-1-begin": 0.030000000000000006,
+        "rt-1-converged": 0.6824,
+        "rt-1-x": 0.5753999999999999,
+        "rt-2-x": 0.5354
+      },
+      "real_winners": [
+        "rt-1-converged"
+      ],
+      "robustly_correct": true,
+      "sim_scores": {
+        "octo-base": 0.133,
+        "rt-1-15pct": 0.4648,
+        "rt-1-begin": 0.07100000000000001,
+        "rt-1-converged": 0.5652,
+        "rt-1-x": 0.4568,
+        "rt-2-x": 0.42060000000000003
+      },
+      "sim_top_to_runner_up_margin": 0.10040000000000004,
+      "sim_top_to_runner_up_margin_pp": 10.040000000000004,
+      "sim_winners": [
+        "rt-1-converged"
+      ],
+      "subset_stability": {
+        "all_nonempty_subsets_correct": 24,
+        "all_nonempty_subsets_possibly_correct": 24,
+        "all_nonempty_subsets_total": 31,
+        "leave_one_block_out_correct": 5,
+        "leave_one_block_out_possibly_correct": 5,
+        "leave_one_block_out_total": 5
+      },
+      "symmetric_per_score_perturbation_for_real_winner_to_tie_sim_top": 0.0,
+      "symmetric_per_score_perturbation_for_real_winner_to_tie_sim_top_pp": 0.0,
+      "symmetric_per_score_perturbation_to_change_sim_winner": 0.05020000000000002,
+      "symmetric_per_score_perturbation_to_change_sim_winner_pp": 5.020000000000002
+    },
+    "WM-PolicyEval / Cosmos": {
+      "displayed_real_regret_pp": 0.0,
+      "meets_displayed_real_regret_tolerance": {
+        "10_pp": true,
+        "1_pp": true,
+        "5_pp": true
+      },
+      "minimum_sim_top_k_covering_a_real_winner": 1,
+      "n_blocks": 4,
+      "n_candidates": 3,
+      "pearson_r": 0.9751578272987868,
+      "real_regret_max": 0.0,
+      "real_regret_min": 0.0,
+      "real_scores": {
+        "Octo-Base": 0.22499999999999998,
+        "Octo-Small": 0.1875,
+        "OpenVLA": 0.5
+      },
+      "real_winners": [
+        "OpenVLA"
+      ],
+      "robustly_correct": true,
+      "sim_scores": {
+        "Octo-Base": 0.2,
+        "Octo-Small": 0.15,
+        "OpenVLA": 0.3
+      },
+      "sim_top_to_runner_up_margin": 0.09999999999999998,
+      "sim_top_to_runner_up_margin_pp": 9.999999999999998,
+      "sim_winners": [
+        "OpenVLA"
+      ],
+      "subset_stability": {
+        "all_nonempty_subsets_correct": 12,
+        "all_nonempty_subsets_possibly_correct": 12,
+        "all_nonempty_subsets_total": 15,
+        "leave_one_block_out_correct": 4,
+        "leave_one_block_out_possibly_correct": 4,
+        "leave_one_block_out_total": 4
+      },
+      "symmetric_per_score_perturbation_for_real_winner_to_tie_sim_top": 0.0,
+      "symmetric_per_score_perturbation_for_real_winner_to_tie_sim_top_pp": 0.0,
+      "symmetric_per_score_perturbation_to_change_sim_winner": 0.04999999999999999,
+      "symmetric_per_score_perturbation_to_change_sim_winner_pp": 4.999999999999999
+    },
+    "WM-PolicyEval / IRASim": {
+      "displayed_real_regret_pp": 27.500000000000004,
+      "meets_displayed_real_regret_tolerance": {
+        "10_pp": false,
+        "1_pp": false,
+        "5_pp": false
+      },
+      "minimum_sim_top_k_covering_a_real_winner": 2,
+      "n_blocks": 4,
+      "n_candidates": 3,
+      "pearson_r": 0.5074070900733753,
+      "real_regret_max": 0.275,
+      "real_regret_min": 0.275,
+      "real_scores": {
+        "Octo-Base": 0.22499999999999998,
+        "Octo-Small": 0.1875,
+        "OpenVLA": 0.5
+      },
+      "real_winners": [
+        "OpenVLA"
+      ],
+      "robustly_correct": false,
+      "sim_scores": {
+        "Octo-Base": 0.2,
+        "Octo-Small": 0.0875,
+        "OpenVLA": 0.1875
+      },
+      "sim_top_to_runner_up_margin": 0.012500000000000011,
+      "sim_top_to_runner_up_margin_pp": 1.250000000000001,
+      "sim_winners": [
+        "Octo-Base"
+      ],
+      "subset_stability": {
+        "all_nonempty_subsets_correct": 4,
+        "all_nonempty_subsets_possibly_correct": 7,
+        "all_nonempty_subsets_total": 15,
+        "leave_one_block_out_correct": 1,
+        "leave_one_block_out_possibly_correct": 2,
+        "leave_one_block_out_total": 4
+      },
+      "symmetric_per_score_perturbation_for_real_winner_to_tie_sim_top": 0.0062500000000000056,
+      "symmetric_per_score_perturbation_for_real_winner_to_tie_sim_top_pp": 0.6250000000000006,
+      "symmetric_per_score_perturbation_to_change_sim_winner": 0.0062500000000000056,
+      "symmetric_per_score_perturbation_to_change_sim_winner_pp": 0.6250000000000006
+    },
+    "WorldGym": {
+      "displayed_real_regret_pp": 0.0,
+      "meets_displayed_real_regret_tolerance": {
+        "10_pp": true,
+        "1_pp": true,
+        "5_pp": true
+      },
+      "minimum_sim_top_k_covering_a_real_winner": 1,
+      "n_blocks": 17,
+      "n_candidates": 3,
+      "pearson_r": 0.9923501538608078,
+      "real_regret_max": 0.0,
+      "real_regret_min": 0.0,
+      "real_scores": {
+        "Octo": 2.0,
+        "OpenVLA": 7.0588235294117645,
+        "RT-1-X": 1.8529411764705883
+      },
+      "real_winners": [
+        "OpenVLA"
+      ],
+      "robustly_correct": true,
+      "sim_scores": {
+        "Octo": 2.3823529411764706,
+        "OpenVLA": 6.735294117647059,
+        "RT-1-X": 1.5588235294117647
+      },
+      "sim_top_to_runner_up_margin": 4.352941176470589,
+      "sim_top_to_runner_up_margin_pp": 43.529411764705884,
+      "sim_winners": [
+        "OpenVLA"
+      ],
+      "subset_stability": {
+        "all_nonempty_subsets_correct": 131068,
+        "all_nonempty_subsets_possibly_correct": 131068,
+        "all_nonempty_subsets_total": 131071,
+        "leave_one_block_out_correct": 17,
+        "leave_one_block_out_possibly_correct": 17,
+        "leave_one_block_out_total": 17
+      },
+      "symmetric_per_score_perturbation_for_real_winner_to_tie_sim_top": 0.0,
+      "symmetric_per_score_perturbation_for_real_winner_to_tie_sim_top_pp": 0.0,
+      "symmetric_per_score_perturbation_to_change_sim_winner": 2.1764705882352944,
+      "symmetric_per_score_perturbation_to_change_sim_winner_pp": 21.764705882352942
+    }
+  },
+  "method": "Independent stdlib-only reconstruction from source-traced CSVs; no project analysis imports or committed intermediate JSON.",
+  "schema_version": 1
+}

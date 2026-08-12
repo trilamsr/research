@@ -1,0 +1,76 @@
+{
+  "analyses": {
+    "pooled_within_date": {
+      "adjacent_pair_count": 581,
+      "analytic_exchangeability_expectation": 0.3798402176735643,
+      "lower_tail_p": 0.76518,
+      "observed_minus_permutation_median": 0.012048192771084376,
+      "observed_same_policy_adjacency_fraction": 0.3924268502581756,
+      "permutation_median": 0.3803786574870912,
+      "permutation_q025": 0.3442340791738382,
+      "permutation_q975": 0.41480206540447506,
+      "permutations": 49999,
+      "two_sided_p": 0.52872,
+      "upper_tail_p": 0.26436
+    },
+    "regime_1_dates": {
+      "adjacent_pair_count": 243,
+      "analytic_exchangeability_expectation": 0.449702679976432,
+      "lower_tail_p": 0.90708,
+      "observed_minus_permutation_median": 0.037037037037037035,
+      "observed_same_policy_adjacency_fraction": 0.48559670781893005,
+      "permutation_median": 0.448559670781893,
+      "permutation_q025": 0.3950617283950617,
+      "permutation_q975": 0.5061728395061729,
+      "permutations": 49999,
+      "two_sided_p": 0.23688,
+      "upper_tail_p": 0.11844
+    },
+    "regime_2_dates": {
+      "adjacent_pair_count": 338,
+      "analytic_exchangeability_expectation": 0.3296136545386623,
+      "lower_tail_p": 0.45442,
+      "observed_minus_permutation_median": -0.00295857988165682,
+      "observed_same_policy_adjacency_fraction": 0.3254437869822485,
+      "permutation_median": 0.32840236686390534,
+      "permutation_q025": 0.28402366863905326,
+      "permutation_q975": 0.3757396449704142,
+      "permutations": 49999,
+      "two_sided_p": 0.90884,
+      "upper_tail_p": 0.5956
+    }
+  },
+  "classification": "no_detectable_within_date_policy_sequence_structure_at_fixed_resolution",
+  "date_count": 13,
+  "date_counts_by_regime": {
+    "1": 7,
+    "2": 6
+  },
+  "date_treated_as_physical_session_or_cause": false,
+  "episode_count": 594,
+  "input_sha256": {
+    "projection-h206-phail-clock-offset-regimes.csv": "7b7af23688e230325ec69070c8e5cd5523224990d7bc44defbe5b30f12c65529",
+    "result-h187-phail-context-support-sanitized.csv": "ad43fca1da065a1cb7fd84dfa9afc5691c72ebe12e7f165c68a0050e51e87ebe",
+    "result-h206-phail-monotonic-wall-clock-bridge-independent-challenge.json": "6867989afb5a2c9938ee08126defa647b7a20b26f8c48f42a7d13cc5a4787268",
+    "result-h206-phail-monotonic-wall-clock-bridge.json": "1b46e77400b15ecd886d165f13fca06b3f6834a0cc4f70082da4be4a39f51e19",
+    "result-h208-phail-clock-regime-date-identifiability-independent-challenge.json": "36c2853d9193cf5ba2e752aeb03e652c96955aed59d1b7c3b6dba7e5289a3fa9",
+    "result-h208-phail-clock-regime-date-identifiability.json": "df6c42066f26c7bbd69be25d01ef0d72517f2546c0a1d02d129b6fdc8b6981db",
+    "result-h209-phail-within-regime-policy-sequence-independent-challenge.json": "e6700b2ce631a7ca6e16669dad30cf00a4d922ff8444f3a2601a154e23ed767f",
+    "result-h209-phail-within-regime-policy-sequence.json": "2879b1c4b0ade1e4d1fd47e5a0db5312fce2d401c5f1580f7e2af2c211da7794"
+  },
+  "outcome_analysis_authorized": false,
+  "pcg64_seed": "9501571663204671809869224286677695313",
+  "permutation_reference_treated_as_assignment_law": false,
+  "permutations": 49999,
+  "protocol_sha256": "b9cb75cd7eaa5ead4a1f258a2198c00750d56ce493172dab304b328a9b1e4afe",
+  "schema": "h210-phail-within-date-policy-sequence-v1",
+  "seed_text": "H210 PhAIL within-date policy sequence v1",
+  "state_or_performance_opened": false,
+  "status": "result_exposed_exploratory",
+  "synthetic_controls": {
+    "alternating_zero": true,
+    "analytic_matches_enumeration": true,
+    "constant_one": true,
+    "deterministic_replay": true
+  }
+}

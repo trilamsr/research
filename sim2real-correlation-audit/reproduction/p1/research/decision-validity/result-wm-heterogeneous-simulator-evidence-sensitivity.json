@@ -1,0 +1,563 @@
+{
+  "classification": "common_evidence_direction_does_not_extend_to_heterogeneous_evidence",
+  "common_evidence_parity_checks": [
+    {
+      "current_probability": 0.803044,
+      "four_combined_se_tolerance": 0.003669318875,
+      "h239_probability": 0.804056666667,
+      "model": "Cosmos",
+      "scenario": "common_10"
+    },
+    {
+      "current_probability": 0.99983,
+      "four_combined_se_tolerance": 0.000112023384,
+      "h239_probability": 0.999866666667,
+      "model": "Cosmos",
+      "scenario": "common_500"
+    },
+    {
+      "current_probability": 0.43024,
+      "four_combined_se_tolerance": 0.004572329562,
+      "h239_probability": 0.428663333333,
+      "model": "IRASim",
+      "scenario": "common_10"
+    },
+    {
+      "current_probability": 0.150686,
+      "four_combined_se_tolerance": 0.003303183606,
+      "h239_probability": 0.15042,
+      "model": "IRASim",
+      "scenario": "common_500"
+    }
+  ],
+  "draws_per_scenario": 500000,
+  "h239_result_sha256": "996e25161ee74b10cad6c0bc1ff1d93caa7517ec18d79a5a3fcb5528dca6bc7b",
+  "implementation_sha256": "aa0d154bac0dbc812efe34c463894de287317e926dda1f6bfc6c74670524056d",
+  "input_sha256": "ec4f9b58ba4e1e8ced4adbe90ed8c2696fa86b449f6b2da6054848a9be7c48e5",
+  "outcome_status": "domain_review_triggered_outcome_exposed_exploratory",
+  "panels": {
+    "Cosmos": {
+      "candidates": [
+        "Octo-Base",
+        "Octo-Small",
+        "OpenVLA"
+      ],
+      "maximum_concordance": 0.99983,
+      "minimum_concordance": 0.087416,
+      "scenarios": {
+        "common_10": {
+          "draws": 500000,
+          "evidence_by_policy": {
+            "Octo-Base": 10.0,
+            "Octo-Small": 10.0,
+            "OpenVLA": 10.0
+          },
+          "latent_winner_concordance": 0.803044,
+          "monte_carlo_se": 0.000562431034,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.25,
+            "Octo-Small": 0.208333333333,
+            "OpenVLA": 0.333333333333
+          },
+          "posterior_mean_sim_winner_margin": 0.083333333333,
+          "posterior_mean_sim_winner_set": [
+            "OpenVLA"
+          ],
+          "real_latent_winner_probabilities": {
+            "Octo-Base": 0.000144,
+            "Octo-Small": 1.8e-05,
+            "OpenVLA": 0.999838
+          },
+          "seed": 24107031,
+          "sim_latent_winner_probabilities": {
+            "Octo-Base": 0.151658,
+            "Octo-Small": 0.045184,
+            "OpenVLA": 0.803158
+          }
+        },
+        "common_500": {
+          "draws": 500000,
+          "evidence_by_policy": {
+            "Octo-Base": 500.0,
+            "Octo-Small": 500.0,
+            "OpenVLA": 500.0
+          },
+          "latent_winner_concordance": 0.99983,
+          "monte_carlo_se": 1.8437522e-05,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.201195219124,
+            "Octo-Small": 0.151394422311,
+            "OpenVLA": 0.300796812749
+          },
+          "posterior_mean_sim_winner_margin": 0.099601593625,
+          "posterior_mean_sim_winner_set": [
+            "OpenVLA"
+          ],
+          "real_latent_winner_probabilities": {
+            "Octo-Base": 0.000144,
+            "Octo-Small": 2.6e-05,
+            "OpenVLA": 0.99983
+          },
+          "seed": 24107032,
+          "sim_latent_winner_probabilities": {
+            "Octo-Base": 0.0,
+            "Octo-Small": 0.0,
+            "OpenVLA": 1.0
+          }
+        },
+        "octo_base_0": {
+          "draws": 500000,
+          "evidence_by_policy": {
+            "Octo-Base": 0.0,
+            "Octo-Small": 500.0,
+            "OpenVLA": 500.0
+          },
+          "latent_winner_concordance": 0.0876,
+          "monte_carlo_se": 0.000399815557,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.5,
+            "Octo-Small": 0.151394422311,
+            "OpenVLA": 0.300796812749
+          },
+          "posterior_mean_sim_winner_margin": 0.199203187251,
+          "posterior_mean_sim_winner_set": [
+            "Octo-Base"
+          ],
+          "real_latent_winner_probabilities": {
+            "Octo-Base": 0.000148,
+            "Octo-Small": 1.8e-05,
+            "OpenVLA": 0.999834
+          },
+          "seed": 24107034,
+          "sim_latent_winner_probabilities": {
+            "Octo-Base": 0.912528,
+            "Octo-Small": 0.0,
+            "OpenVLA": 0.087472
+          }
+        },
+        "octo_base_10": {
+          "draws": 500000,
+          "evidence_by_policy": {
+            "Octo-Base": 10.0,
+            "Octo-Small": 500.0,
+            "OpenVLA": 500.0
+          },
+          "latent_winner_concordance": 0.802122,
+          "monte_carlo_se": 0.000563422217,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.25,
+            "Octo-Small": 0.151394422311,
+            "OpenVLA": 0.300796812749
+          },
+          "posterior_mean_sim_winner_margin": 0.050796812749,
+          "posterior_mean_sim_winner_set": [
+            "OpenVLA"
+          ],
+          "real_latent_winner_probabilities": {
+            "Octo-Base": 0.00013,
+            "Octo-Small": 2.4e-05,
+            "OpenVLA": 0.999846
+          },
+          "seed": 24107033,
+          "sim_latent_winner_probabilities": {
+            "Octo-Base": 0.197776,
+            "Octo-Small": 0.0,
+            "OpenVLA": 0.802224
+          }
+        },
+        "octo_small_0": {
+          "draws": 500000,
+          "evidence_by_policy": {
+            "Octo-Base": 500.0,
+            "Octo-Small": 0.0,
+            "OpenVLA": 500.0
+          },
+          "latent_winner_concordance": 0.087416,
+          "monte_carlo_se": 0.000399435709,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.201195219124,
+            "Octo-Small": 0.5,
+            "OpenVLA": 0.300796812749
+          },
+          "posterior_mean_sim_winner_margin": 0.199203187251,
+          "posterior_mean_sim_winner_set": [
+            "Octo-Small"
+          ],
+          "real_latent_winner_probabilities": {
+            "Octo-Base": 0.000126,
+            "Octo-Small": 2.2e-05,
+            "OpenVLA": 0.999852
+          },
+          "seed": 24107036,
+          "sim_latent_winner_probabilities": {
+            "Octo-Base": 0.0,
+            "Octo-Small": 0.912594,
+            "OpenVLA": 0.087406
+          }
+        },
+        "octo_small_10": {
+          "draws": 500000,
+          "evidence_by_policy": {
+            "Octo-Base": 500.0,
+            "Octo-Small": 10.0,
+            "OpenVLA": 500.0
+          },
+          "latent_winner_concordance": 0.943124,
+          "monte_carlo_se": 0.000327539679,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.201195219124,
+            "Octo-Small": 0.208333333333,
+            "OpenVLA": 0.300796812749
+          },
+          "posterior_mean_sim_winner_margin": 0.092463479416,
+          "posterior_mean_sim_winner_set": [
+            "OpenVLA"
+          ],
+          "real_latent_winner_probabilities": {
+            "Octo-Base": 0.000184,
+            "Octo-Small": 1.4e-05,
+            "OpenVLA": 0.999802
+          },
+          "seed": 24107035,
+          "sim_latent_winner_probabilities": {
+            "Octo-Base": 0.0,
+            "Octo-Small": 0.056694,
+            "OpenVLA": 0.943306
+          }
+        },
+        "openvla_0": {
+          "draws": 500000,
+          "evidence_by_policy": {
+            "Octo-Base": 500.0,
+            "Octo-Small": 500.0,
+            "OpenVLA": 0.0
+          },
+          "latent_winner_concordance": 0.981546,
+          "monte_carlo_se": 0.000190333654,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.201195219124,
+            "Octo-Small": 0.151394422311,
+            "OpenVLA": 0.5
+          },
+          "posterior_mean_sim_winner_margin": 0.298804780876,
+          "posterior_mean_sim_winner_set": [
+            "OpenVLA"
+          ],
+          "real_latent_winner_probabilities": {
+            "Octo-Base": 0.000126,
+            "Octo-Small": 1.2e-05,
+            "OpenVLA": 0.999862
+          },
+          "seed": 24107038,
+          "sim_latent_winner_probabilities": {
+            "Octo-Base": 0.01832,
+            "Octo-Small": 0.0,
+            "OpenVLA": 0.98168
+          }
+        },
+        "openvla_10": {
+          "draws": 500000,
+          "evidence_by_policy": {
+            "Octo-Base": 500.0,
+            "Octo-Small": 500.0,
+            "OpenVLA": 10.0
+          },
+          "latent_winner_concordance": 0.988554,
+          "monte_carlo_se": 0.000150432637,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.201195219124,
+            "Octo-Small": 0.151394422311,
+            "OpenVLA": 0.333333333333
+          },
+          "posterior_mean_sim_winner_margin": 0.13213811421,
+          "posterior_mean_sim_winner_set": [
+            "OpenVLA"
+          ],
+          "real_latent_winner_probabilities": {
+            "Octo-Base": 0.000152,
+            "Octo-Small": 1.8e-05,
+            "OpenVLA": 0.99983
+          },
+          "seed": 24107037,
+          "sim_latent_winner_probabilities": {
+            "Octo-Base": 0.011276,
+            "Octo-Small": 0.0,
+            "OpenVLA": 0.988724
+          }
+        }
+      },
+      "scenarios_above_one_half": [
+        "common_10",
+        "common_500",
+        "octo_base_10",
+        "octo_small_10",
+        "openvla_10",
+        "openvla_0"
+      ]
+    },
+    "IRASim": {
+      "candidates": [
+        "Octo-Base",
+        "Octo-Small",
+        "OpenVLA"
+      ],
+      "maximum_concordance": 0.98211,
+      "minimum_concordance": 0.00241,
+      "scenarios": {
+        "common_10": {
+          "draws": 500000,
+          "evidence_by_policy": {
+            "Octo-Base": 10.0,
+            "Octo-Small": 10.0,
+            "OpenVLA": 10.0
+          },
+          "latent_winner_concordance": 0.43024,
+          "monte_carlo_se": 0.000700190749,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.25,
+            "Octo-Small": 0.15625,
+            "OpenVLA": 0.239583333333
+          },
+          "posterior_mean_sim_winner_margin": 0.010416666667,
+          "posterior_mean_sim_winner_set": [
+            "Octo-Base"
+          ],
+          "real_latent_winner_probabilities": {
+            "Octo-Base": 0.000106,
+            "Octo-Small": 2.2e-05,
+            "OpenVLA": 0.999872
+          },
+          "seed": 24117031,
+          "sim_latent_winner_probabilities": {
+            "Octo-Base": 0.527562,
+            "Octo-Small": 0.042164,
+            "OpenVLA": 0.430274
+          }
+        },
+        "common_500": {
+          "draws": 500000,
+          "evidence_by_policy": {
+            "Octo-Base": 500.0,
+            "Octo-Small": 500.0,
+            "OpenVLA": 500.0
+          },
+          "latent_winner_concordance": 0.150686,
+          "monte_carlo_se": 0.000505924361,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.201195219124,
+            "Octo-Small": 0.089143426295,
+            "OpenVLA": 0.18874501992
+          },
+          "posterior_mean_sim_winner_margin": 0.012450199203,
+          "posterior_mean_sim_winner_set": [
+            "Octo-Base"
+          ],
+          "real_latent_winner_probabilities": {
+            "Octo-Base": 0.000116,
+            "Octo-Small": 1.4e-05,
+            "OpenVLA": 0.99987
+          },
+          "seed": 24117032,
+          "sim_latent_winner_probabilities": {
+            "Octo-Base": 0.849384,
+            "Octo-Small": 0.0,
+            "OpenVLA": 0.150616
+          }
+        },
+        "octo_base_0": {
+          "draws": 500000,
+          "evidence_by_policy": {
+            "Octo-Base": 0.0,
+            "Octo-Small": 500.0,
+            "OpenVLA": 500.0
+          },
+          "latent_winner_concordance": 0.013742,
+          "monte_carlo_se": 0.000164639955,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.5,
+            "Octo-Small": 0.089143426295,
+            "OpenVLA": 0.18874501992
+          },
+          "posterior_mean_sim_winner_margin": 0.31125498008,
+          "posterior_mean_sim_winner_set": [
+            "Octo-Base"
+          ],
+          "real_latent_winner_probabilities": {
+            "Octo-Base": 0.00013,
+            "Octo-Small": 2.2e-05,
+            "OpenVLA": 0.999848
+          },
+          "seed": 24117034,
+          "sim_latent_winner_probabilities": {
+            "Octo-Base": 0.98638,
+            "Octo-Small": 0.0,
+            "OpenVLA": 0.01362
+          }
+        },
+        "octo_base_10": {
+          "draws": 500000,
+          "evidence_by_policy": {
+            "Octo-Base": 10.0,
+            "Octo-Small": 500.0,
+            "OpenVLA": 500.0
+          },
+          "latent_winner_concordance": 0.152162,
+          "monte_carlo_se": 0.000507954182,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.25,
+            "Octo-Small": 0.089143426295,
+            "OpenVLA": 0.18874501992
+          },
+          "posterior_mean_sim_winner_margin": 0.06125498008,
+          "posterior_mean_sim_winner_set": [
+            "Octo-Base"
+          ],
+          "real_latent_winner_probabilities": {
+            "Octo-Base": 0.000134,
+            "Octo-Small": 1e-05,
+            "OpenVLA": 0.999856
+          },
+          "seed": 24117033,
+          "sim_latent_winner_probabilities": {
+            "Octo-Base": 0.847928,
+            "Octo-Small": 0.0,
+            "OpenVLA": 0.152072
+          }
+        },
+        "octo_small_0": {
+          "draws": 500000,
+          "evidence_by_policy": {
+            "Octo-Base": 500.0,
+            "Octo-Small": 0.0,
+            "OpenVLA": 500.0
+          },
+          "latent_winner_concordance": 0.00241,
+          "monte_carlo_se": 6.9342511e-05,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.201195219124,
+            "Octo-Small": 0.5,
+            "OpenVLA": 0.18874501992
+          },
+          "posterior_mean_sim_winner_margin": 0.298804780876,
+          "posterior_mean_sim_winner_set": [
+            "Octo-Small"
+          ],
+          "real_latent_winner_probabilities": {
+            "Octo-Base": 0.000136,
+            "Octo-Small": 2e-05,
+            "OpenVLA": 0.999844
+          },
+          "seed": 24117036,
+          "sim_latent_winner_probabilities": {
+            "Octo-Base": 0.015344,
+            "Octo-Small": 0.98227,
+            "OpenVLA": 0.002386
+          }
+        },
+        "octo_small_10": {
+          "draws": 500000,
+          "evidence_by_policy": {
+            "Octo-Base": 500.0,
+            "Octo-Small": 10.0,
+            "OpenVLA": 500.0
+          },
+          "latent_winner_concordance": 0.122298,
+          "monte_carlo_se": 0.00046333832,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.201195219124,
+            "Octo-Small": 0.15625,
+            "OpenVLA": 0.18874501992
+          },
+          "posterior_mean_sim_winner_margin": 0.012450199203,
+          "posterior_mean_sim_winner_set": [
+            "Octo-Base"
+          ],
+          "real_latent_winner_probabilities": {
+            "Octo-Base": 0.000154,
+            "Octo-Small": 2.4e-05,
+            "OpenVLA": 0.999822
+          },
+          "seed": 24117035,
+          "sim_latent_winner_probabilities": {
+            "Octo-Base": 0.70564,
+            "Octo-Small": 0.172162,
+            "OpenVLA": 0.122198
+          }
+        },
+        "openvla_0": {
+          "draws": 500000,
+          "evidence_by_policy": {
+            "Octo-Base": 500.0,
+            "Octo-Small": 500.0,
+            "OpenVLA": 0.0
+          },
+          "latent_winner_concordance": 0.98211,
+          "monte_carlo_se": 0.000187456384,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.201195219124,
+            "Octo-Small": 0.089143426295,
+            "OpenVLA": 0.5
+          },
+          "posterior_mean_sim_winner_margin": 0.298804780876,
+          "posterior_mean_sim_winner_set": [
+            "OpenVLA"
+          ],
+          "real_latent_winner_probabilities": {
+            "Octo-Base": 0.00014,
+            "Octo-Small": 1.6e-05,
+            "OpenVLA": 0.999844
+          },
+          "seed": 24117038,
+          "sim_latent_winner_probabilities": {
+            "Octo-Base": 0.017742,
+            "Octo-Small": 0.0,
+            "OpenVLA": 0.982258
+          }
+        },
+        "openvla_10": {
+          "draws": 500000,
+          "evidence_by_policy": {
+            "Octo-Base": 500.0,
+            "Octo-Small": 500.0,
+            "OpenVLA": 10.0
+          },
+          "latent_winner_concordance": 0.733944,
+          "monte_carlo_se": 0.000624932324,
+          "posterior_mean_sim_policy_scores": {
+            "Octo-Base": 0.201195219124,
+            "Octo-Small": 0.089143426295,
+            "OpenVLA": 0.239583333333
+          },
+          "posterior_mean_sim_winner_margin": 0.03838811421,
+          "posterior_mean_sim_winner_set": [
+            "OpenVLA"
+          ],
+          "real_latent_winner_probabilities": {
+            "Octo-Base": 0.000138,
+            "Octo-Small": 1e-05,
+            "OpenVLA": 0.999852
+          },
+          "seed": 24117037,
+          "sim_latent_winner_probabilities": {
+            "Octo-Base": 0.26599,
+            "Octo-Small": 0.0,
+            "OpenVLA": 0.73401
+          }
+        }
+      },
+      "scenarios_above_one_half": [
+        "openvla_10",
+        "openvla_0"
+      ]
+    }
+  },
+  "prior_alpha_beta": 1,
+  "protocol_sha256": "b0c91c0e693f84ae951d85f150015654cac752d69e100f94d9f340d50f27cbe3",
+  "runtime": {
+    "numpy": "2.0.2",
+    "python": "3.12.13"
+  },
+  "schema": "wm-heterogeneous-simulator-evidence-sensitivity-v1",
+  "scope": "Posterior latent-rank concordance under independent Beta cells and policy-specific effective evidence shared across four tasks. Not operational selection reliability or an estimate of actual evidence/dependence.",
+  "status": "pass"
+}

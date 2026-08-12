@@ -1,0 +1,205 @@
+{
+  "counts": {
+    "eligible": 4,
+    "eligible_positive_controls": 1,
+    "excluded": 0,
+    "frozen_source_screening_roster": 7,
+    "inventory_identities": 7,
+    "unresolved": 2
+  },
+  "dispositions": [
+    {
+      "arxiv_id": "2503.24278",
+      "basis": "Known-system title and abstract describe autonomous physical real-robot evaluation of queued user policies and comparative evaluation reports.",
+      "criteria": {
+        "comparative_output": "yes",
+        "h177_relevance": "yes",
+        "multiple_candidates": "yes",
+        "physical_real_robot": "yes",
+        "primary_source": "yes"
+      },
+      "name": "AutoEval",
+      "status": "eligible"
+    },
+    {
+      "arxiv_id": "2506.18123",
+      "basis": "Fixed positive control; title and abstract explicitly describe double-blind real-robot policy pairs aggregated into a ranking.",
+      "criteria": {
+        "comparative_output": "yes",
+        "h177_relevance": "yes",
+        "multiple_candidates": "yes",
+        "physical_real_robot": "yes",
+        "primary_source": "yes"
+      },
+      "name": "RoboArena",
+      "status": "eligible_positive_control"
+    },
+    {
+      "arxiv_id": "2605.27491",
+      "basis": "Abstract describes a simulator, policy learning, and real-world gains but does not establish that at least two policies enter one comparative real-robot evaluation panel.",
+      "criteria": {
+        "comparative_output": "unresolved",
+        "h177_relevance": "yes",
+        "multiple_candidates": "unresolved",
+        "physical_real_robot": "partial",
+        "primary_source": "yes"
+      },
+      "name": "GE-Sim 2.0",
+      "status": "unresolved_comparative_real_robot_panel"
+    },
+    {
+      "arxiv_id": "2606.10366",
+      "basis": "Abstract explicitly describes multiple VLA policies, real-world evaluation, and policy-ranking consistency across simulation and real evaluation.",
+      "criteria": {
+        "comparative_output": "yes",
+        "h177_relevance": "yes",
+        "multiple_candidates": "yes",
+        "physical_real_robot": "yes",
+        "primary_source": "yes"
+      },
+      "name": "A Practical Recipe Towards Improving Sim-and-Real Correlation for VLA Evaluation",
+      "status": "eligible"
+    },
+    {
+      "arxiv_id": "2606.10382",
+      "basis": "Known-system abstract describes standardized physical evaluation of UMI-style policies but does not by itself establish the comparative output or exact multi-policy panel.",
+      "criteria": {
+        "comparative_output": "unresolved",
+        "h177_relevance": "yes",
+        "multiple_candidates": "partial",
+        "physical_real_robot": "yes",
+        "primary_source": "yes"
+      },
+      "name": "UMI-Bench 1.0",
+      "status": "unresolved_comparative_output"
+    },
+    {
+      "arxiv_id": "2607.02642",
+      "basis": "Abstract describes matched policy rollouts and real robot executions used for systematic comparative policy-evaluator analysis.",
+      "criteria": {
+        "comparative_output": "yes",
+        "h177_relevance": "yes",
+        "multiple_candidates": "yes",
+        "physical_real_robot": "yes",
+        "primary_source": "yes"
+      },
+      "name": "GigaWorld-1 / WMBench",
+      "status": "eligible"
+    },
+    {
+      "arxiv_id": "2607.04434",
+      "basis": "Known-system abstract explicitly describes standardized physical evaluation of multiple policies and a public leaderboard.",
+      "criteria": {
+        "comparative_output": "yes",
+        "h177_relevance": "yes",
+        "multiple_candidates": "yes",
+        "physical_real_robot": "yes",
+        "primary_source": "yes"
+      },
+      "name": "RoboDojo",
+      "status": "eligible"
+    }
+  ],
+  "dispositions_sha256": "c65fca374047f36deb8e00a9600903bdbc1ee0c6272175c5912e9e333f7e4ae9",
+  "frozen_source_screening_roster": [
+    {
+      "arxiv_id": "2503.24278",
+      "basis": "Known-system title and abstract describe autonomous physical real-robot evaluation of queued user policies and comparative evaluation reports.",
+      "criteria": {
+        "comparative_output": "yes",
+        "h177_relevance": "yes",
+        "multiple_candidates": "yes",
+        "physical_real_robot": "yes",
+        "primary_source": "yes"
+      },
+      "name": "AutoEval",
+      "status": "eligible"
+    },
+    {
+      "arxiv_id": "2506.18123",
+      "basis": "Fixed positive control; title and abstract explicitly describe double-blind real-robot policy pairs aggregated into a ranking.",
+      "criteria": {
+        "comparative_output": "yes",
+        "h177_relevance": "yes",
+        "multiple_candidates": "yes",
+        "physical_real_robot": "yes",
+        "primary_source": "yes"
+      },
+      "name": "RoboArena",
+      "status": "eligible_positive_control"
+    },
+    {
+      "arxiv_id": "2605.27491",
+      "basis": "Abstract describes a simulator, policy learning, and real-world gains but does not establish that at least two policies enter one comparative real-robot evaluation panel.",
+      "criteria": {
+        "comparative_output": "unresolved",
+        "h177_relevance": "yes",
+        "multiple_candidates": "unresolved",
+        "physical_real_robot": "partial",
+        "primary_source": "yes"
+      },
+      "name": "GE-Sim 2.0",
+      "status": "unresolved_comparative_real_robot_panel"
+    },
+    {
+      "arxiv_id": "2606.10366",
+      "basis": "Abstract explicitly describes multiple VLA policies, real-world evaluation, and policy-ranking consistency across simulation and real evaluation.",
+      "criteria": {
+        "comparative_output": "yes",
+        "h177_relevance": "yes",
+        "multiple_candidates": "yes",
+        "physical_real_robot": "yes",
+        "primary_source": "yes"
+      },
+      "name": "A Practical Recipe Towards Improving Sim-and-Real Correlation for VLA Evaluation",
+      "status": "eligible"
+    },
+    {
+      "arxiv_id": "2606.10382",
+      "basis": "Known-system abstract describes standardized physical evaluation of UMI-style policies but does not by itself establish the comparative output or exact multi-policy panel.",
+      "criteria": {
+        "comparative_output": "unresolved",
+        "h177_relevance": "yes",
+        "multiple_candidates": "partial",
+        "physical_real_robot": "yes",
+        "primary_source": "yes"
+      },
+      "name": "UMI-Bench 1.0",
+      "status": "unresolved_comparative_output"
+    },
+    {
+      "arxiv_id": "2607.02642",
+      "basis": "Abstract describes matched policy rollouts and real robot executions used for systematic comparative policy-evaluator analysis.",
+      "criteria": {
+        "comparative_output": "yes",
+        "h177_relevance": "yes",
+        "multiple_candidates": "yes",
+        "physical_real_robot": "yes",
+        "primary_source": "yes"
+      },
+      "name": "GigaWorld-1 / WMBench",
+      "status": "eligible"
+    },
+    {
+      "arxiv_id": "2607.04434",
+      "basis": "Known-system abstract explicitly describes standardized physical evaluation of multiple policies and a public leaderboard.",
+      "criteria": {
+        "comparative_output": "yes",
+        "h177_relevance": "yes",
+        "multiple_candidates": "yes",
+        "physical_real_robot": "yes",
+        "primary_source": "yes"
+      },
+      "name": "RoboDojo",
+      "status": "eligible"
+    }
+  ],
+  "full_text_opened_after_freeze": false,
+  "inventory_sha256": "cf2ba71c6630c5d48068ffed591b8dbe67ba4c513e95a64da9aa54f451232092",
+  "next_stage": "h178_fixed_source_protocol_audit",
+  "outcome_fields_retained": [],
+  "paper_status_changed": false,
+  "protocol": "protocol-h177-cross-system-action-order-discovery.md",
+  "roster_frozen": true,
+  "schema": "h177-cross-system-action-order-roster-v1"
+}

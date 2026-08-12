@@ -1,0 +1,27 @@
+# PlayWorld PARTIAL recovery -- raster-extracted from arXiv:2603.09030v3 Fig. 7 (PlayWorld
+#   panel, images/experiment/correlation_new.png). Overlay proof:
+#   ../figure-playworld-extraction-overlay.png
+# PROVENANCE: raster-digitized 2026-07-21 and re-verified in-repo (r reproduces to 0.875471 on
+#   the 17 recovered points). Recorded as a PARTIAL recovery: our paper had coded PlayWorld
+#   unrecovered; this exposes 17 of the paper's stated 18 policies.
+# Visible markers=17; Pearson r=0.875471215; RMSE=0.172741250. Printed r=0.8766, RMSE=0.171.
+# Paper states 18 policies; one policy is omitted or exactly overplotted -- one point unresolved,
+#   so this near-reproduces (delta r = 0.001129) but is NOT a complete recovery.
+task_color,x_pixel,y_pixel,real_success,world_model_success
+task1_pink,1226.000000,417.467836,0.050938338,0.122070144
+task1_pink,1318.834395,410.726115,0.299824115,0.140144465
+task1_pink,1374.886957,380.431884,0.450099079,0.221362241
+task1_pink,1430.004695,372.450704,0.597867815,0.242759506
+task1_pink,1504.927746,150.069364,0.798733903,0.838956128
+task1_pink,1504.962547,201.269663,0.798827203,0.701689912
+task2_green,1225.511475,460.809836,0.049628620,0.005871753
+task2_green,1263.214286,390.512605,0.150708541,0.194336180
+task2_green,1374.500000,460.500000,0.449061662,0.006702413
+task2_green,1392.460000,297.973333,0.497211796,0.442430742
+task2_green,1449.313953,306.159884,0.649635264,0.420482885
+task3_teal,1207.028902,432.263006,0.000077485,0.082404810
+task3_teal,1319.550523,388.439024,0.301744029,0.199895377
+task3_teal,1412.101449,224.231884,0.549869837,0.640128997
+task3_teal,1449.353623,231.918841,0.649741617,0.619520535
+task3_teal,1523.500000,128.000000,0.848525469,0.898123324
+task3_teal,1579.343750,112.900568,0.998240617,0.938604375

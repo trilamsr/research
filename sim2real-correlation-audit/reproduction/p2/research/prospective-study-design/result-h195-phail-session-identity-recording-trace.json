@@ -1,0 +1,211 @@
+{
+  "dataset_content_opened": false,
+  "disposition": "session_recording_locator_created_but_not_exposed_to_writer",
+  "interpretation": "Every fixed public PhAIL server configuration activates Positronic's RecordingCodec. Each server policy reset creates a session-specific RRD artifact locator from second-resolution wall time and a process-local counter, but the recording wrapper's meta path does not expose that locator to the ready handshake or episode static writer. The locator is not a globally unique identifier or a dependence cluster.",
+  "limitations": [
+    "The audit is source-bounded to Positronic v0.2.1 and the fixed public PhAIL entry point and four backend server configurations.",
+    "Backend-internal libraries, private configuration, externally injected metadata, and opaque identifier names were not exhaustively inspected.",
+    "H193 is a fixed-vocabulary key projection and is not used as proof of general identifier absence.",
+    "The RRD locator combines second-resolution wall time with a process-local counter; uniqueness across server restarts is not established.",
+    "Zero RRD paths in the fixed public release inventory does not establish that configured server recording locations are unavailable or empty.",
+    "A WebSocket object or network endpoint is not treated as a stable application-level identifier or dependence cluster."
+  ],
+  "performance_field_opened": false,
+  "protocol_sha256": "7f67427e23442ad00394b60ed4401e24f534ca409f3476157cc3ca901cb37d87",
+  "result_exposed": true,
+  "schema": "h195-phail-session-identity-recording-trace-v3",
+  "scope": "Positronic server-recording locator in the fixed public PhAIL path only; no claim about global uniqueness, public availability of server recordings, physical reset, operator session, exchangeability cluster, backend internals, private configuration, or opaque names",
+  "source_commit": "e406176bc526babb06844a48e3627a5c0409eb74",
+  "source_exposed": true,
+  "source_records": [
+    {
+      "lines": "41-45, 96-103",
+      "path": "positronic/policy/remote.py",
+      "sha256": "787bff2df4b06a26441106ddc78ab73951d0bdd02fb34601f994b531d3809199",
+      "supports": "policy reset creates a new base inference session and meta exposes handshake metadata"
+    },
+    {
+      "lines": "13-16, 18-32, 52-54, 86-101",
+      "path": "positronic/offboard/client.py",
+      "sha256": "bd3fcb45f5ef99b62c52b644e41931b943961235a8f4227e97ab63532d892140",
+      "supports": "base session fields, ready handshake, and connection construction"
+    },
+    {
+      "lines": "123, 167-202",
+      "path": "positronic/offboard/vendor_server.py",
+      "sha256": "82d1d136f7e263b9e7b96f124ff5743ea2bafaacc1f79ae5c9d88a99055d0894",
+      "supports": "ready metadata merges server, backend, and policy dictionaries"
+    },
+    {
+      "lines": "99-115, 135-147",
+      "path": "positronic/data_collection.py",
+      "sha256": "c621b874c30eb07887d4a85ad2f32b6de1a0dd82fa80f173525209972da7255f",
+      "supports": "inspected alternate collection controller; not the PhAIL harness path"
+    },
+    {
+      "lines": "127-152",
+      "path": "positronic/dataset/episode.py",
+      "sha256": "49bd9837a07b1d0d6a3034674cf78de27bc78b907ecf67e84f1c4df659b035bc",
+      "supports": "abstract per-episode static writer contract"
+    },
+    {
+      "lines": "38-56, 189-200, 276-296",
+      "path": "positronic/dataset/ds_writer_agent.py",
+      "sha256": "40435c6a11cb8f75bb1dc79933da1ea8b47586cffa2988c3bf44756fb1fbe483",
+      "supports": "START payload is applied to the episode writer as static fields"
+    },
+    {
+      "expansion_reason": "connect reset and policy metadata to DsWriterCommand.START",
+      "lines": "64-87, 97-106",
+      "path": "positronic/policy/harness.py",
+      "sha256": "c01bd56bee3b406eefc41d01d9010464c1fed1490fdb18d3a0d2f838ae14c075",
+      "supports": "policy reset precedes START and policy meta enters the START payload"
+    },
+    {
+      "expansion_reason": "targeted re-review found the public policy composition missing",
+      "lines": "62-95, 98-122, 136-147",
+      "path": "positronic/cfg/policy.py",
+      "sha256": "6d6fb174deb25c3a65c630bffb9e71553882786a395b157f2a8c3481aa56b90b",
+      "supports": "public phail_multiple composition of four selected RemotePolicy paths"
+    },
+    {
+      "expansion_reason": "targeted re-review found selected-policy forwarding missing",
+      "lines": "45-91",
+      "path": "positronic/policy/base.py",
+      "sha256": "3119b6a01b223ca71df8e74b0cbd8619d556ab7818c9e5c38bc645687dc58cb6",
+      "supports": "SampledPolicy forwards reset and meta to the selected policy"
+    },
+    {
+      "expansion_reason": "targeted re-review found the server codec wrapper missing",
+      "lines": "47-101, 264-287, 331-454, 460-486",
+      "path": "positronic/policy/codec.py",
+      "sha256": "e164fec194d03d683dda14efe492f3720a12403b0e154568080c46d691da2ef6",
+      "supports": "server recording wrapper creates per-reset RRD locator but omits it from meta"
+    },
+    {
+      "expansion_reason": "independent challenge found the concrete emitter/receiver edge missing",
+      "lines": "116-127, 130-159, 239-248",
+      "path": "positronic/inference.py",
+      "sha256": "f0d9565b501b70ea15421d86b0e742a8c57d5c22446f57f36f9bd7cf79d43080",
+      "supports": "public PhAIL entry point connects harness emitter to writer receiver"
+    },
+    {
+      "expansion_reason": "resolve the concrete writer-agent construction",
+      "lines": "8-17, 27-55",
+      "path": "positronic/wire.py",
+      "sha256": "586baf9bd736a623fc4b19027ea05158757f4e7e474a9f73081090a992329763",
+      "supports": "constructs the DsWriterAgent returned to the inference entry point"
+    },
+    {
+      "expansion_reason": "independent challenge found the concrete serializer missing",
+      "lines": "97-133, 168-195, 228-260",
+      "path": "positronic/dataset/local_dataset.py",
+      "sha256": "e0308688d7daa43c4c27b00a5f199ed8ffc86caaf3b6b1b2cf9177adec82e493",
+      "supports": "static items are serialized to static.json"
+    },
+    {
+      "expansion_reason": "inspect every public PhAIL backend metadata producer",
+      "lines": "25-77, 93-118",
+      "path": "positronic/vendors/lerobot_0_3_3/server.py",
+      "sha256": "78d7956587d8a5db54a088015f59f41a42f6d0cd30d3a2eda76534dcd3815861",
+      "supports": "ACT public PhAIL server metadata producer"
+    },
+    {
+      "expansion_reason": "inspect every public PhAIL backend metadata producer",
+      "lines": "19-60, 76-85",
+      "path": "positronic/vendors/lerobot/server.py",
+      "sha256": "6fe568b46b314f5313b547ef33c93b62631d190ae225275b58a3b4464a70e6a9",
+      "supports": "SmolVLA public PhAIL server metadata producer"
+    },
+    {
+      "expansion_reason": "inspect every public PhAIL backend metadata producer",
+      "lines": "258-341, 358-386",
+      "path": "positronic/vendors/gr00t/server.py",
+      "sha256": "4599a131688471860e783d962ddb5a9dd76f9c28d8d8c553de1ba260e8598fbf",
+      "supports": "GR00T public PhAIL server metadata producer"
+    },
+    {
+      "expansion_reason": "inspect every public PhAIL backend metadata producer",
+      "lines": "159-171, 179-248, 274-325",
+      "path": "positronic/vendors/openpi/server.py",
+      "sha256": "a4f2b5d383044ad6b7436d1d56a0473c2de43f93c5b39bb024c809fa7a83cd6b",
+      "supports": "OpenPI public PhAIL server metadata producer"
+    }
+  ],
+  "supersedes_unrelied_candidate_sha256": [
+    "09baa38178bb78cd9ea57af9ba8d51a82e21119b7061422fa4cd23b22bc340c4",
+    "1d92fefc04e1e6d99f690c2e29993d4a7b99317ff4174e8300ba51383fcbbf73"
+  ],
+  "trace": {
+    "episode_static_fields_serialized_to_static_json": true,
+    "fixed_phail_backend_results": [
+      {
+        "identifier_generators": [],
+        "identifier_names": [],
+        "phail_recording_directory": "s3://inference/phail_unified/server_recordings/lerobot/270226-ee/",
+        "policy": "ACT",
+        "public_wrapper": "main",
+        "public_wrapper_accepts_metadata": false,
+        "source_path": "positronic/vendors/lerobot_0_3_3/server.py"
+      },
+      {
+        "identifier_generators": [],
+        "identifier_names": [],
+        "phail_recording_directory": "s3://inference/phail_unified/server_recordings/smolvla/170316_ee/",
+        "policy": "SmolVLA",
+        "public_wrapper": "main",
+        "public_wrapper_accepts_metadata": false,
+        "source_path": "positronic/vendors/lerobot/server.py"
+      },
+      {
+        "identifier_generators": [],
+        "identifier_names": [],
+        "phail_recording_directory": "s3://inference/phail_unified/server_recordings/groot/270226-ee_rot6d_rel/",
+        "policy": "GR00T",
+        "public_wrapper": "server",
+        "public_wrapper_accepts_metadata": false,
+        "source_path": "positronic/vendors/gr00t/server.py"
+      },
+      {
+        "identifier_generators": [],
+        "identifier_names": [],
+        "phail_recording_directory": "s3://inference/phail_unified/server_recordings/openpi/270226-ee/",
+        "policy": "OpenPI",
+        "public_wrapper": "server",
+        "public_wrapper_accepts_metadata": false,
+        "source_path": "positronic/vendors/openpi/server.py"
+      }
+    ],
+    "fixed_roster_explicit_identifier_observations": {
+      "identifier_generators": [],
+      "identifier_names": []
+    },
+    "h190_safe_projection_sha256": "6350af0ce19ce1cea88c8f3c2613873c3e3624e47e0cfde5c02fbaa1506d98e1",
+    "harness_emitter_connected_to_writer_receiver": true,
+    "inference_session_assigned_fields": [
+      "_metadata",
+      "_websocket"
+    ],
+    "new_base_inference_session_per_policy_reset": true,
+    "out_of_roster_dreamzero_counterexample": {
+      "identifier_generators": [
+        "uuid.uuid4"
+      ],
+      "identifier_names": [
+        "session_id"
+      ],
+      "source_path": "positronic/vendors/dreamzero/server.py"
+    },
+    "policy_reset_precedes_episode_start": true,
+    "public_release_inventory_object_count": 14361,
+    "public_release_rrd_path_count": 0,
+    "ready_handshake_metadata_enters_policy_meta": true,
+    "runtime_holder": "InferenceSession wrapping a WebSocket connection",
+    "sampled_policy_forwards_selected_reset_and_meta": true,
+    "server_recording_locator_exposed_by_meta": false,
+    "server_recording_locator_pattern": "{YYMMDD_HHMMSS}_{process_local_counter:04d}.rrd",
+    "server_recording_locator_uniqueness": "process-local counter plus second-resolution wall time; cross-restart uniqueness not established",
+    "server_recording_wrapper_enabled_for_all_four_backends": true,
+    "start_payload_applied_as_episode_static_fields": true
+  }
+}

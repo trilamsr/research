@@ -1,0 +1,26 @@
+{
+  "absolute_tolerance": 1e-12,
+  "classification_confirmed": "complete_initial_joint_state_reconstruction",
+  "duckdb_version": "1.4.3",
+  "fixed_summary_confirmed": true,
+  "integrity": {
+    "episode_count": 594,
+    "source_object_count": 1188,
+    "total_source_bytes": 1957430362,
+    "unique_source_sha256_count": 1188
+  },
+  "later_rows_summarized": false,
+  "maximum_absolute_summary_difference": 4.440892098500626e-16,
+  "method": "independent exact-path selector, full local source hash verification, DuckDB first-row Parquet reads, and DuckDB SQL summaries",
+  "producer_result_sha256": "4e60b6c6cbc0eabcaf4ae7761119b5af89bbaf6707e53cce8f0ec3c227a96043",
+  "projection_exactly_confirmed": true,
+  "projection_sha256": "44b7cd9729c691a610cc1fbbefffc5668d31030e013b92f2d4550f9869020370",
+  "result": "pass",
+  "schema": "h202-duckdb-independent-challenge-v1",
+  "source_manifest_sha256": "f6e780118148eef7c779969c3bd7ce499fd771dc38e86c85d6116de6ed1d1b55",
+  "synthetic_controls": {
+    "first_row_not_later_sentinel": true,
+    "linear_quantiles": true,
+    "population_standard_deviation": true
+  }
+}

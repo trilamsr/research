@@ -1,0 +1,236 @@
+{
+  "classification": "scale_separated_clock_offset_regimes",
+  "clock_offset": {
+    "largest_adjacent_gap_ns": 1556979984990940,
+    "largest_to_second_gap_ratio": 3056956.8767592097,
+    "maximum_ns": 1774181381582367075,
+    "minimum_ns": 1772624400588359039,
+    "second_largest_adjacent_gap_ns": 509323503,
+    "span_ns": 1556980994008036
+  },
+  "cohort_sha256": "ad43fca1da065a1cb7fd84dfa9afc5691c72ebe12e7f165c68a0050e51e87ebe",
+  "confirmatory_claim_authorized": false,
+  "dependence_cluster_established": false,
+  "episode_count": 594,
+  "exposure_record_sha256": "218e498c9ea151f20354f01a139cdbb822718c4e5c50a657ddd4527e77f053df",
+  "h202_projection_sha256": "44b7cd9729c691a610cc1fbbefffc5668d31030e013b92f2d4550f9869020370",
+  "h202_result_sha256": "4e60b6c6cbc0eabcaf4ae7761119b5af89bbaf6707e53cce8f0ec3c227a96043",
+  "host_or_session_identity_established": false,
+  "monotonic_timestamp": {
+    "maximum_ns": 1401703063581732,
+    "minimum_ns": 80945138961853,
+    "span_ns": 1320757924619879,
+    "unique_count": 594
+  },
+  "one_hour_groups": [
+    {
+      "contiguous_in_episode_id_order": true,
+      "contiguous_in_wall_clock_order": true,
+      "created_ts_max_ns": 1774026103719660646,
+      "created_ts_min_ns": 1772705345768891765,
+      "episode_count": 250,
+      "group_1h": 1,
+      "maximum_elapsed_time_discrepancy_ns": 41570873,
+      "monotonic_ts_max_ns": 1401703063581732,
+      "monotonic_ts_min_ns": 80945138961853,
+      "offset_max_ns": 1772624400660588300,
+      "offset_min_ns": 1772624400588359039,
+      "offset_span_ns": 72229261,
+      "policy_counts": {
+        "act": 107,
+        "groot": 18,
+        "openpi": 81,
+        "smolvla": 44
+      },
+      "utc_date_counts": {
+        "2026-03-05": 24,
+        "2026-03-06": 26,
+        "2026-03-10": 35,
+        "2026-03-13": 33,
+        "2026-03-17": 23,
+        "2026-03-19": 39,
+        "2026-03-20": 70
+      },
+      "wall_monotonic_discordant_pairs": 0,
+      "wall_monotonic_kendall_tau_a": 1.0
+    },
+    {
+      "contiguous_in_episode_id_order": false,
+      "contiguous_in_wall_clock_order": true,
+      "created_ts_max_ns": 1775296095171901998,
+      "created_ts_min_ns": 1774342697081461155,
+      "episode_count": 344,
+      "group_1h": 2,
+      "maximum_elapsed_time_discrepancy_ns": 904113985,
+      "monotonic_ts_max_ns": 1114713993302639,
+      "monotonic_ts_min_ns": 161315531767930,
+      "offset_max_ns": 1774181381582367075,
+      "offset_min_ns": 1774181380645579240,
+      "offset_span_ns": 936787835,
+      "policy_counts": {
+        "act": 44,
+        "groot": 146,
+        "openpi": 82,
+        "smolvla": 72
+      },
+      "utc_date_counts": {
+        "2026-03-24": 71,
+        "2026-03-25": 82,
+        "2026-03-27": 47,
+        "2026-03-29": 74,
+        "2026-04-03": 52,
+        "2026-04-04": 18
+      },
+      "wall_monotonic_discordant_pairs": 0,
+      "wall_monotonic_kendall_tau_a": 1.0
+    }
+  ],
+  "performance_or_later_state_opened": false,
+  "projection_rows": 594,
+  "projection_sha256": "7b7af23688e230325ec69070c8e5cd5523224990d7bc44defbe5b30f12c65529",
+  "protocol_sha256": "237973d8545c5eadd37d34e6bfc09d6439950746d4f9b19f6b6d738c50ba2c7b",
+  "schema": "h206-phail-monotonic-wall-clock-bridge-v1",
+  "source_trace": {
+    "controls": {
+      "episode_creation_is_wall_time_ns": true,
+      "real_inference_uses_clock_mode": true,
+      "real_inference_uses_default_world": true,
+      "robot_state_signal_binding": true,
+      "system_clock_is_monotonic_ns": true,
+      "world_defaults_to_system_clock": true,
+      "writer_primary_time_is_world_clock": true
+    },
+    "revision": "e406176bc526babb06844a48e3627a5c0409eb74",
+    "semantic_trace_complete": true,
+    "source_mode": "hash-bound v0.2.1 source projection",
+    "source_sha256": {
+      "pimm/world.py": "cca1fbe28cd69adef15dac7c7c8a7b30386bcf9cf06d8c943b8c2d1736c5560f",
+      "positronic/dataset/ds_writer_agent.py": "40435c6a11cb8f75bb1dc79933da1ea8b47586cffa2988c3bf44756fb1fbe483",
+      "positronic/dataset/local_dataset.py": "e0308688d7daa43c4c27b00a5f199ed8ffc86caaf3b6b1b2cf9177adec82e493",
+      "positronic/inference.py": "f0d9565b501b70ea15421d86b0e742a8c57d5c22446f57f36f9bd7cf79d43080",
+      "positronic/wire.py": "586baf9bd736a623fc4b19027ea05158757f4e7e474a9f73081090a992329763"
+    }
+  },
+  "status": "result_exposed_exploratory",
+  "synthetic_controls": {
+    "contiguity_known_answer": true,
+    "integer_offsets": true,
+    "kendall_known_answer": true,
+    "stable_sort": true,
+    "strict_threshold_boundary": true
+  },
+  "threshold_sensitivity": {
+    "0.001s": {
+      "group_count": 26,
+      "sorted_group_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        4,
+        6,
+        9,
+        235,
+        313
+      ],
+      "threshold_ns": 1000000
+    },
+    "0.01s": {
+      "group_count": 8,
+      "sorted_group_sizes": [
+        1,
+        1,
+        1,
+        1,
+        10,
+        17,
+        249,
+        314
+      ],
+      "threshold_ns": 10000000
+    },
+    "0.1s": {
+      "group_count": 4,
+      "sorted_group_sizes": [
+        1,
+        18,
+        250,
+        325
+      ],
+      "threshold_ns": 100000000
+    },
+    "10s": {
+      "group_count": 2,
+      "sorted_group_sizes": [
+        250,
+        344
+      ],
+      "threshold_ns": 10000000000
+    },
+    "1s": {
+      "group_count": 2,
+      "sorted_group_sizes": [
+        250,
+        344
+      ],
+      "threshold_ns": 1000000000
+    },
+    "21600s": {
+      "group_count": 2,
+      "sorted_group_sizes": [
+        250,
+        344
+      ],
+      "threshold_ns": 21600000000000
+    },
+    "3600s": {
+      "group_count": 2,
+      "sorted_group_sizes": [
+        250,
+        344
+      ],
+      "threshold_ns": 3600000000000
+    },
+    "600s": {
+      "group_count": 2,
+      "sorted_group_sizes": [
+        250,
+        344
+      ],
+      "threshold_ns": 600000000000
+    },
+    "60s": {
+      "group_count": 2,
+      "sorted_group_sizes": [
+        250,
+        344
+      ],
+      "threshold_ns": 60000000000
+    },
+    "86400s": {
+      "group_count": 2,
+      "sorted_group_sizes": [
+        250,
+        344
+      ],
+      "threshold_ns": 86400000000000
+    }
+  }
+}

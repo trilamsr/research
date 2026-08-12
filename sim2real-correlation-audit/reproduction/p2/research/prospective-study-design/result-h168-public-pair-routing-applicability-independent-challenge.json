@@ -1,0 +1,104 @@
+{
+  "schema": "h168-public-pair-routing-applicability-independent-challenge-v1",
+  "challenge_runtime": "v26.5.0",
+  "producer_modules_imported": false,
+  "protocol_sha256": "b891a7a88ae7c3b096df74f5b56d1cb826edf937951eedc245f258594c3e92c2",
+  "source_hashes": {
+    "assignment_context": "ebca1a0705aef78ed193bd59f9a3014438b15d86774df4441b45a4fafd04990d",
+    "assignment_regimes": "7cfa2741c97d9b476eb913d722ec6676c7bbbffc35f90a57658bac8b7310fe51",
+    "dataset_card_recall": "f6fd56abf2381f941fd874ca6d1b5a206679805453ba53dc9fe00f8d0eb09f55",
+    "h165_target": "a3c8ab98e4779efa0372cf29b4da87537388545d54784189b957b520f9fb6a63",
+    "h166_challenge": "274f08586fceb98c0f444581f543ce9694e67b4756f4aebda546310530a3dec0",
+    "paper_protocol": "8193ea6faa06f60ace867dfa4e3cbda1d370cf9c63025e8db92af1debc1b415d",
+    "ranking_semantics": "57b1c7c8ccf49f1939c616392c402dbccdde2c88849d3e6051111e070b5d1870",
+    "release_challenge": "24ea3ab0c78121d4f55eb19f81cbd2ca50927a57b4e842f56dfd261d5712007c"
+  },
+  "h167_result_sha256": "09934aae0641d156ef7ab68d10c82319e2d6a52e42c149847db48f27ea8e4090",
+  "outcome_fields_accessed_or_used": false,
+  "independently_reconstructed_status_vector": [
+    "absent",
+    "available",
+    "absent",
+    "paper_described_only",
+    "absent",
+    "absent",
+    "absent",
+    "absent",
+    "paper_described_only",
+    "absent",
+    "absent",
+    "available",
+    "partial",
+    "contradicted_by_public_record",
+    "partial"
+  ],
+  "required_unit_ids": [
+    1,
+    3,
+    5,
+    6,
+    7,
+    8,
+    10,
+    11,
+    13,
+    14,
+    15
+  ],
+  "failed_required_unit_ids": [
+    1,
+    3,
+    5,
+    6,
+    7,
+    8,
+    10,
+    11,
+    13,
+    14,
+    15
+  ],
+  "failed_required_unit_count": 11,
+  "public_action_mismatch": true,
+  "semantic_attacks": [
+    {
+      "id": "paper_random_sampling_identifies_current_deployed_law",
+      "rejected": true,
+      "reason": "paper protocol and current deployed implementation are distinct evidence units"
+    },
+    {
+      "id": "global_leaderboard_is_within_pair_routing_action",
+      "rejected": true,
+      "reason": "the public ranking action differs from H165's within-pair action"
+    },
+    {
+      "id": "paper_matched_conditions_identify_stable_future_Gab",
+      "rejected": true,
+      "reason": "within-comparison matching does not identify a stable future context law"
+    },
+    {
+      "id": "dataset_cards_supply_assignment_weights",
+      "rejected": true,
+      "reason": "the three immutable cards provide no assignment-language candidate window"
+    },
+    {
+      "id": "cumulative_complete_graph_proves_current_complete_support",
+      "rejected": true,
+      "reason": "the cumulative and newest-increment support states differ"
+    },
+    {
+      "id": "roster_and_assignment_epochs_pool_without_bridge",
+      "rejected": true,
+      "reason": "the prior outcome-free topology audit requires segmentation or a bridge"
+    },
+    {
+      "id": "aggregate_session_counts_are_cluster_valid_assignment_export",
+      "rejected": true,
+      "reason": "aggregate structure is not a retained session-level assignment export"
+    }
+  ],
+  "attacks_rejected": 7,
+  "decision": "not_qualified_for_public_pair_routing_application",
+  "disposition": "pass_with_scope",
+  "scope": "Independent outcome-free challenge of current public applicability only; not benchmark invalidity, assignment intent, outcome dependence, field authorization, or prospective impossibility."
+}

@@ -1,0 +1,56 @@
+{
+  "schema": "h238-interior-route-law-independent-challenge-v1",
+  "status": "pass",
+  "classification": "relative_open_within_additive_shared_success_model",
+  "method": "exact Node BigInt rational census; no Python import or execution",
+  "denominator": 5,
+  "rows": [
+    {
+      "k": 3,
+      "profiles": 21,
+      "interior_profiles": 15,
+      "boundary_profiles": 6
+    },
+    {
+      "k": 4,
+      "profiles": 56,
+      "interior_profiles": 35,
+      "boundary_profiles": 21
+    },
+    {
+      "k": 5,
+      "profiles": 126,
+      "interior_profiles": 70,
+      "boundary_profiles": 56
+    },
+    {
+      "k": 6,
+      "profiles": 252,
+      "interior_profiles": 126,
+      "boundary_profiles": 126
+    }
+  ],
+  "total_profiles": 455,
+  "interior_profiles": 246,
+  "boundary_profiles": 209,
+  "interior_unique_winner_checks": 1291,
+  "boundary_minimum_policy_exclusions": 329,
+  "regret_formula_vertex_checks": 1365,
+  "pair_interval_known_answers": 5,
+  "mutation_controls_rejected": 4,
+  "mutation_controls_rejected_names": [
+    "remove_p_dot_a_from_regret",
+    "replace_D_lt_1_with_D_le_1",
+    "replace_interval_width_half_with_two_fifths",
+    "claim_boundary_minimum_is_unique_winner"
+  ],
+  "runtime": {
+    "node": "v26.5.0",
+    "platform": "darwin",
+    "architecture": "arm64"
+  },
+  "protocol_sha256": "d6400e8c1025a6ca1a595047ce827ea486a10f553216775f7dfc49244eed14ef",
+  "repair_protocol_sha256": "bcd946c2a96bf1d4ecbc0331f632ff8bcdda4c1e4c87a671288a7c11d58c6dc0",
+  "producer_sha256": "d6cdd9053b36f7733d16c4f34ef1cb1a63fb4dce77af1700d3d7e6c19a1a6eb0",
+  "producer_result_sha256": "e0f51668896751dfca2ff7e888f832d2d61ae0ad9e53360f1a6bbcba6e1c2619"
+}

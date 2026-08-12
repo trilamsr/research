@@ -1,0 +1,74 @@
+{
+  "analyses": {
+    "pooled_within_regime": {
+      "adjacent_pair_count": 592,
+      "analytic_exchangeability_expectation": 0.3062319296040226,
+      "lower_tail_p": 1.0,
+      "observed_minus_permutation_median": 0.08614864864864863,
+      "observed_same_policy_adjacency_fraction": 0.3918918918918919,
+      "permutation_median": 0.30574324324324326,
+      "permutation_q025": 0.2719594594594595,
+      "permutation_q975": 0.34121621621621623,
+      "permutations": 49999,
+      "two_sided_p": 4e-05,
+      "upper_tail_p": 2e-05
+    },
+    "regime_1": {
+      "adjacent_pair_count": 249,
+      "analytic_exchangeability_expectation": 0.3216064257028112,
+      "episode_count": 250,
+      "lower_tail_p": 1.0,
+      "observed_minus_permutation_median": 0.1646586345381526,
+      "observed_same_policy_adjacency_fraction": 0.4859437751004016,
+      "permutation_median": 0.321285140562249,
+      "permutation_q025": 0.26907630522088355,
+      "permutation_q975": 0.37751004016064255,
+      "permutations": 49999,
+      "two_sided_p": 4e-05,
+      "upper_tail_p": 2e-05
+    },
+    "regime_2": {
+      "adjacent_pair_count": 343,
+      "analytic_exchangeability_expectation": 0.29507085226117025,
+      "episode_count": 344,
+      "lower_tail_p": 0.9025,
+      "observed_minus_permutation_median": 0.029154518950437303,
+      "observed_same_policy_adjacency_fraction": 0.3236151603498542,
+      "permutation_median": 0.2944606413994169,
+      "permutation_q025": 0.25072886297376096,
+      "permutation_q975": 0.34110787172011664,
+      "permutations": 49999,
+      "two_sided_p": 0.23864,
+      "upper_tail_p": 0.11932
+    }
+  },
+  "classification": "regime_specific_or_small_policy_sequence_structure",
+  "decision_consequence": "Material ordered-label structure would require explicit assignment/block metadata before treating policy observations as exchangeable along chronology. A bounded null would close only this fixed adjacency diagnostic.",
+  "episode_count": 594,
+  "input_sha256": {
+    "projection-h206-phail-clock-offset-regimes.csv": "7b7af23688e230325ec69070c8e5cd5523224990d7bc44defbe5b30f12c65529",
+    "result-h187-phail-context-support-sanitized.csv": "ad43fca1da065a1cb7fd84dfa9afc5691c72ebe12e7f165c68a0050e51e87ebe",
+    "result-h206-phail-monotonic-wall-clock-bridge-independent-challenge.json": "6867989afb5a2c9938ee08126defa647b7a20b26f8c48f42a7d13cc5a4787268",
+    "result-h206-phail-monotonic-wall-clock-bridge.json": "1b46e77400b15ecd886d165f13fca06b3f6834a0cc4f70082da4be4a39f51e19",
+    "result-h208-phail-clock-regime-date-identifiability-independent-challenge.json": "36c2853d9193cf5ba2e752aeb03e652c96955aed59d1b7c3b6dba7e5289a3fa9",
+    "result-h208-phail-clock-regime-date-identifiability.json": "df6c42066f26c7bbd69be25d01ef0d72517f2546c0a1d02d129b6fdc8b6981db"
+  },
+  "outcome_analysis_authorized": false,
+  "pcg64_seed": "333870927161173617624855665480817134261",
+  "permutation_reference_treated_as_assignment_law": false,
+  "permutations": 49999,
+  "protocol_sha256": "2aec4f7739c85ad03f3af056d1191c3f6450038ca3de18ec331e4df68bb25a6e",
+  "scheduler_or_cause_identified": false,
+  "schema": "h209-phail-within-regime-policy-sequence-v1",
+  "seed_text": "H209 PhAIL within-regime policy sequence v1",
+  "state_or_performance_opened": false,
+  "status": "result_exposed_exploratory",
+  "synthetic_controls": {
+    "alternating_zero": true,
+    "analytic_matches_enumeration": true,
+    "blocked_exceeds_alternating": true,
+    "constant_one": true,
+    "deterministic_replay": true,
+    "restricted_membership": true
+  }
+}

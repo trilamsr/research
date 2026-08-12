@@ -1,0 +1,133 @@
+{
+  "coverage_scope": "inherits only the joint coverage and sampling-unit validity of the supplied edge intervals; no public-system performance outcome analyzed",
+  "environment": {
+    "numpy": "2.0.2",
+    "python": "3.12.13",
+    "scipy": "1.13.1"
+  },
+  "implementation_sha256": "854efc09e6c045f7b1aed8a7e6f3a09ab0395094cf45ceca15c8de067399a3f8",
+  "known_answers": {
+    "connected_point_case": {
+      "certified_unique_winners": [
+        0
+      ],
+      "minimax_half_credit_regret": 0.0,
+      "minimax_lottery": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "possible_winners": [
+        0
+      ],
+      "target_difference_bounds": {
+        "0-1": {
+          "lower": 0.3,
+          "upper": 0.3
+        },
+        "0-2": {
+          "lower": 0.6,
+          "upper": 0.6
+        },
+        "1-2": {
+          "lower": 0.3,
+          "upper": 0.3
+        }
+      }
+    },
+    "connected_wider_case": {
+      "certified_unique_winners": [
+        0
+      ],
+      "minimax_half_credit_regret": 0.0,
+      "minimax_lottery": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "possible_winners": [
+        0
+      ],
+      "target_difference_bounds": {
+        "0-1": {
+          "lower": 0.2,
+          "upper": 0.4000000000000001
+        },
+        "0-2": {
+          "lower": 0.4,
+          "upper": 0.8
+        },
+        "1-2": {
+          "lower": 0.2,
+          "upper": 0.4
+        }
+      }
+    },
+    "disconnected_point_case": {
+      "certified_unique_winners": [],
+      "minimax_half_credit_regret": 0.20588235294117646,
+      "minimax_lottery": [
+        0.5882352941176471,
+        0.0,
+        0.4117647058823529
+      ],
+      "possible_winners": [
+        0,
+        2
+      ],
+      "target_difference_bounds": {
+        "0-1": {
+          "lower": 0.3,
+          "upper": 0.3
+        },
+        "0-2": {
+          "lower": -0.7,
+          "upper": 1.0
+        },
+        "1-2": {
+          "lower": -1.0,
+          "upper": 0.7
+        }
+      }
+    },
+    "h233_point_case": {
+      "certified_unique_winners": [],
+      "minimax_half_credit_regret": 0.08333333333333331,
+      "minimax_lottery": [
+        0.6666666666666667,
+        0.0,
+        0.3333333333333333
+      ],
+      "possible_winners": [
+        0,
+        2
+      ],
+      "target_difference_bounds": {
+        "0-1": {
+          "lower": 0.25,
+          "upper": 0.25
+        },
+        "0-2": {
+          "lower": -0.25,
+          "upper": 0.5
+        },
+        "1-2": {
+          "lower": -0.5,
+          "upper": 0.25
+        }
+      }
+    },
+    "hoeffding_example": {
+      "alpha": 0.05,
+      "difference_interval": [
+        -0.031078205967773997,
+        0.631078205967774
+      ],
+      "edge_count": 6,
+      "mean_half_credit": 0.65,
+      "n": 100
+    }
+  },
+  "protocol_sha256": "1f4a72b08ac07eb647815c98c755f4424196ae87fc9555fbc378b8303e41713d",
+  "schema": "h250-finite-sample-route-graph-v1"
+}

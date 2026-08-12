@@ -1,0 +1,115 @@
+{
+  "schema": "h201-phail-home-field-semantics-independent-challenge-v1",
+  "method": "Independent Node full-tree exact-string census plus separately implemented producer-to-static-sink trace; imports no producer module.",
+  "revision": "e406176bc526babb06844a48e3627a5c0409eb74",
+  "inventory": {
+    "hit_counts": {
+      "joint_names": 40,
+      "joint_signal": 14,
+      "pose_signals": 8
+    },
+    "paths_by_candidate": {
+      "joint_names": [
+        "positronic/cfg/ds/internal.py",
+        "positronic/drivers/roboarm/franka.py",
+        "positronic/drivers/roboarm/ik.py",
+        "positronic/drivers/roboarm/kinematics.py",
+        "positronic/drivers/roboarm/so101/driver.py",
+        "positronic/drivers/roboarm/tests/test_ik.py",
+        "positronic/policy/tests/test_harness.py",
+        "positronic/server/dataset_utils.py",
+        "positronic/simulator/mujoco/sim.py"
+      ],
+      "joint_signal": [
+        "positronic/cfg/ds/internal.py",
+        "positronic/policy/tests/test_harness.py",
+        "positronic/server/dataset_utils.py",
+        "positronic/wire.py"
+      ],
+      "pose_signals": [
+        "positronic/cfg/ds/internal.py",
+        "positronic/server/dataset_utils.py",
+        "positronic/wire.py"
+      ]
+    },
+    "union_paths": [
+      "positronic/cfg/ds/internal.py",
+      "positronic/drivers/roboarm/franka.py",
+      "positronic/drivers/roboarm/ik.py",
+      "positronic/drivers/roboarm/kinematics.py",
+      "positronic/drivers/roboarm/so101/driver.py",
+      "positronic/drivers/roboarm/tests/test_ik.py",
+      "positronic/policy/tests/test_harness.py",
+      "positronic/server/dataset_utils.py",
+      "positronic/simulator/mujoco/sim.py",
+      "positronic/wire.py"
+    ]
+  },
+  "units": [
+    {
+      "key": "joint_names",
+      "value_class": "array_of_revolute_joint_name_strings_from_robot_urdf",
+      "behavior": "static_robot_model_metadata_emitted_at_driver_start",
+      "semantic_class": "schema_descriptor",
+      "realized_home_target_present": false,
+      "rng_identity_present": false
+    },
+    {
+      "key": "joint_signal",
+      "value_class": "constant_signal_name_string",
+      "behavior": "fixed_static_visualization_role",
+      "semantic_class": "schema_descriptor",
+      "realized_home_target_present": false,
+      "rng_identity_present": false
+    },
+    {
+      "key": "pose_signals",
+      "value_class": "constant_array_of_pose_signal_name_strings",
+      "behavior": "fixed_static_visualization_roles",
+      "semantic_class": "schema_descriptor",
+      "realized_home_target_present": false,
+      "rng_identity_present": false
+    }
+  ],
+  "classification": "generic_signal_schema_not_home_draw",
+  "attacks": [
+    {
+      "attack": "joint_names_are_joint_positions",
+      "rejected": true
+    },
+    {
+      "attack": "joint_signal_name_is_signal_samples",
+      "rejected": true
+    },
+    {
+      "attack": "pose_signal_names_are_pose_samples",
+      "rejected": true
+    },
+    {
+      "attack": "all_episode_presence_is_per_reset_variation",
+      "rejected": true
+    },
+    {
+      "attack": "random_target_in_same_driver_is_serialized_metadata",
+      "rejected": true
+    },
+    {
+      "attack": "static_item_is_necessarily_realized_value",
+      "rejected": true
+    },
+    {
+      "attack": "visualization_role_is_reset_evidence",
+      "rejected": true
+    },
+    {
+      "attack": "tagged_source_proves_historical_execution",
+      "rejected": true
+    },
+    {
+      "attack": "candidate_keys_require_value_opening_after_source_null",
+      "rejected": true
+    }
+  ],
+  "disposition": "pass_with_scope",
+  "scope": "source-defined schema semantics only; no sidecar values, trajectories, physical-reset, historical-execution, exchangeability, or performance claim"
+}

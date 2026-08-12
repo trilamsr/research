@@ -1,0 +1,1007 @@
+{
+  "checked_k_count": 30,
+  "checked_k_max": 32,
+  "checked_k_min": 3,
+  "closed_forms": {
+    "added_policy_value": "(K-3)/(2K)",
+    "cross_world_extreme_regret": "1/K",
+    "high_core_values": [
+      "(K-1)/K",
+      "(K-3/2)/K",
+      "(K-2)/K"
+    ],
+    "low_core_values": [
+      "(K-2)/K",
+      "(K-3/2)/K",
+      "(K-1)/K"
+    ],
+    "pair_conditioned_core_value": "(K-3/2)/K",
+    "weakest_core_minus_added": "(K-1)/(2K)"
+  },
+  "complete_pair_support_identifies_common_context_winner": false,
+  "construction": {
+    "added_policy_rule": "core always beats added; added pairs tie",
+    "complete_pair_support": true,
+    "core_high_common_edge": {
+      "decimal": 0.75,
+      "denominator": 4,
+      "numerator": 3,
+      "text": "3/4"
+    },
+    "core_low_common_edge": {
+      "decimal": 0.25,
+      "denominator": 4,
+      "numerator": 1,
+      "text": "1/4"
+    },
+    "core_observed_edge": {
+      "decimal": 0.5,
+      "denominator": 2,
+      "numerator": 1,
+      "text": "1/2"
+    },
+    "core_policies": [
+      0,
+      1,
+      2
+    ]
+  },
+  "for_every_integer_k_ge_3_there_exists_this_construction": true,
+  "opposite_unique_common_context_winners_for_every_finite_k_ge_3": true,
+  "pair_conditioned_winner_set": [
+    0,
+    1,
+    2
+  ],
+  "protocol_sha256": "a9cca1a07d8a904e876a6760064b7a9d0853d8e280b2ee11cb47246fb5fc0e49",
+  "same_observed_law_for_all_pairs": true,
+  "sample_checks": {
+    "3": {
+      "cross_world_extreme_regret": {
+        "decimal": 0.3333333333333333,
+        "denominator": 3,
+        "numerator": 1,
+        "text": "1/3"
+      },
+      "high_unique_winner": 0,
+      "high_values": [
+        {
+          "decimal": 0.6666666666666666,
+          "denominator": 3,
+          "numerator": 2,
+          "text": "2/3"
+        },
+        {
+          "decimal": 0.5,
+          "denominator": 2,
+          "numerator": 1,
+          "text": "1/2"
+        },
+        {
+          "decimal": 0.3333333333333333,
+          "denominator": 3,
+          "numerator": 1,
+          "text": "1/3"
+        }
+      ],
+      "k": 3,
+      "low_unique_winner": 2,
+      "low_values": [
+        {
+          "decimal": 0.3333333333333333,
+          "denominator": 3,
+          "numerator": 1,
+          "text": "1/3"
+        },
+        {
+          "decimal": 0.5,
+          "denominator": 2,
+          "numerator": 1,
+          "text": "1/2"
+        },
+        {
+          "decimal": 0.6666666666666666,
+          "denominator": 3,
+          "numerator": 2,
+          "text": "2/3"
+        }
+      ],
+      "pair_assignment_probability": {
+        "decimal": 0.3333333333333333,
+        "denominator": 3,
+        "numerator": 1,
+        "text": "1/3"
+      },
+      "pair_conditioned_values": [
+        {
+          "decimal": 0.5,
+          "denominator": 2,
+          "numerator": 1,
+          "text": "1/2"
+        },
+        {
+          "decimal": 0.5,
+          "denominator": 2,
+          "numerator": 1,
+          "text": "1/2"
+        },
+        {
+          "decimal": 0.5,
+          "denominator": 2,
+          "numerator": 1,
+          "text": "1/2"
+        }
+      ],
+      "pair_conditioned_winner_set": [
+        0,
+        1,
+        2
+      ],
+      "pair_count": 3
+    },
+    "32": {
+      "cross_world_extreme_regret": {
+        "decimal": 0.03125,
+        "denominator": 32,
+        "numerator": 1,
+        "text": "1/32"
+      },
+      "high_unique_winner": 0,
+      "high_values": [
+        {
+          "decimal": 0.96875,
+          "denominator": 32,
+          "numerator": 31,
+          "text": "31/32"
+        },
+        {
+          "decimal": 0.953125,
+          "denominator": 64,
+          "numerator": 61,
+          "text": "61/64"
+        },
+        {
+          "decimal": 0.9375,
+          "denominator": 16,
+          "numerator": 15,
+          "text": "15/16"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        }
+      ],
+      "k": 32,
+      "low_unique_winner": 2,
+      "low_values": [
+        {
+          "decimal": 0.9375,
+          "denominator": 16,
+          "numerator": 15,
+          "text": "15/16"
+        },
+        {
+          "decimal": 0.953125,
+          "denominator": 64,
+          "numerator": 61,
+          "text": "61/64"
+        },
+        {
+          "decimal": 0.96875,
+          "denominator": 32,
+          "numerator": 31,
+          "text": "31/32"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        }
+      ],
+      "pair_assignment_probability": {
+        "decimal": 0.0020161290322580645,
+        "denominator": 496,
+        "numerator": 1,
+        "text": "1/496"
+      },
+      "pair_conditioned_values": [
+        {
+          "decimal": 0.953125,
+          "denominator": 64,
+          "numerator": 61,
+          "text": "61/64"
+        },
+        {
+          "decimal": 0.953125,
+          "denominator": 64,
+          "numerator": 61,
+          "text": "61/64"
+        },
+        {
+          "decimal": 0.953125,
+          "denominator": 64,
+          "numerator": 61,
+          "text": "61/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        },
+        {
+          "decimal": 0.453125,
+          "denominator": 64,
+          "numerator": 29,
+          "text": "29/64"
+        }
+      ],
+      "pair_conditioned_winner_set": [
+        0,
+        1,
+        2
+      ],
+      "pair_count": 496
+    },
+    "4": {
+      "cross_world_extreme_regret": {
+        "decimal": 0.25,
+        "denominator": 4,
+        "numerator": 1,
+        "text": "1/4"
+      },
+      "high_unique_winner": 0,
+      "high_values": [
+        {
+          "decimal": 0.75,
+          "denominator": 4,
+          "numerator": 3,
+          "text": "3/4"
+        },
+        {
+          "decimal": 0.625,
+          "denominator": 8,
+          "numerator": 5,
+          "text": "5/8"
+        },
+        {
+          "decimal": 0.5,
+          "denominator": 2,
+          "numerator": 1,
+          "text": "1/2"
+        },
+        {
+          "decimal": 0.125,
+          "denominator": 8,
+          "numerator": 1,
+          "text": "1/8"
+        }
+      ],
+      "k": 4,
+      "low_unique_winner": 2,
+      "low_values": [
+        {
+          "decimal": 0.5,
+          "denominator": 2,
+          "numerator": 1,
+          "text": "1/2"
+        },
+        {
+          "decimal": 0.625,
+          "denominator": 8,
+          "numerator": 5,
+          "text": "5/8"
+        },
+        {
+          "decimal": 0.75,
+          "denominator": 4,
+          "numerator": 3,
+          "text": "3/4"
+        },
+        {
+          "decimal": 0.125,
+          "denominator": 8,
+          "numerator": 1,
+          "text": "1/8"
+        }
+      ],
+      "pair_assignment_probability": {
+        "decimal": 0.16666666666666666,
+        "denominator": 6,
+        "numerator": 1,
+        "text": "1/6"
+      },
+      "pair_conditioned_values": [
+        {
+          "decimal": 0.625,
+          "denominator": 8,
+          "numerator": 5,
+          "text": "5/8"
+        },
+        {
+          "decimal": 0.625,
+          "denominator": 8,
+          "numerator": 5,
+          "text": "5/8"
+        },
+        {
+          "decimal": 0.625,
+          "denominator": 8,
+          "numerator": 5,
+          "text": "5/8"
+        },
+        {
+          "decimal": 0.125,
+          "denominator": 8,
+          "numerator": 1,
+          "text": "1/8"
+        }
+      ],
+      "pair_conditioned_winner_set": [
+        0,
+        1,
+        2
+      ],
+      "pair_count": 6
+    },
+    "7": {
+      "cross_world_extreme_regret": {
+        "decimal": 0.14285714285714285,
+        "denominator": 7,
+        "numerator": 1,
+        "text": "1/7"
+      },
+      "high_unique_winner": 0,
+      "high_values": [
+        {
+          "decimal": 0.8571428571428571,
+          "denominator": 7,
+          "numerator": 6,
+          "text": "6/7"
+        },
+        {
+          "decimal": 0.7857142857142857,
+          "denominator": 14,
+          "numerator": 11,
+          "text": "11/14"
+        },
+        {
+          "decimal": 0.7142857142857143,
+          "denominator": 7,
+          "numerator": 5,
+          "text": "5/7"
+        },
+        {
+          "decimal": 0.2857142857142857,
+          "denominator": 7,
+          "numerator": 2,
+          "text": "2/7"
+        },
+        {
+          "decimal": 0.2857142857142857,
+          "denominator": 7,
+          "numerator": 2,
+          "text": "2/7"
+        },
+        {
+          "decimal": 0.2857142857142857,
+          "denominator": 7,
+          "numerator": 2,
+          "text": "2/7"
+        },
+        {
+          "decimal": 0.2857142857142857,
+          "denominator": 7,
+          "numerator": 2,
+          "text": "2/7"
+        }
+      ],
+      "k": 7,
+      "low_unique_winner": 2,
+      "low_values": [
+        {
+          "decimal": 0.7142857142857143,
+          "denominator": 7,
+          "numerator": 5,
+          "text": "5/7"
+        },
+        {
+          "decimal": 0.7857142857142857,
+          "denominator": 14,
+          "numerator": 11,
+          "text": "11/14"
+        },
+        {
+          "decimal": 0.8571428571428571,
+          "denominator": 7,
+          "numerator": 6,
+          "text": "6/7"
+        },
+        {
+          "decimal": 0.2857142857142857,
+          "denominator": 7,
+          "numerator": 2,
+          "text": "2/7"
+        },
+        {
+          "decimal": 0.2857142857142857,
+          "denominator": 7,
+          "numerator": 2,
+          "text": "2/7"
+        },
+        {
+          "decimal": 0.2857142857142857,
+          "denominator": 7,
+          "numerator": 2,
+          "text": "2/7"
+        },
+        {
+          "decimal": 0.2857142857142857,
+          "denominator": 7,
+          "numerator": 2,
+          "text": "2/7"
+        }
+      ],
+      "pair_assignment_probability": {
+        "decimal": 0.047619047619047616,
+        "denominator": 21,
+        "numerator": 1,
+        "text": "1/21"
+      },
+      "pair_conditioned_values": [
+        {
+          "decimal": 0.7857142857142857,
+          "denominator": 14,
+          "numerator": 11,
+          "text": "11/14"
+        },
+        {
+          "decimal": 0.7857142857142857,
+          "denominator": 14,
+          "numerator": 11,
+          "text": "11/14"
+        },
+        {
+          "decimal": 0.7857142857142857,
+          "denominator": 14,
+          "numerator": 11,
+          "text": "11/14"
+        },
+        {
+          "decimal": 0.2857142857142857,
+          "denominator": 7,
+          "numerator": 2,
+          "text": "2/7"
+        },
+        {
+          "decimal": 0.2857142857142857,
+          "denominator": 7,
+          "numerator": 2,
+          "text": "2/7"
+        },
+        {
+          "decimal": 0.2857142857142857,
+          "denominator": 7,
+          "numerator": 2,
+          "text": "2/7"
+        },
+        {
+          "decimal": 0.2857142857142857,
+          "denominator": 7,
+          "numerator": 2,
+          "text": "2/7"
+        }
+      ],
+      "pair_conditioned_winner_set": [
+        0,
+        1,
+        2
+      ],
+      "pair_count": 21
+    }
+  },
+  "schema": "h183-arbitrary-roster-pair-first-identification-v1",
+  "scope": "For every integer K>=3 there exists this dominated-padding embedding of the exact H151 witness. It is not a statement about every roster or pair-first design, a minimax-regret floor over the two selected worlds, field prevalence, benchmark validity, or current execution.",
+  "status": "pass"
+}

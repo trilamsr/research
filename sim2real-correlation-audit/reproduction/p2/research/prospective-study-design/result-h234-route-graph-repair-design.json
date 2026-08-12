@@ -1,0 +1,217 @@
+{
+  "boundary": "Minimum is for contextwise difference identification under H233; one boundary-specific winner or aggregate target may require fewer edges.",
+  "classification": "constructive_contextwise_identification_repair",
+  "known_answers": {
+    "constrained_cost_case": {
+      "components_before": 3,
+      "feasible": true,
+      "minimum_new_pair_types": 2,
+      "selected_edges": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "total_cost": 5
+    },
+    "h231_unobserved_context_b_k3_to_k8": {
+      "3": {
+        "components_before": 3,
+        "feasible": true,
+        "minimum_new_pair_types": 2,
+        "selected_edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        "total_cost": 2
+      },
+      "4": {
+        "components_before": 4,
+        "feasible": true,
+        "minimum_new_pair_types": 3,
+        "selected_edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "total_cost": 3
+      },
+      "5": {
+        "components_before": 5,
+        "feasible": true,
+        "minimum_new_pair_types": 4,
+        "selected_edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ]
+        ],
+        "total_cost": 4
+      },
+      "6": {
+        "components_before": 6,
+        "feasible": true,
+        "minimum_new_pair_types": 5,
+        "selected_edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ]
+        ],
+        "total_cost": 5
+      },
+      "7": {
+        "components_before": 7,
+        "feasible": true,
+        "minimum_new_pair_types": 6,
+        "selected_edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ]
+        ],
+        "total_cost": 6
+      },
+      "8": {
+        "components_before": 8,
+        "feasible": true,
+        "minimum_new_pair_types": 7,
+        "selected_edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ]
+        ],
+        "total_cost": 7
+      }
+    },
+    "h233_context_a": {
+      "components_before": 1,
+      "feasible": true,
+      "minimum_new_pair_types": 0,
+      "selected_edges": [],
+      "total_cost": 0
+    },
+    "h233_context_b": {
+      "components_before": 2,
+      "feasible": true,
+      "minimum_new_pair_types": 1,
+      "selected_edges": [
+        [
+          0,
+          2
+        ]
+      ],
+      "total_cost": 1
+    }
+  },
+  "outcome_status": "post_h233_outcome_exposed_exploratory",
+  "prior_art_boundary": "Connectivity and well-connected comparison designs are established; this is an executable model-specific repair corollary.",
+  "protocol_sha256": "17b4a775b31b65a4ffc662e69ba1046559a8af3493640e2f15c4b9862bea8a2c",
+  "schema": "h234-route-graph-repair-design-v1",
+  "status": "pass",
+  "theorem": {
+    "allowable_edge_feasibility": "connected component quotient graph",
+    "minimum_cost_rule": "minimum spanning tree on component quotient graph",
+    "minimum_new_pair_types_per_context": "components-1",
+    "multi_context_total": "sum(components_c-1) when every positive-weight context must be connected and each new pair type belongs to one context",
+    "repeated_existing_edges_repair_identification": false
+  },
+  "verification": {
+    "deterministic_cost_panels_k2_to_k6": 330,
+    "deterministic_sampled_current_graphs_k6": 503,
+    "exhaustive_current_allowable_states_k2_to_k5": 59808,
+    "exhaustive_current_graphs_k2_to_k5": 1098
+  }
+}

@@ -1,0 +1,229 @@
+{
+  "schema": "h199-phail-randomized-home-target-independent-challenge-v1",
+  "method": "Independent Node reconstruction from Git objects, full fixed-boundary token inventory, and separately implemented arithmetic; imports no producer module.",
+  "revisions": {
+    "v0_2_1": "e406176bc526babb06844a48e3627a5c0409eb74",
+    "current": "01b78e6f62ff5913490c360afdd2712eee070524"
+  },
+  "endpoints": [
+    {
+      "revision": "e406176bc526babb06844a48e3627a5c0409eb74",
+      "source_blobs": [
+        {
+          "path": "positronic/inference.py",
+          "git_blob": "c9bc29b72f15763e17740537f08a73d58675217c"
+        },
+        {
+          "path": "positronic/cfg/embodiment.py",
+          "git_blob": null
+        },
+        {
+          "path": "positronic/cfg/hardware/roboarm/__init__.py",
+          "git_blob": "4a6352084f0c937a71ec0131e6cfdd97329fd73a"
+        },
+        {
+          "path": "positronic/drivers/roboarm/__init__.py",
+          "git_blob": "4fe401691d07289e2702fc9c04d7855541fe0436"
+        },
+        {
+          "path": "positronic/drivers/roboarm/command.py",
+          "git_blob": "d588cf98d9070c2c18440c954a399f2ac704f88b"
+        },
+        {
+          "path": "positronic/drivers/roboarm/franka.py",
+          "git_blob": "a7a5fafe3a1a2c18b24cc948526fc4465586d660"
+        },
+        {
+          "path": "positronic/policy/harness.py",
+          "git_blob": "857b1fe313d67689345fc5fd5954605464fbca38"
+        },
+        {
+          "path": "positronic/dataset/ds_writer_agent.py",
+          "git_blob": "8f0f06e31fabecce2d093d7768ede88397affcb2"
+        },
+        {
+          "path": "positronic/dataset/serializers.py",
+          "git_blob": null
+        },
+        {
+          "path": "positronic/dataset/local_dataset.py",
+          "git_blob": "8e7d6001ebcbb0a58e39a07b2f58d400f45797fd"
+        },
+        {
+          "path": "positronic/wire.py",
+          "git_blob": "1c52667d9cf089712c8e45ee90b7ceee9f1f8fa1"
+        }
+      ],
+      "phail_droid_binding": true,
+      "droid_arm_reset_binding": true,
+      "base_home_joints_rad": [
+        0,
+        -0.31,
+        0,
+        -1.65,
+        0,
+        1.522,
+        0
+      ],
+      "variation_rad": [
+        0.03,
+        0.05,
+        0.08,
+        0.08,
+        0.1,
+        0.1,
+        0.1
+      ],
+      "configuration_exposes_variation": false,
+      "uniform_draw_to_target": true,
+      "synchronous_target": true,
+      "global_numpy_rng_without_local_seed": true,
+      "realized_target_serialized": false,
+      "seed_or_rng_state_serialized": false,
+      "reset_outside_retained_episode": true
+    },
+    {
+      "revision": "01b78e6f62ff5913490c360afdd2712eee070524",
+      "source_blobs": [
+        {
+          "path": "positronic/inference.py",
+          "git_blob": "57dd5e20829acb606b8faa45b40dde923128b3b7"
+        },
+        {
+          "path": "positronic/cfg/embodiment.py",
+          "git_blob": "7bc708eece4ea12c443ddfea6156f4d68a51a1ea"
+        },
+        {
+          "path": "positronic/cfg/hardware/roboarm/__init__.py",
+          "git_blob": "4d27c99f622f6d2be40577a57b2d076c94a8695b"
+        },
+        {
+          "path": "positronic/drivers/roboarm/__init__.py",
+          "git_blob": "4fe401691d07289e2702fc9c04d7855541fe0436"
+        },
+        {
+          "path": "positronic/drivers/roboarm/command.py",
+          "git_blob": "964457cff3f7b808d955cfed2da710b3d2657d17"
+        },
+        {
+          "path": "positronic/drivers/roboarm/franka.py",
+          "git_blob": "fbe608d1bd4fdae61309c630a0efcc990653c0a3"
+        },
+        {
+          "path": "positronic/policy/harness.py",
+          "git_blob": "62dd01974588785000285ef6c8cba4672386690a"
+        },
+        {
+          "path": "positronic/dataset/ds_writer_agent.py",
+          "git_blob": "765b811438d1a0e7db32698e24f9d21488495be0"
+        },
+        {
+          "path": "positronic/dataset/serializers.py",
+          "git_blob": "c7a1ccacb9f0a98f9eb7e93981126542bab1e836"
+        },
+        {
+          "path": "positronic/dataset/local_dataset.py",
+          "git_blob": "b14883ea6d970a5b9b84fc7c8ee930bc7a889495"
+        },
+        {
+          "path": "positronic/wire.py",
+          "git_blob": "026f94cfd740f80cf8c9d859aaf24a55e8c34214"
+        }
+      ],
+      "phail_droid_binding": true,
+      "droid_arm_reset_binding": true,
+      "base_home_joints_rad": [
+        0,
+        -0.31,
+        0,
+        -1.65,
+        0,
+        1.522,
+        0
+      ],
+      "variation_rad": [
+        0.03,
+        0.05,
+        0.08,
+        0.08,
+        0.1,
+        0.1,
+        0.1
+      ],
+      "configuration_exposes_variation": false,
+      "uniform_draw_to_target": true,
+      "synchronous_target": true,
+      "global_numpy_rng_without_local_seed": true,
+      "realized_target_serialized": false,
+      "seed_or_rng_state_serialized": false,
+      "reset_outside_retained_episode": true
+    }
+  ],
+  "quantitative": {
+    "half_widths_rad": [
+      0.03,
+      0.05,
+      0.08,
+      0.08,
+      0.1,
+      0.1,
+      0.1
+    ],
+    "half_widths_deg": [
+      1.7188733853924696,
+      2.864788975654116,
+      4.583662361046586,
+      4.583662361046586,
+      5.729577951308232,
+      5.729577951308232,
+      5.729577951308232
+    ],
+    "maximum_euclidean_joint_perturbation_rad": 0.2149418526020468,
+    "rms_euclidean_joint_perturbation_rad": 0.12409673645990857
+  },
+  "classification": "historical_and_current_unrecorded_randomized_home",
+  "attacks": [
+    {
+      "attack": "driver_default_alone_proves_phail_binding",
+      "rejected": true
+    },
+    {
+      "attack": "zero_variation_is_randomized_home",
+      "rejected": true
+    },
+    {
+      "attack": "base_home_config_is_realized_draw",
+      "rejected": true
+    },
+    {
+      "attack": "synchronous_motion_is_persistent_evidence",
+      "rejected": true
+    },
+    {
+      "attack": "outside_window_command_is_recorded_evidence",
+      "rejected": true
+    },
+    {
+      "attack": "maximum_joint_norm_equals_rms",
+      "rejected": true
+    },
+    {
+      "attack": "joint_norm_is_end_effector_displacement",
+      "rejected": true
+    },
+    {
+      "attack": "tagged_source_proves_historical_execution",
+      "rejected": true
+    },
+    {
+      "attack": "randomization_itself_is_reset_defect",
+      "rejected": true
+    },
+    {
+      "attack": "unrecorded_draw_proves_performance_effect",
+      "rejected": true
+    }
+  ],
+  "disposition": "pass_with_scope",
+  "scope": "source-bound mechanism only; no historical-execution, physical-reset-adequacy, end-effector, exchangeability, independence, or performance-effect claim"
+}

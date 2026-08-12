@@ -1,0 +1,438 @@
+{
+  "decision": "partial_mechanical_precedent",
+  "direct_external_precedent_found": false,
+  "direct_precedent_conjunctions": [
+    {
+      "direct_external_precedent": false,
+      "required_available": {
+        "acceptance_linked_to_controller_start": true,
+        "external_basis_for_tolerance": false,
+        "numeric_reset_acceptance_tolerance": false,
+        "object_or_scene_state_representation": true,
+        "preexecution_capture_or_measurement": true
+      },
+      "source": "autoeval"
+    },
+    {
+      "direct_external_precedent": false,
+      "required_available": {
+        "acceptance_linked_to_controller_start": false,
+        "external_basis_for_tolerance": false,
+        "numeric_reset_acceptance_tolerance": false,
+        "object_or_scene_state_representation": false,
+        "preexecution_capture_or_measurement": false
+      },
+      "source": "umi_bench"
+    },
+    {
+      "direct_external_precedent": false,
+      "required_available": {
+        "acceptance_linked_to_controller_start": false,
+        "external_basis_for_tolerance": false,
+        "numeric_reset_acceptance_tolerance": false,
+        "object_or_scene_state_representation": false,
+        "preexecution_capture_or_measurement": false
+      },
+      "source": "robodojo"
+    }
+  ],
+  "direct_precedent_required_units": [
+    "object_or_scene_state_representation",
+    "numeric_reset_acceptance_tolerance",
+    "preexecution_capture_or_measurement",
+    "acceptance_linked_to_controller_start",
+    "external_basis_for_tolerance"
+  ],
+  "fixed_source_count": 11,
+  "generic_numeric_tolerance_supported": false,
+  "interpretation": "Across the fixed three-source roster, AutoEval supplies the strongest executable gate, UMI-Bench the richest declared scene schema, and RoboDojo the clearest human overlay workflow. None fixes the conjunction of a released object-state representation, numeric reset-acceptance tolerance, pre-execution decision linked to controller start, and source-owned adequacy basis.",
+  "p2_implication": "The public systems provide useful reset mechanics and lifecycle patterns, but no externally justified numeric object-state acceptance tolerance. P2 should therefore use a site-feasibility interface with an explicit pair-conditioned target or a newly justified source-owned tolerance; coarse image similarity cannot be promoted into a generic reset rule.",
+  "protocol_sha256": "42b019e916e6a1cfe6ad78b014a9ea578d0cf7edbfb78f9811ffca8d8d80b2a3",
+  "rejected_numeric_lookalikes": [
+    {
+      "reason": "deployment-level empirical performance gate, not a per-episode object-state acceptance bound",
+      "source": "autoeval",
+      "value": ">95% classifier accuracy / reset-policy success rate"
+    },
+    {
+      "reason": "retry budget, not a reset-state tolerance",
+      "source": "autoeval",
+      "value": "3 reset attempts"
+    },
+    {
+      "reason": "operator placement reference and coordinate resolution, not an allowed within-cell reset error",
+      "source": "umi_bench",
+      "value": "5 cm by 5 cm grid cells"
+    },
+    {
+      "reason": "rollout and outcome rules, not initial-state reset acceptance",
+      "source": "umi_bench",
+      "value": "task step budgets and task-success rubrics"
+    },
+    {
+      "reason": "workflow efficiency measure, not an image or physical-state tolerance",
+      "source": "robodojo",
+      "value": "14 second mean scene restoration time"
+    },
+    {
+      "reason": "task-outcome rules in simulation, not RealEval reset acceptance",
+      "source": "robodojo",
+      "value": "simulation success thresholds"
+    }
+  ],
+  "roster_expansion_authorized": false,
+  "schema": "h162-object-level-reset-tolerance-source-audit-v1",
+  "source_manifest_sha256": "2ed9cc9c0290f70d338c77c322305e6ecb6aa17140080316bdfb3065cbec242a",
+  "source_order": [
+    "autoeval",
+    "umi_bench",
+    "robodojo"
+  ],
+  "source_unit_row_count": 27,
+  "sources": [
+    {
+      "identity": "AutoEval, arXiv:2503.24278v2 and official code at commit 3ea3ff44c6950433cfbcb4294a3deaa616533745",
+      "source": "autoeval",
+      "units": [
+        {
+          "evidence": [
+            {
+              "finding": "The loop evaluates a policy, classifies the outcome, rolls out a reset policy, rechecks reset success, and requests a human after repeated failure.",
+              "locator": "paper Algorithm 1; Section 3; Appendix H"
+            },
+            {
+              "finding": "The released control flow performs a reset-image classification before advancing to the next evaluation rollout.",
+              "locator": "source archive run_eval.py: reset_rollout and episode reset loop"
+            }
+          ],
+          "limit": "The workflow is task-specific and relies on external robot services and scene-specific models.",
+          "status": "available",
+          "unit": "reset_workflow_described"
+        },
+        {
+          "evidence": [
+            {
+              "finding": "Scripted or learned reset policies and their retry logic are specified.",
+              "locator": "paper Appendix G; source archive run_eval.py and scripts/configs/eval_config.py"
+            },
+            {
+              "finding": "Scene-specific classifier checkpoint paths are local paths and the learned deployed checkpoint artifacts are not in the fixed archive.",
+              "locator": "source archive scripts/configs/eval_config.py"
+            }
+          ],
+          "limit": "The public code reproduces the orchestration but not every deployed scene-specific model and hardware service.",
+          "status": "partial",
+          "unit": "reset_mechanism_reproducible"
+        },
+        {
+          "evidence": [
+            {
+              "finding": "Reset states are represented as explicit categorical image states, including drawer open/closed, eggplant in sink/basket, and cloth folded/unfolded/invalid.",
+              "locator": "paper Appendix F; source archive scripts/configs/eval_config.py"
+            }
+          ],
+          "limit": "This is a semantic classifier state, not an object pose, metric error, or calibrated physical measurement.",
+          "status": "available",
+          "unit": "object_or_scene_state_representation"
+        },
+        {
+          "evidence": [
+            {
+              "finding": "Per-episode acceptance is exact categorical output matching; no distance, angle, pose, or image-error reset bound is specified.",
+              "locator": "paper Appendices F--H; source archive success detector and reset loop"
+            }
+          ],
+          "limit": "The greater-than-95-percent classifier-accuracy and reset-policy-success deployment criteria are population performance gates, not per-episode physical reset tolerances.",
+          "status": "absent_from_fixed_sources",
+          "unit": "numeric_reset_acceptance_tolerance"
+        },
+        {
+          "evidence": [
+            {
+              "finding": "A camera observation is classified after robot reset and before the main evaluation loop begins.",
+              "locator": "source archive run_eval.py: reset_rollout and initial reset gate"
+            }
+          ],
+          "limit": "Classifier inputs are saved only when an optional flag is enabled, and no physical calibration record is bound to the decision.",
+          "status": "available",
+          "unit": "preexecution_capture_or_measurement"
+        },
+        {
+          "evidence": [
+            {
+              "finding": "A successful reset classification advances control to evaluation; repeated failure triggers a human-confirmation path.",
+              "locator": "source archive run_eval.py: initial reset gate and per-episode reset loop"
+            }
+          ],
+          "limit": "The human override is explicit but does not turn the categorical classifier into a metric tolerance.",
+          "status": "available",
+          "unit": "acceptance_linked_to_controller_start"
+        },
+        {
+          "evidence": [
+            {
+              "finding": "Camera model, image interface, source revision, prompts, and model families are identified.",
+              "locator": "paper Figure 2 and project instructions; source archive"
+            }
+          ],
+          "limit": "No per-run camera calibration, geometric measurement uncertainty, or calibrated object-state transform is attached to reset acceptance.",
+          "status": "partial",
+          "unit": "sensor_calibration_or_measurement_provenance"
+        },
+        {
+          "evidence": [
+            {
+              "finding": "The implementation fixes three reset attempts by default, retries motor-failure rollouts, records intervention indicators, and requests human confirmation after reset failure.",
+              "locator": "paper Algorithm 1 and Appendix H; source archive run_eval.py"
+            }
+          ],
+          "limit": "The public record does not expose a complete immutable reset-decision ledger for every hosted trial.",
+          "status": "available",
+          "unit": "abort_retry_deviation_lifecycle"
+        },
+        {
+          "evidence": [
+            {
+              "finding": "The source empirically validates classifier and reset-policy reliability but does not justify a numeric physical reset-acceptance tolerance.",
+              "locator": "complete fixed AutoEval source scope"
+            }
+          ],
+          "limit": "Classifier accuracy cannot be substituted for a state-distance tolerance.",
+          "status": "absent_from_fixed_sources",
+          "unit": "external_basis_for_tolerance"
+        }
+      ]
+    },
+    {
+      "identity": "UMI-Bench 1.0, arXiv:2606.10382v1, official project page, and dataset card at revision 156c7b7fb065bf82a2feb3d2e08c3cd3722f719c",
+      "source": "umi_bench",
+      "units": [
+        {
+          "evidence": [
+            {
+              "finding": "Operators use a 5 cm acrylic grid, a reset image, and scene JSON before each rollout, then verify the setup against a checklist.",
+              "locator": "paper Section 3.1, Appendices A--C and Table 18"
+            }
+          ],
+          "limit": "The linked Code control points back to the project page and no evaluation runner is present in the fixed linked dataset record.",
+          "status": "paper_described_only",
+          "unit": "reset_workflow_described"
+        },
+        {
+          "evidence": [
+            {
+              "finding": "The tabletop dimensions and 5 cm by 5 cm reset grid are specified as a repeatable operator reference.",
+              "locator": "paper Appendix A"
+            },
+            {
+              "finding": "The project Code link is self-referential, while the dataset card indexes training-session shards rather than the evaluation reset images, scene JSON files, or runner.",
+              "locator": "official project page and dataset card"
+            }
+          ],
+          "limit": "The mechanical reference can be reconstructed, but the exact episode reset package and acceptance implementation cannot.",
+          "status": "partial",
+          "unit": "reset_mechanism_reproducible"
+        },
+        {
+          "evidence": [
+            {
+              "finding": "The declared scene JSON contains object identity, category, appearance, material, tabletop marker position, pose, target region, split, and reset image.",
+              "locator": "paper Sections 3.1 and 3.4; Appendix C"
+            }
+          ],
+          "limit": "The exact schema and episode-level evaluation scene files are not in the fixed linked public artifacts.",
+          "status": "paper_described_only",
+          "unit": "object_or_scene_state_representation"
+        },
+        {
+          "evidence": [
+            {
+              "finding": "The operator is instructed to match the reset image and scene JSON, but no allowable position, rotation, image, or pose error is stated.",
+              "locator": "paper Appendix A and Table 18"
+            }
+          ],
+          "limit": "A 5 cm grid-cell size is a placement reference/resolution, not a within-cell acceptance tolerance.",
+          "status": "absent_from_fixed_sources",
+          "unit": "numeric_reset_acceptance_tolerance"
+        },
+        {
+          "evidence": [
+            {
+              "finding": "The checklist orders setup verification and scene matching before rollout.",
+              "locator": "paper Table 18"
+            }
+          ],
+          "limit": "No released event record shows the comparison result, time, or exact image used for a particular controller start.",
+          "status": "paper_described_only",
+          "unit": "preexecution_capture_or_measurement"
+        },
+        {
+          "evidence": [
+            {
+              "finding": "The prose sequences metadata-based reset before policy execution.",
+              "locator": "paper Section 3.4 and Table 18"
+            }
+          ],
+          "limit": "The fixed sources do not expose runner code or an atomic reset-acceptance-to-start ledger.",
+          "status": "paper_described_only",
+          "unit": "acceptance_linked_to_controller_start"
+        },
+        {
+          "evidence": [
+            {
+              "finding": "The protocol calls for calibration verification and names calibration files as runner inputs.",
+              "locator": "paper Appendices B, C.1, and Table 18"
+            }
+          ],
+          "limit": "The exact evaluation calibration files, values, uncertainty, and per-rollout binding are not released in the fixed source scope.",
+          "status": "paper_described_only",
+          "unit": "sensor_calibration_or_measurement_provenance"
+        },
+        {
+          "evidence": [
+            {
+              "finding": "The protocol describes safety-stop termination, failure notes, quality flags, execution status, and runtime logs.",
+              "locator": "paper Section 3.4; Appendices B and C.1"
+            }
+          ],
+          "limit": "No public runner or complete episode lifecycle ledger is present in the fixed linked source package.",
+          "status": "paper_described_only",
+          "unit": "abort_retry_deviation_lifecycle"
+        },
+        {
+          "evidence": [
+            {
+              "finding": "No numeric reset-acceptance threshold is stated or defended.",
+              "locator": "complete fixed UMI-Bench source scope"
+            }
+          ],
+          "limit": "Task-success rubrics, rollout budgets, and the grid scale are not reset-tolerance adequacy evidence.",
+          "status": "absent_from_fixed_sources",
+          "unit": "external_basis_for_tolerance"
+        }
+      ]
+    },
+    {
+      "identity": "RoboDojo, arXiv:2607.04434v3, official documentation, and official source at commit e0703b03bb1af6075400e9d60dc17a792793960c",
+      "source": "robodojo",
+      "units": [
+        {
+          "evidence": [
+            {
+              "finding": "An evaluator overlays a target layout image on the live camera stream, manually adjusts objects to alignment, and then starts the policy from the touchscreen.",
+              "locator": "paper Section 4.2 and Appendix E.2"
+            }
+          ],
+          "limit": "The fixed official repository documents RoboDojo broadly but does not release the RoboDojo-RealEval reset interface.",
+          "status": "paper_described_only",
+          "unit": "reset_workflow_described"
+        },
+        {
+          "evidence": [
+            {
+              "finding": "The modular hardware and transparent image-overlay mechanism are described.",
+              "locator": "paper Figure 7 and Appendix E.2"
+            }
+          ],
+          "limit": "Exact reference-layout images, real-evaluation UI code, and benchmark-specific acceptance records are absent from the fixed repository and documentation.",
+          "status": "paper_described_only",
+          "unit": "reset_mechanism_reproducible"
+        },
+        {
+          "evidence": [
+            {
+              "finding": "The target layout image is the declared representation used to restore initial conditions.",
+              "locator": "paper Section 4.2 and Appendix E.2"
+            }
+          ],
+          "limit": "No object identities, metric poses, or released reference-image set are bound to the real-evaluation reset decision.",
+          "status": "paper_described_only",
+          "unit": "object_or_scene_state_representation"
+        },
+        {
+          "evidence": [
+            {
+              "finding": "The evaluator adjusts the live image until it aligns with the reference, but no image-error, position, or rotation bound is specified.",
+              "locator": "paper Section 4.2 and Appendix E.2; fixed official documentation"
+            }
+          ],
+          "limit": "The reported 14-second mean restoration time is an efficiency measure, not an acceptance tolerance.",
+          "status": "absent_from_fixed_sources",
+          "unit": "numeric_reset_acceptance_tolerance"
+        },
+        {
+          "evidence": [
+            {
+              "finding": "The live camera stream is visually compared with an overlaid target before the evaluator starts policy execution.",
+              "locator": "paper Appendix E.2"
+            }
+          ],
+          "limit": "The comparison outcome and image pair are not exposed as a released pre-execution record.",
+          "status": "paper_described_only",
+          "unit": "preexecution_capture_or_measurement"
+        },
+        {
+          "evidence": [
+            {
+              "finding": "The prose states that, after scene reset, the evaluator starts the policy through the touchscreen.",
+              "locator": "paper Appendix E.2"
+            }
+          ],
+          "limit": "No public RealEval implementation or timestamped acceptance/start linkage is in the fixed source scope.",
+          "status": "paper_described_only",
+          "unit": "acceptance_linked_to_controller_start"
+        },
+        {
+          "evidence": [
+            {
+              "finding": "Relative robot, camera, lighting, and workspace poses are physically fixed by modular components.",
+              "locator": "paper Section 4.2"
+            }
+          ],
+          "limit": "Mechanical standardization does not supply per-session camera calibration or image-to-object measurement uncertainty.",
+          "status": "paper_described_only",
+          "unit": "sensor_calibration_or_measurement_provenance"
+        },
+        {
+          "evidence": [
+            {
+              "finding": "Manual unsafe-behavior stops and an emergency stop disable policy control and return the robot toward a safe reset state; videos are collected for scoring.",
+              "locator": "paper Appendix E.1--E.2"
+            }
+          ],
+          "limit": "The fixed sources do not expose a complete reset-attempt, deviation, override, and controller-start ledger.",
+          "status": "paper_described_only",
+          "unit": "abort_retry_deviation_lifecycle"
+        },
+        {
+          "evidence": [
+            {
+              "finding": "No numeric reset-acceptance threshold or source-owned adequacy argument is provided.",
+              "locator": "complete fixed RoboDojo source scope"
+            }
+          ],
+          "limit": "Task-success thresholds in the simulation implementation cannot be promoted to real-scene reset tolerances.",
+          "status": "absent_from_fixed_sources",
+          "unit": "external_basis_for_tolerance"
+        }
+      ]
+    }
+  ],
+  "status_counts": {
+    "absent_from_fixed_sources": 6,
+    "available": 5,
+    "paper_described_only": 13,
+    "partial": 3
+  },
+  "unit_order": [
+    "reset_workflow_described",
+    "reset_mechanism_reproducible",
+    "object_or_scene_state_representation",
+    "numeric_reset_acceptance_tolerance",
+    "preexecution_capture_or_measurement",
+    "acceptance_linked_to_controller_start",
+    "sensor_calibration_or_measurement_provenance",
+    "abort_retry_deviation_lifecycle",
+    "external_basis_for_tolerance"
+  ]
+}

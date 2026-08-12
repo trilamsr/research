@@ -1,0 +1,1384 @@
+{
+  "A Practical Recipe": {
+    "absolute_regret_recoverable": false,
+    "disagreement_count": 3,
+    "panels": [
+      {
+        "correct": false,
+        "panel": "VLA-Arena / Vision",
+        "printed_pearson_r": 0.241,
+        "real_winner": "E",
+        "sim_winner": "C"
+      },
+      {
+        "correct": true,
+        "panel": "VLA-Arena / Layout",
+        "printed_pearson_r": 0.858,
+        "real_winner": "C",
+        "sim_winner": "C"
+      },
+      {
+        "correct": true,
+        "panel": "VLA-Arena / Language",
+        "printed_pearson_r": 0.987,
+        "real_winner": "C",
+        "sim_winner": "C"
+      },
+      {
+        "correct": true,
+        "panel": "VLA-Arena / Behavior",
+        "printed_pearson_r": 0.814,
+        "real_winner": "C",
+        "sim_winner": "C"
+      },
+      {
+        "correct": true,
+        "panel": "SIMPLER / Vision",
+        "printed_pearson_r": 0.701,
+        "real_winner": "E",
+        "sim_winner": "E"
+      },
+      {
+        "correct": false,
+        "panel": "SIMPLER / Layout",
+        "printed_pearson_r": 0.42,
+        "real_winner": "C",
+        "sim_winner": "E"
+      },
+      {
+        "correct": true,
+        "panel": "SIMPLER / Language",
+        "printed_pearson_r": 0.086,
+        "real_winner": "C",
+        "sim_winner": "C"
+      },
+      {
+        "correct": false,
+        "panel": "REALM / Vision",
+        "printed_pearson_r": 0.672,
+        "real_winner": "E",
+        "sim_winner": "C"
+      },
+      {
+        "correct": true,
+        "panel": "REALM / Layout",
+        "printed_pearson_r": 0.865,
+        "real_winner": "C",
+        "sim_winner": "C"
+      },
+      {
+        "correct": true,
+        "panel": "REALM / Language",
+        "printed_pearson_r": 0.722,
+        "real_winner": "C",
+        "sim_winner": "C"
+      },
+      {
+        "correct": true,
+        "panel": "REALM / Behavior",
+        "printed_pearson_r": 0.882,
+        "real_winner": "C",
+        "sim_winner": "C"
+      }
+    ]
+  },
+  "Cosmos-Surg-dVRK": {
+    "automated_fig1b": {
+      "pearson_r": 0.941477536836,
+      "points": {
+        "GR00T N1 20k": {
+          "real": 0.6,
+          "sim": 0.725025
+        },
+        "GR00T N1 39k": {
+          "real": 0.525,
+          "sim": 0.633325
+        },
+        "GR00T N1.5 25k": {
+          "real": 0.55,
+          "sim": 0.716675
+        },
+        "GR00T N1.5 50k": {
+          "real": 0.5,
+          "sim": 0.616675
+        },
+        "pi0 10k": {
+          "real": 0.475,
+          "sim": 0.64165
+        },
+        "pi0 4k": {
+          "real": 0.275,
+          "sim": 0.508325
+        }
+      },
+      "possible_correct": true,
+      "real_regret_max": 0.0,
+      "real_regret_min": 0.0,
+      "real_winners": [
+        "GR00T N1 20k"
+      ],
+      "robustly_correct": true,
+      "sim_winners": [
+        "GR00T N1 20k"
+      ]
+    },
+    "manual_human_vs_dvrk": {
+      "pearson_r": 0.883136559068,
+      "points": {
+        "GR00T N1 20k": {
+          "real": 0.6,
+          "sim": 0.675
+        },
+        "GR00T N1 39k": {
+          "real": 0.525,
+          "sim": 0.6125
+        },
+        "GR00T N1.5 25k": {
+          "real": 0.55,
+          "sim": 0.654175
+        },
+        "GR00T N1.5 50k": {
+          "real": 0.5,
+          "sim": 0.68335
+        },
+        "pi0 10k": {
+          "real": 0.475,
+          "sim": 0.6625
+        },
+        "pi0 4k": {
+          "real": 0.275,
+          "sim": 0.479175
+        }
+      },
+      "possible_correct": false,
+      "real_regret_max": 0.1,
+      "real_regret_min": 0.1,
+      "real_winners": [
+        "GR00T N1 20k"
+      ],
+      "robustly_correct": false,
+      "sim_winners": [
+        "GR00T N1.5 50k"
+      ],
+      "training_run_companion": {
+        "pearson_r": 0.905397391522,
+        "points": {
+          "groot-n1": {
+            "real": 0.5625,
+            "sim": 0.64375
+          },
+          "groot-n1.5": {
+            "real": 0.525,
+            "sim": 0.6687625
+          },
+          "pi0": {
+            "real": 0.375,
+            "sim": 0.5708375
+          }
+        },
+        "possible_correct": false,
+        "real_regret_max": 0.0375,
+        "real_regret_min": 0.0375,
+        "real_winners": [
+          "groot-n1"
+        ],
+        "robustly_correct": false,
+        "sim_winners": [
+          "groot-n1.5"
+        ],
+        "spearman_rho": 0.5,
+        "unit_definition": "Three source-documented training-run lineages, each averaging two checkpoints across four displayed tasks."
+      }
+    }
+  },
+  "Digital Cousins": {
+    "aggregate_policy_decision": {
+      "pearson_r": 0.996862862659,
+      "points": {
+        "ACT": {
+          "real": 36.25,
+          "sim": 45.99975
+        },
+        "DP": {
+          "real": 34.58325,
+          "sim": 42.91675
+        },
+        "SmolVLA": {
+          "real": 62.91675,
+          "sim": 59.25
+        },
+        "pi_0": {
+          "real": 76.66675,
+          "sim": 67.0835
+        }
+      },
+      "possible_correct": true,
+      "real_regret_max": 0.0,
+      "real_regret_min": 0.0,
+      "real_winners": [
+        "pi_0"
+      ],
+      "robustly_correct": true,
+      "sim_winners": [
+        "pi_0"
+      ]
+    },
+    "by_generalization_level": {
+      "Train": {
+        "pearson_r": 0.918566918711,
+        "points": {
+          "ACT": {
+            "real": 70.0,
+            "sim": 77.333
+          },
+          "DP": {
+            "real": 60.0,
+            "sim": 62.0
+          },
+          "SmolVLA": {
+            "real": 80.0,
+            "sim": 77.333
+          },
+          "pi_0": {
+            "real": 86.667,
+            "sim": 83.667
+          }
+        },
+        "possible_correct": true,
+        "real_regret_max": 0.0,
+        "real_regret_min": 0.0,
+        "real_winners": [
+          "pi_0"
+        ],
+        "robustly_correct": true,
+        "sim_winners": [
+          "pi_0"
+        ]
+      },
+      "Unseen Object": {
+        "pearson_r": 0.98979940191,
+        "points": {
+          "ACT": {
+            "real": 36.667,
+            "sim": 39.0
+          },
+          "DP": {
+            "real": 28.333,
+            "sim": 30.667
+          },
+          "SmolVLA": {
+            "real": 55.0,
+            "sim": 47.333
+          },
+          "pi_0": {
+            "real": 70.0,
+            "sim": 55.333
+          }
+        },
+        "possible_correct": true,
+        "real_regret_max": 0.0,
+        "real_regret_min": 0.0,
+        "real_winners": [
+          "pi_0"
+        ],
+        "robustly_correct": true,
+        "sim_winners": [
+          "pi_0"
+        ]
+      },
+      "Unseen S&O": {
+        "pearson_r": 0.99549670574,
+        "points": {
+          "ACT": {
+            "real": 10.0,
+            "sim": 18.333
+          },
+          "DP": {
+            "real": 15.0,
+            "sim": 24.0
+          },
+          "SmolVLA": {
+            "real": 45.0,
+            "sim": 40.667
+          },
+          "pi_0": {
+            "real": 68.333,
+            "sim": 51.667
+          }
+        },
+        "possible_correct": true,
+        "real_regret_max": 0.0,
+        "real_regret_min": 0.0,
+        "real_winners": [
+          "pi_0"
+        ],
+        "robustly_correct": true,
+        "sim_winners": [
+          "pi_0"
+        ]
+      },
+      "Unseen Scene": {
+        "pearson_r": 0.997085853224,
+        "points": {
+          "ACT": {
+            "real": 28.333,
+            "sim": 49.333
+          },
+          "DP": {
+            "real": 35.0,
+            "sim": 55.0
+          },
+          "SmolVLA": {
+            "real": 71.667,
+            "sim": 71.667
+          },
+          "pi_0": {
+            "real": 81.667,
+            "sim": 77.667
+          }
+        },
+        "possible_correct": true,
+        "real_regret_max": 0.0,
+        "real_regret_min": 0.0,
+        "real_winners": [
+          "pi_0"
+        ],
+        "robustly_correct": true,
+        "sim_winners": [
+          "pi_0"
+        ]
+      }
+    }
+  },
+  "EmbodiedSplat": {
+    "DN": {
+      "pearson_r": 0.866125628664,
+      "points": {
+        "HM3D-FT-DN": {
+          "real": 0.7,
+          "sim": 0.95
+        },
+        "HM3D-ZS-DN": {
+          "real": 0.5,
+          "sim": 0.5
+        },
+        "HSSD-FT-DN": {
+          "real": 0.4,
+          "sim": 0.84
+        },
+        "HSSD-ZS-DN": {
+          "real": 0.1,
+          "sim": 0.01
+        }
+      },
+      "possible_correct": true,
+      "real_regret_max": 0.0,
+      "real_regret_min": 0.0,
+      "real_winners": [
+        "HM3D-FT-DN"
+      ],
+      "robustly_correct": true,
+      "sim_winners": [
+        "HM3D-FT-DN"
+      ]
+    },
+    "Poly": {
+      "pearson_r": 0.975698886994,
+      "points": {
+        "HM3D-FT-Poly": {
+          "real": 0.7,
+          "sim": 0.97
+        },
+        "HM3D-ZS-Poly": {
+          "real": 0.5,
+          "sim": 0.76
+        },
+        "HSSD-FT-Poly": {
+          "real": 0.5,
+          "sim": 0.87
+        },
+        "HSSD-ZS-Poly": {
+          "real": 0.1,
+          "sim": 0.14
+        }
+      },
+      "possible_correct": true,
+      "real_regret_max": 0.0,
+      "real_regret_min": 0.0,
+      "real_winners": [
+        "HM3D-FT-Poly"
+      ],
+      "robustly_correct": true,
+      "sim_winners": [
+        "HM3D-FT-Poly"
+      ]
+    }
+  },
+  "Gemini/Veo": {
+    "pearson_r": 0.887874485971,
+    "points": {
+      "A": {
+        "real": 0.3,
+        "sim": 0.69
+      },
+      "B": {
+        "real": 0.225,
+        "sim": 0.655
+      },
+      "C": {
+        "real": 0.18,
+        "sim": 0.54
+      },
+      "D": {
+        "real": 0.01,
+        "sim": 0.325
+      },
+      "E": {
+        "real": 0.01,
+        "sim": 0.05
+      },
+      "F": {
+        "real": 0.125,
+        "sim": 0.425
+      },
+      "G": {
+        "real": 0.115,
+        "sim": 0.53
+      },
+      "H": {
+        "real": 0.025,
+        "sim": 0.335
+      }
+    },
+    "possible_correct": true,
+    "real_regret_max": 0.0,
+    "real_regret_min": 0.0,
+    "real_winners": [
+      "A"
+    ],
+    "robustly_correct": true,
+    "sim_winners": [
+      "A"
+    ]
+  },
+  "Hi-WM": {
+    "pearson_r": 0.963796226636,
+    "points": {
+      "DP-base": {
+        "real": 0.643333333333,
+        "sim": 0.468333333333
+      },
+      "DP-post-trained": {
+        "real": 0.928,
+        "sim": 0.894666666667
+      },
+      "pi0-base": {
+        "real": 0.831333333333,
+        "sim": 0.632333333333
+      },
+      "pi0-post-trained": {
+        "real": 0.965,
+        "sim": 0.968
+      }
+    },
+    "possible_correct": true,
+    "real_regret_max": 0.0,
+    "real_regret_min": 0.0,
+    "real_winners": [
+      "pi0-post-trained"
+    ],
+    "robustly_correct": true,
+    "sim_winners": [
+      "pi0-post-trained"
+    ]
+  },
+  "Mem-World": {
+    "pearson_r": 1.0,
+    "points": {
+      "pi_0": {
+        "real": 0.47,
+        "sim": 0.324
+      },
+      "pi_0.5": {
+        "real": 0.69,
+        "sim": 0.5
+      }
+    },
+    "possible_correct": true,
+    "real_regret_max": 0.0,
+    "real_regret_min": 0.0,
+    "real_winners": [
+      "pi_0.5"
+    ],
+    "robustly_correct": true,
+    "sim_winners": [
+      "pi_0.5"
+    ]
+  },
+  "MolmoSpaces": {
+    "close": {
+      "pearson_r": 0.972671839949,
+      "points": {
+        "CAP": {
+          "real": 96.125,
+          "sim": 91.403
+        },
+        "pi-0": {
+          "real": 46.825,
+          "sim": 72.978
+        },
+        "pi-0-Fast": {
+          "real": 33.325,
+          "sim": 67.917
+        },
+        "pi-0.5": {
+          "real": 50.625,
+          "sim": 79.148
+        }
+      },
+      "possible_correct": true,
+      "real_regret_max": 0.0,
+      "real_regret_min": 0.0,
+      "real_winners": [
+        "CAP"
+      ],
+      "robustly_correct": true,
+      "sim_winners": [
+        "CAP"
+      ]
+    },
+    "open": {
+      "pearson_r": 0.852337620274,
+      "points": {
+        "CAP": {
+          "real": 81.125,
+          "sim": 41.835
+        },
+        "pi-0": {
+          "real": 25.725,
+          "sim": 10.028
+        },
+        "pi-0-Fast": {
+          "real": 53.425,
+          "sim": 9.027
+        },
+        "pi-0.5": {
+          "real": 47.975,
+          "sim": 18.23
+        }
+      },
+      "possible_correct": true,
+      "real_regret_max": 0.0,
+      "real_regret_min": 0.0,
+      "real_winners": [
+        "CAP"
+      ],
+      "robustly_correct": true,
+      "sim_winners": [
+        "CAP"
+      ]
+    },
+    "pick": {
+      "pearson_r": 0.958478247346,
+      "points": {
+        "CAP": {
+          "real": 83.283,
+          "sim": 55.345
+        },
+        "CAP-EC1": {
+          "real": 24.083,
+          "sim": 8.925
+        },
+        "CAP-EC2": {
+          "real": 38.883,
+          "sim": 16.228
+        },
+        "CAP-EC3": {
+          "real": 67.583,
+          "sim": 33.736
+        },
+        "Paligemma-Binning": {
+          "real": 3.083,
+          "sim": 2.84
+        },
+        "pi-0": {
+          "real": 34.583,
+          "sim": 14.328
+        },
+        "pi-0-Fast": {
+          "real": 46.883,
+          "sim": 19.43
+        },
+        "pi-0.5": {
+          "real": 54.183,
+          "sim": 27.833
+        }
+      },
+      "possible_correct": true,
+      "real_regret_max": 0.0,
+      "real_regret_min": 0.0,
+      "real_winners": [
+        "CAP"
+      ],
+      "robustly_correct": true,
+      "sim_winners": [
+        "CAP"
+      ]
+    }
+  },
+  "OSCAR": {
+    "pearson_r": 0.855166828631,
+    "points": {
+      "PG-Bin": {
+        "real": 0.3,
+        "sim": 3.1
+      },
+      "PG-FAST": {
+        "real": 12.1,
+        "sim": 12.3
+      },
+      "PG-FAST+": {
+        "real": 11.5,
+        "sim": 15.4
+      },
+      "PG-FSQ": {
+        "real": 10.9,
+        "sim": 10.8
+      },
+      "PG-flow": {
+        "real": 9.6,
+        "sim": 7.7
+      },
+      "pi0-FAST": {
+        "real": 12.6,
+        "sim": 10.8
+      },
+      "pi0-flow": {
+        "real": 7.4,
+        "sim": 6.2
+      }
+    },
+    "possible_correct": false,
+    "real_regret_max": 1.1,
+    "real_regret_min": 1.1,
+    "real_winners": [
+      "pi0-FAST"
+    ],
+    "robustly_correct": false,
+    "sim_winners": [
+      "PG-FAST+"
+    ]
+  },
+  "REALM": {
+    "Default": {
+      "pearson_r": 0.999948100953,
+      "points": {
+        "GR00T N1.5": {
+          "real": 0.483428571429,
+          "sim": 0.437528571429
+        },
+        "pi0": {
+          "real": 0.700142857143,
+          "sim": 0.733814285714
+        },
+        "pi0-FAST": {
+          "real": 0.816857142857,
+          "sim": 0.887085714286
+        }
+      },
+      "possible_correct": true,
+      "real_regret_max": 0.0,
+      "real_regret_min": 0.0,
+      "real_winners": [
+        "pi0-FAST"
+      ],
+      "robustly_correct": true,
+      "sim_winners": [
+        "pi0-FAST"
+      ]
+    },
+    "Overall": {
+      "pearson_r": 0.999605575553,
+      "points": {
+        "GR00T N1.5": {
+          "real": 0.409014285714,
+          "sim": 0.347457142857
+        },
+        "pi0": {
+          "real": 0.718742857143,
+          "sim": 0.743357142857
+        },
+        "pi0-FAST": {
+          "real": 0.774857142857,
+          "sim": 0.799828571429
+        }
+      },
+      "possible_correct": true,
+      "real_regret_max": 0.0,
+      "real_regret_min": 0.0,
+      "real_winners": [
+        "pi0-FAST"
+      ],
+      "robustly_correct": true,
+      "sim_winners": [
+        "pi0-FAST"
+      ]
+    },
+    "V-VIEW": {
+      "pearson_r": 0.953643622971,
+      "points": {
+        "GR00T N1.5": {
+          "real": 0.603333333333,
+          "sim": 0.595
+        },
+        "pi0": {
+          "real": 0.851666666667,
+          "sim": 0.763783333333
+        },
+        "pi0-FAST": {
+          "real": 0.9168,
+          "sim": 0.9214
+        }
+      },
+      "possible_correct": true,
+      "real_regret_max": 0.0,
+      "real_regret_min": 0.0,
+      "real_winners": [
+        "pi0-FAST"
+      ],
+      "robustly_correct": true,
+      "sim_winners": [
+        "pi0-FAST"
+      ]
+    },
+    "VB-POSE": {
+      "pearson_r": 0.999539710198,
+      "points": {
+        "GR00T N1.5": {
+          "real": 0.358385714286,
+          "sim": 0.283042857143
+        },
+        "pi0": {
+          "real": 0.745528571429,
+          "sim": 0.737485714286
+        },
+        "pi0-FAST": {
+          "real": 0.759957142857,
+          "sim": 0.738185714286
+        }
+      },
+      "possible_correct": true,
+      "real_regret_max": 0.0,
+      "real_regret_min": 0.0,
+      "real_winners": [
+        "pi0-FAST"
+      ],
+      "robustly_correct": true,
+      "sim_winners": [
+        "pi0-FAST"
+      ]
+    }
+  },
+  "RoboSnap": {
+    "figure": {
+      "pearson_r": 0.9089030878,
+      "points": {
+        "1.1": {
+          "real": 0.3995,
+          "sim": 0.4983
+        },
+        "1.2": {
+          "real": 0.34,
+          "sim": 0.2728
+        },
+        "2.1": {
+          "real": 0.438,
+          "sim": 0.3651
+        },
+        "2.2": {
+          "real": 0.2698,
+          "sim": 0.2474
+        },
+        "2.3": {
+          "real": 0.3402,
+          "sim": 0.303
+        },
+        "3.1": {
+          "real": 0.2681,
+          "sim": 0.1974
+        },
+        "3.2": {
+          "real": 0.0863,
+          "sim": 0.0414
+        },
+        "4.1": {
+          "real": 0.3404,
+          "sim": 0.3389
+        },
+        "4.2": {
+          "real": 0.4991,
+          "sim": 0.7253
+        },
+        "4.3": {
+          "real": 0.239,
+          "sim": 0.1385
+        }
+      },
+      "possible_correct": true,
+      "real_regret_max": 0.0,
+      "real_regret_min": 0.0,
+      "real_winners": [
+        "4.2"
+      ],
+      "robustly_correct": true,
+      "sim_winners": [
+        "4.2"
+      ]
+    },
+    "inline_table": {
+      "pearson_r": 0.886457522535,
+      "points": {
+        "1.1": {
+          "real": 0.4,
+          "sim": 0.5
+        },
+        "1.2": {
+          "real": 0.367,
+          "sim": 0.267
+        },
+        "2.1": {
+          "real": 0.433,
+          "sim": 0.367
+        },
+        "2.2": {
+          "real": 0.267,
+          "sim": 0.233
+        },
+        "2.3": {
+          "real": 0.367,
+          "sim": 0.3
+        },
+        "3.1": {
+          "real": 0.267,
+          "sim": 0.2
+        },
+        "3.2": {
+          "real": 0.067,
+          "sim": 0.033
+        },
+        "4.1": {
+          "real": 0.367,
+          "sim": 0.333
+        },
+        "4.2": {
+          "real": 0.5,
+          "sim": 0.733
+        },
+        "4.3": {
+          "real": 0.233,
+          "sim": 0.133
+        }
+      },
+      "possible_correct": true,
+      "real_regret_max": 0.0,
+      "real_regret_min": 0.0,
+      "real_winners": [
+        "4.2"
+      ],
+      "robustly_correct": true,
+      "sim_winners": [
+        "4.2"
+      ]
+    }
+  },
+  "RoboWorld": {
+    "10a_GPT-4o_success_rate": {
+      "pearson_r": 0.900508980186,
+      "points": {
+        "PaliGemma Binning": {
+          "real": 797.006,
+          "sim": 15.23
+        },
+        "PaliGemma Diffusion": {
+          "real": 1547.007,
+          "sim": 28.02
+        },
+        "PaliGemma Fast": {
+          "real": 1538.007,
+          "sim": 28.39
+        },
+        "PaliGemma Fast Specialist": {
+          "real": 1547.007,
+          "sim": 31.38
+        },
+        "PaliGemma VQ": {
+          "real": 1557.007,
+          "sim": 30.42
+        },
+        "Pi0": {
+          "real": 1474.007,
+          "sim": 27.29
+        },
+        "Pi0 Fast": {
+          "real": 1597.007,
+          "sim": 31.83
+        },
+        "Pi0.5": {
+          "real": 1621.007,
+          "sim": 38.73
+        }
+      },
+      "possible_correct": true,
+      "real_regret_max": 0.0,
+      "real_regret_min": 0.0,
+      "real_winners": [
+        "Pi0.5"
+      ],
+      "robustly_correct": true,
+      "sim_winners": [
+        "Pi0.5"
+      ]
+    },
+    "10b_Gemini-2.5-Flash_success_rate": {
+      "pearson_r": 0.87617473028,
+      "points": {
+        "PaliGemma Binning": {
+          "real": 797.006,
+          "sim": 20.7
+        },
+        "PaliGemma Diffusion": {
+          "real": 1547.007,
+          "sim": 32.05
+        },
+        "PaliGemma Fast": {
+          "real": 1538.007,
+          "sim": 33.39
+        },
+        "PaliGemma Fast Specialist": {
+          "real": 1547.007,
+          "sim": 33.39
+        },
+        "PaliGemma VQ": {
+          "real": 1557.007,
+          "sim": 36.01
+        },
+        "Pi0": {
+          "real": 1474.007,
+          "sim": 33.75
+        },
+        "Pi0 Fast": {
+          "real": 1597.007,
+          "sim": 35.74
+        },
+        "Pi0.5": {
+          "real": 1621.007,
+          "sim": 43.6599
+        }
+      },
+      "possible_correct": true,
+      "real_regret_max": 0.0,
+      "real_regret_min": 0.0,
+      "real_winners": [
+        "Pi0.5"
+      ],
+      "robustly_correct": true,
+      "sim_winners": [
+        "Pi0.5"
+      ]
+    },
+    "9a_GPT-4o_score": {
+      "pearson_r": 0.988775479141,
+      "points": {
+        "PaliGemma Binning": {
+          "real": 797.001,
+          "sim": 2.1602
+        },
+        "PaliGemma Diffusion": {
+          "real": 1547.002,
+          "sim": 2.7985
+        },
+        "PaliGemma Fast": {
+          "real": 1538.002,
+          "sim": 2.779
+        },
+        "PaliGemma Fast Specialist": {
+          "real": 1547.002,
+          "sim": 2.8591
+        },
+        "PaliGemma VQ": {
+          "real": 1557.002,
+          "sim": 2.9091
+        },
+        "Pi0": {
+          "real": 1474.002,
+          "sim": 2.7938
+        },
+        "Pi0 Fast": {
+          "real": 1597.002,
+          "sim": 2.9168
+        },
+        "Pi0.5": {
+          "real": 1621.002,
+          "sim": 2.9366
+        }
+      },
+      "possible_correct": true,
+      "real_regret_max": 0.0,
+      "real_regret_min": 0.0,
+      "real_winners": [
+        "Pi0.5"
+      ],
+      "robustly_correct": true,
+      "sim_winners": [
+        "Pi0.5"
+      ]
+    },
+    "9b_Gemini-2.5-Flash_score": {
+      "pearson_r": 0.943831290424,
+      "points": {
+        "PaliGemma Binning": {
+          "real": 797.001,
+          "sim": 1.7109
+        },
+        "PaliGemma Diffusion": {
+          "real": 1547.002,
+          "sim": 2.2894
+        },
+        "PaliGemma Fast": {
+          "real": 1538.002,
+          "sim": 2.4613
+        },
+        "PaliGemma Fast Specialist": {
+          "real": 1547.002,
+          "sim": 2.3842
+        },
+        "PaliGemma VQ": {
+          "real": 1557.002,
+          "sim": 2.5297
+        },
+        "Pi0": {
+          "real": 1474.002,
+          "sim": 2.3173
+        },
+        "Pi0 Fast": {
+          "real": 1597.002,
+          "sim": 2.4892
+        },
+        "Pi0.5": {
+          "real": 1621.002,
+          "sim": 2.6831
+        }
+      },
+      "possible_correct": true,
+      "real_regret_max": 0.0,
+      "real_regret_min": 0.0,
+      "real_winners": [
+        "Pi0.5"
+      ],
+      "robustly_correct": true,
+      "sim_winners": [
+        "Pi0.5"
+      ]
+    }
+  },
+  "SIMPLER": {
+    "google_robot": {
+      "pearson_r": 0.97362716224,
+      "points": {
+        "octo-base": {
+          "real": 0.262,
+          "sim": 0.133
+        },
+        "rt-1-15pct": {
+          "real": 0.6562,
+          "sim": 0.4648
+        },
+        "rt-1-begin": {
+          "real": 0.03,
+          "sim": 0.071
+        },
+        "rt-1-converged": {
+          "real": 0.6824,
+          "sim": 0.5652
+        },
+        "rt-1-x": {
+          "real": 0.5754,
+          "sim": 0.4568
+        },
+        "rt-2-x": {
+          "real": 0.5354,
+          "sim": 0.4206
+        }
+      },
+      "possible_correct": true,
+      "real_regret_max": 0.0,
+      "real_regret_min": 0.0,
+      "real_winners": [
+        "rt-1-converged"
+      ],
+      "robustly_correct": true,
+      "sim_winners": [
+        "rt-1-converged"
+      ]
+    },
+    "mmrv_argument_order_audit": {
+      "google_robot_close_drawer": {
+        "paper_equation_and_executable_script": 0.123333333333,
+        "readme_and_calc_metrics_docstring_example": 0.113333333333
+      },
+      "google_robot_move_near": {
+        "paper_equation_and_executable_script": 0.111,
+        "readme_and_calc_metrics_docstring_example": 0.002666666667
+      },
+      "google_robot_open_drawer": {
+        "paper_equation_and_executable_script": 0.0,
+        "readme_and_calc_metrics_docstring_example": 0.0
+      },
+      "google_robot_pick_coke_can": {
+        "paper_equation_and_executable_script": 0.031333333333,
+        "readme_and_calc_metrics_docstring_example": 0.061833333333
+      },
+      "google_robot_place_apple_in_closed_top_drawer": {
+        "paper_equation_and_executable_script": 0.0,
+        "readme_and_calc_metrics_docstring_example": 0.010833333333
+      },
+      "widowx_carrot_on_plate": {
+        "paper_equation_and_executable_script": 0.111333333333,
+        "readme_and_calc_metrics_docstring_example": 0.009333333333
+      },
+      "widowx_put_eggplant_in_basket": {
+        "paper_equation_and_executable_script": 0.0,
+        "readme_and_calc_metrics_docstring_example": 0.0
+      },
+      "widowx_spoon_on_towel": {
+        "paper_equation_and_executable_script": 0.0,
+        "readme_and_calc_metrics_docstring_example": 0.0
+      },
+      "widowx_stack_cube": {
+        "paper_equation_and_executable_script": 0.0,
+        "readme_and_calc_metrics_docstring_example": 0.0
+      }
+    },
+    "widowx": {
+      "pearson_r": 0.949835733238,
+      "points": {
+        "octo-base": {
+          "real": 0.20825,
+          "sim": 0.15975
+        },
+        "octo-small": {
+          "real": 0.25625,
+          "sim": 0.295
+        },
+        "rt-1-x": {
+          "real": 0.0,
+          "sim": 0.0105
+        }
+      },
+      "possible_correct": true,
+      "real_regret_max": 0.0,
+      "real_regret_min": 0.0,
+      "real_winners": [
+        "octo-small"
+      ],
+      "robustly_correct": true,
+      "sim_winners": [
+        "octo-small"
+      ]
+    }
+  },
+  "WEAVER": {
+    "CtrlWorld": {
+      "pearson_r": 1.0,
+      "points": {
+        "pi05": {
+          "real": 0.44,
+          "sim": 0.14
+        },
+        "pi05FT": {
+          "real": 0.67,
+          "sim": 0.21
+        }
+      },
+      "possible_correct": true,
+      "real_regret_max": 0.0,
+      "real_regret_min": 0.0,
+      "real_winners": [
+        "pi05FT"
+      ],
+      "robustly_correct": true,
+      "sim_winners": [
+        "pi05FT"
+      ]
+    },
+    "WEAVER": {
+      "pearson_r": 1.0,
+      "points": {
+        "pi05": {
+          "real": 0.44,
+          "sim": 0.19
+        },
+        "pi05FT": {
+          "real": 0.67,
+          "sim": 0.27
+        }
+      },
+      "possible_correct": true,
+      "real_regret_max": 0.0,
+      "real_regret_min": 0.0,
+      "real_winners": [
+        "pi05FT"
+      ],
+      "robustly_correct": true,
+      "sim_winners": [
+        "pi05FT"
+      ]
+    },
+    "WEAVER-FT": {
+      "pearson_r": 1.0,
+      "points": {
+        "pi05": {
+          "real": 0.44,
+          "sim": 0.29
+        },
+        "pi05FT": {
+          "real": 0.67,
+          "sim": 0.49
+        }
+      },
+      "possible_correct": true,
+      "real_regret_max": 0.0,
+      "real_regret_min": 0.0,
+      "real_winners": [
+        "pi05FT"
+      ],
+      "robustly_correct": true,
+      "sim_winners": [
+        "pi05FT"
+      ]
+    }
+  },
+  "WM-PolicyEval": {
+    "Cosmos": {
+      "aggregate_policy_decision": {
+        "pearson_r": 0.975157827299,
+        "points": {
+          "Octo-Base": {
+            "real": 0.225,
+            "sim": 0.2
+          },
+          "Octo-Small": {
+            "real": 0.1875,
+            "sim": 0.15
+          },
+          "OpenVLA": {
+            "real": 0.5,
+            "sim": 0.3
+          }
+        },
+        "possible_correct": true,
+        "real_regret_max": 0.0,
+        "real_regret_min": 0.0,
+        "real_winners": [
+          "OpenVLA"
+        ],
+        "robustly_correct": true,
+        "sim_winners": [
+          "OpenVLA"
+        ]
+      },
+      "pooled_cell_pearson_r": 0.719327527666
+    },
+    "IRASim": {
+      "aggregate_policy_decision": {
+        "pearson_r": 0.507407090073,
+        "points": {
+          "Octo-Base": {
+            "real": 0.225,
+            "sim": 0.2
+          },
+          "Octo-Small": {
+            "real": 0.1875,
+            "sim": 0.0875
+          },
+          "OpenVLA": {
+            "real": 0.5,
+            "sim": 0.1875
+          }
+        },
+        "possible_correct": false,
+        "real_regret_max": 0.275,
+        "real_regret_min": 0.275,
+        "real_winners": [
+          "OpenVLA"
+        ],
+        "robustly_correct": false,
+        "sim_winners": [
+          "Octo-Base"
+        ]
+      },
+      "pooled_cell_pearson_r": 0.277247505938
+    }
+  },
+  "WorldEval": {
+    "pearson_r": 0.995613427304,
+    "points": {
+      "DexVLA": {
+        "real": 0.4988,
+        "sim": 0.3492
+      },
+      "DiffusionPolicy": {
+        "real": 0.0412,
+        "sim": 0.0204
+      },
+      "OpenVLA": {
+        "real": 0.036,
+        "sim": 0.0418
+      },
+      "pi0": {
+        "real": 0.6464,
+        "sim": 0.5086
+      }
+    },
+    "possible_correct": true,
+    "real_regret_max": 0.0,
+    "real_regret_min": 0.0,
+    "real_winners": [
+      "pi0"
+    ],
+    "robustly_correct": true,
+    "sim_winners": [
+      "pi0"
+    ]
+  },
+  "WorldGym": {
+    "aggregate_policy_decision": {
+      "pearson_r": 0.992350153861,
+      "points": {
+        "Octo": {
+          "real": 2.0,
+          "sim": 2.382352941176
+        },
+        "OpenVLA": {
+          "real": 7.058823529412,
+          "sim": 6.735294117647
+        },
+        "RT-1-X": {
+          "real": 1.852941176471,
+          "sim": 1.558823529412
+        }
+      },
+      "possible_correct": true,
+      "real_regret_max": 0.0,
+      "real_regret_min": 0.0,
+      "real_winners": [
+        "OpenVLA"
+      ],
+      "robustly_correct": true,
+      "sim_winners": [
+        "OpenVLA"
+      ]
+    },
+    "pooled_cell_pearson_r": 0.784786322909
+  }
+}

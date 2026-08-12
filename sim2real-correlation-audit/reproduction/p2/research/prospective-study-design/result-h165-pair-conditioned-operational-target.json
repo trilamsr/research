@@ -1,0 +1,202 @@
+{
+  "advancement": "pass",
+  "field_collection_authorized": false,
+  "known_answer": {
+    "always_lower_index_regret": {
+      "decimal": 0.16666666666666666,
+      "denominator": 6,
+      "numerator": 1,
+      "text": "1/6"
+    },
+    "always_lower_index_rule": {
+      "01": 0,
+      "02": 0,
+      "12": 1
+    },
+    "always_lower_index_value": {
+      "decimal": 0.5833333333333334,
+      "denominator": 12,
+      "numerator": 7,
+      "text": "7/12"
+    },
+    "cyclic_preferences": [
+      {
+        "pair": "01",
+        "preferred_policy": 0,
+        "relation": "0>1"
+      },
+      {
+        "pair": "02",
+        "preferred_policy": 2,
+        "relation": "2>0"
+      },
+      {
+        "pair": "12",
+        "preferred_policy": 1,
+        "relation": "1>2"
+      }
+    ],
+    "edge_optimal_routing_rule": {
+      "01": 0,
+      "02": 2,
+      "12": 1
+    },
+    "edge_optimal_routing_value": {
+      "decimal": 0.75,
+      "denominator": 4,
+      "numerator": 3,
+      "text": "3/4"
+    },
+    "pair_conditioned_edges": {
+      "01": {
+        "decimal": 0.75,
+        "denominator": 4,
+        "numerator": 3,
+        "text": "3/4"
+      },
+      "02": {
+        "decimal": 0.25,
+        "denominator": 4,
+        "numerator": 1,
+        "text": "1/4"
+      },
+      "12": {
+        "decimal": 0.75,
+        "denominator": 4,
+        "numerator": 3,
+        "text": "3/4"
+      }
+    },
+    "pair_weights": {
+      "01": {
+        "decimal": 0.3333333333333333,
+        "denominator": 3,
+        "numerator": 1,
+        "text": "1/3"
+      },
+      "02": {
+        "decimal": 0.3333333333333333,
+        "denominator": 3,
+        "numerator": 1,
+        "text": "1/3"
+      },
+      "12": {
+        "decimal": 0.3333333333333333,
+        "denominator": 3,
+        "numerator": 1,
+        "text": "1/3"
+      }
+    },
+    "pairs": [
+      "01",
+      "02",
+      "12"
+    ],
+    "uniform_reference_tournament_tie": true,
+    "uniform_reference_tournament_values": [
+      {
+        "decimal": 0.5,
+        "denominator": 2,
+        "numerator": 1,
+        "text": "1/2"
+      },
+      {
+        "decimal": 0.5,
+        "denominator": 2,
+        "numerator": 1,
+        "text": "1/2"
+      },
+      {
+        "decimal": 0.5,
+        "denominator": 2,
+        "numerator": 1,
+        "text": "1/2"
+      }
+    ],
+    "unique_global_policy_identified": false
+  },
+  "positive_weight_missing_edge_attack": {
+    "decision": "not_identified",
+    "positive_weight_edges_missing": [
+      "02"
+    ],
+    "routing_value_identified": false
+  },
+  "protocol_sha256": "c6e6821d826cb0aff5056e14e9c898d088dddda21e473db83ec743ae420c765a",
+  "real_site_qualified": false,
+  "reporting_gate": {
+    "future_pair_context_mechanism_fixed": true,
+    "orientation_and_tie_rule_fixed": true,
+    "pair_routing_action_explicit": true,
+    "pair_weights_fixed_outcome_independently": true,
+    "positive_weight_edges_identified_or_bounded": true,
+    "uncertainty_must_respect_assignment_and_clustering": true
+  },
+  "schema": "h165-pair-conditioned-operational-target-v1",
+  "scope": "Exact identification-semantics boundary for a pair-conditioned routing action; not a confidence procedure, common-context deployment ranking, site qualification, or field result.",
+  "standalone_paper_novelty_claimed": false,
+  "support_and_refusal_matrix": [
+    {
+      "condition": "future pair uses the same declared pair-specific context mechanism",
+      "decision": "supported_conditionally",
+      "target": "same_route_pair_choice"
+    },
+    {
+      "condition": "fixed outcome-independent pair weights and identified positive-weight edges",
+      "decision": "supported_conditionally",
+      "target": "pair_routing_rule"
+    },
+    {
+      "condition": "the tournament score itself is the declared action target",
+      "decision": "supported_as_mechanism_specific",
+      "target": "mechanism_specific_tournament_score"
+    },
+    {
+      "condition": "requires common-context identification",
+      "decision": "refused_without_transport",
+      "target": "common_context_single_policy_selection"
+    },
+    {
+      "condition": "comparative outcomes alone do not identify marginal success",
+      "decision": "refused_without_bridge",
+      "target": "per_policy_task_success"
+    },
+    {
+      "condition": "pair-conditioned comparisons are not evaluator-effect interventions",
+      "decision": "refused_without_randomized_intervention",
+      "target": "evaluator_or_simulator_causal_effect"
+    },
+    {
+      "condition": "new domains are outside the fixed mechanism-specific target",
+      "decision": "refused_without_transport",
+      "target": "new_policy_task_site_or_context_transport"
+    },
+    {
+      "condition": "reported routing target fixes weights independently of outcomes",
+      "decision": "refused_without_new_analysis",
+      "target": "outcome_adaptive_pair_weights"
+    },
+    {
+      "condition": "every positive-weight edge must be identified or honestly bounded",
+      "decision": "refused_as_not_identified",
+      "target": "unmeasured_positive_weight_edge_decision"
+    }
+  ],
+  "upstream_boundary": {
+    "common_context_target_identified": false,
+    "compatible_common_context_unique_winners": [
+      2,
+      0
+    ],
+    "every_singleton_common_context_regret_floor": {
+      "decimal": 0.3333333333333333,
+      "denominator": 3,
+      "numerator": 1,
+      "text": "1/3"
+    },
+    "h151_result_sha256": "cce705e152077072cef5ff6b8c313e975cf345f97483b8d6ea00e7c0eaf22a34",
+    "h152_result_sha256": "1119cb2d4885d996c60d589bfe0c62440e6369876e42c66e9ea075fc3225362e",
+    "independent_challenge_agrees": true,
+    "pair_conditioned_tie": true
+  }
+}

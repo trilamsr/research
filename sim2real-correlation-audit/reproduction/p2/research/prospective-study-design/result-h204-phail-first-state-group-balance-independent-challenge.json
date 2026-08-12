@@ -1,0 +1,47 @@
+{
+  "analyses": {
+    "date_conditional_on_policy": {
+      "factor_degrees_of_freedom": 12,
+      "observed_partial_r2": 0.017603993969859063,
+      "permutation_median": 0.0201357474592168,
+      "permutation_q025": 0.01477727963765294,
+      "permutation_q975": 0.0267823734177265,
+      "permutations": 9999,
+      "stratum_count": 4,
+      "upper_tail_p": 0.8131
+    },
+    "policy_conditional_on_date": {
+      "factor_degrees_of_freedom": 3,
+      "observed_partial_r2": 0.0039215029973591825,
+      "permutation_median": 0.005015022086005636,
+      "permutation_q025": 0.0025700762646668996,
+      "permutation_q975": 0.008616587558575367,
+      "permutations": 9999,
+      "stratum_count": 13,
+      "upper_tail_p": 0.782
+    },
+    "policy_unadjusted": {
+      "factor_degrees_of_freedom": 3,
+      "observed_partial_r2": 0.004570967878817092,
+      "permutation_median": 0.00487307728928993,
+      "permutation_q025": 0.0024499568182309744,
+      "permutation_q975": 0.008449101672970877,
+      "permutations": 9999,
+      "stratum_count": 1,
+      "upper_tail_p": 0.5832
+    }
+  },
+  "cohort_sha256": "ad43fca1da065a1cb7fd84dfa9afc5691c72ebe12e7f165c68a0050e51e87ebe",
+  "full_physical_balance_established": false,
+  "independent_classification": "no_material_group_mean_association_at_fixed_resolution",
+  "later_state_or_outcome_opened": false,
+  "maximum_observed_r2_difference": 1.474514954580286e-16,
+  "method": "independent SciPy GELSY/QR-with-pivoting solver and Philox stratum-residual permutation stream",
+  "producer_classification": "no_material_group_mean_association_at_fixed_resolution",
+  "producer_result_sha256": "d03aba1badedfe0c64bdd03be74c6e1134c331fc496a012f38ec35a048a812aa",
+  "projection_sha256": "44b7cd9729c691a610cc1fbbefffc5668d31030e013b92f2d4550f9869020370",
+  "result": "pass",
+  "schema": "h204-scipy-philox-independent-challenge-v1",
+  "scipy_version": "1.13.1",
+  "seed_text": "H204 independent SciPy Philox challenge v1"
+}

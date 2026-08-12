@@ -1,0 +1,197 @@
+{
+  "schema": "wm-probability-calibration-independent-challenge-v1",
+  "status": "pass",
+  "method": "Node direct CSV reconstruction with closed-form OLS and exact task deletions; no Python import or execution",
+  "tolerance": 1e-10,
+  "numeric_comparisons": 78,
+  "panels": {
+    "Cosmos": {
+      "metrics": {
+        "cell_rate_mse": 0.02395833333333333,
+        "empirical_individual_outcome_brier": 0.2041666666666667,
+        "empirical_outcome_variance_component": 0.18020833333333333,
+        "calibration_in_the_large_predicted_minus_real": -0.08750000000000002,
+        "ols_intercept_real_on_predicted": 0.1326871657754011,
+        "ols_slope_real_on_predicted": 0.7914438502673796,
+        "pearson_r": 0.7193275276657677
+      },
+      "selection": {
+        "real_winner": "OpenVLA",
+        "predicted_winner": "OpenVLA",
+        "real_means": {
+          "Octo-Base": 0.22499999999999998,
+          "Octo-Small": 0.1875,
+          "OpenVLA": 0.5
+        },
+        "predicted_means": {
+          "Octo-Base": 0.2,
+          "Octo-Small": 0.15000000000000002,
+          "OpenVLA": 0.30000000000000004
+        }
+      },
+      "deletion_ranges": {
+        "cell_rate_mse": {
+          "minimum": 0.01638888888888889,
+          "maximum": 0.029444444444444447
+        },
+        "empirical_individual_outcome_brier": {
+          "minimum": 0.1802777777777778,
+          "maximum": 0.21777777777777774
+        },
+        "calibration_in_the_large_predicted_minus_real": {
+          "minimum": -0.12222222222222226,
+          "maximum": -0.04999999999999999
+        },
+        "ols_intercept_real_on_predicted": {
+          "minimum": 0.08159609120521172,
+          "maximum": 0.17131313131313136
+        },
+        "ols_slope_real_on_predicted": {
+          "minimum": 0.6810344827586207,
+          "maximum": 0.9462540716612377
+        }
+      },
+      "task_heldout_affine_recalibration": {
+        "folds": [
+          {
+            "heldout_task": "carrot",
+            "training_intercept": 0.17131313131313136,
+            "training_slope": 0.7545454545454544,
+            "heldout_uncalibrated_rate_mse": 0.0075,
+            "heldout_recalibrated_rate_mse": 0.026588378736863594
+          },
+          {
+            "heldout_task": "cup",
+            "training_intercept": 0.16250000000000003,
+            "training_slope": 0.6810344827586207,
+            "heldout_uncalibrated_rate_mse": 0.007499999999999996,
+            "heldout_recalibrated_rate_mse": 0.015169565001981772
+          },
+          {
+            "heldout_task": "eggplant",
+            "training_intercept": 0.08159609120521172,
+            "training_slope": 0.9462540716612377,
+            "heldout_uncalibrated_rate_mse": 0.034166666666666665,
+            "heldout_recalibrated_rate_mse": 0.016242179404202344
+          },
+          {
+            "heldout_task": "pot",
+            "training_intercept": 0.08468045112781958,
+            "training_slope": 0.8477443609022555,
+            "heldout_uncalibrated_rate_mse": 0.04666666666666666,
+            "heldout_recalibrated_rate_mse": 0.026765015216612953
+          }
+        ],
+        "pooled_uncalibrated_rate_mse": 0.02395833333333333,
+        "pooled_recalibrated_rate_mse": 0.021191284589915167,
+        "recalibration_reduces_pooled_rate_mse": true,
+        "heldout_tasks_improved": 2,
+        "crossfitted_policy_means": {
+          "Octo-Base": 0.2819547206591491,
+          "Octo-Small": 0.23502088636826635,
+          "OpenVLA": 0.3450193543249919
+        },
+        "crossfitted_winner": "OpenVLA",
+        "crossfitted_winner_margin": 0.0630646336658428
+      },
+      "positive_affine_winner_preserved": true,
+      "rate_mse_is_brier": false
+    },
+    "IRASim": {
+      "metrics": {
+        "cell_rate_mse": 0.055625,
+        "empirical_individual_outcome_brier": 0.23583333333333334,
+        "empirical_outcome_variance_component": 0.18020833333333333,
+        "calibration_in_the_large_predicted_minus_real": -0.1458333333333334,
+        "ols_intercept_real_on_predicted": 0.2404651162790698,
+        "ols_slope_real_on_predicted": 0.4023255813953489,
+        "pearson_r": 0.2772475059378397
+      },
+      "selection": {
+        "real_winner": "OpenVLA",
+        "predicted_winner": "Octo-Base",
+        "real_means": {
+          "Octo-Base": 0.22499999999999998,
+          "Octo-Small": 0.1875,
+          "OpenVLA": 0.5
+        },
+        "predicted_means": {
+          "Octo-Base": 0.2,
+          "Octo-Small": 0.0875,
+          "OpenVLA": 0.1875
+        }
+      },
+      "deletion_ranges": {
+        "cell_rate_mse": {
+          "minimum": 0.04527777777777778,
+          "maximum": 0.06583333333333333
+        },
+        "empirical_individual_outcome_brier": {
+          "minimum": 0.21055555555555555,
+          "maximum": 0.2586111111111111
+        },
+        "calibration_in_the_large_predicted_minus_real": {
+          "minimum": -0.18333333333333338,
+          "maximum": -0.10000000000000003
+        },
+        "ols_intercept_real_on_predicted": {
+          "minimum": 0.18858131487889274,
+          "maximum": 0.318122270742358
+        },
+        "ols_slope_real_on_predicted": {
+          "minimum": 0.13537117903930146,
+          "maximum": 0.5017301038062285
+        }
+      },
+      "task_heldout_affine_recalibration": {
+        "folds": [
+          {
+            "heldout_task": "carrot",
+            "training_intercept": 0.25976331360946747,
+            "training_slope": 0.44970414201183434,
+            "heldout_uncalibrated_rate_mse": 0.028333333333333332,
+            "heldout_recalibrated_rate_mse": 0.035247861302708815
+          },
+          {
+            "heldout_task": "cup",
+            "training_intercept": 0.21327433628318587,
+            "training_slope": 0.4823008849557523,
+            "heldout_uncalibrated_rate_mse": 0.08666666666666666,
+            "heldout_recalibrated_rate_mse": 0.06020662019996343
+          },
+          {
+            "heldout_task": "eggplant",
+            "training_intercept": 0.318122270742358,
+            "training_slope": 0.13537117903930146,
+            "heldout_uncalibrated_rate_mse": 0.024999999999999998,
+            "heldout_recalibrated_rate_mse": 0.02706567062667249
+          },
+          {
+            "heldout_task": "pot",
+            "training_intercept": 0.18858131487889274,
+            "training_slope": 0.5017301038062285,
+            "heldout_uncalibrated_rate_mse": 0.08249999999999999,
+            "heldout_recalibrated_rate_mse": 0.025199999600898776
+          }
+        ],
+        "pooled_uncalibrated_rate_mse": 0.05562499999999999,
+        "pooled_recalibrated_rate_mse": 0.03693003793256088,
+        "recalibration_reduces_pooled_rate_mse": true,
+        "heldout_tasks_improved": 2,
+        "crossfitted_policy_means": {
+          "Octo-Base": 0.3307632179721833,
+          "Octo-Small": 0.2873795015477353,
+          "OpenVLA": 0.328906484183024
+        },
+        "crossfitted_winner": "Octo-Base",
+        "crossfitted_winner_margin": 0.0018567337891592928
+      },
+      "positive_affine_winner_preserved": true,
+      "rate_mse_is_brier": false
+    }
+  },
+  "protocol_sha256": "8b5eb187af4f1e5ccc89139e1a8b2535f9757f06d17ea87f9769c8296a3096ad",
+  "input_sha256": "ec4f9b58ba4e1e8ced4adbe90ed8c2696fa86b449f6b2da6054848a9be7c48e5",
+  "producer_sha256": "7e51cfc89bf20a9d88cd6d2382951c1e13dd6b826d378eca19c1e2775d8e2e5b",
+  "producer_result_sha256": "43f7c3628726fc276f65ce5fc4ae1db69cd03afbf9f0f2a25c6ee3bc6428c06d"
+}

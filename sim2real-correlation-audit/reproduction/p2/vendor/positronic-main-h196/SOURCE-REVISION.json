@@ -1,0 +1,10 @@
+{
+  "baseline_commit": "e406176bc526babb06844a48e3627a5c0409eb74",
+  "commit": "01b78e6f62ff5913490c360afdd2712eee070524",
+  "file_count_excluding_license_and_revision": 27,
+  "license": "Apache-2.0",
+  "reason": "Pinned endpoint source projection needed for offline verification of H196, H198, and H199; full 51-commit H196 reproduction uses the documented optional network acquisition tier.",
+  "resolved_at": "2026-07-28T09:57:28Z",
+  "retrieved": "2026-07-28",
+  "upstream": "https://github.com/Positronic-Robotics/positronic"
+}

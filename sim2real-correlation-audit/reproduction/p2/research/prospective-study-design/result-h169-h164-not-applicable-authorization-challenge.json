@@ -1,0 +1,70 @@
+{
+  "schema": "h169-h164-not-applicable-authorization-challenge-v1",
+  "challenge_runtime": "v26.5.0",
+  "producer_modules_imported": false,
+  "protocol_sha256": "3a2f623b24219c23f4f4eec8547028325a5feab5e7385ac5088295ba1bb6e784",
+  "producer_source_sha256": "e66053790ffbefcdea1a267afbe2e5c9f488d39352840f926d3071b65f82c73b",
+  "producer_result_sha256": "f1be2b4b993f622fc2ae6292fbec5ca7b884db9b003ecb15266b881e8497d401",
+  "base_dossier_name": "target_preserving_complete",
+  "target_spec_is_hash_only": true,
+  "target_bound_not_applicable_authorization_present": false,
+  "bypasses": [
+    {
+      "unit": "policy_observation_interface",
+      "arbitrary_reason_present": true,
+      "target_bound_authorization_present": false,
+      "current_rule_decision": "eligible_for_outcome_hidden_rehearsal",
+      "protocol_required_decision": "not_evidenced",
+      "fail_open": true
+    },
+    {
+      "unit": "context_generation_and_assignment_order",
+      "arbitrary_reason_present": true,
+      "target_bound_authorization_present": false,
+      "current_rule_decision": "eligible_for_outcome_hidden_rehearsal",
+      "protocol_required_decision": "not_evidenced",
+      "fail_open": true
+    },
+    {
+      "unit": "reset_washout_and_carryover_control",
+      "arbitrary_reason_present": true,
+      "target_bound_authorization_present": false,
+      "current_rule_decision": "eligible_for_outcome_hidden_rehearsal",
+      "protocol_required_decision": "not_evidenced",
+      "fail_open": true
+    }
+  ],
+  "bypass_count": 3,
+  "control_attacks": [
+    {
+      "attack": "visible_instrumentation_flag",
+      "observed": "target_altering_only",
+      "rejected": true
+    },
+    {
+      "attack": "dynamics_altering_flag",
+      "observed": "target_altering_only",
+      "rejected": true
+    },
+    {
+      "attack": "late_preparation",
+      "observed": "not_evidenced",
+      "rejected": true
+    },
+    {
+      "attack": "outcome_field",
+      "observed": "not_evidenced",
+      "rejected": true
+    },
+    {
+      "attack": "measurement_error_equals_tolerance",
+      "observed": "not_evidenced",
+      "rejected": true
+    }
+  ],
+  "control_attacks_rejected": 5,
+  "disposition": "fail_repair_required",
+  "reliance_gate_passed": false,
+  "real_site_use_permitted": false,
+  "scope": "Synthetic interface authorization failure only; not evidence that any real site misreported a unit or that H164's other controls fail."
+}

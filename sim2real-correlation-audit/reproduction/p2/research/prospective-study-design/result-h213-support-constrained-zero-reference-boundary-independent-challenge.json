@@ -1,0 +1,92 @@
+{
+  "schema": "h213-support-constrained-zero-reference-boundary-independent-challenge-v1",
+  "protocol_sha256": "5fec939a816ef97ac8e16587ac0dcddbb0f9298ac0fb311eb804c0a45a7921c7",
+  "producer_result_sha256": "a482b94e6dd2dc9b89be52f01bb7dbb9c0348ea565a6fd753fd94cffd9ed32ce",
+  "implementation": "independent Ruby Rational arithmetic",
+  "ruby_version": "2.6.10",
+  "imports_or_executes_producer": false,
+  "classification": "support_constraint_creates_boundary_value_jump",
+  "theorem": {
+    "any_nonempty_zero_set_value": "1/4",
+    "complete_optimizer": "p=r, unique",
+    "exactly_one_zero_gap": "r_(2)/8",
+    "exactly_two_zeros": "value unchanged; H212 face collapses to h=0",
+    "at_least_three_zeros": "no H212 value or optimizer change"
+  },
+  "exact_case_census": {
+    "canonical_cases": 242,
+    "by_zero_count": {
+      "1": 121,
+      "2": 69,
+      "3": 34,
+      "4": 14,
+      "5": 4
+    },
+    "by_positive_support_size": {
+      "1": 16,
+      "2": 40,
+      "3": 60,
+      "4": 70,
+      "5": 56
+    },
+    "proof_identity_checks": 242,
+    "positive_interior_endpoint_checks": 9,
+    "raw_endpoint_oracle_cases_k_le_5": 117,
+    "distinct_label_permutations": 14056,
+    "support_grid_lotteries_k_le_5_denominator_8": 7857,
+    "grid_equalities_at_unique_optimizer": 42,
+    "accepted_exactly_one_zero_limit_rows": 453
+  },
+  "exact_derivation": [
+    "For any zero-reference winner z, support-constrained p gives F_z=1+D_r(p)>=1.",
+    "The reference lottery p=r is feasible, has D_r(p)=0, and makes every F_w<=1.",
+    "Equality forces p proportional to r on positive support; normalization gives p=r uniquely.",
+    "For exactly one zero, H212's unrestricted value is (2-r_(2))/8, so exclusion adds r_(2)/8."
+  ],
+  "attacks": [
+    {
+      "attack": "support_constrained_value_below_one_quarter",
+      "disposition": "rejected",
+      "evidence": "7857 exact restricted-grid lotteries plus zero-winner proof"
+    },
+    {
+      "attack": "second_support_constrained_optimizer",
+      "disposition": "rejected",
+      "evidence": "42 exact grid equalities, all p=r, plus equality proof"
+    },
+    {
+      "attack": "exactly_one_zero_changes_face_only",
+      "disposition": "rejected",
+      "evidence": "121 exact positive gaps and infeasible H212 endpoints"
+    },
+    {
+      "attack": "exactly_two_zeros_raise_value",
+      "disposition": "rejected",
+      "evidence": "69 value-equal face collapses to h=0"
+    },
+    {
+      "attack": "three_or_more_zeros_change_h212",
+      "disposition": "rejected",
+      "evidence": "52 cases already unique at p=r"
+    },
+    {
+      "attack": "raw_reduction_fails_under_support_constraint",
+      "disposition": "rejected",
+      "evidence": "117 exact raw endpoint comparisons"
+    },
+    {
+      "attack": "label_dependence",
+      "disposition": "rejected",
+      "evidence": "14056 distinct label permutations"
+    }
+  ],
+  "producer_agreement": {
+    "classification": true,
+    "case_count": true,
+    "raw_count": true,
+    "permutation_count": true,
+    "grid_count": true,
+    "limit_count": true
+  },
+  "scope": "one hard p_i=0 when r_i=0 constraint under the H212 full-edge-box model"
+}

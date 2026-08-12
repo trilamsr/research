@@ -1,0 +1,104 @@
+# Auspex -- CHECKPOINT-LEVEL ground truth, VECTOR-EXTRACTED from Fig 3 of arXiv:2511.04665v2.
+#
+# STATUS: EXTRACTED (not eyeballed), 2026-07-19. Independently reviewed;
+# current-file integrity is protected by the reproduction-package manifest and
+# provenance is summarized in ../../real2sim-noise-floor/review-source-artifacts.md.
+#
+# METHOD: Figure 3 is vector artwork. Scatter-marker coordinates were read directly from the PDF
+# drawing commands (PyMuPDF get_drawings), calibrated against the panel gridlines, and converted
+# to success percentages. NO pixel estimation, NO eyeballing.
+#
+# VERIFICATION (four independent checks, none tuned toward the answer):
+#  1. Reproduces the r printed inside each panel to <= 0.0004:
+#       toy  extracted 0.9444 vs printed 0.944
+#       rope extracted 0.9007 vs printed 0.901
+#       T    extracted 0.9147 vs printed 0.915
+#  2. Every value quantises exactly to k/n for that task's episode count (20/27/16).
+#     Calibration did not force this -- it is independent evidence the scale is right.
+#  3. Series->policy identified via Fig 4, whose six panels are titled with explicit
+#     (task, policy) names. Overlap of real-value sets: rope-ACT 5/5, rope-Pi-0 3/3,
+#     T-DP 4/4, T-Pi-0 3/3. Pi-0 confirmed twice on different tasks.
+#       ACT=green(C2)  DP=orange(C1)  Pi-0=blue(C0)  SmolVLA=purple(C4)
+#     NOTE: this is NOT matplotlib default cycle order. Assuming the cycle would have
+#     swapped ACT and Pi-0. The empirical match governs.
+#  4. Best-checkpoint values agree with the prior human transcription of the same figure
+#     within 1.3pp on all 12 (task,policy) cells; toy packing matches exactly on all four.
+#
+# COUNTS: 52 checkpoints total (17 toy / 20 rope / 15 T). The paper's Fig-10 replay SUBSET is
+# 43 (16/15/12) and Table VIII's episode totals imply 15/15/12 -- Figure 3 plots ALL evaluated
+# checkpoints, the replay tables a subset. Consistent, not contradictory.
+#
+# KNOWN LIMITS:
+#  - CORRECTED after independent review: markers do NOT simply "merge". matplotlib emits one
+#    draw command per series, so two policies at the SAME (real,sim) produce TWO commands with
+#    different fills -- both are recovered. Verified: sloth (148.93,116.39) drawn 2x (blue+green);
+#    rope (248.96,124.92) 2x (blue+green); rope (199.34,175.13) 3x (purple+orange). So 52 draw
+#    ops occupy only 48 distinct positions, and all 52 are real.
+#    RESIDUAL AMBIGUITY: two SAME-colour markers at an identical coordinate are indistinguishable
+#    from one marker drawn twice. This affects exactly one case -- rope orange x2 at (0,0). Both
+#    were retained because n=20 is what reproduces the printed r=0.901; if they are actually one
+#    point, rope has 19 checkpoints. Unresolved; ask the authors.
+#    Same-colour coincident points elsewhere WOULD be invisible, so counts remain a LOWER bound.
+#  - Checkpoints are NOT independent: the paper says "checkpoints from different training stages
+#    for each network". It never states how many training runs it did -- the words "seed" and
+#    "training run" appear NOWHERE in either arXiv version. So cluster count is bounded above by
+#    12 (task x policy cells) and below by 4 (policies); the paper does not disambiguate.
+#    CONSEQUENCE: any pair count computed from these rows is PSEUDO-REPLICATED and overstates
+#    information. The 403 decidable / 47 hard pairs these rows yield must NOT be read as
+#    independent-pair evidence. Cluster-aware analysis is required before any inferential verdict.
+#  - task "sloth" = the paper's "toy packing" (repo naming).
+#
+# real_successes / sim_successes are the recovered INTEGER episode counts out of n_episodes.
+task,policy,n_episodes,real_successes,sim_successes,real_success,sim_success
+sloth,act,20,10,11,50.0,55.0
+sloth,act,20,12,12,60.0,60.0
+sloth,act,20,13,14,65.0,70.0
+sloth,act,20,16,13,80.0,65.0
+sloth,act,20,17,14,85.0,70.0
+sloth,dp,20,0,2,0.0,10.0
+sloth,dp,20,7,7,35.0,35.0
+sloth,dp,20,8,7,40.0,35.0
+sloth,dp,20,10,9,50.0,45.0
+sloth,dp,20,14,15,70.0,75.0
+sloth,pi0,20,10,10,50.0,50.0
+sloth,pi0,20,16,15,80.0,75.0
+sloth,pi0,20,16,13,80.0,65.0
+sloth,svla,20,1,1,5.0,5.0
+sloth,svla,20,6,5,30.0,25.0
+sloth,svla,20,7,3,35.0,15.0
+sloth,svla,20,7,6,35.0,30.0
+rope,act,27,10,5,37.037,18.5185
+rope,act,27,12,10,44.4444,37.037
+rope,act,27,15,15,55.5556,55.5556
+rope,act,27,21,19,77.7778,70.3704
+rope,act,27,26,20,96.2963,74.0741
+rope,act,27,26,22,96.2963,81.4815
+rope,dp,27,0,0,0.0,0.0
+rope,dp,27,0,0,0.0,0.0
+rope,dp,27,6,5,22.2222,18.5185
+rope,dp,27,12,18,44.4444,66.6667
+rope,dp,27,22,26,81.4815,96.2963
+rope,dp,27,23,20,85.1852,74.0741
+rope,pi0,27,15,15,55.5556,55.5556
+rope,pi0,27,20,23,74.0741,85.1852
+rope,pi0,27,23,26,85.1852,96.2963
+rope,svla,27,0,0,0.0,0.0
+rope,svla,27,20,12,74.0741,44.4444
+rope,svla,27,22,19,81.4815,70.3704
+rope,svla,27,24,15,88.8889,55.5556
+rope,svla,27,24,20,88.8889,74.0741
+T,act,16,4,6,25.0,37.5
+T,act,16,5,4,31.25,25.0
+T,act,16,7,7,43.75,43.75
+T,act,16,7,4,43.75,25.0
+T,dp,16,5,5,31.25,31.25
+T,dp,16,12,12,75.0,75.0
+T,dp,16,13,12,81.25,75.0
+T,dp,16,15,14,93.75,87.5
+T,pi0,16,7,9,43.75,56.25
+T,pi0,16,11,12,68.75,75.0
+T,pi0,16,13,15,81.25,93.75
+T,svla,16,1,1,6.25,6.25
+T,svla,16,4,2,25.0,12.5
+T,svla,16,7,5,43.75,31.25
+T,svla,16,9,5,56.25,31.25

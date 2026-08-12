@@ -1,0 +1,92 @@
+{
+  "schema": "h231-shared-binary-success-independent-challenge-v1",
+  "status": "pass",
+  "classification": "central_result_survives_with_gradient_geometry",
+  "protocol_sha256": "7c35f1843748714a752619e1130de2bb42ecbc50b0e98758a9255bf7ae0d30e8",
+  "producer_implementation_sha256": "3566eca736484e117de5f41cdd4310c16b0c537a6f194653ef1c93102800e1da",
+  "producer_result_sha256": "7bdaf45fc507ba4f0b66e4b99ba04527e9bd958df530a382ec667446a72a81ed",
+  "runtime": {
+    "node": "v26.5.0"
+  },
+  "exact_k_min": 3,
+  "exact_k_max": 7,
+  "exact_reference_lottery_cases": 96,
+  "exact_binary_joint_law_identity_cases": 4,
+  "exact_simplex_grid_points": 382,
+  "rows": [
+    {
+      "k": 3,
+      "vertex_count": 8,
+      "uniform_value": "2/12",
+      "deterministic_value": "1/4",
+      "reference_count": 4,
+      "lottery_count": 4,
+      "uniform_minimum_mass_numerator": "1",
+      "opposite_unique_winner_indices": [
+        0,
+        2
+      ]
+    },
+    {
+      "k": 4,
+      "vertex_count": 16,
+      "uniform_value": "3/16",
+      "deterministic_value": "1/4",
+      "reference_count": 5,
+      "lottery_count": 4,
+      "uniform_minimum_mass_numerator": "1",
+      "opposite_unique_winner_indices": [
+        0,
+        3
+      ]
+    },
+    {
+      "k": 5,
+      "vertex_count": 32,
+      "uniform_value": "4/20",
+      "deterministic_value": "1/4",
+      "reference_count": 5,
+      "lottery_count": 4,
+      "uniform_minimum_mass_numerator": "1",
+      "opposite_unique_winner_indices": [
+        0,
+        4
+      ]
+    },
+    {
+      "k": 6,
+      "vertex_count": 64,
+      "uniform_value": "5/24",
+      "deterministic_value": "1/4",
+      "reference_count": 5,
+      "lottery_count": 4,
+      "uniform_minimum_mass_numerator": "1",
+      "opposite_unique_winner_indices": [
+        0,
+        5
+      ]
+    },
+    {
+      "k": 7,
+      "vertex_count": 128,
+      "uniform_value": "6/28",
+      "deterministic_value": "1/4",
+      "reference_count": 5,
+      "lottery_count": 4,
+      "uniform_minimum_mass_numerator": "1",
+      "opposite_unique_winner_indices": [
+        0,
+        6
+      ]
+    }
+  ],
+  "independently_verified": {
+    "gradient_geometry_not_full_edge_box": true,
+    "opposite_unique_common_context_winners": true,
+    "opponent_reference_cancels": true,
+    "deterministic_worst_regret": "1/4",
+    "unique_uniform_minimax": true,
+    "minimax_value": "(K-1)/(4K)"
+  },
+  "imports_or_executes_producer": false
+}

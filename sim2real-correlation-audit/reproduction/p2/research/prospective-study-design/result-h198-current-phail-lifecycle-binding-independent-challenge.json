@@ -1,0 +1,145 @@
+{
+  "schema": "h198-current-phail-lifecycle-binding-independent-challenge-v1",
+  "method": "Independent Node direct-source reconstruction using function-bound slices and semantic attack predicates; imports no producer module.",
+  "commit": "01b78e6f62ff5913490c360afdd2712eee070524",
+  "source_blobs": [
+    {
+      "path": "positronic/cfg/embodiment.py",
+      "git_blob": "7bc708eece4ea12c443ddfea6156f4d68a51a1ea"
+    },
+    {
+      "path": "positronic/cfg/hardware/roboarm/__init__.py",
+      "git_blob": "4d27c99f622f6d2be40577a57b2d076c94a8695b"
+    },
+    {
+      "path": "positronic/cli/eval/run.py",
+      "git_blob": "38c7bd50185df7bcb72434148c6c901b8d4f465a"
+    },
+    {
+      "path": "positronic/dataset/ds_writer_agent.py",
+      "git_blob": "765b811438d1a0e7db32698e24f9d21488495be0"
+    },
+    {
+      "path": "positronic/dataset/local_dataset.py",
+      "git_blob": "b14883ea6d970a5b9b84fc7c8ee930bc7a889495"
+    },
+    {
+      "path": "positronic/dataset/serializers.py",
+      "git_blob": "c7a1ccacb9f0a98f9eb7e93981126542bab1e836"
+    },
+    {
+      "path": "positronic/drivers/roboarm/franka.py",
+      "git_blob": "fbe608d1bd4fdae61309c630a0efcc990653c0a3"
+    },
+    {
+      "path": "positronic/eval.py",
+      "git_blob": "a8fb68d340b8c05c9b8332711d53ccfa15e6c652"
+    },
+    {
+      "path": "positronic/gui/eval.py",
+      "git_blob": "8fe6c8fec55a3702d6ae6047e45472b090bf73c0"
+    },
+    {
+      "path": "positronic/inference.py",
+      "git_blob": "57dd5e20829acb606b8faa45b40dde923128b3b7"
+    },
+    {
+      "path": "positronic/policy/harness.py",
+      "git_blob": "62dd01974588785000285ef6c8cba4672386690a"
+    },
+    {
+      "path": "positronic/wire.py",
+      "git_blob": "026f94cfd740f80cf8c9d859aaf24a55e8c34214"
+    }
+  ],
+  "h196_sha256": "9f832fddbdb90383ed6cbb330628dce0c7494d703a8c5889e22d26e88d0cd42c",
+  "units": [
+    {
+      "unit": "phail_real_hardware_binding",
+      "status": "supported"
+    },
+    {
+      "unit": "phail_task_binding",
+      "status": "not_supported"
+    },
+    {
+      "unit": "pre_session_scene_reset_call",
+      "status": "not_supported"
+    },
+    {
+      "unit": "scene_reset_completion_gate",
+      "status": "not_supported"
+    },
+    {
+      "unit": "inter_episode_home_command",
+      "status": "supported"
+    },
+    {
+      "unit": "home_completion_gate",
+      "status": "not_supported"
+    },
+    {
+      "unit": "post_reset_recording_boundary",
+      "status": "not_supported"
+    },
+    {
+      "unit": "persistent_episode_identity",
+      "status": "supported"
+    },
+    {
+      "unit": "persistent_operator_session_identity",
+      "status": "not_supported"
+    },
+    {
+      "unit": "persistent_reset_carryover_evidence",
+      "status": "not_supported"
+    },
+    {
+      "unit": "persistent_directive_context",
+      "status": "supported"
+    },
+    {
+      "unit": "server_recording_join",
+      "status": "supported"
+    }
+  ],
+  "supported_count": 5,
+  "not_supported_count": 7,
+  "classification": "mechanics_bound_evidence_incomplete",
+  "attacks": [
+    {
+      "attack": "generic_task_reset_is_phail_binding",
+      "rejected": true
+    },
+    {
+      "attack": "synchronous_driver_reset_is_preopen_acceptance",
+      "rejected": true
+    },
+    {
+      "attack": "robot_state_filter_gates_all_recording",
+      "rejected": true
+    },
+    {
+      "attack": "arbitrary_context_is_operator_session_id",
+      "rejected": true
+    },
+    {
+      "attack": "episode_uuid_is_operator_session_id",
+      "rejected": true
+    },
+    {
+      "attack": "reset_command_is_persistent_reset_evidence",
+      "rejected": true
+    },
+    {
+      "attack": "abort_is_persistent_reset_evidence",
+      "rejected": true
+    },
+    {
+      "attack": "current_source_proves_historical_v1_deployment",
+      "rejected": true
+    }
+  ],
+  "disposition": "pass_with_scope",
+  "scope": "pinned current command binding only; no physical-success, historical-deployment, independence, exchangeability, or performance claim"
+}

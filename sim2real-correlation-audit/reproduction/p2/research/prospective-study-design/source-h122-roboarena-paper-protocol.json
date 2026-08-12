@@ -1,0 +1,35 @@
+{
+  "schema": "h122-roboarena-paper-protocol-source-v1",
+  "observed_utc": "2026-07-27T20:16:50+00:00",
+  "title": "RoboArena: Distributed Real-World Evaluation of Generalist Robot Policies",
+  "authors_first": "Pranav Atreya",
+  "venue": "Proceedings of The 9th Conference on Robot Learning, PMLR 305, 2025",
+  "pmlr_landing_url": "https://proceedings.mlr.press/v305/atreya25a.html",
+  "official_pdf_url": "https://raw.githubusercontent.com/mlresearch/v305/main/assets/atreya25a/atreya25a.pdf",
+  "arxiv_id": "2506.18123",
+  "retrieved_pdf_sha256": "1710a979cf1b8b1624ffc36bd885ac034224e0980d34ad214a80395e57cc11ec",
+  "retrieved_pdf_page_count": 29,
+  "source_findings": [
+    {
+      "location": "Section 3.1 and Algorithm 1, PDF physical page 4",
+      "finding": "The stated evaluation protocol has the central server sample two policies from the pool, describes that sampling as random, assigns the pair to an evaluator, and requires closely matched initial conditions within the A/B comparison."
+    },
+    {
+      "location": "Appendix B.6, PDF physical page 20",
+      "finding": "The paper anticipates a long-running benchmark whose policy set evolves as weaker policies are dropped and stronger policies are added, and it evaluates simulated task-distribution and policy-set shift."
+    },
+    {
+      "location": "Appendix C.1, PDF physical page 22",
+      "finding": "The described central server tracks newly registered or deprecated policies in the policy pool."
+    }
+  ],
+  "not_established_by_source": [
+    "the current deployed server implementation or revision",
+    "the active pool and its effective intervals for any public dump",
+    "pair inclusion probabilities or deterministic assignment weights",
+    "orientation probabilities, blocking, history, reset, or interference controls",
+    "a session-level assignment export"
+  ],
+  "future_heldout_p1_outcomes_accessed": false,
+  "sealed_p3_frame_accessed": false
+}

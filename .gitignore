@@ -1,9 +1,32 @@
 __pycache__/
 *.pyc
 .pytest_cache/
+.ruff_cache/
 .DS_Store
+.codex-scratch/
+tmp/
 proposals/
 PROPOSAL*
 .venv/
-dynamics-fidelity/
+# Each research program keeps its working record local. Only the current paper
+# and the manifest-bound reproduction package are part of the Git surface.
+/sim2real-correlation-audit/*
+!/sim2real-correlation-audit/PAPER.md
+!/sim2real-correlation-audit/PAPER.pdf
+!/sim2real-correlation-audit/reproduction/
+!/sim2real-correlation-audit/reproduction/**
+
+/dynamics-fidelity/*
+!/dynamics-fidelity/PAPER.md
+!/dynamics-fidelity/PAPER.pdf
+!/dynamics-fidelity/reproduction/
+!/dynamics-fidelity/reproduction/**
+
+/ppi-gold-bias/*
+!/ppi-gold-bias/PAPER.md
+!/ppi-gold-bias/PAPER.pdf
+!/ppi-gold-bias/reproduction/
+!/ppi-gold-bias/reproduction/**
 *.ots
+work/
+.env

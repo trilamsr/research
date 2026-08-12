@@ -1,0 +1,147 @@
+{
+  "classification": "relative_open_within_additive_shared_success_model",
+  "exhaustive_census": {
+    "boundary_minimum_policy_exclusions": 494,
+    "boundary_profiles": 329,
+    "denominator": 6,
+    "interior_profiles": 455,
+    "interior_unique_winner_checks": 2429,
+    "offset_invariance_checks": 1365,
+    "regret_formula_vertex_checks": 2352,
+    "rows": [
+      {
+        "boundary_profiles": 7,
+        "interior_profiles": 21,
+        "k": 3,
+        "profiles": 28
+      },
+      {
+        "boundary_profiles": 28,
+        "interior_profiles": 56,
+        "k": 4,
+        "profiles": 84
+      },
+      {
+        "boundary_profiles": 84,
+        "interior_profiles": 126,
+        "k": 5,
+        "profiles": 210
+      },
+      {
+        "boundary_profiles": 210,
+        "interior_profiles": 252,
+        "k": 6,
+        "profiles": 462
+      }
+    ],
+    "total_profiles": 784
+  },
+  "implementation_sha256": "d6cdd9053b36f7733d16c4f34ef1cb1a63fb4dce77af1700d3d7e6c19a1a6eb0",
+  "outcome_status": "review_triggered_outcome_exposed_exploratory",
+  "propositions": {
+    "boundary_consequence": "a minimum-a policy cannot be a compatible unique winner at range 1",
+    "common_offset_cancels": true,
+    "constant_profile_reduction": "R(p)=(1-min_i p_i)/4",
+    "interior_condition": "max(a)-min(a)<1",
+    "interior_consequence": "every policy is a compatible unique target winner via x=e_w",
+    "opponent_reference_cancels": true,
+    "pair_interval_width": "1/2",
+    "pair_target_interval": "[o_ij/2,(o_ij+1)/2]",
+    "worst_regret": "R(p;a)=[1-p_dot_a+max_w(a_w-p_w)]/4"
+  },
+  "protocol_sha256": "d6400e8c1025a6ca1a595047ce827ea486a10f553216775f7dfc49244eed14ef",
+  "runtime": {
+    "implementation": "CPython",
+    "python": "3.12.13"
+  },
+  "schema": "h238-interior-route-law-nonidentification-v1",
+  "scope": "Constant-route, equal-target-weight, two-context exact additive shared-binary-success model with exact observed laws. No sampling or empirical transport claim.",
+  "stage_zero": {
+    "boundary_profile": {
+      "compatible_unique_winners": [
+        2,
+        3
+      ],
+      "minimum_policy_excluded": true,
+      "profile": [
+        "0",
+        "1/2",
+        "1"
+      ]
+    },
+    "interior_profiles": [
+      {
+        "compatible_unique_winners": [
+          1,
+          2,
+          3
+        ],
+        "profile": [
+          "0",
+          "1/4",
+          "1/2"
+        ],
+        "range": "1/2"
+      },
+      {
+        "compatible_unique_winners": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "profile": [
+          "0",
+          "1/3",
+          "2/3",
+          "5/6"
+        ],
+        "range": "5/6"
+      }
+    ],
+    "pair_interval_rows": [
+      {
+        "observed": "0",
+        "strictly_straddles_half": false,
+        "target_interval": [
+          "0",
+          "1/2"
+        ]
+      },
+      {
+        "observed": "1/4",
+        "strictly_straddles_half": true,
+        "target_interval": [
+          "1/8",
+          "5/8"
+        ]
+      },
+      {
+        "observed": "1/2",
+        "strictly_straddles_half": true,
+        "target_interval": [
+          "1/4",
+          "3/4"
+        ]
+      },
+      {
+        "observed": "3/4",
+        "strictly_straddles_half": true,
+        "target_interval": [
+          "3/8",
+          "7/8"
+        ]
+      },
+      {
+        "observed": "1",
+        "strictly_straddles_half": false,
+        "target_interval": [
+          "1/2",
+          "1"
+        ]
+      }
+    ],
+    "regret_formula_checks": 6
+  },
+  "status": "pass"
+}

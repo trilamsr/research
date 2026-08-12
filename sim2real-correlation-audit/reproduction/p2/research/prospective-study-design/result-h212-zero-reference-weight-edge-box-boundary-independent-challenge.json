@@ -1,0 +1,83 @@
+{
+  "attacks": [
+    {
+      "attack": "value_formula_boundary_failure",
+      "disposition": "rejected",
+      "evidence": "242 exact zero-pattern cases and 40395 exact grid lotteries"
+    },
+    {
+      "attack": "new_optimizer_direction_on_boundary",
+      "disposition": "rejected",
+      "evidence": "60 grid optima all lie on the proposed exact segment"
+    },
+    {
+      "attack": "raw_reduction_invalid_at_zero_weight",
+      "disposition": "rejected",
+      "evidence": "247 exact raw-box endpoint comparisons"
+    },
+    {
+      "attack": "label_or_tie_dependence",
+      "disposition": "rejected",
+      "evidence": "14056 distinct label permutations"
+    },
+    {
+      "attack": "segment_endpoint_is_not_complete",
+      "disposition": "rejected",
+      "evidence": "238 exact just-outside face attacks"
+    },
+    {
+      "attack": "zero_weight_implies_zero_lottery_mass",
+      "disposition": "confirmed_as_false",
+      "evidence": "with exactly two zeros, both may receive equal h mass through min-positive/2"
+    },
+    {
+      "attack": "three_or_more_zero_weights_create_a_larger_face",
+      "disposition": "rejected",
+      "evidence": "r_(2)=r_(3)=0 collapses h to zero and p=r uniquely"
+    }
+  ],
+  "classification": "value_and_optimizer_extend_without_change",
+  "exact_case_census": {
+    "by_k": {
+      "3": 14,
+      "4": 34,
+      "5": 69,
+      "6": 125
+    },
+    "by_positive_support_size": {
+      "1": 16,
+      "2": 40,
+      "3": 60,
+      "4": 70,
+      "5": 56
+    },
+    "canonical_cases": 242,
+    "distinct_label_permutations": 14056,
+    "exact_grid_lotteries_k_le_5_denominator_8": 40395,
+    "grid_optima_on_claimed_segment": 60,
+    "just_outside_segment_attacks": 238,
+    "proof_identity_checks": 484,
+    "raw_endpoint_oracle_probes_k_le_5": 247,
+    "segment_probes": 484
+  },
+  "exact_derivation": [
+    "F_1+F_2 >= 2-p_1-p_2+|p_1+p_2-a-b| >= 2-a-b.",
+    "Equality forces every tail cross-product to zero; a positive tail total forces p_i=lambda*r_i even for zero tail weights.",
+    "Solving F_1=F_2 yields the unchanged H188 h-segment on the closed simplex.",
+    "Every tail constraint reduces exactly to 2h <= r_j-b, so the complete face is 0<=h<=(r_(3)-r_(2))/2."
+  ],
+  "implementation": "independent Node.js BigInt rational arithmetic",
+  "imports_or_executes_producer": false,
+  "producer_agreement": {
+    "canonical_case_count": true,
+    "classification": true,
+    "permutation_count": true,
+    "raw_endpoint_count": true,
+    "theorem_value": true,
+    "uniqueness": true
+  },
+  "producer_result_sha256": "60197dc7967bdb388d0707299c6652403e289c2fc58a010d7a121a17b78f839e",
+  "protocol_sha256": "2204934e1e4729a0d1dff29b89e544c0da59b654d01a6270655265eda5b61e7c",
+  "schema": "h212-zero-reference-weight-edge-box-boundary-independent-challenge-v1",
+  "scope": "closed reference simplex only for the weighted-Borda full compatible edge box and ex-ante expected regret"
+}

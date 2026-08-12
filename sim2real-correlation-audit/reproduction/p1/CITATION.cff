@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this research artifact, its extracted datasets, or its audit code, please cite:"
+title: "What Does a Sim-to-Real Correlation Support? A Bounded 26-Paper Reporting Audit and Decision-Level Reanalysis"
+authors:
+  - family-names: Lam
+    given-names: Tri
+    email: tri@maydow.com
+date-released: 2026-08-06
+version: "p1-review-2026-08-06"
+abstract: "A bounded 26-paper audit of what reported sim-to-real correlations support for finite-panel policy decisions, population transport, and decision acceptability."
+license: MIT
+keywords:
+  - sim-to-real
+  - robot policy evaluation
+  - correlation
+  - reproducibility
+  - meta-research

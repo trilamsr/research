@@ -1,0 +1,472 @@
+{
+  "candidates": [
+    {
+      "behavior": "static_robot_model_metadata_emitted_at_driver_start",
+      "configured_base_home_present": false,
+      "key": "joint_names",
+      "producer_path": "positronic/drivers/roboarm/franka.py",
+      "producer_symbol": "Robot._build_robot_meta",
+      "realized_home_target_present": false,
+      "rng_identity_present": false,
+      "semantic_class": "schema_descriptor",
+      "value_class": "array_of_revolute_joint_name_strings_from_robot_urdf"
+    },
+    {
+      "behavior": "fixed_static_visualization_role",
+      "configured_base_home_present": false,
+      "key": "joint_signal",
+      "producer_path": "positronic/wire.py",
+      "producer_symbol": "ROBOT_STATIC_META",
+      "realized_home_target_present": false,
+      "rng_identity_present": false,
+      "semantic_class": "schema_descriptor",
+      "value_class": "constant_signal_name_string"
+    },
+    {
+      "behavior": "fixed_static_visualization_roles",
+      "configured_base_home_present": false,
+      "key": "pose_signals",
+      "producer_path": "positronic/wire.py",
+      "producer_symbol": "ROBOT_STATIC_META",
+      "realized_home_target_present": false,
+      "rng_identity_present": false,
+      "semantic_class": "schema_descriptor",
+      "value_class": "constant_array_of_pose_signal_name_strings"
+    }
+  ],
+  "classification": "generic_signal_schema_not_home_draw",
+  "controls": {
+    "episode_start_persists_static_data": true,
+    "joint_names_bound_to_urdf_names": true,
+    "phail_harness_receives_static_meta": true,
+    "randomized_target_separate_from_robot_meta": true,
+    "robot_meta_connected_to_harness": true,
+    "server_consumes_as_visualization_schema": true,
+    "static_and_robot_meta_merged": true,
+    "static_json_sink": true,
+    "wire_constants_bound": true
+  },
+  "decision_consequence": "H200's three public key candidates are robot/signal schema descriptors, not the configured or realized randomized home target and not RNG evidence. Do not open their sidecar values; retain H199's request to serialize the realized target and RNG identity.",
+  "direct_expansions": [
+    {
+      "path": "positronic/inference.py",
+      "reason": "bind wire static metadata to the exact real-hardware harness"
+    },
+    {
+      "path": "positronic/policy/harness.py",
+      "reason": "trace static and robot metadata merge"
+    },
+    {
+      "path": "positronic/dataset/ds_writer_agent.py",
+      "reason": "trace START payload to static item writes"
+    },
+    {
+      "path": "positronic/dataset/local_dataset.py",
+      "reason": "trace static items to static.json"
+    }
+  ],
+  "h199_sha256": "2571b41e1796e5eb85ac96ac820c73aa0192c1703ffb9bb6abd85f454f0c41a8",
+  "h200_sha256": "85e6f82975a6c9e3a6802cfd68d0dcdff954c90e262949c47f1ea7c31dee1010",
+  "historical_execution_fidelity_established": false,
+  "matched_path_count": 10,
+  "protocol_sha256": "5cd56edcf3ecb2266697aff6428f0e75d535f7cf244d25b528d4ecb2783a6bd8",
+  "revision": "e406176bc526babb06844a48e3627a5c0409eb74",
+  "schema": "h201-phail-home-field-semantics-v1",
+  "search_hits": [
+    {
+      "candidate": "joint_names",
+      "line": 40,
+      "path": "positronic/cfg/ds/internal.py",
+      "text": "    'joint_names': FromValue(_JOINT_NAMES),"
+    },
+    {
+      "candidate": "joint_names",
+      "line": 48,
+      "path": "positronic/cfg/ds/internal.py",
+      "text": "    'joint_names': FromValue(_JOINT_NAMES),"
+    },
+    {
+      "candidate": "joint_names",
+      "line": 86,
+      "path": "positronic/drivers/roboarm/franka.py",
+      "text": "def _revolute_joint_names(urdf_xml):"
+    },
+    {
+      "candidate": "joint_names",
+      "line": 152,
+      "path": "positronic/drivers/roboarm/franka.py",
+      "text": "            'joint_names': _revolute_joint_names(urdf_xml),"
+    },
+    {
+      "candidate": "joint_names",
+      "line": 72,
+      "path": "positronic/drivers/roboarm/ik.py",
+      "text": "    naturally picklable (only urdf_xml, joint_names, control_frame, and"
+    },
+    {
+      "candidate": "joint_names",
+      "line": 76,
+      "path": "positronic/drivers/roboarm/ik.py",
+      "text": "    def __init__(self, urdf_xml, joint_names, control_frame):"
+    },
+    {
+      "candidate": "joint_names",
+      "line": 78,
+      "path": "positronic/drivers/roboarm/ik.py",
+      "text": "        self.joint_names = tuple(joint_names)"
+    },
+    {
+      "candidate": "joint_names",
+      "line": 90,
+      "path": "positronic/drivers/roboarm/ik.py",
+      "text": "        self._jqpos = np.array([self._mj.joint(n).qposadr.item() for n in self.joint_names])"
+    },
+    {
+      "candidate": "joint_names",
+      "line": 91,
+      "path": "positronic/drivers/roboarm/ik.py",
+      "text": "        self._joint_dof_ids = np.array([self._mj.joint(n).dofadr.item() for n in self.joint_names])"
+    },
+    {
+      "candidate": "joint_names",
+      "line": 92,
+      "path": "positronic/drivers/roboarm/ik.py",
+      "text": "        jnt_ids = [mj.mj_name2id(self._mj, mj.mjtObj.mjOBJ_JOINT, n) for n in self.joint_names]"
+    },
+    {
+      "candidate": "joint_names",
+      "line": 142,
+      "path": "positronic/drivers/roboarm/ik.py",
+      "text": "    def __init__(self, urdf_xml, joint_names, control_frame):"
+    },
+    {
+      "candidate": "joint_names",
+      "line": 145,
+      "path": "positronic/drivers/roboarm/ik.py",
+      "text": "        super().__init__(urdf_xml, joint_names, control_frame)"
+    },
+    {
+      "candidate": "joint_names",
+      "line": 162,
+      "path": "positronic/drivers/roboarm/ik.py",
+      "text": "            joint_names=list(self.joint_names),"
+    },
+    {
+      "candidate": "joint_names",
+      "line": 177,
+      "path": "positronic/drivers/roboarm/ik.py",
+      "text": "        joint_names,"
+    },
+    {
+      "candidate": "joint_names",
+      "line": 189,
+      "path": "positronic/drivers/roboarm/ik.py",
+      "text": "        super().__init__(urdf_xml, joint_names, control_frame)"
+    },
+    {
+      "candidate": "joint_names",
+      "line": 246,
+      "path": "positronic/drivers/roboarm/ik.py",
+      "text": "        joint_names,"
+    },
+    {
+      "candidate": "joint_names",
+      "line": 255,
+      "path": "positronic/drivers/roboarm/ik.py",
+      "text": "        super().__init__(urdf_xml, joint_names, control_frame)"
+    },
+    {
+      "candidate": "joint_names",
+      "line": 295,
+      "path": "positronic/drivers/roboarm/ik.py",
+      "text": "    Reads 'urdf', 'joint_names', and 'control_frame' from episode statics."
+    },
+    {
+      "candidate": "joint_names",
+      "line": 297,
+      "path": "positronic/drivers/roboarm/ik.py",
+      "text": "    solver = solver_cls(episode['urdf'], episode['joint_names'], episode['control_frame'])"
+    },
+    {
+      "candidate": "joint_names",
+      "line": 8,
+      "path": "positronic/drivers/roboarm/kinematics.py",
+      "text": "    def __init__(self, urdf_path: str, target_frame_name: str, joint_names: list[str] = None):"
+    },
+    {
+      "candidate": "joint_names",
+      "line": 13,
+      "path": "positronic/drivers/roboarm/kinematics.py",
+      "text": "        self.joint_names = joint_names if joint_names is not None else list(self.robot.joint_names())"
+    },
+    {
+      "candidate": "joint_names",
+      "line": 17,
+      "path": "positronic/drivers/roboarm/kinematics.py",
+      "text": "        for name, pos in zip(self.joint_names, joint_positions, strict=False):"
+    },
+    {
+      "candidate": "joint_names",
+      "line": 33,
+      "path": "positronic/drivers/roboarm/kinematics.py",
+      "text": "        for i, joint_name in enumerate(self.joint_names):"
+    },
+    {
+      "candidate": "joint_names",
+      "line": 45,
+      "path": "positronic/drivers/roboarm/kinematics.py",
+      "text": "        for joint_name in self.joint_names:"
+    },
+    {
+      "candidate": "joint_names",
+      "line": 53,
+      "path": "positronic/drivers/roboarm/kinematics.py",
+      "text": "        return np.array([self.robot.get_joint_limits(joint_name) for joint_name in self.joint_names])"
+    },
+    {
+      "candidate": "joint_names",
+      "line": 73,
+      "path": "positronic/drivers/roboarm/so101/driver.py",
+      "text": "            'joint_names': _SO101_JOINT_NAMES,"
+    },
+    {
+      "candidate": "joint_names",
+      "line": 98,
+      "path": "positronic/drivers/roboarm/tests/test_ik.py",
+      "text": "            'joint_names': JOINT_NAMES,"
+    },
+    {
+      "candidate": "joint_names",
+      "line": 231,
+      "path": "positronic/policy/tests/test_harness.py",
+      "text": "        (partial(p['meta_em'].emit, {'urdf': '<robot/>', 'joint_names': ['j1']}), 0.0),"
+    },
+    {
+      "candidate": "joint_names",
+      "line": 244,
+      "path": "positronic/policy/tests/test_harness.py",
+      "text": "    assert meta['joint_names'] == ['j1']"
+    },
+    {
+      "candidate": "joint_names",
+      "line": 225,
+      "path": "positronic/server/dataset_utils.py",
+      "text": "    joint_names = ep.static.get('joint_names')"
+    },
+    {
+      "candidate": "joint_names",
+      "line": 229,
+      "path": "positronic/server/dataset_utils.py",
+      "text": "        if key == joint_signal and joint_names:"
+    },
+    {
+      "candidate": "joint_names",
+      "line": 230,
+      "path": "positronic/server/dataset_utils.py",
+      "text": "            names = joint_names"
+    },
+    {
+      "candidate": "joint_names",
+      "line": 399,
+      "path": "positronic/server/dataset_utils.py",
+      "text": "    joint_names = ep.static.get('joint_names')"
+    },
+    {
+      "candidate": "joint_names",
+      "line": 402,
+      "path": "positronic/server/dataset_utils.py",
+      "text": "    if not all((joint_signal, joint_names, urdf_str, meshes)) or joint_signal not in numeric_data:"
+    },
+    {
+      "candidate": "joint_names",
+      "line": 405,
+      "path": "positronic/server/dataset_utils.py",
+      "text": "    if q_vals.shape[1] != len(joint_names):"
+    },
+    {
+      "candidate": "joint_names",
+      "line": 425,
+      "path": "positronic/server/dataset_utils.py",
+      "text": "        for j_idx, name in enumerate(joint_names):"
+    },
+    {
+      "candidate": "joint_names",
+      "line": 221,
+      "path": "positronic/simulator/mujoco/sim.py",
+      "text": "        self.joint_names = [f'joint{i}{suffix}' for i in range(1, 8)]"
+    },
+    {
+      "candidate": "joint_names",
+      "line": 223,
+      "path": "positronic/simulator/mujoco/sim.py",
+      "text": "        self.joint_qpos_ids = [self.sim.model.joint(joint).qposadr.item() for joint in self.joint_names]"
+    },
+    {
+      "candidate": "joint_names",
+      "line": 232,
+      "path": "positronic/simulator/mujoco/sim.py",
+      "text": "            'joint_names': [f'joint{i}' for i in range(1, 8)],"
+    },
+    {
+      "candidate": "joint_names",
+      "line": 270,
+      "path": "positronic/simulator/mujoco/sim.py",
+      "text": "            joint_names=self.joint_names,"
+    },
+    {
+      "candidate": "joint_signal",
+      "line": 43,
+      "path": "positronic/cfg/ds/internal.py",
+      "text": "    'joint_signal': FromValue('robot_state.q'),"
+    },
+    {
+      "candidate": "joint_signal",
+      "line": 50,
+      "path": "positronic/cfg/ds/internal.py",
+      "text": "    'joint_signal': FromValue('robot_state.q'),"
+    },
+    {
+      "candidate": "joint_signal",
+      "line": 227,
+      "path": "positronic/policy/tests/test_harness.py",
+      "text": "    harness = Harness(policy, static_meta={'joint_signal': 'robot_state.q'})"
+    },
+    {
+      "candidate": "joint_signal",
+      "line": 242,
+      "path": "positronic/policy/tests/test_harness.py",
+      "text": "    assert meta['joint_signal'] == 'robot_state.q'"
+    },
+    {
+      "candidate": "joint_signal",
+      "line": 27,
+      "path": "positronic/server/dataset_utils.py",
+      "text": "# TODO: 3D visualization roles (pose_signals, joint_signal) are currently read from episode"
+    },
+    {
+      "candidate": "joint_signal",
+      "line": 31,
+      "path": "positronic/server/dataset_utils.py",
+      "text": "# - Eliminate the need for pose_signals/joint_signal keys in static"
+    },
+    {
+      "candidate": "joint_signal",
+      "line": 224,
+      "path": "positronic/server/dataset_utils.py",
+      "text": "    joint_signal = ep.static.get('joint_signal')"
+    },
+    {
+      "candidate": "joint_signal",
+      "line": 229,
+      "path": "positronic/server/dataset_utils.py",
+      "text": "        if key == joint_signal and joint_names:"
+    },
+    {
+      "candidate": "joint_signal",
+      "line": 323,
+      "path": "positronic/server/dataset_utils.py",
+      "text": "    joint_signal = ep.static.get('joint_signal')"
+    },
+    {
+      "candidate": "joint_signal",
+      "line": 324,
+      "path": "positronic/server/dataset_utils.py",
+      "text": "    stash_keys = pose_set | ({joint_signal} if joint_signal else set())"
+    },
+    {
+      "candidate": "joint_signal",
+      "line": 398,
+      "path": "positronic/server/dataset_utils.py",
+      "text": "    joint_signal = ep.static.get('joint_signal')"
+    },
+    {
+      "candidate": "joint_signal",
+      "line": 402,
+      "path": "positronic/server/dataset_utils.py",
+      "text": "    if not all((joint_signal, joint_names, urdf_str, meshes)) or joint_signal not in numeric_data:"
+    },
+    {
+      "candidate": "joint_signal",
+      "line": 404,
+      "path": "positronic/server/dataset_utils.py",
+      "text": "    ts_arr, q_vals = numeric_data[joint_signal]"
+    },
+    {
+      "candidate": "joint_signal",
+      "line": 5,
+      "path": "positronic/wire.py",
+      "text": "ROBOT_STATIC_META = {'joint_signal': 'robot_state.q', 'pose_signals': ['robot_state.ee_pose', 'robot_commands.pose']}"
+    },
+    {
+      "candidate": "pose_signals",
+      "line": 44,
+      "path": "positronic/cfg/ds/internal.py",
+      "text": "    'pose_signals': FromValue(['robot_state.ee_pose', 'robot_commands.pose']),"
+    },
+    {
+      "candidate": "pose_signals",
+      "line": 51,
+      "path": "positronic/cfg/ds/internal.py",
+      "text": "    'pose_signals': FromValue(['robot_state.ee_pose', 'robot_commands.pose']),"
+    },
+    {
+      "candidate": "pose_signals",
+      "line": 27,
+      "path": "positronic/server/dataset_utils.py",
+      "text": "# TODO: 3D visualization roles (pose_signals, joint_signal) are currently read from episode"
+    },
+    {
+      "candidate": "pose_signals",
+      "line": 31,
+      "path": "positronic/server/dataset_utils.py",
+      "text": "# - Eliminate the need for pose_signals/joint_signal keys in static"
+    },
+    {
+      "candidate": "pose_signals",
+      "line": 140,
+      "path": "positronic/server/dataset_utils.py",
+      "text": "    pose_set = set(ep.static.get('pose_signals', []))"
+    },
+    {
+      "candidate": "pose_signals",
+      "line": 434,
+      "path": "positronic/server/dataset_utils.py",
+      "text": "def _log_pose_signals("
+    },
+    {
+      "candidate": "pose_signals",
+      "line": 495,
+      "path": "positronic/server/dataset_utils.py",
+      "text": "        yield from _log_pose_signals(ep, signals, pose_data, drainer)"
+    },
+    {
+      "candidate": "pose_signals",
+      "line": 5,
+      "path": "positronic/wire.py",
+      "text": "ROBOT_STATIC_META = {'joint_signal': 'robot_state.q', 'pose_signals': ['robot_state.ee_pose', 'robot_commands.pose']}"
+    }
+  ],
+  "search_terms": [
+    "joint_names",
+    "joint_signal",
+    "pose_signals"
+  ],
+  "sidecar_values_opened": false,
+  "source_blobs": {
+    "positronic/cfg/ds/internal.py": "c5e85de27ef4b2269d72a0c296d5a2e4a72e874b",
+    "positronic/dataset/ds_writer_agent.py": "8f0f06e31fabecce2d093d7768ede88397affcb2",
+    "positronic/dataset/local_dataset.py": "8e7d6001ebcbb0a58e39a07b2f58d400f45797fd",
+    "positronic/drivers/roboarm/franka.py": "a7a5fafe3a1a2c18b24cc948526fc4465586d660",
+    "positronic/drivers/roboarm/ik.py": "73a9593c6a60ab6a482d0688653511fb6d4feda0",
+    "positronic/drivers/roboarm/kinematics.py": "5587768fc6d54a9b8bc05e43804cf829f1da6f21",
+    "positronic/drivers/roboarm/so101/driver.py": "d87467e8af3ecc88c5a8d541737df8065ecbafc7",
+    "positronic/drivers/roboarm/tests/test_ik.py": "e05f60e9e81b3caf63b28e76872b3f9ec3b0c960",
+    "positronic/inference.py": "c9bc29b72f15763e17740537f08a73d58675217c",
+    "positronic/policy/harness.py": "857b1fe313d67689345fc5fd5954605464fbca38",
+    "positronic/policy/tests/test_harness.py": "8a2686081d47c22dbf317e0505c7dc9e685fe63b",
+    "positronic/server/dataset_utils.py": "244e4e38fc2f4ae7b07bfa56640391d6a30a1298",
+    "positronic/simulator/mujoco/sim.py": "23df42e7c614a46f0cc273d3b39edaa12083c091",
+    "positronic/wire.py": "1c52667d9cf089712c8e45ee90b7ceee9f1f8fa1"
+  },
+  "trajectory_or_performance_content_opened": false
+}

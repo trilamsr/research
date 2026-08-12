@@ -1,0 +1,56 @@
+# WorldGym detailed Bridge evaluation matrix, transcribed from the LaTeX source of
+# arXiv:2506.00613v3, appendix.tex, table app:tab:bridge_results_detailed.
+# Each cell is the number of successes out of 10 trials. Half-successes are printed
+# by the source and are retained verbatim. Retrieved and transcribed 2026-07-23.
+task,policy,n_trials,real_successes,sim_successes
+Put Eggplant into Pot (Easy Version),RT-1-X,10,1,1
+Put Eggplant into Pot (Easy Version),Octo,10,5,1
+Put Eggplant into Pot (Easy Version),OpenVLA,10,10,7
+Put Eggplant into Pot,RT-1-X,10,0,0
+Put Eggplant into Pot,Octo,10,1,2
+Put Eggplant into Pot,OpenVLA,10,10,6
+Put Cup from Counter into Sink,RT-1-X,10,1,3
+Put Cup from Counter into Sink,Octo,10,1,3
+Put Cup from Counter into Sink,OpenVLA,10,7,9
+Put Eggplant into Pot (w/ Clutter),RT-1-X,10,1,0.5
+Put Eggplant into Pot (w/ Clutter),Octo,10,3.5,3.5
+Put Eggplant into Pot (w/ Clutter),OpenVLA,10,7.5,8
+Put Yellow Corn on Pink Plate,RT-1-X,10,1,3
+Put Yellow Corn on Pink Plate,Octo,10,4,6
+Put Yellow Corn on Pink Plate,OpenVLA,10,9,9.5
+Lift Eggplant,RT-1-X,10,3,2
+Lift Eggplant,Octo,10,0.5,1.5
+Lift Eggplant,OpenVLA,10,7.5,7.5
+Put Carrot on Plate (w/ Height Change),RT-1-X,10,2,0.5
+Put Carrot on Plate (w/ Height Change),Octo,10,1,3
+Put Carrot on Plate (w/ Height Change),OpenVLA,10,4.5,6
+Put Carrot on Plate,RT-1-X,10,1,0
+Put Carrot on Plate,Octo,10,0,1
+Put Carrot on Plate,OpenVLA,10,8,4
+Flip Pot Upright,RT-1-X,10,2,3
+Flip Pot Upright,Octo,10,6,1
+Flip Pot Upright,OpenVLA,10,8,5
+Lift AAA Battery,RT-1-X,10,0,1
+Lift AAA Battery,Octo,10,0,0
+Lift AAA Battery,OpenVLA,10,7,4
+Move Skull into Drying Rack,RT-1-X,10,1,2
+Move Skull into Drying Rack,Octo,10,0,3
+Move Skull into Drying Rack,OpenVLA,10,5,5
+Lift White Tape,RT-1-X,10,3,1
+Lift White Tape,Octo,10,0,1
+Lift White Tape,OpenVLA,10,1,6
+Take Purple Grapes out of Pot,RT-1-X,10,6,5
+Take Purple Grapes out of Pot,Octo,10,0,2
+Take Purple Grapes out of Pot,OpenVLA,10,4,4
+Stack Blue Cup on Pink Cup,RT-1-X,10,0.5,0
+Stack Blue Cup on Pink Cup,Octo,10,0,0
+Stack Blue Cup on Pink Cup,OpenVLA,10,4.5,6
+Put {Eggplant Red Bottle} into Pot,RT-1-X,10,2.5,0.5
+Put {Eggplant Red Bottle} into Pot,Octo,10,4,5
+Put {Eggplant Red Bottle} into Pot,OpenVLA,10,7.5,9
+Lift {Cheese Red Chili Pepper},RT-1-X,10,1.5,2.5
+Lift {Cheese Red Chili Pepper},Octo,10,2.5,2.5
+Lift {Cheese Red Chili Pepper},OpenVLA,10,10,10
+Put {Blue Cup Pink Cup} on Plate,RT-1-X,10,5,1.5
+Put {Blue Cup Pink Cup} on Plate,Octo,10,5.5,5
+Put {Blue Cup Pink Cup} on Plate,OpenVLA,10,9.5,8.5

@@ -1,0 +1,119 @@
+{
+  "schema": "h179-cross-system-action-order-independent-challenge-v1",
+  "challenge_runtime": "v26.5.0",
+  "producer_modules_imported": false,
+  "protocol_sha256": "7b52f8754046cbee790925a0ba849a9b1b8fa3e41775bc3e677d08c3c3bdeb53",
+  "upstream_hashes": {
+    "h177_roster_sha256": "77bcbc919ae96157ee81347aec6ce36ccd69d33204414e38e9d51a340757ae09",
+    "h178_source_coding_sha256": "8a142a899a0a662536de854d6c7578c42a79316b375ee8544ba7e1417227de0a",
+    "h178_result_sha256": "0ec713fed20b3720b5cd68beda2991dad3088d86b9b96ab4d2b461832c8e37a7"
+  },
+  "independently_reconstructed_row_count": 70,
+  "independently_reconstructed_positive_contrasts": [
+    "umi_bench",
+    "robodojo"
+  ],
+  "independently_reconstructed_second_mismatches": [],
+  "semantic_attacks": [
+    {
+      "attack": "umi_bench:context_fixed_before_candidate_assignment:remove_one_required_unit",
+      "rejected": true
+    },
+    {
+      "attack": "umi_bench:stable_assignment_law_public:remove_one_required_unit",
+      "rejected": true
+    },
+    {
+      "attack": "umi_bench:stable_context_law_public:remove_one_required_unit",
+      "rejected": true
+    },
+    {
+      "attack": "umi_bench:declared_target_support_complete_or_bounded:remove_one_required_unit",
+      "rejected": true
+    },
+    {
+      "attack": "umi_bench:reset_carryover_rule_public:remove_one_required_unit",
+      "rejected": true
+    },
+    {
+      "attack": "umi_bench:cluster_or_session_identity_public:remove_one_required_unit",
+      "rejected": true
+    },
+    {
+      "attack": "umi_bench:public_action_matches_identified_estimand:remove_one_required_unit",
+      "rejected": true
+    },
+    {
+      "attack": "umi_bench:target_compatible_positive_contrast:remove_one_required_unit",
+      "rejected": true
+    },
+    {
+      "attack": "robodojo:context_fixed_before_candidate_assignment:remove_one_required_unit",
+      "rejected": true
+    },
+    {
+      "attack": "robodojo:stable_assignment_law_public:remove_one_required_unit",
+      "rejected": true
+    },
+    {
+      "attack": "robodojo:stable_context_law_public:remove_one_required_unit",
+      "rejected": true
+    },
+    {
+      "attack": "robodojo:declared_target_support_complete_or_bounded:remove_one_required_unit",
+      "rejected": true
+    },
+    {
+      "attack": "robodojo:reset_carryover_rule_public:remove_one_required_unit",
+      "rejected": true
+    },
+    {
+      "attack": "robodojo:cluster_or_session_identity_public:remove_one_required_unit",
+      "rejected": true
+    },
+    {
+      "attack": "robodojo:public_action_matches_identified_estimand:remove_one_required_unit",
+      "rejected": true
+    },
+    {
+      "attack": "robodojo:target_compatible_positive_contrast:remove_one_required_unit",
+      "rejected": true
+    },
+    {
+      "attack": "fixed_task_list_alone",
+      "rejected": true
+    },
+    {
+      "attack": "queue_alone",
+      "rejected": true
+    },
+    {
+      "attack": "reset_prose_alone",
+      "rejected": true
+    },
+    {
+      "attack": "episode_totals_alone",
+      "rejected": true
+    },
+    {
+      "attack": "leaderboard_label_alone",
+      "rejected": true
+    },
+    {
+      "attack": "sim_real_correlation_alone",
+      "rejected": true
+    }
+  ],
+  "semantic_attacks_rejected": 22,
+  "decision": "positive_contrast_found",
+  "positive_contrast_strength": "source_described",
+  "agrees_with_h178": true,
+  "outcome_fields_accessed_or_used": false,
+  "external_contact_performed": false,
+  "scope": [
+    "The result is bounded to the fixed seven-system purposive roster.",
+    "The two positive contrasts are supported by source descriptions rather than independently reproduced execution artifacts.",
+    "The challenge does not assess performance outcomes or prevalence."
+  ],
+  "disposition": "pass_with_scope"
+}

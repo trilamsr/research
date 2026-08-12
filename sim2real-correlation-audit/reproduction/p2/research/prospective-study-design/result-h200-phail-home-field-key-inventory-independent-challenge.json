@@ -1,0 +1,73 @@
+{
+  "schema": "h200-phail-home-field-key-inventory-independent-challenge-v1",
+  "method": "Independent Node traversal of all hash-bound cached JSON objects with separately implemented tokenization, exclusion, node typing, aggregation, and no producer-module import.",
+  "input_sha256": "ad43fca1da065a1cb7fd84dfa9afc5691c72ebe12e7f165c68a0050e51e87ebe",
+  "episode_count": 594,
+  "verified_sidecar_object_count": 1188,
+  "key_rows": [
+    {
+      "key_path": "static.joint_names",
+      "category": "home_field_candidate",
+      "episode_count": 594,
+      "episode_set_sha256": "7b0bccca9b270a516e6f9ebe02dd5fb3ca92dbb34e7104fbacdb28d847fe4b4c",
+      "node_type_counts": {
+        "array": 594
+      }
+    },
+    {
+      "key_path": "static.joint_signal",
+      "category": "home_field_candidate",
+      "episode_count": 594,
+      "episode_set_sha256": "7b0bccca9b270a516e6f9ebe02dd5fb3ca92dbb34e7104fbacdb28d847fe4b4c",
+      "node_type_counts": {
+        "string": 594
+      }
+    },
+    {
+      "key_path": "static.pose_signals",
+      "category": "home_field_candidate",
+      "episode_count": 594,
+      "episode_set_sha256": "7b0bccca9b270a516e6f9ebe02dd5fb3ca92dbb34e7104fbacdb28d847fe4b4c",
+      "node_type_counts": {
+        "array": 594
+      }
+    }
+  ],
+  "candidate_count": 3,
+  "disposition": "candidate_home_field_key_found",
+  "attacks": [
+    {
+      "attack": "candidate_name_is_realized_draw",
+      "rejected": true
+    },
+    {
+      "attack": "joint_names_array_is_home_target",
+      "rejected": true
+    },
+    {
+      "attack": "joint_signal_string_is_reset_evidence",
+      "rejected": true
+    },
+    {
+      "attack": "pose_signals_array_is_home_target",
+      "rejected": true
+    },
+    {
+      "attack": "all_episode_presence_implies_varying_value",
+      "rejected": true
+    },
+    {
+      "attack": "key_only_inventory_exposes_primitive_values",
+      "rejected": true
+    },
+    {
+      "attack": "public_sidecar_null_would_prove_private_absence",
+      "rejected": true
+    },
+    {
+      "attack": "schema_descriptor_proves_historical_reset_execution",
+      "rejected": true
+    }
+  ],
+  "scope": "key names and node types only; no values, trajectory content, candidate semantics, physical-reset, historical-execution, exchangeability, or performance claim"
+}

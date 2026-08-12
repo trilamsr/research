@@ -1,0 +1,214 @@
+{
+  "candidates": [
+    "GR00T N1 20k",
+    "GR00T N1 39k",
+    "GR00T N1.5 25k",
+    "GR00T N1.5 50k",
+    "pi0 10k",
+    "pi0 4k"
+  ],
+  "draws_per_scenario": 300000,
+  "real_successes_of_10": [
+    [
+      6,
+      5,
+      7,
+      6
+    ],
+    [
+      2,
+      4,
+      6,
+      9
+    ],
+    [
+      5,
+      4,
+      8,
+      5
+    ],
+    [
+      6,
+      4,
+      7,
+      3
+    ],
+    [
+      3,
+      3,
+      6,
+      7
+    ],
+    [
+      2,
+      1,
+      5,
+      3
+    ]
+  ],
+  "scenarios": [
+    {
+      "expected_real_regret_of_sampled_sim_winner": 0.096493836474,
+      "monte_carlo_se": 0.000744893129,
+      "prior_alpha_beta": 0.5,
+      "probability_displayed_mismatch_pair": 0.162003333333,
+      "probability_displayed_real_winner_remains_real_best": 0.524726666667,
+      "probability_displayed_sim_winner_remains_sim_best": 0.309316666667,
+      "probability_positive_real_regret": 0.789033333333,
+      "probability_sampled_sim_winner_is_sampled_real_best": 0.210966666667,
+      "sim_effective_binary_label_equivalents_per_policy_task": 10.0,
+      "sim_nominal_label_evidence_fraction": 0.166666666667
+    },
+    {
+      "expected_real_regret_of_sampled_sim_winner": 0.096129124749,
+      "monte_carlo_se": 0.000751133969,
+      "prior_alpha_beta": 0.5,
+      "probability_displayed_mismatch_pair": 0.197956666667,
+      "probability_displayed_real_winner_remains_real_best": 0.524273333333,
+      "probability_displayed_sim_winner_remains_sim_best": 0.378126666667,
+      "probability_positive_real_regret": 0.784146666667,
+      "probability_sampled_sim_winner_is_sampled_real_best": 0.215853333333,
+      "sim_effective_binary_label_equivalents_per_policy_task": 30.0,
+      "sim_nominal_label_evidence_fraction": 0.5
+    },
+    {
+      "expected_real_regret_of_sampled_sim_winner": 0.095822710791,
+      "monte_carlo_se": 0.000755858014,
+      "prior_alpha_beta": 0.5,
+      "probability_displayed_mismatch_pair": 0.22924,
+      "probability_displayed_real_winner_remains_real_best": 0.52439,
+      "probability_displayed_sim_winner_remains_sim_best": 0.437733333333,
+      "probability_positive_real_regret": 0.780363333333,
+      "probability_sampled_sim_winner_is_sampled_real_best": 0.219636666667,
+      "sim_effective_binary_label_equivalents_per_policy_task": 60.0,
+      "sim_nominal_label_evidence_fraction": 1.0
+    },
+    {
+      "expected_real_regret_of_sampled_sim_winner": 0.091868236429,
+      "monte_carlo_se": 0.000743327524,
+      "prior_alpha_beta": 1.0,
+      "probability_displayed_mismatch_pair": 0.151793333333,
+      "probability_displayed_real_winner_remains_real_best": 0.504083333333,
+      "probability_displayed_sim_winner_remains_sim_best": 0.301946666667,
+      "probability_positive_real_regret": 0.79024,
+      "probability_sampled_sim_winner_is_sampled_real_best": 0.20976,
+      "sim_effective_binary_label_equivalents_per_policy_task": 10.0,
+      "sim_nominal_label_evidence_fraction": 0.166666666667
+    },
+    {
+      "expected_real_regret_of_sampled_sim_winner": 0.091333559155,
+      "monte_carlo_se": 0.000750038665,
+      "prior_alpha_beta": 1.0,
+      "probability_displayed_mismatch_pair": 0.19057,
+      "probability_displayed_real_winner_remains_real_best": 0.50763,
+      "probability_displayed_sim_winner_remains_sim_best": 0.375173333333,
+      "probability_positive_real_regret": 0.785013333333,
+      "probability_sampled_sim_winner_is_sampled_real_best": 0.214986666667,
+      "sim_effective_binary_label_equivalents_per_policy_task": 30.0,
+      "sim_nominal_label_evidence_fraction": 0.5
+    },
+    {
+      "expected_real_regret_of_sampled_sim_winner": 0.091468672434,
+      "monte_carlo_se": 0.000750654328,
+      "prior_alpha_beta": 1.0,
+      "probability_displayed_mismatch_pair": 0.21963,
+      "probability_displayed_real_winner_remains_real_best": 0.50374,
+      "probability_displayed_sim_winner_remains_sim_best": 0.435316666667,
+      "probability_positive_real_regret": 0.784526666667,
+      "probability_sampled_sim_winner_is_sampled_real_best": 0.215473333333,
+      "sim_effective_binary_label_equivalents_per_policy_task": 60.0,
+      "sim_nominal_label_evidence_fraction": 1.0
+    },
+    {
+      "expected_real_regret_of_sampled_sim_winner": 0.084219999814,
+      "monte_carlo_se": 0.000740078828,
+      "prior_alpha_beta": 2.0,
+      "probability_displayed_mismatch_pair": 0.13845,
+      "probability_displayed_real_winner_remains_real_best": 0.475976666667,
+      "probability_displayed_sim_winner_remains_sim_best": 0.289603333333,
+      "probability_positive_real_regret": 0.79272,
+      "probability_sampled_sim_winner_is_sampled_real_best": 0.20728,
+      "sim_effective_binary_label_equivalents_per_policy_task": 10.0,
+      "sim_nominal_label_evidence_fraction": 0.166666666667
+    },
+    {
+      "expected_real_regret_of_sampled_sim_winner": 0.083600075715,
+      "monte_carlo_se": 0.000746436095,
+      "prior_alpha_beta": 2.0,
+      "probability_displayed_mismatch_pair": 0.1751,
+      "probability_displayed_real_winner_remains_real_best": 0.47732,
+      "probability_displayed_sim_winner_remains_sim_best": 0.36644,
+      "probability_positive_real_regret": 0.787836666667,
+      "probability_sampled_sim_winner_is_sampled_real_best": 0.212163333333,
+      "sim_effective_binary_label_equivalents_per_policy_task": 30.0,
+      "sim_nominal_label_evidence_fraction": 0.5
+    },
+    {
+      "expected_real_regret_of_sampled_sim_winner": 0.083582244849,
+      "monte_carlo_se": 0.000750034443,
+      "prior_alpha_beta": 2.0,
+      "probability_displayed_mismatch_pair": 0.205036666667,
+      "probability_displayed_real_winner_remains_real_best": 0.47674,
+      "probability_displayed_sim_winner_remains_sim_best": 0.42994,
+      "probability_positive_real_regret": 0.785016666667,
+      "probability_sampled_sim_winner_is_sampled_real_best": 0.214983333333,
+      "sim_effective_binary_label_equivalents_per_policy_task": 60.0,
+      "sim_nominal_label_evidence_fraction": 1.0
+    }
+  ],
+  "scope": {
+    "boundary": "Aggregate rates do not reveal the rater/seed/state allocation or dependence, so evidence fractions are sensitivity devices.",
+    "model": "Independent binomial cell likelihoods with Beta priors and equal task weighting. Simulator evidence is discounted from 60 labels to 30 rollout or 10 initial-state equivalents.",
+    "source_structure": "10 real initial states per policy-task; three Cosmos seeds per initial state; two manual raters per generated rollout."
+  },
+  "seed": 20260724,
+  "sim_success_labels_of_60": [
+    [
+      18,
+      39,
+      52,
+      53
+    ],
+    [
+      19,
+      42,
+      39,
+      47
+    ],
+    [
+      34,
+      35,
+      55,
+      33
+    ],
+    [
+      34,
+      46,
+      51,
+      33
+    ],
+    [
+      29,
+      32,
+      52,
+      46
+    ],
+    [
+      18,
+      22,
+      39,
+      36
+    ]
+  ],
+  "stress_envelope": {
+    "all_scenarios_below_one_half": true,
+    "maximum_probability_sampled_winners_match": 0.219636666667,
+    "minimum_probability_sampled_winners_match": 0.20728
+  },
+  "tasks": [
+    "Handover",
+    "Knot Tie",
+    "Pickup",
+    "Throw"
+  ]
+}

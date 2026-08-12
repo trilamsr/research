@@ -1,0 +1,169 @@
+{
+  "action_command_camera_media_or_performance_opened": false,
+  "classification": "complete_initial_joint_state_reconstruction",
+  "cohort_sha256": "ad43fca1da065a1cb7fd84dfa9afc5691c72ebe12e7f165c68a0050e51e87ebe",
+  "decision_consequence": "The release permits a bounded achieved-first-joint-state reconstruction if coverage passes. This can describe initial arm variation but cannot recover the commanded draw, certify reset acceptance, or resolve scene/carryover/session dependence.",
+  "decoded_signal_values": [
+    "first robot_state.q",
+    "first robot_state.error"
+  ],
+  "h199_sha256": "2571b41e1796e5eb85ac96ac820c73aa0192c1703ffb9bb6abd85f454f0c41a8",
+  "h201_sha256": "fc76cdb9c2443b81953fd6c6a998b60ddfabaf615f210f3ba8366186c6a2fdc6",
+  "historical_execution_fidelity_established": false,
+  "integrity": {
+    "projection_sha256": "44b7cd9729c691a610cc1fbbefffc5668d31030e013b92f2d4550f9869020370",
+    "selected_episode_count": 594,
+    "source_manifest_sha256": "f6e780118148eef7c779969c3bd7ce499fd771dc38e86c85d6116de6ed1d1b55",
+    "source_object_count": 1188,
+    "total_source_bytes": 1957430362,
+    "unique_source_sha256_count": 1188
+  },
+  "inventory_sha256": "6350af0ce19ce1cea88c8f3c2613873c3e3624e47e0cfde5c02fbaa1506d98e1",
+  "later_joint_values_retained_or_summarized": false,
+  "protocol_sha256": "d2649978115b2333cbbd9b35dcb6614caba3994c630c3f041c09c8d888af55b9",
+  "reset_acceptance_established": false,
+  "schema": "h202-phail-initial-joint-state-v1",
+  "source_trace": {
+    "controls": {
+      "exact_signal_binding": true,
+      "first_nonreset_is_observation_not_target": true,
+      "parquet_schema": true,
+      "resetting_dropped_error_retained": true,
+      "suffix_to_signal_files": true
+    },
+    "first_q_semantics": "first retained seven-joint observation after RESETTING samples are dropped; ERROR observations are retained and separately flagged",
+    "not_commanded_target": true,
+    "revision": "e406176bc526babb06844a48e3627a5c0409eb74",
+    "semantic_trace_complete": true,
+    "source_blobs": {
+      "positronic/dataset/ds_writer_agent.py": "8f0f06e31fabecce2d093d7768ede88397affcb2",
+      "positronic/dataset/local_dataset.py": "8e7d6001ebcbb0a58e39a07b2f58d400f45797fd",
+      "positronic/dataset/vector.py": "9a08005cd301df2d54f7be3b57261b6079e0e04a",
+      "positronic/drivers/roboarm/__init__.py": "4fe401691d07289e2702fc9c04d7855541fe0436",
+      "positronic/drivers/roboarm/franka.py": "a7a5fafe3a1a2c18b24cc948526fc4465586d660",
+      "positronic/policy/harness.py": "857b1fe313d67689345fc5fd5954605464fbca38",
+      "positronic/wire.py": "1c52667d9cf089712c8e45ee90b7ceee9f1f8fa1"
+    },
+    "source_mode": "git-blob-bound source projection"
+  },
+  "summary": {
+    "configured_base_home_joints_rad": [
+      0.0,
+      -0.31,
+      0.0,
+      -1.65,
+      0.0,
+      1.522,
+      0.0
+    ],
+    "configured_target_half_widths_rad": [
+      0.03,
+      0.05,
+      0.08,
+      0.08,
+      0.1,
+      0.1,
+      0.1
+    ],
+    "euclidean_joint_deviation_summary": {
+      "maximum_rad": 0.18749654945013844,
+      "mean_rad": 0.12214102615142647,
+      "median_rad": 0.12376716731226221,
+      "minimum_rad": 0.05171018275308086,
+      "q95_rad": 0.15804027172658142,
+      "rms_rad": 0.12444850524408643
+    },
+    "file_pair_count": 594,
+    "first_error_count": 0,
+    "joint_deviation_summary": [
+      {
+        "fraction_inside_configured_target_support": 0.9983164983164983,
+        "joint_index": 0,
+        "maximum_rad": 0.03005533665418625,
+        "mean_rad": 0.0005351240466638297,
+        "median_rad": 0.000207384568057023,
+        "minimum_rad": -0.029831264168024063,
+        "observed_std_to_uniform_target_std_ratio": 0.9817941348555689,
+        "population_std_rad": 0.017005173241429753,
+        "q05_rad": -0.026686967443674804,
+        "q95_rad": 0.026956358272582293
+      },
+      {
+        "fraction_inside_configured_target_support": 0.9949494949494949,
+        "joint_index": 1,
+        "maximum_rad": 0.04909029364585876,
+        "mean_rad": 1.3022986726726534e-05,
+        "median_rad": -0.001742559075355532,
+        "minimum_rad": -0.0504690432548523,
+        "observed_std_to_uniform_target_std_ratio": 1.0169969199972777,
+        "population_std_rad": 0.02935817227627243,
+        "q05_rad": -0.04600959360599518,
+        "q95_rad": 0.04532087057828903
+      },
+      {
+        "fraction_inside_configured_target_support": 0.9983164983164983,
+        "joint_index": 2,
+        "maximum_rad": 0.08006636798381805,
+        "mean_rad": -0.0006876264677049046,
+        "median_rad": -0.0008728766406420618,
+        "minimum_rad": -0.079527348279953,
+        "observed_std_to_uniform_target_std_ratio": 1.0292373778941681,
+        "population_std_rad": 0.047538438174977805,
+        "q05_rad": -0.0740808393806219,
+        "q95_rad": 0.07147726863622665
+      },
+      {
+        "fraction_inside_configured_target_support": 0.9949494949494949,
+        "joint_index": 3,
+        "maximum_rad": 0.08091094493865958,
+        "mean_rad": 0.0017485160618919229,
+        "median_rad": 0.00047221183776846587,
+        "minimum_rad": -0.07868180274963388,
+        "observed_std_to_uniform_target_std_ratio": 0.9964963321312701,
+        "population_std_rad": 0.046026194048197085,
+        "q05_rad": -0.07150710225105295,
+        "q95_rad": 0.07092584371566764
+      },
+      {
+        "fraction_inside_configured_target_support": 1.0,
+        "joint_index": 4,
+        "maximum_rad": 0.09933534264564514,
+        "mean_rad": -0.0029737857084389916,
+        "median_rad": -0.0006933158874744549,
+        "minimum_rad": -0.09987032413482666,
+        "observed_std_to_uniform_target_std_ratio": 1.0156286757795034,
+        "population_std_rad": 0.05863734893579996,
+        "q05_rad": -0.09070660881698131,
+        "q95_rad": 0.08939660638570786
+      },
+      {
+        "fraction_inside_configured_target_support": 0.9983164983164983,
+        "joint_index": 5,
+        "maximum_rad": 0.10045929241180418,
+        "mean_rad": 0.001413999514146265,
+        "median_rad": 0.0024063138961791797,
+        "minimum_rad": -0.09873919200897219,
+        "observed_std_to_uniform_target_std_ratio": 0.9938015249196256,
+        "population_std_rad": 0.05737715779334065,
+        "q05_rad": -0.09133097243309023,
+        "q95_rad": 0.09072010803222655
+      },
+      {
+        "fraction_inside_configured_target_support": 0.9983164983164983,
+        "joint_index": 6,
+        "maximum_rad": 0.10012679547071457,
+        "mean_rad": 0.003358425550270192,
+        "median_rad": 0.005133909406140447,
+        "minimum_rad": -0.09947629272937775,
+        "observed_std_to_uniform_target_std_ratio": 0.980044367507443,
+        "population_std_rad": 0.05658288793981987,
+        "q05_rad": -0.08731742911040782,
+        "q95_rad": 0.09005144089460373
+      }
+    ],
+    "schema_valid_timestamp_aligned_count": 594,
+    "valid_achieved_state_count": 594,
+    "valid_achieved_state_fraction": 1.0
+  },
+  "target_draw_recovered": false
+}

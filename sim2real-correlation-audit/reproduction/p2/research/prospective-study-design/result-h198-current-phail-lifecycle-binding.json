@@ -1,0 +1,514 @@
+{
+  "base_paths": [
+    "positronic/inference.py",
+    "positronic/policy/harness.py",
+    "positronic/data_collection.py",
+    "positronic/dataset/ds_writer_agent.py",
+    "positronic/dataset/episode.py",
+    "positronic/dataset/local_dataset.py",
+    "positronic/cfg/policy.py",
+    "positronic/policy/base.py",
+    "positronic/policy/remote.py",
+    "positronic/offboard/client.py",
+    "positronic/offboard/server.py",
+    "positronic/cli/eval/run.py",
+    "positronic/eval.py",
+    "positronic/cfg/embodiment.py",
+    "positronic/gui/eval.py"
+  ],
+  "classification": "mechanics_bound_evidence_incomplete",
+  "commit": "01b78e6f62ff5913490c360afdd2712eee070524",
+  "dataset_object_opened": false,
+  "decision_consequence": "Current PhAIL binds real inter-episode arm/gripper home commands, episode UUIDs, UI context persistence, and the server-recording join, but supplies no Task scene reset, pre-open home acceptance gate, operator-session identity, or persistent reset/carryover evidence. Keep the dependence gate closed and request those fields explicitly.",
+  "exchangeability_established": false,
+  "expansions": [
+    {
+      "origin_path": "positronic/cli/eval/run.py",
+      "origin_symbol": "wire.wire_embodiment",
+      "path": "positronic/wire.py",
+      "reason": "resolve embodiment signals and serializers wired into the episode writer",
+      "target_symbol": "wire_embodiment"
+    },
+    {
+      "origin_path": "positronic/cfg/embodiment.py",
+      "origin_symbol": "Serializers.robot_state",
+      "path": "positronic/dataset/serializers.py",
+      "reason": "resolve RESETTING/ERROR behavior on policy and record paths",
+      "target_symbol": "Serializers.robot_state"
+    },
+    {
+      "origin_path": "positronic/cfg/embodiment.py",
+      "origin_symbol": "positronic.cfg.hardware.roboarm.franka_droid",
+      "path": "positronic/cfg/hardware/roboarm/__init__.py",
+      "reason": "resolve the real DROID arm implementation selected by the embodiment",
+      "target_symbol": "franka_droid / franka"
+    },
+    {
+      "origin_path": "positronic/dataset/serializers.py",
+      "origin_symbol": "RobotStatus",
+      "path": "positronic/drivers/roboarm/__init__.py",
+      "reason": "resolve robot reset/readiness status semantics",
+      "target_symbol": "RobotStatus"
+    },
+    {
+      "origin_path": "positronic/cfg/embodiment.py",
+      "origin_symbol": "roboarm_command.Reset",
+      "path": "positronic/drivers/roboarm/command.py",
+      "reason": "resolve the configured home command type",
+      "target_symbol": "Reset"
+    },
+    {
+      "origin_path": "positronic/cfg/hardware/roboarm/__init__.py",
+      "origin_symbol": "franka.Robot",
+      "path": "positronic/drivers/roboarm/franka.py",
+      "reason": "resolve execution and completion semantics of the real arm Reset command",
+      "target_symbol": "Robot._reset / Robot.run"
+    }
+  ],
+  "facts": [
+    {
+      "end_line": 288,
+      "excerpt": "            case DsWriterCommandType.START_EPISODE:\n                if ep_writer is None:\n                    ep_counter += 1\n                    logger.info(f'DsWriterAgent: [START] Episode {ep_counter}')\n                    for ser in self._serializers.values():\n                        ser.reset()\n                    ep_writer = self.ds_writer.new_episode()\n                    for k, v in cmd.static_data.items():\n                        ep_writer.set_static(k, v)\n                else:\n                    logger.warning('Episode already started, ignoring start command')\n            case DsWriterCommandType.STOP_EPISODE:\n                if ep_writer is not None:\n                    for name, ser in self._serializers.items():\n                        for sample in ser.flush(now_ns):\n                            _append(ep_writer, name, sample.value, sample.ts, None)\n                    for k, v in cmd.static_data.items():\n                        ep_writer.set_static(k, v)\n                    ep_writer.__exit__(None, None, None)\n                    logger.info(f'DsWriterAgent: [STOP] Episode {ep_counter} {ep_writer.meta.get(\"path\", \"unknown\")}')\n                    ep_writer = None\n                else:\n                    logger.warning('Episode not started, ignoring stop command')\n            case DsWriterCommandType.ABORT_EPISODE:\n                if ep_writer is not None:\n                    ep_writer.abort()\n                    ep_writer.__exit__(None, None, None)\n                    logger.info(f'DsWriterAgent: [ABORT] Episode {ep_counter}')\n                    ep_writer = None",
+      "excerpt_sha256": "e0a9c548df3288f4d4bde9a0eb1fbb1778d33b9ff06337e400b1c968bf7f12a6",
+      "fact_id": "abort_discards",
+      "path": "positronic/dataset/ds_writer_agent.py",
+      "start_line": 260
+    },
+    {
+      "end_line": 160,
+      "excerpt": "def main(\n    policy,\n    *,\n    evals: list[Eval] | None = None,\n    embodiment: Embodiment | None = None,\n    driver: Callable[[Path | None], Driver] | None = None,\n    output_dir: str | Path | None = None,\n    show_gui: bool = False,\n):\n    \"\"\"Run inference for an embodiment, real or simulated.\n\n    Exactly one of ``driver`` (attended: a factory producing the operator surface that emits the directives\n    over a single ``embodiment``) or ``evals`` (unattended: the harness self-drives each eval's trial plan,\n    rebuilding the World per eval) must be given; ``show_gui`` applies to the unattended path (attended surfaces\n    bring their own). ``main`` owns the policy lifetime: it warms the policy once up front and closes it once\n    after the last World, so a multi-eval sweep reuses one live policy across the rebuilds.\n    \"\"\"\n    assert (driver is None) != (evals is None), 'Provide exactly one of driver or evals'\n\n    # Drive the policy's remote endpoints through their cold start before hardware and the operator\n    # surface come up: opening a session blocks on the server handshake, which returns only once the\n    # model is loaded, and a SampledPolicy reaches every sub-policy. The first episode then begins\n    # warm instead of stalling on an on-request endpoint's model load while the robot waits.\n    # TODO: a policy with recording taps (recording_dir set) records this throwaway warmup session \u2014\n    # an empty .rrd plus a bump to the recorder's episode counter \u2014 but warmup is not a real episode.\n    logger.info('Warming up policy endpoints')\n    policy.new_session().close()\n\n    if output_dir is not None:\n        output_dir = pos3.sync(output_dir, sync_on_error=True)\n        utils.save_run_metadata(output_dir, patterns=['*.py', '*.toml'])\n        _seed_counter(policy, output_dir)\n\n    # One completion sink \u2014 so one ``SampledPolicy`` counter \u2014 across every eval, keeping sampling balanced\n    # over the whole sweep.\n    on_complete = _completion_sink(policy)\n    try:\n        if driver is not None:\n            _run_world(policy, embodiment, None, None, driver(output_dir), output_dir, show_gui, on_complete)\n        else:\n            for ev in evals:\n                _run_world(policy, ev.embodiment, ev.task, ev.trials, None, output_dir, show_gui, on_complete)",
+      "excerpt_sha256": "f8df0008f0e7bfb5acac1a6dfacf97420e9fab96b40604c1ac8c4f97e17e0a72",
+      "fact_id": "attended_task_none",
+      "path": "positronic/cli/eval/run.py",
+      "start_line": 119
+    },
+    {
+      "end_line": 252,
+      "excerpt": "    def _finalize_recording(self, payload: dict[str, Any] | None = None) -> None:\n        \"\"\"Commit the live episode: tally completion, cancel the in-flight chunk, stop the recorder \u2014\n        stamping the episode's full static meta (plus any terminal payload) at finalize.\"\"\"\n        if self._session:\n            self._on_complete(self._session, self.context)\n        self._cancel_trajectories()\n        self.ds_command.emit(DsWriterCommand.STOP({**self._build_episode_meta(self.context), **(payload or {})}))\n\n    def _begin_episode(self, context: dict[str, Any], clock: pimm.Clock) -> None:\n        \"\"\"Open a fresh episode: reset the scene, fix the task context and session, and open the recording.\n\n        A resettable task's ``reset`` only arms the producer, which publishes frame-0 after the harness\n        (last in the round). The recorder drains its channels the turn it opens, so the pre-reset frame and\n        the inter-episode home command \u2014 lingering there from before START \u2014 drop out and its first sample\n        is the post-reset scene, which the harness infers on once it lands. The trial deadline (a task's\n        ``timeout``, bounding policy- and operator-driven trials alike) is armed here; a task-less attended\n        session has no deadline and ends only on a directive.\n        \"\"\"\n        self.context = context\n        # ``inference_latency`` rides the RUN context (and lands in episode meta with it).\n        self._inference_latency = self.context.get('inference_latency', False)\n        # Reset the scene before opening the session: a resettable task only learns its instruction on reset\n        # (a remote env reports it then), so the session context \u2014 and the task-grouped sampling/counting it\n        # drives \u2014 must read the instruction here, once it is known.\n        if self._task is not None and self._task.reset is not None:\n            self._task.reset(self.context)\n        if self._task is not None:\n            self.context = {**self.context, keys.TASK: self._task.instruction}\n        self._session = self.policy.new_session(self.context, clock.now)\n        self._running = True\n        self._deadline = clock.now() + self._task.timeout if self._task is not None else None\n        self.ds_command.emit(DsWriterCommand.START())\n\n    def _end_episode(\n        self, clock: pimm.Clock, payload: dict[str, Any] | None = None, *, abort: bool = False\n    ) -> Generator[pimm.Command, None, None]:\n        \"\"\"Close the live episode: finalize (or abort) the recording, release the session, home devices.\n\n        Releasing the session here (not only at shutdown) closes a ``RemoteSession``'s websocket\n        promptly, so the offboard server's per-session cleanup (active-session decrement, idle watchdog)\n        runs now.\n        \"\"\"\n        if self._running:\n            if abort:\n                self._cancel_trajectories()  # abort has no finalize to do it \u2014 stop drivers before the home\n                self.ds_command.emit(DsWriterCommand.ABORT())\n            else:\n                self._finalize_recording(payload)\n            # Let the recorder commit the STOP/ABORT before the next START (they share ``ds_command`` \u2014\n            # without a tick between, last-value-wins would drop one) and before the home command, so\n            # homing stays out of the recording.\n            yield self._pace()\n        if self._session:\n            self._session.close()\n            self._session = None\n        self._home(clock)\n        self._running = False",
+      "excerpt_sha256": "b765d3ad38ae61a4c4dc921dc37c84c787a6ec88b606a9d5a8ce0b3208176746",
+      "fact_id": "begin_end_order",
+      "path": "positronic/policy/harness.py",
+      "start_line": 196
+    },
+    {
+      "end_line": 153,
+      "excerpt": "    def _build_episode_meta(self, context: dict[str, Any]) -> dict[str, Any]:\n        meta = dict(self._embodiment.static_meta)\n        meta.update(self._static_meta)\n        meta.update(self.robot_meta_in.value)\n        if self._task is not None:\n            # The eval-identity block: which eval produced this episode.\n            # TODO: also stamp the eval's catalog name and its resolved config \u2014 both need\n            # configuronic introspection that does not exist yet.\n            meta['eval.universe'] = 'sim' if self._embodiment.simulated else 'real'\n            meta['eval.embodiment'] = self._embodiment.descriptor\n            meta['eval.timeout'] = self._task.timeout\n        # ``policy.meta`` is the static baseline (the wrapped policy aggregates model +\n        # codec meta); the session overlays per-episode specifics (e.g. the sampled\n        # sub-policy) and wins on conflict.\n        session_meta = self.policy.meta | (self._session.meta if self._session else {})\n        for k, v in flatten_dict(session_meta).items():\n            meta[f'inference.policy.{k}'] = v\n        meta.update(context)\n        return meta\n\n    def _home(self, clock):\n        now = clock.now_ns()\n        for name, value in self._embodiment.home.items():\n            self.commands[name].emit([(now, value)])",
+      "excerpt_sha256": "62dbac420bffe92e08032eba9db7f298d157462e8b40639a2bfa5adf4af46fc7",
+      "fact_id": "context_and_home",
+      "path": "positronic/policy/harness.py",
+      "start_line": 130
+    },
+    {
+      "end_line": 44,
+      "excerpt": "def droid(robot_arm, gripper, cameras):\n    \"\"\"Real single-arm Franka (DROID) + Robotiq gripper + ZED cameras.\"\"\"\n    observations = {\n        'robot_state': Observation(robot_arm.state, Serializers.robot_state),\n        keys.GRIP: Observation(gripper.grip, None),\n        **{name: Observation(cam.frame, Serializers.camera_images) for name, cam in cameras.items()},\n    }\n    commands = {\n        'robot_command': Command(robot_arm.commands, roboarm_command.Reset(), Serializers.robot_command),\n        'target_grip': Command(gripper.target_grip, 0.0, None),\n    }\n    return Embodiment(\n        descriptor='',\n        observations=observations,\n        commands=commands,\n        static_meta=dict(ROBOT_STATIC_META),\n        meta_source=robot_arm.robot_meta,\n        control_systems=(*cameras.values(), robot_arm, gripper),\n        simulated=False,\n    )",
+      "excerpt_sha256": "0cc057e3a22d663864456530dfb87eaac3f6ee33ac86c4cdd85d158883d27a54",
+      "fact_id": "droid_real_home",
+      "path": "positronic/cfg/embodiment.py",
+      "start_line": 25
+    },
+    {
+      "end_line": 122,
+      "excerpt": "        # Write system metadata immediately\n        # NB: falsy created_ts_ns (including 0) defaults to current time \u2014 epoch 0 is not a valid episode timestamp\n        self._meta = {\n            'schema_version': EPISODE_SCHEMA_VERSION,\n            'uid': uid or uuid.uuid4().hex,\n            'created_ts_ns': created_ts_ns or time.time_ns(),\n        }\n        self._meta['writer'] = _cached_env_writer_info()\n        self._meta['writer']['name'] = f'{self.__class__.__module__}.{self.__class__.__qualname__}'\n        self._meta['path'] = str(self._path.resolve(strict=True))",
+      "excerpt_sha256": "14b0f1c7c4e57df2d7dffea2c780797d31247e4c7ec84ab8a2e4ae8ddf708708",
+      "fact_id": "episode_uuid",
+      "path": "positronic/dataset/local_dataset.py",
+      "start_line": 113
+    },
+    {
+      "end_line": 37,
+      "excerpt": "@cfn.config(\n    ip='172.168.0.2',\n    relative_dynamics_factor=0.2,\n    home_joints=[0.0, -0.31, 0.0, -1.65, 0.0, 1.522, 0.0],\n    load=None,\n    collision_coeff=2.0,\n    manage_desk=True,\n    reboot_on_safety_error=False,\n)\ndef franka(\n    ip: str,\n    relative_dynamics_factor: float,\n    home_joints: list[float],\n    load: tuple | None = None,\n    collision_coeff: float = 2.0,\n    manage_desk: bool = True,\n    reboot_on_safety_error: bool = False,\n):\n    from positronic.drivers.roboarm import franka  # noqa: F401\n\n    return franka.Robot(\n        ip=ip,\n        relative_dynamics_factor=relative_dynamics_factor,\n        home_joints=home_joints,\n        load=load,\n        collision_coeff=collision_coeff,\n        manage_desk=manage_desk,\n        reboot_on_safety_error=reboot_on_safety_error,\n    )\n\n\nfranka_droid = franka.override(load=(0.9, [0.0, 0.0, 0.057], [0.002768, 0, 0, 0, 0.003149, 0, 0, 0, 0.000564]))",
+      "excerpt_sha256": "5b319e8a4a348768a72c395318ad84f8ab19f171e512fb5bbe915941863197ed",
+      "fact_id": "franka_config",
+      "path": "positronic/cfg/hardware/roboarm/__init__.py",
+      "start_line": 6
+    },
+    {
+      "end_line": 228,
+      "excerpt": "    def _reset(self, robot, robot_state: FrankaState):\n        robot_state._start_reset()\n        self.state.emit(robot_state)\n\n        target = np.asarray(self._home_joints, dtype=np.float64)\n        if any(v > 0 for v in self._home_joints_variation):\n            variation = np.random.uniform(\n                -np.asarray(self._home_joints_variation), np.asarray(self._home_joints_variation)\n            )\n            target = target + variation\n        robot.set_target_joints(target, asynchronous=False)\n\n        robot_state._finish_reset()\n        self.state.emit(robot_state)",
+      "excerpt_sha256": "d63dc2b8e40d2bcee5b90fff2d9ec089f031e8ad7121ba680e04d3e3f4b27ac6",
+      "fact_id": "franka_reset",
+      "path": "positronic/drivers/roboarm/franka.py",
+      "start_line": 215
+    },
+    {
+      "end_line": 300,
+      "excerpt": "                    cmd = player.advance(clock.now_ns())\n                    if cmd is not None:\n                        match cmd:\n                            case command.Reset():\n                                self._reset(robot, robot_state)",
+      "excerpt_sha256": "9ba8b4860fdf25dfd47a6b2a0c9829a106a0571ada750f66f28b7eb8448d183d",
+      "fact_id": "franka_reset_dispatch",
+      "path": "positronic/drivers/roboarm/franka.py",
+      "start_line": 296
+    },
+    {
+      "end_line": 81,
+      "excerpt": "def _run_world(\n    policy,\n    embodiment: Embodiment,\n    task: Task | None,\n    trials: list[dict] | None,\n    driver: Driver | None,\n    output_dir: Path | None,\n    show_gui: bool,\n    on_complete,\n):\n    \"\"\"Wire one embodiment under a fresh Harness + World and run it to completion.\n\n    ``driver`` (attended) and ``trials`` (unattended self-driving) are the two lifecycle sources, mutually\n    exclusive per the caller. The shared ``policy``'s lifetime stays with ``main``.\n    \"\"\"\n    harness = Harness(policy, embodiment, task=task, trials=trials, on_episode_complete=on_complete)\n    gui = driver.gui if driver is not None else (dpg_ui() if show_gui else None)\n\n    time_mode = TimeMode.MESSAGE if embodiment.simulated else TimeMode.CLOCK",
+      "excerpt_sha256": "32ec19abdc62b6d8265aef57d4d76ef9e58430b620c6a46853d5894c549a3136",
+      "fact_id": "harness_receives_task",
+      "path": "positronic/cli/eval/run.py",
+      "start_line": 63
+    },
+    {
+      "end_line": 282,
+      "excerpt": "    def _build_obs(self, clock: pimm.Clock) -> dict[str, Any] | None:\n        \"\"\"Read every observation channel and assemble the policy input dict.\n\n        Raises ``NoValueException`` (caught by ``run``) if any channel has no value\n        yet \u2014 so inference waits for a complete set of inputs. Returns ``None`` if a\n        serializer reports a sample is not ready (e.g. ``robot_state`` while the arm is\n        ``RESETTING``), so the harness skips inference rather than feeding a partial obs.\n        \"\"\"\n        inputs: dict[str, Any] = {}\n        for name, obs in self._embodiment.observations.items():\n            value = self.observations[name].value\n            if obs.serializer is not None:\n                value = obs.serializer(value)\n                if value is None:\n                    return None",
+      "excerpt_sha256": "3232130ee8cb052e6aab3013c9775cf97adfb14a2c3124113eddfc4b284a1111",
+      "fact_id": "inference_readiness",
+      "path": "positronic/policy/harness.py",
+      "start_line": 268
+    },
+    {
+      "end_line": 382,
+      "excerpt": "    def run(self, should_stop: pimm.SignalReceiver, clock: pimm.Clock) -> Iterator[pimm.Command]:\n        # Home the embodiment before the first episode; each ``_end_episode`` re-homes for the next one, so\n        # every episode begins from the home pose (a real arm gets the inter-episode gap to reach it).\n        self._home(clock)\n\n        while not should_stop.value:\n            # One action per round, mutually exclusive: handle a directive, start the next trial (or exit\n            # when the plan is done), finish a self-driven trial that is out of budget or done, or step the\n            # policy. Starting takes its own round so a begin never shares a round with a step \u2014 inference\n            # waits for the producer's post-reset frame-0, which the recorder logs once its open-turn drain\n            # has cleared the channels of the pre-reset frame.\n            directive_msg = self.directive.read()\n            # Read every round so the updated flag clears even mid-episode; a press arriving during a\n            # trial is consumed here and never replayed once idle.\n            manual_msg = self.manual_command.read()\n            if directive_msg.updated:\n                yield from self._handle_directive(directive_msg.data, clock)",
+      "excerpt_sha256": "d2ccf25772c252240d65c03d1471847d365228087ec45a1b30f8f8cd2ed4b119",
+      "fact_id": "initial_home",
+      "path": "positronic/policy/harness.py",
+      "start_line": 366
+    },
+    {
+      "end_line": 108,
+      "excerpt": "run_cfg = cfn.Config(main, embodiment=positronic.cfg.embodiment.droid, policy=policy_cfg.placeholder, driver=keyboard)\n\n\n# Console entry point for [project.scripts].\n@pos3.with_mirror()\ndef _internal_main():\n    init_logging()\n    cfn.cli({\n        'run': run_cfg,\n        'real': run_cfg,  # `real` is the documented name for the hardware path\n        'sim': run.override(eval=stack_cubes),\n        'web': run_cfg.override(driver=web),\n        'phail': run_cfg.override(\n            policy=policy_cfg.phail_multiple,\n            driver=eval_ui,\n            **{'driver.ui_scale': 3, 'embodiment.robot_arm.collision_coeff': 2.0},\n        ),",
+      "excerpt_sha256": "ae6588617340a74da13116db60e5ba4bb4d37dc1e0b67bd501f3562ebda4c0f1",
+      "fact_id": "phail_alias",
+      "path": "positronic/inference.py",
+      "start_line": 92
+    },
+    {
+      "end_line": 230,
+      "excerpt": "                # Open before draining this turn's inputs, but finalize/abort after them: the trial's last\n                # frame, queued by the producer a control period earlier, is recorded before STOP closes the\n                # writer.\n                start = cmd_msg.updated and cmd_msg.data.type == DsWriterCommandType.START_EPISODE\n                closing = cmd_msg.updated and not start\n                opened = False\n                if start:\n                    was_open = ep_writer is not None\n                    ep_writer, ep_counter = self._handle_command(cmd_msg.data, ep_writer, ep_counter, cmd_msg.ts)\n                    opened = ep_writer is not None and not was_open\n\n                if ep_writer is not None:\n                    for name, reader in self._inputs.items():\n                        msg = reader.read()\n                        # Scope a command turn's drain to the episode window: the open turn keeps only\n                        # samples after START (dropping the inter-episode home command and any pre-reset\n                        # frame), the closing turn keeps only samples at or before STOP (dropping post-STOP\n                        # home/sensor data the async real path queues). The post-reset frame-0 is published\n                        # after the recorder (next turn), so it never lands on the open turn and records\n                        # normally.\n                        after_start = not opened or msg.ts > cmd_msg.ts\n                        before_stop = not closing or msg.ts <= cmd_msg.ts\n                        if msg.updated and after_start and before_stop:\n                            world_time_ns, message_time_ns = clock.now_ns(), msg.ts\n                            primary_ts = world_time_ns if self._time_mode == TimeMode.CLOCK else message_time_ns\n\n                            extra_ts = {'message': message_time_ns, 'system': pimm.world.SystemClock().now_ns()}\n                            # Only add 'world' if clock is not system clock\n                            if not isinstance(clock, pimm.world.SystemClock):\n                                extra_ts['world'] = world_time_ns\n\n                            serializer = self._serializers.get(name)\n                            value = msg.data\n                            if serializer is not None:\n                                value = serializer(value)",
+      "excerpt_sha256": "861d4623020ff08a1e24dfd881caf016362bc4eba1fe9d2d4d8809a9a88c7beb",
+      "fact_id": "record_window",
+      "path": "positronic/dataset/ds_writer_agent.py",
+      "start_line": 196
+    },
+    {
+      "end_line": 181,
+      "excerpt": "    @staticmethod\n    def _build_robot_meta(robot) -> dict:\n        urdf_xml = robot.get_robot_model()\n        meshes = {f.name: f.read_bytes() for f in _MESH_DIR.iterdir() if f.suffix == '.stl'}\n        root = ET.fromstring(urdf_xml)\n        # Rewrite mesh references to bare filenames matching the bundled STL meshes.\n        # The libfranka URDF uses package:// URIs (e.g. package://franka_description/.../link0.dae)\n        # and references .dae visual meshes we don't bundle. Strip unresolvable elements and\n        # normalise remaining refs so the URDF is self-contained \u2014 matching the style of\n        # fr3.urdf used by cfg.ds.internal for offline dataset transforms.\n        for link in root.findall('link'):\n            for tag in ('visual', 'collision'):\n                for vc_el in list(link.findall(tag)):\n                    mesh_el = vc_el.find('.//mesh')\n                    if mesh_el is None:\n                        continue\n                    basename = Path(mesh_el.get('filename', '')).name\n                    if basename in meshes:\n                        mesh_el.set('filename', basename)\n                    else:\n                        link.remove(vc_el)\n            stl = link.get('name', '') + '.stl'\n            if stl in meshes and link.find('visual') is None:\n                ET.SubElement(ET.SubElement(link, 'visual'), 'geometry').append(ET.Element('mesh', filename=stl))\n        # TODO: The arm driver should not own the gripper. Move the 2F-85 model to the gripper driver\n        # (drivers/gripper) and compose the arm and gripper together at the embodiment level.\n        gripper = attach_robotiq_2f85(root, meshes)\n        return {\n            'urdf': ET.tostring(root, encoding='unicode'),\n            'joint_names': _revolute_joint_names(urdf_xml),\n            'meshes': meshes,\n            'control_frame': 'end_effector',\n            'gripper': gripper,\n        }",
+      "excerpt_sha256": "a3368aea372e352105d59a61f99c6810db881211d20aea4bc350c5988e4bcaf2",
+      "fact_id": "robot_meta_fields",
+      "path": "positronic/drivers/roboarm/franka.py",
+      "start_line": 148
+    },
+    {
+      "end_line": 117,
+      "excerpt": "    @staticmethod\n    def robot_state(state: State) -> dict[str, np.ndarray] | None:\n        # ERROR, like RESETTING, is a not-ready state: drop the frame rather than record or infer on a\n        # mid-error pose.\n        if state.status in (RobotStatus.RESETTING, RobotStatus.ERROR):\n            return None\n        return {'.q': state.q, '.dq': state.dq, '.ee_pose': Serializers.transform_3d(state.ee_pose)}",
+      "excerpt_sha256": "dba3402e8d3554751229a9725aff54db90d922c68ae65264c604075fa9328ceb",
+      "fact_id": "robot_state_filter",
+      "path": "positronic/dataset/serializers.py",
+      "start_line": 111
+    },
+    {
+      "end_line": 249,
+      "excerpt": "        # Write all static items into a single static.json\n        episode_json = self._path / 'static.json'\n        if self._static_items or not episode_json.exists():\n            with episode_json.open('w', encoding='utf-8') as f:\n                json.dump(self._static_items, f, indent=2, cls=_StaticEncoder)\n\n        with (self._path / 'meta.json').open('w', encoding='utf-8') as f:\n            json.dump(self._meta, f, indent=2)",
+      "excerpt_sha256": "a4d36dc1f4c88fa7b9a778122d1ef71a5dd6c6e71b8da34177c52fb2c0fc0418",
+      "fact_id": "static_persistence",
+      "path": "positronic/dataset/local_dataset.py",
+      "start_line": 242
+    },
+    {
+      "end_line": 102,
+      "excerpt": "class Task:\n    \"\"\"The scenario layered on an embodiment: the policy-facing instruction plus\n    the privileged ground-truth signals to record.\n\n    ``instruction`` is the language goal the policy conditions on, resolved live on every read: an embodiment\n    that only learns its task on reset (a remote env reporting it in meta) passes a source callable, while a\n    fixed scenario passes a plain string (wrapped as a constant). ``timeout`` is the per-trial time budget in\n    seconds (sim-time for simulated embodiments, wall-clock for real). ``privileged`` maps a record key to the\n    ground-truth source to capture (the sim's full ``save_state``, a real scale) \u2014 recorded but never fed to\n    the policy.\n\n    ``reset`` re-randomizes the scene for a new trial from the per-trial run context, reading the keys it\n    needs (e.g. ``eval.seed``, and ``eval.task_id`` for a multi-task suite); ``None`` on real embodiments,\n    where reset is physical/human.\n\n    ``done`` is the optional terminating signal: a source that delivers a dict payload when the\n    trial ends. The Harness reads it to stop the trial early and records the payload into the\n    episode's static data.\n    \"\"\"\n\n    def __init__(\n        self,\n        instruction: str | Callable[[], str],\n        timeout: float,\n        privileged: dict[str, Observation] | None = None,\n        reset: Callable[[dict[str, Any]], None] | None = None,\n        done: pimm.SignalEmitter | None = None,\n    ):\n        self._instruction = (lambda: instruction) if isinstance(instruction, str) else instruction\n        self.timeout = timeout\n        self.privileged = privileged or {}\n        self.reset = reset\n        self.done = done",
+      "excerpt_sha256": "6b3e6b2eb46efb5d5b65224827c4fb5bebf42f91c739d8c0420e33e980c97f11",
+      "fact_id": "task_reset_contract",
+      "path": "positronic/eval.py",
+      "start_line": 70
+    },
+    {
+      "end_line": 448,
+      "excerpt": "    def start(self, sender=None, app_data=None):\n        if self.state != State.WAITING:\n            return\n        print('State: RUNNING')\n        self.state = State.RUNNING\n        self.update_ui()\n\n        task_value = dpg.get_value('task_radio')\n        task_name = dpg.get_value('custom_input') if task_value == 'Other' else task_value\n        context = {keys.TASK: task_name}\n\n        if task_value in TASK_TO_OBJECT or task_value == UNIFIED_TASK:\n            obj_value = dpg.get_value('object_radio')\n            if obj_value == 'Other':\n                obj_value = dpg.get_value('object_custom_input')\n            context['eval.object'] = obj_value\n\n        tote_val = dpg.get_value('tote_radio')\n        if tote_val != 'NA':\n            context['eval.tote_placement'] = tote_val\n        camera_val = dpg.get_value('camera_radio')\n        if camera_val != 'NA':\n            context['eval.external_camera'] = camera_val\n        context['eval.total_items'] = dpg.get_value('total_items_input')\n        context['eval.cap_per_item'] = self.cap_per_item\n\n        self.run_start_time = self.clock.now()\n        self.directive.emit(Directive.RUN(**context))\n\n    # Parametrized dpg callbacks take the (sender, app_data, user_data) form with the parameter riding\n    # ``user_data``: dpg builds the argument list from the callback's arity and cannot introspect\n    # ``functools.partial`` objects, so a partial-bound callback never fires.\n    def _on_stop_button(self, sender, app_data, user_data):\n        self.stop_run(user_data)\n\n    def stop_run(self, reason):\n        if self.state != State.RUNNING:\n            return\n        print(f'State: WAITING ({reason})')\n        self.state = State.WAITING\n        total = dpg.get_value('total_items_input')\n        successful = total if reason == 'Success' else dpg.get_value('successful_items_input')\n        self._pending_reviews.append({'outcome': reason, 'successful': successful})\n\n        self.update_ui()\n        self.directive.emit(Directive.FINISH())\n\n    def reset(self, sender=None, app_data=None):\n        print('State: WAITING (Reset)')\n        self.state = State.WAITING\n        self.update_ui()\n        self.directive.emit(Directive.ABORT())",
+      "excerpt_sha256": "3341e6629820fa9f1d8921b2bd5382b2d231c2e541c2b1c9ef87f24f49a79704",
+      "fact_id": "ui_context",
+      "path": "positronic/gui/eval.py",
+      "start_line": 397
+    },
+    {
+      "end_line": 105,
+      "excerpt": "    ds_agent = None\n    if dataset_writer is not None:\n        ds_agent = DsWriterAgent(dataset_writer, time_mode=time_mode, virtual_time=embodiment.simulated)\n        for name, obs in embodiment.observations.items():\n            if isinstance(obs.serializer, StatefulSerializer):\n                raise TypeError(f\"observation '{name}': stateful serializer can't be shared by policy and record paths\")\n            ds_agent.add_signal(name, obs.serializer)\n            world.connect(obs.source, ds_agent.inputs[name])\n        for name, cmd in embodiment.commands.items():\n            # Command channels carry whole trajectories; flatten with last-writer-wins so the\n            # recording is a dense per-command stream. See TrajectoryOverrideSerializer.\n            ds_agent.add_signal(name, TrajectoryOverrideSerializer(cmd.serializer))\n            world.connect(harness.commands[name], ds_agent.inputs[name])\n        for name, priv in privileged.items():\n            ds_agent.add_signal(name, priv.serializer)\n            world.connect(priv.source, ds_agent.inputs[name])",
+      "excerpt_sha256": "7dacea31cb34d960c203bb302765689dbad8a0e7110bbb74da8e283cde024946",
+      "fact_id": "writer_wiring",
+      "path": "positronic/wire.py",
+      "start_line": 90
+    }
+  ],
+  "h196_dependency_sha256": "9f832fddbdb90383ed6cbb330628dce0c7494d703a8c5889e22d26e88d0cd42c",
+  "not_supported_count": 7,
+  "performance_field_opened": false,
+  "physical_success_established": false,
+  "protocol_sha256": "cc088dfee0548e92cc22c0078ed706dee8ac88ee092319657c4fe34b5fdd7424",
+  "schema": "h198-current-phail-lifecycle-binding-v1",
+  "scope": "pinned public source ordering and serialization only; not physical success, historical deployment, independence, exchangeability, or performance",
+  "server_recording_opened": false,
+  "source_files": [
+    {
+      "byte_count": 3088,
+      "git_blob": "7bc708eece4ea12c443ddfea6156f4d68a51a1ea",
+      "line_count": 74,
+      "path": "positronic/cfg/embodiment.py",
+      "sha256": "4a22e10babfaec6abb3ddd178f1ffaa811235b01ce4d8aee06b476bdee1dcd5b"
+    },
+    {
+      "byte_count": 1429,
+      "git_blob": "4d27c99f622f6d2be40577a57b2d076c94a8695b",
+      "line_count": 51,
+      "path": "positronic/cfg/hardware/roboarm/__init__.py",
+      "sha256": "ef1391c001c147dec3a5c7171e31a5a45c08891ef134a141b0cbba4007cc8ab7"
+    },
+    {
+      "byte_count": 4382,
+      "git_blob": "4c612e0f4e0ba7dfa1c0778e3e39c96f906a4256",
+      "line_count": 109,
+      "path": "positronic/cfg/policy.py",
+      "sha256": "d4b28a3beb1c6d04d52f4facc308167e4c88c93b29200a238962b311c1d8885b"
+    },
+    {
+      "byte_count": 8264,
+      "git_blob": "38c7bd50185df7bcb72434148c6c901b8d4f465a",
+      "line_count": 171,
+      "path": "positronic/cli/eval/run.py",
+      "sha256": "e2f208a61bd5a69c3023c0fbbb8559c4db7ec0d777adf44e6e75146984467482"
+    },
+    {
+      "byte_count": 15200,
+      "git_blob": "e1a1bb59f4e5e8568a5dddc6e6e40e28fe99b45c",
+      "line_count": 402,
+      "path": "positronic/data_collection.py",
+      "sha256": "7bc8e365571efda45777d3b2c9e680c873230d436b33a9ee5c8a516ac23754b4"
+    },
+    {
+      "byte_count": 13657,
+      "git_blob": "765b811438d1a0e7db32698e24f9d21488495be0",
+      "line_count": 291,
+      "path": "positronic/dataset/ds_writer_agent.py",
+      "sha256": "81791d99b511723e5d59ff38c9208dc4dc27633917616c6e11cc30bc43da8356"
+    },
+    {
+      "byte_count": 5926,
+      "git_blob": "d15b7f6b5917b121d9526506039db903ecc390dc",
+      "line_count": 182,
+      "path": "positronic/dataset/episode.py",
+      "sha256": "f989a39b59ec498568947f7e18e2540ed7d3149f883970c5a4f5cdf0997b38ef"
+    },
+    {
+      "byte_count": 23577,
+      "git_blob": "b14883ea6d970a5b9b84fc7c8ee930bc7a889495",
+      "line_count": 605,
+      "path": "positronic/dataset/local_dataset.py",
+      "sha256": "8f19cc494eb6b283c127f92dbfbd818c5293c3b6b214ee2614cd6fadfa8b0b9a"
+    },
+    {
+      "byte_count": 5560,
+      "git_blob": "c7a1ccacb9f0a98f9eb7e93981126542bab1e836",
+      "line_count": 146,
+      "path": "positronic/dataset/serializers.py",
+      "sha256": "efa302558063f86154cdc53eb1fbab418868c1d90e30a4d0f80f86f678c78ef9"
+    },
+    {
+      "byte_count": 1657,
+      "git_blob": "4fe401691d07289e2702fc9c04d7855541fe0436",
+      "line_count": 69,
+      "path": "positronic/drivers/roboarm/__init__.py",
+      "sha256": "3faf484f815e593417514d5e04272db31ca3ed763a27826a0a3d787927ecc1a6"
+    },
+    {
+      "byte_count": 6047,
+      "git_blob": "964457cff3f7b808d955cfed2da710b3d2657d17",
+      "line_count": 167,
+      "path": "positronic/drivers/roboarm/command.py",
+      "sha256": "2b6d2e771c5eb7b5026d5d761b1e786574e0436a909ce57a2c5941fd6a6cad37"
+    },
+    {
+      "byte_count": 16647,
+      "git_blob": "fbe608d1bd4fdae61309c630a0efcc990653c0a3",
+      "line_count": 360,
+      "path": "positronic/drivers/roboarm/franka.py",
+      "sha256": "64a0ce7e82d47315bfd351974d30a94bb7a41cfd7d6869e20c8b25721debef88"
+    },
+    {
+      "byte_count": 4904,
+      "git_blob": "a8fb68d340b8c05c9b8332711d53ccfa15e6c652",
+      "line_count": 121,
+      "path": "positronic/eval.py",
+      "sha256": "576073e97c74b13e27fff53dffedfc02198e28132ac644c89ab3cf2b35040530"
+    },
+    {
+      "byte_count": 34900,
+      "git_blob": "8fe6c8fec55a3702d6ae6047e45472b090bf73c0",
+      "line_count": 800,
+      "path": "positronic/gui/eval.py",
+      "sha256": "886ba6f1581dbe577b563f6502a6426b7fef5b102f17b9ad35199e6aa34f35a4"
+    },
+    {
+      "byte_count": 4577,
+      "git_blob": "57dd5e20829acb606b8faa45b40dde923128b3b7",
+      "line_count": 148,
+      "path": "positronic/inference.py",
+      "sha256": "26a4e26d68f8ce6d7512d1d231a34e24f9cf3e4245b60e6557e25c94ee137ac6"
+    },
+    {
+      "byte_count": 10007,
+      "git_blob": "2c1c1ff7f2f3694a11e399be354d1c45d745dbf3",
+      "line_count": 200,
+      "path": "positronic/offboard/client.py",
+      "sha256": "15879b694391f21a5cd6b8627eec511b41c429ac02788c567e1a418aa638e9c5"
+    },
+    {
+      "byte_count": 18250,
+      "git_blob": "53abf9904dad7b088f803c5ff2de170617d75a2d",
+      "line_count": 391,
+      "path": "positronic/offboard/server.py",
+      "sha256": "db1ac1c973e0a2eb7ef3e985e402b99d7f97e3b2f2bca49b799ee8807202afc3"
+    },
+    {
+      "byte_count": 10501,
+      "git_blob": "8e0f4012d387cf46591667c1a2dd0ea08599ddd4",
+      "line_count": 281,
+      "path": "positronic/policy/base.py",
+      "sha256": "19745a9d36f0636b03e9ae2015a13c1d488961a05d76ea15373e86fb8913b05d"
+    },
+    {
+      "byte_count": 21868,
+      "git_blob": "62dd01974588785000285ef6c8cba4672386690a",
+      "line_count": 406,
+      "path": "positronic/policy/harness.py",
+      "sha256": "1ba08e3068c32e7b7451caac8359db3e73ca2abceb2261c4ccac8db942362fbd"
+    },
+    {
+      "byte_count": 9825,
+      "git_blob": "4ddc38539ae6698ab73a310fe216814e16b69cd2",
+      "line_count": 221,
+      "path": "positronic/policy/remote.py",
+      "sha256": "297dc8d04970dc9496062fa2c679710bc354fed587f1904651347ed05d256b0a"
+    },
+    {
+      "byte_count": 4971,
+      "git_blob": "026f94cfd740f80cf8c9d859aaf24a55e8c34214",
+      "line_count": 107,
+      "path": "positronic/wire.py",
+      "sha256": "8036e68f4807a777ebc3ba2651f69c3407d5c12eed6b8fd3fac76b38b595f9d1"
+    }
+  ],
+  "supported_count": 5,
+  "units": [
+    {
+      "facts": [
+        "phail_alias",
+        "droid_real_home"
+      ],
+      "reason": "The phail alias retains the DROID embodiment, whose source marks it non-simulated.",
+      "status": "supported",
+      "unit": "phail_real_hardware_binding"
+    },
+    {
+      "facts": [
+        "phail_alias",
+        "attended_task_none",
+        "harness_receives_task"
+      ],
+      "reason": "The attended driver branch passes task=None and trials=None into the Harness.",
+      "status": "not_supported",
+      "unit": "phail_task_binding"
+    },
+    {
+      "facts": [
+        "attended_task_none",
+        "begin_end_order",
+        "task_reset_contract"
+      ],
+      "reason": "The only scene-reset call is conditional on a non-null Task, but the phail driver path supplies none.",
+      "status": "not_supported",
+      "unit": "pre_session_scene_reset_call"
+    },
+    {
+      "facts": [
+        "attended_task_none",
+        "begin_end_order"
+      ],
+      "reason": "No PhAIL scene-reset call is bound, so no scene-reset completion or acceptance gate precedes session creation.",
+      "status": "not_supported",
+      "unit": "scene_reset_completion_gate"
+    },
+    {
+      "facts": [
+        "droid_real_home",
+        "context_and_home",
+        "initial_home",
+        "franka_reset",
+        "franka_reset_dispatch"
+      ],
+      "reason": "The real DROID embodiment supplies arm Reset and gripper home values; the Harness emits them initially and after episodes, and the Franka Reset executes synchronously inside the driver.",
+      "status": "supported",
+      "unit": "inter_episode_home_command"
+    },
+    {
+      "facts": [
+        "attended_task_none",
+        "begin_end_order",
+        "franka_reset",
+        "inference_readiness",
+        "robot_state_filter"
+      ],
+      "reason": "The driver marks completion after a synchronous motion and later robot-state samples gate inference, but the operator path can issue RUN and open the episode without a Harness-side pre-open completion/acceptance check.",
+      "status": "not_supported",
+      "unit": "home_completion_gate"
+    },
+    {
+      "facts": [
+        "attended_task_none",
+        "droid_real_home",
+        "record_window",
+        "robot_state_filter",
+        "writer_wiring"
+      ],
+      "reason": "The writer drops pre-START samples and RESETTING robot_state, but PhAIL has no task reset and its camera streams are not gated on arm reset completion after an early RUN.",
+      "status": "not_supported",
+      "unit": "post_reset_recording_boundary"
+    },
+    {
+      "facts": [
+        "episode_uuid",
+        "static_persistence"
+      ],
+      "reason": "A fresh UUID4 hex episode uid is written to meta.json.",
+      "status": "supported",
+      "unit": "persistent_episode_identity"
+    },
+    {
+      "facts": [
+        "ui_context",
+        "context_and_home",
+        "robot_meta_fields",
+        "episode_uuid"
+      ],
+      "reason": "The fixed UI, context, writer, and robot-meta path creates no stable operator/collection-session identifier; the UUID is per episode.",
+      "status": "not_supported",
+      "unit": "persistent_operator_session_identity"
+    },
+    {
+      "facts": [
+        "begin_end_order",
+        "record_window",
+        "abort_discards",
+        "robot_state_filter",
+        "franka_reset"
+      ],
+      "reason": "Home commands are kept outside completed episodes, RESETTING state is dropped, ABORT discards the episode, and no reset result, accepted state, prior-episode link, or carryover record is serialized.",
+      "status": "not_supported",
+      "unit": "persistent_reset_carryover_evidence"
+    },
+    {
+      "facts": [
+        "ui_context",
+        "context_and_home",
+        "static_persistence"
+      ],
+      "reason": "The UI's fixed task/object/placement/count context reaches Harness metadata and static.json.",
+      "status": "supported",
+      "unit": "persistent_directive_context"
+    },
+    {
+      "dependency": "H196",
+      "facts": [],
+      "reason": "The independently challenged H196 endpoint trace establishes inference.policy.server.recording.rrd in static.json.",
+      "status": "supported",
+      "unit": "server_recording_join"
+    }
+  ],
+  "unresolved_count": 0
+}

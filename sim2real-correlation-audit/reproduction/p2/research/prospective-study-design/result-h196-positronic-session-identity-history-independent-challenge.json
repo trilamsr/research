@@ -1,0 +1,96 @@
+{
+  "schema": "h196-positronic-session-identity-history-independent-challenge-v1",
+  "producer_modules_imported": false,
+  "method": "independent Node direct-Git endpoint trace and fixed-path history reconstruction",
+  "protocol_sha256": "efba7c9235a1c82b8fa2f25c855c1571109dc10c4294ee1bdb71ce96f211c3e9",
+  "producer_result_sha256": "9f832fddbdb90383ed6cbb330628dce0c7494d703a8c5889e22d26e88d0cd42c",
+  "baseline_commit": "e406176bc526babb06844a48e3627a5c0409eb74",
+  "comparison_commit": "01b78e6f62ff5913490c360afdd2712eee070524",
+  "independently_reconstructed_history_commit_count": 51,
+  "independently_reconstructed_uid_introduction": "e370cbf1e6e31360fd17cc6d36a9ce74786abd94",
+  "independently_reconstructed_rrd_meta_introduction": "91287959a41ee7ebb4b12212dd4dbe99c36efb99",
+  "independently_reconstructed_backend_results": [
+    {
+      "policy": "ACT",
+      "path": "positronic/vendors/lerobot_0_3_3/server.py",
+      "recording_dir": "s3://inference/phail_unified/server_recordings/lerobot/270226-ee/"
+    },
+    {
+      "policy": "SmolVLA",
+      "path": "positronic/vendors/lerobot/server.py",
+      "recording_dir": "s3://inference/phail_unified/server_recordings/smolvla/170316_ee/"
+    },
+    {
+      "policy": "GR00T",
+      "path": "positronic/vendors/gr00t/server.py",
+      "recording_dir": "s3://inference/phail_unified/server_recordings/groot/270226-ee_rot6d_rel/"
+    },
+    {
+      "policy": "OpenPI",
+      "path": "positronic/vendors/openpi/server.py",
+      "recording_dir": "s3://inference/phail_unified/server_recordings/openpi/270226-ee/"
+    }
+  ],
+  "independently_reconstructed_final_static_rrd_key": "inference.policy.server.recording.rrd",
+  "independently_reconstructed_episode_uid": "uuid.uuid4().hex in finalized episode meta.json",
+  "episode_uid_is_shared_server_session_id": false,
+  "rrd_path_is_episode_to_server_recording_join": true,
+  "rrd_filename_globally_unique_across_restarts": false,
+  "physical_reset_or_operator_session_established": false,
+  "source_hashes": {
+    "positronic/policy/recording.py": "5b1a94fd5addeab20c7c2eeb3db60403bc8d0a84a413820ee2ad87d59e73acb9",
+    "positronic/offboard/server.py": "db1ac1c973e0a2eb7ef3e985e402b99d7f97e3b2f2bca49b799ee8807202afc3",
+    "positronic/offboard/client.py": "15879b694391f21a5cd6b8627eec511b41c429ac02788c567e1a418aa638e9c5",
+    "positronic/policy/remote.py": "297dc8d04970dc9496062fa2c679710bc354fed587f1904651347ed05d256b0a",
+    "positronic/policy/harness.py": "1ba08e3068c32e7b7451caac8359db3e73ca2abceb2261c4ccac8db942362fbd",
+    "positronic/dataset/ds_writer_agent.py": "81791d99b511723e5d59ff38c9208dc4dc27633917616c6e11cc30bc43da8356",
+    "positronic/dataset/local_dataset.py": "8f19cc494eb6b283c127f92dbfbd818c5293c3b6b214ee2614cd6fadfa8b0b9a"
+  },
+  "semantic_attacks": [
+    {
+      "name": "wrong classification",
+      "rejected": true
+    },
+    {
+      "name": "endpoint relabeled exposed",
+      "rejected": true
+    },
+    {
+      "name": "history exposure hidden",
+      "rejected": true
+    },
+    {
+      "name": "history row omitted",
+      "rejected": true
+    },
+    {
+      "name": "uuid weakened",
+      "rejected": true
+    },
+    {
+      "name": "rrd key altered",
+      "rejected": true
+    },
+    {
+      "name": "rrd join removed",
+      "rejected": true
+    },
+    {
+      "name": "uid promoted into rrd",
+      "rejected": true
+    },
+    {
+      "name": "cluster promoted",
+      "rejected": true
+    },
+    {
+      "name": "recording access hidden",
+      "rejected": true
+    }
+  ],
+  "semantic_attacks_rejected": 10,
+  "performance_or_dataset_content_opened": false,
+  "server_recording_opened": false,
+  "agrees_with_producer_with_scope_narrowing": true,
+  "disposition": "pass_with_scope_narrowing"
+}

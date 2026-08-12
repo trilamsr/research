@@ -1,0 +1,74 @@
+{
+  "schema": "h171-target-bound-site-feasibility-independent-challenge-v1",
+  "challenge_runtime": "v26.5.0",
+  "producer_modules_imported": false,
+  "protocol_sha256": "ca8f25ee47a8ebd33b2604bdd9841d170ccbda6552d1e833238959a0e27ff65a",
+  "target_spec_file_sha256": "4597cb6960fdc0b658cabdce7b33b1812dc4ea79da841ea584bbd41c3ada226a",
+  "target_spec_canonical_hash": "e247207a3711af2953ba5039a7fdd43ebc334cf50b29ca55f27c0f1cae9213ec",
+  "upstream_hashes": {
+    "h164_result_sha256": "f1be2b4b993f622fc2ae6292fbec5ca7b884db9b003ecb15266b881e8497d401",
+    "h169_result_sha256": "056d7f38bab52299cd2974511381e02a7448d2b3fc4f30d5a8479af3afd2aa7b",
+    "h170_result_sha256": "68d72630633ed682a9d91e934c97ebaa59643c7cb821dd6231b1d2bedb99b688"
+  },
+  "independently_reconstructed_decisions": {
+    "target_preserving_complete": "eligible_for_outcome_hidden_rehearsal",
+    "visible_fiducial_complete": "target_altering_only",
+    "grid_scale_as_tolerance": "not_evidenced",
+    "unlinked_human_overlay": "not_evidenced"
+  },
+  "independently_verified_artifact_count": 64,
+  "authorization_attacks": [
+    {
+      "attack": "na_policy_observation",
+      "observed": "validation_error:not_applicable lacks exact authorization",
+      "rejected": true
+    },
+    {
+      "attack": "na_context_order",
+      "observed": "validation_error:not_applicable lacks exact authorization",
+      "rejected": true
+    },
+    {
+      "attack": "na_reset_carryover",
+      "observed": "validation_error:not_applicable lacks exact authorization",
+      "rejected": true
+    },
+    {
+      "attack": "forged_authorization",
+      "observed": "validation_error:authorization roster differs from canonical",
+      "rejected": true
+    },
+    {
+      "attack": "modified_target_old_hash",
+      "observed": "validation_error:target_spec differs from canonical",
+      "rejected": true
+    },
+    {
+      "attack": "modified_target_rehashed",
+      "observed": "validation_error:target_spec differs from canonical",
+      "rejected": true
+    },
+    {
+      "attack": "replaced_target_hash",
+      "observed": "validation_error:study_spec_hash differs from canonical",
+      "rejected": true
+    },
+    {
+      "attack": "missing_target_spec",
+      "observed": "validation_error:target_spec missing",
+      "rejected": true
+    },
+    {
+      "attack": "malformed_authorization_container",
+      "observed": "validation_error:authorization container malformed",
+      "rejected": true
+    }
+  ],
+  "authorization_attacks_rejected": 9,
+  "h169_bypasses_rejected": true,
+  "disposition": "pass_with_scope",
+  "reliance_gate_passed_for_synthetic_interface_logic": true,
+  "real_site_qualified": false,
+  "field_collection_authorized": false,
+  "scope": "Independent target-binding and synthetic decision-logic challenge only; not physical truth, evidence authenticity, tolerance adequacy, safety, real-site qualification, outcomes, causality, or transport."
+}

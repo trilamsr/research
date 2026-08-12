@@ -1,0 +1,3 @@
+scope,location,boundary
+paper_source_headers,research/corpus-reporting-audit/sources/,public source identity and extraction notes are recorded in each header
+real2sim_artifacts,research/real2sim-noise-floor/review-source-artifacts.md,unreleased upstream experimental inputs are not reproduced

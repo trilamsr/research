@@ -1,0 +1,245 @@
+{
+  "schema": "h231-shared-binary-success-sensitivity-v1",
+  "status": "pass",
+  "classification": "central_result_survives_with_gradient_geometry",
+  "protocol_sha256": "7c35f1843748714a752619e1130de2bb42ecbc50b0e98758a9255bf7ae0d30e8",
+  "implementation_sha256": "3566eca736484e117de5f41cdd4310c16b0c537a6f194653ef1c93102800e1da",
+  "runtime": {
+    "python": "3.12.13",
+    "implementation": "CPython"
+  },
+  "model": {
+    "contexts": [
+      "A",
+      "B"
+    ],
+    "target_context_weights": [
+      "1/2",
+      "1/2"
+    ],
+    "observed_context": "A for every pair",
+    "observed_pair_score": "1/2 for every pair",
+    "pair_score": "binary success comparison with half credit for ties",
+    "context_b_success_means": "x in [0,1]^K",
+    "compatible_target_geometry": "q_ij=1/2+(x_i-x_j)/4; delta_ik=delta_ij+delta_jk"
+  },
+  "closed_forms": {
+    "policy_value": "V_i=1/2+(x_i-r_dot_x)/4",
+    "worst_regret": "R(p)=(1-min_i p_i)/4",
+    "deterministic_worst_regret": "1/4",
+    "unique_minimax_lottery": "uniform over all K policies",
+    "minimax_value": "(K-1)/(4K)",
+    "opponent_reference_cancels": true
+  },
+  "binary_joint_laws_checked": 165,
+  "exact_vertex_rows": [
+    {
+      "k": 3,
+      "vertex_count": 8,
+      "reference_count": 4,
+      "lottery_count": 4,
+      "enumerated_reference_lottery_pairs": 16,
+      "uniform_minimax_regret": {
+        "numerator": 1,
+        "denominator": 6,
+        "text": "1/6",
+        "decimal": 0.16666666666666666
+      },
+      "deterministic_worst_regret": {
+        "numerator": 1,
+        "denominator": 4,
+        "text": "1/4",
+        "decimal": 0.25
+      },
+      "unrestricted_edge_box_deterministic_regret": {
+        "numerator": 1,
+        "denominator": 3,
+        "text": "1/3",
+        "decimal": 0.3333333333333333
+      }
+    },
+    {
+      "k": 4,
+      "vertex_count": 16,
+      "reference_count": 5,
+      "lottery_count": 4,
+      "enumerated_reference_lottery_pairs": 20,
+      "uniform_minimax_regret": {
+        "numerator": 3,
+        "denominator": 16,
+        "text": "3/16",
+        "decimal": 0.1875
+      },
+      "deterministic_worst_regret": {
+        "numerator": 1,
+        "denominator": 4,
+        "text": "1/4",
+        "decimal": 0.25
+      },
+      "unrestricted_edge_box_deterministic_regret": {
+        "numerator": 3,
+        "denominator": 8,
+        "text": "3/8",
+        "decimal": 0.375
+      }
+    },
+    {
+      "k": 5,
+      "vertex_count": 32,
+      "reference_count": 5,
+      "lottery_count": 4,
+      "enumerated_reference_lottery_pairs": 20,
+      "uniform_minimax_regret": {
+        "numerator": 1,
+        "denominator": 5,
+        "text": "1/5",
+        "decimal": 0.2
+      },
+      "deterministic_worst_regret": {
+        "numerator": 1,
+        "denominator": 4,
+        "text": "1/4",
+        "decimal": 0.25
+      },
+      "unrestricted_edge_box_deterministic_regret": {
+        "numerator": 2,
+        "denominator": 5,
+        "text": "2/5",
+        "decimal": 0.4
+      }
+    },
+    {
+      "k": 6,
+      "vertex_count": 64,
+      "reference_count": 5,
+      "lottery_count": 4,
+      "enumerated_reference_lottery_pairs": 20,
+      "uniform_minimax_regret": {
+        "numerator": 5,
+        "denominator": 24,
+        "text": "5/24",
+        "decimal": 0.20833333333333334
+      },
+      "deterministic_worst_regret": {
+        "numerator": 1,
+        "denominator": 4,
+        "text": "1/4",
+        "decimal": 0.25
+      },
+      "unrestricted_edge_box_deterministic_regret": {
+        "numerator": 5,
+        "denominator": 12,
+        "text": "5/12",
+        "decimal": 0.4166666666666667
+      }
+    },
+    {
+      "k": 7,
+      "vertex_count": 128,
+      "reference_count": 5,
+      "lottery_count": 4,
+      "enumerated_reference_lottery_pairs": 20,
+      "uniform_minimax_regret": {
+        "numerator": 3,
+        "denominator": 14,
+        "text": "3/14",
+        "decimal": 0.21428571428571427
+      },
+      "deterministic_worst_regret": {
+        "numerator": 1,
+        "denominator": 4,
+        "text": "1/4",
+        "decimal": 0.25
+      },
+      "unrestricted_edge_box_deterministic_regret": {
+        "numerator": 3,
+        "denominator": 7,
+        "text": "3/7",
+        "decimal": 0.42857142857142855
+      }
+    },
+    {
+      "k": 8,
+      "vertex_count": 256,
+      "reference_count": 5,
+      "lottery_count": 4,
+      "enumerated_reference_lottery_pairs": 20,
+      "uniform_minimax_regret": {
+        "numerator": 7,
+        "denominator": 32,
+        "text": "7/32",
+        "decimal": 0.21875
+      },
+      "deterministic_worst_regret": {
+        "numerator": 1,
+        "denominator": 4,
+        "text": "1/4",
+        "decimal": 0.25
+      },
+      "unrestricted_edge_box_deterministic_regret": {
+        "numerator": 7,
+        "denominator": 16,
+        "text": "7/16",
+        "decimal": 0.4375
+      }
+    }
+  ],
+  "gradient_cycle_equalities_checked": 1672,
+  "simplex_grid": {
+    "rows": [
+      {
+        "k": 3,
+        "denominator": 12,
+        "grid_size": 91,
+        "minimum": {
+          "numerator": 1,
+          "denominator": 6,
+          "text": "1/6",
+          "decimal": 0.16666666666666666
+        },
+        "uniform_on_grid": true
+      },
+      {
+        "k": 4,
+        "denominator": 8,
+        "grid_size": 165,
+        "minimum": {
+          "numerator": 3,
+          "denominator": 16,
+          "text": "3/16",
+          "decimal": 0.1875
+        },
+        "uniform_on_grid": true
+      },
+      {
+        "k": 5,
+        "denominator": 6,
+        "grid_size": 210,
+        "minimum": {
+          "numerator": 5,
+          "denominator": 24,
+          "text": "5/24",
+          "decimal": 0.20833333333333334
+        },
+        "uniform_on_grid": false
+      },
+      {
+        "k": 6,
+        "denominator": 5,
+        "grid_size": 252,
+        "minimum": {
+          "numerator": 1,
+          "denominator": 4,
+          "text": "1/4",
+          "decimal": 0.25
+        },
+        "uniform_on_grid": false
+      }
+    ],
+    "total_grid_points": 718
+  },
+  "opposite_unique_winner_roster_sizes_checked": 62,
+  "checked_k_min": 3,
+  "checked_k_max": 64,
+  "scope": "Exploratory sensitivity for one equal-weight two-context, all-routes-in-A shared-binary-success construction. It is not a theorem for every structured response model or robot outcome."
+}

@@ -1,0 +1,72 @@
+{
+  "schema": "h224-armnetbench-paper-design-independent-challenge-v1",
+  "independent_implementation": "node-stdlib-exact-source-identities-and-rule-reconstruction",
+  "producer_result_sha256": "b29dc62a06f2174d2c9a6971dd678b774d728edc33431cee7a2e4976487f000a",
+  "source_identities": {
+    "arxiv_id": "2607.24481v1",
+    "pdf_sha256": "c1d0edbd163f6db2597da67c4afe03e8b63deb3c2eefbfca613db3ff5319951e",
+    "source_archive_sha256": "21e4d8b117878e4d42d810da6e8e2a711c11e146dc389d1fd4ba7da97cf12bf1",
+    "main_tex_sha256": "8ceaa0e443e561c90b376a22e5c4d541243685d5cb3d42b04d905118907f6e20"
+  },
+  "dependency_identities": {
+    "h028_result_sha256": "40578851f962399cf0e6bca4eca95417ed28c419f6fe486b6ac8d08408698482",
+    "h029_result_sha256": "82dd62ad96cdce928774705a214f9161ec694e1a3b7edc57c385d36ced3f272c",
+    "h222_result_sha256": "3bf46af0c4e3bed9b7f05c0553098d1689cd825860638d121c194c7c59fd087b"
+  },
+  "independent_facts": {
+    "multi_policy": true,
+    "standalone_execution": true,
+    "common_task_cell": true,
+    "initial_states_independently_sampled": true,
+    "explicit_policy_assignment_law": false,
+    "explicit_policy_order_law": false,
+    "reset_before_rollout": true,
+    "measured_reset_acceptance": false,
+    "complete_lifecycle_evidence": false,
+    "session_dependence_identity": false,
+    "fixed_horizon": false,
+    "operator_postexecution_score": true,
+    "preexecution_evaluator": false,
+    "dependence_aware_uncertainty_method": false,
+    "public_per_trial_artifact_outcome_linkage": true,
+    "immutable_evaluated_checkpoints": false,
+    "cost_capacity_documented": true,
+    "outcome_tokens_processed_but_not_extracted": true
+  },
+  "independent_decisions": {
+    "p2_classification": "adverse_mismatch_contrast",
+    "p2_positive_design_contrast_eligible": false,
+    "h022_status": "refused_unchanged",
+    "h022_existing_blockers_all_closed": false
+  },
+  "independent_unit_statuses": {
+    "1": "partial",
+    "2": "partial",
+    "3": "supported",
+    "4": "partial",
+    "5": "partial",
+    "6": "partial",
+    "7": "partial",
+    "8": "partial",
+    "9": "supported",
+    "10": "absent_from_fixed_scope",
+    "11": "absent_from_fixed_scope",
+    "12": "supported"
+  },
+  "all_unit_statuses_agree": true,
+  "p2_decision_agrees": true,
+  "h022_decision_agrees": true,
+  "outcome_boundary": {
+    "full_source_bytes_processed": true,
+    "performance_values_extracted_or_retained": false,
+    "performance_values_used_in_classification": false,
+    "source_selection_revisited": false
+  },
+  "scope_limits": {
+    "linked_code_data_or_media_newly_opened": false,
+    "protected_p1_outcomes_accessed": false,
+    "sealed_p3_frame_accessed": false,
+    "author_contacted": false
+  },
+  "disposition": "pass_adverse_mismatch_and_h022_refusal_confirmed"
+}

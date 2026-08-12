@@ -1,0 +1,67 @@
+# SIMPLER real and simulated success rates used for the bounded decision case.
+#
+# SOURCE: Li et al., "Evaluating Real-World Robot Manipulation Policies in
+# Simulation" (SIMPLER), arXiv:2405.05941v1; official repository:
+# https://github.com/simpler-env/SimplerEnv
+# Exact source file:
+# https://github.com/simpler-env/SimplerEnv/blob/6f5a5f7473777a5bd787bdf2a72af1a41fabef61/simpler_env/utils/metrics.py
+# Immutable file provenance: commit
+# 6f5a5f7473777a5bd787bdf2a72af1a41fabef61, Git blob
+# 39a251c9abe14b30f5578e931143ff2a7edf4bfe, raw-file SHA-256
+# ee8596be6997d41295bf5b25f90c9b5b3ba47ef2bd92296b8c45e7ffc5606dc6.
+# This is the file's last-change commit, not an established paper-execution
+# revision. Dictionaries: REAL_PERF and SIMPLER_PERF. Retrieved 2026-07-28.
+#
+# SOURCE SEMANTICS: tools/calc_metrics.py computes Pearson and MMRV separately
+# within each task. The equal-task aggregate used in this audit is a NEW,
+# explicitly declared finite-panel policy-selection decision: for each
+# embodiment and policy, take the unweighted mean success rate across the
+# displayed tasks, then compare the real and simulated top-policy sets. It is
+# not a coefficient printed by SIMPLER and is not a population estimate.
+#
+# RECOVERABILITY: These are machine-readable source values, not coordinates
+# extracted from a figure. The audit reproduces the official task-level metric
+# functions separately and uses the values below for decision calculations.
+embodiment,task,policy,real_success,sim_success
+google_robot,google_robot_pick_coke_can,rt-2-x,0.907,0.787
+google_robot,google_robot_pick_coke_can,rt-1-converged,0.853,0.857
+google_robot,google_robot_pick_coke_can,rt-1-15pct,0.920,0.710
+google_robot,google_robot_pick_coke_can,rt-1-x,0.760,0.567
+google_robot,google_robot_pick_coke_can,rt-1-begin,0.133,0.027
+google_robot,google_robot_pick_coke_can,octo-base,0.293,0.170
+google_robot,google_robot_move_near,rt-2-x,0.733,0.779
+google_robot,google_robot_move_near,rt-1-converged,0.633,0.442
+google_robot,google_robot_move_near,rt-1-15pct,0.583,0.354
+google_robot,google_robot_move_near,rt-1-x,0.450,0.317
+google_robot,google_robot_move_near,rt-1-begin,0.017,0.050
+google_robot,google_robot_move_near,octo-base,0.350,0.042
+google_robot,google_robot_open_drawer,rt-2-x,0.333,0.157
+google_robot,google_robot_open_drawer,rt-1-converged,0.815,0.601
+google_robot,google_robot_open_drawer,rt-1-15pct,0.704,0.463
+google_robot,google_robot_open_drawer,rt-1-x,0.519,0.296
+google_robot,google_robot_open_drawer,rt-1-begin,0.000,0.000
+google_robot,google_robot_open_drawer,octo-base,0.148,0.009
+google_robot,google_robot_close_drawer,rt-2-x,0.630,0.343
+google_robot,google_robot_close_drawer,rt-1-converged,0.926,0.861
+google_robot,google_robot_close_drawer,rt-1-15pct,0.889,0.667
+google_robot,google_robot_close_drawer,rt-1-x,0.741,0.891
+google_robot,google_robot_close_drawer,rt-1-begin,0.000,0.278
+google_robot,google_robot_close_drawer,octo-base,0.519,0.444
+google_robot,google_robot_place_apple_in_closed_top_drawer,rt-2-x,0.074,0.037
+google_robot,google_robot_place_apple_in_closed_top_drawer,rt-1-converged,0.185,0.065
+google_robot,google_robot_place_apple_in_closed_top_drawer,rt-1-15pct,0.185,0.130
+google_robot,google_robot_place_apple_in_closed_top_drawer,rt-1-x,0.407,0.213
+google_robot,google_robot_place_apple_in_closed_top_drawer,rt-1-begin,0.000,0.000
+google_robot,google_robot_place_apple_in_closed_top_drawer,octo-base,0.000,0.000
+widowx,widowx_spoon_on_towel,rt-1-x,0.000,0.000
+widowx,widowx_spoon_on_towel,octo-base,0.333,0.125
+widowx,widowx_spoon_on_towel,octo-small,0.417,0.472
+widowx,widowx_carrot_on_plate,rt-1-x,0.000,0.042
+widowx,widowx_carrot_on_plate,octo-base,0.250,0.083
+widowx,widowx_carrot_on_plate,octo-small,0.083,0.097
+widowx,widowx_stack_cube,rt-1-x,0.000,0.000
+widowx,widowx_stack_cube,octo-base,0.000,0.000
+widowx,widowx_stack_cube,octo-small,0.125,0.042
+widowx,widowx_put_eggplant_in_basket,rt-1-x,0.000,0.000
+widowx,widowx_put_eggplant_in_basket,octo-base,0.250,0.431
+widowx,widowx_put_eggplant_in_basket,octo-small,0.400,0.569

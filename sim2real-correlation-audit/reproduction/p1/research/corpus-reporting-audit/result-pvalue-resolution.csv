@@ -1,0 +1,6 @@
+paper,printed_p,policy_blocks_k,task_blocks_k,source_basis
+RoboWorld,<0.001,8,?,"Fig. 5a headline policy correlation"
+WorldGym,<0.001,3,17,"Fig. 4a pools three policies across seventeen tasks"
+REALM,<0.001,3,7,"Fig. 6/overall policy-task panel"
+Cosmos-Surg-dVRK,<0.001,3,4,"Fig. 4 pools three policy runs across four tasks"
+Mem-World,<0.001,2,5,"Fig. 4 pools two post-trained policies across five tasks"

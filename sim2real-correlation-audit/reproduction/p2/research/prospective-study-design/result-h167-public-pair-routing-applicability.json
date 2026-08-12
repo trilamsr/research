@@ -1,0 +1,239 @@
+{
+  "advancement": "pass",
+  "cumulative_support_does_not_establish_current_applicability": true,
+  "decision": "not_qualified_for_public_pair_routing_application",
+  "failed_required_unit_count": 11,
+  "failed_required_units": [
+    {
+      "name": "declared_within_pair_routing_action",
+      "status": "absent",
+      "unit_id": 1
+    },
+    {
+      "name": "h165_action_aligned_with_public_action",
+      "status": "absent",
+      "unit_id": 3
+    },
+    {
+      "name": "current_deployed_pair_assignment_law",
+      "status": "absent",
+      "unit_id": 5
+    },
+    {
+      "name": "fixed_outcome_independent_pair_weights",
+      "status": "absent",
+      "unit_id": 6
+    },
+    {
+      "name": "active_pool_effective_intervals",
+      "status": "absent",
+      "unit_id": 7
+    },
+    {
+      "name": "session_level_assignment_export",
+      "status": "absent",
+      "unit_id": 8
+    },
+    {
+      "name": "stable_future_pair_specific_context_law",
+      "status": "absent",
+      "unit_id": 10
+    },
+    {
+      "name": "historical_to_future_context_bridge",
+      "status": "absent",
+      "unit_id": 11
+    },
+    {
+      "name": "newest_nonoverlapping_increment_all_21_edges",
+      "status": "partial",
+      "unit_id": 13
+    },
+    {
+      "name": "stable_roster_assignment_epoch_for_pooling",
+      "status": "contradicted_by_public_record",
+      "unit_id": 14
+    },
+    {
+      "name": "future_cluster_lifecycle_structure",
+      "status": "partial",
+      "unit_id": 15
+    }
+  ],
+  "field_collection_authorized": false,
+  "outcome_fields_accessed_or_used": false,
+  "prospective_adoption_possible": true,
+  "protocol_sha256": "b891a7a88ae7c3b096df74f5b56d1cb826edf937951eedc245f258594c3e92c2",
+  "public_action_mismatch": true,
+  "required_unit_ids": [
+    1,
+    3,
+    5,
+    6,
+    7,
+    8,
+    10,
+    11,
+    13,
+    14,
+    15
+  ],
+  "schema": "h167-public-pair-routing-applicability-v1",
+  "scope": "Outcome-free applicability audit of existing public RoboArena records for the H165 routing action; not a benchmark-validity, outcome, assignment-intent, causal, or field claim.",
+  "source_hashes": {
+    "assignment_context": "ebca1a0705aef78ed193bd59f9a3014438b15d86774df4441b45a4fafd04990d",
+    "assignment_regimes": "7cfa2741c97d9b476eb913d722ec6676c7bbbffc35f90a57658bac8b7310fe51",
+    "dataset_card_recall": "f6fd56abf2381f941fd874ca6d1b5a206679805453ba53dc9fe00f8d0eb09f55",
+    "h165_target": "a3c8ab98e4779efa0372cf29b4da87537388545d54784189b957b520f9fb6a63",
+    "h166_challenge": "274f08586fceb98c0f444581f543ce9694e67b4756f4aebda546310530a3dec0",
+    "paper_protocol": "8193ea6faa06f60ace867dfa4e3cbda1d370cf9c63025e8db92af1debc1b415d",
+    "ranking_semantics": "57b1c7c8ccf49f1939c616392c402dbccdde2c88849d3e6051111e070b5d1870",
+    "release_challenge": "24ea3ab0c78121d4f55eb19f81cbd2ca50927a57b4e842f56dfd261d5712007c"
+  },
+  "unit_count": 15,
+  "units": [
+    {
+      "evidence": "No audited public record declares policy routing within a presented pair as the downstream action.",
+      "name": "declared_within_pair_routing_action",
+      "source_keys": [
+        "ranking_semantics",
+        "paper_protocol"
+      ],
+      "status": "absent",
+      "unit_id": 1
+    },
+    {
+      "evidence": "The pinned public UI declares a Policy Leaderboard and names Bradley-Terry Davidson in UI prose.",
+      "name": "declared_global_leaderboard_or_ranking",
+      "source_keys": [
+        "ranking_semantics"
+      ],
+      "status": "available",
+      "unit_id": 2
+    },
+    {
+      "evidence": "The H165 within-pair routing action is not the public global-ranking action.",
+      "name": "h165_action_aligned_with_public_action",
+      "source_keys": [
+        "h165_target",
+        "ranking_semantics"
+      ],
+      "status": "absent",
+      "unit_id": 3
+    },
+    {
+      "evidence": "The paper describes random pair sampling before evaluator task/scene construction; deployed execution is unaudited.",
+      "name": "paper_pair_first_random_sampling",
+      "source_keys": [
+        "paper_protocol"
+      ],
+      "status": "paper_described_only",
+      "unit_id": 4
+    },
+    {
+      "evidence": "The audited authored public source does not establish the server assignment law.",
+      "name": "current_deployed_pair_assignment_law",
+      "source_keys": [
+        "assignment_context",
+        "paper_protocol"
+      ],
+      "status": "absent",
+      "unit_id": 5
+    },
+    {
+      "evidence": "Neither pair inclusion probabilities nor deterministic assignment weights are public in the audited record.",
+      "name": "fixed_outcome_independent_pair_weights",
+      "source_keys": [
+        "paper_protocol",
+        "assignment_context"
+      ],
+      "status": "absent",
+      "unit_id": 6
+    },
+    {
+      "evidence": "The paper anticipates a changing pool but does not establish active-pool intervals for a public dump.",
+      "name": "active_pool_effective_intervals",
+      "source_keys": [
+        "paper_protocol",
+        "release_challenge"
+      ],
+      "status": "absent",
+      "unit_id": 7
+    },
+    {
+      "evidence": "The paper source record explicitly leaves a session-level assignment export unestablished.",
+      "name": "session_level_assignment_export",
+      "source_keys": [
+        "paper_protocol"
+      ],
+      "status": "absent",
+      "unit_id": 8
+    },
+    {
+      "evidence": "The paper requires closely matched initial conditions inside each A/B comparison.",
+      "name": "matched_within_pair_conditions",
+      "source_keys": [
+        "paper_protocol"
+      ],
+      "status": "paper_described_only",
+      "unit_id": 9
+    },
+    {
+      "evidence": "No audited source identifies a stable future distribution G_ab for evaluator-constructed tasks and scenes.",
+      "name": "stable_future_pair_specific_context_law",
+      "source_keys": [
+        "paper_protocol"
+      ],
+      "status": "absent",
+      "unit_id": 10
+    },
+    {
+      "evidence": "No overlap, invariance, or transport bridge links historical realized contexts to a future G_ab.",
+      "name": "historical_to_future_context_bridge",
+      "source_keys": [
+        "paper_protocol",
+        "h165_target"
+      ],
+      "status": "absent",
+      "unit_id": 11
+    },
+    {
+      "evidence": "The independently reconstructed February public panel has 1,816 exact-two sessions and all 21 fixed-policy pairs.",
+      "name": "cumulative_february_panel_all_21_edges",
+      "source_keys": [
+        "release_challenge"
+      ],
+      "status": "available",
+      "unit_id": 12
+    },
+    {
+      "evidence": "The newest increment has 278 exact-two sessions, 15 of 21 pairs, and one isolated fixed policy.",
+      "name": "newest_nonoverlapping_increment_all_21_edges",
+      "source_keys": [
+        "release_challenge"
+      ],
+      "status": "partial",
+      "unit_id": 13
+    },
+    {
+      "evidence": "Public topology and vocabulary shift require segmentation or an explicit bridge before pooling.",
+      "name": "stable_roster_assignment_epoch_for_pooling",
+      "source_keys": [
+        "release_challenge",
+        "assignment_regimes"
+      ],
+      "status": "contradicted_by_public_record",
+      "unit_id": 14
+    },
+    {
+      "evidence": "Public metadata support session-level descriptive counts, but the relied-on challenge retained neither assignment rows nor session identifiers.",
+      "name": "future_cluster_lifecycle_structure",
+      "source_keys": [
+        "release_challenge",
+        "assignment_regimes"
+      ],
+      "status": "partial",
+      "unit_id": 15
+    }
+  ]
+}

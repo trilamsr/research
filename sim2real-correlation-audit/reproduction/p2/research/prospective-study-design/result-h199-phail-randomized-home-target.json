@@ -1,0 +1,339 @@
+{
+  "classification": "historical_and_current_unrecorded_randomized_home",
+  "comparison_exposure": {
+    "current": "result_exposed_by_h198",
+    "v0.2.1": "prospective_before_endpoint_source_opening"
+  },
+  "dataset_content_opened": false,
+  "decision_consequence": "The source-bound v0.2.1 and pinned current PhAIL paths both inherit a nonzero per-reset uniform Franka home-joint perturbation without serializing the realized target or RNG identity. Request those fields as lifecycle context; do not infer reset inadequacy or a performance effect.",
+  "endpoints": [
+    {
+      "arm_target_execution_synchronous": true,
+      "base_home_joints_rad": [
+        0.0,
+        -0.31,
+        0.0,
+        -1.65,
+        0.0,
+        1.522,
+        0.0
+      ],
+      "configuration_exposes_home_joints_variation": false,
+      "draw_distribution": "independent_uniform_per_joint_on_symmetric_half_widths",
+      "droid_arm_reset_binding": true,
+      "effective_home_joints_variation_rad": [
+        0.03,
+        0.05,
+        0.08,
+        0.08,
+        0.1,
+        0.1,
+        0.1
+      ],
+      "phail_droid_binding": true,
+      "random_draw_bound": true,
+      "realized_target_serialized": false,
+      "reset_command_ordered_outside_retained_episode": true,
+      "revision": "e406176bc526babb06844a48e3627a5c0409eb74",
+      "rng_interface": "numpy_global_random_state",
+      "seed_or_rng_state_serialized": false,
+      "source_bound_not_execution_fidelity": true
+    },
+    {
+      "arm_target_execution_synchronous": true,
+      "base_home_joints_rad": [
+        0.0,
+        -0.31,
+        0.0,
+        -1.65,
+        0.0,
+        1.522,
+        0.0
+      ],
+      "configuration_exposes_home_joints_variation": false,
+      "draw_distribution": "independent_uniform_per_joint_on_symmetric_half_widths",
+      "droid_arm_reset_binding": true,
+      "effective_home_joints_variation_rad": [
+        0.03,
+        0.05,
+        0.08,
+        0.08,
+        0.1,
+        0.1,
+        0.1
+      ],
+      "phail_droid_binding": true,
+      "random_draw_bound": true,
+      "realized_target_serialized": false,
+      "reset_command_ordered_outside_retained_episode": true,
+      "revision": "01b78e6f62ff5913490c360afdd2712eee070524",
+      "rng_interface": "numpy_global_random_state",
+      "seed_or_rng_state_serialized": false,
+      "source_bound_not_execution_fidelity": true
+    }
+  ],
+  "fixed_paths": [
+    "positronic/inference.py",
+    "positronic/cfg/embodiment.py",
+    "positronic/cfg/hardware/roboarm/__init__.py",
+    "positronic/drivers/roboarm/__init__.py",
+    "positronic/drivers/roboarm/command.py",
+    "positronic/drivers/roboarm/franka.py",
+    "positronic/policy/harness.py",
+    "positronic/dataset/ds_writer_agent.py",
+    "positronic/dataset/serializers.py",
+    "positronic/dataset/local_dataset.py",
+    "positronic/wire.py"
+  ],
+  "h198_dependency_sha256": "9ec06f012f6efe78c29ea96fed360a8060efb8f02b9f14e4f744dad89f6f5e3b",
+  "historical_execution_fidelity_established": false,
+  "performance_effect_established": false,
+  "performance_field_opened": false,
+  "physical_reset_adequacy_established": false,
+  "protocol_sha256": "c2bf4cf543228c02995f86d4874196a962727e249ccef9c6aced010d6fe47493",
+  "quantitative_summary": {
+    "half_widths_deg": [
+      1.7188733853924696,
+      2.864788975654116,
+      4.583662361046586,
+      4.583662361046586,
+      5.729577951308232,
+      5.729577951308232,
+      5.729577951308232
+    ],
+    "half_widths_rad": [
+      0.03,
+      0.05,
+      0.08,
+      0.08,
+      0.1,
+      0.1,
+      0.1
+    ],
+    "interpretation": "configuration-space support only; no end-effector or outcome inference",
+    "maximum_euclidean_joint_perturbation_rad": 0.2149418526020468,
+    "ranges_deg": [
+      [
+        -1.7188733853924696,
+        1.7188733853924696
+      ],
+      [
+        -2.864788975654116,
+        2.864788975654116
+      ],
+      [
+        -4.583662361046586,
+        4.583662361046586
+      ],
+      [
+        -4.583662361046586,
+        4.583662361046586
+      ],
+      [
+        -5.729577951308232,
+        5.729577951308232
+      ],
+      [
+        -5.729577951308232,
+        5.729577951308232
+      ],
+      [
+        -5.729577951308232,
+        5.729577951308232
+      ]
+    ],
+    "ranges_rad": [
+      [
+        -0.03,
+        0.03
+      ],
+      [
+        -0.05,
+        0.05
+      ],
+      [
+        -0.08,
+        0.08
+      ],
+      [
+        -0.08,
+        0.08
+      ],
+      [
+        -0.1,
+        0.1
+      ],
+      [
+        -0.1,
+        0.1
+      ],
+      [
+        -0.1,
+        0.1
+      ]
+    ],
+    "rms_euclidean_joint_perturbation_rad": 0.12409673645990857,
+    "sum_squared_half_widths_rad2": 0.046200000000000005
+  },
+  "revisions": {
+    "current": "01b78e6f62ff5913490c360afdd2712eee070524",
+    "v0.2.1": "e406176bc526babb06844a48e3627a5c0409eb74"
+  },
+  "schema": "h199-phail-randomized-home-target-v1",
+  "source_files": {
+    "01b78e6f62ff5913490c360afdd2712eee070524": [
+      {
+        "byte_count": 4577,
+        "git_blob": "57dd5e20829acb606b8faa45b40dde923128b3b7",
+        "path": "positronic/inference.py",
+        "present": true,
+        "sha256": "26a4e26d68f8ce6d7512d1d231a34e24f9cf3e4245b60e6557e25c94ee137ac6"
+      },
+      {
+        "byte_count": 3088,
+        "git_blob": "7bc708eece4ea12c443ddfea6156f4d68a51a1ea",
+        "path": "positronic/cfg/embodiment.py",
+        "present": true,
+        "sha256": "4a22e10babfaec6abb3ddd178f1ffaa811235b01ce4d8aee06b476bdee1dcd5b"
+      },
+      {
+        "byte_count": 1429,
+        "git_blob": "4d27c99f622f6d2be40577a57b2d076c94a8695b",
+        "path": "positronic/cfg/hardware/roboarm/__init__.py",
+        "present": true,
+        "sha256": "ef1391c001c147dec3a5c7171e31a5a45c08891ef134a141b0cbba4007cc8ab7"
+      },
+      {
+        "byte_count": 1657,
+        "git_blob": "4fe401691d07289e2702fc9c04d7855541fe0436",
+        "path": "positronic/drivers/roboarm/__init__.py",
+        "present": true,
+        "sha256": "3faf484f815e593417514d5e04272db31ca3ed763a27826a0a3d787927ecc1a6"
+      },
+      {
+        "byte_count": 6047,
+        "git_blob": "964457cff3f7b808d955cfed2da710b3d2657d17",
+        "path": "positronic/drivers/roboarm/command.py",
+        "present": true,
+        "sha256": "2b6d2e771c5eb7b5026d5d761b1e786574e0436a909ce57a2c5941fd6a6cad37"
+      },
+      {
+        "byte_count": 16647,
+        "git_blob": "fbe608d1bd4fdae61309c630a0efcc990653c0a3",
+        "path": "positronic/drivers/roboarm/franka.py",
+        "present": true,
+        "sha256": "64a0ce7e82d47315bfd351974d30a94bb7a41cfd7d6869e20c8b25721debef88"
+      },
+      {
+        "byte_count": 21868,
+        "git_blob": "62dd01974588785000285ef6c8cba4672386690a",
+        "path": "positronic/policy/harness.py",
+        "present": true,
+        "sha256": "1ba08e3068c32e7b7451caac8359db3e73ca2abceb2261c4ccac8db942362fbd"
+      },
+      {
+        "byte_count": 13657,
+        "git_blob": "765b811438d1a0e7db32698e24f9d21488495be0",
+        "path": "positronic/dataset/ds_writer_agent.py",
+        "present": true,
+        "sha256": "81791d99b511723e5d59ff38c9208dc4dc27633917616c6e11cc30bc43da8356"
+      },
+      {
+        "byte_count": 5560,
+        "git_blob": "c7a1ccacb9f0a98f9eb7e93981126542bab1e836",
+        "path": "positronic/dataset/serializers.py",
+        "present": true,
+        "sha256": "efa302558063f86154cdc53eb1fbab418868c1d90e30a4d0f80f86f678c78ef9"
+      },
+      {
+        "byte_count": 23577,
+        "git_blob": "b14883ea6d970a5b9b84fc7c8ee930bc7a889495",
+        "path": "positronic/dataset/local_dataset.py",
+        "present": true,
+        "sha256": "8f19cc494eb6b283c127f92dbfbd818c5293c3b6b214ee2614cd6fadfa8b0b9a"
+      },
+      {
+        "byte_count": 4971,
+        "git_blob": "026f94cfd740f80cf8c9d859aaf24a55e8c34214",
+        "path": "positronic/wire.py",
+        "present": true,
+        "sha256": "8036e68f4807a777ebc3ba2651f69c3407d5c12eed6b8fd3fac76b38b595f9d1"
+      }
+    ],
+    "e406176bc526babb06844a48e3627a5c0409eb74": [
+      {
+        "byte_count": 11209,
+        "git_blob": "c9bc29b72f15763e17740537f08a73d58675217c",
+        "path": "positronic/inference.py",
+        "present": true,
+        "sha256": "f0d9565b501b70ea15421d86b0e742a8c57d5c22446f57f36f9bd7cf79d43080"
+      },
+      {
+        "git_blob": null,
+        "path": "positronic/cfg/embodiment.py",
+        "present": false
+      },
+      {
+        "byte_count": 1213,
+        "git_blob": "4a6352084f0c937a71ec0131e6cfdd97329fd73a",
+        "path": "positronic/cfg/hardware/roboarm/__init__.py",
+        "present": true,
+        "sha256": "d66d7e82a3624b219f350f42208006188ce988ea98dd100d8aa01c31eb362b50"
+      },
+      {
+        "byte_count": 1657,
+        "git_blob": "4fe401691d07289e2702fc9c04d7855541fe0436",
+        "path": "positronic/drivers/roboarm/__init__.py",
+        "present": true,
+        "sha256": "3faf484f815e593417514d5e04272db31ca3ed763a27826a0a3d787927ecc1a6"
+      },
+      {
+        "byte_count": 2029,
+        "git_blob": "d588cf98d9070c2c18440c954a399f2ac704f88b",
+        "path": "positronic/drivers/roboarm/command.py",
+        "present": true,
+        "sha256": "4a0d6078f0892d43d8b21e712161a71a3eecfde98e067bb85857e969db6d869c"
+      },
+      {
+        "byte_count": 11943,
+        "git_blob": "a7a5fafe3a1a2c18b24cc948526fc4465586d660",
+        "path": "positronic/drivers/roboarm/franka.py",
+        "present": true,
+        "sha256": "1e8b58613d77a2d1ca250be1683e4a7f5fd93440a5ee23e303a009350f0b1a02"
+      },
+      {
+        "byte_count": 8012,
+        "git_blob": "857b1fe313d67689345fc5fd5954605464fbca38",
+        "path": "positronic/policy/harness.py",
+        "present": true,
+        "sha256": "c01bd56bee3b406eefc41d01d9010464c1fed1490fdb18d3a0d2f838ae14c075"
+      },
+      {
+        "byte_count": 12494,
+        "git_blob": "8f0f06e31fabecce2d093d7768ede88397affcb2",
+        "path": "positronic/dataset/ds_writer_agent.py",
+        "present": true,
+        "sha256": "40435c6a11cb8f75bb1dc79933da1ea8b47586cffa2988c3bf44756fb1fbe483"
+      },
+      {
+        "git_blob": null,
+        "path": "positronic/dataset/serializers.py",
+        "present": false
+      },
+      {
+        "byte_count": 22403,
+        "git_blob": "8e7d6001ebcbb0a58e39a07b2f58d400f45797fd",
+        "path": "positronic/dataset/local_dataset.py",
+        "present": true,
+        "sha256": "e0308688d7daa43c4c27b00a5f199ed8ffc86caaf3b6b1b2cf9177adec82e493"
+      },
+      {
+        "byte_count": 2261,
+        "git_blob": "1c52667d9cf089712c8e45ee90b7ceee9f1f8fa1",
+        "path": "positronic/wire.py",
+        "present": true,
+        "sha256": "586baf9bd736a623fc4b19027ea05158757f4e7e474a9f73081090a992329763"
+      }
+    ]
+  }
+}

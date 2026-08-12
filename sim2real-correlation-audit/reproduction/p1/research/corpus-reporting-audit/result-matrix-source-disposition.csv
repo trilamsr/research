@@ -1,0 +1,24 @@
+source_file,status,matrix_ids,reason
+source-colosseum-v2.csv,ineligible_no_multiple_candidates,,The retained hardware matrix varies tasks and perturbations for one fixed policy.
+source-cosmos-surg-dvrk.csv,eligible,Cosmos-Surg-dVRK/automated_fig1b|Cosmos-Surg-dVRK/manual_human_vs_dvrk,Each source panel supplies six stable policies across four complete task blocks.
+source-digital-cousins.csv,eligible,Digital Cousins,Four stable policy variants are complete across four generalization-level blocks.
+source-dreamdojo.csv,ineligible_no_candidate_identity,,The six points follow one training lineage and do not expose a multi-policy candidate-by-block matrix.
+source-embodiedsplat.csv,eligible,EmbodiedSplat/mesh-conditions,The source fields base_lineage and ft_status define four stable candidates across Poly and DN mesh conditions.
+source-gemini-veo.csv,ineligible_single_block,,The retained record is one direct eight-checkpoint candidate panel without repeated task/condition cells.
+source-hi-wm.csv,eligible,Hi-WM,Four stable policies are complete across three tasks.
+source-mem-world.csv,eligible,Mem-World,Two stable policies are complete across five tasks.
+source-molmospaces.csv,eligible,MolmoSpaces/common-appendix-roster,The appendix panel has a four-policy intersection across pick/open/close; pick-only extra candidates are excluded by the outcome-independent common-roster rule.
+source-oscar.csv,ineligible_single_block,,The retained record is one direct seven-policy panel without repeated task/condition cells.
+source-playworld-partial.csv,ineligible_unrecoverable_identity,,The partial raster extraction does not recover candidate identities and a complete matrix.
+source-real2sim-eval-fig3-checkpoints.csv,ineligible_multiple_rows_per_cell,,Policy-task cells contain multiple checkpoints and require a separate checkpoint-collapse rule rather than one direct cell value.
+source-real2sim-eval-fig9-200ep.csv,ineligible_multiple_rows_per_cell,,Policy-task cells contain multiple checkpoints and require a separate checkpoint-collapse rule rather than one direct cell value.
+source-realm.csv,eligible,REALM/Default|REALM/Overall|REALM/VB-POSE,Default Overall and VB-POSE each contain three stable policies across seven complete tasks; V-VIEW is excluded because candidate-task coverage is incomplete.
+source-recipe-rankings.csv,ineligible_rank_panel_rosters,,The retained rows are separate rank panels rather than one absolute-outcome candidate-by-block matrix.
+source-robosnap.csv,ineligible_no_candidate_identity,,The ten task points do not expose stable policy candidates across repeated blocks.
+source-roboworld.csv,ineligible_noncommensurable_blocks,,The four direct policy panels cross two judge identities and two different evaluator metrics; they are not commensurable task/condition blocks for equal aggregation.
+source-simpler-decisions.csv,eligible,SIMPLER/google_robot|SIMPLER/widowx,Each embodiment supplies a stable candidate roster across complete task blocks.
+source-viser.csv,ineligible_incomplete_roster,,Policy rosters differ across tasks and do not form a complete candidate-by-task Cartesian product.
+source-weaver.csv,eligible,WEAVER/CtrlWorld|WEAVER/WEAVER|WEAVER/WEAVER-FT,Each evaluator panel supplies two stable policies across five complete tasks.
+source-wm-policyeval.csv,eligible,WM-PolicyEval/Cosmos|WM-PolicyEval/IRASim,Each world-model panel supplies three stable policies across four complete tasks.
+source-worldeval.csv,eligible,WorldEval,Four stable policies are complete across five tasks.
+source-worldgym-decisions.csv,eligible,WorldGym,Three stable policies are complete across seventeen tasks.

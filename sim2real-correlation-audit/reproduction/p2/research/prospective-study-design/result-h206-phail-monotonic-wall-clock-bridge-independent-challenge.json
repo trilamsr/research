@@ -1,0 +1,160 @@
+{
+  "schema": "h206-node-bigint-independent-challenge-v1",
+  "method": "Node BigInt exact CSV/source reconstruction with independent grouping, inversion, and projection code",
+  "node_version": "v26.5.0",
+  "producer_result_sha256": "1b46e77400b15ecd886d165f13fca06b3f6834a0cc4f70082da4be4a39f51e19",
+  "producer_projection_sha256": "7b7af23688e230325ec69070c8e5cd5523224990d7bc44defbe5b30f12c65529",
+  "source_trace": {
+    "source_mode": "hash-bound v0.2.1 source projection",
+    "source_sha256": {
+      "pimm/world.py": "cca1fbe28cd69adef15dac7c7c8a7b30386bcf9cf06d8c943b8c2d1736c5560f",
+      "positronic/inference.py": "f0d9565b501b70ea15421d86b0e742a8c57d5c22446f57f36f9bd7cf79d43080",
+      "positronic/dataset/ds_writer_agent.py": "40435c6a11cb8f75bb1dc79933da1ea8b47586cffa2988c3bf44756fb1fbe483",
+      "positronic/dataset/local_dataset.py": "e0308688d7daa43c4c27b00a5f199ed8ffc86caaf3b6b1b2cf9177adec82e493",
+      "positronic/wire.py": "586baf9bd736a623fc4b19027ea05158757f4e7e474a9f73081090a992329763"
+    },
+    "controls": {
+      "real_inference_uses_default_world": true,
+      "world_defaults_to_system_clock": true,
+      "system_clock_is_monotonic_ns": true,
+      "real_inference_uses_clock_mode": true,
+      "writer_primary_time_is_world_clock": true,
+      "episode_creation_is_wall_time_ns": true,
+      "robot_state_signal_binding": true
+    }
+  },
+  "episode_count": 594,
+  "largest_adjacent_gap_ns": "1556979984990940",
+  "second_largest_adjacent_gap_ns": "509323503",
+  "threshold_group_sizes": {
+    "1000000": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      4,
+      6,
+      9,
+      235,
+      313
+    ],
+    "10000000": [
+      1,
+      1,
+      1,
+      1,
+      10,
+      17,
+      249,
+      314
+    ],
+    "100000000": [
+      1,
+      18,
+      250,
+      325
+    ],
+    "1000000000": [
+      250,
+      344
+    ],
+    "10000000000": [
+      250,
+      344
+    ],
+    "60000000000": [
+      250,
+      344
+    ],
+    "600000000000": [
+      250,
+      344
+    ],
+    "3600000000000": [
+      250,
+      344
+    ],
+    "21600000000000": [
+      250,
+      344
+    ],
+    "86400000000000": [
+      250,
+      344
+    ]
+  },
+  "one_hour_groups": [
+    {
+      "group_1h": 1,
+      "episode_count": 250,
+      "offset_min_ns": "1772624400588359039",
+      "offset_max_ns": "1772624400660588300",
+      "maximum_elapsed_time_discrepancy_ns": "41570873",
+      "wall_monotonic_discordant_pairs": 0,
+      "policy_counts": {
+        "act": 107,
+        "groot": 18,
+        "openpi": 81,
+        "smolvla": 44
+      },
+      "utc_date_counts": {
+        "2026-03-05": 24,
+        "2026-03-06": 26,
+        "2026-03-10": 35,
+        "2026-03-13": 33,
+        "2026-03-17": 23,
+        "2026-03-19": 39,
+        "2026-03-20": 70
+      },
+      "contiguous_in_wall_clock_order": true,
+      "contiguous_in_episode_id_order": true
+    },
+    {
+      "group_1h": 2,
+      "episode_count": 344,
+      "offset_min_ns": "1774181380645579240",
+      "offset_max_ns": "1774181381582367075",
+      "maximum_elapsed_time_discrepancy_ns": "904113985",
+      "wall_monotonic_discordant_pairs": 0,
+      "policy_counts": {
+        "act": 44,
+        "groot": 146,
+        "openpi": 82,
+        "smolvla": 72
+      },
+      "utc_date_counts": {
+        "2026-03-24": 71,
+        "2026-03-25": 82,
+        "2026-03-27": 47,
+        "2026-03-29": 74,
+        "2026-04-03": 52,
+        "2026-04-04": 18
+      },
+      "contiguous_in_wall_clock_order": true,
+      "contiguous_in_episode_id_order": false
+    }
+  ],
+  "independent_classification": "scale_separated_clock_offset_regimes",
+  "exact_projection_reconstruction": true,
+  "performance_or_later_state_opened": false,
+  "host_or_session_identity_established": false,
+  "dependence_cluster_established": false,
+  "result": "pass"
+}

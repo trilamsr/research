@@ -1,0 +1,4115 @@
+{
+  "_outcome_edit_reconciliation": {
+    "episodes_reviewed": 150,
+    "num_steps_patches": 71,
+    "outcome_class_changes": 0,
+    "overrides_file": ".outcome_edit_progress.json",
+    "success_flips": []
+  },
+  "arena_session_id": "jh79rnjt1bkhy1v2kx72haxdax8a8qrd",
+  "arena_session_url": "https://policy-eval.ankile.com/?tab=sessions&session=jh79rnjt1bkhy1v2kx72haxdax8a8qrd",
+  "arena_submitted_round_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49
+  ],
+  "args": {
+    "arena_url": "https://grandiose-rook-292.convex.cloud",
+    "camera_filter": "_left",
+    "camera_height": 480,
+    "camera_keys": "18650758_left,18650758_right,25916956_left,33409691_left",
+    "camera_width": 640,
+    "checkpoint_interval_rounds": 5,
+    "dataset_name": "real01b-marker-d2-r5-trio-baseline-dp-iql-cfinal-n16-heval-sobolseed2026070704",
+    "dataset_path": "./data",
+    "device": null,
+    "drop_fixed_policy": [],
+    "environment": "marker_d2",
+    "fixed_policy": [
+      "baseline_nocf_r5=wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "ours_freecf_r5_dp=wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "ours_freecf_r5_iql_cfinal_n16=wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0"
+    ],
+    "fixed_policy_dp_override": [
+      "ours_freecf_r5_iql_cfinal_n16=wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0"
+    ],
+    "fixed_policy_num_action_samples": [
+      "ours_freecf_r5_iql_cfinal_n16=16"
+    ],
+    "freq": 15,
+    "hf_repo_id": "ankile/real01b-marker-d2-r5-trio-baseline-dp-iql-cfinal-n16-heval-sobolseed2026070704",
+    "inference_backend": "local",
+    "initial_state_visualization_dir": "/tmp/real01b-marker-d2-r5-trio-baseline-dp-iql-cfinal-n16-heval-sobolseed2026070704_initial_state_targets",
+    "initial_states_manifest": "experiments/2026-07-09/blind_inputs/marker_d2_r5_eval_heldout_independent_sobol_seed2026070704.json",
+    "max_recoverable_rollout_errors_per_slot": 6,
+    "max_steps": 800,
+    "n_action_steps": 6,
+    "no_auto_timeout": false,
+    "no_push": false,
+    "no_show_initial_state_window": false,
+    "noise_scheduler": "DDIM",
+    "num_action_samples": null,
+    "num_inference_steps": 8,
+    "openpi_camera_roles": null,
+    "random_arena_selection": "uniform",
+    "random_arena_slots": 0,
+    "random_seed": 2026070704,
+    "recoverable_rollout_max_retry_delay_s": 30.0,
+    "recoverable_rollout_retry_backoff": 2.0,
+    "recoverable_rollout_retry_delay_s": 2.0,
+    "remote_inference_device": "cuda",
+    "remote_inference_gpu": "1",
+    "remote_inference_host": "robot-john",
+    "remote_inference_port": 0,
+    "remote_inference_python_cmd": "uv run --no-sync python",
+    "remote_inference_remote_port": 48881,
+    "remote_inference_start_timeout_s": 180.0,
+    "remote_inference_token": null,
+    "remote_inference_url": null,
+    "remote_inference_workdir": null,
+    "rerun_incomplete_rounds": true,
+    "reset_max_retries": 6,
+    "reset_max_retry_delay_s": 5.0,
+    "reset_retry_backoff": 1.5,
+    "reset_retry_delay_s": 1.0,
+    "results_path": null,
+    "robot_state_refresh_max_wait_s": 1.5,
+    "robot_state_refresh_poll_interval_s": 0.01,
+    "task_description": null
+  },
+  "dataset_name": "real01b-marker-d2-r5-trio-baseline-dp-iql-cfinal-n16-heval-sobolseed2026070704",
+  "rollouts": [
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "episode_index": 0,
+      "manifest_idx": 0,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "num_steps": 640,
+      "outcome": "timeout",
+      "pen_x": 0.056810141934826974,
+      "pen_y": 0.10934139096736906,
+      "pen_yaw": -1.1603536872629105,
+      "policy_id": 0,
+      "round": 1
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "episode_index": 1,
+      "manifest_idx": 0,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "num_steps": 184,
+      "outcome": "success",
+      "pen_x": 0.056810141934826974,
+      "pen_y": 0.10934139096736906,
+      "pen_yaw": -1.1603536872629105,
+      "policy_id": 1,
+      "round": 1
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "episode_index": 2,
+      "manifest_idx": 0,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "num_steps": 634,
+      "outcome": "timeout",
+      "pen_x": 0.056810141934826974,
+      "pen_y": 0.10934139096736906,
+      "pen_yaw": -1.1603536872629105,
+      "policy_id": 2,
+      "round": 1
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "episode_index": 3,
+      "manifest_idx": 1,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "num_steps": 179,
+      "outcome": "success",
+      "pen_x": 0.022055707421153786,
+      "pen_y": -0.005796174301207074,
+      "pen_yaw": 2.1934077016063327,
+      "policy_id": 1,
+      "round": 2
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "episode_index": 4,
+      "manifest_idx": 1,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "num_steps": 172,
+      "outcome": "success",
+      "pen_x": 0.022055707421153786,
+      "pen_y": -0.005796174301207074,
+      "pen_yaw": 2.1934077016063327,
+      "policy_id": 2,
+      "round": 2
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "episode_index": 5,
+      "manifest_idx": 1,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "num_steps": 405,
+      "outcome": "timeout",
+      "pen_x": 0.022055707421153786,
+      "pen_y": -0.005796174301207074,
+      "pen_yaw": 2.1934077016063327,
+      "policy_id": 0,
+      "round": 2
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "episode_index": 6,
+      "manifest_idx": 2,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "num_steps": 203,
+      "outcome": "success",
+      "pen_x": 0.06495578944087027,
+      "pen_y": -0.02993445582166314,
+      "pen_yaw": -1.7995759877689332,
+      "policy_id": 1,
+      "round": 3
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "episode_index": 7,
+      "manifest_idx": 2,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "num_steps": 603,
+      "outcome": "timeout",
+      "pen_x": 0.06495578944087027,
+      "pen_y": -0.02993445582166314,
+      "pen_yaw": -1.7995759877689332,
+      "policy_id": 0,
+      "round": 3
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "episode_index": 8,
+      "manifest_idx": 2,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "num_steps": 193,
+      "outcome": "success",
+      "pen_x": 0.06495578944087027,
+      "pen_y": -0.02993445582166314,
+      "pen_yaw": -1.7995759877689332,
+      "policy_id": 2,
+      "round": 3
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "episode_index": 9,
+      "manifest_idx": 3,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "num_steps": 559,
+      "outcome": "success",
+      "pen_x": -0.018523552811890838,
+      "pen_y": -0.01132132448181511,
+      "pen_yaw": 1.356535753250558,
+      "policy_id": 2,
+      "round": 4
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "episode_index": 10,
+      "manifest_idx": 3,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "num_steps": 172,
+      "outcome": "success",
+      "pen_x": -0.018523552811890838,
+      "pen_y": -0.01132132448181511,
+      "pen_yaw": 1.356535753250558,
+      "policy_id": 1,
+      "round": 4
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "episode_index": 11,
+      "manifest_idx": 3,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "num_steps": 191,
+      "outcome": "success",
+      "pen_x": -0.018523552811890838,
+      "pen_y": -0.01132132448181511,
+      "pen_yaw": 1.356535753250558,
+      "policy_id": 0,
+      "round": 4
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "episode_index": 12,
+      "manifest_idx": 4,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "num_steps": 771,
+      "outcome": "timeout",
+      "pen_x": 0.003286943377554419,
+      "pen_y": 0.1259583352178335,
+      "pen_yaw": -1.5038964159393653,
+      "policy_id": 2,
+      "round": 5
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "episode_index": 13,
+      "manifest_idx": 4,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "num_steps": 290,
+      "outcome": "success",
+      "pen_x": 0.003286943377554419,
+      "pen_y": 0.1259583352178335,
+      "pen_yaw": -1.5038964159393653,
+      "policy_id": 1,
+      "round": 5
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "episode_index": 14,
+      "manifest_idx": 4,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "num_steps": 233,
+      "outcome": "success",
+      "pen_x": 0.003286943377554419,
+      "pen_y": 0.1259583352178335,
+      "pen_yaw": -1.5038964159393653,
+      "policy_id": 0,
+      "round": 5
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "episode_index": 15,
+      "manifest_idx": 5,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "num_steps": 304,
+      "outcome": "success",
+      "pen_x": 0.04618614711239934,
+      "pen_y": 0.13833915909603234,
+      "pen_yaw": 1.111598741406575,
+      "policy_id": 0,
+      "round": 6
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "episode_index": 16,
+      "manifest_idx": 5,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "num_steps": 519,
+      "outcome": "success",
+      "pen_x": 0.04618614711239934,
+      "pen_y": 0.13833915909603234,
+      "pen_yaw": 1.111598741406575,
+      "policy_id": 1,
+      "round": 6
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "episode_index": 17,
+      "manifest_idx": 5,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "num_steps": 800,
+      "outcome": "timeout",
+      "pen_x": 0.04618614711239934,
+      "pen_y": 0.13833915909603234,
+      "pen_yaw": 1.111598741406575,
+      "policy_id": 2,
+      "round": 6
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "episode_index": 18,
+      "manifest_idx": 6,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "num_steps": 703,
+      "outcome": "success",
+      "pen_x": -0.02704245151765644,
+      "pen_y": 0.089834691350162,
+      "pen_yaw": 1.9958534828287275,
+      "policy_id": 2,
+      "round": 7
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "episode_index": 19,
+      "manifest_idx": 6,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "num_steps": 800,
+      "outcome": "timeout",
+      "pen_x": -0.02704245151765644,
+      "pen_y": 0.089834691350162,
+      "pen_yaw": 1.9958534828287275,
+      "policy_id": 1,
+      "round": 7
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "episode_index": 20,
+      "manifest_idx": 6,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "num_steps": 800,
+      "outcome": "timeout",
+      "pen_x": -0.02704245151765644,
+      "pen_y": 0.089834691350162,
+      "pen_yaw": 1.9958534828287275,
+      "policy_id": 0,
+      "round": 7
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "episode_index": 21,
+      "manifest_idx": 7,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "num_steps": 758,
+      "outcome": "success",
+      "pen_x": 0.021425398505106566,
+      "pen_y": 0.012215296985954055,
+      "pen_yaw": 0.16709236130182692,
+      "policy_id": 0,
+      "round": 8
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "episode_index": 22,
+      "manifest_idx": 7,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "num_steps": 194,
+      "outcome": "success",
+      "pen_x": 0.021425398505106566,
+      "pen_y": 0.012215296985954055,
+      "pen_yaw": 0.16709236130182692,
+      "policy_id": 2,
+      "round": 8
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "episode_index": 23,
+      "manifest_idx": 7,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "num_steps": 717,
+      "outcome": "success",
+      "pen_x": 0.021425398505106566,
+      "pen_y": 0.012215296985954055,
+      "pen_yaw": 0.16709236130182692,
+      "policy_id": 1,
+      "round": 8
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "episode_index": 24,
+      "manifest_idx": 8,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "num_steps": 432,
+      "outcome": "timeout",
+      "pen_x": -0.034169118394330136,
+      "pen_y": -0.12625727738589046,
+      "pen_yaw": -0.3142552842796955,
+      "policy_id": 1,
+      "round": 9
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "episode_index": 25,
+      "manifest_idx": 8,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "num_steps": 504,
+      "outcome": "failure",
+      "pen_x": -0.034169118394330136,
+      "pen_y": -0.12625727738589046,
+      "pen_yaw": -0.3142552842796955,
+      "policy_id": 0,
+      "round": 9
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "episode_index": 26,
+      "manifest_idx": 8,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "num_steps": 289,
+      "outcome": "success",
+      "pen_x": -0.034169118394330136,
+      "pen_y": -0.12625727738589046,
+      "pen_yaw": -0.3142552842796955,
+      "policy_id": 2,
+      "round": 9
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "episode_index": 27,
+      "manifest_idx": 9,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "num_steps": 800,
+      "outcome": "timeout",
+      "pen_x": -0.06754391143731772,
+      "pen_y": -0.14280504293516277,
+      "pen_yaw": 0.7057860035285768,
+      "policy_id": 1,
+      "round": 10
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "episode_index": 28,
+      "manifest_idx": 9,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "num_steps": 612,
+      "outcome": "success",
+      "pen_x": -0.06754391143731772,
+      "pen_y": -0.14280504293516277,
+      "pen_yaw": 0.7057860035285768,
+      "policy_id": 0,
+      "round": 10
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "episode_index": 29,
+      "manifest_idx": 9,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "num_steps": 134,
+      "outcome": "success",
+      "pen_x": -0.06754391143731772,
+      "pen_y": -0.14280504293516277,
+      "pen_yaw": 0.7057860035285768,
+      "policy_id": 2,
+      "round": 10
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "episode_index": 30,
+      "manifest_idx": 10,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "num_steps": 265,
+      "outcome": "success",
+      "pen_x": -0.03989709688425064,
+      "pen_y": 0.06310977089703082,
+      "pen_yaw": 3.0147706643848915,
+      "policy_id": 1,
+      "round": 11
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "episode_index": 31,
+      "manifest_idx": 10,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "num_steps": 212,
+      "outcome": "success",
+      "pen_x": -0.03989709688425064,
+      "pen_y": 0.06310977089703082,
+      "pen_yaw": 3.0147706643848915,
+      "policy_id": 0,
+      "round": 11
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "episode_index": 32,
+      "manifest_idx": 10,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "num_steps": 800,
+      "outcome": "timeout",
+      "pen_x": -0.03989709688425064,
+      "pen_y": 0.06310977089703082,
+      "pen_yaw": 3.0147706643848915,
+      "policy_id": 2,
+      "round": 11
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "episode_index": 33,
+      "manifest_idx": 11,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "num_steps": 270,
+      "outcome": "success",
+      "pen_x": -0.0592643771521747,
+      "pen_y": -0.10487551677972076,
+      "pen_yaw": -0.7559730642611027,
+      "policy_id": 0,
+      "round": 12
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "episode_index": 34,
+      "manifest_idx": 11,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "num_steps": 799,
+      "outcome": "timeout",
+      "pen_x": -0.0592643771521747,
+      "pen_y": -0.10487551677972076,
+      "pen_yaw": -0.7559730642611027,
+      "policy_id": 2,
+      "round": 12
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "episode_index": 35,
+      "manifest_idx": 11,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "num_steps": 701,
+      "outcome": "timeout",
+      "pen_x": -0.0592643771521747,
+      "pen_y": -0.10487551677972076,
+      "pen_yaw": -0.7559730642611027,
+      "policy_id": 1,
+      "round": 12
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "episode_index": 36,
+      "manifest_idx": 12,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "num_steps": 800,
+      "outcome": "timeout",
+      "pen_x": 0.01044602106660604,
+      "pen_y": -0.08656176760196685,
+      "pen_yaw": 2.3771404810312244,
+      "policy_id": 1,
+      "round": 13
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "episode_index": 37,
+      "manifest_idx": 12,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "num_steps": 800,
+      "outcome": "timeout",
+      "pen_x": 0.01044602106660604,
+      "pen_y": -0.08656176760196685,
+      "pen_yaw": 2.3771404810312244,
+      "policy_id": 0,
+      "round": 13
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "episode_index": 38,
+      "manifest_idx": 12,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "num_steps": 537,
+      "outcome": "success",
+      "pen_x": 0.01044602106660604,
+      "pen_y": -0.08656176760196685,
+      "pen_yaw": 2.3771404810312244,
+      "policy_id": 2,
+      "round": 13
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "episode_index": 39,
+      "manifest_idx": 13,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "num_steps": 237,
+      "outcome": "success",
+      "pen_x": 0.07208361903727054,
+      "pen_y": 0.06710794135853648,
+      "pen_yaw": 0.5106293787461,
+      "policy_id": 0,
+      "round": 14
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "episode_index": 40,
+      "manifest_idx": 13,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "num_steps": 648,
+      "outcome": "timeout",
+      "pen_x": 0.07208361903727054,
+      "pen_y": 0.06710794135853648,
+      "pen_yaw": 0.5106293787461,
+      "policy_id": 2,
+      "round": 14
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "episode_index": 41,
+      "manifest_idx": 13,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "num_steps": 737,
+      "outcome": "timeout",
+      "pen_x": 0.07208361903727054,
+      "pen_y": 0.06710794135853648,
+      "pen_yaw": 0.5106293787461,
+      "policy_id": 1,
+      "round": 14
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "episode_index": 42,
+      "manifest_idx": 14,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "num_steps": 800,
+      "outcome": "timeout",
+      "pen_x": 0.0020569555174559384,
+      "pen_y": -0.12303674727603792,
+      "pen_yaw": -2.4258892007082142,
+      "policy_id": 0,
+      "round": 15
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "episode_index": 43,
+      "manifest_idx": 14,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "num_steps": 793,
+      "outcome": "success",
+      "pen_x": 0.0020569555174559384,
+      "pen_y": -0.12303674727603792,
+      "pen_yaw": -2.4258892007082142,
+      "policy_id": 1,
+      "round": 15
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "episode_index": 44,
+      "manifest_idx": 14,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "num_steps": 423,
+      "outcome": "success",
+      "pen_x": 0.0020569555174559384,
+      "pen_y": -0.12303674727603792,
+      "pen_yaw": -2.4258892007082142,
+      "policy_id": 2,
+      "round": 15
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "episode_index": 45,
+      "manifest_idx": 15,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "num_steps": 548,
+      "outcome": "timeout",
+      "pen_x": 0.0291839798502624,
+      "pen_y": 0.04483031968027354,
+      "pen_yaw": -0.11680971935367435,
+      "policy_id": 1,
+      "round": 16
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "episode_index": 46,
+      "manifest_idx": 15,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "num_steps": 800,
+      "outcome": "timeout",
+      "pen_x": 0.0291839798502624,
+      "pen_y": 0.04483031968027354,
+      "pen_yaw": -0.11680971935367435,
+      "policy_id": 2,
+      "round": 16
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "episode_index": 47,
+      "manifest_idx": 15,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "num_steps": 726,
+      "outcome": "failure",
+      "pen_x": 0.0291839798502624,
+      "pen_y": 0.04483031968027354,
+      "pen_yaw": -0.11680971935367435,
+      "policy_id": 0,
+      "round": 16
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "episode_index": 48,
+      "manifest_idx": 16,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "num_steps": 775,
+      "outcome": "success",
+      "pen_x": -0.04880711537338793,
+      "pen_y": 0.03201672788634896,
+      "pen_yaw": -2.9661175493302174,
+      "policy_id": 1,
+      "round": 17
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "episode_index": 49,
+      "manifest_idx": 16,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "num_steps": 800,
+      "outcome": "timeout",
+      "pen_x": -0.04880711537338793,
+      "pen_y": 0.03201672788634896,
+      "pen_yaw": -2.9661175493302174,
+      "policy_id": 0,
+      "round": 17
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "episode_index": 50,
+      "manifest_idx": 16,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "num_steps": 296,
+      "outcome": "success",
+      "pen_x": -0.04880711537338793,
+      "pen_y": 0.03201672788634896,
+      "pen_yaw": -2.9661175493302174,
+      "policy_id": 2,
+      "round": 17
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "episode_index": 51,
+      "manifest_idx": 17,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "num_steps": 211,
+      "outcome": "failure",
+      "pen_x": 0.04488260530717671,
+      "pen_y": -0.14605878209173678,
+      "pen_yaw": 2.8189418931133865,
+      "policy_id": 0,
+      "round": 18
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "episode_index": 52,
+      "manifest_idx": 17,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "num_steps": 226,
+      "outcome": "success",
+      "pen_x": 0.04488260530717671,
+      "pen_y": -0.14605878209173678,
+      "pen_yaw": 2.8189418931133865,
+      "policy_id": 2,
+      "round": 18
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "episode_index": 53,
+      "manifest_idx": 17,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "num_steps": 255,
+      "outcome": "success",
+      "pen_x": 0.04488260530717671,
+      "pen_y": -0.14605878209173678,
+      "pen_yaw": 2.8189418931133865,
+      "policy_id": 1,
+      "round": 18
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "episode_index": 54,
+      "manifest_idx": 18,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "num_steps": 440,
+      "outcome": "failure",
+      "pen_x": -0.013163819241151217,
+      "pen_y": 0.13447657662928103,
+      "pen_yaw": -0.39968558053158665,
+      "policy_id": 0,
+      "round": 19
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "episode_index": 55,
+      "manifest_idx": 18,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "num_steps": 332,
+      "outcome": "success",
+      "pen_x": -0.013163819241151217,
+      "pen_y": 0.13447657662928103,
+      "pen_yaw": -0.39968558053158665,
+      "policy_id": 2,
+      "round": 19
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "episode_index": 56,
+      "manifest_idx": 18,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "num_steps": 202,
+      "outcome": "success",
+      "pen_x": -0.013163819241151217,
+      "pen_y": 0.13447657662928103,
+      "pen_yaw": -0.39968558053158665,
+      "policy_id": 1,
+      "round": 19
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "episode_index": 57,
+      "manifest_idx": 19,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "num_steps": 494,
+      "outcome": "success",
+      "pen_x": 0.07078054518699645,
+      "pen_y": 0.09488326610550282,
+      "pen_yaw": -2.6586987445601915,
+      "policy_id": 1,
+      "round": 20
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "episode_index": 58,
+      "manifest_idx": 19,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "num_steps": 800,
+      "outcome": "timeout",
+      "pen_x": 0.07078054518699645,
+      "pen_y": 0.09488326610550282,
+      "pen_yaw": -2.6586987445601915,
+      "policy_id": 0,
+      "round": 20
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "episode_index": 59,
+      "manifest_idx": 19,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "num_steps": 197,
+      "outcome": "success",
+      "pen_x": 0.07078054518699645,
+      "pen_y": 0.09488326610550282,
+      "pen_yaw": -2.6586987445601915,
+      "policy_id": 2,
+      "round": 20
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "episode_index": 60,
+      "manifest_idx": 20,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "num_steps": 158,
+      "outcome": "failure",
+      "pen_x": 0.051449318314343684,
+      "pen_y": -0.04125250873491168,
+      "pen_yaw": 0.20355084286963931,
+      "policy_id": 1,
+      "round": 21
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "episode_index": 61,
+      "manifest_idx": 20,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "num_steps": 544,
+      "outcome": "success",
+      "pen_x": 0.051449318314343684,
+      "pen_y": -0.04125250873491168,
+      "pen_yaw": 0.20355084286963931,
+      "policy_id": 2,
+      "round": 21
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "episode_index": 62,
+      "manifest_idx": 20,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "num_steps": 94,
+      "outcome": "failure",
+      "pen_x": 0.051449318314343684,
+      "pen_y": -0.04125250873491168,
+      "pen_yaw": 0.20355084286963931,
+      "policy_id": 0,
+      "round": 21
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "episode_index": 63,
+      "manifest_idx": 21,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "num_steps": 800,
+      "outcome": "timeout",
+      "pen_x": 0.03334843754209578,
+      "pen_y": -0.1105379161454737,
+      "pen_yaw": 0.8789409665278134,
+      "policy_id": 0,
+      "round": 22
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "episode_index": 64,
+      "manifest_idx": 21,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "num_steps": 264,
+      "outcome": "success",
+      "pen_x": 0.03334843754209578,
+      "pen_y": -0.1105379161454737,
+      "pen_yaw": 0.8789409665278134,
+      "policy_id": 2,
+      "round": 22
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "episode_index": 65,
+      "manifest_idx": 21,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "num_steps": 293,
+      "outcome": "success",
+      "pen_x": 0.03334843754209578,
+      "pen_y": -0.1105379161454737,
+      "pen_yaw": 0.8789409665278134,
+      "policy_id": 1,
+      "round": 22
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "episode_index": 66,
+      "manifest_idx": 22,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "num_steps": 246,
+      "outcome": "success",
+      "pen_x": -0.006597178903967146,
+      "pen_y": 0.04879411837533115,
+      "pen_yaw": -2.622472931335378,
+      "policy_id": 1,
+      "round": 23
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "episode_index": 67,
+      "manifest_idx": 22,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "num_steps": 222,
+      "outcome": "success",
+      "pen_x": -0.006597178903967146,
+      "pen_y": 0.04879411837533115,
+      "pen_yaw": -2.622472931335378,
+      "policy_id": 2,
+      "round": 23
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "episode_index": 68,
+      "manifest_idx": 22,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "num_steps": 800,
+      "outcome": "timeout",
+      "pen_x": -0.006597178903967146,
+      "pen_y": 0.04879411837533115,
+      "pen_yaw": -2.622472931335378,
+      "policy_id": 0,
+      "round": 23
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "episode_index": 69,
+      "manifest_idx": 23,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "num_steps": 111,
+      "outcome": "failure",
+      "pen_x": -0.051823913624882686,
+      "pen_y": -0.024371593326330182,
+      "pen_yaw": -0.9642500746460181,
+      "policy_id": 0,
+      "round": 24
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "episode_index": 70,
+      "manifest_idx": 23,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "num_steps": 462,
+      "outcome": "success",
+      "pen_x": -0.051823913624882686,
+      "pen_y": -0.024371593326330182,
+      "pen_yaw": -0.9642500746460181,
+      "policy_id": 1,
+      "round": 24
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "episode_index": 71,
+      "manifest_idx": 23,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "num_steps": 183,
+      "outcome": "success",
+      "pen_x": -0.051823913624882686,
+      "pen_y": -0.024371593326330182,
+      "pen_yaw": -0.9642500746460181,
+      "policy_id": 2,
+      "round": 24
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "episode_index": 72,
+      "manifest_idx": 24,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "num_steps": 331,
+      "outcome": "success",
+      "pen_x": -0.03249388339407742,
+      "pen_y": -0.03560152480155229,
+      "pen_yaw": 2.8548312000699347,
+      "policy_id": 0,
+      "round": 25
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "episode_index": 73,
+      "manifest_idx": 24,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "num_steps": 617,
+      "outcome": "failure",
+      "pen_x": -0.03249388339407742,
+      "pen_y": -0.03560152480155229,
+      "pen_yaw": 2.8548312000699347,
+      "policy_id": 2,
+      "round": 25
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "episode_index": 74,
+      "manifest_idx": 24,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "num_steps": 327,
+      "outcome": "success",
+      "pen_x": -0.03249388339407742,
+      "pen_y": -0.03560152480155229,
+      "pen_yaw": 2.8548312000699347,
+      "policy_id": 1,
+      "round": 25
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "episode_index": 75,
+      "manifest_idx": 25,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "num_steps": 728,
+      "outcome": "timeout",
+      "pen_x": 0.006227235607802861,
+      "pen_y": 0.03589785879850388,
+      "pen_yaw": 1.7145113332617745,
+      "policy_id": 0,
+      "round": 26
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "episode_index": 76,
+      "manifest_idx": 25,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "num_steps": 248,
+      "outcome": "failure",
+      "pen_x": 0.006227235607802861,
+      "pen_y": 0.03589785879850388,
+      "pen_yaw": 1.7145113332617745,
+      "policy_id": 2,
+      "round": 26
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "episode_index": 77,
+      "manifest_idx": 25,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "num_steps": 223,
+      "outcome": "success",
+      "pen_x": 0.006227235607802861,
+      "pen_y": 0.03589785879850388,
+      "pen_yaw": 1.7145113332617745,
+      "policy_id": 1,
+      "round": 26
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "episode_index": 78,
+      "manifest_idx": 26,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "num_steps": 763,
+      "outcome": "timeout",
+      "pen_x": -0.06041680172793566,
+      "pen_y": 0.10303409716710449,
+      "pen_yaw": -1.6043347712114409,
+      "policy_id": 2,
+      "round": 27
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "episode_index": 79,
+      "manifest_idx": 26,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "num_steps": 271,
+      "outcome": "success",
+      "pen_x": -0.06041680172793566,
+      "pen_y": 0.10303409716710449,
+      "pen_yaw": -1.6043347712114409,
+      "policy_id": 1,
+      "round": 27
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "episode_index": 80,
+      "manifest_idx": 26,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "num_steps": 417,
+      "outcome": "failure",
+      "pen_x": -0.06041680172793566,
+      "pen_y": 0.10303409716710449,
+      "pen_yaw": -1.6043347712114409,
+      "policy_id": 0,
+      "round": 27
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "episode_index": 81,
+      "manifest_idx": 27,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "num_steps": 737,
+      "outcome": "timeout",
+      "pen_x": 0.03330976916290819,
+      "pen_y": -0.051472029954940074,
+      "pen_yaw": -2.241395657068725,
+      "policy_id": 0,
+      "round": 28
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "episode_index": 82,
+      "manifest_idx": 27,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "num_steps": 800,
+      "outcome": "timeout",
+      "pen_x": 0.03330976916290819,
+      "pen_y": -0.051472029954940074,
+      "pen_yaw": -2.241395657068725,
+      "policy_id": 2,
+      "round": 28
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "episode_index": 83,
+      "manifest_idx": 27,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "num_steps": 714,
+      "outcome": "timeout",
+      "pen_x": 0.03330976916290819,
+      "pen_y": -0.051472029954940074,
+      "pen_yaw": -2.241395657068725,
+      "policy_id": 1,
+      "round": 28
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "episode_index": 84,
+      "manifest_idx": 28,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "num_steps": 284,
+      "outcome": "success",
+      "pen_x": -0.04406614158488809,
+      "pen_y": -0.09101502928957342,
+      "pen_yaw": -2.303345398392683,
+      "policy_id": 1,
+      "round": 29
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "episode_index": 85,
+      "manifest_idx": 28,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "num_steps": 762,
+      "outcome": "timeout",
+      "pen_x": -0.04406614158488809,
+      "pen_y": -0.09101502928957342,
+      "pen_yaw": -2.303345398392683,
+      "policy_id": 0,
+      "round": 29
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "episode_index": 86,
+      "manifest_idx": 28,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "num_steps": 205,
+      "outcome": "success",
+      "pen_x": -0.04406614158488809,
+      "pen_y": -0.09101502928957342,
+      "pen_yaw": -2.303345398392683,
+      "policy_id": 2,
+      "round": 29
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "episode_index": 87,
+      "manifest_idx": 29,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "num_steps": 631,
+      "outcome": "timeout",
+      "pen_x": 0.013984934977814556,
+      "pen_y": 0.0835662725843489,
+      "pen_yaw": 1.5534183872996774,
+      "policy_id": 1,
+      "round": 30
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "episode_index": 88,
+      "manifest_idx": 29,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "num_steps": 157,
+      "outcome": "success",
+      "pen_x": 0.013984934977814556,
+      "pen_y": 0.0835662725843489,
+      "pen_yaw": 1.5534183872996774,
+      "policy_id": 2,
+      "round": 30
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "episode_index": 89,
+      "manifest_idx": 29,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "num_steps": 169,
+      "outcome": "success",
+      "pen_x": 0.013984934977814556,
+      "pen_y": 0.0835662725843489,
+      "pen_yaw": 1.5534183872996774,
+      "policy_id": 0,
+      "round": 30
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "episode_index": 90,
+      "manifest_idx": 30,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "num_steps": 280,
+      "outcome": "success",
+      "pen_x": -0.04164687496460974,
+      "pen_y": -0.07097880337759851,
+      "pen_yaw": 0.9148242462618752,
+      "policy_id": 0,
+      "round": 31
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "episode_index": 91,
+      "manifest_idx": 30,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "num_steps": 148,
+      "outcome": "success",
+      "pen_x": -0.04164687496460974,
+      "pen_y": -0.07097880337759851,
+      "pen_yaw": 0.9148242462618752,
+      "policy_id": 2,
+      "round": 31
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "episode_index": 92,
+      "manifest_idx": 30,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "num_steps": 133,
+      "outcome": "success",
+      "pen_x": -0.04164687496460974,
+      "pen_y": -0.07097880337759851,
+      "pen_yaw": 0.9148242462618752,
+      "policy_id": 1,
+      "round": 31
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "episode_index": 93,
+      "manifest_idx": 31,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "num_steps": 297,
+      "outcome": "failure",
+      "pen_x": -0.07114991052970289,
+      "pen_y": 0.1445715403631329,
+      "pen_yaw": 1.6522265602909751,
+      "policy_id": 2,
+      "round": 32
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "episode_index": 94,
+      "manifest_idx": 31,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "num_steps": 187,
+      "outcome": "success",
+      "pen_x": -0.07114991052970289,
+      "pen_y": 0.1445715403631329,
+      "pen_yaw": 1.6522265602909751,
+      "policy_id": 1,
+      "round": 32
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "episode_index": 95,
+      "manifest_idx": 31,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "num_steps": 449,
+      "outcome": "success",
+      "pen_x": -0.07114991052970289,
+      "pen_y": 0.1445715403631329,
+      "pen_yaw": 1.6522265602909751,
+      "policy_id": 0,
+      "round": 32
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "episode_index": 96,
+      "manifest_idx": 32,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "num_steps": 134,
+      "outcome": "failure",
+      "pen_x": -0.07170945917889475,
+      "pen_y": 0.017268503884971143,
+      "pen_yaw": -1.4676766533437275,
+      "policy_id": 2,
+      "round": 33
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "episode_index": 97,
+      "manifest_idx": 32,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "num_steps": 157,
+      "outcome": "success",
+      "pen_x": -0.07170945917889475,
+      "pen_y": 0.017268503884971143,
+      "pen_yaw": -1.4676766533437275,
+      "policy_id": 1,
+      "round": 33
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "episode_index": 98,
+      "manifest_idx": 32,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "num_steps": 741,
+      "outcome": "timeout",
+      "pen_x": -0.07170945917889475,
+      "pen_y": 0.017268503884971143,
+      "pen_yaw": -1.4676766533437275,
+      "policy_id": 0,
+      "round": 33
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "episode_index": 99,
+      "manifest_idx": 33,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "num_steps": 330,
+      "outcome": "success",
+      "pen_x": -0.028809385107457633,
+      "pen_y": 0.02319381700381637,
+      "pen_yaw": 1.0738091623817816,
+      "policy_id": 1,
+      "round": 34
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "episode_index": 100,
+      "manifest_idx": 33,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "num_steps": 231,
+      "outcome": "failure",
+      "pen_x": -0.028809385107457633,
+      "pen_y": 0.02319381700381637,
+      "pen_yaw": 1.0738091623817816,
+      "policy_id": 0,
+      "round": 34
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "episode_index": 101,
+      "manifest_idx": 33,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "num_steps": 800,
+      "outcome": "timeout",
+      "pen_x": -0.028809385107457633,
+      "pen_y": 0.02319381700381637,
+      "pen_yaw": 1.0738091623817816,
+      "policy_id": 2,
+      "round": 34
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "episode_index": 102,
+      "manifest_idx": 34,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "num_steps": 800,
+      "outcome": "timeout",
+      "pen_x": -0.001240924408659333,
+      "pen_y": -0.09708886168599128,
+      "pen_yaw": 1.91024492123137,
+      "policy_id": 0,
+      "round": 35
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "episode_index": 103,
+      "manifest_idx": 34,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "num_steps": 650,
+      "outcome": "success",
+      "pen_x": -0.001240924408659333,
+      "pen_y": -0.09708886168599128,
+      "pen_yaw": 1.91024492123137,
+      "policy_id": 1,
+      "round": 35
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "episode_index": 104,
+      "manifest_idx": 34,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "num_steps": 233,
+      "outcome": "success",
+      "pen_x": -0.001240924408659333,
+      "pen_y": -0.09708886168599128,
+      "pen_yaw": 1.91024492123137,
+      "policy_id": 2,
+      "round": 35
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "episode_index": 105,
+      "manifest_idx": 35,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "num_steps": 728,
+      "outcome": "timeout",
+      "pen_x": 0.05888963650166987,
+      "pen_y": -0.13190121857598422,
+      "pen_yaw": 1.2225314682570643,
+      "policy_id": 0,
+      "round": 36
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "episode_index": 106,
+      "manifest_idx": 35,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "num_steps": 146,
+      "outcome": "success",
+      "pen_x": 0.05888963650166987,
+      "pen_y": -0.13190121857598422,
+      "pen_yaw": 1.2225314682570643,
+      "policy_id": 2,
+      "round": 36
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "episode_index": 107,
+      "manifest_idx": 35,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "num_steps": 170,
+      "outcome": "success",
+      "pen_x": 0.05888963650166987,
+      "pen_y": -0.13190121857598422,
+      "pen_yaw": 1.2225314682570643,
+      "policy_id": 1,
+      "round": 36
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "episode_index": 108,
+      "manifest_idx": 36,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "num_steps": 153,
+      "outcome": "failure",
+      "pen_x": 0.06672279570065437,
+      "pen_y": -0.07760034432560205,
+      "pen_yaw": -1.2705194237194575,
+      "policy_id": 1,
+      "round": 37
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "episode_index": 109,
+      "manifest_idx": 36,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "num_steps": 176,
+      "outcome": "success",
+      "pen_x": 0.06672279570065437,
+      "pen_y": -0.07760034432560205,
+      "pen_yaw": -1.2705194237194575,
+      "policy_id": 2,
+      "round": 37
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "episode_index": 110,
+      "manifest_idx": 36,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "num_steps": 742,
+      "outcome": "timeout",
+      "pen_x": 0.06672279570065437,
+      "pen_y": -0.07760034432560205,
+      "pen_yaw": -1.2705194237194575,
+      "policy_id": 0,
+      "round": 37
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "episode_index": 111,
+      "manifest_idx": 37,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "num_steps": 258,
+      "outcome": "success",
+      "pen_x": 0.04799122960455715,
+      "pen_y": 0.05265679111182689,
+      "pen_yaw": 2.156378728800984,
+      "policy_id": 0,
+      "round": 38
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "episode_index": 112,
+      "manifest_idx": 37,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "num_steps": 358,
+      "outcome": "success",
+      "pen_x": 0.04799122960455715,
+      "pen_y": 0.05265679111182689,
+      "pen_yaw": 2.156378728800984,
+      "policy_id": 1,
+      "round": 38
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "episode_index": 113,
+      "manifest_idx": 37,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "num_steps": 264,
+      "outcome": "success",
+      "pen_x": 0.04799122960455715,
+      "pen_y": 0.05265679111182689,
+      "pen_yaw": 2.156378728800984,
+      "policy_id": 2,
+      "round": 38
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "episode_index": 114,
+      "manifest_idx": 38,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "num_steps": 800,
+      "outcome": "timeout",
+      "pen_x": -0.0206041374284774,
+      "pen_y": 0.07217960643321275,
+      "pen_yaw": -1.025917373302248,
+      "policy_id": 0,
+      "round": 39
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "episode_index": 115,
+      "manifest_idx": 38,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "num_steps": 150,
+      "outcome": "success",
+      "pen_x": -0.0206041374284774,
+      "pen_y": 0.07217960643321275,
+      "pen_yaw": -1.025917373302248,
+      "policy_id": 1,
+      "round": 39
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "episode_index": 116,
+      "manifest_idx": 38,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "num_steps": 227,
+      "outcome": "success",
+      "pen_x": -0.0206041374284774,
+      "pen_y": 0.07217960643321275,
+      "pen_yaw": -1.025917373302248,
+      "policy_id": 2,
+      "round": 39
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "episode_index": 117,
+      "manifest_idx": 39,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "num_steps": 391,
+      "outcome": "success",
+      "pen_x": 0.01814939238578081,
+      "pen_y": -0.07545515652000903,
+      "pen_yaw": -0.5958843530436995,
+      "policy_id": 0,
+      "round": 40
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "episode_index": 118,
+      "manifest_idx": 39,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "num_steps": 161,
+      "outcome": "success",
+      "pen_x": 0.01814939238578081,
+      "pen_y": -0.07545515652000903,
+      "pen_yaw": -0.5958843530436995,
+      "policy_id": 1,
+      "round": 40
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "episode_index": 119,
+      "manifest_idx": 39,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "num_steps": 193,
+      "outcome": "failure",
+      "pen_x": 0.01814939238578081,
+      "pen_y": -0.07545515652000903,
+      "pen_yaw": -0.5958843530436995,
+      "policy_id": 2,
+      "round": 40
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "episode_index": 120,
+      "manifest_idx": 40,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "num_steps": 161,
+      "outcome": "failure",
+      "pen_x": 0.03952758620157837,
+      "pen_y": 0.004597668866068133,
+      "pen_yaw": -2.1068567574406716,
+      "policy_id": 1,
+      "round": 41
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "episode_index": 121,
+      "manifest_idx": 40,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "num_steps": 221,
+      "outcome": "success",
+      "pen_x": 0.03952758620157837,
+      "pen_y": 0.004597668866068133,
+      "pen_yaw": -2.1068567574406716,
+      "policy_id": 0,
+      "round": 41
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "episode_index": 122,
+      "manifest_idx": 40,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "num_steps": 649,
+      "outcome": "timeout",
+      "pen_x": 0.03952758620157837,
+      "pen_y": 0.004597668866068133,
+      "pen_yaw": -2.1068567574406716,
+      "policy_id": 2,
+      "round": 41
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "episode_index": 123,
+      "manifest_idx": 41,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "num_steps": 298,
+      "outcome": "success",
+      "pen_x": 0.05960077061913907,
+      "pen_y": 0.11469205739647148,
+      "pen_yaw": 2.708981386508344,
+      "policy_id": 0,
+      "round": 42
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "episode_index": 124,
+      "manifest_idx": 41,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "num_steps": 719,
+      "outcome": "timeout",
+      "pen_x": 0.05960077061913907,
+      "pen_y": 0.11469205739647148,
+      "pen_yaw": 2.708981386508344,
+      "policy_id": 1,
+      "round": 42
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "episode_index": 125,
+      "manifest_idx": 41,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "num_steps": 352,
+      "outcome": "success",
+      "pen_x": 0.05960077061913907,
+      "pen_y": 0.11469205739647148,
+      "pen_yaw": 2.708981386508344,
+      "policy_id": 2,
+      "round": 42
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "episode_index": 126,
+      "manifest_idx": 42,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "num_steps": 179,
+      "outcome": "success",
+      "pen_x": -0.010076656291633845,
+      "pen_y": -0.15053050195500253,
+      "pen_yaw": -1.9596707496155124,
+      "policy_id": 2,
+      "round": 43
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "episode_index": 127,
+      "manifest_idx": 42,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "num_steps": 800,
+      "outcome": "timeout",
+      "pen_x": -0.010076656291633845,
+      "pen_y": -0.15053050195500253,
+      "pen_yaw": -1.9596707496155124,
+      "policy_id": 1,
+      "round": 43
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "episode_index": 128,
+      "manifest_idx": 42,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "num_steps": 683,
+      "outcome": "failure",
+      "pen_x": -0.010076656291633845,
+      "pen_y": -0.15053050195500253,
+      "pen_yaw": -1.9596707496155124,
+      "policy_id": 0,
+      "round": 43
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "episode_index": 129,
+      "manifest_idx": 43,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "num_steps": 389,
+      "outcome": "success",
+      "pen_x": 0.026225987795367833,
+      "pen_y": 0.14963857329413294,
+      "pen_yaw": -3.100547882881772,
+      "policy_id": 1,
+      "round": 44
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "episode_index": 130,
+      "manifest_idx": 43,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "num_steps": 263,
+      "outcome": "success",
+      "pen_x": 0.026225987795367833,
+      "pen_y": 0.14963857329413294,
+      "pen_yaw": -3.100547882881772,
+      "policy_id": 2,
+      "round": 44
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "episode_index": 131,
+      "manifest_idx": 43,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "num_steps": 227,
+      "outcome": "success",
+      "pen_x": 0.026225987795367833,
+      "pen_y": 0.14963857329413294,
+      "pen_yaw": -3.100547882881772,
+      "policy_id": 0,
+      "round": 44
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "episode_index": 132,
+      "manifest_idx": 44,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "num_steps": 778,
+      "outcome": "timeout",
+      "pen_x": -0.02168619730621576,
+      "pen_y": -0.05954814719036221,
+      "pen_yaw": -2.9050182608024606,
+      "policy_id": 1,
+      "round": 45
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "episode_index": 133,
+      "manifest_idx": 44,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "num_steps": 557,
+      "outcome": "timeout",
+      "pen_x": -0.02168619730621576,
+      "pen_y": -0.05954814719036221,
+      "pen_yaw": -2.9050182608024606,
+      "policy_id": 2,
+      "round": 45
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "episode_index": 134,
+      "manifest_idx": 44,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "num_steps": 638,
+      "outcome": "timeout",
+      "pen_x": -0.02168619730621576,
+      "pen_y": -0.05954814719036221,
+      "pen_yaw": -2.9050182608024606,
+      "policy_id": 0,
+      "round": 45
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "episode_index": 135,
+      "manifest_idx": 45,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "num_steps": 169,
+      "outcome": "success",
+      "pen_x": -0.0029122032947838244,
+      "pen_y": 0.11321785340085622,
+      "pen_yaw": 0.44833869558626027,
+      "policy_id": 2,
+      "round": 46
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "episode_index": 136,
+      "manifest_idx": 45,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "num_steps": 146,
+      "outcome": "success",
+      "pen_x": -0.0029122032947838244,
+      "pen_y": 0.11321785340085622,
+      "pen_yaw": 0.44833869558626027,
+      "policy_id": 1,
+      "round": 46
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "episode_index": 137,
+      "manifest_idx": 45,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "num_steps": 189,
+      "outcome": "success",
+      "pen_x": -0.0029122032947838244,
+      "pen_y": 0.11321785340085622,
+      "pen_yaw": 0.44833869558626027,
+      "policy_id": 0,
+      "round": 46
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "episode_index": 138,
+      "manifest_idx": 46,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "num_steps": 782,
+      "outcome": "timeout",
+      "pen_x": -0.07531866511814295,
+      "pen_y": -0.00013382887020707557,
+      "pen_yaw": -2.463252731174946,
+      "policy_id": 1,
+      "round": 47
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "episode_index": 139,
+      "manifest_idx": 46,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "num_steps": 592,
+      "outcome": "timeout",
+      "pen_x": -0.07531866511814295,
+      "pen_y": -0.00013382887020707557,
+      "pen_yaw": -2.463252731174946,
+      "policy_id": 0,
+      "round": 47
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "episode_index": 140,
+      "manifest_idx": 46,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "num_steps": 163,
+      "outcome": "failure",
+      "pen_x": -0.07531866511814295,
+      "pen_y": -0.00013382887020707557,
+      "pen_yaw": -2.463252731174946,
+      "policy_id": 2,
+      "round": 47
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "episode_index": 141,
+      "manifest_idx": 47,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "num_steps": 413,
+      "outcome": "success",
+      "pen_x": -0.06458584671244025,
+      "pen_y": -0.05712064075917005,
+      "pen_yaw": 2.5111388558356778,
+      "policy_id": 1,
+      "round": 48
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "episode_index": 142,
+      "manifest_idx": 47,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "num_steps": 275,
+      "outcome": "success",
+      "pen_x": -0.06458584671244025,
+      "pen_y": -0.05712064075917005,
+      "pen_yaw": 2.5111388558356778,
+      "policy_id": 2,
+      "round": 48
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "episode_index": 143,
+      "manifest_idx": 47,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "num_steps": 655,
+      "outcome": "success",
+      "pen_x": -0.06458584671244025,
+      "pen_y": -0.05712064075917005,
+      "pen_yaw": 2.5111388558356778,
+      "policy_id": 0,
+      "round": 48
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "episode_index": 144,
+      "manifest_idx": 48,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "num_steps": 740,
+      "outcome": "timeout",
+      "pen_x": -0.055989461082592604,
+      "pen_y": 0.1298163394756615,
+      "pen_yaw": 0.0065731425520567655,
+      "policy_id": 1,
+      "round": 49
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "episode_index": 145,
+      "manifest_idx": 48,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "num_steps": 562,
+      "outcome": "failure",
+      "pen_x": -0.055989461082592604,
+      "pen_y": 0.1298163394756615,
+      "pen_yaw": 0.0065731425520567655,
+      "policy_id": 2,
+      "round": 49
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "episode_index": 146,
+      "manifest_idx": 48,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "num_steps": 800,
+      "outcome": "timeout",
+      "pen_x": -0.055989461082592604,
+      "pen_y": 0.1298163394756615,
+      "pen_yaw": 0.0065731425520567655,
+      "policy_id": 0,
+      "round": 49
+    },
+    {
+      "anonymous_label": "A",
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "episode_index": 147,
+      "manifest_idx": 49,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "num_steps": 181,
+      "outcome": "success",
+      "pen_x": 0.040825613887980575,
+      "pen_y": -0.015779219448566445,
+      "pen_yaw": -0.25229956254662955,
+      "policy_id": 2,
+      "round": 50
+    },
+    {
+      "anonymous_label": "B",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "episode_index": 148,
+      "manifest_idx": 49,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "num_steps": 574,
+      "outcome": "timeout",
+      "pen_x": 0.040825613887980575,
+      "pen_y": -0.015779219448566445,
+      "pen_yaw": -0.25229956254662955,
+      "policy_id": 1,
+      "round": 50
+    },
+    {
+      "anonymous_label": "C",
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "episode_index": 149,
+      "manifest_idx": 49,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "num_steps": 800,
+      "outcome": "timeout",
+      "pen_x": 0.040825613887980575,
+      "pen_y": -0.015779219448566445,
+      "pen_yaw": -0.25229956254662955,
+      "policy_id": 0,
+      "round": 50
+    }
+  ],
+  "round_plans": [
+    {
+      "manifest_idx": 0,
+      "pen_x": 0.056810141934826974,
+      "pen_y": 0.10934139096736906,
+      "pen_yaw": -1.1603536872629105,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+          "name": "baseline_nocf_r5",
+          "policy_id": 0,
+          "slot_idx": 0,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+          "name": "ours_freecf_r5_dp",
+          "policy_id": 1,
+          "slot_idx": 1,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+          "name": "ours_freecf_r5_iql_cfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 2,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 1
+    },
+    {
+      "manifest_idx": 1,
+      "pen_x": 0.022055707421153786,
+      "pen_y": -0.005796174301207074,
+      "pen_yaw": 2.1934077016063327,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+          "name": "ours_freecf_r5_dp",
+          "policy_id": 1,
+          "slot_idx": 0,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+          "name": "ours_freecf_r5_iql_cfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 1,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+          "name": "baseline_nocf_r5",
+          "policy_id": 0,
+          "slot_idx": 2,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 2
+    },
+    {
+      "manifest_idx": 2,
+      "pen_x": 0.06495578944087027,
+      "pen_y": -0.02993445582166314,
+      "pen_yaw": -1.7995759877689332,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+          "name": "ours_freecf_r5_dp",
+          "policy_id": 1,
+          "slot_idx": 0,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+          "name": "baseline_nocf_r5",
+          "policy_id": 0,
+          "slot_idx": 1,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+          "name": "ours_freecf_r5_iql_cfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 2,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 3
+    },
+    {
+      "manifest_idx": 3,
+      "pen_x": -0.018523552811890838,
+      "pen_y": -0.01132132448181511,
+      "pen_yaw": 1.356535753250558,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+          "name": "ours_freecf_r5_iql_cfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 0,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+          "name": "ours_freecf_r5_dp",
+          "policy_id": 1,
+          "slot_idx": 1,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+          "name": "baseline_nocf_r5",
+          "policy_id": 0,
+          "slot_idx": 2,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 4
+    },
+    {
+      "manifest_idx": 4,
+      "pen_x": 0.003286943377554419,
+      "pen_y": 0.1259583352178335,
+      "pen_yaw": -1.5038964159393653,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+          "name": "ours_freecf_r5_iql_cfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 0,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+          "name": "ours_freecf_r5_dp",
+          "policy_id": 1,
+          "slot_idx": 1,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+          "name": "baseline_nocf_r5",
+          "policy_id": 0,
+          "slot_idx": 2,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 5
+    },
+    {
+      "manifest_idx": 5,
+      "pen_x": 0.04618614711239934,
+      "pen_y": 0.13833915909603234,
+      "pen_yaw": 1.111598741406575,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+          "name": "baseline_nocf_r5",
+          "policy_id": 0,
+          "slot_idx": 0,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+          "name": "ours_freecf_r5_dp",
+          "policy_id": 1,
+          "slot_idx": 1,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+          "name": "ours_freecf_r5_iql_cfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 2,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 6
+    },
+    {
+      "manifest_idx": 6,
+      "pen_x": -0.02704245151765644,
+      "pen_y": 0.089834691350162,
+      "pen_yaw": 1.9958534828287275,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+          "name": "ours_freecf_r5_iql_cfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 0,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+          "name": "ours_freecf_r5_dp",
+          "policy_id": 1,
+          "slot_idx": 1,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+          "name": "baseline_nocf_r5",
+          "policy_id": 0,
+          "slot_idx": 2,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 7
+    },
+    {
+      "manifest_idx": 7,
+      "pen_x": 0.021425398505106566,
+      "pen_y": 0.012215296985954055,
+      "pen_yaw": 0.16709236130182692,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+          "name": "baseline_nocf_r5",
+          "policy_id": 0,
+          "slot_idx": 0,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+          "name": "ours_freecf_r5_iql_cfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 1,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+          "name": "ours_freecf_r5_dp",
+          "policy_id": 1,
+          "slot_idx": 2,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 8
+    },
+    {
+      "manifest_idx": 8,
+      "pen_x": -0.034169118394330136,
+      "pen_y": -0.12625727738589046,
+      "pen_yaw": -0.3142552842796955,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+          "name": "ours_freecf_r5_dp",
+          "policy_id": 1,
+          "slot_idx": 0,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+          "name": "baseline_nocf_r5",
+          "policy_id": 0,
+          "slot_idx": 1,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+          "name": "ours_freecf_r5_iql_cfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 2,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 9
+    },
+    {
+      "manifest_idx": 9,
+      "pen_x": -0.06754391143731772,
+      "pen_y": -0.14280504293516277,
+      "pen_yaw": 0.7057860035285768,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+          "name": "ours_freecf_r5_dp",
+          "policy_id": 1,
+          "slot_idx": 0,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+          "name": "baseline_nocf_r5",
+          "policy_id": 0,
+          "slot_idx": 1,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+          "name": "ours_freecf_r5_iql_cfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 2,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 10
+    },
+    {
+      "manifest_idx": 10,
+      "pen_x": -0.03989709688425064,
+      "pen_y": 0.06310977089703082,
+      "pen_yaw": 3.0147706643848915,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+          "name": "ours_freecf_r5_dp",
+          "policy_id": 1,
+          "slot_idx": 0,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+          "name": "baseline_nocf_r5",
+          "policy_id": 0,
+          "slot_idx": 1,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+          "name": "ours_freecf_r5_iql_cfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 2,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 11
+    },
+    {
+      "manifest_idx": 11,
+      "pen_x": -0.0592643771521747,
+      "pen_y": -0.10487551677972076,
+      "pen_yaw": -0.7559730642611027,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+          "name": "baseline_nocf_r5",
+          "policy_id": 0,
+          "slot_idx": 0,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+          "name": "ours_freecf_r5_iql_cfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 1,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+          "name": "ours_freecf_r5_dp",
+          "policy_id": 1,
+          "slot_idx": 2,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 12
+    },
+    {
+      "manifest_idx": 12,
+      "pen_x": 0.01044602106660604,
+      "pen_y": -0.08656176760196685,
+      "pen_yaw": 2.3771404810312244,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+          "name": "ours_freecf_r5_dp",
+          "policy_id": 1,
+          "slot_idx": 0,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+          "name": "baseline_nocf_r5",
+          "policy_id": 0,
+          "slot_idx": 1,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+          "name": "ours_freecf_r5_iql_cfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 2,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 13
+    },
+    {
+      "manifest_idx": 13,
+      "pen_x": 0.07208361903727054,
+      "pen_y": 0.06710794135853648,
+      "pen_yaw": 0.5106293787461,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+          "name": "baseline_nocf_r5",
+          "policy_id": 0,
+          "slot_idx": 0,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+          "name": "ours_freecf_r5_iql_cfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 1,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+          "name": "ours_freecf_r5_dp",
+          "policy_id": 1,
+          "slot_idx": 2,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 14
+    },
+    {
+      "manifest_idx": 14,
+      "pen_x": 0.0020569555174559384,
+      "pen_y": -0.12303674727603792,
+      "pen_yaw": -2.4258892007082142,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+          "name": "baseline_nocf_r5",
+          "policy_id": 0,
+          "slot_idx": 0,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+          "name": "ours_freecf_r5_dp",
+          "policy_id": 1,
+          "slot_idx": 1,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+          "name": "ours_freecf_r5_iql_cfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 2,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 15
+    },
+    {
+      "manifest_idx": 15,
+      "pen_x": 0.0291839798502624,
+      "pen_y": 0.04483031968027354,
+      "pen_yaw": -0.11680971935367435,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+          "name": "ours_freecf_r5_dp",
+          "policy_id": 1,
+          "slot_idx": 0,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+          "name": "ours_freecf_r5_iql_cfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 1,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+          "name": "baseline_nocf_r5",
+          "policy_id": 0,
+          "slot_idx": 2,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 16
+    },
+    {
+      "manifest_idx": 16,
+      "pen_x": -0.04880711537338793,
+      "pen_y": 0.03201672788634896,
+      "pen_yaw": -2.9661175493302174,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+          "name": "ours_freecf_r5_dp",
+          "policy_id": 1,
+          "slot_idx": 0,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+          "name": "baseline_nocf_r5",
+          "policy_id": 0,
+          "slot_idx": 1,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+          "name": "ours_freecf_r5_iql_cfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 2,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 17
+    },
+    {
+      "manifest_idx": 17,
+      "pen_x": 0.04488260530717671,
+      "pen_y": -0.14605878209173678,
+      "pen_yaw": 2.8189418931133865,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+          "name": "baseline_nocf_r5",
+          "policy_id": 0,
+          "slot_idx": 0,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+          "name": "ours_freecf_r5_iql_cfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 1,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+          "name": "ours_freecf_r5_dp",
+          "policy_id": 1,
+          "slot_idx": 2,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 18
+    },
+    {
+      "manifest_idx": 18,
+      "pen_x": -0.013163819241151217,
+      "pen_y": 0.13447657662928103,
+      "pen_yaw": -0.39968558053158665,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+          "name": "baseline_nocf_r5",
+          "policy_id": 0,
+          "slot_idx": 0,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+          "name": "ours_freecf_r5_iql_cfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 1,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+          "name": "ours_freecf_r5_dp",
+          "policy_id": 1,
+          "slot_idx": 2,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 19
+    },
+    {
+      "manifest_idx": 19,
+      "pen_x": 0.07078054518699645,
+      "pen_y": 0.09488326610550282,
+      "pen_yaw": -2.6586987445601915,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+          "name": "ours_freecf_r5_dp",
+          "policy_id": 1,
+          "slot_idx": 0,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+          "name": "baseline_nocf_r5",
+          "policy_id": 0,
+          "slot_idx": 1,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+          "name": "ours_freecf_r5_iql_cfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 2,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 20
+    },
+    {
+      "manifest_idx": 20,
+      "pen_x": 0.051449318314343684,
+      "pen_y": -0.04125250873491168,
+      "pen_yaw": 0.20355084286963931,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+          "name": "ours_freecf_r5_dp",
+          "policy_id": 1,
+          "slot_idx": 0,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+          "name": "ours_freecf_r5_iql_cfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 1,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+          "name": "baseline_nocf_r5",
+          "policy_id": 0,
+          "slot_idx": 2,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 21
+    },
+    {
+      "manifest_idx": 21,
+      "pen_x": 0.03334843754209578,
+      "pen_y": -0.1105379161454737,
+      "pen_yaw": 0.8789409665278134,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+          "name": "baseline_nocf_r5",
+          "policy_id": 0,
+          "slot_idx": 0,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+          "name": "ours_freecf_r5_iql_cfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 1,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+          "name": "ours_freecf_r5_dp",
+          "policy_id": 1,
+          "slot_idx": 2,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 22
+    },
+    {
+      "manifest_idx": 22,
+      "pen_x": -0.006597178903967146,
+      "pen_y": 0.04879411837533115,
+      "pen_yaw": -2.622472931335378,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+          "name": "ours_freecf_r5_dp",
+          "policy_id": 1,
+          "slot_idx": 0,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+          "name": "ours_freecf_r5_iql_cfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 1,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+          "name": "baseline_nocf_r5",
+          "policy_id": 0,
+          "slot_idx": 2,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 23
+    },
+    {
+      "manifest_idx": 23,
+      "pen_x": -0.051823913624882686,
+      "pen_y": -0.024371593326330182,
+      "pen_yaw": -0.9642500746460181,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+          "name": "baseline_nocf_r5",
+          "policy_id": 0,
+          "slot_idx": 0,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+          "name": "ours_freecf_r5_dp",
+          "policy_id": 1,
+          "slot_idx": 1,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+          "name": "ours_freecf_r5_iql_cfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 2,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 24
+    },
+    {
+      "manifest_idx": 24,
+      "pen_x": -0.03249388339407742,
+      "pen_y": -0.03560152480155229,
+      "pen_yaw": 2.8548312000699347,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+          "name": "baseline_nocf_r5",
+          "policy_id": 0,
+          "slot_idx": 0,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+          "name": "ours_freecf_r5_iql_cfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 1,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+          "name": "ours_freecf_r5_dp",
+          "policy_id": 1,
+          "slot_idx": 2,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 25
+    },
+    {
+      "manifest_idx": 25,
+      "pen_x": 0.006227235607802861,
+      "pen_y": 0.03589785879850388,
+      "pen_yaw": 1.7145113332617745,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+          "name": "baseline_nocf_r5",
+          "policy_id": 0,
+          "slot_idx": 0,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+          "name": "ours_freecf_r5_iql_cfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 1,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+          "name": "ours_freecf_r5_dp",
+          "policy_id": 1,
+          "slot_idx": 2,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 26
+    },
+    {
+      "manifest_idx": 26,
+      "pen_x": -0.06041680172793566,
+      "pen_y": 0.10303409716710449,
+      "pen_yaw": -1.6043347712114409,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+          "name": "ours_freecf_r5_iql_cfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 0,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+          "name": "ours_freecf_r5_dp",
+          "policy_id": 1,
+          "slot_idx": 1,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+          "name": "baseline_nocf_r5",
+          "policy_id": 0,
+          "slot_idx": 2,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 27
+    },
+    {
+      "manifest_idx": 27,
+      "pen_x": 0.03330976916290819,
+      "pen_y": -0.051472029954940074,
+      "pen_yaw": -2.241395657068725,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+          "name": "baseline_nocf_r5",
+          "policy_id": 0,
+          "slot_idx": 0,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+          "name": "ours_freecf_r5_iql_cfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 1,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+          "name": "ours_freecf_r5_dp",
+          "policy_id": 1,
+          "slot_idx": 2,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 28
+    },
+    {
+      "manifest_idx": 28,
+      "pen_x": -0.04406614158488809,
+      "pen_y": -0.09101502928957342,
+      "pen_yaw": -2.303345398392683,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+          "name": "ours_freecf_r5_dp",
+          "policy_id": 1,
+          "slot_idx": 0,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+          "name": "baseline_nocf_r5",
+          "policy_id": 0,
+          "slot_idx": 1,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+          "name": "ours_freecf_r5_iql_cfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 2,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 29
+    },
+    {
+      "manifest_idx": 29,
+      "pen_x": 0.013984934977814556,
+      "pen_y": 0.0835662725843489,
+      "pen_yaw": 1.5534183872996774,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+          "name": "ours_freecf_r5_dp",
+          "policy_id": 1,
+          "slot_idx": 0,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+          "name": "ours_freecf_r5_iql_cfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 1,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+          "name": "baseline_nocf_r5",
+          "policy_id": 0,
+          "slot_idx": 2,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 30
+    },
+    {
+      "manifest_idx": 30,
+      "pen_x": -0.04164687496460974,
+      "pen_y": -0.07097880337759851,
+      "pen_yaw": 0.9148242462618752,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+          "name": "baseline_nocf_r5",
+          "policy_id": 0,
+          "slot_idx": 0,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+          "name": "ours_freecf_r5_iql_cfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 1,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+          "name": "ours_freecf_r5_dp",
+          "policy_id": 1,
+          "slot_idx": 2,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 31
+    },
+    {
+      "manifest_idx": 31,
+      "pen_x": -0.07114991052970289,
+      "pen_y": 0.1445715403631329,
+      "pen_yaw": 1.6522265602909751,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+          "name": "ours_freecf_r5_iql_cfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 0,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+          "name": "ours_freecf_r5_dp",
+          "policy_id": 1,
+          "slot_idx": 1,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+          "name": "baseline_nocf_r5",
+          "policy_id": 0,
+          "slot_idx": 2,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 32
+    },
+    {
+      "manifest_idx": 32,
+      "pen_x": -0.07170945917889475,
+      "pen_y": 0.017268503884971143,
+      "pen_yaw": -1.4676766533437275,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+          "name": "ours_freecf_r5_iql_cfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 0,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+          "name": "ours_freecf_r5_dp",
+          "policy_id": 1,
+          "slot_idx": 1,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+          "name": "baseline_nocf_r5",
+          "policy_id": 0,
+          "slot_idx": 2,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 33
+    },
+    {
+      "manifest_idx": 33,
+      "pen_x": -0.028809385107457633,
+      "pen_y": 0.02319381700381637,
+      "pen_yaw": 1.0738091623817816,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+          "name": "ours_freecf_r5_dp",
+          "policy_id": 1,
+          "slot_idx": 0,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+          "name": "baseline_nocf_r5",
+          "policy_id": 0,
+          "slot_idx": 1,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+          "name": "ours_freecf_r5_iql_cfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 2,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 34
+    },
+    {
+      "manifest_idx": 34,
+      "pen_x": -0.001240924408659333,
+      "pen_y": -0.09708886168599128,
+      "pen_yaw": 1.91024492123137,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+          "name": "baseline_nocf_r5",
+          "policy_id": 0,
+          "slot_idx": 0,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+          "name": "ours_freecf_r5_dp",
+          "policy_id": 1,
+          "slot_idx": 1,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+          "name": "ours_freecf_r5_iql_cfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 2,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 35
+    },
+    {
+      "manifest_idx": 35,
+      "pen_x": 0.05888963650166987,
+      "pen_y": -0.13190121857598422,
+      "pen_yaw": 1.2225314682570643,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+          "name": "baseline_nocf_r5",
+          "policy_id": 0,
+          "slot_idx": 0,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+          "name": "ours_freecf_r5_iql_cfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 1,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+          "name": "ours_freecf_r5_dp",
+          "policy_id": 1,
+          "slot_idx": 2,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 36
+    },
+    {
+      "manifest_idx": 36,
+      "pen_x": 0.06672279570065437,
+      "pen_y": -0.07760034432560205,
+      "pen_yaw": -1.2705194237194575,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+          "name": "ours_freecf_r5_dp",
+          "policy_id": 1,
+          "slot_idx": 0,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+          "name": "ours_freecf_r5_iql_cfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 1,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+          "name": "baseline_nocf_r5",
+          "policy_id": 0,
+          "slot_idx": 2,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 37
+    },
+    {
+      "manifest_idx": 37,
+      "pen_x": 0.04799122960455715,
+      "pen_y": 0.05265679111182689,
+      "pen_yaw": 2.156378728800984,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+          "name": "baseline_nocf_r5",
+          "policy_id": 0,
+          "slot_idx": 0,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+          "name": "ours_freecf_r5_dp",
+          "policy_id": 1,
+          "slot_idx": 1,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+          "name": "ours_freecf_r5_iql_cfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 2,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 38
+    },
+    {
+      "manifest_idx": 38,
+      "pen_x": -0.0206041374284774,
+      "pen_y": 0.07217960643321275,
+      "pen_yaw": -1.025917373302248,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+          "name": "baseline_nocf_r5",
+          "policy_id": 0,
+          "slot_idx": 0,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+          "name": "ours_freecf_r5_dp",
+          "policy_id": 1,
+          "slot_idx": 1,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+          "name": "ours_freecf_r5_iql_cfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 2,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 39
+    },
+    {
+      "manifest_idx": 39,
+      "pen_x": 0.01814939238578081,
+      "pen_y": -0.07545515652000903,
+      "pen_yaw": -0.5958843530436995,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+          "name": "baseline_nocf_r5",
+          "policy_id": 0,
+          "slot_idx": 0,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+          "name": "ours_freecf_r5_dp",
+          "policy_id": 1,
+          "slot_idx": 1,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+          "name": "ours_freecf_r5_iql_cfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 2,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 40
+    },
+    {
+      "manifest_idx": 40,
+      "pen_x": 0.03952758620157837,
+      "pen_y": 0.004597668866068133,
+      "pen_yaw": -2.1068567574406716,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+          "name": "ours_freecf_r5_dp",
+          "policy_id": 1,
+          "slot_idx": 0,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+          "name": "baseline_nocf_r5",
+          "policy_id": 0,
+          "slot_idx": 1,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+          "name": "ours_freecf_r5_iql_cfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 2,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 41
+    },
+    {
+      "manifest_idx": 41,
+      "pen_x": 0.05960077061913907,
+      "pen_y": 0.11469205739647148,
+      "pen_yaw": 2.708981386508344,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+          "name": "baseline_nocf_r5",
+          "policy_id": 0,
+          "slot_idx": 0,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+          "name": "ours_freecf_r5_dp",
+          "policy_id": 1,
+          "slot_idx": 1,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+          "name": "ours_freecf_r5_iql_cfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 2,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 42
+    },
+    {
+      "manifest_idx": 42,
+      "pen_x": -0.010076656291633845,
+      "pen_y": -0.15053050195500253,
+      "pen_yaw": -1.9596707496155124,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+          "name": "ours_freecf_r5_iql_cfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 0,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+          "name": "ours_freecf_r5_dp",
+          "policy_id": 1,
+          "slot_idx": 1,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+          "name": "baseline_nocf_r5",
+          "policy_id": 0,
+          "slot_idx": 2,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 43
+    },
+    {
+      "manifest_idx": 43,
+      "pen_x": 0.026225987795367833,
+      "pen_y": 0.14963857329413294,
+      "pen_yaw": -3.100547882881772,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+          "name": "ours_freecf_r5_dp",
+          "policy_id": 1,
+          "slot_idx": 0,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+          "name": "ours_freecf_r5_iql_cfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 1,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+          "name": "baseline_nocf_r5",
+          "policy_id": 0,
+          "slot_idx": 2,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 44
+    },
+    {
+      "manifest_idx": 44,
+      "pen_x": -0.02168619730621576,
+      "pen_y": -0.05954814719036221,
+      "pen_yaw": -2.9050182608024606,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+          "name": "ours_freecf_r5_dp",
+          "policy_id": 1,
+          "slot_idx": 0,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+          "name": "ours_freecf_r5_iql_cfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 1,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+          "name": "baseline_nocf_r5",
+          "policy_id": 0,
+          "slot_idx": 2,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 45
+    },
+    {
+      "manifest_idx": 45,
+      "pen_x": -0.0029122032947838244,
+      "pen_y": 0.11321785340085622,
+      "pen_yaw": 0.44833869558626027,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+          "name": "ours_freecf_r5_iql_cfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 0,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+          "name": "ours_freecf_r5_dp",
+          "policy_id": 1,
+          "slot_idx": 1,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+          "name": "baseline_nocf_r5",
+          "policy_id": 0,
+          "slot_idx": 2,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 46
+    },
+    {
+      "manifest_idx": 46,
+      "pen_x": -0.07531866511814295,
+      "pen_y": -0.00013382887020707557,
+      "pen_yaw": -2.463252731174946,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+          "name": "ours_freecf_r5_dp",
+          "policy_id": 1,
+          "slot_idx": 0,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+          "name": "baseline_nocf_r5",
+          "policy_id": 0,
+          "slot_idx": 1,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+          "name": "ours_freecf_r5_iql_cfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 2,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 47
+    },
+    {
+      "manifest_idx": 47,
+      "pen_x": -0.06458584671244025,
+      "pen_y": -0.05712064075917005,
+      "pen_yaw": 2.5111388558356778,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+          "name": "ours_freecf_r5_dp",
+          "policy_id": 1,
+          "slot_idx": 0,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+          "name": "ours_freecf_r5_iql_cfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 1,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+          "name": "baseline_nocf_r5",
+          "policy_id": 0,
+          "slot_idx": 2,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 48
+    },
+    {
+      "manifest_idx": 48,
+      "pen_x": -0.055989461082592604,
+      "pen_y": 0.1298163394756615,
+      "pen_yaw": 0.0065731425520567655,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+          "name": "ours_freecf_r5_dp",
+          "policy_id": 1,
+          "slot_idx": 0,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+          "name": "ours_freecf_r5_iql_cfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 1,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+          "name": "baseline_nocf_r5",
+          "policy_id": 0,
+          "slot_idx": 2,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 49
+    },
+    {
+      "manifest_idx": 49,
+      "pen_x": 0.040825613887980575,
+      "pen_y": -0.015779219448566445,
+      "pen_yaw": -0.25229956254662955,
+      "policy_order": [
+        {
+          "anonymous_label": "A",
+          "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+          "name": "ours_freecf_r5_iql_cfinal_n16",
+          "policy_id": 2,
+          "slot_idx": 0,
+          "slot_key": "fixed:2",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "B",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+          "name": "ours_freecf_r5_dp",
+          "policy_id": 1,
+          "slot_idx": 1,
+          "slot_key": "fixed:1",
+          "slot_type": "fixed"
+        },
+        {
+          "anonymous_label": "C",
+          "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+          "name": "baseline_nocf_r5",
+          "policy_id": 0,
+          "slot_idx": 2,
+          "slot_key": "fixed:0",
+          "slot_type": "fixed"
+        }
+      ],
+      "random_arena_selection": "uniform",
+      "round": 50
+    }
+  ],
+  "summary": [
+    {
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "failures": 31,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-baseline-uniform-r5-ef25cov25-r0b100-r1no-e533dbdd-p2-100k-eval5k-save25k-eval8192-init0-seed-1-pq96m7et-final:v0",
+      "name": "baseline_nocf_r5",
+      "num_rounds": 50,
+      "policy_id": 0,
+      "success_rate": 0.38,
+      "successes": 19
+    },
+    {
+      "artifact": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "failures": 18,
+      "model_id": "wandb://self-improving/real-dagger-mining-01b/real01b-marker-d2-ours-sobol-freecf-r5-ef25cov25-r0o100-r1f-43bcc09f-p2-100k-eval5k-save25k-eval8192-init0-seed-1-1cw5il4n-final:v0",
+      "name": "ours_freecf_r5_dp",
+      "num_rounds": 50,
+      "policy_id": 1,
+      "success_rate": 0.64,
+      "successes": 32
+    },
+    {
+      "artifact": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "failures": 19,
+      "model_id": "wandb://self-improving/real-value-learning-01b/vision-idql-viql01b-md2-r5-g0997p0-vp-fcfonly-s1-final:v0",
+      "name": "ours_freecf_r5_iql_cfinal_n16",
+      "num_rounds": 50,
+      "policy_id": 2,
+      "success_rate": 0.62,
+      "successes": 31
+    }
+  ],
+  "timestamp": "2026-07-10T15:53:27.376302"
+}

@@ -1,0 +1,21 @@
+{
+  "dataset_role": "eval_session",
+  "derivation_script": "sir.scripts.split_real_eval_policy_episodes",
+  "derived_repo_ids": [
+    "ankile/real01b-routing-d1-r5-baseline-uniform-c100000-heval-s2026071107-policy-rollouts",
+    "ankile/real01b-routing-d1-r5-ours-freecf-c100000-dp-heval-s2026071107-policy-rollouts",
+    "ankile/real01b-routing-d1-r5-ours-freecf-c100000-iql-g0997-n16-heval-s2026071107-policy-rollouts"
+  ],
+  "derived_repos": [
+    "ankile/real01b-routing-d1-r5-baseline-uniform-c100000-heval-s2026071107-policy-rollouts",
+    "ankile/real01b-routing-d1-r5-ours-freecf-c100000-dp-heval-s2026071107-policy-rollouts",
+    "ankile/real01b-routing-d1-r5-ours-freecf-c100000-iql-g0997-n16-heval-s2026071107-policy-rollouts"
+  ],
+  "manifest_path": "experiments/2026-07-12/blind_inputs/routing_d1_r5_eval_heldout_independent_sobol_seed2026071107.json",
+  "repo_id": "ankile/real01b-routing-d1-r5-threearm-checkpoint100000-iql-g0997-n16-heldout-sobol50",
+  "role": "blinded_parent",
+  "schema_version": 1,
+  "source_type": "eval",
+  "task": "routing_d1",
+  "trainable": false
+}

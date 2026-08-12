@@ -1,0 +1,125 @@
+{
+  "cases": {
+    "connected_point_case": {
+      "certified_unique_winners": [
+        0
+      ],
+      "minimax_half_credit_regret": 0.0,
+      "minimax_lottery": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "possible_winners": [
+        0
+      ],
+      "target_difference_bounds": {
+        "0-1": {
+          "lower": 0.3,
+          "upper": 0.30000000000000004
+        },
+        "0-2": {
+          "lower": 0.6,
+          "upper": 0.6
+        },
+        "1-2": {
+          "lower": 0.29999999999999993,
+          "upper": 0.3
+        }
+      },
+      "target_vertex_count": 2
+    },
+    "connected_wider_case": {
+      "certified_unique_winners": [
+        0
+      ],
+      "minimax_half_credit_regret": 0.0,
+      "minimax_lottery": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "possible_winners": [
+        0
+      ],
+      "target_difference_bounds": {
+        "0-1": {
+          "lower": 0.19999999999999996,
+          "upper": 0.4000000000000001
+        },
+        "0-2": {
+          "lower": 0.4,
+          "upper": 0.8
+        },
+        "1-2": {
+          "lower": 0.19999999999999996,
+          "upper": 0.4
+        }
+      },
+      "target_vertex_count": 8
+    },
+    "disconnected_point_case": {
+      "certified_unique_winners": [],
+      "minimax_half_credit_regret": 0.20588235294117646,
+      "minimax_lottery": [
+        0.5882352941176471,
+        0.0,
+        0.411764705882353
+      ],
+      "possible_winners": [
+        0,
+        2
+      ],
+      "target_difference_bounds": {
+        "0-1": {
+          "lower": 0.3,
+          "upper": 0.30000000000000004
+        },
+        "0-2": {
+          "lower": -0.7,
+          "upper": 1.0
+        },
+        "1-2": {
+          "lower": -1.0,
+          "upper": 0.7
+        }
+      },
+      "target_vertex_count": 4
+    },
+    "h233_point_case": {
+      "certified_unique_winners": [],
+      "minimax_half_credit_regret": 0.08333333333333333,
+      "minimax_lottery": [
+        0.6666666666666667,
+        0.0,
+        0.33333333333333326
+      ],
+      "possible_winners": [
+        0,
+        2
+      ],
+      "target_difference_bounds": {
+        "0-1": {
+          "lower": 0.25,
+          "upper": 0.25
+        },
+        "0-2": {
+          "lower": -0.25,
+          "upper": 0.5
+        },
+        "1-2": {
+          "lower": -0.5,
+          "upper": 0.25
+        }
+      },
+      "target_vertex_count": 8
+    }
+  },
+  "challenge_implementation_sha256": "d8e742e4cf706d121d8b905cd13dcae0ae8556d2288d10a842271bf18a9d2b76",
+  "method": "enumerate polytope vertices, then solve the finite-world primal minimax LP",
+  "producer_implementation_sha256": "854efc09e6c045f7b1aed8a7e6f3a09ab0395094cf45ceca15c8de067399a3f8",
+  "producer_result_sha256": "b54ec0b772ec695a2ef122436851a33877f98280025b786a283a1e134461e83e",
+  "protocol_sha256": "1f4a72b08ac07eb647815c98c755f4424196ae87fc9555fbc378b8303e41713d",
+  "schema": "h250-finite-sample-route-graph-vertex-challenge-v1",
+  "status": "pass"
+}
